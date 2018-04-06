@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='100' type='time_t'/>
+<offset>448</offset>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5881' u='w' c='ngx_http_upstream_server'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='97' u='r' c='ngx_http_upstream_init_round_robin'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='161' u='r' c='ngx_http_upstream_init_round_robin'/>

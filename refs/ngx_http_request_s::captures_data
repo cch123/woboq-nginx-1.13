@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='432' type='u_char *'/>
+<offset>9152</offset>
+<use f='nginx/src/http/ngx_http_script.c' l='1228' u='r' c='ngx_http_script_copy_capture_len_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1264' u='r' c='ngx_http_script_copy_capture_code'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2556' u='w' c='ngx_http_regex_exec'/>

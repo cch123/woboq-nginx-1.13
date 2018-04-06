@@ -1,0 +1,8 @@
+<dec f='nginx/src/core/ngx_config.h' l='91'/>
+<use f='nginx/src/core/ngx_string.c' l='327' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='242' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_hash_module.c' l='168' u='c'/>
+<use f='nginx/src/http/ngx_http_header_filter_module.c' l='269' u='c'/>
+<use f='nginx/src/http/ngx_http_header_filter_module.c' l='275' u='c'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1770' u='c'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2215' u='c'/>

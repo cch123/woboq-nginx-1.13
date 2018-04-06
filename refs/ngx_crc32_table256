@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_crc32.h' l='17' type='uint32_t []'/>
+<use f='nginx/src/core/ngx_crc32.h' l='46' u='r' c='ngx_crc32_long'/>
+<use f='nginx/src/core/ngx_crc32.h' l='65' u='r' c='ngx_crc32_update'/>
+<def f='nginx/src/core/ngx_crc32.c' l='34' ll='99' type='uint32_t [256]'/>

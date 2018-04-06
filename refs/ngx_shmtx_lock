@@ -1,0 +1,25 @@
+<dec f='nginx/src/core/ngx_shmtx.h' l='44' type='void ngx_shmtx_lock(ngx_shmtx_t * mtx)'/>
+<def f='nginx/src/core/ngx_shmtx.c' l='69' ll='133' type='void ngx_shmtx_lock(ngx_shmtx_t * mtx)'/>
+<use f='nginx/src/core/ngx_slab.c' l='173' u='c' c='ngx_slab_alloc'/>
+<use f='nginx/src/core/ngx_slab.c' l='425' u='c' c='ngx_slab_calloc'/>
+<use f='nginx/src/core/ngx_slab.c' l='452' u='c' c='ngx_slab_free'/>
+<use f='nginx/src/http/modules/ngx_http_limit_conn_module.c' l='188' u='c' c='ngx_http_limit_conn_handler'/>
+<use f='nginx/src/http/modules/ngx_http_limit_conn_module.c' l='351' u='c' c='ngx_http_limit_conn_cleanup'/>
+<use f='nginx/src/http/modules/ngx_http_limit_req_module.c' l='207' u='c' c='ngx_http_limit_req_handler'/>
+<use f='nginx/src/http/modules/ngx_http_limit_req_module.c' l='245' u='c' c='ngx_http_limit_req_handler'/>
+<use f='nginx/src/http/modules/ngx_http_limit_req_module.c' l='507' u='c' c='ngx_http_limit_req_account'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='416' u='c' c='ngx_http_file_cache_lock'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='502' u='c' c='ngx_http_file_cache_lock_wait'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='620' u='c' c='ngx_http_file_cache_read'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='641' u='c' c='ngx_http_file_cache_read'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='825' u='c' c='ngx_http_file_cache_exists'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='878' u='c' c='ngx_http_file_cache_exists'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1224' u='c' c='ngx_http_file_cache_reopen'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1331' u='c' c='ngx_http_file_cache_update_variant'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1410' u='c' c='ngx_http_file_cache_update'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1630' u='c' c='ngx_http_file_cache_free'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1730' u='c' c='ngx_http_file_cache_forced_expire'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1822' u='c' c='ngx_http_file_cache_expire'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1943' u='c' c='ngx_http_file_cache_delete'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1978' u='c' c='ngx_http_file_cache_manager'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2201' u='c' c='ngx_http_file_cache_add'/>

@@ -1,0 +1,5 @@
+<dec f='nginx/src/event/ngx_event.h' l='279'/>
+<doc f='nginx/src/event/ngx_event.h' l='276'>/*
+ * The event filter support vnode notifications: kqueue.
+ */</doc>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='959' u='c'/>

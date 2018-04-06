@@ -1,0 +1,10 @@
+<dec f='nginx/src/core/ngx_module.h' l='262' type='void *(*)(ngx_cycle_t *)'/>
+<offset>128</offset>
+<dec f='nginx/src/event/ngx_event.h' l='460' type='void *(*)(ngx_cycle_t *)'/>
+<offset>64</offset>
+<use f='nginx/src/core/ngx_cycle.c' l='229' u='r' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='230' u='r' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_module.c' l='265' u='r' c='ngx_add_module'/>
+<use f='nginx/src/core/ngx_module.c' l='266' u='r' c='ngx_add_module'/>
+<use f='nginx/src/event/ngx_event.c' l='939' u='r' c='ngx_events_block'/>
+<use f='nginx/src/event/ngx_event.c' l='941' u='r' c='ngx_events_block'/>

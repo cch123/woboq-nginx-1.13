@@ -1,0 +1,12 @@
+<dec f='include/x86_64-linux-gnu/sys/epoll.h' l='89' type='uint32_t'/>
+<offset>0</offset>
+<doc f='include/x86_64-linux-gnu/sys/epoll.h' l='89'>/* Epoll events */</doc>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='412' u='w' c='ngx_epoll_notify_init'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='476' u='w' c='ngx_epoll_test_rdhup'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='502' u='r' c='ngx_epoll_test_rdhup'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='620' u='w' c='ngx_epoll_add_event'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='675' u='w' c='ngx_epoll_del_event'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='680' u='w' c='ngx_epoll_del_event'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='705' u='w' c='ngx_epoll_add_connection'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='746' u='w' c='ngx_epoll_del_connection'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='856' u='r' c='ngx_epoll_process_events'/>

@@ -1,0 +1,16 @@
+<dec f='nginx/src/http/ngx_http.h' l='76'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='409' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='524' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_chunked_filter_module.c' l='93' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='690' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='3428' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='291' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_memcached_module.c' l='216' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_mirror_module.c' l='118' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='861' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_range_filter_module.c' l='232' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='489' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='349' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_userid_filter_module.c' l='309' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='644' u='c'/>
+<use f='nginx/src/http/ngx_http_copy_filter_module.c' l='108' u='c'/>

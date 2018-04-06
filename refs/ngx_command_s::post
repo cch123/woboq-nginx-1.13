@@ -1,0 +1,24 @@
+<dec f='nginx/src/core/ngx_conf_file.h' l='83' type='void *'/>
+<offset>384</offset>
+<use f='nginx/src/core/ngx_conf_file.c' l='1055' u='r' c='ngx_conf_set_flag_slot'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1056' u='r' c='ngx_conf_set_flag_slot'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1082' u='r' c='ngx_conf_set_str_slot'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1083' u='r' c='ngx_conf_set_str_slot'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1118' u='r' c='ngx_conf_set_str_array_slot'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1119' u='r' c='ngx_conf_set_str_array_slot'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1156' u='r' c='ngx_conf_set_keyval_slot'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1157' u='r' c='ngx_conf_set_keyval_slot'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1187' u='r' c='ngx_conf_set_num_slot'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1188' u='r' c='ngx_conf_set_num_slot'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1218' u='r' c='ngx_conf_set_size_slot'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1219' u='r' c='ngx_conf_set_size_slot'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1249' u='r' c='ngx_conf_set_off_slot'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1250' u='r' c='ngx_conf_set_off_slot'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1280' u='r' c='ngx_conf_set_msec_slot'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1281' u='r' c='ngx_conf_set_msec_slot'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1311' u='r' c='ngx_conf_set_sec_slot'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1312' u='r' c='ngx_conf_set_sec_slot'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1366' u='r' c='ngx_conf_set_enum_slot'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1399' u='r' c='ngx_conf_set_bitmask_slot'/>
+<use f='nginx/src/http/ngx_http.c' l='1925' u='r' c='ngx_http_types_slot'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2582' u='r' c='ngx_http_file_cache_set_slot'/>

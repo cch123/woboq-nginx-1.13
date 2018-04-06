@@ -1,0 +1,2 @@
+<dec f='nginx/src/core/ngx_log.h' l='40'/>
+<use f='nginx/src/core/ngx_log.c' l='513' u='c'/>

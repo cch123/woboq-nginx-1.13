@@ -1,0 +1,6 @@
+<dec f='nginx/src/core/ngx_cycle.h' l='106' type='char *'/>
+<offset>768</offset>
+<use f='nginx/src/core/nginx.c' l='1114' u='w' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1214' u='w' c='ngx_set_user'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='836' u='r' c='ngx_worker_process_init'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='839' u='r' c='ngx_worker_process_init'/>

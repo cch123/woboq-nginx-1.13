@@ -1,0 +1,7 @@
+<dec f='nginx/objs/ngx_modules.c' l='25' type='ngx_module_t'/>
+<use f='nginx/objs/ngx_modules.c' l='77' u='a'/>
+<use f='nginx/objs/ngx_modules.c' l='77' u='a'/>
+<def f='nginx/src/http/modules/ngx_http_limit_conn_module.c' l='124' ll='137' type='ngx_module_t'/>
+<use f='nginx/src/http/modules/ngx_http_limit_conn_module.c' l='160' u='m' c='ngx_http_limit_conn_handler'/>
+<use f='nginx/src/http/modules/ngx_http_limit_conn_module.c' l='572' u='a' c='ngx_http_limit_conn_zone'/>
+<use f='nginx/src/http/modules/ngx_http_limit_conn_module.c' l='607' u='a' c='ngx_http_limit_conn'/>

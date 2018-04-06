@@ -1,0 +1,8 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='167' type='ngx_uint_t'/>
+<offset>1536</offset>
+<use f='nginx/src/http/ngx_http.c' l='1489' u='r' c='ngx_http_server_names'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3192' u='w' c='ngx_http_core_create_main_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3207' u='r' c='ngx_http_core_init_main_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3207' u='w' c='ngx_http_core_init_main_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3210' u='w' c='ngx_http_core_init_main_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3211' u='r' c='ngx_http_core_init_main_conf'/>

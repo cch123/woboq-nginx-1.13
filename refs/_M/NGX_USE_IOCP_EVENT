@@ -1,0 +1,13 @@
+<dec f='nginx/src/event/ngx_event.h' l='256'/>
+<use f='nginx/src/core/ngx_connection.c' l='523' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='968' u='c'/>
+<doc f='nginx/src/event/ngx_event.h' l='253'>/*
+ * Need to add socket or handle only once: i/o completion port.
+ */</doc>
+<use f='nginx/src/core/ngx_resolver.c' l='4574' u='c'/>
+<use f='nginx/src/event/ngx_event.c' l='763' u='c'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='188' u='c'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='198' u='c'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='239' u='c'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='251' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3142' u='c'/>

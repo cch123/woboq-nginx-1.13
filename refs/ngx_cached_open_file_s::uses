@@ -1,0 +1,6 @@
+<dec f='nginx/src/core/ngx_open_file_cache.h' l='70' type='uint32_t'/>
+<offset>928</offset>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='213' u='w' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='388' u='w' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='963' u='r' c='ngx_open_file_add_event'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1047' u='r' c='ngx_close_cached_file'/>

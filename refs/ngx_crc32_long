@@ -1,0 +1,7 @@
+<def f='nginx/src/core/ngx_crc32.h' l='38' ll='50' type='uint32_t ngx_crc32_long(u_char * p, size_t len)'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='111' u='c' c='ngx_conf_add_dump'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='207' u='c' c='ngx_open_cached_file'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1240' u='c' c='ngx_http_geo_value'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1617' u='c' c='ngx_http_geo_create_binary_base'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1634' u='c' c='ngx_http_geo_create_binary_base'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_hash_module.c' l='474' u='c' c='ngx_http_upstream_init_chash_peer'/>

@@ -1,0 +1,4 @@
+<dec f='include/x86_64-linux-gnu/sys/resource.h' l='73' type='int setrlimit(__rlimit_resource_t __resource, const struct rlimit * __rlimits)'/>
+<dec f='include/x86_64-linux-gnu/sys/resource.h' l='81' type='int setrlimit64(__rlimit_resource_t __resource, const struct rlimit64 * __rlimits)'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='810' u='c' c='ngx_worker_process_init'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='821' u='c' c='ngx_worker_process_init'/>

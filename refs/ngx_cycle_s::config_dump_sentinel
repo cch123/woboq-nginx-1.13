@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_cycle.h' l='64' type='ngx_rbtree_node_t'/>
+<offset>2624</offset>
+<use f='nginx/src/core/ngx_cycle.c' l='135' u='a' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='135' u='a' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='135' u='a' c='ngx_init_cycle'/>

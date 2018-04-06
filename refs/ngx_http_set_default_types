@@ -1,0 +1,3 @@
+<dec f='nginx/src/http/ngx_http.h' l='158' type='ngx_int_t ngx_http_set_default_types(ngx_conf_t * cf, ngx_array_t ** types, ngx_str_t * default_type)'/>
+<use f='nginx/src/http/ngx_http.c' l='2018' u='c' c='ngx_http_merge_types'/>
+<def f='nginx/src/http/ngx_http.c' l='2051' ll='2078' type='ngx_int_t ngx_http_set_default_types(ngx_conf_t * cf, ngx_array_t ** types, ngx_str_t * default_type)'/>

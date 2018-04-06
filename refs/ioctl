@@ -1,0 +1,7 @@
+<dec f='include/x86_64-linux-gnu/sys/ioctl.h' l='41' type='int ioctl(int __fd, unsigned long __request)'/>
+<doc f='include/x86_64-linux-gnu/sys/ioctl.h' l='38'>/* Perform the I/O control operation specified by REQUEST on FD.
+   One argument may follow; its presence and type depend on REQUEST.
+   Return value depends on REQUEST.  Usually -1 indicates error.  */</doc>
+<use f='nginx/src/os/unix/ngx_process.c' l='146' u='c' c='ngx_spawn_process'/>
+<use f='nginx/src/os/unix/ngx_socket.c' l='33' u='c' c='ngx_nonblocking'/>
+<use f='nginx/src/os/unix/ngx_socket.c' l='44' u='c' c='ngx_blocking'/>

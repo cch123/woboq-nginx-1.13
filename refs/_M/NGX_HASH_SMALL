@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_hash.h' l='65'/>
+<use f='nginx/src/core/ngx_hash.c' l='662' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_referer_module.c' l='489' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2833' u='c'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2581' u='c'/>

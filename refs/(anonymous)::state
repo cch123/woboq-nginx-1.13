@@ -1,0 +1,15 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='85' type='ngx_int_t'/>
+<offset>256</offset>
+<use f='nginx/src/core/ngx_resolver.c' l='2990' u='w' c='ngx_resolver_srv_names_handler'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2998' u='w' c='ngx_resolver_srv_names_handler'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3005' u='w' c='ngx_resolver_srv_names_handler'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4240' u='r' c='ngx_resolver_report_srv'/>
+<dec f='nginx/src/http/modules/ngx_http_ssi_filter_module.h' l='58' type='ngx_uint_t'/>
+<offset>2688</offset>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='463' u='r' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='613' u='r' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='997' u='r' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1026' u='w' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1472' u='w' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1521' u='w' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1541' u='w' c='ngx_http_ssi_parse'/>

@@ -1,0 +1,4 @@
+<dec f='include/x86_64-linux-gnu/sys/time.h' l='94' type='0'/>
+<doc f='include/x86_64-linux-gnu/sys/time.h' l='93'>/* Timers run in real time.  */</doc>
+<use f='nginx/src/event/ngx_event.c' l='648' macro='1' u='r'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='156' macro='1' u='r'/>

@@ -1,0 +1,4 @@
+<dec f='nginx/objs/ngx_modules.c' l='49' type='ngx_module_t'/>
+<use f='nginx/objs/ngx_modules.c' l='101' u='a'/>
+<use f='nginx/objs/ngx_modules.c' l='101' u='a'/>
+<def f='nginx/src/http/ngx_http_postpone_filter_module.c' l='35' ll='48' type='ngx_module_t'/>

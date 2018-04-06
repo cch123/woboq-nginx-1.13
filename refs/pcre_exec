@@ -1,0 +1,5 @@
+<dec f='include/pcre.h' l='573' type='int pcre_exec(const pcre * , const pcre_extra * , const char * , int , int , int , int * , int )'/>
+<use f='nginx/src/core/ngx_regex.c' l='208' macro='1' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='3440' macro='1' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1910' macro='1' u='c'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2518' macro='1' u='c'/>

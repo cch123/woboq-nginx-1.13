@@ -1,0 +1,17 @@
+<dec f='nginx/src/core/ngx_regex.h' l='35' type='int'/>
+<offset>320</offset>
+<use f='nginx/src/core/ngx_regex.c' l='147' u='a' c='ngx_regex_compile'/>
+<use f='nginx/src/core/ngx_regex.c' l='153' u='r' c='ngx_regex_compile'/>
+<dec f='nginx/src/http/ngx_http_core_module.h' l='203' type='unsigned int'/>
+<dec f='nginx/src/http/modules/ngx_http_ssi_filter_module.h' l='70' type='int *'/>
+<offset>3200</offset>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='3571' u='r' c='ngx_http_fastcgi_split_path_info'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1581' u='r' c='ngx_http_ssi_get_variable'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1582' u='r' c='ngx_http_ssi_get_variable'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1582' u='r' c='ngx_http_ssi_get_variable'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1903' u='r' c='ngx_http_ssi_regex_match'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1926' u='w' c='ngx_http_ssi_regex_match'/>
+<use f='nginx/src/http/ngx_http.c' l='1402' u='r' c='ngx_http_optimize_servers'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4191' u='w' c='ngx_http_core_server_name'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4191' u='r' c='ngx_http_core_server_name'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2446' u='r' c='ngx_http_regex_compile'/>

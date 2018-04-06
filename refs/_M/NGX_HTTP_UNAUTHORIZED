@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='91'/>
+<use f='nginx/src/http/modules/ngx_http_auth_basic_module.c' l='338' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1115' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1116' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2558' u='c'/>

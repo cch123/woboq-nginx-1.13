@@ -1,0 +1,7 @@
+<dec f='nginx/src/core/ngx_cycle.h' l='92' type='ngx_msec_t'/>
+<offset>192</offset>
+<use f='nginx/src/core/nginx.c' l='1031' u='w' c='ngx_core_module_create_conf'/>
+<use f='nginx/src/core/nginx.c' l='1060' u='r' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1060' u='w' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1351' u='r' c='ngx_set_shutdown_timer'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1357' u='r' c='ngx_set_shutdown_timer'/>

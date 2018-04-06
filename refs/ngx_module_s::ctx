@@ -1,0 +1,20 @@
+<dec f='nginx/src/core/ngx_module.h' l='234' type='void *'/>
+<offset>448</offset>
+<use f='nginx/src/core/ngx_cycle.c' l='227' u='r' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='291' u='r' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_module.c' l='263' u='r' c='ngx_add_module'/>
+<use f='nginx/src/event/ngx_event.c' l='617' u='r' c='ngx_event_process_init'/>
+<use f='nginx/src/event/ngx_event.c' l='937' u='r' c='ngx_events_block'/>
+<use f='nginx/src/event/ngx_event.c' l='966' u='r' c='ngx_events_block'/>
+<use f='nginx/src/event/ngx_event.c' l='1036' u='r' c='ngx_event_use'/>
+<use f='nginx/src/event/ngx_event.c' l='1260' u='r' c='ngx_event_core_init_conf'/>
+<use f='nginx/src/event/ngx_event.c' l='1282' u='r' c='ngx_event_core_init_conf'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='568' u='r' c='ngx_http_rewrite_if'/>
+<use f='nginx/src/http/ngx_http.c' l='191' u='r' c='ngx_http_block'/>
+<use f='nginx/src/http/ngx_http.c' l='224' u='r' c='ngx_http_block'/>
+<use f='nginx/src/http/ngx_http.c' l='256' u='r' c='ngx_http_block'/>
+<use f='nginx/src/http/ngx_http.c' l='305' u='r' c='ngx_http_block'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2745' u='r' c='ngx_http_core_server'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2863' u='r' c='ngx_http_core_location'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4390' u='r' c='ngx_http_core_limit_except'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5693' u='r' c='ngx_http_upstream'/>

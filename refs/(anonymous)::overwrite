@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='292' type='ngx_int_t'/>
+<offset>64</offset>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4663' u='w' c='ngx_http_core_error_page'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4670' u='w' c='ngx_http_core_error_page'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='591' u='r' c='ngx_http_send_error_page'/>

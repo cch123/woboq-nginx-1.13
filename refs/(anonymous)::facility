@@ -1,0 +1,8 @@
+<dec f='nginx/src/core/ngx_syslog.h' l='13' type='ngx_uint_t'/>
+<offset>64</offset>
+<use f='nginx/src/core/ngx_syslog.c' l='43' u='w' c='ngx_syslog_process_conf'/>
+<use f='nginx/src/core/ngx_syslog.c' l='56' u='r' c='ngx_syslog_process_conf'/>
+<use f='nginx/src/core/ngx_syslog.c' l='57' u='w' c='ngx_syslog_process_conf'/>
+<use f='nginx/src/core/ngx_syslog.c' l='126' u='r' c='ngx_syslog_parse_args'/>
+<use f='nginx/src/core/ngx_syslog.c' l='135' u='w' c='ngx_syslog_parse_args'/>
+<use f='nginx/src/core/ngx_syslog.c' l='224' u='r' c='ngx_syslog_add_header'/>

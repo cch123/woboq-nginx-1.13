@@ -1,0 +1,20 @@
+<dec f='nginx/src/http/ngx_http_variables.h' l='74' type='ngx_uint_t'/>
+<dec f='nginx/src/http/ngx_http_script.h' l='48' type='ngx_uint_t'/>
+<dec f='nginx/src/http/ngx_http_core_module.h' l='164' type='ngx_uint_t'/>
+<dec f='nginx/src/http/modules/ngx_http_ssi_filter_module.h' l='69' type='ngx_uint_t'/>
+<offset>3136</offset>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1573' u='r' c='ngx_http_ssi_get_variable'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1925' u='w' c='ngx_http_ssi_regex_match'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3220' u='r' c='ngx_http_core_init_main_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3221' u='w' c='ngx_http_core_init_main_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3221' u='r' c='ngx_http_core_init_main_conf'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1196' u='r' c='ngx_http_script_add_capture_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1197' u='w' c='ngx_http_script_add_capture_code'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2446' u='w' c='ngx_http_regex_compile'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2450' u='w' c='ngx_http_regex_compile'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2450' u='r' c='ngx_http_regex_compile'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2450' u='r' c='ngx_http_regex_compile'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2450' u='r' c='ngx_http_regex_compile'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2450' u='r' c='ngx_http_regex_compile'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2504' u='r' c='ngx_http_regex_exec'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2505' u='r' c='ngx_http_regex_exec'/>

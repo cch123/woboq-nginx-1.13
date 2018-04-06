@@ -1,0 +1,21 @@
+<dec f='nginx/src/event/ngx_event.h' l='69' type='unsigned int'/>
+<use f='nginx/src/core/ngx_connection.c' l='1150' u='r' c='ngx_close_connection'/>
+<use f='nginx/src/core/ngx_connection.c' l='1151' macro='1' u='w'/>
+<use f='nginx/src/core/ngx_connection.c' l='1154' u='r' c='ngx_close_connection'/>
+<use f='nginx/src/core/ngx_connection.c' l='1155' macro='1' u='w'/>
+<offset>79</offset>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='899' macro='1' u='r'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='899' macro='1' u='w'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='928' macro='1' u='r'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='928' macro='1' u='w'/>
+<use f='nginx/src/event/ngx_event_posted.c' l='31' macro='1' u='w'/>
+<use f='nginx/src/http/ngx_http_request.c' l='366' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_request.c' l='366' macro='1' u='w'/>
+<use f='nginx/src/http/ngx_http_request.c' l='494' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_request.c' l='494' macro='1' u='w'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3003' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3003' macro='1' u='w'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3106' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3106' macro='1' u='w'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3238' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3238' macro='1' u='w'/>

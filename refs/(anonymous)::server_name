@@ -1,0 +1,11 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='187' type='ngx_str_t'/>
+<offset>384</offset>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3326' u='m' c='ngx_http_core_merge_srv_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3327' u='m' c='ngx_http_core_merge_srv_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3328' u='m' c='ngx_http_core_merge_srv_conf'/>
+<use f='nginx/src/http/ngx_http_header_filter_module.c' l='332' u='r' c='ngx_http_header_filter'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3647' u='a' c='ngx_http_log_error_handler'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1214' u='m' c='ngx_http_variable_host'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1215' u='m' c='ngx_http_variable_host'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1645' u='m' c='ngx_http_variable_server_name'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1649' u='m' c='ngx_http_variable_server_name'/>

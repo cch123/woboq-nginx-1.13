@@ -1,0 +1,20 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='276' type='size_t'/>
+<offset>1920</offset>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='282' u='w' c='ngx_http_autoindex_handler'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='276' u='r' c='ngx_http_charset_header_filter'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='300' u='r' c='ngx_http_charset_header_filter'/>
+<use f='nginx/src/http/modules/ngx_http_range_filter_module.c' l='477' u='r' c='ngx_http_range_multipart_header'/>
+<use f='nginx/src/http/modules/ngx_http_range_filter_module.c' l='498' u='r' c='ngx_http_range_multipart_header'/>
+<use f='nginx/src/http/modules/ngx_http_range_filter_module.c' l='546' u='w' c='ngx_http_range_multipart_header'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2216' u='w' c='ngx_http_ssi_stub_output'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2217' u='r' c='ngx_http_ssi_stub_output'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1474' u='r' c='ngx_http_test_content_type'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1543' u='w' c='ngx_http_set_content_type'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1550' u='w' c='ngx_http_set_content_type'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1700' u='w' c='ngx_http_send_response'/>
+<use f='nginx/src/http/ngx_http_header_filter_module.c' l='302' u='r' c='ngx_http_header_filter'/>
+<use f='nginx/src/http/ngx_http_header_filter_module.c' l='483' u='r' c='ngx_http_header_filter'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='699' u='w' c='ngx_http_send_special_response'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='797' u='w' c='ngx_http_send_refresh'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4933' u='w' c='ngx_http_upstream_copy_content_type'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4957' u='w' c='ngx_http_upstream_copy_content_type'/>

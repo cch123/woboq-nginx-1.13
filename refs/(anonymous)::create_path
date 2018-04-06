@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_file.h' l='93' type='unsigned int'/>
+<offset>224</offset>
+<use f='nginx/src/core/ngx_file.c' l='696' u='r' c='ngx_ext_rename_file'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1390' u='w' c='ngx_http_file_cache_update'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4026' u='w' c='ngx_http_upstream_store'/>

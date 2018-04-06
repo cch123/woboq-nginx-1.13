@@ -1,0 +1,4 @@
+<dec f='nginx/objs/ngx_modules.c' l='47' type='ngx_module_t'/>
+<use f='nginx/objs/ngx_modules.c' l='99' u='a'/>
+<use f='nginx/objs/ngx_modules.c' l='99' u='a'/>
+<def f='nginx/src/http/modules/ngx_http_range_filter_module.c' l='95' ll='108' type='ngx_module_t'/>

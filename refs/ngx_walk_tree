@@ -1,0 +1,21 @@
+<dec f='nginx/src/core/ngx_file.h' l='150' type='ngx_int_t ngx_walk_tree(ngx_tree_ctx_t * ctx, ngx_str_t * tree)'/>
+<def f='nginx/src/core/ngx_file.c' l='942' ll='1125' type='ngx_int_t ngx_walk_tree(ngx_tree_ctx_t * ctx, ngx_str_t * tree)'/>
+<use f='nginx/src/core/ngx_file.c' l='1082' u='c' c='ngx_walk_tree'/>
+<doc f='nginx/src/core/ngx_file.c' l='924'>/*
+ * ctx-&gt;init_handler() - see ctx-&gt;alloc
+ * ctx-&gt;file_handler() - file handler
+ * ctx-&gt;pre_tree_handler() - handler is called before entering directory
+ * ctx-&gt;post_tree_handler() - handler is called after leaving directory
+ * ctx-&gt;spec_handler() - special (socket, FIFO, etc.) file handler
+ *
+ * ctx-&gt;data - some data structure, it may be the same on all levels, or
+ *     reallocated if ctx-&gt;alloc is nonzero
+ *
+ * ctx-&gt;alloc - a size of data structure that is allocated at every level
+ *     and is initialized by ctx-&gt;init_handler()
+ *
+ * ctx-&gt;log - a log
+ *
+ * on fatal (memory) error handler must return NGX_ABORT to stop walking tree
+ */</doc>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2062' u='c' c='ngx_http_file_cache_loader'/>

@@ -1,0 +1,2 @@
+<dec f='include/linux/capability.h' l='186'/>
+<doc f='include/linux/capability.h' l='184'>/* Allow activation of ATM control sockets */</doc>

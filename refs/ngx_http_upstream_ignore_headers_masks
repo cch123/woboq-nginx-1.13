@@ -1,0 +1,18 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='432' type='ngx_conf_bitmask_t []'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='550' u='a'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='550' u='a'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='550' u='a'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='550' u='a'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='623' u='a'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='623' u='a'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='623' u='a'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='623' u='a'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='400' u='a'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='400' u='a'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='400' u='a'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='400' u='a'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='468' u='a'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='468' u='a'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='468' u='a'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='468' u='a'/>
+<def f='nginx/src/http/ngx_http_upstream.c' l='460' ll='471' type='ngx_conf_bitmask_t [10]'/>

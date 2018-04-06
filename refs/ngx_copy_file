@@ -1,0 +1,3 @@
+<dec f='nginx/src/core/ngx_file.h' l='149' type='ngx_int_t ngx_copy_file(u_char * from, u_char * to, ngx_copy_file_t * cf)'/>
+<use f='nginx/src/core/ngx_file.c' l='744' u='c' c='ngx_ext_rename_file'/>
+<def f='nginx/src/core/ngx_file.c' l='794' ll='921' type='ngx_int_t ngx_copy_file(u_char * from, u_char * to, ngx_copy_file_t * cf)'/>

@@ -1,0 +1,5 @@
+<dec f='nginx/src/os/unix/ngx_atomic.h' l='118'/>
+<use f='nginx/src/core/ngx_rwlock.c' l='35' u='c'/>
+<use f='nginx/src/core/ngx_rwlock.c' l='71' u='c'/>
+<use f='nginx/src/core/ngx_shmtx.c' l='87' u='c'/>
+<use f='nginx/src/core/ngx_spinlock.c' l='31' u='c'/>

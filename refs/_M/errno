@@ -1,0 +1,5 @@
+<dec f='include/x86_64-linux-gnu/bits/errno.h' l='54'/>
+<use f='include/errno.h' l='45' u='a'/>
+<doc f='include/x86_64-linux-gnu/bits/errno.h' l='53'>/* When using threads, errno is a per-thread value.  */</doc>
+<use f='nginx/src/os/unix/ngx_errno.c' l='83' u='c'/>
+<use f='nginx/src/os/unix/ngx_posix_init.c' l='78' u='c'/>

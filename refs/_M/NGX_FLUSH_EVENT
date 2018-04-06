@@ -1,0 +1,5 @@
+<dec f='nginx/src/event/ngx_event.h' l='303'/>
+<doc f='nginx/src/event/ngx_event.h' l='300'>/*
+ * event must be passed to kernel right now, do not wait until batch processing.
+ */</doc>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1085' u='c'/>

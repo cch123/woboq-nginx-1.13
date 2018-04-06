@@ -1,0 +1,14 @@
+<dec f='include/netinet/in.h' l='50' type='6'/>
+<doc f='include/netinet/in.h' l='50'>/* Transmission Control Protocol.  */</doc>
+<use f='nginx/src/core/ngx_connection.c' l='302' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_connection.c' l='357' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_connection.c' l='713' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_connection.c' l='730' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_connection.c' l='741' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_connection.c' l='768' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_connection.c' l='874' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_connection.c' l='1365' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1120' macro='1' u='r'/>
+<use f='nginx/src/os/unix/ngx_linux_sendfile_chain.c' l='105' macro='1' u='r'/>
+<use f='nginx/src/os/unix/ngx_socket.c' l='85' macro='1' u='r'/>
+<use f='nginx/src/os/unix/ngx_socket.c' l='97' macro='1' u='r'/>

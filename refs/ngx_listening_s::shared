@@ -1,0 +1,3 @@
+<dec f='nginx/src/core/ngx_connection.h' l='65' type='unsigned int'/>
+<offset>1864</offset>
+<doc f='nginx/src/core/ngx_connection.h' l='65'>/* shared between threads or processes */</doc>

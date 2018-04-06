@@ -1,0 +1,29 @@
+<def f='nginx/src/event/ngx_event.h' l='30' ll='145'/>
+<size>96</size>
+<mbr r='ngx_event_s::data' o='0' t='void *'/>
+<mbr r='ngx_event_s::write' o='64' t='unsigned int'/>
+<mbr r='ngx_event_s::accept' o='65' t='unsigned int'/>
+<mbr r='ngx_event_s::instance' o='66' t='unsigned int'/>
+<mbr r='ngx_event_s::active' o='67' t='unsigned int'/>
+<mbr r='ngx_event_s::disabled' o='68' t='unsigned int'/>
+<mbr r='ngx_event_s::ready' o='69' t='unsigned int'/>
+<mbr r='ngx_event_s::oneshot' o='70' t='unsigned int'/>
+<mbr r='ngx_event_s::complete' o='71' t='unsigned int'/>
+<mbr r='ngx_event_s::eof' o='72' t='unsigned int'/>
+<mbr r='ngx_event_s::error' o='73' t='unsigned int'/>
+<mbr r='ngx_event_s::timedout' o='74' t='unsigned int'/>
+<mbr r='ngx_event_s::timer_set' o='75' t='unsigned int'/>
+<mbr r='ngx_event_s::delayed' o='76' t='unsigned int'/>
+<mbr r='ngx_event_s::deferred_accept' o='77' t='unsigned int'/>
+<mbr r='ngx_event_s::pending_eof' o='78' t='unsigned int'/>
+<mbr r='ngx_event_s::posted' o='79' t='unsigned int'/>
+<mbr r='ngx_event_s::closed' o='80' t='unsigned int'/>
+<mbr r='ngx_event_s::channel' o='81' t='unsigned int'/>
+<mbr r='ngx_event_s::resolver' o='82' t='unsigned int'/>
+<mbr r='ngx_event_s::cancelable' o='83' t='unsigned int'/>
+<mbr r='ngx_event_s::available' o='84' t='unsigned int'/>
+<mbr r='ngx_event_s::handler' o='128' t='ngx_event_handler_pt'/>
+<mbr r='ngx_event_s::index' o='192' t='ngx_uint_t'/>
+<mbr r='ngx_event_s::log' o='256' t='ngx_log_t *'/>
+<mbr r='ngx_event_s::timer' o='320' t='ngx_rbtree_node_t'/>
+<mbr r='ngx_event_s::queue' o='640' t='ngx_queue_t'/>

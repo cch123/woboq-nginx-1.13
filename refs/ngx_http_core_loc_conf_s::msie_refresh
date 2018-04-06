@@ -1,0 +1,10 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='389' type='ngx_flag_t'/>
+<offset>3840</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='389'>/* msie_refresh */</doc>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3405' u='w' c='ngx_http_core_create_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3673' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3673' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3673' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3673' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='477' u='r' c='ngx_http_special_response_handler'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='651' u='r' c='ngx_http_send_error_page'/>

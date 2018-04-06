@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http.h' l='149' type='void ngx_http_discarded_request_body_handler(ngx_http_request_t * r)'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2593' u='r' c='ngx_http_finalize_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2645' u='r' c='ngx_http_set_write_handler'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='571' u='r' c='ngx_http_discard_request_body'/>
+<def f='nginx/src/http/ngx_http_request_body.c' l='584' ll='652' type='void ngx_http_discarded_request_body_handler(ngx_http_request_t * r)'/>

@@ -1,0 +1,28 @@
+<dec f='nginx/objs/ngx_modules.c' l='33' type='ngx_module_t'/>
+<use f='nginx/objs/ngx_modules.c' l='85' u='a'/>
+<use f='nginx/objs/ngx_modules.c' l='85' u='a'/>
+<def f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='221' type='ngx_module_t'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='394' u='a'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='394' u='a'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='394' u='a'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='394' u='a'/>
+<def f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='585' ll='598' type='ngx_module_t'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='690' u='m' c='ngx_http_fastcgi_handler'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='692' u='m' c='ngx_http_fastcgi_handler'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='703' u='a' c='ngx_http_fastcgi_handler'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='708' u='m' c='ngx_http_fastcgi_handler'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='812' u='m' c='ngx_http_fastcgi_create_key'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='850' u='m' c='ngx_http_fastcgi_create_request'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='1318' u='m' c='ngx_http_fastcgi_reinit_request'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='1356' u='m' c='ngx_http_fastcgi_body_output_filter'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='1644' u='m' c='ngx_http_fastcgi_process_header'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='1739' u='m' c='ngx_http_fastcgi_process_header'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2074' u='m' c='ngx_http_fastcgi_input_filter_init'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2099' u='m' c='ngx_http_fastcgi_input_filter'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2100' u='m' c='ngx_http_fastcgi_input_filter'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2345' u='m' c='ngx_http_fastcgi_non_buffered_filter'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='3353' u='m' c='ngx_http_fastcgi_script_name_variable'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='3394' u='m' c='ngx_http_fastcgi_path_info_variable'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='3420' u='m' c='ngx_http_fastcgi_split'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='3428' u='m' c='ngx_http_fastcgi_split'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='3695' u='a' c='ngx_http_fastcgi_cache'/>

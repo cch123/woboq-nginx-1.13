@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_log.h' l='231' type='ngx_log_t * ngx_log_init(u_char * prefix)'/>
+<doc f='nginx/src/core/ngx_log.h' l='229'>/*********************************/</doc>
+<use f='nginx/src/core/nginx.c' l='233' u='c' c='main'/>
+<def f='nginx/src/core/ngx_log.c' l='317' ll='400' type='ngx_log_t * ngx_log_init(u_char * prefix)'/>

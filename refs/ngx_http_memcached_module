@@ -1,0 +1,11 @@
+<dec f='nginx/objs/ngx_modules.c' l='36' type='ngx_module_t'/>
+<use f='nginx/objs/ngx_modules.c' l='88' u='a'/>
+<use f='nginx/objs/ngx_modules.c' l='88' u='a'/>
+<def f='nginx/src/http/modules/ngx_http_memcached_module.c' l='145' ll='158' type='ngx_module_t'/>
+<use f='nginx/src/http/modules/ngx_http_memcached_module.c' l='197' u='a' c='ngx_http_memcached_handler'/>
+<use f='nginx/src/http/modules/ngx_http_memcached_module.c' l='199' u='m' c='ngx_http_memcached_handler'/>
+<use f='nginx/src/http/modules/ngx_http_memcached_module.c' l='216' u='m' c='ngx_http_memcached_handler'/>
+<use f='nginx/src/http/modules/ngx_http_memcached_module.c' l='241' u='m' c='ngx_http_memcached_create_request'/>
+<use f='nginx/src/http/modules/ngx_http_memcached_module.c' l='272' u='m' c='ngx_http_memcached_create_request'/>
+<use f='nginx/src/http/modules/ngx_http_memcached_module.c' l='340' u='m' c='ngx_http_memcached_process_header'/>
+<use f='nginx/src/http/modules/ngx_http_memcached_module.c' l='341' u='m' c='ngx_http_memcached_process_header'/>

@@ -1,0 +1,2 @@
+<dec f='nginx/src/os/unix/ngx_errno.h' l='36'/>
+<use f='nginx/src/core/ngx_connection.c' l='1422' u='c'/>

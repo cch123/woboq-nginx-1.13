@@ -1,0 +1,4 @@
+<dec f='include/x86_64-linux-gnu/sys/eventfd.h' l='34' type='int eventfd(unsigned int __count, int __flags)'/>
+<doc f='include/x86_64-linux-gnu/sys/eventfd.h' l='32'>/* Return file descriptor for generic event channel.  Set initial
+   value to COUNT.  */</doc>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='391' u='c' c='ngx_epoll_notify_init'/>

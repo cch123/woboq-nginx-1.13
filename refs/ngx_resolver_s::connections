@@ -1,0 +1,14 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='158' type='ngx_array_t'/>
+<offset>256</offset>
+<doc f='nginx/src/core/ngx_resolver.h' l='157'>/* simple round robin DNS peers balancer */</doc>
+<use f='nginx/src/core/ngx_resolver.c' l='206' u='a' c='ngx_resolver_create'/>
+<use f='nginx/src/core/ngx_resolver.c' l='264' u='a' c='ngx_resolver_create'/>
+<use f='nginx/src/core/ngx_resolver.c' l='314' u='m' c='ngx_resolver_cleanup'/>
+<use f='nginx/src/core/ngx_resolver.c' l='316' u='m' c='ngx_resolver_cleanup'/>
+<use f='nginx/src/core/ngx_resolver.c' l='399' u='m' c='ngx_resolve_start'/>
+<use f='nginx/src/core/ngx_resolver.c' l='843' u='m' c='ngx_resolve_name_locked'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1047' u='m' c='ngx_resolve_addr'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1247' u='m' c='ngx_resolver_send_query'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1502' u='m' c='ngx_resolver_resend'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1967' u='m' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2584' u='m' c='ngx_resolver_process_srv'/>

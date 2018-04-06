@@ -1,0 +1,7 @@
+<dec f='include/x86_64-linux-gnu/bits/socket.h' l='272'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='345' u='c'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='349' u='c'/>
+<use f='nginx/src/os/unix/ngx_channel.c' l='26' u='c'/>
+<use f='nginx/src/os/unix/ngx_channel.c' l='106' u='c'/>
+<use f='nginx/src/os/unix/ngx_udp_sendmsg_chain.c' l='211' u='c'/>
+<use f='nginx/src/os/unix/ngx_udp_sendmsg_chain.c' l='215' u='c'/>

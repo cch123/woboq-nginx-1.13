@@ -1,0 +1,4 @@
+<dec f='nginx/src/os/unix/ngx_linux_config.h' l='13'/>
+<use f='include/features.h' l='157' u='a'/>
+<use f='include/features.h' l='324' u='a'/>
+<use f='include/libio.h' l='356' u='a'/>

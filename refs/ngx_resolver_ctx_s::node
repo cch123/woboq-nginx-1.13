@@ -1,0 +1,11 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='198' type='ngx_resolver_node_t *'/>
+<offset>128</offset>
+<use f='nginx/src/core/ngx_resolver.c' l='537' u='r' c='ngx_resolve_name_done'/>
+<use f='nginx/src/core/ngx_resolver.c' l='744' u='w' c='ngx_resolve_name_locked'/>
+<use f='nginx/src/core/ngx_resolver.c' l='881' u='w' c='ngx_resolve_name_locked'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1000' u='w' c='ngx_resolve_addr'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1087' u='w' c='ngx_resolve_addr'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1151' u='r' c='ngx_resolve_addr_done'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2482' u='w' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2867' u='w' c='ngx_resolver_process_srv'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2912' u='w' c='ngx_resolver_resolve_srv_names'/>

@@ -1,0 +1,2 @@
+<dec f='nginx/objs/ngx_auto_config.h' l='34'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='371' u='c'/>

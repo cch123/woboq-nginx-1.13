@@ -1,0 +1,10 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='179' type='ngx_uint_t'/>
+<offset>2944</offset>
+<doc f='nginx/src/core/ngx_resolver.h' l='179'>/* unsigned  ipv6:1; */</doc>
+<use f='nginx/src/core/ngx_resolver.c' l='181' u='w' c='ngx_resolver_create'/>
+<use f='nginx/src/core/ngx_resolver.c' l='234' u='w' c='ngx_resolver_create'/>
+<use f='nginx/src/core/ngx_resolver.c' l='237' u='w' c='ngx_resolver_create'/>
+<use f='nginx/src/core/ngx_resolver.c' l='850' u='r' c='ngx_resolve_name_locked'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3610' u='r' c='ngx_resolver_create_name_query'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3622' u='r' c='ngx_resolver_create_name_query'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3690' u='r' c='ngx_resolver_create_name_query'/>

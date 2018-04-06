@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_module.h' l='231' type='ngx_uint_t'/>
+<offset>320</offset>
+<use f='nginx/src/core/ngx_module.c' l='170' u='r' c='ngx_add_module'/>
+<use f='nginx/src/core/ngx_module.c' l='173' u='r' c='ngx_add_module'/>

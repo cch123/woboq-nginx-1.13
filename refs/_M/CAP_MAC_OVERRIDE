@@ -1,0 +1,6 @@
+<dec f='include/linux/capability.h' l='325'/>
+<doc f='include/linux/capability.h' l='319'>/* Override MAC access.
+   The base kernel enforces no MAC policy.
+   An LSM may enforce a MAC policy, and if it does and it chooses
+   to implement capability based overrides of that policy, this is
+   the capability it should use to do so. */</doc>

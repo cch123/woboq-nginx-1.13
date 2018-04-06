@@ -1,0 +1,5 @@
+<dec f='include/x86_64-linux-gnu/sys/resource.h' l='54' type='int getrlimit(__rlimit_resource_t __resource, struct rlimit * __rlimits)'/>
+<dec f='include/x86_64-linux-gnu/sys/resource.h' l='61' type='int getrlimit64(__rlimit_resource_t __resource, struct rlimit64 * __rlimits)'/>
+<use f='nginx/src/event/ngx_event.c' l='451' u='c' c='ngx_event_module_init'/>
+<use f='nginx/src/event/ngx_event.c' l='657' u='c' c='ngx_event_process_init'/>
+<use f='nginx/src/os/unix/ngx_posix_init.c' l='77' u='c' c='ngx_os_init'/>

@@ -1,0 +1,14 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='127' type='ngx_str_t'/>
+<offset>384</offset>
+<use f='nginx/src/http/ngx_http_upstream.c' l='695' u='m' c='ngx_http_upstream_init_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='698' u='m' c='ngx_http_upstream_init_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5928' u='m' c='ngx_http_upstream_add'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5929' u='m' c='ngx_http_upstream_add'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5978' u='w' c='ngx_http_upstream_add'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='60' u='a' c='ngx_http_upstream_init_round_robin'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='78' u='a' c='ngx_http_upstream_init_round_robin'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='142' u='a' c='ngx_http_upstream_init_round_robin'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='182' u='a' c='ngx_http_upstream_init_round_robin'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='188' u='r' c='ngx_http_upstream_init_round_robin'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='195' u='a' c='ngx_http_upstream_init_round_robin'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='217' u='a' c='ngx_http_upstream_init_round_robin'/>

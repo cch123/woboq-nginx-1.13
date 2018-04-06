@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_syslog.h' l='25' type='u_char * ngx_syslog_add_header(ngx_syslog_peer_t * peer, u_char * buf)'/>
+<def f='nginx/src/core/ngx_syslog.c' l='219' ll='233' type='u_char * ngx_syslog_add_header(ngx_syslog_peer_t * peer, u_char * buf)'/>
+<use f='nginx/src/core/ngx_syslog.c' l='253' u='c' c='ngx_syslog_writer'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='370' u='c' c='ngx_http_log_handler'/>

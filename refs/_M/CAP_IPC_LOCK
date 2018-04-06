@@ -1,0 +1,3 @@
+<dec f='include/linux/capability.h' l='198'/>
+<doc f='include/linux/capability.h' l='195'>/* Allow mlock and mlockall (which doesn&apos;t really have anything to do
+   with IPC) */</doc>

@@ -1,0 +1,11 @@
+<dec f='nginx/src/os/unix/ngx_os.h' l='58'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='298' u='c'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='311' u='c'/>
+<use f='nginx/src/os/unix/ngx_linux_sendfile_chain.c' l='58' u='c'/>
+<use f='nginx/src/os/unix/ngx_linux_sendfile_chain.c' l='77' u='c'/>
+<use f='nginx/src/os/unix/ngx_readv_chain.c' l='21' u='c'/>
+<use f='nginx/src/os/unix/ngx_readv_chain.c' l='77' u='c'/>
+<use f='nginx/src/os/unix/ngx_udp_sendmsg_chain.c' l='26' u='c'/>
+<use f='nginx/src/os/unix/ngx_udp_sendmsg_chain.c' l='54' u='c'/>
+<use f='nginx/src/os/unix/ngx_writev_chain.c' l='21' u='c'/>
+<use f='nginx/src/os/unix/ngx_writev_chain.c' l='49' u='c'/>

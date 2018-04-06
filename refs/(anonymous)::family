@@ -1,0 +1,28 @@
+<dec f='nginx/src/core/ngx_inet.h' l='64' type='ngx_uint_t'/>
+<dec f='nginx/src/core/ngx_inet.h' l='89' type='int'/>
+<offset>544</offset>
+<use f='nginx/src/core/ngx_inet.c' l='392' u='w' c='ngx_ptocidr'/>
+<use f='nginx/src/core/ngx_inet.c' l='401' u='w' c='ngx_ptocidr'/>
+<use f='nginx/src/core/ngx_inet.c' l='420' u='r' c='ngx_ptocidr'/>
+<use f='nginx/src/core/ngx_inet.c' l='519' u='r' c='ngx_cidr_match'/>
+<use f='nginx/src/core/ngx_inet.c' l='757' u='w' c='ngx_parse_unix_domain_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='795' u='w' c='ngx_parse_inet_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='944' u='w' c='ngx_parse_inet_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='948' u='r' c='ngx_parse_inet_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='1063' u='w' c='ngx_parse_inet6_url'/>
+<dec f='nginx/src/http/ngx_http_core_module.h' l='266' type='ngx_int_t'/>
+<use f='nginx/src/http/modules/ngx_http_access_module.c' l='322' u='w' c='ngx_http_access_rule'/>
+<use f='nginx/src/http/modules/ngx_http_access_module.c' l='340' u='r' c='ngx_http_access_rule'/>
+<use f='nginx/src/http/modules/ngx_http_access_module.c' l='361' u='r' c='ngx_http_access_rule'/>
+<use f='nginx/src/http/modules/ngx_http_access_module.c' l='383' u='r' c='ngx_http_access_rule'/>
+<offset>0</offset>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1063' u='w' c='ngx_http_geo_cidr'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1074' u='w' c='ngx_http_geo_cidr'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1100' u='r' c='ngx_http_geo_cidr'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1106' u='r' c='ngx_http_geo_cidr'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1147' u='r' c='ngx_http_geo_cidr_add'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1315' u='w' c='ngx_http_geo_cidr_value'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='4319' u='r' c='ngx_http_proxy_set_vars'/>
+<use f='nginx/src/http/ngx_http.c' l='1166' u='r' c='ngx_http_add_listen'/>
+<use f='nginx/src/http/ngx_http.c' l='1182' u='w' c='ngx_http_add_listen'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5984' u='r' c='ngx_http_upstream_add'/>

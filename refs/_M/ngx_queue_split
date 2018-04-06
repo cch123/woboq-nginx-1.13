@@ -1,0 +1,7 @@
+<dec f='nginx/src/core/ngx_queue.h' l='87'/>
+<use f='nginx/src/http/ngx_http.c' l='738' u='c'/>
+<use f='nginx/src/http/ngx_http.c' l='761' u='c'/>
+<use f='nginx/src/http/ngx_http.c' l='787' u='c'/>
+<use f='nginx/src/http/ngx_http.c' l='1045' u='c'/>
+<use f='nginx/src/http/ngx_http.c' l='1053' u='c'/>
+<use f='nginx/src/http/ngx_http.c' l='1099' u='c'/>

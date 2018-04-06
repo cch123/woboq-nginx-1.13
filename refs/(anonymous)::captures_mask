@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_script.h' l='49' type='ngx_uint_t'/>
+<offset>448</offset>
+<use f='nginx/src/http/ngx_http_script.c' l='359' u='r' c='ngx_http_script_compile'/>
+<use f='nginx/src/http/ngx_http_script.c' l='363' u='w' c='ngx_http_script_compile'/>

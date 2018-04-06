@@ -1,0 +1,3 @@
+<dec f='nginx/src/http/ngx_http.h' l='145' type='void ngx_http_clean_header(ngx_http_request_t * r)'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='534' u='c' c='ngx_http_filter_finalize_request'/>
+<def f='nginx/src/http/ngx_http_special_response.c' l='567' ll='580' type='void ngx_http_clean_header(ngx_http_request_t * r)'/>

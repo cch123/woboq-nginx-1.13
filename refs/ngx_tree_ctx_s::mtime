@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_file.h' l='120' type='time_t'/>
+<offset>192</offset>
+<use f='nginx/src/core/ngx_file.c' l='1056' u='w' c='ngx_walk_tree'/>
+<use f='nginx/src/core/ngx_file.c' l='1068' u='w' c='ngx_walk_tree'/>
+<use f='nginx/src/core/ngx_file.c' l='1087' u='w' c='ngx_walk_tree'/>

@@ -1,0 +1,10 @@
+<dec f='nginx/src/os/unix/ngx_process.h' l='31' type='unsigned int'/>
+<offset>320</offset>
+<use f='nginx/src/os/unix/ngx_process.c' l='223' u='w' c='ngx_spawn_process'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='229' u='w' c='ngx_spawn_process'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='235' u='w' c='ngx_spawn_process'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='241' u='w' c='ngx_spawn_process'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='247' u='w' c='ngx_spawn_process'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='551' u='r' c='ngx_process_get_status'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='556' u='w' c='ngx_process_get_status'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='617' u='r' c='ngx_reap_children'/>

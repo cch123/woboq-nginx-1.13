@@ -1,0 +1,9 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='25'/>
+<use f='nginx/src/http/modules/ngx_http_chunked_filter_module.c' l='79' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='247' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='925' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1354' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1777' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='154' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3703' u='c'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='808' u='c'/>

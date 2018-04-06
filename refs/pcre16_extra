@@ -1,0 +1,11 @@
+<def f='include/pcre.h' l='389' ll='398'/>
+<size>64</size>
+<doc f='include/pcre.h' l='387'>/* Same structure as above, but with 16 bit char pointers. */</doc>
+<mbr r='pcre16_extra::flags' o='0' t='unsigned long'/>
+<mbr r='pcre16_extra::study_data' o='64' t='void *'/>
+<mbr r='pcre16_extra::match_limit' o='128' t='unsigned long'/>
+<mbr r='pcre16_extra::callout_data' o='192' t='void *'/>
+<mbr r='pcre16_extra::tables' o='256' t='const unsigned char *'/>
+<mbr r='pcre16_extra::match_limit_recursion' o='320' t='unsigned long'/>
+<mbr r='pcre16_extra::mark' o='384' t='unsigned short **'/>
+<mbr r='pcre16_extra::executable_jit' o='448' t='void *'/>

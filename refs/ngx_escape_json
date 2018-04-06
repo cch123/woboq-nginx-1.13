@@ -1,0 +1,6 @@
+<dec f='nginx/src/core/ngx_string.h' l='212' type='uintptr_t ngx_escape_json(u_char * dst, u_char * src, size_t size)'/>
+<def f='nginx/src/core/ngx_string.c' l='1811' ll='1897' type='uintptr_t ngx_escape_json(u_char * dst, u_char * src, size_t size)'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='716' u='c' c='ngx_http_autoindex_json'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='751' u='c' c='ngx_http_autoindex_json'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='1063' u='c' c='ngx_http_log_json_variable_getlen'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='1087' u='c' c='ngx_http_log_json_variable'/>

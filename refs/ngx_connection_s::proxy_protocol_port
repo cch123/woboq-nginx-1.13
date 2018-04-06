@@ -1,0 +1,6 @@
+<dec f='nginx/src/core/ngx_connection.h' l='148' type='in_port_t'/>
+<offset>1216</offset>
+<use f='nginx/src/core/ngx_proxy_protocol.c' l='148' u='w' c='ngx_proxy_protocol_read'/>
+<use f='nginx/src/core/ngx_proxy_protocol.c' l='285' u='w' c='ngx_proxy_protocol_v2_read'/>
+<use f='nginx/src/core/ngx_proxy_protocol.c' l='307' u='w' c='ngx_proxy_protocol_v2_read'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1348' u='r' c='ngx_http_variable_proxy_protocol_port'/>

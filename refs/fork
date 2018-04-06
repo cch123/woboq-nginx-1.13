@@ -1,0 +1,6 @@
+<dec f='include/unistd.h' l='759' type='__pid_t fork()'/>
+<doc f='include/unistd.h' l='756'>/* Clone the calling process, creating an exact copy.
+   Return -1 for errors, 0 to the new process,
+   and the process ID of the new process to the old process.  */</doc>
+<use f='nginx/src/os/unix/ngx_daemon.c' l='17' u='c' c='ngx_daemon'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='186' u='c' c='ngx_spawn_process'/>

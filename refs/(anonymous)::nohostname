@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_syslog.h' l='20' type='unsigned int'/>
+<offset>2369</offset>
+<use f='nginx/src/core/ngx_syslog.c' l='198' u='w' c='ngx_syslog_parse_args'/>
+<use f='nginx/src/core/ngx_syslog.c' l='226' u='r' c='ngx_syslog_add_header'/>

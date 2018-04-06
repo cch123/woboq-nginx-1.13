@@ -1,0 +1,8 @@
+<dec f='nginx/src/http/modules/ngx_http_ssi_filter_module.h' l='35' type='ngx_hash_keys_arrays_t'/>
+<offset>128</offset>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2801' u='a' c='ngx_http_ssi_preconfiguration'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2830' u='m' c='ngx_http_ssi_create_main_conf'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2831' u='m' c='ngx_http_ssi_create_main_conf'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2833' u='a' c='ngx_http_ssi_create_main_conf'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2856' u='m' c='ngx_http_ssi_init_main_conf'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2857' u='m' c='ngx_http_ssi_init_main_conf'/>

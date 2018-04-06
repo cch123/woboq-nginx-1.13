@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='546' type='unsigned int'/>
+<offset>9892</offset>
+<use f='nginx/src/http/modules/ngx_http_not_modified_filter_module.c' l='59' u='r' c='ngx_http_not_modified_header_filter'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2784' u='w' c='ngx_http_upstream_process_headers'/>

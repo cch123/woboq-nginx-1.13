@@ -1,0 +1,3 @@
+<dec f='include/pcre.h' l='392' type='unsigned long'/>
+<offset>128</offset>
+<doc f='include/pcre.h' l='392'>/* Maximum number of calls to match() */</doc>

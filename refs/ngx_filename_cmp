@@ -1,0 +1,7 @@
+<dec f='nginx/src/core/ngx_string.h' l='172' type='ngx_int_t ngx_filename_cmp(u_char * s1, u_char * s2, size_t n)'/>
+<def f='nginx/src/core/ngx_string.c' l='877' ll='914' type='ngx_int_t ngx_filename_cmp(u_char * s1, u_char * s2, size_t n)'/>
+<use f='nginx/src/http/ngx_http.c' l='950' u='c' c='ngx_http_cmp_locations'/>
+<use f='nginx/src/http/ngx_http.c' l='978' u='c' c='ngx_http_join_exact_locations'/>
+<use f='nginx/src/http/ngx_http.c' l='1032' u='c' c='ngx_http_create_locations_list'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1404' u='c' c='ngx_http_core_find_static_location'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2997' u='c' c='ngx_http_core_location'/>

@@ -1,0 +1,26 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='175' type='ngx_flag_t'/>
+<offset>1344</offset>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='735' u='r' c='ngx_http_fastcgi_handler'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2719' u='w' c='ngx_http_fastcgi_create_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2815' u='r' c='ngx_http_fastcgi_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2815' u='w' c='ngx_http_fastcgi_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2816' u='r' c='ngx_http_fastcgi_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2816' u='r' c='ngx_http_fastcgi_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='922' u='r' c='ngx_http_proxy_handler'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='2831' u='w' c='ngx_http_proxy_create_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='2944' u='r' c='ngx_http_proxy_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='2944' u='w' c='ngx_http_proxy_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='2945' u='r' c='ngx_http_proxy_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='2945' u='r' c='ngx_http_proxy_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='530' u='r' c='ngx_http_scgi_handler'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='1198' u='w' c='ngx_http_scgi_create_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='1289' u='r' c='ngx_http_scgi_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='1289' u='w' c='ngx_http_scgi_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='1290' u='r' c='ngx_http_scgi_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='1290' u='r' c='ngx_http_scgi_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='699' u='r' c='ngx_http_uwsgi_handler'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='1405' u='w' c='ngx_http_uwsgi_create_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='1504' u='r' c='ngx_http_uwsgi_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='1504' u='w' c='ngx_http_uwsgi_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='1505' u='r' c='ngx_http_uwsgi_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='1505' u='r' c='ngx_http_uwsgi_merge_loc_conf'/>

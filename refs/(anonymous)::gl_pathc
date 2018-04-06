@@ -1,0 +1,5 @@
+<dec f='include/glob.h' l='84' type='__size_t'/>
+<dec f='include/glob.h' l='113' type='__size_t'/>
+<offset>0</offset>
+<doc f='include/glob.h' l='84'>/* Count of paths matched by the pattern.  */</doc>
+<use f='nginx/src/os/unix/ngx_files.c' l='733' u='r' c='ngx_read_glob'/>

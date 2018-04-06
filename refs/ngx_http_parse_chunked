@@ -1,0 +1,6 @@
+<dec f='nginx/src/http/ngx_http.h' l='110' type='ngx_int_t ngx_http_parse_chunked(ngx_http_request_t * r, ngx_buf_t * b, ngx_http_chunked_t * ctx)'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='2083' u='c' c='ngx_http_proxy_chunked_filter'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='2262' u='c' c='ngx_http_proxy_non_buffered_chunked_filter'/>
+<def f='nginx/src/http/ngx_http_parse.c' l='2126' ll='2388' type='ngx_int_t ngx_http_parse_chunked(ngx_http_request_t * r, ngx_buf_t * b, ngx_http_chunked_t * ctx)'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='739' u='c' c='ngx_http_discard_request_body_filter'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='972' u='c' c='ngx_http_request_body_chunked_filter'/>

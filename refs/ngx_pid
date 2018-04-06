@@ -1,0 +1,22 @@
+<dec f='nginx/src/os/unix/ngx_process.h' l='82' type='ngx_pid_t'/>
+<dec f='nginx/src/os/unix/ngx_process_cycle.h' l='43' type='ngx_pid_t'/>
+<use f='nginx/src/core/nginx.c' l='230' u='w' c='main'/>
+<use f='nginx/src/core/ngx_cycle.c' l='972' u='r' c='ngx_create_pidfile'/>
+<use f='nginx/src/core/ngx_log.c' l='124' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_shmtx.c' l='65' u='r' c='ngx_shmtx_trylock'/>
+<use f='nginx/src/core/ngx_shmtx.c' l='78' u='r' c='ngx_shmtx_lock'/>
+<use f='nginx/src/core/ngx_shmtx.c' l='91' u='r' c='ngx_shmtx_lock'/>
+<use f='nginx/src/core/ngx_shmtx.c' l='103' u='r' c='ngx_shmtx_lock'/>
+<use f='nginx/src/core/ngx_shmtx.c' l='143' u='r' c='ngx_shmtx_unlock'/>
+<use f='nginx/src/event/ngx_event.c' l='534' u='r' c='ngx_event_module_init'/>
+<use f='nginx/src/http/modules/ngx_http_userid_filter_module.c' l='843' u='r' c='ngx_http_userid_init_worker'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2043' u='r' c='ngx_http_file_cache_loader'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2269' u='r' c='ngx_http_variable_pid'/>
+<use f='nginx/src/os/unix/ngx_daemon.c' l='29' u='r' c='ngx_daemon'/>
+<use f='nginx/src/os/unix/ngx_daemon.c' l='30' u='w' c='ngx_daemon'/>
+<use f='nginx/src/os/unix/ngx_posix_init.c' l='92' u='r' c='ngx_os_init'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='153' u='r' c='ngx_spawn_process'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='197' u='r' c='ngx_spawn_process'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='198' u='w' c='ngx_spawn_process'/>
+<def f='nginx/src/os/unix/ngx_process_cycle.c' l='33' type='ngx_pid_t'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='918' u='r' c='ngx_worker_process_init'/>

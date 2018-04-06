@@ -1,0 +1,4 @@
+<dec f='nginx/src/event/ngx_event_posted.h' l='31'/>
+<use f='nginx/src/core/ngx_connection.c' l='1151' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='1155' u='c'/>
+<use f='nginx/src/event/ngx_event_posted.c' l='31' u='c'/>

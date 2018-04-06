@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_log.h' l='234' type='u_char * ngx_log_errno(u_char * buf, u_char * last, ngx_err_t err)'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1004' u='c' c='ngx_conf_log_error'/>
+<use f='nginx/src/core/ngx_log.c' l='145' u='c' c='ngx_log_error_core'/>
+<use f='nginx/src/core/ngx_log.c' l='274' u='c' c='ngx_log_stderr'/>
+<def f='nginx/src/core/ngx_log.c' l='287' ll='314' type='u_char * ngx_log_errno(u_char * buf, u_char * last, ngx_err_t err)'/>

@@ -1,0 +1,8 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='360' type='void (*)(ngx_http_request_t *, ngx_int_t)'/>
+<offset>7680</offset>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='718' u='w' c='ngx_http_fastcgi_handler'/>
+<use f='nginx/src/http/modules/ngx_http_memcached_module.c' l='207' u='w' c='ngx_http_memcached_handler'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='895' u='w' c='ngx_http_proxy_handler'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='517' u='w' c='ngx_http_scgi_handler'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='686' u='w' c='ngx_http_uwsgi_handler'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4273' u='r' c='ngx_http_upstream_finalize_request'/>

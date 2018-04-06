@@ -1,0 +1,12 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='478' type='unsigned int'/>
+<offset>9838</offset>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1049' u='w' c='ngx_http_core_post_rewrite_phase'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1051' u='r' c='ngx_http_core_post_rewrite_phase'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2367' u='w' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2401' u='w' c='ngx_http_internal_redirect'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2403' u='r' c='ngx_http_internal_redirect'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2458' u='w' c='ngx_http_named_location'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2460' u='r' c='ngx_http_named_location'/>
+<use f='nginx/src/http/ngx_http_request.c' l='613' u='w' c='ngx_http_create_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3406' u='r' c='ngx_http_post_action'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='456' u='r' c='ngx_http_special_response_handler'/>

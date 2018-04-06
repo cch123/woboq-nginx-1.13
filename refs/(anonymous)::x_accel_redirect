@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='269' type='ngx_table_elt_t *'/>
+<offset>1536</offset>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2672' u='r' c='ngx_http_upstream_process_headers'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2704' u='r' c='ngx_http_upstream_process_headers'/>

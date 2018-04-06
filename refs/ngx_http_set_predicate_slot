@@ -1,0 +1,34 @@
+<dec f='nginx/src/http/ngx_http_script.h' l='217' type='char * ngx_http_set_predicate_slot(ngx_conf_t * cf, ngx_command_t * cmd, void * conf)'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='398'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='398'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='405'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='405'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='398'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='398'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='405'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='405'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='471'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='471'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='478'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='478'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='471'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='471'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='478'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='478'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='248'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='248'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='255'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='255'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='248'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='248'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='255'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='255'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='309'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='309'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='316'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='316'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='309'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='309'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='316'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='316'/>
+<def f='nginx/src/http/ngx_http_script.c' l='274' ll='314' type='char * ngx_http_set_predicate_slot(ngx_conf_t * cf, ngx_command_t * cmd, void * conf)'/>

@@ -1,0 +1,1 @@
+<dec f='include/pcre.h' l='619' type='int pcre32_get_substring(const unsigned int * , int * , int , int , const unsigned int ** )'/>

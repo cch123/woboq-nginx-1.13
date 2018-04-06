@@ -1,0 +1,11 @@
+<dec f='nginx/src/http/ngx_http.h' l='150' type='void ngx_http_block_reading(ngx_http_request_t * r)'/>
+<use f='nginx/src/http/modules/ngx_http_limit_req_module.c' l='311' u='r' c='ngx_http_limit_req_delay'/>
+<use f='nginx/src/http/ngx_http_request.c' l='553' u='r' c='ngx_http_create_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1950' u='r' c='ngx_http_process_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2485' u='r' c='ngx_http_finalize_request'/>
+<def f='nginx/src/http/ngx_http_request.c' l='2752' ll='2767' type='void ngx_http_block_reading(ngx_http_request_t * r)'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3419' u='r' c='ngx_http_post_action'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='200' u='r' c='ngx_http_read_client_request_body'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='420' u='r' c='ngx_http_do_read_client_request_body'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='673' u='r' c='ngx_http_read_discarded_request_body'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4354' u='r' c='ngx_http_upstream_finalize_request'/>

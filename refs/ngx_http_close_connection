@@ -1,0 +1,27 @@
+<dec f='nginx/src/http/ngx_http.h' l='86' type='void ngx_http_close_connection(ngx_connection_t * c)'/>
+<use f='nginx/src/http/ngx_http_request.c' l='222' u='c' c='ngx_http_init_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='241' u='c' c='ngx_http_init_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='307' u='c' c='ngx_http_init_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='378' u='c' c='ngx_http_init_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='401' u='c' c='ngx_http_wait_request_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='406' u='c' c='ngx_http_wait_request_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='420' u='c' c='ngx_http_wait_request_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='430' u='c' c='ngx_http_wait_request_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='449' u='c' c='ngx_http_wait_request_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='465' u='c' c='ngx_http_wait_request_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='472' u='c' c='ngx_http_wait_request_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='484' u='c' c='ngx_http_wait_request_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='505' u='c' c='ngx_http_wait_request_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2972' u='c' c='ngx_http_set_keepalive'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2987' u='c' c='ngx_http_set_keepalive'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3069' u='c' c='ngx_http_set_keepalive'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3079' u='c' c='ngx_http_set_keepalive'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3091' u='c' c='ngx_http_set_keepalive'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3124' u='c' c='ngx_http_keepalive_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3161' u='c' c='ngx_http_keepalive_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3183' u='c' c='ngx_http_keepalive_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3205' u='c' c='ngx_http_keepalive_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3214' u='c' c='ngx_http_keepalive_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3228' u='c' c='ngx_http_keepalive_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3461' u='c' c='ngx_http_close_request'/>
+<def f='nginx/src/http/ngx_http_request.c' l='3571' ll='3601' type='void ngx_http_close_connection(ngx_connection_t * c)'/>

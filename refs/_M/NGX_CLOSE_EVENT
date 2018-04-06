@@ -1,0 +1,21 @@
+<dec f='nginx/src/event/ngx_event.h' l='292'/>
+<use f='nginx/src/core/ngx_connection.c' l='993' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='1137' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='1141' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='1145' u='c'/>
+<doc f='nginx/src/event/ngx_event.h' l='282'>/*
+ * The event filter is deleted just before the closing file.
+ * Has no meaning for select and poll.
+ * kqueue, epoll, eventport:         allows to avoid explicit delete,
+ *                                   because filter automatically is deleted
+ *                                   on file close,
+ *
+ * /dev/poll:                        we need to flush POLLREMOVE event
+ *                                   before closing file.
+ */</doc>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1085' u='c'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='657' u='c'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='736' u='c'/>
+<use f='nginx/src/event/ngx_event.c' l='294' u='c'/>
+<use f='nginx/src/event/ngx_event.c' l='773' u='c'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='63' u='c'/>

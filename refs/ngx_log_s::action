@@ -1,0 +1,38 @@
+<dec f='nginx/src/core/ngx_log.h' l='70' type='char *'/>
+<offset>512</offset>
+<doc f='nginx/src/core/ngx_log.h' l='64'>/*
+     * we declare &quot;action&quot; as &quot;char *&quot; because the actions are usually
+     * the static strings and in the &quot;u_char *&quot; case we have to override
+     * their types all the time
+     */</doc>
+<use f='nginx/src/core/ngx_resolver.c' l='1254' u='w' c='ngx_resolver_send_query'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4359' u='r' c='ngx_resolver_log_error'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4360' u='r' c='ngx_resolver_log_error'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='31' u='w' c='ngx_event_pipe'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='47' u='w' c='ngx_event_pipe'/>
+<use f='nginx/src/http/modules/ngx_http_static_module.c' l='215' u='w' c='ngx_http_static_handler'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='807' u='w' c='ngx_http_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='318' u='w' c='ngx_http_init_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='359' u='w' c='ngx_http_init_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='491' u='w' c='ngx_http_wait_request_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='499' u='w' c='ngx_http_wait_request_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1049' u='w' c='ngx_http_process_request_line'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1447' u='w' c='ngx_http_read_request_header'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2914' u='w' c='ngx_http_set_keepalive'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2983' u='w' c='ngx_http_set_keepalive'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3074' u='w' c='ngx_http_set_keepalive'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3221' u='w' c='ngx_http_keepalive_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3511' u='w' c='ngx_http_free_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3515' u='w' c='ngx_http_free_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3611' u='r' c='ngx_http_log_error'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3612' u='r' c='ngx_http_log_error'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1501' u='w' c='ngx_http_upstream_connect'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1983' u='w' c='ngx_http_upstream_send_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2244' u='w' c='ngx_http_upstream_process_header'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2650' u='w' c='ngx_http_upstream_test_connect'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3210' u='w' c='ngx_http_upstream_upgrade'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3469' u='w' c='ngx_http_upstream_process_non_buffered_downstream'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3493' u='w' c='ngx_http_upstream_process_non_buffered_upstream'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3796' u='w' c='ngx_http_upstream_process_downstream'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3847' u='w' c='ngx_http_upstream_process_upstream'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4360' u='w' c='ngx_http_upstream_finalize_request'/>

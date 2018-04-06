@@ -1,0 +1,6 @@
+<dec f='nginx/src/core/ngx_cycle.h' l='62' type='ngx_array_t'/>
+<offset>2112</offset>
+<use f='nginx/src/core/nginx.c' l='308' u='m' c='main'/>
+<use f='nginx/src/core/nginx.c' l='310' u='m' c='main'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='125' u='a' c='ngx_conf_add_dump'/>
+<use f='nginx/src/core/ngx_cycle.c' l='128' u='a' c='ngx_init_cycle'/>

@@ -1,0 +1,7 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='245' type='unsigned int'/>
+<offset>2948</offset>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1255' u='r' c='ngx_http_update_location_config'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1969' u='r' c='ngx_http_gzip_ok'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1731' u='w' c='ngx_http_process_user_agent'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1735' u='w' c='ngx_http_process_user_agent'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1752' u='w' c='ngx_http_process_user_agent'/>

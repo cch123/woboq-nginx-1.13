@@ -1,0 +1,8 @@
+<dec f='nginx/src/core/ngx_buf.h' l='119' type='ngx_connection_t *'/>
+<offset>128</offset>
+<use f='nginx/src/core/ngx_output_chain.c' l='664' u='r' c='ngx_chain_writer'/>
+<dec f='nginx/src/http/ngx_http_request.h' l='185' type='ngx_table_elt_t *'/>
+<dec f='nginx/src/http/ngx_http_upstream.h' l='264' type='ngx_table_elt_t *'/>
+<offset>1280</offset>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1580' u='w' c='ngx_http_upstream_connect'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4808' u='w' c='ngx_http_upstream_process_connection'/>

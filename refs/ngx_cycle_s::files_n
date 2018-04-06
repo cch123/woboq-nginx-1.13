@@ -1,0 +1,10 @@
+<dec f='nginx/src/core/ngx_cycle.h' l='70' type='ngx_uint_t'/>
+<offset>3904</offset>
+<use f='nginx/src/core/ngx_connection.c' l='1042' u='r' c='ngx_get_connection'/>
+<use f='nginx/src/core/ngx_connection.c' l='1046' u='r' c='ngx_get_connection'/>
+<use f='nginx/src/event/ngx_event.c' l='663' u='w' c='ngx_event_process_init'/>
+<use f='nginx/src/event/ngx_event.c' l='665' u='r' c='ngx_event_process_init'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='718' u='w' c='ngx_master_process_exit'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='718' u='r' c='ngx_master_process_exit'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='1027' u='w' c='ngx_worker_process_exit'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='1027' u='r' c='ngx_worker_process_exit'/>

@@ -1,0 +1,12 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='383' type='ngx_flag_t'/>
+<offset>3456</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='383'>/* tcp_nodelay */</doc>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3387' u='w' c='ngx_http_core_create_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3615' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3615' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3615' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3615' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3090' u='r' c='ngx_http_set_keepalive'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2102' u='r' c='ngx_http_upstream_send_request_body'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2933' u='r' c='ngx_http_upstream_send_response'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3217' u='r' c='ngx_http_upstream_upgrade'/>

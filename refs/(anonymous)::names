@@ -1,0 +1,14 @@
+<dec f='nginx/src/core/ngx_regex.h' l='38' type='u_char *'/>
+<offset>448</offset>
+<use f='nginx/src/core/ngx_regex.c' l='173' u='a' c='ngx_regex_compile'/>
+<dec f='nginx/src/http/ngx_http_core_module.h' l='223' type='ngx_hash_combined_t'/>
+<offset>0</offset>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1940' u='r' c='ngx_http_ssi_regex_match'/>
+<use f='nginx/src/http/ngx_http.c' l='1829' u='m' c='ngx_http_add_addrs'/>
+<use f='nginx/src/http/ngx_http.c' l='1830' u='m' c='ngx_http_add_addrs'/>
+<use f='nginx/src/http/ngx_http.c' l='1831' u='m' c='ngx_http_add_addrs'/>
+<use f='nginx/src/http/ngx_http.c' l='1894' u='m' c='ngx_http_add_addrs6'/>
+<use f='nginx/src/http/ngx_http.c' l='1895' u='m' c='ngx_http_add_addrs6'/>
+<use f='nginx/src/http/ngx_http.c' l='1896' u='m' c='ngx_http_add_addrs6'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2143' u='a' c='ngx_http_find_virtual_server'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2467' u='r' c='ngx_http_regex_compile'/>

@@ -1,0 +1,5 @@
+<def f='include/linux/capability.h' l='45' ll='49'/>
+<size>12</size>
+<mbr r='__user_cap_data_struct::effective' o='0' t='__u32'/>
+<mbr r='__user_cap_data_struct::permitted' o='32' t='__u32'/>
+<mbr r='__user_cap_data_struct::inheritable' o='64' t='__u32'/>

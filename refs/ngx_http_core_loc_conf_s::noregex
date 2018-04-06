@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='310' type='unsigned int'/>
+<offset>196</offset>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1324' u='r' c='ngx_http_core_find_location'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2893' u='w' c='ngx_http_core_location'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2927' u='w' c='ngx_http_core_location'/>

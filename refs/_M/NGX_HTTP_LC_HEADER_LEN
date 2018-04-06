@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='16'/>
+<use f='nginx/src/http/ngx_http_request.h' l='560' u='c'/>
+<doc f='nginx/src/http/ngx_http_request.h' l='15'>/* must be 2^n */</doc>
+<use f='nginx/src/http/ngx_http_parse.c' l='934' u='c'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='942' u='c'/>

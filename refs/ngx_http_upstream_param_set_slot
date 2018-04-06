@@ -1,0 +1,14 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='419' type='char * ngx_http_upstream_param_set_slot(ngx_conf_t * cf, ngx_command_t * cmd, void * conf)'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='526'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='526'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='526'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='526'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='376'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='376'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='376'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='376'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='437'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='437'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='437'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='437'/>
+<def f='nginx/src/http/ngx_http_upstream.c' l='6166' ll='6207' type='char * ngx_http_upstream_param_set_slot(ngx_conf_t * cf, ngx_command_t * cmd, void * conf)'/>

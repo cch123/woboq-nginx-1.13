@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_parse.h' l='17' type='off_t ngx_parse_offset(ngx_str_t * line)'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1244' u='c' c='ngx_conf_set_off_slot'/>
+<def f='nginx/src/core/ngx_parse.c' l='58' ll='108' type='off_t ngx_parse_offset(ngx_str_t * line)'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4555' u='c' c='ngx_http_core_directio'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2460' u='c' c='ngx_http_file_cache_set_slot'/>

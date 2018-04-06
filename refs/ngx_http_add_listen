@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http.h' l='81' type='ngx_int_t ngx_http_add_listen(ngx_conf_t * cf, ngx_http_core_srv_conf_t * cscf, ngx_http_listen_opt_t * lsopt)'/>
+<def f='nginx/src/http/ngx_http.c' l='1140' ll='1187' type='ngx_int_t ngx_http_add_listen(ngx_conf_t * cf, ngx_http_core_srv_conf_t * cscf, ngx_http_listen_opt_t * lsopt)'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2822' u='c' c='ngx_http_core_server'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4097' u='c' c='ngx_http_core_listen'/>

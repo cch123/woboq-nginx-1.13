@@ -1,0 +1,6 @@
+<dec f='nginx/src/core/ngx_log.h' l='83'/>
+<use f='nginx/src/core/ngx_module.h' l='103' u='c'/>
+<use f='nginx/src/core/ngx_log.c' l='93' u='c'/>
+<use f='nginx/src/core/ngx_log.c' l='107' u='c'/>
+<use f='nginx/src/core/ngx_log.c' l='132' u='c'/>
+<use f='nginx/src/core/ngx_log.c' l='213' u='c'/>

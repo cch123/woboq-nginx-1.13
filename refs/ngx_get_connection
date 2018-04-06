@@ -1,0 +1,9 @@
+<dec f='nginx/src/core/ngx_connection.h' l='220' type='ngx_connection_t * ngx_get_connection(ngx_socket_t s, ngx_log_t * log)'/>
+<def f='nginx/src/core/ngx_connection.c' l='1033' ll='1099' type='ngx_connection_t * ngx_get_connection(ngx_socket_t s, ngx_log_t * log)'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4393' u='c' c='ngx_udp_connect'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4479' u='c' c='ngx_tcp_connect'/>
+<use f='nginx/src/event/ngx_event.c' l='742' u='c' c='ngx_event_process_init'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='144' u='c' c='ngx_event_accept'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='438' u='c' c='ngx_event_recvmsg'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='53' u='c' c='ngx_event_connect_peer'/>
+<use f='nginx/src/os/unix/ngx_channel.c' l='205' u='c' c='ngx_add_channel_event'/>

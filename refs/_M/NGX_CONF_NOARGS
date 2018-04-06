@@ -1,0 +1,16 @@
+<dec f='nginx/src/core/ngx_conf_file.h' l='22'/>
+<doc f='nginx/src/core/ngx_conf_file.h' l='16'>/*
+ *        AAAA  number of arguments
+ *      FF      command flags
+ *    TT        command type, i.e. HTTP &quot;location&quot; or &quot;server&quot; command
+ */</doc>
+<use f='nginx/src/core/ngx_conf_file.c' l='51' u='c'/>
+<use f='nginx/src/event/ngx_event.c' l='84' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_empty_gif_module.c' l='18' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='64' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_ip_hash_module.c' l='39' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_least_conn_module.c' l='24' u='c'/>
+<use f='nginx/src/http/ngx_http.c' l='86' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='211' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='310' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='524' u='c'/>

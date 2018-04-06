@@ -1,0 +1,22 @@
+<dec f='nginx/src/core/ngx_cycle.h' l='100' type='int'/>
+<dec f='nginx/src/core/ngx_resolver.h' l='65' type='u_short'/>
+<dec f='nginx/src/core/ngx_resolver.h' l='72' type='u_short'/>
+<dec f='nginx/src/core/ngx_resolver.h' l='80' type='u_short'/>
+<offset>128</offset>
+<use f='nginx/src/core/nginx.c' l='1282' u='r' c='ngx_set_priority'/>
+<use f='nginx/src/core/nginx.c' l='1301' u='w' c='ngx_set_priority'/>
+<use f='nginx/src/core/nginx.c' l='1302' u='r' c='ngx_set_priority'/>
+<use f='nginx/src/core/nginx.c' l='1307' u='w' c='ngx_set_priority'/>
+<use f='nginx/src/core/nginx.c' l='1307' u='r' c='ngx_set_priority'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2768' u='w' c='ngx_resolver_process_srv'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2950' u='w' c='ngx_resolver_resolve_srv_names'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2950' u='r' c='ngx_resolver_resolve_srv_names'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4275' u='r' c='ngx_resolver_report_srv'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4275' u='r' c='ngx_resolver_report_srv'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4302' u='w' c='ngx_resolver_report_srv'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4302' u='r' c='ngx_resolver_report_srv'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4650' u='r' c='ngx_resolver_cmp_srvs'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4651' u='r' c='ngx_resolver_cmp_srvs'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='799' u='r' c='ngx_worker_process_init'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='800' u='r' c='ngx_worker_process_init'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='802' u='r' c='ngx_worker_process_init'/>

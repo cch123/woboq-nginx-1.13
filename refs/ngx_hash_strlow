@@ -1,0 +1,12 @@
+<dec f='nginx/src/core/ngx_hash.h' l='114' type='ngx_uint_t ngx_hash_strlow(u_char * dst, u_char * src, size_t n)'/>
+<def f='nginx/src/core/ngx_hash.c' l='639' ll='654' type='ngx_uint_t ngx_hash_strlow(u_char * dst, u_char * src, size_t n)'/>
+<use f='nginx/src/core/ngx_hash.c' l='835' u='c' c='ngx_hash_add_key'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1759' u='c' c='ngx_http_ssi_evaluate_string'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1952' u='c' c='ngx_http_ssi_regex_match'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2145' u='c' c='ngx_http_ssi_include'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2262' u='c' c='ngx_http_ssi_echo'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2441' u='c' c='ngx_http_ssi_set'/>
+<use f='nginx/src/http/ngx_http.c' l='1955' u='c' c='ngx_http_types_slot'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1529' u='c' c='ngx_http_set_content_type'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3123' u='c' c='ngx_http_core_type'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2370' u='c' c='ngx_http_map_find'/>

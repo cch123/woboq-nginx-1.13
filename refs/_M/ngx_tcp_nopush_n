@@ -1,0 +1,2 @@
+<dec f='nginx/src/os/unix/ngx_socket.h' l='46'/>
+<use f='nginx/src/os/unix/ngx_linux_sendfile_chain.c' l='144' u='c'/>

@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='396' type='unsigned int'/>
+<offset>8461</offset>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2198' u='r' c='ngx_http_upstream_send_request_handler'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2864' u='w' c='ngx_http_upstream_send_response'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4362' u='r' c='ngx_http_upstream_finalize_request'/>

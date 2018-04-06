@@ -1,0 +1,5 @@
+<dec f='include/x86_64-linux-gnu/bits/sigaction.h' l='43' type='__sigset_t'/>
+<offset>64</offset>
+<doc f='include/x86_64-linux-gnu/bits/sigaction.h' l='42'>/* Additional set of signals to be blocked.  */</doc>
+<use f='nginx/src/event/ngx_event.c' l='635' u='a' c='ngx_event_process_init'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='301' u='a' c='ngx_init_signals'/>

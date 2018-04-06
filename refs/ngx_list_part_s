@@ -1,0 +1,5 @@
+<def f='nginx/src/core/ngx_list.h' l='18' ll='22'/>
+<size>24</size>
+<mbr r='ngx_list_part_s::elts' o='0' t='void *'/>
+<mbr r='ngx_list_part_s::nelts' o='64' t='ngx_uint_t'/>
+<mbr r='ngx_list_part_s::next' o='128' t='ngx_list_part_t *'/>

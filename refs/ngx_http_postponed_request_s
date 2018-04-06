@@ -1,0 +1,5 @@
+<def f='nginx/src/http/ngx_http_request.h' l='352' ll='356'/>
+<size>24</size>
+<mbr r='ngx_http_postponed_request_s::request' o='0' t='ngx_http_request_t *'/>
+<mbr r='ngx_http_postponed_request_s::out' o='64' t='ngx_chain_t *'/>
+<mbr r='ngx_http_postponed_request_s::next' o='128' t='ngx_http_postponed_request_t *'/>

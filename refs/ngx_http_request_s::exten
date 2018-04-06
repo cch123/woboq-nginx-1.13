@@ -1,0 +1,22 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='410' type='ngx_str_t'/>
+<offset>7872</offset>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1515' u='m' c='ngx_http_set_content_type'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1519' u='m' c='ngx_http_set_content_type'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1520' u='m' c='ngx_http_set_content_type'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1524' u='m' c='ngx_http_set_content_type'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1529' u='m' c='ngx_http_set_content_type'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1529' u='m' c='ngx_http_set_content_type'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1531' u='m' c='ngx_http_set_content_type'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1540' u='m' c='ngx_http_set_content_type'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1540' u='m' c='ngx_http_set_content_type'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1562' u='a' c='ngx_http_set_exten'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1562' u='a' c='ngx_http_set_exten'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1567' u='m' c='ngx_http_set_exten'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1568' u='m' c='ngx_http_set_exten'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1564' u='m' c='ngx_http_parse_complex_uri'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1565' u='m' c='ngx_http_parse_complex_uri'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1589' u='m' c='ngx_http_parse_complex_uri'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1590' u='m' c='ngx_http_parse_complex_uri'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1140' u='m' c='ngx_http_process_request_uri'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1142' u='m' c='ngx_http_process_request_uri'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1145' u='m' c='ngx_http_process_request_uri'/>

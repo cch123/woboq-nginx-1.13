@@ -1,0 +1,14 @@
+<dec f='nginx/src/http/ngx_http.h' l='154' type='char * ngx_http_types_slot(ngx_conf_t * cf, ngx_command_t * cmd, void * conf)'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='165'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='165'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='165'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='165'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='150'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='150'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='150'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='150'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='161' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='161' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='161' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='161' u='r'/>
+<def f='nginx/src/http/ngx_http.c' l='1909' ll='1983' type='char * ngx_http_types_slot(ngx_conf_t * cf, ngx_command_t * cmd, void * conf)'/>

@@ -1,0 +1,19 @@
+<def f='nginx/src/http/ngx_http_cache.h' l='157' ll='184'/>
+<size>136</size>
+<mbr r='ngx_http_file_cache_s::sh' o='0' t='ngx_http_file_cache_sh_t *'/>
+<mbr r='ngx_http_file_cache_s::shpool' o='64' t='ngx_slab_pool_t *'/>
+<mbr r='ngx_http_file_cache_s::path' o='128' t='ngx_path_t *'/>
+<mbr r='ngx_http_file_cache_s::max_size' o='192' t='off_t'/>
+<mbr r='ngx_http_file_cache_s::bsize' o='256' t='size_t'/>
+<mbr r='ngx_http_file_cache_s::inactive' o='320' t='time_t'/>
+<mbr r='ngx_http_file_cache_s::fail_time' o='384' t='time_t'/>
+<mbr r='ngx_http_file_cache_s::files' o='448' t='ngx_uint_t'/>
+<mbr r='ngx_http_file_cache_s::loader_files' o='512' t='ngx_uint_t'/>
+<mbr r='ngx_http_file_cache_s::last' o='576' t='ngx_msec_t'/>
+<mbr r='ngx_http_file_cache_s::loader_sleep' o='640' t='ngx_msec_t'/>
+<mbr r='ngx_http_file_cache_s::loader_threshold' o='704' t='ngx_msec_t'/>
+<mbr r='ngx_http_file_cache_s::manager_files' o='768' t='ngx_uint_t'/>
+<mbr r='ngx_http_file_cache_s::manager_sleep' o='832' t='ngx_msec_t'/>
+<mbr r='ngx_http_file_cache_s::manager_threshold' o='896' t='ngx_msec_t'/>
+<mbr r='ngx_http_file_cache_s::shm_zone' o='960' t='ngx_shm_zone_t *'/>
+<mbr r='ngx_http_file_cache_s::use_temp_path' o='1024' t='ngx_uint_t'/>

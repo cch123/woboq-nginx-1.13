@@ -1,0 +1,6 @@
+<dec f='nginx/src/os/unix/ngx_os.h' l='47' type='ssize_t ngx_readv_chain(ngx_connection_t * c, ngx_chain_t * entry, off_t limit)'/>
+<use f='nginx/src/os/unix/ngx_linux_init.c' l='18' u='r'/>
+<use f='nginx/src/os/unix/ngx_linux_init.c' l='18' u='r'/>
+<use f='nginx/src/os/unix/ngx_posix_init.c' l='24' u='r'/>
+<use f='nginx/src/os/unix/ngx_posix_init.c' l='24' u='r'/>
+<def f='nginx/src/os/unix/ngx_readv_chain.c' l='13' ll='214' type='ssize_t ngx_readv_chain(ngx_connection_t * c, ngx_chain_t * chain, off_t limit)'/>

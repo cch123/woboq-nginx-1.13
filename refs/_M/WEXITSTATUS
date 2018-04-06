@@ -1,0 +1,5 @@
+<dec f='include/stdlib.h' l='84'/>
+<doc f='include/stdlib.h' l='83'>/* Define the macros &lt;sys/wait.h&gt; also would define this way.  */</doc>
+<use f='nginx/src/os/unix/ngx_process.c' l='548' u='c'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='551' u='c'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='555' u='c'/>

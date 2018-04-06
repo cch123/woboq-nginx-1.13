@@ -1,0 +1,9 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='28'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='213' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_memcached_module.c' l='48' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='222' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='84' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='116' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='446' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4089' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4130' u='c'/>

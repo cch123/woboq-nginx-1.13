@@ -1,0 +1,10 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='373' type='ngx_uint_t'/>
+<offset>2944</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='373'>/* max_ranges */</doc>
+<use f='nginx/src/http/modules/ngx_http_range_filter_module.c' l='166' u='r' c='ngx_http_range_header_filter'/>
+<use f='nginx/src/http/modules/ngx_http_range_filter_module.c' l='227' u='r' c='ngx_http_range_header_filter'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3370' u='w' c='ngx_http_core_create_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3588' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3588' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3588' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3588' u='r' c='ngx_http_core_merge_loc_conf'/>

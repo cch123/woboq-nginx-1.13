@@ -1,0 +1,6 @@
+<dec f='include/x86_64-linux-gnu/sys/stat.h' l='242' type='int fstatat(int __fd, const char *restrict __file, struct stat *restrict __buf, int __flag)'/>
+<dec f='include/x86_64-linux-gnu/sys/stat.h' l='252' type='int fstatat64(int __fd, const char *restrict __file, struct stat64 *restrict __buf, int __flag)'/>
+<def f='include/x86_64-linux-gnu/sys/stat.h' l='472' ll='477' macro='1' type='int fstatat(int __fd, const char * __filename, struct stat * __statbuf, int __flag)'/>
+<def f='include/x86_64-linux-gnu/sys/stat.h' l='521' ll='526' macro='1' type='int fstatat64(int __fd, const char * __filename, struct stat64 * __statbuf, int __flag)'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='517' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='601' macro='1' u='c'/>

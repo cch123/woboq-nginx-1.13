@@ -1,0 +1,15 @@
+<dec f='nginx/src/core/ngx_syslog.h' l='18' type='ngx_connection_t'/>
+<offset>576</offset>
+<use f='nginx/src/core/ngx_syslog.c' l='68' u='m' c='ngx_syslog_process_conf'/>
+<use f='nginx/src/core/ngx_syslog.c' l='275' u='m' c='ngx_syslog_send'/>
+<use f='nginx/src/core/ngx_syslog.c' l='282' u='m' c='ngx_syslog_send'/>
+<use f='nginx/src/core/ngx_syslog.c' l='285' u='a' c='ngx_syslog_send'/>
+<use f='nginx/src/core/ngx_syslog.c' l='289' u='a' c='ngx_syslog_send'/>
+<use f='nginx/src/core/ngx_syslog.c' l='296' u='m' c='ngx_syslog_send'/>
+<use f='nginx/src/core/ngx_syslog.c' l='301' u='m' c='ngx_syslog_send'/>
+<use f='nginx/src/core/ngx_syslog.c' l='316' u='m' c='ngx_syslog_init_peer'/>
+<use f='nginx/src/core/ngx_syslog.c' l='317' u='m' c='ngx_syslog_init_peer'/>
+<use f='nginx/src/core/ngx_syslog.c' l='348' u='m' c='ngx_syslog_init_peer'/>
+<use f='nginx/src/core/ngx_syslog.c' l='351' u='m' c='ngx_syslog_init_peer'/>
+<use f='nginx/src/core/ngx_syslog.c' l='374' u='m' c='ngx_syslog_cleanup'/>
+<use f='nginx/src/core/ngx_syslog.c' l='378' u='m' c='ngx_syslog_cleanup'/>

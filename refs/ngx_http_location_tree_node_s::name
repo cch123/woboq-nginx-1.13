@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='462' type='u_char [1]'/>
+<offset>336</offset>
+<use f='nginx/src/http/ngx_http.c' l='1097' u='r' c='ngx_http_create_locations_tree'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1404' u='r' c='ngx_http_core_find_static_location'/>

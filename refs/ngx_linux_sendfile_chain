@@ -1,0 +1,4 @@
+<dec f='nginx/src/os/unix/ngx_linux.h' l='12' type='ngx_chain_t * ngx_linux_sendfile_chain(ngx_connection_t * c, ngx_chain_t * in, off_t limit)'/>
+<use f='nginx/src/os/unix/ngx_linux_init.c' l='24' u='r'/>
+<use f='nginx/src/os/unix/ngx_linux_init.c' l='24' u='r'/>
+<def f='nginx/src/os/unix/ngx_linux_sendfile_chain.c' l='46' ll='226' type='ngx_chain_t * ngx_linux_sendfile_chain(ngx_connection_t * c, ngx_chain_t * in, off_t limit)'/>

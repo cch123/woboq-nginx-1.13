@@ -1,0 +1,15 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='21'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='207' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2951' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_memcached_module.c' l='46' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_memcached_module.c' l='660' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='214' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='3078' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='78' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='1425' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='110' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='1640' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2185' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2247' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4101' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4113' u='c'/>

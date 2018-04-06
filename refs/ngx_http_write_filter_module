@@ -1,0 +1,4 @@
+<dec f='nginx/objs/ngx_modules.c' l='44' type='ngx_module_t'/>
+<use f='nginx/objs/ngx_modules.c' l='96' u='a'/>
+<use f='nginx/objs/ngx_modules.c' l='96' u='a'/>
+<def f='nginx/src/http/ngx_http_write_filter_module.c' l='31' ll='44' type='ngx_module_t'/>

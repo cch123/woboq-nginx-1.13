@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_connection.h' l='163' type='ngx_uint_t'/>
+<offset>1664</offset>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1252' u='r' c='ngx_http_update_location_config'/>
+<use f='nginx/src/http/ngx_http_request.c' l='526' u='w' c='ngx_http_create_request'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2220' u='r' c='ngx_http_variable_connection_requests'/>

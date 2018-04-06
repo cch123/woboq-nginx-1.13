@@ -1,0 +1,6 @@
+<dec f='nginx/src/core/ngx_file.h' l='89' type='ngx_uint_t'/>
+<offset>64</offset>
+<use f='nginx/src/core/ngx_file.c' l='700' u='r' c='ngx_ext_rename_file'/>
+<use f='nginx/src/core/ngx_file.c' l='700' u='r' c='ngx_ext_rename_file'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1388' u='w' c='ngx_http_file_cache_update'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4024' u='w' c='ngx_http_upstream_store'/>

@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_regex.h' l='57' type='ngx_int_t ngx_regex_exec_array(ngx_array_t * a, ngx_str_t * s, ngx_log_t * log)'/>
+<def f='nginx/src/core/ngx_regex.c' l='197' ll='227' type='ngx_int_t ngx_regex_exec_array(ngx_array_t * a, ngx_str_t * s, ngx_log_t * log)'/>
+<use f='nginx/src/http/modules/ngx_http_referer_module.c' l='205' u='c' c='ngx_http_referer_variable'/>
+<use f='nginx/src/http/modules/ngx_http_referer_module.c' l='223' u='c' c='ngx_http_referer_variable'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2072' u='c' c='ngx_http_gzip_ok'/>

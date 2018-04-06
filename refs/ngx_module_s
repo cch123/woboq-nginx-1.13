@@ -1,0 +1,27 @@
+<def f='nginx/src/core/ngx_module.h' l='222' ll='257'/>
+<size>200</size>
+<mbr r='ngx_module_s::ctx_index' o='0' t='ngx_uint_t'/>
+<mbr r='ngx_module_s::index' o='64' t='ngx_uint_t'/>
+<mbr r='ngx_module_s::name' o='128' t='char *'/>
+<mbr r='ngx_module_s::spare0' o='192' t='ngx_uint_t'/>
+<mbr r='ngx_module_s::spare1' o='256' t='ngx_uint_t'/>
+<mbr r='ngx_module_s::version' o='320' t='ngx_uint_t'/>
+<mbr r='ngx_module_s::signature' o='384' t='const char *'/>
+<mbr r='ngx_module_s::ctx' o='448' t='void *'/>
+<mbr r='ngx_module_s::commands' o='512' t='ngx_command_t *'/>
+<mbr r='ngx_module_s::type' o='576' t='ngx_uint_t'/>
+<mbr r='ngx_module_s::init_master' o='640' t='ngx_int_t (*)(ngx_log_t *)'/>
+<mbr r='ngx_module_s::init_module' o='704' t='ngx_int_t (*)(ngx_cycle_t *)'/>
+<mbr r='ngx_module_s::init_process' o='768' t='ngx_int_t (*)(ngx_cycle_t *)'/>
+<mbr r='ngx_module_s::init_thread' o='832' t='ngx_int_t (*)(ngx_cycle_t *)'/>
+<mbr r='ngx_module_s::exit_thread' o='896' t='void (*)(ngx_cycle_t *)'/>
+<mbr r='ngx_module_s::exit_process' o='960' t='void (*)(ngx_cycle_t *)'/>
+<mbr r='ngx_module_s::exit_master' o='1024' t='void (*)(ngx_cycle_t *)'/>
+<mbr r='ngx_module_s::spare_hook0' o='1088' t='uintptr_t'/>
+<mbr r='ngx_module_s::spare_hook1' o='1152' t='uintptr_t'/>
+<mbr r='ngx_module_s::spare_hook2' o='1216' t='uintptr_t'/>
+<mbr r='ngx_module_s::spare_hook3' o='1280' t='uintptr_t'/>
+<mbr r='ngx_module_s::spare_hook4' o='1344' t='uintptr_t'/>
+<mbr r='ngx_module_s::spare_hook5' o='1408' t='uintptr_t'/>
+<mbr r='ngx_module_s::spare_hook6' o='1472' t='uintptr_t'/>
+<mbr r='ngx_module_s::spare_hook7' o='1536' t='uintptr_t'/>

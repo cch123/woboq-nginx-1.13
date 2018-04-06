@@ -1,0 +1,11 @@
+<dec f='nginx/src/core/ngx_file.h' l='21' type='off_t'/>
+<offset>1344</offset>
+<use f='nginx/src/core/ngx_conf_file.c' l='213' u='w' c='ngx_conf_parse'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='535' u='r' c='ngx_conf_read_token'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='583' u='r' c='ngx_conf_read_token'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='590' u='r' c='ngx_conf_read_token'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='1149' u='r' c='ngx_http_request_body_save_filter'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='1161' u='r' c='ngx_http_request_body_save_filter'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='72' u='w' c='ngx_read_file'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='222' u='w' c='ngx_write_file'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='468' u='w' c='ngx_writev_file'/>

@@ -1,0 +1,2 @@
+<dec f='include/pcre.h' l='540' type='pcre * pcre_compile(const char * , int , const char ** , int * , const unsigned char * )'/>
+<use f='nginx/src/core/ngx_regex.c' l='105' u='c' c='ngx_regex_compile'/>

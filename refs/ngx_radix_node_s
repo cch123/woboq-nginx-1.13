@@ -1,0 +1,6 @@
+<def f='nginx/src/core/ngx_radix_tree.h' l='20' ll='25'/>
+<size>32</size>
+<mbr r='ngx_radix_node_s::right' o='0' t='ngx_radix_node_t *'/>
+<mbr r='ngx_radix_node_s::left' o='64' t='ngx_radix_node_t *'/>
+<mbr r='ngx_radix_node_s::parent' o='128' t='ngx_radix_node_t *'/>
+<mbr r='ngx_radix_node_s::value' o='192' t='uintptr_t'/>

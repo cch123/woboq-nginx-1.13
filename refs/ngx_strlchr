@@ -1,0 +1,17 @@
+<def f='nginx/src/core/ngx_string.h' l='67' ll='80' type='u_char * ngx_strlchr(u_char * p, u_char * last, u_char c)'/>
+<use f='nginx/src/core/ngx_inet.c' l='386' u='c' c='ngx_ptocidr'/>
+<use f='nginx/src/core/ngx_inet.c' l='638' u='c' c='ngx_parse_addr_port'/>
+<use f='nginx/src/core/ngx_inet.c' l='651' u='c' c='ngx_parse_addr_port'/>
+<use f='nginx/src/core/ngx_inet.c' l='719' u='c' c='ngx_parse_unix_domain_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='801' u='c' c='ngx_parse_inet_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='803' u='c' c='ngx_parse_inet_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='805' u='c' c='ngx_parse_inet_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='992' u='c' c='ngx_parse_inet6_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='1001' u='c' c='ngx_parse_inet6_url'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='694' u='c' c='ngx_open_file_wrapper'/>
+<use f='nginx/src/core/ngx_resolver.c' l='438' u='c' c='ngx_resolve_name'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='713' u='c' c='ngx_http_geo_range'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4013' u='c' c='ngx_http_core_listen'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4029' u='c' c='ngx_http_core_listen'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='2089' u='c' c='ngx_http_arg'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='2112' u='c' c='ngx_http_split_args'/>

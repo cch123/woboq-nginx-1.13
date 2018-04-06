@@ -1,0 +1,8 @@
+<dec f='nginx/src/http/modules/ngx_http_ssi_filter_module.h' l='82' type='ngx_str_t'/>
+<offset>3520</offset>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='363' u='w' c='ngx_http_ssi_header_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2390' u='m' c='ngx_http_ssi_config'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2391' u='m' c='ngx_http_ssi_config'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2392' u='m' c='ngx_http_ssi_config'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2396' u='m' c='ngx_http_ssi_config'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2742' u='a' c='ngx_http_ssi_date_gmt_local_variable'/>

@@ -1,0 +1,10 @@
+<dec f='nginx/src/core/ngx_connection.h' l='161' type='ngx_atomic_uint_t'/>
+<offset>1600</offset>
+<use f='nginx/src/core/ngx_resolver.c' l='4419' u='w' c='ngx_udp_connect'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4505' u='w' c='ngx_tcp_connect'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='262' u='w' c='ngx_event_accept'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='589' u='w' c='ngx_event_recvmsg'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='182' u='w' c='ngx_event_connect_peer'/>
+<use f='nginx/src/http/ngx_http_request.c' l='315' u='r' c='ngx_http_init_connection'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2199' u='r' c='ngx_http_variable_connection'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='1000' u='r' c='ngx_worker_process_exit'/>

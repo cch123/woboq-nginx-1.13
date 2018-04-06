@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_script.h' l='215' type='ngx_int_t ngx_http_test_predicates(ngx_http_request_t * r, ngx_array_t * predicates)'/>
+<def f='nginx/src/http/ngx_http_script.c' l='247' ll='271' type='ngx_int_t ngx_http_test_predicates(ngx_http_request_t * r, ngx_array_t * predicates)'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='863' u='c' c='ngx_http_upstream_cache'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2978' u='c' c='ngx_http_upstream_send_response'/>

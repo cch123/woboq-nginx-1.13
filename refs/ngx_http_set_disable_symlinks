@@ -1,0 +1,9 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='522' type='ngx_int_t ngx_http_set_disable_symlinks(ngx_http_request_t * r, ngx_http_core_loc_conf_t * clcf, ngx_str_t * path, ngx_open_file_info_t * of)'/>
+<use f='nginx/src/http/modules/ngx_http_index_module.c' l='213' u='c' c='ngx_http_index_handler'/>
+<use f='nginx/src/http/modules/ngx_http_index_module.c' l='312' u='c' c='ngx_http_index_test_dir'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='504' u='c' c='ngx_http_log_script_write'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='556' u='c' c='ngx_http_log_script_write'/>
+<use f='nginx/src/http/modules/ngx_http_static_module.c' l='98' u='c' c='ngx_http_static_handler'/>
+<use f='nginx/src/http/modules/ngx_http_try_files_module.c' l='226' u='c' c='ngx_http_try_files_handler'/>
+<def f='nginx/src/http/ngx_http_core_module.c' l='2560' ll='2607' type='ngx_int_t ngx_http_set_disable_symlinks(ngx_http_request_t * r, ngx_http_core_loc_conf_t * clcf, ngx_str_t * path, ngx_open_file_info_t * of)'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1507' u='c' c='ngx_http_script_file_code'/>

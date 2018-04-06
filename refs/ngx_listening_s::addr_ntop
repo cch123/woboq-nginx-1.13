@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_connection.h' l='66' type='unsigned int'/>
+<offset>1865</offset>
+<use f='nginx/src/event/ngx_event_accept.c' l='268' u='r' c='ngx_event_accept'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='595' u='r' c='ngx_event_recvmsg'/>
+<use f='nginx/src/http/ngx_http.c' l='1713' u='w' c='ngx_http_add_listening'/>

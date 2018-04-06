@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/modules/ngx_http_ssi_filter_module.h' l='59' type='ngx_uint_t'/>
+<offset>2752</offset>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1345' u='w' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1373' u='w' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1395' u='r' c='ngx_http_ssi_parse'/>

@@ -1,0 +1,2 @@
+<dec f='include/x86_64-linux-gnu/bits/sigaction.h' l='78'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='912' u='c'/>

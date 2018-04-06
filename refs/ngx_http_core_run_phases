@@ -1,0 +1,13 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='466' type='void ngx_http_core_run_phases(ngx_http_request_t * r)'/>
+<use f='nginx/src/http/modules/ngx_http_limit_req_module.c' l='312' u='r' c='ngx_http_limit_req_delay'/>
+<use f='nginx/src/http/modules/ngx_http_limit_req_module.c' l='314' u='c' c='ngx_http_limit_req_delay'/>
+<use f='nginx/src/http/modules/ngx_http_mirror_module.c' l='144' u='r' c='ngx_http_mirror_body_handler'/>
+<use f='nginx/src/http/modules/ngx_http_mirror_module.c' l='145' u='c' c='ngx_http_mirror_body_handler'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='840' u='r' c='ngx_http_handler'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='841' u='c' c='ngx_http_handler'/>
+<def f='nginx/src/http/ngx_http_core_module.c' l='845' ll='864' type='void ngx_http_core_run_phases(ngx_http_request_t * r)'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2386' u='r' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2510' u='r' c='ngx_http_named_location'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2511' u='c' c='ngx_http_named_location'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2335' u='r' c='ngx_http_finalize_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2336' u='c' c='ngx_http_finalize_request'/>

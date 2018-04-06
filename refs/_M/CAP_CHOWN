@@ -1,0 +1,4 @@
+<dec f='include/linux/capability.h' l='96'/>
+<doc f='include/linux/capability.h' l='92'>/* In a system with the [_POSIX_CHOWN_RESTRICTED] option defined, this
+   overrides the restriction of changing file ownership and group
+   ownership. */</doc>

@@ -1,0 +1,5 @@
+<def f='nginx/src/core/ngx_rbtree.h' l='37' ll='41'/>
+<size>24</size>
+<mbr r='ngx_rbtree_s::root' o='0' t='ngx_rbtree_node_t *'/>
+<mbr r='ngx_rbtree_s::sentinel' o='64' t='ngx_rbtree_node_t *'/>
+<mbr r='ngx_rbtree_s::insert' o='128' t='ngx_rbtree_insert_pt'/>

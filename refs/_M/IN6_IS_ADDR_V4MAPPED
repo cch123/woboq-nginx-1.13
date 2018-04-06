@@ -1,0 +1,5 @@
+<dec f='include/netinet/in.h' l='437'/>
+<use f='nginx/src/core/ngx_inet.c' l='503' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_access_module.c' l='150' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='201' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='265' u='c'/>

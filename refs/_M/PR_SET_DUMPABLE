@@ -1,0 +1,2 @@
+<dec f='include/linux/prctl.h' l='13'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='894' u='c'/>

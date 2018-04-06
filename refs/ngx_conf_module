@@ -1,0 +1,4 @@
+<dec f='nginx/objs/ngx_modules.c' l='9' type='ngx_module_t'/>
+<use f='nginx/objs/ngx_modules.c' l='61' u='a'/>
+<use f='nginx/objs/ngx_modules.c' l='61' u='a'/>
+<def f='nginx/src/core/ngx_conf_file.c' l='32' ll='45' type='ngx_module_t'/>

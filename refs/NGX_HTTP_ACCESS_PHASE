@@ -1,0 +1,6 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='119' type='6'/>
+<use f='nginx/src/http/modules/ngx_http_access_module.c' l='455' u='m' c='ngx_http_access_init'/>
+<use f='nginx/src/http/modules/ngx_http_auth_basic_module.c' l='391' u='m' c='ngx_http_auth_basic_init'/>
+<use f='nginx/src/http/ngx_http.c' l='378' u='m' c='ngx_http_init_phases'/>
+<use f='nginx/src/http/ngx_http.c' l='465' u='m' c='ngx_http_init_phase_handlers'/>
+<use f='nginx/src/http/ngx_http.c' l='524' c='ngx_http_init_phase_handlers'/>

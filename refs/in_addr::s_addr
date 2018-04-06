@@ -1,0 +1,26 @@
+<dec f='include/netinet/in.h' l='33' type='in_addr_t'/>
+<offset>0</offset>
+<use f='nginx/src/core/ngx_connection.c' l='1317' u='r' c='ngx_connection_local_sockaddr'/>
+<use f='nginx/src/core/ngx_inet.c' l='496' u='r' c='ngx_cidr_match'/>
+<use f='nginx/src/core/ngx_inet.c' l='611' u='w' c='ngx_parse_addr'/>
+<use f='nginx/src/core/ngx_inet.c' l='894' u='w' c='ngx_parse_inet_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='899' u='w' c='ngx_parse_inet_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='901' u='r' c='ngx_parse_inet_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='903' u='r' c='ngx_parse_inet_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='964' u='r' c='ngx_parse_inet_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='1431' u='r' c='ngx_cmp_sockaddr'/>
+<use f='nginx/src/core/ngx_inet.c' l='1431' u='r' c='ngx_cmp_sockaddr'/>
+<use f='nginx/src/core/ngx_resolver.c' l='392' u='w' c='ngx_resolve_start'/>
+<use f='nginx/src/core/ngx_resolver.c' l='667' u='w' c='ngx_resolve_name_locked'/>
+<use f='nginx/src/core/ngx_resolver.c' l='948' u='r' c='ngx_resolve_addr'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2399' u='w' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3883' u='r' c='ngx_resolver_create_addr_query'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4185' u='w' c='ngx_resolver_export'/>
+<use f='nginx/src/http/modules/ngx_http_access_module.c' l='140' u='r' c='ngx_http_access_handler'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='220' u='r' c='ngx_http_geo_cidr_variable'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='282' u='r' c='ngx_http_geo_range_variable'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_ip_hash_module.c' l='123' u='a' c='ngx_http_upstream_init_ip_hash_peer'/>
+<use f='nginx/src/http/modules/ngx_http_userid_filter_module.c' l='550' u='r' c='ngx_http_userid_create_uid'/>
+<use f='nginx/src/http/ngx_http.c' l='1799' u='r' c='ngx_http_add_addrs'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2804' u='w' c='ngx_http_core_server'/>
+<use f='nginx/src/http/ngx_http_request.c' l='274' u='r' c='ngx_http_init_connection'/>

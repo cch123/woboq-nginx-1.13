@@ -1,0 +1,7 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='219' type='ngx_msec_t'/>
+<offset>1536</offset>
+<use f='nginx/src/core/ngx_resolver.c' l='2948' u='w' c='ngx_resolver_resolve_srv_names'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2948' u='r' c='ngx_resolver_resolve_srv_names'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4000' u='r' c='ngx_resolver_set_timeout'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4015' u='r' c='ngx_resolver_set_timeout'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='757' u='w' c='ngx_http_upstream_init_request'/>

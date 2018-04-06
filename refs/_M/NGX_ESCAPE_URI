@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_string.h' l='197'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1100' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1121' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1213' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1338' u='c'/>

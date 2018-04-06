@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_script.h' l='201' type='uintptr_t'/>
+<offset>128</offset>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='993' u='w' c='ngx_http_rewrite_value'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1664' u='r' c='ngx_http_script_value_code'/>

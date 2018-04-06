@@ -1,0 +1,20 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='207' type='time_t'/>
+<offset>576</offset>
+<use f='nginx/src/core/ngx_resolver.c' l='658' u='w' c='ngx_resolve_name_locked'/>
+<use f='nginx/src/core/ngx_resolver.c' l='722' u='w' c='ngx_resolve_name_locked'/>
+<use f='nginx/src/core/ngx_resolver.c' l='982' u='w' c='ngx_resolve_addr'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2075' u='w' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2390' u='w' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2617' u='w' c='ngx_resolver_process_srv'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2914' u='w' c='ngx_resolver_resolve_srv_names'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2966' u='w' c='ngx_resolver_resolve_srv_names'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2994' u='w' c='ngx_resolver_srv_names_handler'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2994' u='r' c='ngx_resolver_srv_names_handler'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2994' u='r' c='ngx_resolver_srv_names_handler'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2994' u='r' c='ngx_resolver_srv_names_handler'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2994' u='r' c='ngx_resolver_srv_names_handler'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3184' u='w' c='ngx_resolver_process_ptr'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3319' u='w' c='ngx_resolver_process_ptr'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4242' u='w' c='ngx_resolver_report_srv'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4253' u='w' c='ngx_resolver_report_srv'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4262' u='w' c='ngx_resolver_report_srv'/>

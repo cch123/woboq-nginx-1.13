@@ -1,0 +1,4 @@
+<dec f='nginx/src/os/unix/ngx_files.h' l='169' type='ngx_int_t ngx_set_file_time(u_char * name, ngx_fd_t fd, time_t s)'/>
+<use f='nginx/src/core/ngx_file.c' l='680' u='c' c='ngx_ext_rename_file'/>
+<use f='nginx/src/core/ngx_file.c' l='891' u='c' c='ngx_copy_file'/>
+<def f='nginx/src/os/unix/ngx_files.c' l='600' ll='615' type='ngx_int_t ngx_set_file_time(u_char * name, ngx_fd_t fd, time_t s)'/>

@@ -1,0 +1,4 @@
+<dec f='nginx/src/event/ngx_event.h' l='246'/>
+<doc f='nginx/src/event/ngx_event.h' l='243'>/*
+ * Obsolete.
+ */</doc>

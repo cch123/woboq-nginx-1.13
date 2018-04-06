@@ -1,0 +1,7 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='66' type='off_t'/>
+<offset>384</offset>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2326' u='w' c='ngx_http_upstream_process_header'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3382' u='w' c='ngx_http_upstream_process_upgraded'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3581' u='w' c='ngx_http_upstream_process_non_buffered_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4267' u='w' c='ngx_http_upstream_finalize_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5452' u='r' c='ngx_http_upstream_response_length_variable'/>

@@ -1,0 +1,20 @@
+<dec f='nginx/src/http/ngx_http_cache.h' l='79' type='ngx_str_t'/>
+<offset>2624</offset>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='611' u='m' c='ngx_http_file_cache_read'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='612' u='m' c='ngx_http_file_cache_read'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1269' u='m' c='ngx_http_file_cache_set_header'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1270' u='m' c='ngx_http_file_cache_set_header'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1271' u='m' c='ngx_http_file_cache_set_header'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1271' u='m' c='ngx_http_file_cache_set_header'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1532' u='m' c='ngx_http_file_cache_update_header'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1533' u='m' c='ngx_http_file_cache_update_header'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1534' u='m' c='ngx_http_file_cache_update_header'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1534' u='m' c='ngx_http_file_cache_update_header'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3028' u='w' c='ngx_http_upstream_send_response'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3031' u='a' c='ngx_http_upstream_send_response'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3031' u='a' c='ngx_http_upstream_send_response'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3036' u='a' c='ngx_http_upstream_send_response'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3036' u='a' c='ngx_http_upstream_send_response'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5611' u='m' c='ngx_http_upstream_cache_etag'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5620' u='m' c='ngx_http_upstream_cache_etag'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5621' u='m' c='ngx_http_upstream_cache_etag'/>

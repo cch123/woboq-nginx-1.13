@@ -1,0 +1,5 @@
+<dec f='include/x86_64-linux-gnu/bits/signum.h' l='50'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='76' u='c'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='401' u='c'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='462' u='c'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='89' u='c'/>

@@ -1,0 +1,13 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='105' type='u_short'/>
+<offset>656</offset>
+<use f='nginx/src/core/ngx_resolver.c' l='1258' u='r' c='ngx_resolver_send_query'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1259' u='r' c='ngx_resolver_send_query'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1270' u='r' c='ngx_resolver_send_query'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1271' u='r' c='ngx_resolver_send_query'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1977' u='r' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1986' u='r' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2589' u='r' c='ngx_resolver_process_srv'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3618' u='w' c='ngx_resolver_create_name_query'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3696' u='r' c='ngx_resolver_create_name_query'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3738' u='w' c='ngx_resolver_create_srv_query'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3897' u='w' c='ngx_resolver_create_addr_query'/>

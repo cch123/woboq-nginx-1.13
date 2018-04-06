@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ngx_channel.h source code [nginx/src/os/unix/ngx_channel.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../../../../data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../../../data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../../../data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../../data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'nginx/src/os/unix/ngx_channel.h'; var root_path = '../../../..'; var data_path = '../../../../../data';</script>
+<script src='../../../../../data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../../..'>nginx</a>/<a href='../..'>src</a>/<a href='..'>os</a>/<a href='./'>unix</a>/<a href='ngx_channel.h.html'>ngx_channel.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td></td></tr>
+<tr><th id="2">2</th><td><i>/*</i></td></tr>
+<tr><th id="3">3</th><td><i> * Copyright (C) Igor Sysoev</i></td></tr>
+<tr><th id="4">4</th><td><i> * Copyright (C) Nginx, Inc.</i></td></tr>
+<tr><th id="5">5</th><td><i> */</i></td></tr>
+<tr><th id="6">6</th><td></td></tr>
+<tr><th id="7">7</th><td></td></tr>
+<tr><th id="8">8</th><td><u>#<span data-ppcond="8">ifndef</span> <span class="macro" data-ref="_M/_NGX_CHANNEL_H_INCLUDED_">_NGX_CHANNEL_H_INCLUDED_</span></u></td></tr>
+<tr><th id="9">9</th><td><u>#define <dfn class="macro" id="_M/_NGX_CHANNEL_H_INCLUDED_" data-ref="_M/_NGX_CHANNEL_H_INCLUDED_">_NGX_CHANNEL_H_INCLUDED_</dfn></u></td></tr>
+<tr><th id="10">10</th><td></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td><u>#include <a href="../../core/ngx_config.h.html">&lt;ngx_config.h&gt;</a></u></td></tr>
+<tr><th id="13">13</th><td><u>#include <a href="../../core/ngx_core.h.html">&lt;ngx_core.h&gt;</a></u></td></tr>
+<tr><th id="14">14</th><td><u>#include <a href="../../event/ngx_event.h.html">&lt;ngx_event.h&gt;</a></u></td></tr>
+<tr><th id="15">15</th><td></td></tr>
+<tr><th id="16">16</th><td></td></tr>
+<tr><th id="17">17</th><td><b>typedef</b> <b>struct</b> {</td></tr>
+<tr><th id="18">18</th><td>    <a class="typedef" href="../../core/ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>  <dfn class="decl field" id="(anonymous)::command" title='(anonymous struct)::command' data-ref="(anonymous)::command">command</dfn>;</td></tr>
+<tr><th id="19">19</th><td>    <a class="typedef" href="ngx_process.h.html#ngx_pid_t" title='ngx_pid_t' data-type='pid_t' data-ref="ngx_pid_t">ngx_pid_t</a>   <dfn class="decl field" id="(anonymous)::pid" title='(anonymous struct)::pid' data-ref="(anonymous)::pid">pid</dfn>;</td></tr>
+<tr><th id="20">20</th><td>    <a class="typedef" href="../../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a>   <dfn class="decl field" id="(anonymous)::slot" title='(anonymous struct)::slot' data-ref="(anonymous)::slot">slot</dfn>;</td></tr>
+<tr><th id="21">21</th><td>    <a class="typedef" href="ngx_files.h.html#ngx_fd_t" title='ngx_fd_t' data-type='int' data-ref="ngx_fd_t">ngx_fd_t</a>    <dfn class="decl field" id="(anonymous)::fd" title='(anonymous struct)::fd' data-ref="(anonymous)::fd">fd</dfn>;</td></tr>
+<tr><th id="22">22</th><td>} <dfn class="typedef" id="ngx_channel_t" title='ngx_channel_t' data-type='struct ngx_channel_t' data-ref="ngx_channel_t">ngx_channel_t</dfn>;</td></tr>
+<tr><th id="23">23</th><td></td></tr>
+<tr><th id="24">24</th><td></td></tr>
+<tr><th id="25">25</th><td><a class="typedef" href="../../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a> <a class="decl fn" href="ngx_channel.c.html#ngx_write_channel" title='ngx_write_channel' data-ref="ngx_write_channel" id="ngx_write_channel">ngx_write_channel</a>(<a class="typedef" href="ngx_socket.h.html#ngx_socket_t" title='ngx_socket_t' data-type='int' data-ref="ngx_socket_t">ngx_socket_t</a> <dfn class="local col1 decl" id="1s" title='s' data-type='ngx_socket_t' data-ref="1s">s</dfn>, <a class="typedef" href="#ngx_channel_t" title='ngx_channel_t' data-type='struct ngx_channel_t' data-ref="ngx_channel_t">ngx_channel_t</a> *<dfn class="local col2 decl" id="2ch" title='ch' data-type='ngx_channel_t *' data-ref="2ch">ch</dfn>, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span> <dfn class="local col3 decl" id="3size" title='size' data-type='size_t' data-ref="3size">size</dfn>,</td></tr>
+<tr><th id="26">26</th><td>    <a class="typedef" href="../../core/ngx_core.h.html#ngx_log_t" title='ngx_log_t' data-type='struct ngx_log_s' data-ref="ngx_log_t">ngx_log_t</a> *<dfn class="local col4 decl" id="4log" title='log' data-type='ngx_log_t *' data-ref="4log">log</dfn>);</td></tr>
+<tr><th id="27">27</th><td><a class="typedef" href="../../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a> <a class="decl fn" href="ngx_channel.c.html#ngx_read_channel" title='ngx_read_channel' data-ref="ngx_read_channel" id="ngx_read_channel">ngx_read_channel</a>(<a class="typedef" href="ngx_socket.h.html#ngx_socket_t" title='ngx_socket_t' data-type='int' data-ref="ngx_socket_t">ngx_socket_t</a> <dfn class="local col5 decl" id="5s" title='s' data-type='ngx_socket_t' data-ref="5s">s</dfn>, <a class="typedef" href="#ngx_channel_t" title='ngx_channel_t' data-type='struct ngx_channel_t' data-ref="ngx_channel_t">ngx_channel_t</a> *<dfn class="local col6 decl" id="6ch" title='ch' data-type='ngx_channel_t *' data-ref="6ch">ch</dfn>, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span> <dfn class="local col7 decl" id="7size" title='size' data-type='size_t' data-ref="7size">size</dfn>,</td></tr>
+<tr><th id="28">28</th><td>    <a class="typedef" href="../../core/ngx_core.h.html#ngx_log_t" title='ngx_log_t' data-type='struct ngx_log_s' data-ref="ngx_log_t">ngx_log_t</a> *<dfn class="local col8 decl" id="8log" title='log' data-type='ngx_log_t *' data-ref="8log">log</dfn>);</td></tr>
+<tr><th id="29">29</th><td><a class="typedef" href="../../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a> <a class="decl fn" href="ngx_channel.c.html#ngx_add_channel_event" title='ngx_add_channel_event' data-ref="ngx_add_channel_event" id="ngx_add_channel_event">ngx_add_channel_event</a>(<a class="typedef" href="../../core/ngx_core.h.html#ngx_cycle_t" title='ngx_cycle_t' data-type='struct ngx_cycle_s' data-ref="ngx_cycle_t">ngx_cycle_t</a> *<dfn class="local col9 decl" id="9cycle" title='cycle' data-type='ngx_cycle_t *' data-ref="9cycle">cycle</dfn>, <a class="typedef" href="ngx_files.h.html#ngx_fd_t" title='ngx_fd_t' data-type='int' data-ref="ngx_fd_t">ngx_fd_t</a> <dfn class="local col0 decl" id="10fd" title='fd' data-type='ngx_fd_t' data-ref="10fd">fd</dfn>,</td></tr>
+<tr><th id="30">30</th><td>    <a class="typedef" href="../../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a> <dfn class="local col1 decl" id="11event" title='event' data-type='ngx_int_t' data-ref="11event">event</dfn>, <a class="typedef" href="../../core/ngx_core.h.html#ngx_event_handler_pt" title='ngx_event_handler_pt' data-type='void (*)(ngx_event_t *)' data-ref="ngx_event_handler_pt">ngx_event_handler_pt</a> <dfn class="local col2 decl" id="12handler" title='handler' data-type='ngx_event_handler_pt' data-ref="12handler">handler</dfn>);</td></tr>
+<tr><th id="31">31</th><td><em>void</em> <a class="decl fn" href="ngx_channel.c.html#ngx_close_channel" title='ngx_close_channel' data-ref="ngx_close_channel" id="ngx_close_channel">ngx_close_channel</a>(<a class="typedef" href="ngx_files.h.html#ngx_fd_t" title='ngx_fd_t' data-type='int' data-ref="ngx_fd_t">ngx_fd_t</a> *<dfn class="local col3 decl" id="13fd" title='fd' data-type='ngx_fd_t *' data-ref="13fd">fd</dfn>, <a class="typedef" href="../../core/ngx_core.h.html#ngx_log_t" title='ngx_log_t' data-type='struct ngx_log_s' data-ref="ngx_log_t">ngx_log_t</a> *<dfn class="local col4 decl" id="14log" title='log' data-type='ngx_log_t *' data-ref="14log">log</dfn>);</td></tr>
+<tr><th id="32">32</th><td></td></tr>
+<tr><th id="33">33</th><td></td></tr>
+<tr><th id="34">34</th><td><u>#<span data-ppcond="8">endif</span> /* _NGX_CHANNEL_H_INCLUDED_ */</u></td></tr>
+<tr><th id="35">35</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='ngx_channel.c.html'>nginx/src/os/unix/ngx_channel.c</a><br/>Generated on <em>2018-Apr-06</em> from project nginx<br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

@@ -1,0 +1,49 @@
+<def f='nginx/src/http/ngx_http_upstream.h' l='317' ll='397'/>
+<size>1064</size>
+<mbr r='ngx_http_upstream_s::read_event_handler' o='0' t='ngx_http_upstream_handler_pt'/>
+<mbr r='ngx_http_upstream_s::write_event_handler' o='64' t='ngx_http_upstream_handler_pt'/>
+<mbr r='ngx_http_upstream_s::peer' o='128' t='ngx_peer_connection_t'/>
+<mbr r='ngx_http_upstream_s::pipe' o='1024' t='ngx_event_pipe_t *'/>
+<mbr r='ngx_http_upstream_s::request_bufs' o='1088' t='ngx_chain_t *'/>
+<mbr r='ngx_http_upstream_s::output' o='1152' t='ngx_output_chain_ctx_t'/>
+<mbr r='ngx_http_upstream_s::writer' o='1984' t='ngx_chain_writer_ctx_t'/>
+<mbr r='ngx_http_upstream_s::conf' o='2304' t='ngx_http_upstream_conf_t *'/>
+<mbr r='ngx_http_upstream_s::upstream' o='2368' t='ngx_http_upstream_srv_conf_t *'/>
+<mbr r='ngx_http_upstream_s::caches' o='2432' t='ngx_array_t *'/>
+<mbr r='ngx_http_upstream_s::headers_in' o='2496' t='ngx_http_upstream_headers_in_t'/>
+<mbr r='ngx_http_upstream_s::resolved' o='5568' t='ngx_http_upstream_resolved_t *'/>
+<mbr r='ngx_http_upstream_s::from_client' o='5632' t='ngx_buf_t'/>
+<mbr r='ngx_http_upstream_s::buffer' o='6272' t='ngx_buf_t'/>
+<mbr r='ngx_http_upstream_s::length' o='6912' t='off_t'/>
+<mbr r='ngx_http_upstream_s::out_bufs' o='6976' t='ngx_chain_t *'/>
+<mbr r='ngx_http_upstream_s::busy_bufs' o='7040' t='ngx_chain_t *'/>
+<mbr r='ngx_http_upstream_s::free_bufs' o='7104' t='ngx_chain_t *'/>
+<mbr r='ngx_http_upstream_s::input_filter_init' o='7168' t='ngx_int_t (*)(void *)'/>
+<mbr r='ngx_http_upstream_s::input_filter' o='7232' t='ngx_int_t (*)(void *, ssize_t)'/>
+<mbr r='ngx_http_upstream_s::input_filter_ctx' o='7296' t='void *'/>
+<mbr r='ngx_http_upstream_s::create_key' o='7360' t='ngx_int_t (*)(ngx_http_request_t *)'/>
+<mbr r='ngx_http_upstream_s::create_request' o='7424' t='ngx_int_t (*)(ngx_http_request_t *)'/>
+<mbr r='ngx_http_upstream_s::reinit_request' o='7488' t='ngx_int_t (*)(ngx_http_request_t *)'/>
+<mbr r='ngx_http_upstream_s::process_header' o='7552' t='ngx_int_t (*)(ngx_http_request_t *)'/>
+<mbr r='ngx_http_upstream_s::abort_request' o='7616' t='void (*)(ngx_http_request_t *)'/>
+<mbr r='ngx_http_upstream_s::finalize_request' o='7680' t='void (*)(ngx_http_request_t *, ngx_int_t)'/>
+<mbr r='ngx_http_upstream_s::rewrite_redirect' o='7744' t='ngx_int_t (*)(ngx_http_request_t *, ngx_table_elt_t *, size_t)'/>
+<mbr r='ngx_http_upstream_s::rewrite_cookie' o='7808' t='ngx_int_t (*)(ngx_http_request_t *, ngx_table_elt_t *)'/>
+<mbr r='ngx_http_upstream_s::timeout' o='7872' t='ngx_msec_t'/>
+<mbr r='ngx_http_upstream_s::state' o='7936' t='ngx_http_upstream_state_t *'/>
+<mbr r='ngx_http_upstream_s::method' o='8000' t='ngx_str_t'/>
+<mbr r='ngx_http_upstream_s::schema' o='8128' t='ngx_str_t'/>
+<mbr r='ngx_http_upstream_s::uri' o='8256' t='ngx_str_t'/>
+<mbr r='ngx_http_upstream_s::cleanup' o='8384' t='ngx_http_cleanup_pt *'/>
+<mbr r='ngx_http_upstream_s::store' o='8448' t='unsigned int'/>
+<mbr r='ngx_http_upstream_s::cacheable' o='8449' t='unsigned int'/>
+<mbr r='ngx_http_upstream_s::accel' o='8450' t='unsigned int'/>
+<mbr r='ngx_http_upstream_s::ssl' o='8451' t='unsigned int'/>
+<mbr r='ngx_http_upstream_s::cache_status' o='8452' t='unsigned int'/>
+<mbr r='ngx_http_upstream_s::buffering' o='8455' t='unsigned int'/>
+<mbr r='ngx_http_upstream_s::keepalive' o='8456' t='unsigned int'/>
+<mbr r='ngx_http_upstream_s::upgrade' o='8457' t='unsigned int'/>
+<mbr r='ngx_http_upstream_s::request_sent' o='8458' t='unsigned int'/>
+<mbr r='ngx_http_upstream_s::request_body_sent' o='8459' t='unsigned int'/>
+<mbr r='ngx_http_upstream_s::request_body_blocked' o='8460' t='unsigned int'/>
+<mbr r='ngx_http_upstream_s::header_sent' o='8461' t='unsigned int'/>

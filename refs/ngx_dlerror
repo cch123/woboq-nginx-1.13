@@ -1,0 +1,6 @@
+<dec f='nginx/src/os/unix/ngx_dlopen.h' l='27' type='char * ngx_dlerror()'/>
+<use f='nginx/src/core/nginx.c' l='1527' u='c' c='ngx_load_module'/>
+<use f='nginx/src/core/nginx.c' l='1538' u='c' c='ngx_load_module'/>
+<use f='nginx/src/core/nginx.c' l='1546' u='c' c='ngx_load_module'/>
+<use f='nginx/src/core/nginx.c' l='1586' u='c' c='ngx_unload_module'/>
+<def f='nginx/src/os/unix/ngx_dlopen.c' l='14' ll='26' type='char * ngx_dlerror()'/>

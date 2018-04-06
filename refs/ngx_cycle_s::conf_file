@@ -1,0 +1,24 @@
+<dec f='nginx/src/core/ngx_cycle.h' l='78' type='ngx_str_t'/>
+<offset>4224</offset>
+<use f='nginx/src/core/nginx.c' l='295' u='m' c='main'/>
+<use f='nginx/src/core/nginx.c' l='304' u='m' c='main'/>
+<use f='nginx/src/core/nginx.c' l='972' u='m' c='ngx_process_options'/>
+<use f='nginx/src/core/nginx.c' l='973' u='m' c='ngx_process_options'/>
+<use f='nginx/src/core/nginx.c' l='976' u='a' c='ngx_process_options'/>
+<use f='nginx/src/core/nginx.c' l='976' u='a' c='ngx_process_options'/>
+<use f='nginx/src/core/nginx.c' l='979' u='a' c='ngx_process_options'/>
+<use f='nginx/src/core/nginx.c' l='983' u='m' c='ngx_process_options'/>
+<use f='nginx/src/core/nginx.c' l='983' u='m' c='ngx_process_options'/>
+<use f='nginx/src/core/nginx.c' l='984' u='m' c='ngx_process_options'/>
+<use f='nginx/src/core/nginx.c' l='988' u='m' c='ngx_process_options'/>
+<use f='nginx/src/core/nginx.c' l='989' u='m' c='ngx_process_options'/>
+<use f='nginx/src/core/ngx_cycle.c' l='99' u='m' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='99' u='m' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='100' u='m' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='100' u='m' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='101' u='m' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='105' u='m' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='105' u='m' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='106' u='m' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='275' u='a' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='283' u='m' c='ngx_init_cycle'/>

@@ -1,0 +1,4 @@
+<def f='nginx/src/core/ngx_palloc.h' l='43' ll='46'/>
+<size>16</size>
+<mbr r='ngx_pool_large_s::next' o='0' t='ngx_pool_large_t *'/>
+<mbr r='ngx_pool_large_s::alloc' o='64' t='void *'/>

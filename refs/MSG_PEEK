@@ -1,0 +1,5 @@
+<dec f='include/x86_64-linux-gnu/bits/socket.h' l='179' type='2'/>
+<doc f='include/x86_64-linux-gnu/bits/socket.h' l='179'>/* Peek at incoming messages.  */</doc>
+<use f='nginx/src/http/modules/ngx_http_upstream_keepalive_module.c' l='400' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2845' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1436' macro='1' u='r'/>

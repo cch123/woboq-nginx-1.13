@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ngx_array.h source code [nginx/src/core/ngx_array.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../../../data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../../data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../../data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'nginx/src/core/ngx_array.h'; var root_path = '../../..'; var data_path = '../../../../data';</script>
+<script src='../../../../data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../..'>nginx</a>/<a href='..'>src</a>/<a href='./'>core</a>/<a href='ngx_array.h.html'>ngx_array.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td></td></tr>
+<tr><th id="2">2</th><td><i>/*</i></td></tr>
+<tr><th id="3">3</th><td><i> * Copyright (C) Igor Sysoev</i></td></tr>
+<tr><th id="4">4</th><td><i> * Copyright (C) Nginx, Inc.</i></td></tr>
+<tr><th id="5">5</th><td><i> */</i></td></tr>
+<tr><th id="6">6</th><td></td></tr>
+<tr><th id="7">7</th><td></td></tr>
+<tr><th id="8">8</th><td><u>#<span data-ppcond="8">ifndef</span> <span class="macro" data-ref="_M/_NGX_ARRAY_H_INCLUDED_">_NGX_ARRAY_H_INCLUDED_</span></u></td></tr>
+<tr><th id="9">9</th><td><u>#define <dfn class="macro" id="_M/_NGX_ARRAY_H_INCLUDED_" data-ref="_M/_NGX_ARRAY_H_INCLUDED_">_NGX_ARRAY_H_INCLUDED_</dfn></u></td></tr>
+<tr><th id="10">10</th><td></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td><u>#include <a href="ngx_config.h.html">&lt;ngx_config.h&gt;</a></u></td></tr>
+<tr><th id="13">13</th><td><u>#include <a href="ngx_core.h.html">&lt;ngx_core.h&gt;</a></u></td></tr>
+<tr><th id="14">14</th><td></td></tr>
+<tr><th id="15">15</th><td></td></tr>
+<tr><th id="16">16</th><td><b>typedef</b> <b>struct</b> {</td></tr>
+<tr><th id="17">17</th><td>    <em>void</em>        *<dfn class="decl field" id="(anonymous)::elts" title='(anonymous struct)::elts' data-ref="(anonymous)::elts">elts</dfn>;</td></tr>
+<tr><th id="18">18</th><td>    <a class="typedef" href="ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>   <dfn class="decl field" id="(anonymous)::nelts" title='(anonymous struct)::nelts' data-ref="(anonymous)::nelts">nelts</dfn>;</td></tr>
+<tr><th id="19">19</th><td>    <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span>       <dfn class="decl field" id="(anonymous)::size" title='(anonymous struct)::size' data-ref="(anonymous)::size">size</dfn>;</td></tr>
+<tr><th id="20">20</th><td>    <a class="typedef" href="ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>   <dfn class="decl field" id="(anonymous)::nalloc" title='(anonymous struct)::nalloc' data-ref="(anonymous)::nalloc">nalloc</dfn>;</td></tr>
+<tr><th id="21">21</th><td>    <a class="typedef" href="ngx_core.h.html#ngx_pool_t" title='ngx_pool_t' data-type='struct ngx_pool_s' data-ref="ngx_pool_t">ngx_pool_t</a>  *<dfn class="decl field" id="(anonymous)::pool" title='(anonymous struct)::pool' data-ref="(anonymous)::pool">pool</dfn>;</td></tr>
+<tr><th id="22">22</th><td>} <dfn class="typedef" id="ngx_array_t" title='ngx_array_t' data-type='struct ngx_array_t' data-ref="ngx_array_t">ngx_array_t</dfn>;</td></tr>
+<tr><th id="23">23</th><td></td></tr>
+<tr><th id="24">24</th><td></td></tr>
+<tr><th id="25">25</th><td><a class="typedef" href="#ngx_array_t" title='ngx_array_t' data-type='struct ngx_array_t' data-ref="ngx_array_t">ngx_array_t</a> *<dfn class="decl fn" id="ngx_array_create" title='ngx_array_create' data-ref="ngx_array_create">ngx_array_create</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_pool_t" title='ngx_pool_t' data-type='struct ngx_pool_s' data-ref="ngx_pool_t">ngx_pool_t</a> *<dfn class="local col4 decl" id="2424p" title='p' data-type='ngx_pool_t *' data-ref="2424p">p</dfn>, <a class="typedef" href="ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a> <dfn class="local col5 decl" id="2425n" title='n' data-type='ngx_uint_t' data-ref="2425n">n</dfn>, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span> <dfn class="local col6 decl" id="2426size" title='size' data-type='size_t' data-ref="2426size">size</dfn>);</td></tr>
+<tr><th id="26">26</th><td><em>void</em> <dfn class="decl fn" id="ngx_array_destroy" title='ngx_array_destroy' data-ref="ngx_array_destroy">ngx_array_destroy</dfn>(<a class="typedef" href="#ngx_array_t" title='ngx_array_t' data-type='struct ngx_array_t' data-ref="ngx_array_t">ngx_array_t</a> *<dfn class="local col7 decl" id="2427a" title='a' data-type='ngx_array_t *' data-ref="2427a">a</dfn>);</td></tr>
+<tr><th id="27">27</th><td><em>void</em> *<dfn class="decl fn" id="ngx_array_push" title='ngx_array_push' data-ref="ngx_array_push">ngx_array_push</dfn>(<a class="typedef" href="#ngx_array_t" title='ngx_array_t' data-type='struct ngx_array_t' data-ref="ngx_array_t">ngx_array_t</a> *<dfn class="local col8 decl" id="2428a" title='a' data-type='ngx_array_t *' data-ref="2428a">a</dfn>);</td></tr>
+<tr><th id="28">28</th><td><em>void</em> *<dfn class="decl fn" id="ngx_array_push_n" title='ngx_array_push_n' data-ref="ngx_array_push_n">ngx_array_push_n</dfn>(<a class="typedef" href="#ngx_array_t" title='ngx_array_t' data-type='struct ngx_array_t' data-ref="ngx_array_t">ngx_array_t</a> *<dfn class="local col9 decl" id="2429a" title='a' data-type='ngx_array_t *' data-ref="2429a">a</dfn>, <a class="typedef" href="ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a> <dfn class="local col0 decl" id="2430n" title='n' data-type='ngx_uint_t' data-ref="2430n">n</dfn>);</td></tr>
+<tr><th id="29">29</th><td></td></tr>
+<tr><th id="30">30</th><td></td></tr>
+<tr><th id="31">31</th><td><em>static</em> <a class="macro" href="ngx_config.h.html#114" title="inline" data-ref="_M/ngx_inline">ngx_inline</a> <a class="typedef" href="ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a></td></tr>
+<tr><th id="32">32</th><td><dfn class="decl def fn" id="ngx_array_init" title='ngx_array_init' data-ref="ngx_array_init">ngx_array_init</dfn>(<a class="typedef" href="#ngx_array_t" title='ngx_array_t' data-type='struct ngx_array_t' data-ref="ngx_array_t">ngx_array_t</a> *<dfn class="local col1 decl" id="2431array" title='array' data-type='ngx_array_t *' data-ref="2431array">array</dfn>, <a class="typedef" href="ngx_core.h.html#ngx_pool_t" title='ngx_pool_t' data-type='struct ngx_pool_s' data-ref="ngx_pool_t">ngx_pool_t</a> *<dfn class="local col2 decl" id="2432pool" title='pool' data-type='ngx_pool_t *' data-ref="2432pool">pool</dfn>, <a class="typedef" href="ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a> <dfn class="local col3 decl" id="2433n" title='n' data-type='ngx_uint_t' data-ref="2433n">n</dfn>, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span> <dfn class="local col4 decl" id="2434size" title='size' data-type='size_t' data-ref="2434size">size</dfn>)</td></tr>
+<tr><th id="33">33</th><td>{</td></tr>
+<tr><th id="34">34</th><td>    <i>/*</i></td></tr>
+<tr><th id="35">35</th><td><i>     * set "array-&gt;nelts" before "array-&gt;elts", otherwise MSVC thinks</i></td></tr>
+<tr><th id="36">36</th><td><i>     * that "array-&gt;nelts" may be used without having been initialized</i></td></tr>
+<tr><th id="37">37</th><td><i>     */</i></td></tr>
+<tr><th id="38">38</th><td></td></tr>
+<tr><th id="39">39</th><td>    <a class="local col1 ref" href="#2431array" title='array' data-ref="2431array">array</a>-&gt;<a class="ref field" href="#(anonymous)::nelts" title='(anonymous struct)::nelts' data-ref="(anonymous)::nelts">nelts</a> = <var>0</var>;</td></tr>
+<tr><th id="40">40</th><td>    <a class="local col1 ref" href="#2431array" title='array' data-ref="2431array">array</a>-&gt;<a class="ref field" href="#(anonymous)::size" title='(anonymous struct)::size' data-ref="(anonymous)::size">size</a> = <a class="local col4 ref" href="#2434size" title='size' data-ref="2434size">size</a>;</td></tr>
+<tr><th id="41">41</th><td>    <a class="local col1 ref" href="#2431array" title='array' data-ref="2431array">array</a>-&gt;<a class="ref field" href="#(anonymous)::nalloc" title='(anonymous struct)::nalloc' data-ref="(anonymous)::nalloc">nalloc</a> = <a class="local col3 ref" href="#2433n" title='n' data-ref="2433n">n</a>;</td></tr>
+<tr><th id="42">42</th><td>    <a class="local col1 ref" href="#2431array" title='array' data-ref="2431array">array</a>-&gt;<a class="ref field" href="#(anonymous)::pool" title='(anonymous struct)::pool' data-ref="(anonymous)::pool">pool</a> = <a class="local col2 ref" href="#2432pool" title='pool' data-ref="2432pool">pool</a>;</td></tr>
+<tr><th id="43">43</th><td></td></tr>
+<tr><th id="44">44</th><td>    <a class="local col1 ref" href="#2431array" title='array' data-ref="2431array">array</a>-&gt;<a class="ref field" href="#(anonymous)::elts" title='(anonymous struct)::elts' data-ref="(anonymous)::elts">elts</a> = <a class="ref fn" href="ngx_palloc.h.html#ngx_palloc" title='ngx_palloc' data-ref="ngx_palloc">ngx_palloc</a>(<a class="local col2 ref" href="#2432pool" title='pool' data-ref="2432pool">pool</a>, <a class="local col3 ref" href="#2433n" title='n' data-ref="2433n">n</a> * <a class="local col4 ref" href="#2434size" title='size' data-ref="2434size">size</a>);</td></tr>
+<tr><th id="45">45</th><td>    <b>if</b> (<a class="local col1 ref" href="#2431array" title='array' data-ref="2431array">array</a>-&gt;<a class="ref field" href="#(anonymous)::elts" title='(anonymous struct)::elts' data-ref="(anonymous)::elts">elts</a> == <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>) {</td></tr>
+<tr><th id="46">46</th><td>        <b>return</b> <a class="macro" href="ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>;</td></tr>
+<tr><th id="47">47</th><td>    }</td></tr>
+<tr><th id="48">48</th><td></td></tr>
+<tr><th id="49">49</th><td>    <b>return</b> <a class="macro" href="ngx_core.h.html#35" title="0" data-ref="_M/NGX_OK">NGX_OK</a>;</td></tr>
+<tr><th id="50">50</th><td>}</td></tr>
+<tr><th id="51">51</th><td></td></tr>
+<tr><th id="52">52</th><td></td></tr>
+<tr><th id="53">53</th><td><u>#<span data-ppcond="8">endif</span> /* _NGX_ARRAY_H_INCLUDED_ */</u></td></tr>
+<tr><th id="54">54</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../../objs/ngx_modules.c.html'>nginx/objs/ngx_modules.c</a><br/>Generated on <em>2018-Apr-06</em> from project nginx<br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

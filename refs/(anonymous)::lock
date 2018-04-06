@@ -1,0 +1,17 @@
+<dec f='nginx/src/core/ngx_shmtx.h' l='17' type='ngx_atomic_t'/>
+<dec f='nginx/src/core/ngx_shmtx.h' l='26' type='ngx_atomic_t *'/>
+<dec f='nginx/src/core/ngx_slab.h' l='35' type='ngx_shmtx_sh_t'/>
+<offset>0</offset>
+<use f='nginx/src/core/ngx_cycle.c' l='933' u='a' c='ngx_init_zone_pool'/>
+<use f='nginx/src/core/ngx_shmtx.c' l='21' u='w' c='ngx_shmtx_create'/>
+<use f='nginx/src/core/ngx_shmtx.c' l='21' u='a' c='ngx_shmtx_create'/>
+<use f='nginx/src/core/ngx_shmtx.c' l='65' u='r' c='ngx_shmtx_trylock'/>
+<use f='nginx/src/core/ngx_shmtx.c' l='65' u='r' c='ngx_shmtx_trylock'/>
+<use f='nginx/src/core/ngx_shmtx.c' l='78' u='r' c='ngx_shmtx_lock'/>
+<use f='nginx/src/core/ngx_shmtx.c' l='78' u='r' c='ngx_shmtx_lock'/>
+<use f='nginx/src/core/ngx_shmtx.c' l='90' u='r' c='ngx_shmtx_lock'/>
+<use f='nginx/src/core/ngx_shmtx.c' l='91' u='r' c='ngx_shmtx_lock'/>
+<use f='nginx/src/core/ngx_shmtx.c' l='103' u='r' c='ngx_shmtx_lock'/>
+<use f='nginx/src/core/ngx_shmtx.c' l='103' u='r' c='ngx_shmtx_lock'/>
+<use f='nginx/src/core/ngx_shmtx.c' l='143' u='r' c='ngx_shmtx_unlock'/>
+<use f='nginx/src/core/ngx_shmtx.c' l='155' u='r' c='ngx_shmtx_force_unlock'/>

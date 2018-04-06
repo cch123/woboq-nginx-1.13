@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='240' type='time_t'/>
+<offset>2880</offset>
+<use f='nginx/src/http/ngx_http_request.c' l='609' u='w' c='ngx_http_create_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1866' u='w' c='ngx_http_process_request_header'/>

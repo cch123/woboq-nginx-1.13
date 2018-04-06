@@ -1,0 +1,9 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='335' type='ngx_http_cleanup_pt'/>
+<offset>0</offset>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2548' u='w' c='ngx_http_cleanup_add'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2534' u='r' c='ngx_http_terminate_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2535' u='r' c='ngx_http_terminate_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3488' u='r' c='ngx_http_free_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3489' u='r' c='ngx_http_free_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='671' u='w' c='ngx_http_upstream_init_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='673' u='a' c='ngx_http_upstream_init_request'/>

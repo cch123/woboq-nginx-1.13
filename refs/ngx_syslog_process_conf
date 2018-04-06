@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_syslog.h' l='24' type='char * ngx_syslog_process_conf(ngx_conf_t * cf, ngx_syslog_peer_t * peer)'/>
+<use f='nginx/src/core/ngx_log.c' l='653' u='c' c='ngx_log_set_log'/>
+<def f='nginx/src/core/ngx_syslog.c' l='39' ll='71' type='char * ngx_syslog_process_conf(ngx_conf_t * cf, ngx_syslog_peer_t * peer)'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='1292' u='c' c='ngx_http_log_set_log'/>

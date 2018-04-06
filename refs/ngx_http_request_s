@@ -1,0 +1,141 @@
+<def f='nginx/src/http/ngx_http_request.h' l='371' ll='588'/>
+<size>1440</size>
+<mbr r='ngx_http_request_s::signature' o='0' t='uint32_t'/>
+<mbr r='ngx_http_request_s::connection' o='64' t='ngx_connection_t *'/>
+<mbr r='ngx_http_request_s::ctx' o='128' t='void **'/>
+<mbr r='ngx_http_request_s::main_conf' o='192' t='void **'/>
+<mbr r='ngx_http_request_s::srv_conf' o='256' t='void **'/>
+<mbr r='ngx_http_request_s::loc_conf' o='320' t='void **'/>
+<mbr r='ngx_http_request_s::read_event_handler' o='384' t='ngx_http_event_handler_pt'/>
+<mbr r='ngx_http_request_s::write_event_handler' o='448' t='ngx_http_event_handler_pt'/>
+<mbr r='ngx_http_request_s::cache' o='512' t='ngx_http_cache_t *'/>
+<mbr r='ngx_http_request_s::upstream' o='576' t='ngx_http_upstream_t *'/>
+<mbr r='ngx_http_request_s::upstream_states' o='640' t='ngx_array_t *'/>
+<mbr r='ngx_http_request_s::pool' o='704' t='ngx_pool_t *'/>
+<mbr r='ngx_http_request_s::header_in' o='768' t='ngx_buf_t *'/>
+<mbr r='ngx_http_request_s::headers_in' o='832' t='ngx_http_headers_in_t'/>
+<mbr r='ngx_http_request_s::headers_out' o='3840' t='ngx_http_headers_out_t'/>
+<mbr r='ngx_http_request_s::request_body' o='7104' t='ngx_http_request_body_t *'/>
+<mbr r='ngx_http_request_s::lingering_time' o='7168' t='time_t'/>
+<mbr r='ngx_http_request_s::start_sec' o='7232' t='time_t'/>
+<mbr r='ngx_http_request_s::start_msec' o='7296' t='ngx_msec_t'/>
+<mbr r='ngx_http_request_s::method' o='7360' t='ngx_uint_t'/>
+<mbr r='ngx_http_request_s::http_version' o='7424' t='ngx_uint_t'/>
+<mbr r='ngx_http_request_s::request_line' o='7488' t='ngx_str_t'/>
+<mbr r='ngx_http_request_s::uri' o='7616' t='ngx_str_t'/>
+<mbr r='ngx_http_request_s::args' o='7744' t='ngx_str_t'/>
+<mbr r='ngx_http_request_s::exten' o='7872' t='ngx_str_t'/>
+<mbr r='ngx_http_request_s::unparsed_uri' o='8000' t='ngx_str_t'/>
+<mbr r='ngx_http_request_s::method_name' o='8128' t='ngx_str_t'/>
+<mbr r='ngx_http_request_s::http_protocol' o='8256' t='ngx_str_t'/>
+<mbr r='ngx_http_request_s::out' o='8384' t='ngx_chain_t *'/>
+<mbr r='ngx_http_request_s::main' o='8448' t='ngx_http_request_t *'/>
+<mbr r='ngx_http_request_s::parent' o='8512' t='ngx_http_request_t *'/>
+<mbr r='ngx_http_request_s::postponed' o='8576' t='ngx_http_postponed_request_t *'/>
+<mbr r='ngx_http_request_s::post_subrequest' o='8640' t='ngx_http_post_subrequest_t *'/>
+<mbr r='ngx_http_request_s::posted_requests' o='8704' t='ngx_http_posted_request_t *'/>
+<mbr r='ngx_http_request_s::phase_handler' o='8768' t='ngx_int_t'/>
+<mbr r='ngx_http_request_s::content_handler' o='8832' t='ngx_http_handler_pt'/>
+<mbr r='ngx_http_request_s::access_code' o='8896' t='ngx_uint_t'/>
+<mbr r='ngx_http_request_s::variables' o='8960' t='ngx_http_variable_value_t *'/>
+<mbr r='ngx_http_request_s::ncaptures' o='9024' t='ngx_uint_t'/>
+<mbr r='ngx_http_request_s::captures' o='9088' t='int *'/>
+<mbr r='ngx_http_request_s::captures_data' o='9152' t='u_char *'/>
+<mbr r='ngx_http_request_s::limit_rate' o='9216' t='size_t'/>
+<mbr r='ngx_http_request_s::limit_rate_after' o='9280' t='size_t'/>
+<mbr r='ngx_http_request_s::header_size' o='9344' t='size_t'/>
+<mbr r='ngx_http_request_s::request_length' o='9408' t='off_t'/>
+<mbr r='ngx_http_request_s::err_status' o='9472' t='ngx_uint_t'/>
+<mbr r='ngx_http_request_s::http_connection' o='9536' t='ngx_http_connection_t *'/>
+<mbr r='ngx_http_request_s::stream' o='9600' t='ngx_http_v2_stream_t *'/>
+<mbr r='ngx_http_request_s::log_handler' o='9664' t='ngx_http_log_handler_pt'/>
+<mbr r='ngx_http_request_s::cleanup' o='9728' t='ngx_http_cleanup_t *'/>
+<mbr r='ngx_http_request_s::count' o='9792' t='unsigned int'/>
+<mbr r='ngx_http_request_s::subrequests' o='9808' t='unsigned int'/>
+<mbr r='ngx_http_request_s::blocked' o='9816' t='unsigned int'/>
+<mbr r='ngx_http_request_s::aio' o='9824' t='unsigned int'/>
+<mbr r='ngx_http_request_s::http_state' o='9825' t='unsigned int'/>
+<mbr r='ngx_http_request_s::complex_uri' o='9829' t='unsigned int'/>
+<mbr r='ngx_http_request_s::quoted_uri' o='9830' t='unsigned int'/>
+<mbr r='ngx_http_request_s::plus_in_uri' o='9831' t='unsigned int'/>
+<mbr r='ngx_http_request_s::space_in_uri' o='9832' t='unsigned int'/>
+<mbr r='ngx_http_request_s::invalid_header' o='9833' t='unsigned int'/>
+<mbr r='ngx_http_request_s::add_uri_to_alias' o='9834' t='unsigned int'/>
+<mbr r='ngx_http_request_s::valid_location' o='9835' t='unsigned int'/>
+<mbr r='ngx_http_request_s::valid_unparsed_uri' o='9836' t='unsigned int'/>
+<mbr r='ngx_http_request_s::uri_changed' o='9837' t='unsigned int'/>
+<mbr r='ngx_http_request_s::uri_changes' o='9838' t='unsigned int'/>
+<mbr r='ngx_http_request_s::request_body_in_single_buf' o='9842' t='unsigned int'/>
+<mbr r='ngx_http_request_s::request_body_in_file_only' o='9843' t='unsigned int'/>
+<mbr r='ngx_http_request_s::request_body_in_persistent_file' o='9844' t='unsigned int'/>
+<mbr r='ngx_http_request_s::request_body_in_clean_file' o='9845' t='unsigned int'/>
+<mbr r='ngx_http_request_s::request_body_file_group_access' o='9846' t='unsigned int'/>
+<mbr r='ngx_http_request_s::request_body_file_log_level' o='9847' t='unsigned int'/>
+<mbr r='ngx_http_request_s::request_body_no_buffering' o='9850' t='unsigned int'/>
+<mbr r='ngx_http_request_s::subrequest_in_memory' o='9851' t='unsigned int'/>
+<mbr r='ngx_http_request_s::waited' o='9852' t='unsigned int'/>
+<mbr r='ngx_http_request_s::cached' o='9853' t='unsigned int'/>
+<mbr r='ngx_http_request_s::gzip_tested' o='9854' t='unsigned int'/>
+<mbr r='ngx_http_request_s::gzip_ok' o='9855' t='unsigned int'/>
+<mbr r='ngx_http_request_s::gzip_vary' o='9856' t='unsigned int'/>
+<mbr r='ngx_http_request_s::proxy' o='9857' t='unsigned int'/>
+<mbr r='ngx_http_request_s::bypass_cache' o='9858' t='unsigned int'/>
+<mbr r='ngx_http_request_s::no_cache' o='9859' t='unsigned int'/>
+<mbr r='ngx_http_request_s::limit_conn_set' o='9860' t='unsigned int'/>
+<mbr r='ngx_http_request_s::limit_req_set' o='9861' t='unsigned int'/>
+<mbr r='ngx_http_request_s::pipeline' o='9862' t='unsigned int'/>
+<mbr r='ngx_http_request_s::chunked' o='9863' t='unsigned int'/>
+<mbr r='ngx_http_request_s::header_only' o='9864' t='unsigned int'/>
+<mbr r='ngx_http_request_s::expect_trailers' o='9865' t='unsigned int'/>
+<mbr r='ngx_http_request_s::keepalive' o='9866' t='unsigned int'/>
+<mbr r='ngx_http_request_s::lingering_close' o='9867' t='unsigned int'/>
+<mbr r='ngx_http_request_s::discard_body' o='9868' t='unsigned int'/>
+<mbr r='ngx_http_request_s::reading_body' o='9869' t='unsigned int'/>
+<mbr r='ngx_http_request_s::internal' o='9870' t='unsigned int'/>
+<mbr r='ngx_http_request_s::error_page' o='9871' t='unsigned int'/>
+<mbr r='ngx_http_request_s::filter_finalize' o='9872' t='unsigned int'/>
+<mbr r='ngx_http_request_s::post_action' o='9873' t='unsigned int'/>
+<mbr r='ngx_http_request_s::request_complete' o='9874' t='unsigned int'/>
+<mbr r='ngx_http_request_s::request_output' o='9875' t='unsigned int'/>
+<mbr r='ngx_http_request_s::header_sent' o='9876' t='unsigned int'/>
+<mbr r='ngx_http_request_s::expect_tested' o='9877' t='unsigned int'/>
+<mbr r='ngx_http_request_s::root_tested' o='9878' t='unsigned int'/>
+<mbr r='ngx_http_request_s::done' o='9879' t='unsigned int'/>
+<mbr r='ngx_http_request_s::logged' o='9880' t='unsigned int'/>
+<mbr r='ngx_http_request_s::buffered' o='9881' t='unsigned int'/>
+<mbr r='ngx_http_request_s::main_filter_need_in_memory' o='9885' t='unsigned int'/>
+<mbr r='ngx_http_request_s::filter_need_in_memory' o='9886' t='unsigned int'/>
+<mbr r='ngx_http_request_s::filter_need_temporary' o='9887' t='unsigned int'/>
+<mbr r='ngx_http_request_s::preserve_body' o='9888' t='unsigned int'/>
+<mbr r='ngx_http_request_s::allow_ranges' o='9889' t='unsigned int'/>
+<mbr r='ngx_http_request_s::subrequest_ranges' o='9890' t='unsigned int'/>
+<mbr r='ngx_http_request_s::single_range' o='9891' t='unsigned int'/>
+<mbr r='ngx_http_request_s::disable_not_modified' o='9892' t='unsigned int'/>
+<mbr r='ngx_http_request_s::stat_reading' o='9893' t='unsigned int'/>
+<mbr r='ngx_http_request_s::stat_writing' o='9894' t='unsigned int'/>
+<mbr r='ngx_http_request_s::stat_processing' o='9895' t='unsigned int'/>
+<mbr r='ngx_http_request_s::background' o='9896' t='unsigned int'/>
+<mbr r='ngx_http_request_s::health_check' o='9897' t='unsigned int'/>
+<mbr r='ngx_http_request_s::state' o='9920' t='ngx_uint_t'/>
+<mbr r='ngx_http_request_s::header_hash' o='9984' t='ngx_uint_t'/>
+<mbr r='ngx_http_request_s::lowcase_index' o='10048' t='ngx_uint_t'/>
+<mbr r='ngx_http_request_s::lowcase_header' o='10112' t='u_char [32]'/>
+<mbr r='ngx_http_request_s::header_name_start' o='10368' t='u_char *'/>
+<mbr r='ngx_http_request_s::header_name_end' o='10432' t='u_char *'/>
+<mbr r='ngx_http_request_s::header_start' o='10496' t='u_char *'/>
+<mbr r='ngx_http_request_s::header_end' o='10560' t='u_char *'/>
+<mbr r='ngx_http_request_s::uri_start' o='10624' t='u_char *'/>
+<mbr r='ngx_http_request_s::uri_end' o='10688' t='u_char *'/>
+<mbr r='ngx_http_request_s::uri_ext' o='10752' t='u_char *'/>
+<mbr r='ngx_http_request_s::args_start' o='10816' t='u_char *'/>
+<mbr r='ngx_http_request_s::request_start' o='10880' t='u_char *'/>
+<mbr r='ngx_http_request_s::request_end' o='10944' t='u_char *'/>
+<mbr r='ngx_http_request_s::method_end' o='11008' t='u_char *'/>
+<mbr r='ngx_http_request_s::schema_start' o='11072' t='u_char *'/>
+<mbr r='ngx_http_request_s::schema_end' o='11136' t='u_char *'/>
+<mbr r='ngx_http_request_s::host_start' o='11200' t='u_char *'/>
+<mbr r='ngx_http_request_s::host_end' o='11264' t='u_char *'/>
+<mbr r='ngx_http_request_s::port_start' o='11328' t='u_char *'/>
+<mbr r='ngx_http_request_s::port_end' o='11392' t='u_char *'/>
+<mbr r='ngx_http_request_s::http_minor' o='11456' t='unsigned int'/>
+<mbr r='ngx_http_request_s::http_major' o='11472' t='unsigned int'/>

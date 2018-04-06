@@ -1,0 +1,8 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='381' type='ngx_flag_t'/>
+<offset>3328</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='381'>/* aio_write */</doc>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3378' u='w' c='ngx_http_core_create_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3603' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3603' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3603' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3603' u='r' c='ngx_http_core_merge_loc_conf'/>

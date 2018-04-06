@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ngx_event_posted.h source code [nginx/src/event/ngx_event_posted.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../../../data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../../data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../../data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'nginx/src/event/ngx_event_posted.h'; var root_path = '../../..'; var data_path = '../../../../data';</script>
+<script src='../../../../data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../..'>nginx</a>/<a href='..'>src</a>/<a href='./'>event</a>/<a href='ngx_event_posted.h.html'>ngx_event_posted.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td></td></tr>
+<tr><th id="2">2</th><td><i>/*</i></td></tr>
+<tr><th id="3">3</th><td><i> * Copyright (C) Igor Sysoev</i></td></tr>
+<tr><th id="4">4</th><td><i> * Copyright (C) Nginx, Inc.</i></td></tr>
+<tr><th id="5">5</th><td><i> */</i></td></tr>
+<tr><th id="6">6</th><td></td></tr>
+<tr><th id="7">7</th><td></td></tr>
+<tr><th id="8">8</th><td><u>#<span data-ppcond="8">ifndef</span> <span class="macro" data-ref="_M/_NGX_EVENT_POSTED_H_INCLUDED_">_NGX_EVENT_POSTED_H_INCLUDED_</span></u></td></tr>
+<tr><th id="9">9</th><td><u>#define <dfn class="macro" id="_M/_NGX_EVENT_POSTED_H_INCLUDED_" data-ref="_M/_NGX_EVENT_POSTED_H_INCLUDED_">_NGX_EVENT_POSTED_H_INCLUDED_</dfn></u></td></tr>
+<tr><th id="10">10</th><td></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td><u>#include <a href="../core/ngx_config.h.html">&lt;ngx_config.h&gt;</a></u></td></tr>
+<tr><th id="13">13</th><td><u>#include <a href="../core/ngx_core.h.html">&lt;ngx_core.h&gt;</a></u></td></tr>
+<tr><th id="14">14</th><td><u>#include <a href="ngx_event.h.html">&lt;ngx_event.h&gt;</a></u></td></tr>
+<tr><th id="15">15</th><td></td></tr>
+<tr><th id="16">16</th><td></td></tr>
+<tr><th id="17">17</th><td><u>#define <dfn class="macro" id="_M/ngx_post_event" data-ref="_M/ngx_post_event">ngx_post_event</dfn>(ev, q)                                                 \</u></td></tr>
+<tr><th id="18">18</th><td><u>                                                                              \</u></td></tr>
+<tr><th id="19">19</th><td><u>    if (!(ev)-&gt;posted) {                                                      \</u></td></tr>
+<tr><th id="20">20</th><td><u>        (ev)-&gt;posted = 1;                                                     \</u></td></tr>
+<tr><th id="21">21</th><td><u>        ngx_queue_insert_tail(q, &amp;(ev)-&gt;queue);                               \</u></td></tr>
+<tr><th id="22">22</th><td><u>                                                                              \</u></td></tr>
+<tr><th id="23">23</th><td><u>        ngx_log_debug1(NGX_LOG_DEBUG_CORE, (ev)-&gt;log, 0, "post event %p", ev);\</u></td></tr>
+<tr><th id="24">24</th><td><u>                                                                              \</u></td></tr>
+<tr><th id="25">25</th><td><u>    } else  {                                                                 \</u></td></tr>
+<tr><th id="26">26</th><td><u>        ngx_log_debug1(NGX_LOG_DEBUG_CORE, (ev)-&gt;log, 0,                      \</u></td></tr>
+<tr><th id="27">27</th><td><u>                       "update posted event %p", ev);                         \</u></td></tr>
+<tr><th id="28">28</th><td><u>    }</u></td></tr>
+<tr><th id="29">29</th><td></td></tr>
+<tr><th id="30">30</th><td></td></tr>
+<tr><th id="31">31</th><td><u>#define <dfn class="macro" id="_M/ngx_delete_posted_event" data-ref="_M/ngx_delete_posted_event">ngx_delete_posted_event</dfn>(ev)                                           \</u></td></tr>
+<tr><th id="32">32</th><td><u>                                                                              \</u></td></tr>
+<tr><th id="33">33</th><td><u>    (ev)-&gt;posted = 0;                                                         \</u></td></tr>
+<tr><th id="34">34</th><td><u>    ngx_queue_remove(&amp;(ev)-&gt;queue);                                           \</u></td></tr>
+<tr><th id="35">35</th><td><u>                                                                              \</u></td></tr>
+<tr><th id="36">36</th><td><u>    ngx_log_debug1(NGX_LOG_DEBUG_CORE, (ev)-&gt;log, 0,                          \</u></td></tr>
+<tr><th id="37">37</th><td><u>                   "delete posted event %p", ev);</u></td></tr>
+<tr><th id="38">38</th><td></td></tr>
+<tr><th id="39">39</th><td></td></tr>
+<tr><th id="40">40</th><td></td></tr>
+<tr><th id="41">41</th><td><em>void</em> <dfn class="decl fn" id="ngx_event_process_posted" title='ngx_event_process_posted' data-ref="ngx_event_process_posted">ngx_event_process_posted</dfn>(<a class="typedef" href="../core/ngx_core.h.html#ngx_cycle_t" title='ngx_cycle_t' data-type='struct ngx_cycle_s' data-ref="ngx_cycle_t">ngx_cycle_t</a> *<dfn class="local col5 decl" id="45cycle" title='cycle' data-type='ngx_cycle_t *' data-ref="45cycle">cycle</dfn>, <a class="typedef" href="../core/ngx_queue.h.html#ngx_queue_t" title='ngx_queue_t' data-type='struct ngx_queue_s' data-ref="ngx_queue_t">ngx_queue_t</a> *<dfn class="local col6 decl" id="46posted" title='posted' data-type='ngx_queue_t *' data-ref="46posted">posted</dfn>);</td></tr>
+<tr><th id="42">42</th><td></td></tr>
+<tr><th id="43">43</th><td></td></tr>
+<tr><th id="44">44</th><td><b>extern</b> <a class="typedef" href="../core/ngx_queue.h.html#ngx_queue_t" title='ngx_queue_t' data-type='struct ngx_queue_s' data-ref="ngx_queue_t">ngx_queue_t</a>  <dfn class="decl" id="ngx_posted_accept_events" title='ngx_posted_accept_events' data-ref="ngx_posted_accept_events">ngx_posted_accept_events</dfn>;</td></tr>
+<tr><th id="45">45</th><td><b>extern</b> <a class="typedef" href="../core/ngx_queue.h.html#ngx_queue_t" title='ngx_queue_t' data-type='struct ngx_queue_s' data-ref="ngx_queue_t">ngx_queue_t</a>  <dfn class="decl" id="ngx_posted_events" title='ngx_posted_events' data-ref="ngx_posted_events">ngx_posted_events</dfn>;</td></tr>
+<tr><th id="46">46</th><td></td></tr>
+<tr><th id="47">47</th><td></td></tr>
+<tr><th id="48">48</th><td><u>#<span data-ppcond="8">endif</span> /* _NGX_EVENT_POSTED_H_INCLUDED_ */</u></td></tr>
+<tr><th id="49">49</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../core/ngx_connection.c.html'>nginx/src/core/ngx_connection.c</a><br/>Generated on <em>2018-Apr-06</em> from project nginx<br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

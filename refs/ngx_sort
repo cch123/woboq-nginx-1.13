@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_string.h' l='227' type='void ngx_sort(void * base, size_t n, size_t size, ngx_int_t (*)(const void *, const void *) cmp)'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2790' u='c' c='ngx_resolver_process_srv'/>
+<def f='nginx/src/core/ngx_string.c' l='1985' ll='2013' type='void ngx_sort(void * base, size_t n, size_t size, ngx_int_t (*)(const void *, const void *) cmp)'/>
+<doc f='nginx/src/core/ngx_string.c' l='1983'>/* ngx_sort() is implemented as insertion sort because we need stable sort */</doc>
+<use f='nginx/src/http/ngx_http.c' l='1389' u='c' c='ngx_http_optimize_servers'/>

@@ -1,0 +1,42 @@
+<dec f='nginx/src/os/unix/ngx_os.h' l='66' type='ngx_uint_t'/>
+<offset>64</offset>
+<dec f='nginx/src/http/ngx_http_cache.h' l='46' type='unsigned int'/>
+<dec f='nginx/src/http/ngx_http_cache.h' l='152' type='ngx_uint_t'/>
+<dec f='nginx/src/http/ngx_http.h' l='69' type='ngx_uint_t'/>
+<offset>128</offset>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1527' u='w' c='ngx_http_proxy_reinit_request'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='945' u='w' c='ngx_http_scgi_reinit_request'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='1149' u='w' c='ngx_http_uwsgi_reinit_request'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='152' u='w' c='ngx_http_file_cache_init'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='838' u='w' c='ngx_http_file_cache_exists'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='890' u='w' c='ngx_http_file_cache_exists'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='900' u='w' c='ngx_http_file_cache_exists'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1226' u='w' c='ngx_http_file_cache_reopen'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1333' u='w' c='ngx_http_file_cache_update_variant'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1412' u='w' c='ngx_http_file_cache_update'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1633' u='w' c='ngx_http_file_cache_free'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1647' u='r' c='ngx_http_file_cache_free'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1651' u='w' c='ngx_http_file_cache_free'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1750' u='r' c='ngx_http_file_cache_forced_expire'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1773' u='r' c='ngx_http_file_cache_forced_expire'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1852' u='r' c='ngx_http_file_cache_expire'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1879' u='r' c='ngx_http_file_cache_expire'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1928' u='w' c='ngx_http_file_cache_delete'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1944' u='w' c='ngx_http_file_cache_delete'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1948' u='r' c='ngx_http_file_cache_delete'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1952' u='w' c='ngx_http_file_cache_delete'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1981' u='r' c='ngx_http_file_cache_manager'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2222' u='w' c='ngx_http_file_cache_add'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2269' u='r' c='ngx_http_file_cache_set_watermark'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2269' u='r' c='ngx_http_file_cache_set_watermark'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1747' u='w' c='ngx_http_parse_status_line'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='319' u='r' c='ngx_write_chain_to_file'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='384' u='w' c='ngx_chain_to_iovec'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='404' u='r' c='ngx_writev_file'/>
+<use f='nginx/src/os/unix/ngx_linux_sendfile_chain.c' l='95' u='r' c='ngx_linux_sendfile_chain'/>
+<use f='nginx/src/os/unix/ngx_linux_sendfile_chain.c' l='159' u='r' c='ngx_linux_sendfile_chain'/>
+<use f='nginx/src/os/unix/ngx_udp_sendmsg_chain.c' l='187' u='w' c='ngx_udp_output_chain_to_iovec'/>
+<use f='nginx/src/os/unix/ngx_udp_sendmsg_chain.c' l='192' u='w' c='ngx_udp_output_chain_to_iovec'/>
+<use f='nginx/src/os/unix/ngx_udp_sendmsg_chain.c' l='228' u='r' c='ngx_sendmsg'/>
+<use f='nginx/src/os/unix/ngx_writev_chain.c' l='174' u='w' c='ngx_output_chain_to_iovec'/>
+<use f='nginx/src/os/unix/ngx_writev_chain.c' l='189' u='r' c='ngx_writev'/>

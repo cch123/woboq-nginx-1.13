@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_inet.h' l='123' type='ngx_int_t ngx_inet_resolve_host(ngx_pool_t * pool, ngx_url_t * u)'/>
+<use f='nginx/src/core/ngx_inet.c' l='940' u='c' c='ngx_parse_inet_url'/>
+<def f='nginx/src/core/ngx_inet.c' l='1104' ll='1246' type='ngx_int_t ngx_inet_resolve_host(ngx_pool_t * pool, ngx_url_t * u)'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='191' u='c' c='ngx_http_upstream_init_round_robin'/>

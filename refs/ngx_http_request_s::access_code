@@ -1,0 +1,7 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='425' type='ngx_uint_t'/>
+<offset>8896</offset>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1105' u='w' c='ngx_http_core_access_phase'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1116' u='r' c='ngx_http_core_access_phase'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1117' u='w' c='ngx_http_core_access_phase'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1141' u='r' c='ngx_http_core_post_access_phase'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1149' u='w' c='ngx_http_core_post_access_phase'/>

@@ -1,0 +1,2 @@
+<dec f='include/linux/capability.h' l='362'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='869' u='c'/>

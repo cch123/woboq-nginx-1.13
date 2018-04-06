@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_config.h' l='25' type='ngx_int_t (*)(ngx_conf_t *)'/>
+<offset>0</offset>
+<use f='nginx/src/http/ngx_http.c' l='226' u='r' c='ngx_http_block'/>
+<use f='nginx/src/http/ngx_http.c' l='227' u='r' c='ngx_http_block'/>

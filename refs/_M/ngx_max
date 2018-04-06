@@ -1,0 +1,9 @@
+<dec f='nginx/src/core/ngx_core.h' l='100'/>
+<use f='nginx/src/core/ngx_connection.c' l='1241' u='c'/>
+<use f='nginx/src/core/ngx_crypt.c' l='202' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='546' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='550' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='848' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5385' u='c'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2135' u='c'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2450' u='c'/>

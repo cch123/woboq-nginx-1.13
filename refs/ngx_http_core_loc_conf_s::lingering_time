@@ -1,0 +1,11 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='360' type='ngx_msec_t'/>
+<offset>2304</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='360'>/* lingering_time */</doc>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3397' u='w' c='ngx_http_core_create_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3632' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3632' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3633' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3633' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2598' u='r' c='ngx_http_finalize_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2909' u='r' c='ngx_http_set_keepalive'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3256' u='r' c='ngx_http_set_lingering_close'/>

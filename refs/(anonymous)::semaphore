@@ -1,0 +1,6 @@
+<dec f='nginx/src/core/ngx_shmtx.h' l='29' type='ngx_uint_t'/>
+<offset>128</offset>
+<use f='nginx/src/core/ngx_shmtx.c' l='37' u='w' c='ngx_shmtx_create'/>
+<use f='nginx/src/core/ngx_shmtx.c' l='51' u='r' c='ngx_shmtx_destroy'/>
+<use f='nginx/src/core/ngx_shmtx.c' l='100' u='r' c='ngx_shmtx_lock'/>
+<use f='nginx/src/core/ngx_shmtx.c' l='170' u='r' c='ngx_shmtx_wakeup'/>

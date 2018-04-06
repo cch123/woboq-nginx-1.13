@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_hash.h' l='71'/>
+<use f='nginx/src/core/ngx_hash.c' l='725' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_map_module.c' l='572' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_referer_module.c' l='564' u='c'/>
+<use f='nginx/src/http/ngx_http.c' l='1466' u='c'/>

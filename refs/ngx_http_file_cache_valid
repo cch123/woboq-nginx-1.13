@@ -1,0 +1,6 @@
+<dec f='nginx/src/http/ngx_http_cache.h' l='196' type='time_t ngx_http_file_cache_valid(ngx_array_t * cache_valid, ngx_uint_t status)'/>
+<def f='nginx/src/http/ngx_http_file_cache.c' l='2276' ll='2299' type='time_t ngx_http_file_cache_valid(ngx_array_t * cache_valid, ngx_uint_t status)'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2499' u='c' c='ngx_http_upstream_test_next'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2584' u='c' c='ngx_http_upstream_intercept_errors'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3011' u='c' c='ngx_http_upstream_send_response'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4340' u='c' c='ngx_http_upstream_finalize_request'/>

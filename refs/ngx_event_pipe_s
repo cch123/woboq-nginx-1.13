@@ -1,0 +1,47 @@
+<def f='nginx/src/event/ngx_event_pipe.h' l='25' ll='99'/>
+<size>280</size>
+<mbr r='ngx_event_pipe_s::upstream' o='0' t='ngx_connection_t *'/>
+<mbr r='ngx_event_pipe_s::downstream' o='64' t='ngx_connection_t *'/>
+<mbr r='ngx_event_pipe_s::free_raw_bufs' o='128' t='ngx_chain_t *'/>
+<mbr r='ngx_event_pipe_s::in' o='192' t='ngx_chain_t *'/>
+<mbr r='ngx_event_pipe_s::last_in' o='256' t='ngx_chain_t **'/>
+<mbr r='ngx_event_pipe_s::writing' o='320' t='ngx_chain_t *'/>
+<mbr r='ngx_event_pipe_s::out' o='384' t='ngx_chain_t *'/>
+<mbr r='ngx_event_pipe_s::free' o='448' t='ngx_chain_t *'/>
+<mbr r='ngx_event_pipe_s::busy' o='512' t='ngx_chain_t *'/>
+<mbr r='ngx_event_pipe_s::input_filter' o='576' t='ngx_event_pipe_input_filter_pt'/>
+<mbr r='ngx_event_pipe_s::input_ctx' o='640' t='void *'/>
+<mbr r='ngx_event_pipe_s::output_filter' o='704' t='ngx_event_pipe_output_filter_pt'/>
+<mbr r='ngx_event_pipe_s::output_ctx' o='768' t='void *'/>
+<mbr r='ngx_event_pipe_s::read' o='832' t='unsigned int'/>
+<mbr r='ngx_event_pipe_s::cacheable' o='833' t='unsigned int'/>
+<mbr r='ngx_event_pipe_s::single_buf' o='834' t='unsigned int'/>
+<mbr r='ngx_event_pipe_s::free_bufs' o='835' t='unsigned int'/>
+<mbr r='ngx_event_pipe_s::upstream_done' o='836' t='unsigned int'/>
+<mbr r='ngx_event_pipe_s::upstream_error' o='837' t='unsigned int'/>
+<mbr r='ngx_event_pipe_s::upstream_eof' o='838' t='unsigned int'/>
+<mbr r='ngx_event_pipe_s::upstream_blocked' o='839' t='unsigned int'/>
+<mbr r='ngx_event_pipe_s::downstream_done' o='840' t='unsigned int'/>
+<mbr r='ngx_event_pipe_s::downstream_error' o='841' t='unsigned int'/>
+<mbr r='ngx_event_pipe_s::cyclic_temp_file' o='842' t='unsigned int'/>
+<mbr r='ngx_event_pipe_s::aio' o='843' t='unsigned int'/>
+<mbr r='ngx_event_pipe_s::allocated' o='896' t='ngx_int_t'/>
+<mbr r='ngx_event_pipe_s::bufs' o='960' t='ngx_bufs_t'/>
+<mbr r='ngx_event_pipe_s::tag' o='1088' t='ngx_buf_tag_t'/>
+<mbr r='ngx_event_pipe_s::busy_size' o='1152' t='ssize_t'/>
+<mbr r='ngx_event_pipe_s::read_length' o='1216' t='off_t'/>
+<mbr r='ngx_event_pipe_s::length' o='1280' t='off_t'/>
+<mbr r='ngx_event_pipe_s::max_temp_file_size' o='1344' t='off_t'/>
+<mbr r='ngx_event_pipe_s::temp_file_write_size' o='1408' t='ssize_t'/>
+<mbr r='ngx_event_pipe_s::read_timeout' o='1472' t='ngx_msec_t'/>
+<mbr r='ngx_event_pipe_s::send_timeout' o='1536' t='ngx_msec_t'/>
+<mbr r='ngx_event_pipe_s::send_lowat' o='1600' t='ssize_t'/>
+<mbr r='ngx_event_pipe_s::pool' o='1664' t='ngx_pool_t *'/>
+<mbr r='ngx_event_pipe_s::log' o='1728' t='ngx_log_t *'/>
+<mbr r='ngx_event_pipe_s::preread_bufs' o='1792' t='ngx_chain_t *'/>
+<mbr r='ngx_event_pipe_s::preread_size' o='1856' t='size_t'/>
+<mbr r='ngx_event_pipe_s::buf_to_file' o='1920' t='ngx_buf_t *'/>
+<mbr r='ngx_event_pipe_s::limit_rate' o='1984' t='size_t'/>
+<mbr r='ngx_event_pipe_s::start_sec' o='2048' t='time_t'/>
+<mbr r='ngx_event_pipe_s::temp_file' o='2112' t='ngx_temp_file_t *'/>
+<mbr r='ngx_event_pipe_s::num' o='2176' t='int'/>

@@ -1,0 +1,15 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='170' type='ngx_queue_t'/>
+<offset>2176</offset>
+<use f='nginx/src/core/ngx_resolver.c' l='172' u='a' c='ngx_resolver_create'/>
+<use f='nginx/src/core/ngx_resolver.c' l='172' u='a' c='ngx_resolver_create'/>
+<use f='nginx/src/core/ngx_resolver.c' l='172' u='a' c='ngx_resolver_create'/>
+<use f='nginx/src/core/ngx_resolver.c' l='172' u='a' c='ngx_resolver_create'/>
+<use f='nginx/src/core/ngx_resolver.c' l='615' u='a' c='ngx_resolve_name_locked'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1417' u='a' c='ngx_resolver_resend_handler'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1525' u='a' c='ngx_resolver_resend_empty'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1525' u='a' c='ngx_resolver_resend_empty'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1731' u='a' c='ngx_resolver_process_response'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1732' u='a' c='ngx_resolver_process_response'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1991' u='a' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1991' u='a' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1991' u='a' c='ngx_resolver_process_a'/>

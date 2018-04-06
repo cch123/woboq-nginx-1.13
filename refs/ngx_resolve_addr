@@ -1,0 +1,2 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='235' type='ngx_int_t ngx_resolve_addr(ngx_resolver_ctx_t * ctx)'/>
+<def f='nginx/src/core/ngx_resolver.c' l='903' ll='1112' type='ngx_int_t ngx_resolve_addr(ngx_resolver_ctx_t * ctx)'/>

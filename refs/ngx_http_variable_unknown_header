@@ -1,0 +1,8 @@
+<dec f='nginx/src/http/ngx_http_variables.h' l='60' type='ngx_int_t ngx_http_variable_unknown_header(ngx_http_variable_value_t * v, ngx_str_t * var, ngx_list_part_t * part, size_t prefix)'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5494' u='c' c='ngx_http_upstream_header_variable'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5509' u='c' c='ngx_http_upstream_trailer_variable'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='933' u='c' c='ngx_http_variable_unknown_header_in'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='943' u='c' c='ngx_http_variable_unknown_header_out'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='953' u='c' c='ngx_http_variable_unknown_trailer_out'/>
+<def f='nginx/src/http/ngx_http_variables.c' l='959' ll='1014' type='ngx_int_t ngx_http_variable_unknown_header(ngx_http_variable_value_t * v, ngx_str_t * var, ngx_list_part_t * part, size_t prefix)'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1871' u='c' c='ngx_http_variable_sent_location'/>

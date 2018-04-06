@@ -1,0 +1,4 @@
+<dec f='include/sched.h' l='80'/>
+<use f='nginx/src/core/nginx.c' l='1352' u='c'/>
+<use f='nginx/src/core/nginx.c' l='1390' u='c'/>
+<use f='nginx/src/core/nginx.c' l='1447' u='c'/>

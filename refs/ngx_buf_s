@@ -1,0 +1,23 @@
+<def f='nginx/src/core/ngx_buf.h' l='20' ll='56'/>
+<size>80</size>
+<mbr r='ngx_buf_s::pos' o='0' t='u_char *'/>
+<mbr r='ngx_buf_s::last' o='64' t='u_char *'/>
+<mbr r='ngx_buf_s::file_pos' o='128' t='off_t'/>
+<mbr r='ngx_buf_s::file_last' o='192' t='off_t'/>
+<mbr r='ngx_buf_s::start' o='256' t='u_char *'/>
+<mbr r='ngx_buf_s::end' o='320' t='u_char *'/>
+<mbr r='ngx_buf_s::tag' o='384' t='ngx_buf_tag_t'/>
+<mbr r='ngx_buf_s::file' o='448' t='ngx_file_t *'/>
+<mbr r='ngx_buf_s::shadow' o='512' t='ngx_buf_t *'/>
+<mbr r='ngx_buf_s::temporary' o='576' t='unsigned int'/>
+<mbr r='ngx_buf_s::memory' o='577' t='unsigned int'/>
+<mbr r='ngx_buf_s::mmap' o='578' t='unsigned int'/>
+<mbr r='ngx_buf_s::recycled' o='579' t='unsigned int'/>
+<mbr r='ngx_buf_s::in_file' o='580' t='unsigned int'/>
+<mbr r='ngx_buf_s::flush' o='581' t='unsigned int'/>
+<mbr r='ngx_buf_s::sync' o='582' t='unsigned int'/>
+<mbr r='ngx_buf_s::last_buf' o='583' t='unsigned int'/>
+<mbr r='ngx_buf_s::last_in_chain' o='584' t='unsigned int'/>
+<mbr r='ngx_buf_s::last_shadow' o='585' t='unsigned int'/>
+<mbr r='ngx_buf_s::temp_file' o='586' t='unsigned int'/>
+<mbr r='ngx_buf_s::num' o='608' t='int'/>

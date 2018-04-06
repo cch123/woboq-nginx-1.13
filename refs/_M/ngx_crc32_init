@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_crc32.h' l='53'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1493' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_hash_module.c' l='199' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_hash_module.c' l='356' u='c'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='240' u='c'/>

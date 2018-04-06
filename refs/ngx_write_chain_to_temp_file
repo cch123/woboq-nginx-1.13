@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_file.h' l='138' type='ssize_t ngx_write_chain_to_temp_file(ngx_temp_file_t * tf, ngx_chain_t * chain)'/>
+<def f='nginx/src/core/ngx_file.c' l='108' ll='137' type='ssize_t ngx_write_chain_to_temp_file(ngx_temp_file_t * tf, ngx_chain_t * chain)'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='839' u='c' c='ngx_event_pipe_write_chain_to_temp_file'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='483' u='c' c='ngx_http_write_request_body'/>

@@ -1,0 +1,10 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='389' type='unsigned int'/>
+<offset>8455</offset>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='721' u='w' c='ngx_http_fastcgi_handler'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='906' u='w' c='ngx_http_proxy_handler'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='520' u='w' c='ngx_http_scgi_handler'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='689' u='w' c='ngx_http_uwsgi_handler'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2884' u='r' c='ngx_http_upstream_send_response'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2906' u='r' c='ngx_http_upstream_send_response'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4772' u='w' c='ngx_http_upstream_process_buffering'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4781' u='w' c='ngx_http_upstream_process_buffering'/>

@@ -1,0 +1,9 @@
+<dec f='nginx/src/core/ngx_conf_file.h' l='130' type='ngx_conf_handler_pt'/>
+<offset>640</offset>
+<use f='nginx/src/core/ngx_conf_file.c' l='292' u='r' c='ngx_conf_parse'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='304' u='r' c='ngx_conf_parse'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='1286' u='w' c='ngx_http_charset_map_block'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='457' u='w' c='ngx_http_geo_block'/>
+<use f='nginx/src/http/modules/ngx_http_map_module.c' l='274' u='w' c='ngx_http_map_block'/>
+<use f='nginx/src/http/modules/ngx_http_split_clients_module.c' l='168' u='w' c='ngx_conf_split_clients_block'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3081' u='w' c='ngx_http_core_types'/>

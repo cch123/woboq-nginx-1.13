@@ -1,0 +1,2 @@
+<dec f='include/x86_64-linux-gnu/bits/socket.h' l='266'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='504' u='c'/>

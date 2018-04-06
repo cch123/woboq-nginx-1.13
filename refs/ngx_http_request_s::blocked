@@ -1,0 +1,6 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='454' type='unsigned int'/>
+<offset>9816</offset>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='455' u='w' c='ngx_http_file_cache_lock'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='520' u='w' c='ngx_http_file_cache_lock_wait'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2547' u='r' c='ngx_http_terminate_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3449' u='r' c='ngx_http_close_request'/>

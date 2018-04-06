@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ngx_open_file_cache.h source code [nginx/src/core/ngx_open_file_cache.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="ngx_cached_open_file_s "/>
+<link rel="stylesheet" href="../../../../data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../../data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../../data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'nginx/src/core/ngx_open_file_cache.h'; var root_path = '../../..'; var data_path = '../../../../data';</script>
+<script src='../../../../data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../..'>nginx</a>/<a href='..'>src</a>/<a href='./'>core</a>/<a href='ngx_open_file_cache.h.html'>ngx_open_file_cache.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td></td></tr>
+<tr><th id="2">2</th><td><i>/*</i></td></tr>
+<tr><th id="3">3</th><td><i> * Copyright (C) Igor Sysoev</i></td></tr>
+<tr><th id="4">4</th><td><i> * Copyright (C) Nginx, Inc.</i></td></tr>
+<tr><th id="5">5</th><td><i> */</i></td></tr>
+<tr><th id="6">6</th><td></td></tr>
+<tr><th id="7">7</th><td></td></tr>
+<tr><th id="8">8</th><td><u>#include <a href="ngx_config.h.html">&lt;ngx_config.h&gt;</a></u></td></tr>
+<tr><th id="9">9</th><td><u>#include <a href="ngx_core.h.html">&lt;ngx_core.h&gt;</a></u></td></tr>
+<tr><th id="10">10</th><td></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td><u>#<span data-ppcond="12">ifndef</span> <span class="macro" data-ref="_M/_NGX_OPEN_FILE_CACHE_H_INCLUDED_">_NGX_OPEN_FILE_CACHE_H_INCLUDED_</span></u></td></tr>
+<tr><th id="13">13</th><td><u>#define <dfn class="macro" id="_M/_NGX_OPEN_FILE_CACHE_H_INCLUDED_" data-ref="_M/_NGX_OPEN_FILE_CACHE_H_INCLUDED_">_NGX_OPEN_FILE_CACHE_H_INCLUDED_</dfn></u></td></tr>
+<tr><th id="14">14</th><td></td></tr>
+<tr><th id="15">15</th><td></td></tr>
+<tr><th id="16">16</th><td><u>#define <dfn class="macro" id="_M/NGX_OPEN_FILE_DIRECTIO_OFF" data-ref="_M/NGX_OPEN_FILE_DIRECTIO_OFF">NGX_OPEN_FILE_DIRECTIO_OFF</dfn>  NGX_MAX_OFF_T_VALUE</u></td></tr>
+<tr><th id="17">17</th><td></td></tr>
+<tr><th id="18">18</th><td></td></tr>
+<tr><th id="19">19</th><td><b>typedef</b> <b>struct</b> {</td></tr>
+<tr><th id="20">20</th><td>    <a class="typedef" href="../os/unix/ngx_files.h.html#ngx_fd_t" title='ngx_fd_t' data-type='int' data-ref="ngx_fd_t">ngx_fd_t</a>                 <dfn class="decl field" id="(anonymous)::fd" title='(anonymous struct)::fd' data-ref="(anonymous)::fd">fd</dfn>;</td></tr>
+<tr><th id="21">21</th><td>    <a class="typedef" href="../os/unix/ngx_files.h.html#ngx_file_uniq_t" title='ngx_file_uniq_t' data-type='ino_t' data-ref="ngx_file_uniq_t">ngx_file_uniq_t</a>          <dfn class="decl field" id="(anonymous)::uniq" title='(anonymous struct)::uniq' data-ref="(anonymous)::uniq">uniq</dfn>;</td></tr>
+<tr><th id="22">22</th><td>    <a class="typedef" href="../../../include/time.h.html#time_t" title='time_t' data-type='__time_t' data-ref="time_t">time_t</a>                   <dfn class="decl field" id="(anonymous)::mtime" title='(anonymous struct)::mtime' data-ref="(anonymous)::mtime">mtime</dfn>;</td></tr>
+<tr><th id="23">23</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#off_t" title='off_t' data-type='__off64_t' data-ref="off_t">off_t</a>                    <dfn class="decl field" id="(anonymous)::size" title='(anonymous struct)::size' data-ref="(anonymous)::size">size</dfn>;</td></tr>
+<tr><th id="24">24</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#off_t" title='off_t' data-type='__off64_t' data-ref="off_t">off_t</a>                    <dfn class="decl field" id="(anonymous)::fs_size" title='(anonymous struct)::fs_size' data-ref="(anonymous)::fs_size">fs_size</dfn>;</td></tr>
+<tr><th id="25">25</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#off_t" title='off_t' data-type='__off64_t' data-ref="off_t">off_t</a>                    <dfn class="decl field" id="(anonymous)::directio" title='(anonymous struct)::directio' data-ref="(anonymous)::directio">directio</dfn>;</td></tr>
+<tr><th id="26">26</th><td>    <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span>                   <dfn class="decl field" id="(anonymous)::read_ahead" title='(anonymous struct)::read_ahead' data-ref="(anonymous)::read_ahead">read_ahead</dfn>;</td></tr>
+<tr><th id="27">27</th><td></td></tr>
+<tr><th id="28">28</th><td>    <a class="typedef" href="../os/unix/ngx_errno.h.html#ngx_err_t" title='ngx_err_t' data-type='int' data-ref="ngx_err_t">ngx_err_t</a>                <dfn class="decl field" id="(anonymous)::err" title='(anonymous struct)::err' data-ref="(anonymous)::err">err</dfn>;</td></tr>
+<tr><th id="29">29</th><td>    <em>char</em>                    *<dfn class="decl field" id="(anonymous)::failed" title='(anonymous struct)::failed' data-ref="(anonymous)::failed">failed</dfn>;</td></tr>
+<tr><th id="30">30</th><td></td></tr>
+<tr><th id="31">31</th><td>    <a class="typedef" href="../../../include/time.h.html#time_t" title='time_t' data-type='__time_t' data-ref="time_t">time_t</a>                   <dfn class="decl field" id="(anonymous)::valid" title='(anonymous struct)::valid' data-ref="(anonymous)::valid">valid</dfn>;</td></tr>
+<tr><th id="32">32</th><td></td></tr>
+<tr><th id="33">33</th><td>    <a class="typedef" href="ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>               <dfn class="decl field" id="(anonymous)::min_uses" title='(anonymous struct)::min_uses' data-ref="(anonymous)::min_uses">min_uses</dfn>;</td></tr>
+<tr><th id="34">34</th><td></td></tr>
+<tr><th id="35">35</th><td><u>#<span data-ppcond="35">if</span> (<a class="macro" href="../../objs/ngx_auto_config.h.html#342" title="1" data-ref="_M/NGX_HAVE_OPENAT">NGX_HAVE_OPENAT</a>)</u></td></tr>
+<tr><th id="36">36</th><td>    <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span>                   <dfn class="decl field" id="(anonymous)::disable_symlinks_from" title='(anonymous struct)::disable_symlinks_from' data-ref="(anonymous)::disable_symlinks_from">disable_symlinks_from</dfn>;</td></tr>
+<tr><th id="37">37</th><td>    <em>unsigned</em>                 <dfn class="decl field" id="(anonymous)::disable_symlinks" title='(anonymous struct)::disable_symlinks' data-ref="(anonymous)::disable_symlinks">disable_symlinks</dfn>:<var>2</var>;</td></tr>
+<tr><th id="38">38</th><td><u>#<span data-ppcond="35">endif</span></u></td></tr>
+<tr><th id="39">39</th><td></td></tr>
+<tr><th id="40">40</th><td>    <em>unsigned</em>                 <dfn class="decl field" id="(anonymous)::test_dir" title='(anonymous struct)::test_dir' data-ref="(anonymous)::test_dir">test_dir</dfn>:<var>1</var>;</td></tr>
+<tr><th id="41">41</th><td>    <em>unsigned</em>                 <dfn class="decl field" id="(anonymous)::test_only" title='(anonymous struct)::test_only' data-ref="(anonymous)::test_only">test_only</dfn>:<var>1</var>;</td></tr>
+<tr><th id="42">42</th><td>    <em>unsigned</em>                 <dfn class="decl field" id="(anonymous)::log" title='(anonymous struct)::log' data-ref="(anonymous)::log">log</dfn>:<var>1</var>;</td></tr>
+<tr><th id="43">43</th><td>    <em>unsigned</em>                 <dfn class="decl field" id="(anonymous)::errors" title='(anonymous struct)::errors' data-ref="(anonymous)::errors">errors</dfn>:<var>1</var>;</td></tr>
+<tr><th id="44">44</th><td>    <em>unsigned</em>                 <dfn class="decl field" id="(anonymous)::events" title='(anonymous struct)::events' data-ref="(anonymous)::events">events</dfn>:<var>1</var>;</td></tr>
+<tr><th id="45">45</th><td></td></tr>
+<tr><th id="46">46</th><td>    <em>unsigned</em>                 <dfn class="decl field" id="(anonymous)::is_dir" title='(anonymous struct)::is_dir' data-ref="(anonymous)::is_dir">is_dir</dfn>:<var>1</var>;</td></tr>
+<tr><th id="47">47</th><td>    <em>unsigned</em>                 <dfn class="decl field" id="(anonymous)::is_file" title='(anonymous struct)::is_file' data-ref="(anonymous)::is_file">is_file</dfn>:<var>1</var>;</td></tr>
+<tr><th id="48">48</th><td>    <em>unsigned</em>                 <dfn class="decl field" id="(anonymous)::is_link" title='(anonymous struct)::is_link' data-ref="(anonymous)::is_link">is_link</dfn>:<var>1</var>;</td></tr>
+<tr><th id="49">49</th><td>    <em>unsigned</em>                 <dfn class="decl field" id="(anonymous)::is_exec" title='(anonymous struct)::is_exec' data-ref="(anonymous)::is_exec">is_exec</dfn>:<var>1</var>;</td></tr>
+<tr><th id="50">50</th><td>    <em>unsigned</em>                 <dfn class="decl field" id="(anonymous)::is_directio" title='(anonymous struct)::is_directio' data-ref="(anonymous)::is_directio">is_directio</dfn>:<var>1</var>;</td></tr>
+<tr><th id="51">51</th><td>} <dfn class="typedef" id="ngx_open_file_info_t" title='ngx_open_file_info_t' data-type='struct ngx_open_file_info_t' data-ref="ngx_open_file_info_t">ngx_open_file_info_t</dfn>;</td></tr>
+<tr><th id="52">52</th><td></td></tr>
+<tr><th id="53">53</th><td></td></tr>
+<tr><th id="54">54</th><td><b>typedef</b> <b>struct</b> <a class="type" href="#ngx_cached_open_file_s" title='ngx_cached_open_file_s' data-ref="ngx_cached_open_file_s">ngx_cached_open_file_s</a>  <dfn class="typedef" id="ngx_cached_open_file_t" title='ngx_cached_open_file_t' data-type='struct ngx_cached_open_file_s' data-ref="ngx_cached_open_file_t">ngx_cached_open_file_t</dfn>;</td></tr>
+<tr><th id="55">55</th><td></td></tr>
+<tr><th id="56">56</th><td><b>struct</b> <dfn class="type def" id="ngx_cached_open_file_s" title='ngx_cached_open_file_s' data-ref="ngx_cached_open_file_s">ngx_cached_open_file_s</dfn> {</td></tr>
+<tr><th id="57">57</th><td>    <a class="typedef" href="ngx_rbtree.h.html#ngx_rbtree_node_t" title='ngx_rbtree_node_t' data-type='struct ngx_rbtree_node_s' data-ref="ngx_rbtree_node_t">ngx_rbtree_node_t</a>        <dfn class="decl field" id="ngx_cached_open_file_s::node" title='ngx_cached_open_file_s::node' data-ref="ngx_cached_open_file_s::node">node</dfn>;</td></tr>
+<tr><th id="58">58</th><td>    <a class="typedef" href="ngx_queue.h.html#ngx_queue_t" title='ngx_queue_t' data-type='struct ngx_queue_s' data-ref="ngx_queue_t">ngx_queue_t</a>              <dfn class="decl field" id="ngx_cached_open_file_s::queue" title='ngx_cached_open_file_s::queue' data-ref="ngx_cached_open_file_s::queue">queue</dfn>;</td></tr>
+<tr><th id="59">59</th><td></td></tr>
+<tr><th id="60">60</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a>                  *<dfn class="decl field" id="ngx_cached_open_file_s::name" title='ngx_cached_open_file_s::name' data-ref="ngx_cached_open_file_s::name">name</dfn>;</td></tr>
+<tr><th id="61">61</th><td>    <a class="typedef" href="../../../include/time.h.html#time_t" title='time_t' data-type='__time_t' data-ref="time_t">time_t</a>                   <dfn class="decl field" id="ngx_cached_open_file_s::created" title='ngx_cached_open_file_s::created' data-ref="ngx_cached_open_file_s::created">created</dfn>;</td></tr>
+<tr><th id="62">62</th><td>    <a class="typedef" href="../../../include/time.h.html#time_t" title='time_t' data-type='__time_t' data-ref="time_t">time_t</a>                   <dfn class="decl field" id="ngx_cached_open_file_s::accessed" title='ngx_cached_open_file_s::accessed' data-ref="ngx_cached_open_file_s::accessed">accessed</dfn>;</td></tr>
+<tr><th id="63">63</th><td></td></tr>
+<tr><th id="64">64</th><td>    <a class="typedef" href="../os/unix/ngx_files.h.html#ngx_fd_t" title='ngx_fd_t' data-type='int' data-ref="ngx_fd_t">ngx_fd_t</a>                 <dfn class="decl field" id="ngx_cached_open_file_s::fd" title='ngx_cached_open_file_s::fd' data-ref="ngx_cached_open_file_s::fd">fd</dfn>;</td></tr>
+<tr><th id="65">65</th><td>    <a class="typedef" href="../os/unix/ngx_files.h.html#ngx_file_uniq_t" title='ngx_file_uniq_t' data-type='ino_t' data-ref="ngx_file_uniq_t">ngx_file_uniq_t</a>          <dfn class="decl field" id="ngx_cached_open_file_s::uniq" title='ngx_cached_open_file_s::uniq' data-ref="ngx_cached_open_file_s::uniq">uniq</dfn>;</td></tr>
+<tr><th id="66">66</th><td>    <a class="typedef" href="../../../include/time.h.html#time_t" title='time_t' data-type='__time_t' data-ref="time_t">time_t</a>                   <dfn class="decl field" id="ngx_cached_open_file_s::mtime" title='ngx_cached_open_file_s::mtime' data-ref="ngx_cached_open_file_s::mtime">mtime</dfn>;</td></tr>
+<tr><th id="67">67</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#off_t" title='off_t' data-type='__off64_t' data-ref="off_t">off_t</a>                    <dfn class="decl field" id="ngx_cached_open_file_s::size" title='ngx_cached_open_file_s::size' data-ref="ngx_cached_open_file_s::size">size</dfn>;</td></tr>
+<tr><th id="68">68</th><td>    <a class="typedef" href="../os/unix/ngx_errno.h.html#ngx_err_t" title='ngx_err_t' data-type='int' data-ref="ngx_err_t">ngx_err_t</a>                <dfn class="decl field" id="ngx_cached_open_file_s::err" title='ngx_cached_open_file_s::err' data-ref="ngx_cached_open_file_s::err">err</dfn>;</td></tr>
+<tr><th id="69">69</th><td></td></tr>
+<tr><th id="70">70</th><td>    <a class="typedef" href="../../../include/stdint.h.html#uint32_t" title='uint32_t' data-type='unsigned int' data-ref="uint32_t">uint32_t</a>                 <dfn class="decl field" id="ngx_cached_open_file_s::uses" title='ngx_cached_open_file_s::uses' data-ref="ngx_cached_open_file_s::uses">uses</dfn>;</td></tr>
+<tr><th id="71">71</th><td></td></tr>
+<tr><th id="72">72</th><td><u>#<span data-ppcond="72">if</span> (<a class="macro" href="../../objs/ngx_auto_config.h.html#342" title="1" data-ref="_M/NGX_HAVE_OPENAT">NGX_HAVE_OPENAT</a>)</u></td></tr>
+<tr><th id="73">73</th><td>    <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span>                   <dfn class="decl field" id="ngx_cached_open_file_s::disable_symlinks_from" title='ngx_cached_open_file_s::disable_symlinks_from' data-ref="ngx_cached_open_file_s::disable_symlinks_from">disable_symlinks_from</dfn>;</td></tr>
+<tr><th id="74">74</th><td>    <em>unsigned</em>                 <dfn class="decl field" id="ngx_cached_open_file_s::disable_symlinks" title='ngx_cached_open_file_s::disable_symlinks' data-ref="ngx_cached_open_file_s::disable_symlinks">disable_symlinks</dfn>:<var>2</var>;</td></tr>
+<tr><th id="75">75</th><td><u>#<span data-ppcond="72">endif</span></u></td></tr>
+<tr><th id="76">76</th><td></td></tr>
+<tr><th id="77">77</th><td>    <em>unsigned</em>                 <dfn class="decl field" id="ngx_cached_open_file_s::count" title='ngx_cached_open_file_s::count' data-ref="ngx_cached_open_file_s::count">count</dfn>:<var>24</var>;</td></tr>
+<tr><th id="78">78</th><td>    <em>unsigned</em>                 <dfn class="decl field" id="ngx_cached_open_file_s::close" title='ngx_cached_open_file_s::close' data-ref="ngx_cached_open_file_s::close">close</dfn>:<var>1</var>;</td></tr>
+<tr><th id="79">79</th><td>    <em>unsigned</em>                 <dfn class="decl field" id="ngx_cached_open_file_s::use_event" title='ngx_cached_open_file_s::use_event' data-ref="ngx_cached_open_file_s::use_event">use_event</dfn>:<var>1</var>;</td></tr>
+<tr><th id="80">80</th><td></td></tr>
+<tr><th id="81">81</th><td>    <em>unsigned</em>                 <dfn class="decl field" id="ngx_cached_open_file_s::is_dir" title='ngx_cached_open_file_s::is_dir' data-ref="ngx_cached_open_file_s::is_dir">is_dir</dfn>:<var>1</var>;</td></tr>
+<tr><th id="82">82</th><td>    <em>unsigned</em>                 <dfn class="decl field" id="ngx_cached_open_file_s::is_file" title='ngx_cached_open_file_s::is_file' data-ref="ngx_cached_open_file_s::is_file">is_file</dfn>:<var>1</var>;</td></tr>
+<tr><th id="83">83</th><td>    <em>unsigned</em>                 <dfn class="decl field" id="ngx_cached_open_file_s::is_link" title='ngx_cached_open_file_s::is_link' data-ref="ngx_cached_open_file_s::is_link">is_link</dfn>:<var>1</var>;</td></tr>
+<tr><th id="84">84</th><td>    <em>unsigned</em>                 <dfn class="decl field" id="ngx_cached_open_file_s::is_exec" title='ngx_cached_open_file_s::is_exec' data-ref="ngx_cached_open_file_s::is_exec">is_exec</dfn>:<var>1</var>;</td></tr>
+<tr><th id="85">85</th><td>    <em>unsigned</em>                 <dfn class="decl field" id="ngx_cached_open_file_s::is_directio" title='ngx_cached_open_file_s::is_directio' data-ref="ngx_cached_open_file_s::is_directio">is_directio</dfn>:<var>1</var>;</td></tr>
+<tr><th id="86">86</th><td></td></tr>
+<tr><th id="87">87</th><td>    <a class="typedef" href="ngx_core.h.html#ngx_event_t" title='ngx_event_t' data-type='struct ngx_event_s' data-ref="ngx_event_t">ngx_event_t</a>             *<dfn class="decl field" id="ngx_cached_open_file_s::event" title='ngx_cached_open_file_s::event' data-ref="ngx_cached_open_file_s::event">event</dfn>;</td></tr>
+<tr><th id="88">88</th><td>};</td></tr>
+<tr><th id="89">89</th><td></td></tr>
+<tr><th id="90">90</th><td></td></tr>
+<tr><th id="91">91</th><td><b>typedef</b> <b>struct</b> {</td></tr>
+<tr><th id="92">92</th><td>    <a class="typedef" href="ngx_rbtree.h.html#ngx_rbtree_t" title='ngx_rbtree_t' data-type='struct ngx_rbtree_s' data-ref="ngx_rbtree_t">ngx_rbtree_t</a>             <dfn class="decl field" id="(anonymous)::rbtree" title='(anonymous struct)::rbtree' data-ref="(anonymous)::rbtree">rbtree</dfn>;</td></tr>
+<tr><th id="93">93</th><td>    <a class="typedef" href="ngx_rbtree.h.html#ngx_rbtree_node_t" title='ngx_rbtree_node_t' data-type='struct ngx_rbtree_node_s' data-ref="ngx_rbtree_node_t">ngx_rbtree_node_t</a>        <dfn class="decl field" id="(anonymous)::sentinel" title='(anonymous struct)::sentinel' data-ref="(anonymous)::sentinel">sentinel</dfn>;</td></tr>
+<tr><th id="94">94</th><td>    <a class="typedef" href="ngx_queue.h.html#ngx_queue_t" title='ngx_queue_t' data-type='struct ngx_queue_s' data-ref="ngx_queue_t">ngx_queue_t</a>              <dfn class="decl field" id="(anonymous)::expire_queue" title='(anonymous struct)::expire_queue' data-ref="(anonymous)::expire_queue">expire_queue</dfn>;</td></tr>
+<tr><th id="95">95</th><td></td></tr>
+<tr><th id="96">96</th><td>    <a class="typedef" href="ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>               <dfn class="decl field" id="(anonymous)::current" title='(anonymous struct)::current' data-ref="(anonymous)::current">current</dfn>;</td></tr>
+<tr><th id="97">97</th><td>    <a class="typedef" href="ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>               <dfn class="decl field" id="(anonymous)::max" title='(anonymous struct)::max' data-ref="(anonymous)::max">max</dfn>;</td></tr>
+<tr><th id="98">98</th><td>    <a class="typedef" href="../../../include/time.h.html#time_t" title='time_t' data-type='__time_t' data-ref="time_t">time_t</a>                   <dfn class="decl field" id="(anonymous)::inactive" title='(anonymous struct)::inactive' data-ref="(anonymous)::inactive">inactive</dfn>;</td></tr>
+<tr><th id="99">99</th><td>} <dfn class="typedef" id="ngx_open_file_cache_t" title='ngx_open_file_cache_t' data-type='struct ngx_open_file_cache_t' data-ref="ngx_open_file_cache_t">ngx_open_file_cache_t</dfn>;</td></tr>
+<tr><th id="100">100</th><td></td></tr>
+<tr><th id="101">101</th><td></td></tr>
+<tr><th id="102">102</th><td><b>typedef</b> <b>struct</b> {</td></tr>
+<tr><th id="103">103</th><td>    <a class="typedef" href="#ngx_open_file_cache_t" title='ngx_open_file_cache_t' data-type='struct ngx_open_file_cache_t' data-ref="ngx_open_file_cache_t">ngx_open_file_cache_t</a>   *<dfn class="decl field" id="(anonymous)::cache" title='(anonymous struct)::cache' data-ref="(anonymous)::cache">cache</dfn>;</td></tr>
+<tr><th id="104">104</th><td>    <a class="typedef" href="#ngx_cached_open_file_t" title='ngx_cached_open_file_t' data-type='struct ngx_cached_open_file_s' data-ref="ngx_cached_open_file_t">ngx_cached_open_file_t</a>  *<dfn class="decl field" id="(anonymous)::file" title='(anonymous struct)::file' data-ref="(anonymous)::file">file</dfn>;</td></tr>
+<tr><th id="105">105</th><td>    <a class="typedef" href="ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>               <dfn class="decl field" id="(anonymous)::min_uses" title='(anonymous struct)::min_uses' data-ref="(anonymous)::min_uses">min_uses</dfn>;</td></tr>
+<tr><th id="106">106</th><td>    <a class="typedef" href="ngx_core.h.html#ngx_log_t" title='ngx_log_t' data-type='struct ngx_log_s' data-ref="ngx_log_t">ngx_log_t</a>               *<dfn class="decl field" id="(anonymous)::log" title='(anonymous struct)::log' data-ref="(anonymous)::log">log</dfn>;</td></tr>
+<tr><th id="107">107</th><td>} <dfn class="typedef" id="ngx_open_file_cache_cleanup_t" title='ngx_open_file_cache_cleanup_t' data-type='struct ngx_open_file_cache_cleanup_t' data-ref="ngx_open_file_cache_cleanup_t">ngx_open_file_cache_cleanup_t</dfn>;</td></tr>
+<tr><th id="108">108</th><td></td></tr>
+<tr><th id="109">109</th><td></td></tr>
+<tr><th id="110">110</th><td><b>typedef</b> <b>struct</b> {</td></tr>
+<tr><th id="111">111</th><td></td></tr>
+<tr><th id="112">112</th><td>    <i>/* ngx_connection_t stub to allow use c-&gt;fd as event ident */</i></td></tr>
+<tr><th id="113">113</th><td>    <em>void</em>                    *<dfn class="decl field" id="(anonymous)::data" title='(anonymous struct)::data' data-ref="(anonymous)::data">data</dfn>;</td></tr>
+<tr><th id="114">114</th><td>    <a class="typedef" href="ngx_core.h.html#ngx_event_t" title='ngx_event_t' data-type='struct ngx_event_s' data-ref="ngx_event_t">ngx_event_t</a>             *<dfn class="decl field" id="(anonymous)::read" title='(anonymous struct)::read' data-ref="(anonymous)::read">read</dfn>;</td></tr>
+<tr><th id="115">115</th><td>    <a class="typedef" href="ngx_core.h.html#ngx_event_t" title='ngx_event_t' data-type='struct ngx_event_s' data-ref="ngx_event_t">ngx_event_t</a>             *<dfn class="decl field" id="(anonymous)::write" title='(anonymous struct)::write' data-ref="(anonymous)::write">write</dfn>;</td></tr>
+<tr><th id="116">116</th><td>    <a class="typedef" href="../os/unix/ngx_files.h.html#ngx_fd_t" title='ngx_fd_t' data-type='int' data-ref="ngx_fd_t">ngx_fd_t</a>                 <dfn class="decl field" id="(anonymous)::fd" title='(anonymous struct)::fd' data-ref="(anonymous)::fd">fd</dfn>;</td></tr>
+<tr><th id="117">117</th><td></td></tr>
+<tr><th id="118">118</th><td>    <a class="typedef" href="#ngx_cached_open_file_t" title='ngx_cached_open_file_t' data-type='struct ngx_cached_open_file_s' data-ref="ngx_cached_open_file_t">ngx_cached_open_file_t</a>  *<dfn class="decl field" id="(anonymous)::file" title='(anonymous struct)::file' data-ref="(anonymous)::file">file</dfn>;</td></tr>
+<tr><th id="119">119</th><td>    <a class="typedef" href="#ngx_open_file_cache_t" title='ngx_open_file_cache_t' data-type='struct ngx_open_file_cache_t' data-ref="ngx_open_file_cache_t">ngx_open_file_cache_t</a>   *<dfn class="decl field" id="(anonymous)::cache" title='(anonymous struct)::cache' data-ref="(anonymous)::cache">cache</dfn>;</td></tr>
+<tr><th id="120">120</th><td>} <dfn class="typedef" id="ngx_open_file_cache_event_t" title='ngx_open_file_cache_event_t' data-type='struct ngx_open_file_cache_event_t' data-ref="ngx_open_file_cache_event_t">ngx_open_file_cache_event_t</dfn>;</td></tr>
+<tr><th id="121">121</th><td></td></tr>
+<tr><th id="122">122</th><td></td></tr>
+<tr><th id="123">123</th><td><a class="typedef" href="#ngx_open_file_cache_t" title='ngx_open_file_cache_t' data-type='struct ngx_open_file_cache_t' data-ref="ngx_open_file_cache_t">ngx_open_file_cache_t</a> *<dfn class="decl fn" id="ngx_open_file_cache_init" title='ngx_open_file_cache_init' data-ref="ngx_open_file_cache_init">ngx_open_file_cache_init</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_pool_t" title='ngx_pool_t' data-type='struct ngx_pool_s' data-ref="ngx_pool_t">ngx_pool_t</a> *<dfn class="local col9 decl" id="2759pool" title='pool' data-type='ngx_pool_t *' data-ref="2759pool">pool</dfn>,</td></tr>
+<tr><th id="124">124</th><td>    <a class="typedef" href="ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a> <dfn class="local col0 decl" id="2760max" title='max' data-type='ngx_uint_t' data-ref="2760max">max</dfn>, <a class="typedef" href="../../../include/time.h.html#time_t" title='time_t' data-type='__time_t' data-ref="time_t">time_t</a> <dfn class="local col1 decl" id="2761inactive" title='inactive' data-type='time_t' data-ref="2761inactive">inactive</dfn>);</td></tr>
+<tr><th id="125">125</th><td><a class="typedef" href="ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a> <dfn class="decl fn" id="ngx_open_cached_file" title='ngx_open_cached_file' data-ref="ngx_open_cached_file">ngx_open_cached_file</dfn>(<a class="typedef" href="#ngx_open_file_cache_t" title='ngx_open_file_cache_t' data-type='struct ngx_open_file_cache_t' data-ref="ngx_open_file_cache_t">ngx_open_file_cache_t</a> *<dfn class="local col2 decl" id="2762cache" title='cache' data-type='ngx_open_file_cache_t *' data-ref="2762cache">cache</dfn>, <a class="typedef" href="ngx_string.h.html#ngx_str_t" title='ngx_str_t' data-type='struct ngx_str_t' data-ref="ngx_str_t">ngx_str_t</a> *<dfn class="local col3 decl" id="2763name" title='name' data-type='ngx_str_t *' data-ref="2763name">name</dfn>,</td></tr>
+<tr><th id="126">126</th><td>    <a class="typedef" href="#ngx_open_file_info_t" title='ngx_open_file_info_t' data-type='struct ngx_open_file_info_t' data-ref="ngx_open_file_info_t">ngx_open_file_info_t</a> *<dfn class="local col4 decl" id="2764of" title='of' data-type='ngx_open_file_info_t *' data-ref="2764of">of</dfn>, <a class="typedef" href="ngx_core.h.html#ngx_pool_t" title='ngx_pool_t' data-type='struct ngx_pool_s' data-ref="ngx_pool_t">ngx_pool_t</a> *<dfn class="local col5 decl" id="2765pool" title='pool' data-type='ngx_pool_t *' data-ref="2765pool">pool</dfn>);</td></tr>
+<tr><th id="127">127</th><td></td></tr>
+<tr><th id="128">128</th><td></td></tr>
+<tr><th id="129">129</th><td><u>#<span data-ppcond="12">endif</span> /* _NGX_OPEN_FILE_CACHE_H_INCLUDED_ */</u></td></tr>
+<tr><th id="130">130</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../../objs/ngx_modules.c.html'>nginx/objs/ngx_modules.c</a><br/>Generated on <em>2018-Apr-06</em> from project nginx<br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

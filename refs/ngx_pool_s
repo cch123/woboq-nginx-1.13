@@ -1,0 +1,9 @@
+<def f='nginx/src/core/ngx_palloc.h' l='57' ll='65'/>
+<size>80</size>
+<mbr r='ngx_pool_s::d' o='0' t='ngx_pool_data_t'/>
+<mbr r='ngx_pool_s::max' o='256' t='size_t'/>
+<mbr r='ngx_pool_s::current' o='320' t='ngx_pool_t *'/>
+<mbr r='ngx_pool_s::chain' o='384' t='ngx_chain_t *'/>
+<mbr r='ngx_pool_s::large' o='448' t='ngx_pool_large_t *'/>
+<mbr r='ngx_pool_s::cleanup' o='512' t='ngx_pool_cleanup_t *'/>
+<mbr r='ngx_pool_s::log' o='576' t='ngx_log_t *'/>

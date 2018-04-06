@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http_config.h' l='35' type='char *(*)(ngx_conf_t *, void *, void *)'/>
+<offset>448</offset>
+<use f='nginx/src/http/ngx_http.c' l='589' u='r' c='ngx_http_merge_servers'/>
+<use f='nginx/src/http/ngx_http.c' l='595' u='r' c='ngx_http_merge_servers'/>
+<use f='nginx/src/http/ngx_http.c' l='648' u='r' c='ngx_http_merge_locations'/>

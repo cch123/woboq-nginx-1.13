@@ -1,0 +1,6 @@
+<dec f='nginx/src/core/ngx_log.h' l='39'/>
+<doc f='nginx/src/core/ngx_log.h' l='34'>/*
+ * do not forget to update debug_levels[] in src/core/ngx_log.c
+ * after the adding a new debug level
+ */</doc>
+<use f='nginx/src/core/ngx_log.c' l='513' u='c'/>

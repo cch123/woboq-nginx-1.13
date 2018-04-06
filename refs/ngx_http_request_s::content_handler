@@ -1,0 +1,10 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='424' type='ngx_http_handler_pt'/>
+<offset>8832</offset>
+<use f='nginx/src/http/ngx_http_core_module.c' l='940' u='w' c='ngx_http_core_find_config_phase'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1167' u='r' c='ngx_http_core_content_phase'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1169' u='r' c='ngx_http_core_content_phase'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1289' u='w' c='ngx_http_update_location_config'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2384' u='w' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2384' u='r' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2497' u='w' c='ngx_http_named_location'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2334' u='w' c='ngx_http_finalize_request'/>

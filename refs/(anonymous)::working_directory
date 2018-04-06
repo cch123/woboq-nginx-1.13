@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_cycle.h' l='110' type='ngx_str_t'/>
+<offset>896</offset>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='901' u='m' c='ngx_worker_process_init'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='902' u='m' c='ngx_worker_process_init'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='904' u='m' c='ngx_worker_process_init'/>

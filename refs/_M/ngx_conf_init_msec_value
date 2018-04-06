@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_conf_file.h' l='200'/>
+<use f='nginx/src/core/nginx.c' l='1059' u='c'/>
+<use f='nginx/src/core/nginx.c' l='1060' u='c'/>
+<use f='nginx/src/event/ngx_event.c' l='1287' u='c'/>

@@ -1,0 +1,13 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='205' type='ngx_str_t'/>
+<offset>448</offset>
+<use f='nginx/src/core/ngx_resolver.c' l='435' u='m' c='ngx_resolve_name'/>
+<use f='nginx/src/core/ngx_resolver.c' l='436' u='m' c='ngx_resolve_name'/>
+<use f='nginx/src/core/ngx_resolver.c' l='438' u='m' c='ngx_resolve_name'/>
+<use f='nginx/src/core/ngx_resolver.c' l='439' u='m' c='ngx_resolve_name'/>
+<use f='nginx/src/core/ngx_resolver.c' l='439' u='m' c='ngx_resolve_name'/>
+<use f='nginx/src/core/ngx_resolver.c' l='452' u='m' c='ngx_resolve_name'/>
+<use f='nginx/src/core/ngx_resolver.c' l='453' u='a' c='ngx_resolve_name'/>
+<use f='nginx/src/core/ngx_resolver.c' l='456' u='a' c='ngx_resolve_name'/>
+<use f='nginx/src/core/ngx_resolver.c' l='561' u='m' c='ngx_resolve_name_done'/>
+<use f='nginx/src/core/ngx_resolver.c' l='604' u='m' c='ngx_resolve_name_locked'/>
+<use f='nginx/src/core/ngx_resolver.c' l='812' u='m' c='ngx_resolve_name_locked'/>

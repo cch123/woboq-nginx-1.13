@@ -1,0 +1,4 @@
+<def f='include/linux/capability.h' l='69' ll='75'/>
+<size>20</size>
+<mbr r='vfs_cap_data::magic_etc' o='0' t='__le32'/>
+<mbr r='vfs_cap_data::data' o='32' t='struct (anonymous struct at /usr/include/linux/capability.h:71:2) [2]'/>

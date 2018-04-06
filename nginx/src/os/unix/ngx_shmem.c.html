@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ngx_shmem.c source code [nginx/src/os/unix/ngx_shmem.c] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../../../../data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../../../data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../../../data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../../data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'nginx/src/os/unix/ngx_shmem.c'; var root_path = '../../../..'; var data_path = '../../../../../data';</script>
+<script src='../../../../../data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../../..'>nginx</a>/<a href='../..'>src</a>/<a href='..'>os</a>/<a href='./'>unix</a>/<a href='ngx_shmem.c.html'>ngx_shmem.c</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td></td></tr>
+<tr><th id="2">2</th><td><i>/*</i></td></tr>
+<tr><th id="3">3</th><td><i> * Copyright (C) Igor Sysoev</i></td></tr>
+<tr><th id="4">4</th><td><i> * Copyright (C) Nginx, Inc.</i></td></tr>
+<tr><th id="5">5</th><td><i> */</i></td></tr>
+<tr><th id="6">6</th><td></td></tr>
+<tr><th id="7">7</th><td></td></tr>
+<tr><th id="8">8</th><td><u>#include <a href="../../core/ngx_config.h.html">&lt;ngx_config.h&gt;</a></u></td></tr>
+<tr><th id="9">9</th><td><u>#include <a href="../../core/ngx_core.h.html">&lt;ngx_core.h&gt;</a></u></td></tr>
+<tr><th id="10">10</th><td></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td><u>#<span data-ppcond="12">if</span> (<a class="macro" href="../../../objs/ngx_auto_config.h.html#292" title="1" data-ref="_M/NGX_HAVE_MAP_ANON">NGX_HAVE_MAP_ANON</a>)</u></td></tr>
+<tr><th id="13">13</th><td></td></tr>
+<tr><th id="14">14</th><td><a class="typedef" href="../../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a></td></tr>
+<tr><th id="15">15</th><td><dfn class="decl def fn" id="ngx_shm_alloc" title='ngx_shm_alloc' data-ref="ngx_shm_alloc">ngx_shm_alloc</dfn>(<a class="typedef" href="ngx_shmem.h.html#ngx_shm_t" title='ngx_shm_t' data-type='struct ngx_shm_t' data-ref="ngx_shm_t">ngx_shm_t</a> *<dfn class="local col1 decl" id="1shm" title='shm' data-type='ngx_shm_t *' data-ref="1shm">shm</dfn>)</td></tr>
+<tr><th id="16">16</th><td>{</td></tr>
+<tr><th id="17">17</th><td>    <a class="local col1 ref" href="#1shm" title='shm' data-ref="1shm">shm</a>-&gt;<a class="ref field" href="ngx_shmem.h.html#(anonymous)::addr" title='(anonymous struct)::addr' data-ref="(anonymous)::addr">addr</a> = (<a class="typedef" href="../../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a> *) <a class="ref fn" href="../../../../include/x86_64-linux-gnu/sys/mman.h.html#61" title='mmap' data-ref="mmap64">mmap</a>(<span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>, <a class="local col1 ref" href="#1shm" title='shm' data-ref="1shm">shm</a>-&gt;<a class="ref field" href="ngx_shmem.h.html#(anonymous)::size" title='(anonymous struct)::size' data-ref="(anonymous)::size">size</a>,</td></tr>
+<tr><th id="18">18</th><td>                                <a class="macro" href="../../../../include/x86_64-linux-gnu/bits/mman-linux.h.html#35" title="0x1" data-ref="_M/PROT_READ">PROT_READ</a>|<a class="macro" href="../../../../include/x86_64-linux-gnu/bits/mman-linux.h.html#36" title="0x2" data-ref="_M/PROT_WRITE">PROT_WRITE</a>,</td></tr>
+<tr><th id="19">19</th><td>                                <a class="macro" href="../../../../include/x86_64-linux-gnu/bits/mman-linux.h.html#60" title="0x20" data-ref="_M/MAP_ANON">MAP_ANON</a>|<a class="macro" href="../../../../include/x86_64-linux-gnu/bits/mman-linux.h.html#45" title="0x01" data-ref="_M/MAP_SHARED">MAP_SHARED</a>, -<var>1</var>, <var>0</var>);</td></tr>
+<tr><th id="20">20</th><td></td></tr>
+<tr><th id="21">21</th><td>    <b>if</b> (<a class="local col1 ref" href="#1shm" title='shm' data-ref="1shm">shm</a>-&gt;<a class="ref field" href="ngx_shmem.h.html#(anonymous)::addr" title='(anonymous struct)::addr' data-ref="(anonymous)::addr">addr</a> == <a class="macro" href="../../../../include/x86_64-linux-gnu/sys/mman.h.html#44" title="((void *) -1)" data-ref="_M/MAP_FAILED">MAP_FAILED</a>) {</td></tr>
+<tr><th id="22">22</th><td>        <a class="macro" href="../../core/ngx_log.h.html#85" title="if ((shm-&gt;log)-&gt;log_level &gt;= 2) ngx_log_error_core(2, shm-&gt;log, (*__errno_location ()), &quot;mmap(MAP_ANON|MAP_SHARED, %uz) failed&quot;, shm-&gt;size)" data-ref="_M/ngx_log_error">ngx_log_error</a>(<a class="macro" href="../../core/ngx_log.h.html#18" title="2" data-ref="_M/NGX_LOG_ALERT">NGX_LOG_ALERT</a>, <a class="local col1 ref" href="#1shm" title='shm' data-ref="1shm">shm</a>-&gt;<a class="ref field" href="ngx_shmem.h.html#(anonymous)::log" title='(anonymous struct)::log' data-ref="(anonymous)::log">log</a>, <a class="macro" href="ngx_errno.h.html#69" title="(*__errno_location ())" data-ref="_M/ngx_errno">ngx_errno</a>,</td></tr>
+<tr><th id="23">23</th><td>                      <q>"mmap(MAP_ANON|MAP_SHARED, %uz) failed"</q>, <a class="local col1 ref" href="#1shm" title='shm' data-ref="1shm">shm</a>-&gt;<a class="ref field" href="ngx_shmem.h.html#(anonymous)::size" title='(anonymous struct)::size' data-ref="(anonymous)::size">size</a>);</td></tr>
+<tr><th id="24">24</th><td>        <b>return</b> <a class="macro" href="../../core/ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>;</td></tr>
+<tr><th id="25">25</th><td>    }</td></tr>
+<tr><th id="26">26</th><td></td></tr>
+<tr><th id="27">27</th><td>    <b>return</b> <a class="macro" href="../../core/ngx_core.h.html#35" title="0" data-ref="_M/NGX_OK">NGX_OK</a>;</td></tr>
+<tr><th id="28">28</th><td>}</td></tr>
+<tr><th id="29">29</th><td></td></tr>
+<tr><th id="30">30</th><td></td></tr>
+<tr><th id="31">31</th><td><em>void</em></td></tr>
+<tr><th id="32">32</th><td><dfn class="decl def fn" id="ngx_shm_free" title='ngx_shm_free' data-ref="ngx_shm_free">ngx_shm_free</dfn>(<a class="typedef" href="ngx_shmem.h.html#ngx_shm_t" title='ngx_shm_t' data-type='struct ngx_shm_t' data-ref="ngx_shm_t">ngx_shm_t</a> *<dfn class="local col2 decl" id="2shm" title='shm' data-type='ngx_shm_t *' data-ref="2shm">shm</dfn>)</td></tr>
+<tr><th id="33">33</th><td>{</td></tr>
+<tr><th id="34">34</th><td>    <b>if</b> (<a class="ref fn" href="../../../../include/x86_64-linux-gnu/sys/mman.h.html#munmap" title='munmap' data-ref="munmap">munmap</a>((<em>void</em> *) <a class="local col2 ref" href="#2shm" title='shm' data-ref="2shm">shm</a>-&gt;<a class="ref field" href="ngx_shmem.h.html#(anonymous)::addr" title='(anonymous struct)::addr' data-ref="(anonymous)::addr">addr</a>, <a class="local col2 ref" href="#2shm" title='shm' data-ref="2shm">shm</a>-&gt;<a class="ref field" href="ngx_shmem.h.html#(anonymous)::size" title='(anonymous struct)::size' data-ref="(anonymous)::size">size</a>) == -<var>1</var>) {</td></tr>
+<tr><th id="35">35</th><td>        <a class="macro" href="../../core/ngx_log.h.html#85" title="if ((shm-&gt;log)-&gt;log_level &gt;= 2) ngx_log_error_core(2, shm-&gt;log, (*__errno_location ()), &quot;munmap(%p, %uz) failed&quot;, shm-&gt;addr, shm-&gt;size)" data-ref="_M/ngx_log_error">ngx_log_error</a>(<a class="macro" href="../../core/ngx_log.h.html#18" title="2" data-ref="_M/NGX_LOG_ALERT">NGX_LOG_ALERT</a>, <a class="local col2 ref" href="#2shm" title='shm' data-ref="2shm">shm</a>-&gt;<a class="ref field" href="ngx_shmem.h.html#(anonymous)::log" title='(anonymous struct)::log' data-ref="(anonymous)::log">log</a>, <a class="macro" href="ngx_errno.h.html#69" title="(*__errno_location ())" data-ref="_M/ngx_errno">ngx_errno</a>,</td></tr>
+<tr><th id="36">36</th><td>                      <q>"munmap(%p, %uz) failed"</q>, <a class="local col2 ref" href="#2shm" title='shm' data-ref="2shm">shm</a>-&gt;<a class="ref field" href="ngx_shmem.h.html#(anonymous)::addr" title='(anonymous struct)::addr' data-ref="(anonymous)::addr">addr</a>, <a class="local col2 ref" href="#2shm" title='shm' data-ref="2shm">shm</a>-&gt;<a class="ref field" href="ngx_shmem.h.html#(anonymous)::size" title='(anonymous struct)::size' data-ref="(anonymous)::size">size</a>);</td></tr>
+<tr><th id="37">37</th><td>    }</td></tr>
+<tr><th id="38">38</th><td>}</td></tr>
+<tr><th id="39">39</th><td></td></tr>
+<tr><th id="40">40</th><td><u>#<span data-ppcond="12">elif</span> (NGX_HAVE_MAP_DEVZERO)</u></td></tr>
+<tr><th id="41">41</th><td></td></tr>
+<tr><th id="42">42</th><td>ngx_int_t</td></tr>
+<tr><th id="43">43</th><td>ngx_shm_alloc(ngx_shm_t *shm)</td></tr>
+<tr><th id="44">44</th><td>{</td></tr>
+<tr><th id="45">45</th><td>    ngx_fd_t  fd;</td></tr>
+<tr><th id="46">46</th><td></td></tr>
+<tr><th id="47">47</th><td>    fd = open(<q>"/dev/zero"</q>, O_RDWR);</td></tr>
+<tr><th id="48">48</th><td></td></tr>
+<tr><th id="49">49</th><td>    <b>if</b> (fd == -<var>1</var>) {</td></tr>
+<tr><th id="50">50</th><td>        ngx_log_error(NGX_LOG_ALERT, shm-&gt;log, ngx_errno,</td></tr>
+<tr><th id="51">51</th><td>                      <q>"open(\"/dev/zero\") failed"</q>);</td></tr>
+<tr><th id="52">52</th><td>        <b>return</b> NGX_ERROR;</td></tr>
+<tr><th id="53">53</th><td>    }</td></tr>
+<tr><th id="54">54</th><td></td></tr>
+<tr><th id="55">55</th><td>    shm-&gt;addr = (u_char *) mmap(NULL, shm-&gt;size, PROT_READ|PROT_WRITE,</td></tr>
+<tr><th id="56">56</th><td>                                MAP_SHARED, fd, <var>0</var>);</td></tr>
+<tr><th id="57">57</th><td></td></tr>
+<tr><th id="58">58</th><td>    <b>if</b> (shm-&gt;addr == MAP_FAILED) {</td></tr>
+<tr><th id="59">59</th><td>        ngx_log_error(NGX_LOG_ALERT, shm-&gt;log, ngx_errno,</td></tr>
+<tr><th id="60">60</th><td>                      <q>"mmap(/dev/zero, MAP_SHARED, %uz) failed"</q>, shm-&gt;size);</td></tr>
+<tr><th id="61">61</th><td>    }</td></tr>
+<tr><th id="62">62</th><td></td></tr>
+<tr><th id="63">63</th><td>    <b>if</b> (close(fd) == -<var>1</var>) {</td></tr>
+<tr><th id="64">64</th><td>        ngx_log_error(NGX_LOG_ALERT, shm-&gt;log, ngx_errno,</td></tr>
+<tr><th id="65">65</th><td>                      <q>"close(\"/dev/zero\") failed"</q>);</td></tr>
+<tr><th id="66">66</th><td>    }</td></tr>
+<tr><th id="67">67</th><td></td></tr>
+<tr><th id="68">68</th><td>    <b>return</b> (shm-&gt;addr == MAP_FAILED) ? NGX_ERROR : NGX_OK;</td></tr>
+<tr><th id="69">69</th><td>}</td></tr>
+<tr><th id="70">70</th><td></td></tr>
+<tr><th id="71">71</th><td></td></tr>
+<tr><th id="72">72</th><td><em>void</em></td></tr>
+<tr><th id="73">73</th><td>ngx_shm_free(ngx_shm_t *shm)</td></tr>
+<tr><th id="74">74</th><td>{</td></tr>
+<tr><th id="75">75</th><td>    <b>if</b> (munmap((<em>void</em> *) shm-&gt;addr, shm-&gt;size) == -<var>1</var>) {</td></tr>
+<tr><th id="76">76</th><td>        ngx_log_error(NGX_LOG_ALERT, shm-&gt;log, ngx_errno,</td></tr>
+<tr><th id="77">77</th><td>                      <q>"munmap(%p, %uz) failed"</q>, shm-&gt;addr, shm-&gt;size);</td></tr>
+<tr><th id="78">78</th><td>    }</td></tr>
+<tr><th id="79">79</th><td>}</td></tr>
+<tr><th id="80">80</th><td></td></tr>
+<tr><th id="81">81</th><td><u>#elif (NGX_HAVE_SYSVSHM)</u></td></tr>
+<tr><th id="82">82</th><td></td></tr>
+<tr><th id="83">83</th><td><u>#include &lt;sys/ipc.h&gt;</u></td></tr>
+<tr><th id="84">84</th><td><u>#include &lt;sys/shm.h&gt;</u></td></tr>
+<tr><th id="85">85</th><td></td></tr>
+<tr><th id="86">86</th><td></td></tr>
+<tr><th id="87">87</th><td>ngx_int_t</td></tr>
+<tr><th id="88">88</th><td>ngx_shm_alloc(ngx_shm_t *shm)</td></tr>
+<tr><th id="89">89</th><td>{</td></tr>
+<tr><th id="90">90</th><td>    <em>int</em>  id;</td></tr>
+<tr><th id="91">91</th><td></td></tr>
+<tr><th id="92">92</th><td>    id = shmget(IPC_PRIVATE, shm-&gt;size, (SHM_R|SHM_W|IPC_CREAT));</td></tr>
+<tr><th id="93">93</th><td></td></tr>
+<tr><th id="94">94</th><td>    <b>if</b> (id == -<var>1</var>) {</td></tr>
+<tr><th id="95">95</th><td>        ngx_log_error(NGX_LOG_ALERT, shm-&gt;log, ngx_errno,</td></tr>
+<tr><th id="96">96</th><td>                      <q>"shmget(%uz) failed"</q>, shm-&gt;size);</td></tr>
+<tr><th id="97">97</th><td>        <b>return</b> NGX_ERROR;</td></tr>
+<tr><th id="98">98</th><td>    }</td></tr>
+<tr><th id="99">99</th><td></td></tr>
+<tr><th id="100">100</th><td>    ngx_log_debug1(NGX_LOG_DEBUG_CORE, shm-&gt;log, <var>0</var>, <q>"shmget id: %d"</q>, id);</td></tr>
+<tr><th id="101">101</th><td></td></tr>
+<tr><th id="102">102</th><td>    shm-&gt;addr = shmat(id, NULL, <var>0</var>);</td></tr>
+<tr><th id="103">103</th><td></td></tr>
+<tr><th id="104">104</th><td>    <b>if</b> (shm-&gt;addr == (<em>void</em> *) -<var>1</var>) {</td></tr>
+<tr><th id="105">105</th><td>        ngx_log_error(NGX_LOG_ALERT, shm-&gt;log, ngx_errno, <q>"shmat() failed"</q>);</td></tr>
+<tr><th id="106">106</th><td>    }</td></tr>
+<tr><th id="107">107</th><td></td></tr>
+<tr><th id="108">108</th><td>    <b>if</b> (shmctl(id, IPC_RMID, NULL) == -<var>1</var>) {</td></tr>
+<tr><th id="109">109</th><td>        ngx_log_error(NGX_LOG_ALERT, shm-&gt;log, ngx_errno,</td></tr>
+<tr><th id="110">110</th><td>                      <q>"shmctl(IPC_RMID) failed"</q>);</td></tr>
+<tr><th id="111">111</th><td>    }</td></tr>
+<tr><th id="112">112</th><td></td></tr>
+<tr><th id="113">113</th><td>    <b>return</b> (shm-&gt;addr == (<em>void</em> *) -<var>1</var>) ? NGX_ERROR : NGX_OK;</td></tr>
+<tr><th id="114">114</th><td>}</td></tr>
+<tr><th id="115">115</th><td></td></tr>
+<tr><th id="116">116</th><td></td></tr>
+<tr><th id="117">117</th><td><em>void</em></td></tr>
+<tr><th id="118">118</th><td>ngx_shm_free(ngx_shm_t *shm)</td></tr>
+<tr><th id="119">119</th><td>{</td></tr>
+<tr><th id="120">120</th><td>    <b>if</b> (shmdt(shm-&gt;addr) == -<var>1</var>) {</td></tr>
+<tr><th id="121">121</th><td>        ngx_log_error(NGX_LOG_ALERT, shm-&gt;log, ngx_errno,</td></tr>
+<tr><th id="122">122</th><td>                      <q>"shmdt(%p) failed"</q>, shm-&gt;addr);</td></tr>
+<tr><th id="123">123</th><td>    }</td></tr>
+<tr><th id="124">124</th><td>}</td></tr>
+<tr><th id="125">125</th><td></td></tr>
+<tr><th id="126">126</th><td><u>#<span data-ppcond="12">endif</span></u></td></tr>
+<tr><th id="127">127</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated on <em>2018-Apr-06</em> from project nginx<br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

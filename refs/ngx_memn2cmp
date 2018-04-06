@@ -1,0 +1,10 @@
+<dec f='nginx/src/core/ngx_string.h' l='170' type='ngx_int_t ngx_memn2cmp(u_char * s1, u_char * s2, size_t n1, size_t n2)'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3376' u='c' c='ngx_resolver_lookup_name'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3417' u='c' c='ngx_resolver_lookup_srv'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3531' u='c' c='ngx_resolver_rbtree_insert_value'/>
+<def f='nginx/src/core/ngx_string.c' l='821' ll='843' type='ngx_int_t ngx_memn2cmp(u_char * s1, u_char * s2, size_t n1, size_t n2)'/>
+<use f='nginx/src/http/modules/ngx_http_limit_conn_module.c' l='278' u='c' c='ngx_http_limit_conn_rbtree_insert_value'/>
+<use f='nginx/src/http/modules/ngx_http_limit_conn_module.c' l='323' u='c' c='ngx_http_limit_conn_lookup'/>
+<use f='nginx/src/http/modules/ngx_http_limit_req_module.c' l='340' u='c' c='ngx_http_limit_req_rbtree_insert_value'/>
+<use f='nginx/src/http/modules/ngx_http_limit_req_module.c' l='394' u='c' c='ngx_http_limit_req_lookup'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_keepalive_module.c' l='239' u='c' c='ngx_http_upstream_get_keepalive_peer'/>

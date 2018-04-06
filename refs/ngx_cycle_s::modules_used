@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_cycle.h' l='54' type='ngx_uint_t'/>
+<offset>1216</offset>
+<doc f='nginx/src/core/ngx_cycle.h' l='54'>/* unsigned  modules_used:1; */</doc>
+<use f='nginx/src/core/nginx.c' l='1506' u='r' c='ngx_load_module'/>
+<use f='nginx/src/core/ngx_module.c' l='150' u='w' c='ngx_count_modules'/>

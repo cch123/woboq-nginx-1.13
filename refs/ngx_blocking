@@ -1,0 +1,5 @@
+<dec f='nginx/src/os/unix/ngx_socket.h' l='26' type='int ngx_blocking(ngx_socket_t s)'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4579' u='c' c='ngx_tcp_connect'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='189' u='c' c='ngx_event_accept'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='256' u='c' c='ngx_event_connect_peer'/>
+<def f='nginx/src/os/unix/ngx_socket.c' l='37' ll='45' type='int ngx_blocking(ngx_socket_t s)'/>

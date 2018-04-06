@@ -1,0 +1,31 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='130' type='u_short'/>
+<offset>1088</offset>
+<use f='nginx/src/core/ngx_resolver.c' l='636' u='r' c='ngx_resolve_name_locked'/>
+<use f='nginx/src/core/ngx_resolver.c' l='636' u='r' c='ngx_resolve_name_locked'/>
+<use f='nginx/src/core/ngx_resolver.c' l='772' u='r' c='ngx_resolve_name_locked'/>
+<use f='nginx/src/core/ngx_resolver.c' l='772' u='r' c='ngx_resolve_name_locked'/>
+<use f='nginx/src/core/ngx_resolver.c' l='850' u='w' c='ngx_resolve_name_locked'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1054' u='w' c='ngx_resolve_addr'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1268' u='r' c='ngx_resolver_send_query'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1913' u='r' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2007' u='w' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2023' u='r' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2027' u='r' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2043' u='w' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2056' u='r' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2222' u='w' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2231' u='w' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2297' u='r' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2331' u='r' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2332' u='w' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2347' u='r' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2351' u='r' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2362' u='r' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2430' u='r' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4058' u='r' c='ngx_resolver_free_node'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4058' u='r' c='ngx_resolver_free_node'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4160' u='r' c='ngx_resolver_export'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4200' u='r' c='ngx_resolver_export'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4201' u='r' c='ngx_resolver_export'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4203' u='r' c='ngx_resolver_export'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4216' u='r' c='ngx_resolver_export'/>

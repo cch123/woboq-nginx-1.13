@@ -1,0 +1,9 @@
+<dec f='nginx/src/http/ngx_http_variables.h' l='113' type='ngx_http_variable_value_t'/>
+<use f='nginx/src/http/modules/ngx_http_browser_module.c' l='388' u='r' c='ngx_http_msie_variable'/>
+<use f='nginx/src/http/modules/ngx_http_browser_module.c' l='512' u='a' c='ngx_http_browser_merge_conf'/>
+<use f='nginx/src/http/modules/ngx_http_browser_module.c' l='520' u='a' c='ngx_http_browser_merge_conf'/>
+<use f='nginx/src/http/modules/ngx_http_referer_module.c' l='240' u='r' c='ngx_http_referer_variable'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1433' u='r' c='ngx_http_script_equal_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1468' u='r' c='ngx_http_script_not_equal_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1608' u='r' c='ngx_http_script_file_code'/>
+<def f='nginx/src/http/ngx_http_variables.c' l='388' ll='389' type='ngx_http_variable_value_t'/>

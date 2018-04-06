@@ -1,0 +1,6 @@
+<dec f='nginx/src/core/ngx_buf.h' l='85' type='unsigned int'/>
+<offset>257</offset>
+<use f='nginx/src/core/ngx_output_chain.c' l='387' u='w' c='ngx_output_chain_align_file_buf'/>
+<use f='nginx/src/core/ngx_output_chain.c' l='448' u='r' c='ngx_output_chain_get_buf'/>
+<use f='nginx/src/core/ngx_output_chain.c' l='468' u='r' c='ngx_output_chain_get_buf'/>
+<use f='nginx/src/core/ngx_output_chain.c' l='515' u='r' c='ngx_output_chain_copy_buf'/>

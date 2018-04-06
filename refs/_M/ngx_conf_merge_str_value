@@ -1,0 +1,8 @@
+<dec f='nginx/src/core/ngx_conf_file.h' l='240'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='3063' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_userid_filter_module.c' l='678' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_userid_filter_module.c' l='679' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_userid_filter_module.c' l='680' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_userid_filter_module.c' l='681' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='1785' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3569' u='c'/>

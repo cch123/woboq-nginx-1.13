@@ -1,0 +1,10 @@
+<dec f='include/netinet/in.h' l='402'/>
+<use f='nginx/src/core/ngx_inet.c' l='123' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='948' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3883' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='220' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='282' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='725' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='735' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1101' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1102' u='c'/>

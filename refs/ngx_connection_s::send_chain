@@ -1,0 +1,8 @@
+<dec f='nginx/src/core/ngx_connection.h' l='131' type='ngx_send_chain_pt'/>
+<offset>448</offset>
+<use f='nginx/src/core/ngx_output_chain.c' l='741' u='r' c='ngx_chain_writer'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='213' u='w' c='ngx_event_accept'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='478' u='w' c='ngx_event_recvmsg'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='152' u='w' c='ngx_event_connect_peer'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='169' u='w' c='ngx_event_connect_peer'/>
+<use f='nginx/src/http/ngx_http_write_filter_module.c' l='254' u='r' c='ngx_http_write_filter'/>

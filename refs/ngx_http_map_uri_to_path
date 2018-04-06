@@ -1,0 +1,10 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='490' type='u_char * ngx_http_map_uri_to_path(ngx_http_request_t * r, ngx_str_t * name, size_t * root_length, size_t reserved)'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='191' u='c' c='ngx_http_autoindex_handler'/>
+<use f='nginx/src/http/modules/ngx_http_index_module.c' l='164' u='c' c='ngx_http_index_handler'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='488' u='c' c='ngx_http_log_script_write'/>
+<use f='nginx/src/http/modules/ngx_http_static_module.c' l='77' u='c' c='ngx_http_static_handler'/>
+<use f='nginx/src/http/modules/ngx_http_try_files_module.c' l='149' u='c' c='ngx_http_try_files_handler'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1196' u='c' c='ngx_http_core_content_phase'/>
+<def f='nginx/src/http/ngx_http_core_module.c' l='1781' ll='1851' type='u_char * ngx_http_map_uri_to_path(ngx_http_request_t * r, ngx_str_t * path, size_t * root_length, size_t reserved)'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4043' u='c' c='ngx_http_upstream_store'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1621' u='c' c='ngx_http_variable_request_filename'/>

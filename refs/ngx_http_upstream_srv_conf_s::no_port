@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='131' type='ngx_uint_t'/>
+<offset>704</offset>
+<doc f='nginx/src/http/ngx_http_upstream.h' l='131'>/* unsigned no_port:1 */</doc>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5950' u='r' c='ngx_http_upstream_add'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5982' u='w' c='ngx_http_upstream_add'/>

@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='541' type='unsigned int'/>
+<offset>9887</offset>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='539' u='w' c='ngx_http_charset_ctx'/>
+<use f='nginx/src/http/ngx_http_copy_filter_module.c' l='116' u='r' c='ngx_http_copy_filter'/>

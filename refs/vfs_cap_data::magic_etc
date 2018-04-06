@@ -1,0 +1,3 @@
+<dec f='include/linux/capability.h' l='70' type='__le32'/>
+<offset>0</offset>
+<doc f='include/linux/capability.h' l='70'>/* Little endian */</doc>

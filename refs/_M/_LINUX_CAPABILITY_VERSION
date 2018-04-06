@@ -1,0 +1,6 @@
+<dec f='include/linux/capability.h' l='83'/>
+<doc f='include/linux/capability.h' l='78'>/*
+ * Backwardly compatible definition for source code - trapped in a
+ * 32-bit world. If you find you need this, please consider using
+ * libcap to untrap yourself...
+ */</doc>

@@ -1,0 +1,13 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='71' type='unsigned int'/>
+<offset>928</offset>
+<use f='nginx/src/http/ngx_http.c' l='1238' u='r' c='ngx_http_add_addresses'/>
+<use f='nginx/src/http/ngx_http.c' l='1240' u='r' c='ngx_http_add_addresses'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3800' u='w' c='ngx_http_core_listen'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3824' u='w' c='ngx_http_core_listen'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3839' u='w' c='ngx_http_core_listen'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3856' u='w' c='ngx_http_core_listen'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3873' u='w' c='ngx_http_core_listen'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3902' u='w' c='ngx_http_core_listen'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3933' u='w' c='ngx_http_core_listen'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3954' u='w' c='ngx_http_core_listen'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4072' u='w' c='ngx_http_core_listen'/>

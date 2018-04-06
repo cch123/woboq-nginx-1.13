@@ -1,0 +1,8 @@
+<dec f='include/x86_64-linux-gnu/bits/socket.h' l='231' type='socklen_t'/>
+<offset>64</offset>
+<doc f='include/x86_64-linux-gnu/bits/socket.h' l='231'>/* Length of address data.  */</doc>
+<use f='nginx/src/event/ngx_event_accept.c' l='382' u='w' c='ngx_event_recvmsg'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='445' u='r' c='ngx_event_recvmsg'/>
+<use f='nginx/src/os/unix/ngx_channel.c' l='75' u='w' c='ngx_write_channel'/>
+<use f='nginx/src/os/unix/ngx_channel.c' l='116' u='w' c='ngx_read_channel'/>
+<use f='nginx/src/os/unix/ngx_udp_sendmsg_chain.c' l='224' u='w' c='ngx_sendmsg'/>

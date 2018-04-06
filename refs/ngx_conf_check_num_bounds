@@ -1,0 +1,10 @@
+<dec f='nginx/src/core/ngx_conf_file.h' l='173' type='char * ngx_conf_check_num_bounds(ngx_conf_t * cf, void * post, void * data)'/>
+<def f='nginx/src/core/ngx_conf_file.c' l='1458' ll='1485' type='char * ngx_conf_check_num_bounds(ngx_conf_t * cf, void * post, void * data)'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='124' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='124' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_limit_conn_module.c' l='71'/>
+<use f='nginx/src/http/modules/ngx_http_limit_conn_module.c' l='71'/>
+<use f='nginx/src/http/modules/ngx_http_limit_req_module.c' l='87'/>
+<use f='nginx/src/http/modules/ngx_http_limit_req_module.c' l='87'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='104' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='104' u='r'/>

@@ -1,0 +1,14 @@
+<dec f='nginx/src/http/ngx_http_config.h' l='34' type='void *(*)(ngx_conf_t *)'/>
+<offset>384</offset>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='570' u='r' c='ngx_http_rewrite_if'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='572' u='r' c='ngx_http_rewrite_if'/>
+<use f='nginx/src/http/ngx_http.c' l='208' u='r' c='ngx_http_block'/>
+<use f='nginx/src/http/ngx_http.c' l='209' u='r' c='ngx_http_block'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2756' u='r' c='ngx_http_core_server'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2757' u='r' c='ngx_http_core_server'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2865' u='r' c='ngx_http_core_location'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2867' u='r' c='ngx_http_core_location'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4392' u='r' c='ngx_http_core_limit_except'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4394' u='r' c='ngx_http_core_limit_except'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5704' u='r' c='ngx_http_upstream'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5705' u='r' c='ngx_http_upstream'/>

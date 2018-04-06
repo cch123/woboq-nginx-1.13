@@ -1,0 +1,2 @@
+<dec f='nginx/src/core/ngx_slab.h' l='66' type='void * ngx_slab_calloc(ngx_slab_pool_t * pool, size_t size)'/>
+<def f='nginx/src/core/ngx_slab.c' l='420' ll='432' type='void * ngx_slab_calloc(ngx_slab_pool_t * pool, size_t size)'/>

@@ -1,0 +1,8 @@
+<dec f='nginx/src/core/ngx_cycle.h' l='53' type='ngx_uint_t'/>
+<offset>1152</offset>
+<use f='nginx/src/core/ngx_module.c' l='59' u='w' c='ngx_cycle_modules'/>
+<use f='nginx/src/core/ngx_module.c' l='164' u='r' c='ngx_add_module'/>
+<use f='nginx/src/core/ngx_module.c' l='211' u='r' c='ngx_add_module'/>
+<use f='nginx/src/core/ngx_module.c' l='245' u='r' c='ngx_add_module'/>
+<use f='nginx/src/core/ngx_module.c' l='248' u='r' c='ngx_add_module'/>
+<use f='nginx/src/core/ngx_module.c' l='252' u='w' c='ngx_add_module'/>

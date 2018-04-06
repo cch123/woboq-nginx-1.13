@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_buf.h' l='157' type='ngx_int_t ngx_output_chain(ngx_output_chain_ctx_t * ctx, ngx_chain_t * in)'/>
+<def f='nginx/src/core/ngx_output_chain.c' l='45' ll='224' type='ngx_int_t ngx_output_chain(ngx_output_chain_ctx_t * ctx, ngx_chain_t * in)'/>
+<use f='nginx/src/http/ngx_http_copy_filter_module.c' l='152' u='c' c='ngx_http_copy_filter'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2077' u='c' c='ngx_http_upstream_send_request_body'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2115' u='c' c='ngx_http_upstream_send_request_body'/>

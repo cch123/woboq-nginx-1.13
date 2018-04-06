@@ -1,0 +1,7 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='214' type='ngx_uint_t'/>
+<offset>1280</offset>
+<use f='nginx/src/core/ngx_resolver.c' l='518' u='r' c='ngx_resolve_name_done'/>
+<use f='nginx/src/core/ngx_resolver.c' l='519' u='r' c='ngx_resolve_name_done'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2923' u='w' c='ngx_resolver_resolve_srv_names'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4235' u='r' c='ngx_resolver_report_srv'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4316' u='r' c='ngx_resolver_report_srv'/>

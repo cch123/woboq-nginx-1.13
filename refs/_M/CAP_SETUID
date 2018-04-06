@@ -1,0 +1,2 @@
+<dec f='include/linux/capability.h' l='140'/>
+<doc f='include/linux/capability.h' l='138'>/* Allows forged pids on socket credentials passing. */</doc>

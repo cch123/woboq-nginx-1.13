@@ -1,0 +1,3 @@
+<dec f='include/semaphore.h' l='69' type='int sem_post(sem_t * __sem)'/>
+<doc f='include/semaphore.h' l='68'>/* Post SEM.  */</doc>
+<use f='nginx/src/core/ngx_shmtx.c' l='190' u='c' c='ngx_shmtx_wakeup'/>

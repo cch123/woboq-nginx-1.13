@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_file.h' l='147' type='ngx_int_t ngx_ext_rename_file(ngx_str_t * src, ngx_str_t * to, ngx_ext_rename_file_t * ext)'/>
+<def f='nginx/src/core/ngx_file.c' l='659' ll='791' type='ngx_int_t ngx_ext_rename_file(ngx_str_t * src, ngx_str_t * to, ngx_ext_rename_file_t * ext)'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1394' u='c' c='ngx_http_file_cache_update'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4062' u='c' c='ngx_http_upstream_store'/>

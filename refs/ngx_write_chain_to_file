@@ -1,0 +1,3 @@
+<dec f='nginx/src/os/unix/ngx_files.h' l='132' type='ssize_t ngx_write_chain_to_file(ngx_file_t * file, ngx_chain_t * ce, off_t offset, ngx_pool_t * pool)'/>
+<use f='nginx/src/core/ngx_file.c' l='136' u='c' c='ngx_write_chain_to_temp_file'/>
+<def f='nginx/src/os/unix/ngx_files.c' l='292' ll='342' type='ssize_t ngx_write_chain_to_file(ngx_file_t * file, ngx_chain_t * cl, off_t offset, ngx_pool_t * pool)'/>

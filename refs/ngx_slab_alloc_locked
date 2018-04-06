@@ -1,0 +1,8 @@
+<dec f='nginx/src/core/ngx_slab.h' l='65' type='void * ngx_slab_alloc_locked(ngx_slab_pool_t * pool, size_t size)'/>
+<use f='nginx/src/core/ngx_slab.c' l='175' u='c' c='ngx_slab_alloc'/>
+<def f='nginx/src/core/ngx_slab.c' l='183' ll='417' type='void * ngx_slab_alloc_locked(ngx_slab_pool_t * pool, size_t size)'/>
+<use f='nginx/src/core/ngx_slab.c' l='440' u='c' c='ngx_slab_calloc_locked'/>
+<use f='nginx/src/http/modules/ngx_http_limit_conn_module.c' l='198' u='c' c='ngx_http_limit_conn_handler'/>
+<use f='nginx/src/http/modules/ngx_http_limit_req_module.c' l='438' u='c' c='ngx_http_limit_req_lookup'/>
+<use f='nginx/src/http/modules/ngx_http_limit_req_module.c' l='443' u='c' c='ngx_http_limit_req_lookup'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_zone_module.c' l='298' u='c' c='ngx_http_upstream_zone_copy_peer'/>

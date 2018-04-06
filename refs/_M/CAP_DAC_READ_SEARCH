@@ -1,0 +1,4 @@
+<dec f='include/linux/capability.h' l='108'/>
+<doc f='include/linux/capability.h' l='104'>/* Overrides all DAC restrictions regarding read and search on files
+   and directories, including ACL restrictions if [_POSIX_ACL] is
+   defined. Excluding DAC access covered by CAP_LINUX_IMMUTABLE. */</doc>

@@ -1,0 +1,4 @@
+<dec f='nginx/src/os/unix/ngx_os.h' l='28' type='ngx_recv_chain_pt'/>
+<offset>64</offset>
+<use f='nginx/src/event/ngx_event_accept.c' l='212' macro='1' u='r'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='151' macro='1' u='r'/>

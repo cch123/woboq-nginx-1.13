@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_file.h' l='161' type='ngx_atomic_int_t'/>
+<def f='nginx/src/core/ngx_file.c' l='17' type='ngx_atomic_int_t'/>
+<use f='nginx/src/core/ngx_file.c' l='352' u='r' c='ngx_next_temp_number'/>
+<use f='nginx/src/event/ngx_event.c' l='534' u='w' c='ngx_event_module_init'/>

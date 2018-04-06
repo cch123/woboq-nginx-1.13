@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ngx_readv_chain.c source code [nginx/src/os/unix/ngx_readv_chain.c] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../../../../data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../../../data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../../../data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../../data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'nginx/src/os/unix/ngx_readv_chain.c'; var root_path = '../../../..'; var data_path = '../../../../../data';</script>
+<script src='../../../../../data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../../..'>nginx</a>/<a href='../..'>src</a>/<a href='..'>os</a>/<a href='./'>unix</a>/<a href='ngx_readv_chain.c.html'>ngx_readv_chain.c</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td></td></tr>
+<tr><th id="2">2</th><td><i>/*</i></td></tr>
+<tr><th id="3">3</th><td><i> * Copyright (C) Igor Sysoev</i></td></tr>
+<tr><th id="4">4</th><td><i> * Copyright (C) Nginx, Inc.</i></td></tr>
+<tr><th id="5">5</th><td><i> */</i></td></tr>
+<tr><th id="6">6</th><td></td></tr>
+<tr><th id="7">7</th><td></td></tr>
+<tr><th id="8">8</th><td><u>#include <a href="../../core/ngx_config.h.html">&lt;ngx_config.h&gt;</a></u></td></tr>
+<tr><th id="9">9</th><td><u>#include <a href="../../core/ngx_core.h.html">&lt;ngx_core.h&gt;</a></u></td></tr>
+<tr><th id="10">10</th><td><u>#include <a href="../../event/ngx_event.h.html">&lt;ngx_event.h&gt;</a></u></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td></td></tr>
+<tr><th id="13">13</th><td><a class="typedef" href="../../../../include/x86_64-linux-gnu/sys/types.h.html#ssize_t" title='ssize_t' data-type='__ssize_t' data-ref="ssize_t">ssize_t</a></td></tr>
+<tr><th id="14">14</th><td><dfn class="decl def fn" id="ngx_readv_chain" title='ngx_readv_chain' data-ref="ngx_readv_chain">ngx_readv_chain</dfn>(<a class="typedef" href="../../core/ngx_core.h.html#ngx_connection_t" title='ngx_connection_t' data-type='struct ngx_connection_s' data-ref="ngx_connection_t">ngx_connection_t</a> *<dfn class="local col1 decl" id="1c" title='c' data-type='ngx_connection_t *' data-ref="1c">c</dfn>, <a class="typedef" href="../../core/ngx_core.h.html#ngx_chain_t" title='ngx_chain_t' data-type='struct ngx_chain_s' data-ref="ngx_chain_t">ngx_chain_t</a> *<dfn class="local col2 decl" id="2chain" title='chain' data-type='ngx_chain_t *' data-ref="2chain">chain</dfn>, <a class="typedef" href="../../../../include/x86_64-linux-gnu/sys/types.h.html#off_t" title='off_t' data-type='__off64_t' data-ref="off_t">off_t</a> <dfn class="local col3 decl" id="3limit" title='limit' data-type='off_t' data-ref="3limit">limit</dfn>)</td></tr>
+<tr><th id="15">15</th><td>{</td></tr>
+<tr><th id="16">16</th><td>    <a class="typedef" href="../../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a>        *<dfn class="local col4 decl" id="4prev" title='prev' data-type='u_char *' data-ref="4prev">prev</dfn>;</td></tr>
+<tr><th id="17">17</th><td>    <a class="typedef" href="../../../../include/x86_64-linux-gnu/sys/types.h.html#ssize_t" title='ssize_t' data-type='__ssize_t' data-ref="ssize_t">ssize_t</a>        <dfn class="local col5 decl" id="5n" title='n' data-type='ssize_t' data-ref="5n">n</dfn>, <dfn class="local col6 decl" id="6size" title='size' data-type='ssize_t' data-ref="6size">size</dfn>;</td></tr>
+<tr><th id="18">18</th><td>    <a class="typedef" href="ngx_errno.h.html#ngx_err_t" title='ngx_err_t' data-type='int' data-ref="ngx_err_t">ngx_err_t</a>      <dfn class="local col7 decl" id="7err" title='err' data-type='ngx_err_t' data-ref="7err">err</dfn>;</td></tr>
+<tr><th id="19">19</th><td>    <a class="typedef" href="../../core/ngx_array.h.html#ngx_array_t" title='ngx_array_t' data-type='struct ngx_array_t' data-ref="ngx_array_t">ngx_array_t</a>    <dfn class="local col8 decl" id="8vec" title='vec' data-type='ngx_array_t' data-ref="8vec">vec</dfn>;</td></tr>
+<tr><th id="20">20</th><td>    <a class="typedef" href="../../core/ngx_core.h.html#ngx_event_t" title='ngx_event_t' data-type='struct ngx_event_s' data-ref="ngx_event_t">ngx_event_t</a>   *<dfn class="local col9 decl" id="9rev" title='rev' data-type='ngx_event_t *' data-ref="9rev">rev</dfn>;</td></tr>
+<tr><th id="21">21</th><td>    <b>struct</b> <a class="type" href="../../../../include/x86_64-linux-gnu/bits/uio.h.html#iovec" title='iovec' data-ref="iovec">iovec</a>  *<dfn class="local col0 decl" id="10iov" title='iov' data-type='struct iovec *' data-ref="10iov">iov</dfn>, <dfn class="local col1 decl" id="11iovs" title='iovs' data-type='struct iovec [64]' data-ref="11iovs">iovs</dfn>[<a class="macro" href="ngx_os.h.html#58" title="64" data-ref="_M/NGX_IOVS_PREALLOCATE">NGX_IOVS_PREALLOCATE</a>];</td></tr>
+<tr><th id="22">22</th><td></td></tr>
+<tr><th id="23">23</th><td>    <a class="local col9 ref" href="#9rev" title='rev' data-ref="9rev">rev</a> = <a class="local col1 ref" href="#1c" title='c' data-ref="1c">c</a>-&gt;<a class="ref field" href="../../core/ngx_connection.h.html#ngx_connection_s::read" title='ngx_connection_s::read' data-ref="ngx_connection_s::read">read</a>;</td></tr>
+<tr><th id="24">24</th><td></td></tr>
+<tr><th id="25">25</th><td><u>#<span data-ppcond="25">if</span> (NGX_HAVE_KQUEUE)</u></td></tr>
+<tr><th id="26">26</th><td></td></tr>
+<tr><th id="27">27</th><td>    <b>if</b> (ngx_event_flags &amp; NGX_USE_KQUEUE_EVENT) {</td></tr>
+<tr><th id="28">28</th><td>        ngx_log_debug3(NGX_LOG_DEBUG_EVENT, c-&gt;log, <var>0</var>,</td></tr>
+<tr><th id="29">29</th><td>                       <q>"readv: eof:%d, avail:%d, err:%d"</q>,</td></tr>
+<tr><th id="30">30</th><td>                       rev-&gt;pending_eof, rev-&gt;available, rev-&gt;kq_errno);</td></tr>
+<tr><th id="31">31</th><td></td></tr>
+<tr><th id="32">32</th><td>        <b>if</b> (rev-&gt;available == <var>0</var>) {</td></tr>
+<tr><th id="33">33</th><td>            <b>if</b> (rev-&gt;pending_eof) {</td></tr>
+<tr><th id="34">34</th><td>                rev-&gt;ready = <var>0</var>;</td></tr>
+<tr><th id="35">35</th><td>                rev-&gt;eof = <var>1</var>;</td></tr>
+<tr><th id="36">36</th><td></td></tr>
+<tr><th id="37">37</th><td>                ngx_log_error(NGX_LOG_INFO, c-&gt;log, rev-&gt;kq_errno,</td></tr>
+<tr><th id="38">38</th><td>                              <q>"kevent() reported about an closed connection"</q>);</td></tr>
+<tr><th id="39">39</th><td></td></tr>
+<tr><th id="40">40</th><td>                <b>if</b> (rev-&gt;kq_errno) {</td></tr>
+<tr><th id="41">41</th><td>                    rev-&gt;error = <var>1</var>;</td></tr>
+<tr><th id="42">42</th><td>                    ngx_set_socket_errno(rev-&gt;kq_errno);</td></tr>
+<tr><th id="43">43</th><td>                    <b>return</b> NGX_ERROR;</td></tr>
+<tr><th id="44">44</th><td>                }</td></tr>
+<tr><th id="45">45</th><td></td></tr>
+<tr><th id="46">46</th><td>                <b>return</b> <var>0</var>;</td></tr>
+<tr><th id="47">47</th><td></td></tr>
+<tr><th id="48">48</th><td>            } <b>else</b> {</td></tr>
+<tr><th id="49">49</th><td>                <b>return</b> NGX_AGAIN;</td></tr>
+<tr><th id="50">50</th><td>            }</td></tr>
+<tr><th id="51">51</th><td>        }</td></tr>
+<tr><th id="52">52</th><td>    }</td></tr>
+<tr><th id="53">53</th><td></td></tr>
+<tr><th id="54">54</th><td><u>#<span data-ppcond="25">endif</span></u></td></tr>
+<tr><th id="55">55</th><td></td></tr>
+<tr><th id="56">56</th><td><u>#<span data-ppcond="56">if</span> (<a class="macro" href="../../../objs/ngx_auto_config.h.html#39" title="1" data-ref="_M/NGX_HAVE_EPOLLRDHUP">NGX_HAVE_EPOLLRDHUP</a>)</u></td></tr>
+<tr><th id="57">57</th><td></td></tr>
+<tr><th id="58">58</th><td>    <b>if</b> (<a class="ref" href="../../event/ngx_event.h.html#ngx_event_flags" title='ngx_event_flags' data-ref="ngx_event_flags">ngx_event_flags</a> &amp; <a class="macro" href="../../event/ngx_event.h.html#241" title="0x00000040" data-ref="_M/NGX_USE_EPOLL_EVENT">NGX_USE_EPOLL_EVENT</a>) {</td></tr>
+<tr><th id="59">59</th><td>        <a class="macro" href="../../core/ngx_log.h.html#217" title="" data-ref="_M/ngx_log_debug2">ngx_log_debug2</a>(NGX_LOG_DEBUG_EVENT, c-&gt;log, <var>0</var>,</td></tr>
+<tr><th id="60">60</th><td>                       <q>"readv: eof:%d, avail:%d"</q>,</td></tr>
+<tr><th id="61">61</th><td>                       rev-&gt;pending_eof, rev-&gt;available);</td></tr>
+<tr><th id="62">62</th><td></td></tr>
+<tr><th id="63">63</th><td>        <b>if</b> (!<a class="local col9 ref" href="#9rev" title='rev' data-ref="9rev">rev</a>-&gt;<a class="ref field" href="../../event/ngx_event.h.html#ngx_event_s::available" title='ngx_event_s::available' data-ref="ngx_event_s::available">available</a> &amp;&amp; !<a class="local col9 ref" href="#9rev" title='rev' data-ref="9rev">rev</a>-&gt;<a class="ref field" href="../../event/ngx_event.h.html#ngx_event_s::pending_eof" title='ngx_event_s::pending_eof' data-ref="ngx_event_s::pending_eof">pending_eof</a>) {</td></tr>
+<tr><th id="64">64</th><td>            <b>return</b> <a class="macro" href="../../core/ngx_core.h.html#37" title="-2" data-ref="_M/NGX_AGAIN">NGX_AGAIN</a>;</td></tr>
+<tr><th id="65">65</th><td>        }</td></tr>
+<tr><th id="66">66</th><td>    }</td></tr>
+<tr><th id="67">67</th><td></td></tr>
+<tr><th id="68">68</th><td><u>#<span data-ppcond="56">endif</span></u></td></tr>
+<tr><th id="69">69</th><td></td></tr>
+<tr><th id="70">70</th><td>    <a class="local col4 ref" href="#4prev" title='prev' data-ref="4prev">prev</a> = <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>;</td></tr>
+<tr><th id="71">71</th><td>    <a class="local col0 ref" href="#10iov" title='iov' data-ref="10iov">iov</a> = <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>;</td></tr>
+<tr><th id="72">72</th><td>    <a class="local col6 ref" href="#6size" title='size' data-ref="6size">size</a> = <var>0</var>;</td></tr>
+<tr><th id="73">73</th><td></td></tr>
+<tr><th id="74">74</th><td>    <a class="local col8 ref" href="#8vec" title='vec' data-ref="8vec">vec</a>.<a class="ref field" href="../../core/ngx_array.h.html#(anonymous)::elts" title='(anonymous struct)::elts' data-ref="(anonymous)::elts">elts</a> = <a class="local col1 ref" href="#11iovs" title='iovs' data-ref="11iovs">iovs</a>;</td></tr>
+<tr><th id="75">75</th><td>    <a class="local col8 ref" href="#8vec" title='vec' data-ref="8vec">vec</a>.<a class="ref field" href="../../core/ngx_array.h.html#(anonymous)::nelts" title='(anonymous struct)::nelts' data-ref="(anonymous)::nelts">nelts</a> = <var>0</var>;</td></tr>
+<tr><th id="76">76</th><td>    <a class="local col8 ref" href="#8vec" title='vec' data-ref="8vec">vec</a>.<a class="ref field" href="../../core/ngx_array.h.html#(anonymous)::size" title='(anonymous struct)::size' data-ref="(anonymous)::size">size</a> = <b>sizeof</b>(<b>struct</b> <a class="type" href="../../../../include/x86_64-linux-gnu/bits/uio.h.html#iovec" title='iovec' data-ref="iovec">iovec</a>);</td></tr>
+<tr><th id="77">77</th><td>    <a class="local col8 ref" href="#8vec" title='vec' data-ref="8vec">vec</a>.<a class="ref field" href="../../core/ngx_array.h.html#(anonymous)::nalloc" title='(anonymous struct)::nalloc' data-ref="(anonymous)::nalloc">nalloc</a> = <a class="macro" href="ngx_os.h.html#58" title="64" data-ref="_M/NGX_IOVS_PREALLOCATE">NGX_IOVS_PREALLOCATE</a>;</td></tr>
+<tr><th id="78">78</th><td>    <a class="local col8 ref" href="#8vec" title='vec' data-ref="8vec">vec</a>.<a class="ref field" href="../../core/ngx_array.h.html#(anonymous)::pool" title='(anonymous struct)::pool' data-ref="(anonymous)::pool">pool</a> = <a class="local col1 ref" href="#1c" title='c' data-ref="1c">c</a>-&gt;<a class="ref field" href="../../core/ngx_connection.h.html#ngx_connection_s::pool" title='ngx_connection_s::pool' data-ref="ngx_connection_s::pool">pool</a>;</td></tr>
+<tr><th id="79">79</th><td></td></tr>
+<tr><th id="80">80</th><td>    <i>/* coalesce the neighbouring bufs */</i></td></tr>
+<tr><th id="81">81</th><td></td></tr>
+<tr><th id="82">82</th><td>    <b>while</b> (<a class="local col2 ref" href="#2chain" title='chain' data-ref="2chain">chain</a>) {</td></tr>
+<tr><th id="83">83</th><td>        <a class="local col5 ref" href="#5n" title='n' data-ref="5n">n</a> = <a class="local col2 ref" href="#2chain" title='chain' data-ref="2chain">chain</a>-&gt;<a class="ref field" href="../../core/ngx_buf.h.html#ngx_chain_s::buf" title='ngx_chain_s::buf' data-ref="ngx_chain_s::buf">buf</a>-&gt;<a class="ref field" href="../../core/ngx_buf.h.html#ngx_buf_s::end" title='ngx_buf_s::end' data-ref="ngx_buf_s::end">end</a> - <a class="local col2 ref" href="#2chain" title='chain' data-ref="2chain">chain</a>-&gt;<a class="ref field" href="../../core/ngx_buf.h.html#ngx_chain_s::buf" title='ngx_chain_s::buf' data-ref="ngx_chain_s::buf">buf</a>-&gt;<a class="ref field" href="../../core/ngx_buf.h.html#ngx_buf_s::last" title='ngx_buf_s::last' data-ref="ngx_buf_s::last">last</a>;</td></tr>
+<tr><th id="84">84</th><td></td></tr>
+<tr><th id="85">85</th><td>        <b>if</b> (<a class="local col3 ref" href="#3limit" title='limit' data-ref="3limit">limit</a>) {</td></tr>
+<tr><th id="86">86</th><td>            <b>if</b> (<a class="local col6 ref" href="#6size" title='size' data-ref="6size">size</a> &gt;= <a class="local col3 ref" href="#3limit" title='limit' data-ref="3limit">limit</a>) {</td></tr>
+<tr><th id="87">87</th><td>                <b>break</b>;</td></tr>
+<tr><th id="88">88</th><td>            }</td></tr>
+<tr><th id="89">89</th><td></td></tr>
+<tr><th id="90">90</th><td>            <b>if</b> (<a class="local col6 ref" href="#6size" title='size' data-ref="6size">size</a> + <a class="local col5 ref" href="#5n" title='n' data-ref="5n">n</a> &gt; <a class="local col3 ref" href="#3limit" title='limit' data-ref="3limit">limit</a>) {</td></tr>
+<tr><th id="91">91</th><td>                <a class="local col5 ref" href="#5n" title='n' data-ref="5n">n</a> = (<a class="typedef" href="../../../../include/x86_64-linux-gnu/sys/types.h.html#ssize_t" title='ssize_t' data-type='__ssize_t' data-ref="ssize_t">ssize_t</a>) (<a class="local col3 ref" href="#3limit" title='limit' data-ref="3limit">limit</a> - <a class="local col6 ref" href="#6size" title='size' data-ref="6size">size</a>);</td></tr>
+<tr><th id="92">92</th><td>            }</td></tr>
+<tr><th id="93">93</th><td>        }</td></tr>
+<tr><th id="94">94</th><td></td></tr>
+<tr><th id="95">95</th><td>        <b>if</b> (<a class="local col4 ref" href="#4prev" title='prev' data-ref="4prev">prev</a> == <a class="local col2 ref" href="#2chain" title='chain' data-ref="2chain">chain</a>-&gt;<a class="ref field" href="../../core/ngx_buf.h.html#ngx_chain_s::buf" title='ngx_chain_s::buf' data-ref="ngx_chain_s::buf">buf</a>-&gt;<a class="ref field" href="../../core/ngx_buf.h.html#ngx_buf_s::last" title='ngx_buf_s::last' data-ref="ngx_buf_s::last">last</a>) {</td></tr>
+<tr><th id="96">96</th><td>            <a class="local col0 ref" href="#10iov" title='iov' data-ref="10iov">iov</a>-&gt;<a class="ref field" href="../../../../include/x86_64-linux-gnu/bits/uio.h.html#iovec::iov_len" title='iovec::iov_len' data-ref="iovec::iov_len">iov_len</a> += <a class="local col5 ref" href="#5n" title='n' data-ref="5n">n</a>;</td></tr>
+<tr><th id="97">97</th><td></td></tr>
+<tr><th id="98">98</th><td>        } <b>else</b> {</td></tr>
+<tr><th id="99">99</th><td>            <b>if</b> (<a class="local col8 ref" href="#8vec" title='vec' data-ref="8vec">vec</a>.<a class="ref field" href="../../core/ngx_array.h.html#(anonymous)::nelts" title='(anonymous struct)::nelts' data-ref="(anonymous)::nelts">nelts</a> &gt;= <a class="macro" href="../../../../include/x86_64-linux-gnu/bits/stdio_lim.h.html#41" title="1024" data-ref="_M/IOV_MAX">IOV_MAX</a>) {</td></tr>
+<tr><th id="100">100</th><td>                <b>break</b>;</td></tr>
+<tr><th id="101">101</th><td>            }</td></tr>
+<tr><th id="102">102</th><td></td></tr>
+<tr><th id="103">103</th><td>            <a class="local col0 ref" href="#10iov" title='iov' data-ref="10iov">iov</a> = <a class="ref fn" href="../../core/ngx_array.h.html#ngx_array_push" title='ngx_array_push' data-ref="ngx_array_push">ngx_array_push</a>(&amp;<a class="local col8 ref" href="#8vec" title='vec' data-ref="8vec">vec</a>);</td></tr>
+<tr><th id="104">104</th><td>            <b>if</b> (<a class="local col0 ref" href="#10iov" title='iov' data-ref="10iov">iov</a> == <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>) {</td></tr>
+<tr><th id="105">105</th><td>                <b>return</b> <a class="macro" href="../../core/ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>;</td></tr>
+<tr><th id="106">106</th><td>            }</td></tr>
+<tr><th id="107">107</th><td></td></tr>
+<tr><th id="108">108</th><td>            <a class="local col0 ref" href="#10iov" title='iov' data-ref="10iov">iov</a>-&gt;<a class="ref field" href="../../../../include/x86_64-linux-gnu/bits/uio.h.html#iovec::iov_base" title='iovec::iov_base' data-ref="iovec::iov_base">iov_base</a> = (<em>void</em> *) <a class="local col2 ref" href="#2chain" title='chain' data-ref="2chain">chain</a>-&gt;<a class="ref field" href="../../core/ngx_buf.h.html#ngx_chain_s::buf" title='ngx_chain_s::buf' data-ref="ngx_chain_s::buf">buf</a>-&gt;<a class="ref field" href="../../core/ngx_buf.h.html#ngx_buf_s::last" title='ngx_buf_s::last' data-ref="ngx_buf_s::last">last</a>;</td></tr>
+<tr><th id="109">109</th><td>            <a class="local col0 ref" href="#10iov" title='iov' data-ref="10iov">iov</a>-&gt;<a class="ref field" href="../../../../include/x86_64-linux-gnu/bits/uio.h.html#iovec::iov_len" title='iovec::iov_len' data-ref="iovec::iov_len">iov_len</a> = <a class="local col5 ref" href="#5n" title='n' data-ref="5n">n</a>;</td></tr>
+<tr><th id="110">110</th><td>        }</td></tr>
+<tr><th id="111">111</th><td></td></tr>
+<tr><th id="112">112</th><td>        <a class="local col6 ref" href="#6size" title='size' data-ref="6size">size</a> += <a class="local col5 ref" href="#5n" title='n' data-ref="5n">n</a>;</td></tr>
+<tr><th id="113">113</th><td>        <a class="local col4 ref" href="#4prev" title='prev' data-ref="4prev">prev</a> = <a class="local col2 ref" href="#2chain" title='chain' data-ref="2chain">chain</a>-&gt;<a class="ref field" href="../../core/ngx_buf.h.html#ngx_chain_s::buf" title='ngx_chain_s::buf' data-ref="ngx_chain_s::buf">buf</a>-&gt;<a class="ref field" href="../../core/ngx_buf.h.html#ngx_buf_s::end" title='ngx_buf_s::end' data-ref="ngx_buf_s::end">end</a>;</td></tr>
+<tr><th id="114">114</th><td>        <a class="local col2 ref" href="#2chain" title='chain' data-ref="2chain">chain</a> = <a class="local col2 ref" href="#2chain" title='chain' data-ref="2chain">chain</a>-&gt;<a class="ref field" href="../../core/ngx_buf.h.html#ngx_chain_s::next" title='ngx_chain_s::next' data-ref="ngx_chain_s::next">next</a>;</td></tr>
+<tr><th id="115">115</th><td>    }</td></tr>
+<tr><th id="116">116</th><td></td></tr>
+<tr><th id="117">117</th><td>    <a class="macro" href="../../core/ngx_log.h.html#217" title="" data-ref="_M/ngx_log_debug2">ngx_log_debug2</a>(NGX_LOG_DEBUG_EVENT, c-&gt;log, <var>0</var>,</td></tr>
+<tr><th id="118">118</th><td>                   <q>"readv: %ui, last:%uz"</q>, vec.nelts, iov-&gt;iov_len);</td></tr>
+<tr><th id="119">119</th><td></td></tr>
+<tr><th id="120">120</th><td>    <b>do</b> {</td></tr>
+<tr><th id="121">121</th><td>        <a class="local col5 ref" href="#5n" title='n' data-ref="5n">n</a> = <a class="ref fn" href="../../../../include/x86_64-linux-gnu/sys/uio.h.html#readv" title='readv' data-ref="readv">readv</a>(<a class="local col1 ref" href="#1c" title='c' data-ref="1c">c</a>-&gt;<a class="ref field" href="../../core/ngx_connection.h.html#ngx_connection_s::fd" title='ngx_connection_s::fd' data-ref="ngx_connection_s::fd">fd</a>, (<b>struct</b> <a class="type" href="../../../../include/x86_64-linux-gnu/bits/uio.h.html#iovec" title='iovec' data-ref="iovec">iovec</a> *) <a class="local col8 ref" href="#8vec" title='vec' data-ref="8vec">vec</a>.<a class="ref field" href="../../core/ngx_array.h.html#(anonymous)::elts" title='(anonymous struct)::elts' data-ref="(anonymous)::elts">elts</a>, <a class="local col8 ref" href="#8vec" title='vec' data-ref="8vec">vec</a>.<a class="ref field" href="../../core/ngx_array.h.html#(anonymous)::nelts" title='(anonymous struct)::nelts' data-ref="(anonymous)::nelts">nelts</a>);</td></tr>
+<tr><th id="122">122</th><td></td></tr>
+<tr><th id="123">123</th><td>        <b>if</b> (<a class="local col5 ref" href="#5n" title='n' data-ref="5n">n</a> == <var>0</var>) {</td></tr>
+<tr><th id="124">124</th><td>            <a class="local col9 ref" href="#9rev" title='rev' data-ref="9rev">rev</a>-&gt;<a class="ref field" href="../../event/ngx_event.h.html#ngx_event_s::ready" title='ngx_event_s::ready' data-ref="ngx_event_s::ready">ready</a> = <var>0</var>;</td></tr>
+<tr><th id="125">125</th><td>            <a class="local col9 ref" href="#9rev" title='rev' data-ref="9rev">rev</a>-&gt;<a class="ref field" href="../../event/ngx_event.h.html#ngx_event_s::eof" title='ngx_event_s::eof' data-ref="ngx_event_s::eof">eof</a> = <var>1</var>;</td></tr>
+<tr><th id="126">126</th><td></td></tr>
+<tr><th id="127">127</th><td><u>#<span data-ppcond="127">if</span> (NGX_HAVE_KQUEUE)</u></td></tr>
+<tr><th id="128">128</th><td></td></tr>
+<tr><th id="129">129</th><td>            <i>/*</i></td></tr>
+<tr><th id="130">130</th><td><i>             * on FreeBSD readv() may return 0 on closed socket</i></td></tr>
+<tr><th id="131">131</th><td><i>             * even if kqueue reported about available data</i></td></tr>
+<tr><th id="132">132</th><td><i>             */</i></td></tr>
+<tr><th id="133">133</th><td></td></tr>
+<tr><th id="134">134</th><td>            <b>if</b> (ngx_event_flags &amp; NGX_USE_KQUEUE_EVENT) {</td></tr>
+<tr><th id="135">135</th><td>                rev-&gt;available = <var>0</var>;</td></tr>
+<tr><th id="136">136</th><td>            }</td></tr>
+<tr><th id="137">137</th><td></td></tr>
+<tr><th id="138">138</th><td><u>#<span data-ppcond="127">endif</span></u></td></tr>
+<tr><th id="139">139</th><td></td></tr>
+<tr><th id="140">140</th><td>            <b>return</b> <var>0</var>;</td></tr>
+<tr><th id="141">141</th><td>        }</td></tr>
+<tr><th id="142">142</th><td></td></tr>
+<tr><th id="143">143</th><td>        <b>if</b> (<a class="local col5 ref" href="#5n" title='n' data-ref="5n">n</a> &gt; <var>0</var>) {</td></tr>
+<tr><th id="144">144</th><td></td></tr>
+<tr><th id="145">145</th><td><u>#<span data-ppcond="145">if</span> (NGX_HAVE_KQUEUE)</u></td></tr>
+<tr><th id="146">146</th><td></td></tr>
+<tr><th id="147">147</th><td>            <b>if</b> (ngx_event_flags &amp; NGX_USE_KQUEUE_EVENT) {</td></tr>
+<tr><th id="148">148</th><td>                rev-&gt;available -= n;</td></tr>
+<tr><th id="149">149</th><td></td></tr>
+<tr><th id="150">150</th><td>                <i>/*</i></td></tr>
+<tr><th id="151">151</th><td><i>                 * rev-&gt;available may be negative here because some additional</i></td></tr>
+<tr><th id="152">152</th><td><i>                 * bytes may be received between kevent() and readv()</i></td></tr>
+<tr><th id="153">153</th><td><i>                 */</i></td></tr>
+<tr><th id="154">154</th><td></td></tr>
+<tr><th id="155">155</th><td>                <b>if</b> (rev-&gt;available &lt;= <var>0</var>) {</td></tr>
+<tr><th id="156">156</th><td>                    <b>if</b> (!rev-&gt;pending_eof) {</td></tr>
+<tr><th id="157">157</th><td>                        rev-&gt;ready = <var>0</var>;</td></tr>
+<tr><th id="158">158</th><td>                    }</td></tr>
+<tr><th id="159">159</th><td></td></tr>
+<tr><th id="160">160</th><td>                    rev-&gt;available = <var>0</var>;</td></tr>
+<tr><th id="161">161</th><td>                }</td></tr>
+<tr><th id="162">162</th><td></td></tr>
+<tr><th id="163">163</th><td>                <b>return</b> n;</td></tr>
+<tr><th id="164">164</th><td>            }</td></tr>
+<tr><th id="165">165</th><td></td></tr>
+<tr><th id="166">166</th><td><u>#<span data-ppcond="145">endif</span></u></td></tr>
+<tr><th id="167">167</th><td></td></tr>
+<tr><th id="168">168</th><td><u>#<span data-ppcond="168">if</span> (<a class="macro" href="../../../objs/ngx_auto_config.h.html#39" title="1" data-ref="_M/NGX_HAVE_EPOLLRDHUP">NGX_HAVE_EPOLLRDHUP</a>)</u></td></tr>
+<tr><th id="169">169</th><td></td></tr>
+<tr><th id="170">170</th><td>            <b>if</b> ((<a class="ref" href="../../event/ngx_event.h.html#ngx_event_flags" title='ngx_event_flags' data-ref="ngx_event_flags">ngx_event_flags</a> &amp; <a class="macro" href="../../event/ngx_event.h.html#241" title="0x00000040" data-ref="_M/NGX_USE_EPOLL_EVENT">NGX_USE_EPOLL_EVENT</a>)</td></tr>
+<tr><th id="171">171</th><td>                &amp;&amp; <a class="ref" href="../../event/ngx_event.h.html#ngx_use_epoll_rdhup" title='ngx_use_epoll_rdhup' data-ref="ngx_use_epoll_rdhup">ngx_use_epoll_rdhup</a>)</td></tr>
+<tr><th id="172">172</th><td>            {</td></tr>
+<tr><th id="173">173</th><td>                <b>if</b> (<a class="local col5 ref" href="#5n" title='n' data-ref="5n">n</a> &lt; <a class="local col6 ref" href="#6size" title='size' data-ref="6size">size</a>) {</td></tr>
+<tr><th id="174">174</th><td>                    <b>if</b> (!<a class="local col9 ref" href="#9rev" title='rev' data-ref="9rev">rev</a>-&gt;<a class="ref field" href="../../event/ngx_event.h.html#ngx_event_s::pending_eof" title='ngx_event_s::pending_eof' data-ref="ngx_event_s::pending_eof">pending_eof</a>) {</td></tr>
+<tr><th id="175">175</th><td>                        <a class="local col9 ref" href="#9rev" title='rev' data-ref="9rev">rev</a>-&gt;<a class="ref field" href="../../event/ngx_event.h.html#ngx_event_s::ready" title='ngx_event_s::ready' data-ref="ngx_event_s::ready">ready</a> = <var>0</var>;</td></tr>
+<tr><th id="176">176</th><td>                    }</td></tr>
+<tr><th id="177">177</th><td></td></tr>
+<tr><th id="178">178</th><td>                    <a class="local col9 ref" href="#9rev" title='rev' data-ref="9rev">rev</a>-&gt;<a class="ref field" href="../../event/ngx_event.h.html#ngx_event_s::available" title='ngx_event_s::available' data-ref="ngx_event_s::available">available</a> = <var>0</var>;</td></tr>
+<tr><th id="179">179</th><td>                }</td></tr>
+<tr><th id="180">180</th><td></td></tr>
+<tr><th id="181">181</th><td>                <b>return</b> <a class="local col5 ref" href="#5n" title='n' data-ref="5n">n</a>;</td></tr>
+<tr><th id="182">182</th><td>            }</td></tr>
+<tr><th id="183">183</th><td></td></tr>
+<tr><th id="184">184</th><td><u>#<span data-ppcond="168">endif</span></u></td></tr>
+<tr><th id="185">185</th><td></td></tr>
+<tr><th id="186">186</th><td>            <b>if</b> (<a class="local col5 ref" href="#5n" title='n' data-ref="5n">n</a> &lt; <a class="local col6 ref" href="#6size" title='size' data-ref="6size">size</a> &amp;&amp; !(<a class="ref" href="../../event/ngx_event.h.html#ngx_event_flags" title='ngx_event_flags' data-ref="ngx_event_flags">ngx_event_flags</a> &amp; <a class="macro" href="../../event/ngx_event.h.html#236" title="0x00000020" data-ref="_M/NGX_USE_GREEDY_EVENT">NGX_USE_GREEDY_EVENT</a>)) {</td></tr>
+<tr><th id="187">187</th><td>                <a class="local col9 ref" href="#9rev" title='rev' data-ref="9rev">rev</a>-&gt;<a class="ref field" href="../../event/ngx_event.h.html#ngx_event_s::ready" title='ngx_event_s::ready' data-ref="ngx_event_s::ready">ready</a> = <var>0</var>;</td></tr>
+<tr><th id="188">188</th><td>            }</td></tr>
+<tr><th id="189">189</th><td></td></tr>
+<tr><th id="190">190</th><td>            <b>return</b> <a class="local col5 ref" href="#5n" title='n' data-ref="5n">n</a>;</td></tr>
+<tr><th id="191">191</th><td>        }</td></tr>
+<tr><th id="192">192</th><td></td></tr>
+<tr><th id="193">193</th><td>        <a class="local col7 ref" href="#7err" title='err' data-ref="7err">err</a> = <a class="macro" href="ngx_errno.h.html#70" title="(*__errno_location ())" data-ref="_M/ngx_socket_errno">ngx_socket_errno</a>;</td></tr>
+<tr><th id="194">194</th><td></td></tr>
+<tr><th id="195">195</th><td>        <b>if</b> (<a class="local col7 ref" href="#7err" title='err' data-ref="7err">err</a> == <a class="macro" href="ngx_errno.h.html#65" title="11" data-ref="_M/NGX_EAGAIN">NGX_EAGAIN</a> || <a class="local col7 ref" href="#7err" title='err' data-ref="7err">err</a> == <a class="macro" href="ngx_errno.h.html#22" title="4" data-ref="_M/NGX_EINTR">NGX_EINTR</a>) {</td></tr>
+<tr><th id="196">196</th><td>            <a class="macro" href="../../core/ngx_log.h.html#215" title="" data-ref="_M/ngx_log_debug0">ngx_log_debug0</a>(NGX_LOG_DEBUG_EVENT, c-&gt;log, err,</td></tr>
+<tr><th id="197">197</th><td>                           <q>"readv() not ready"</q>);</td></tr>
+<tr><th id="198">198</th><td>            <a class="local col5 ref" href="#5n" title='n' data-ref="5n">n</a> = <a class="macro" href="../../core/ngx_core.h.html#37" title="-2" data-ref="_M/NGX_AGAIN">NGX_AGAIN</a>;</td></tr>
+<tr><th id="199">199</th><td></td></tr>
+<tr><th id="200">200</th><td>        } <b>else</b> {</td></tr>
+<tr><th id="201">201</th><td>            <a class="local col5 ref" href="#5n" title='n' data-ref="5n">n</a> = <a class="ref fn" href="../../core/ngx_connection.h.html#ngx_connection_error" title='ngx_connection_error' data-ref="ngx_connection_error">ngx_connection_error</a>(<a class="local col1 ref" href="#1c" title='c' data-ref="1c">c</a>, <a class="local col7 ref" href="#7err" title='err' data-ref="7err">err</a>, <q>"readv() failed"</q>);</td></tr>
+<tr><th id="202">202</th><td>            <b>break</b>;</td></tr>
+<tr><th id="203">203</th><td>        }</td></tr>
+<tr><th id="204">204</th><td></td></tr>
+<tr><th id="205">205</th><td>    } <b>while</b> (<a class="local col7 ref" href="#7err" title='err' data-ref="7err">err</a> == <a class="macro" href="ngx_errno.h.html#22" title="4" data-ref="_M/NGX_EINTR">NGX_EINTR</a>);</td></tr>
+<tr><th id="206">206</th><td></td></tr>
+<tr><th id="207">207</th><td>    <a class="local col9 ref" href="#9rev" title='rev' data-ref="9rev">rev</a>-&gt;<a class="ref field" href="../../event/ngx_event.h.html#ngx_event_s::ready" title='ngx_event_s::ready' data-ref="ngx_event_s::ready">ready</a> = <var>0</var>;</td></tr>
+<tr><th id="208">208</th><td></td></tr>
+<tr><th id="209">209</th><td>    <b>if</b> (<a class="local col5 ref" href="#5n" title='n' data-ref="5n">n</a> == <a class="macro" href="../../core/ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>) {</td></tr>
+<tr><th id="210">210</th><td>        <a class="local col1 ref" href="#1c" title='c' data-ref="1c">c</a>-&gt;<a class="ref field" href="../../core/ngx_connection.h.html#ngx_connection_s::read" title='ngx_connection_s::read' data-ref="ngx_connection_s::read">read</a>-&gt;<a class="ref field" href="../../event/ngx_event.h.html#ngx_event_s::error" title='ngx_event_s::error' data-ref="ngx_event_s::error">error</a> = <var>1</var>;</td></tr>
+<tr><th id="211">211</th><td>    }</td></tr>
+<tr><th id="212">212</th><td></td></tr>
+<tr><th id="213">213</th><td>    <b>return</b> <a class="local col5 ref" href="#5n" title='n' data-ref="5n">n</a>;</td></tr>
+<tr><th id="214">214</th><td>}</td></tr>
+<tr><th id="215">215</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated on <em>2018-Apr-06</em> from project nginx<br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

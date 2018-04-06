@@ -1,0 +1,4 @@
+<dec f='include/x86_64-linux-gnu/bits/siginfo.h' l='137'/>
+<doc f='include/x86_64-linux-gnu/bits/siginfo.h' l='136'>/* X/Open requires some more fields with fixed names.  */</doc>
+<use f='nginx/src/os/unix/ngx_process.c' l='444' u='c'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='447' u='c'/>

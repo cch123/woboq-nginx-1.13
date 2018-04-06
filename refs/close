@@ -1,0 +1,66 @@
+<dec f='include/unistd.h' l='356' type='int close(int __fd)'/>
+<doc f='include/unistd.h' l='352'>/* Close the file descriptor FD.
+
+   This function is a cancellation point and therefore not marked with
+   __THROW.  */</doc>
+<use f='nginx/src/core/nginx.c' l='370' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='337' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='469' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='493' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='529' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='550' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='610' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='1005' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='1174' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_cycle.c' l='704' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_cycle.c' l='750' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_cycle.c' l='839' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_cycle.c' l='857' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_cycle.c' l='979' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1034' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1142' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1157' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1175' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1191' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1201' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_file.c' l='903' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_file.c' l='910' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='335' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='463' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='479' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='545' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='725' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='770' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='829' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='894' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='905' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1060' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_palloc.c' l='371' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_palloc.c' l='397' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4396' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4482' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_syslog.c' l='296' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_syslog.c' l='357' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_syslog.c' l='378' macro='1' u='c'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='419' u='c' c='ngx_epoll_notify_init'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='484' u='c' c='ngx_epoll_test_rdhup'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='515' u='c' c='ngx_epoll_test_rdhup'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='520' u='c' c='ngx_epoll_test_rdhup'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='532' u='c' c='ngx_epoll_done'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='541' u='c' c='ngx_epoll_done'/>
+<use f='nginx/src/event/ngx_event.c' l='1224' u='c' c='ngx_event_core_init_conf'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='147' macro='1' u='c'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='759' macro='1' u='c'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='56' macro='1' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_auth_basic_module.c' l='344' macro='1' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1555' macro='1' u='c'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1555' macro='1' u='c'/>
+<use f='nginx/src/os/unix/ngx_channel.c' l='246' u='c' c='ngx_close_channel'/>
+<use f='nginx/src/os/unix/ngx_channel.c' l='250' u='c' c='ngx_close_channel'/>
+<use f='nginx/src/os/unix/ngx_daemon.c' l='64' u='c' c='ngx_daemon'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='647' macro='1' u='c'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='664' macro='1' u='c'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='210' macro='1' u='c'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='952' u='c' c='ngx_worker_process_init'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='958' u='c' c='ngx_worker_process_init'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='1114' u='c' c='ngx_channel_handler'/>

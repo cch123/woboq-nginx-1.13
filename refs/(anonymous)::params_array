@@ -1,0 +1,3 @@
+<dec f='nginx/src/http/modules/ngx_http_ssi_filter_module.h' l='50' type='ngx_table_elt_t [4]'/>
+<offset>832</offset>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='358' u='r' c='ngx_http_ssi_header_filter'/>

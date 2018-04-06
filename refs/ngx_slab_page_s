@@ -1,0 +1,5 @@
+<def f='nginx/src/core/ngx_slab.h' l='18' ll='22'/>
+<size>24</size>
+<mbr r='ngx_slab_page_s::slab' o='0' t='uintptr_t'/>
+<mbr r='ngx_slab_page_s::next' o='64' t='ngx_slab_page_t *'/>
+<mbr r='ngx_slab_page_s::prev' o='128' t='uintptr_t'/>

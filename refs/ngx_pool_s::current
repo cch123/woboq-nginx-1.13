@@ -1,0 +1,7 @@
+<dec f='nginx/src/core/ngx_palloc.h' l='60' type='ngx_pool_t *'/>
+<offset>320</offset>
+<use f='nginx/src/core/ngx_palloc.c' l='36' u='w' c='ngx_create_pool'/>
+<use f='nginx/src/core/ngx_palloc.c' l='116' u='w' c='ngx_reset_pool'/>
+<use f='nginx/src/core/ngx_palloc.c' l='154' u='r' c='ngx_palloc_small'/>
+<use f='nginx/src/core/ngx_palloc.c' l='201' u='r' c='ngx_palloc_block'/>
+<use f='nginx/src/core/ngx_palloc.c' l='203' u='w' c='ngx_palloc_block'/>

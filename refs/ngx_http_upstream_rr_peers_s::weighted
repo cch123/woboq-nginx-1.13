@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http_upstream_round_robin.h' l='73' type='unsigned int'/>
+<offset>321</offset>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='76' u='w' c='ngx_http_upstream_init_round_robin'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='140' u='w' c='ngx_http_upstream_init_round_robin'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='215' u='w' c='ngx_http_upstream_init_round_robin'/>

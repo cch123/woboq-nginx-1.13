@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='102' type='ngx_uint_t'/>
+<offset>576</offset>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5853' u='w' c='ngx_http_upstream_server'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='98' u='r' c='ngx_http_upstream_init_round_robin'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='162' u='r' c='ngx_http_upstream_init_round_robin'/>

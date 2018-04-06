@@ -1,0 +1,13 @@
+<def f='include/pcre.h' l='376' ll='385'/>
+<size>64</size>
+<doc f='include/pcre.h' l='372'>/* The structure for passing additional data to pcre_exec(). This is defined in
+such as way as to be extensible. Always add new fields at the end, in order to
+remain compatible. */</doc>
+<mbr r='pcre_extra::flags' o='0' t='unsigned long'/>
+<mbr r='pcre_extra::study_data' o='64' t='void *'/>
+<mbr r='pcre_extra::match_limit' o='128' t='unsigned long'/>
+<mbr r='pcre_extra::callout_data' o='192' t='void *'/>
+<mbr r='pcre_extra::tables' o='256' t='const unsigned char *'/>
+<mbr r='pcre_extra::match_limit_recursion' o='320' t='unsigned long'/>
+<mbr r='pcre_extra::mark' o='384' t='unsigned char **'/>
+<mbr r='pcre_extra::executable_jit' o='448' t='void *'/>

@@ -1,0 +1,10 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='525' type='unsigned int'/>
+<offset>9870</offset>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1098' u='r' c='ngx_http_proxy_create_key'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1211' u='r' c='ngx_http_proxy_create_request'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='809' u='r' c='ngx_http_handler'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='952' u='r' c='ngx_http_core_find_config_phase'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2361' u='w' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2439' u='w' c='ngx_http_internal_redirect'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2496' u='w' c='ngx_http_named_location'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1002' u='w' c='ngx_http_script_regex_start_code'/>

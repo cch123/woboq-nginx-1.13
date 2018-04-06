@@ -1,0 +1,12 @@
+<dec f='nginx/src/core/ngx_hash.h' l='82' type='ngx_array_t *'/>
+<offset>512</offset>
+<use f='nginx/src/core/ngx_hash.c' l='691' u='w' c='ngx_hash_keys_array_init'/>
+<use f='nginx/src/core/ngx_hash.c' l='692' u='r' c='ngx_hash_keys_array_init'/>
+<use f='nginx/src/core/ngx_hash.c' l='790' u='r' c='ngx_hash_add_key'/>
+<use f='nginx/src/core/ngx_hash.c' l='793' u='r' c='ngx_hash_add_key'/>
+<use f='nginx/src/core/ngx_hash.c' l='804' u='r' c='ngx_hash_add_key'/>
+<use f='nginx/src/core/ngx_hash.c' l='812' u='r' c='ngx_hash_add_key'/>
+<use f='nginx/src/core/ngx_hash.c' l='843' u='r' c='ngx_hash_add_key'/>
+<use f='nginx/src/core/ngx_hash.c' l='848' u='r' c='ngx_hash_add_key'/>
+<use f='nginx/src/core/ngx_hash.c' l='859' u='r' c='ngx_hash_add_key'/>
+<use f='nginx/src/core/ngx_hash.c' l='867' u='r' c='ngx_hash_add_key'/>

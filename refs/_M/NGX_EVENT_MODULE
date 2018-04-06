@@ -1,0 +1,10 @@
+<dec f='nginx/src/event/ngx_event.h' l='436'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='206' u='c'/>
+<use f='nginx/src/event/ngx_event.c' l='181' u='c'/>
+<use f='nginx/src/event/ngx_event.c' l='609' u='c'/>
+<use f='nginx/src/event/ngx_event.c' l='918' u='c'/>
+<use f='nginx/src/event/ngx_event.c' l='933' u='c'/>
+<use f='nginx/src/event/ngx_event.c' l='950' u='c'/>
+<use f='nginx/src/event/ngx_event.c' l='962' u='c'/>
+<use f='nginx/src/event/ngx_event.c' l='1032' u='c'/>
+<use f='nginx/src/event/ngx_event.c' l='1256' u='c'/>

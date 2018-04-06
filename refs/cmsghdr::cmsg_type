@@ -1,0 +1,10 @@
+<dec f='include/x86_64-linux-gnu/bits/socket.h' l='254' type='int'/>
+<offset>96</offset>
+<doc f='include/x86_64-linux-gnu/bits/socket.h' l='254'>/* Protocol specific type.  */</doc>
+<use f='nginx/src/event/ngx_event_accept.c' l='526' u='r' c='ngx_event_recvmsg'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='544' u='r' c='ngx_event_recvmsg'/>
+<use f='nginx/src/os/unix/ngx_channel.c' l='41' u='w' c='ngx_write_channel'/>
+<use f='nginx/src/os/unix/ngx_channel.c' l='161' u='r' c='ngx_read_channel'/>
+<use f='nginx/src/os/unix/ngx_channel.c' l='166' u='r' c='ngx_read_channel'/>
+<use f='nginx/src/os/unix/ngx_udp_sendmsg_chain.c' l='267' u='w' c='ngx_sendmsg'/>
+<use f='nginx/src/os/unix/ngx_udp_sendmsg_chain.c' l='291' u='w' c='ngx_sendmsg'/>

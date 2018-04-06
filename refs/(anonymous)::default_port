@@ -1,0 +1,14 @@
+<dec f='nginx/src/core/ngx_inet.h' l='88' type='in_port_t'/>
+<offset>528</offset>
+<use f='nginx/src/core/ngx_inet.c' l='879' u='r' c='ngx_parse_inet_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='880' u='r' c='ngx_parse_inet_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='1040' u='r' c='ngx_parse_inet6_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='1041' u='r' c='ngx_parse_inet6_url'/>
+<use f='nginx/src/core/ngx_resolver.c' l='252' u='w' c='ngx_resolver_create'/>
+<use f='nginx/src/core/ngx_syslog.c' l='110' u='w' c='ngx_syslog_parse_args'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='990' u='w' c='ngx_http_proxy_eval'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='3641' u='w' c='ngx_http_proxy_pass'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='4321' u='r' c='ngx_http_proxy_set_vars'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='4325' u='r' c='ngx_http_proxy_set_vars'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3756' u='w' c='ngx_http_core_listen'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5864' u='w' c='ngx_http_upstream_server'/>

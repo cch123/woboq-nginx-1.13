@@ -1,0 +1,12 @@
+<def f='nginx/src/http/ngx_http_upstream.h' l='120' ll='136'/>
+<size>104</size>
+<mbr r='ngx_http_upstream_srv_conf_s::peer' o='0' t='ngx_http_upstream_peer_t'/>
+<mbr r='ngx_http_upstream_srv_conf_s::srv_conf' o='192' t='void **'/>
+<mbr r='ngx_http_upstream_srv_conf_s::servers' o='256' t='ngx_array_t *'/>
+<mbr r='ngx_http_upstream_srv_conf_s::flags' o='320' t='ngx_uint_t'/>
+<mbr r='ngx_http_upstream_srv_conf_s::host' o='384' t='ngx_str_t'/>
+<mbr r='ngx_http_upstream_srv_conf_s::file_name' o='512' t='u_char *'/>
+<mbr r='ngx_http_upstream_srv_conf_s::line' o='576' t='ngx_uint_t'/>
+<mbr r='ngx_http_upstream_srv_conf_s::port' o='640' t='in_port_t'/>
+<mbr r='ngx_http_upstream_srv_conf_s::no_port' o='704' t='ngx_uint_t'/>
+<mbr r='ngx_http_upstream_srv_conf_s::shm_zone' o='768' t='ngx_shm_zone_t *'/>

@@ -1,0 +1,6 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='169' type='ngx_uint_t'/>
+<offset>1600</offset>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3194' u='w' c='ngx_http_core_create_main_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3214' u='r' c='ngx_http_core_init_main_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3214' u='w' c='ngx_http_core_init_main_conf'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2697' u='r' c='ngx_http_variables_init_vars'/>

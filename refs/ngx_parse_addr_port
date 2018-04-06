@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_inet.h' l='120' type='ngx_int_t ngx_parse_addr_port(ngx_pool_t * pool, ngx_addr_t * addr, u_char * text, size_t len)'/>
+<def f='nginx/src/core/ngx_inet.c' l='619' ll='678' type='ngx_int_t ngx_parse_addr_port(ngx_pool_t * pool, ngx_addr_t * addr, u_char * text, size_t len)'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2682' u='c' c='ngx_http_get_forwarded_addr_internal'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='6069' u='c' c='ngx_http_upstream_bind_set_slot'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='6148' u='c' c='ngx_http_upstream_set_local'/>

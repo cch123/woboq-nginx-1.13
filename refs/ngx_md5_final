@@ -1,0 +1,7 @@
+<dec f='nginx/src/core/ngx_md5.h' l='25' type='void ngx_md5_final(u_char * result, ngx_md5_t * ctx)'/>
+<use f='nginx/src/core/ngx_crypt.c' l='82' u='c' c='ngx_crypt_apr1'/>
+<use f='nginx/src/core/ngx_crypt.c' l='99' u='c' c='ngx_crypt_apr1'/>
+<use f='nginx/src/core/ngx_crypt.c' l='126' u='c' c='ngx_crypt_apr1'/>
+<def f='nginx/src/core/ngx_md5.c' l='61' ll='111' type='void ngx_md5_final(u_char * result, ngx_md5_t * ctx)'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='258' u='c' c='ngx_http_file_cache_create_key'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1100' u='c' c='ngx_http_file_cache_vary'/>

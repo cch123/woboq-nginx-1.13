@@ -1,0 +1,5 @@
+<dec f='nginx/objs/ngx_modules.c' l='10' type='ngx_module_t'/>
+<use f='nginx/objs/ngx_modules.c' l='62' u='a'/>
+<use f='nginx/objs/ngx_modules.c' l='62' u='a'/>
+<def f='nginx/src/core/ngx_regex.c' l='52' ll='65' type='ngx_module_t'/>
+<use f='nginx/src/core/ngx_regex.c' l='302' u='m' c='ngx_regex_module_init'/>

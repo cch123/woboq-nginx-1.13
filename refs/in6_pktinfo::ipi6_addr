@@ -1,0 +1,5 @@
+<dec f='include/netinet/in.h' l='539' type='struct in6_addr'/>
+<offset>0</offset>
+<doc f='include/netinet/in.h' l='539'>/* src/dst IPv6 address */</doc>
+<use f='nginx/src/event/ngx_event_accept.c' l='552' u='r' c='ngx_event_recvmsg'/>
+<use f='nginx/src/os/unix/ngx_udp_sendmsg_chain.c' l='298' u='w' c='ngx_sendmsg'/>

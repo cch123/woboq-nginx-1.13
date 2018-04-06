@@ -1,0 +1,3 @@
+<dec f='nginx/src/http/ngx_http_cache.h' l='191' type='ngx_int_t ngx_http_file_cache_set_header(ngx_http_request_t * r, u_char * buf)'/>
+<def f='nginx/src/http/ngx_http_file_cache.c' l='1241' ll='1303' type='ngx_int_t ngx_http_file_cache_set_header(ngx_http_request_t * r, u_char * buf)'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3039' u='c' c='ngx_http_upstream_send_response'/>

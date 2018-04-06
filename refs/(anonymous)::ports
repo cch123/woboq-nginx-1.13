@@ -1,0 +1,9 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='174' type='ngx_array_t *'/>
+<offset>1792</offset>
+<use f='nginx/src/http/ngx_http.c' l='333' u='r' c='ngx_http_block'/>
+<use f='nginx/src/http/ngx_http.c' l='1152' u='r' c='ngx_http_add_listen'/>
+<use f='nginx/src/http/ngx_http.c' l='1153' u='w' c='ngx_http_add_listen'/>
+<use f='nginx/src/http/ngx_http.c' l='1155' u='r' c='ngx_http_add_listen'/>
+<use f='nginx/src/http/ngx_http.c' l='1163' u='r' c='ngx_http_add_listen'/>
+<use f='nginx/src/http/ngx_http.c' l='1164' u='r' c='ngx_http_add_listen'/>
+<use f='nginx/src/http/ngx_http.c' l='1177' u='r' c='ngx_http_add_listen'/>

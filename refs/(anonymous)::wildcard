@@ -1,0 +1,16 @@
+<dec f='nginx/src/core/ngx_inet.h' l='96' type='unsigned int'/>
+<offset>580</offset>
+<use f='nginx/src/core/ngx_inet.c' l='871' u='w' c='ngx_parse_inet_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='895' u='w' c='ngx_parse_inet_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='904' u='w' c='ngx_parse_inet_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='955' u='w' c='ngx_parse_inet_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='965' u='w' c='ngx_parse_inet_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='1060' u='w' c='ngx_parse_inet6_url'/>
+<dec f='nginx/src/http/ngx_http_core_module.h' l='74' type='unsigned int'/>
+<offset>931</offset>
+<use f='nginx/src/http/ngx_http.c' l='1585' u='r' c='ngx_http_cmp_conf_addrs'/>
+<use f='nginx/src/http/ngx_http.c' l='1590' u='r' c='ngx_http_cmp_conf_addrs'/>
+<use f='nginx/src/http/ngx_http.c' l='1641' u='r' c='ngx_http_init_listening'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2817' u='w' c='ngx_http_core_server'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3782' u='w' c='ngx_http_core_listen'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3782' u='r' c='ngx_http_core_listen'/>

@@ -1,0 +1,11 @@
+<dec f='include/time.h' l='122' type='__time_t'/>
+<offset>0</offset>
+<use f='nginx/src/core/ngx_file.c' l='1056' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_file.c' l='1068' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_file.c' l='1087' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='170' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='936' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_times.c' l='211' u='r' c='ngx_monotonic_time'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='381' macro='1' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1446' macro='1' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1459' macro='1' u='r'/>

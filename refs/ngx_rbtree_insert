@@ -1,0 +1,12 @@
+<dec f='nginx/src/core/ngx_rbtree.h' l='51' type='void ngx_rbtree_insert(ngx_rbtree_t * tree, ngx_rbtree_node_t * node)'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='151' u='c' c='ngx_conf_add_dump'/>
+<use f='nginx/src/event/ngx_event_timer.h' l='84' u='c' c='ngx_event_add_timer'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='384' u='c' c='ngx_open_cached_file'/>
+<def f='nginx/src/core/ngx_rbtree.c' l='24' ll='93' type='void ngx_rbtree_insert(ngx_rbtree_t * tree, ngx_rbtree_node_t * node)'/>
+<use f='nginx/src/core/ngx_resolver.c' l='809' u='c' c='ngx_resolve_name_locked'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1039' u='c' c='ngx_resolve_addr'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1276' u='c' c='ngx_http_geo_value'/>
+<use f='nginx/src/http/modules/ngx_http_limit_conn_module.c' l='213' u='c' c='ngx_http_limit_conn_handler'/>
+<use f='nginx/src/http/modules/ngx_http_limit_req_module.c' l='460' u='c' c='ngx_http_limit_req_lookup'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='897' u='c' c='ngx_http_file_cache_exists'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2229' u='c' c='ngx_http_file_cache_add'/>

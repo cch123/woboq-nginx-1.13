@@ -1,0 +1,9 @@
+<dec f='nginx/src/core/ngx_inet.h' l='126' type='in_port_t ngx_inet_get_port(struct sockaddr * sa)'/>
+<def f='nginx/src/core/ngx_inet.c' l='1442' ll='1467' type='in_port_t ngx_inet_get_port(struct sockaddr * sa)'/>
+<use f='nginx/src/core/ngx_proxy_protocol.c' l='208' u='c' c='ngx_proxy_protocol_write'/>
+<use f='nginx/src/core/ngx_proxy_protocol.c' l='209' u='c' c='ngx_proxy_protocol_write'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='94' u='c' c='ngx_event_connect_peer'/>
+<use f='nginx/src/http/ngx_http.c' l='1161' u='c' c='ngx_http_add_listen'/>
+<use f='nginx/src/http/ngx_http_header_filter_module.c' l='346' u='c' c='ngx_http_header_filter'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1308' u='c' c='ngx_http_variable_remote_port'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1409' u='c' c='ngx_http_variable_server_port'/>

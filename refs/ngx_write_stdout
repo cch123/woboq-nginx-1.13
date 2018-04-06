@@ -1,0 +1,4 @@
+<def f='nginx/src/core/ngx_log.h' l='257' ll='261' type='void ngx_write_stdout(char * text)'/>
+<use f='nginx/src/core/nginx.c' l='312' u='c' c='main'/>
+<use f='nginx/src/core/nginx.c' l='315' u='c' c='main'/>
+<use f='nginx/src/core/nginx.c' l='320' u='c' c='main'/>

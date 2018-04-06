@@ -1,0 +1,20 @@
+<dec f='nginx/src/core/ngx_hash.h' l='84' type='ngx_array_t'/>
+<offset>576</offset>
+<use f='nginx/src/core/ngx_hash.c' l='677' u='a' c='ngx_hash_keys_array_init'/>
+<use f='nginx/src/core/ngx_hash.c' l='916' u='a' c='ngx_hash_add_key'/>
+<use f='nginx/src/http/modules/ngx_http_map_module.c' l='313' u='m' c='ngx_http_map_block'/>
+<use f='nginx/src/http/modules/ngx_http_map_module.c' l='315' u='m' c='ngx_http_map_block'/>
+<use f='nginx/src/http/modules/ngx_http_map_module.c' l='316' u='m' c='ngx_http_map_block'/>
+<use f='nginx/src/http/modules/ngx_http_map_module.c' l='322' u='m' c='ngx_http_map_block'/>
+<use f='nginx/src/http/modules/ngx_http_map_module.c' l='323' u='m' c='ngx_http_map_block'/>
+<use f='nginx/src/http/modules/ngx_http_referer_module.c' l='377' u='m' c='ngx_http_referer_merge_conf'/>
+<use f='nginx/src/http/modules/ngx_http_referer_module.c' l='411' u='m' c='ngx_http_referer_merge_conf'/>
+<use f='nginx/src/http/modules/ngx_http_referer_module.c' l='413' u='m' c='ngx_http_referer_merge_conf'/>
+<use f='nginx/src/http/modules/ngx_http_referer_module.c' l='414' u='m' c='ngx_http_referer_merge_conf'/>
+<use f='nginx/src/http/modules/ngx_http_referer_module.c' l='421' u='m' c='ngx_http_referer_merge_conf'/>
+<use f='nginx/src/http/modules/ngx_http_referer_module.c' l='422' u='m' c='ngx_http_referer_merge_conf'/>
+<use f='nginx/src/http/ngx_http.c' l='1502' u='m' c='ngx_http_server_names'/>
+<use f='nginx/src/http/ngx_http.c' l='1504' u='m' c='ngx_http_server_names'/>
+<use f='nginx/src/http/ngx_http.c' l='1504' u='m' c='ngx_http_server_names'/>
+<use f='nginx/src/http/ngx_http.c' l='1510' u='m' c='ngx_http_server_names'/>
+<use f='nginx/src/http/ngx_http.c' l='1511' u='m' c='ngx_http_server_names'/>

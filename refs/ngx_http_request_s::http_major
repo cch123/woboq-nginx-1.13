@@ -1,0 +1,13 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='587' type='unsigned int'/>
+<offset>11472</offset>
+<use f='nginx/src/http/ngx_http_parse.c' l='725' u='w' c='ngx_http_parse_request_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='727' u='r' c='ngx_http_parse_request_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='745' u='w' c='ngx_http_parse_request_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='745' u='r' c='ngx_http_parse_request_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='747' u='r' c='ngx_http_parse_request_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='829' u='r' c='ngx_http_parse_request_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1685' u='w' c='ngx_http_parse_status_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1700' u='r' c='ngx_http_parse_status_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1704' u='w' c='ngx_http_parse_status_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1704' u='r' c='ngx_http_parse_status_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1810' u='r' c='ngx_http_parse_status_line'/>

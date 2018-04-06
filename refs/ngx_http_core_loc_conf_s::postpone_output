@@ -1,0 +1,9 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='349' type='size_t'/>
+<offset>1728</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='349'>/* postpone_output */</doc>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3390' u='w' c='ngx_http_core_create_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3619' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3619' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3619' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3619' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_write_filter_module.c' l='187' u='r' c='ngx_http_write_filter'/>

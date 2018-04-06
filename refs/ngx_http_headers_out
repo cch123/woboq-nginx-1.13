@@ -1,0 +1,2 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='600' type='ngx_http_header_out_t []'/>
+<def f='nginx/src/http/ngx_http_header_filter_module.c' l='135' ll='153' type='ngx_http_header_out_t [11]'/>

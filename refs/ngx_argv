@@ -1,0 +1,12 @@
+<dec f='nginx/src/os/unix/ngx_process.h' l='79' type='char **'/>
+<use f='nginx/src/core/nginx.c' l='885' u='w' c='ngx_save_argv'/>
+<use f='nginx/src/core/nginx.c' l='886' u='r' c='ngx_save_argv'/>
+<use f='nginx/src/core/nginx.c' l='893' u='r' c='ngx_save_argv'/>
+<use f='nginx/src/core/nginx.c' l='894' u='r' c='ngx_save_argv'/>
+<use f='nginx/src/core/nginx.c' l='898' u='r' c='ngx_save_argv'/>
+<use f='nginx/src/core/nginx.c' l='901' u='r' c='ngx_save_argv'/>
+<def f='nginx/src/os/unix/ngx_process.c' l='30' type='char **'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='111' u='r' c='ngx_master_process_cycle'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='123' u='r' c='ngx_master_process_cycle'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='275' u='r' c='ngx_master_process_cycle'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='658' u='r' c='ngx_reap_children'/>

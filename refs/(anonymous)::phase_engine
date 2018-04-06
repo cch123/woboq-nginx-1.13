@@ -1,0 +1,13 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='156' type='ngx_http_phase_engine_t'/>
+<offset>320</offset>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='148' u='m' c='ngx_http_rewrite_handler'/>
+<use f='nginx/src/http/ngx_http.c' l='461' u='m' c='ngx_http_init_phase_handlers'/>
+<use f='nginx/src/http/ngx_http.c' l='462' u='m' c='ngx_http_init_phase_handlers'/>
+<use f='nginx/src/http/ngx_http.c' l='481' u='m' c='ngx_http_init_phase_handlers'/>
+<use f='nginx/src/http/ngx_http.c' l='490' u='m' c='ngx_http_init_phase_handlers'/>
+<use f='nginx/src/http/ngx_http.c' l='491' u='m' c='ngx_http_init_phase_handlers'/>
+<use f='nginx/src/http/ngx_http.c' l='507' u='m' c='ngx_http_init_phase_handlers'/>
+<use f='nginx/src/http/ngx_http.c' l='508' u='m' c='ngx_http_init_phase_handlers'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='830' u='m' c='ngx_http_handler'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='854' u='m' c='ngx_http_core_run_phases'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2508' u='m' c='ngx_http_named_location'/>

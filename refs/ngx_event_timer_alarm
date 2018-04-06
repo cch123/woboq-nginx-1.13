@@ -1,0 +1,6 @@
+<dec f='nginx/src/event/ngx_event.h' l='495' type='sig_atomic_t'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='804' u='r' c='ngx_epoll_process_events'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='811' u='r' c='ngx_epoll_process_events'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='812' u='w' c='ngx_epoll_process_events'/>
+<def f='nginx/src/event/ngx_event.c' l='39' type='sig_atomic_t'/>
+<use f='nginx/src/event/ngx_event.c' l='557' u='w' c='ngx_timer_signal_handler'/>

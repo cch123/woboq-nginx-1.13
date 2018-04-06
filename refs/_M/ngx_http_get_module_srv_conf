@@ -1,0 +1,16 @@
+<dec f='nginx/src/http/ngx_http_config.h' l='57'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='147' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1062' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2282' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2430' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2477' u='c'/>
+<use f='nginx/src/http/ngx_http_header_filter_module.c' l='331' u='c'/>
+<use f='nginx/src/http/ngx_http_request.c' l='411' u='c'/>
+<use f='nginx/src/http/ngx_http_request.c' l='530' u='c'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1118' u='c'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1297' u='c'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1428' u='c'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1484' u='c'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3645' u='c'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1212' u='c'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1643' u='c'/>

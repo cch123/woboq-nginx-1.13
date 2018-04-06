@@ -1,0 +1,19 @@
+<dec f='nginx/src/core/ngx_cycle.h' l='76' type='ngx_cycle_t *'/>
+<offset>4160</offset>
+<use f='nginx/src/core/nginx.c' l='1140' u='r' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/ngx_cycle.c' l='83' u='w' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='762' u='w' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_module.c' l='133' u='r' c='ngx_count_modules'/>
+<use f='nginx/src/core/ngx_module.c' l='133' u='r' c='ngx_count_modules'/>
+<use f='nginx/src/core/ngx_module.c' l='135' u='r' c='ngx_count_modules'/>
+<use f='nginx/src/core/ngx_module.c' l='136' u='r' c='ngx_count_modules'/>
+<use f='nginx/src/core/ngx_module.c' l='302' u='r' c='ngx_module_index'/>
+<use f='nginx/src/core/ngx_module.c' l='302' u='r' c='ngx_module_index'/>
+<use f='nginx/src/core/ngx_module.c' l='304' u='r' c='ngx_module_index'/>
+<use f='nginx/src/core/ngx_module.c' l='305' u='r' c='ngx_module_index'/>
+<use f='nginx/src/core/ngx_module.c' l='343' u='r' c='ngx_module_ctx_index'/>
+<use f='nginx/src/core/ngx_module.c' l='343' u='r' c='ngx_module_ctx_index'/>
+<use f='nginx/src/core/ngx_module.c' l='345' u='r' c='ngx_module_ctx_index'/>
+<use f='nginx/src/core/ngx_module.c' l='346' u='r' c='ngx_module_ctx_index'/>
+<use f='nginx/src/event/ngx_event.c' l='1023' u='r' c='ngx_event_use'/>
+<use f='nginx/src/event/ngx_event.c' l='1024' u='r' c='ngx_event_use'/>

@@ -1,0 +1,33 @@
+<dec f='nginx/src/core/ngx_inet.h' l='66' type='ngx_in_cidr_t'/>
+<offset>0</offset>
+<use f='nginx/src/core/ngx_inet.c' l='389' u='m' c='ngx_ptocidr'/>
+<use f='nginx/src/core/ngx_inet.c' l='391' u='m' c='ngx_ptocidr'/>
+<use f='nginx/src/core/ngx_inet.c' l='395' u='m' c='ngx_ptocidr'/>
+<use f='nginx/src/core/ngx_inet.c' l='454' u='m' c='ngx_ptocidr'/>
+<use f='nginx/src/core/ngx_inet.c' l='458' u='m' c='ngx_ptocidr'/>
+<use f='nginx/src/core/ngx_inet.c' l='461' u='m' c='ngx_ptocidr'/>
+<use f='nginx/src/core/ngx_inet.c' l='461' u='m' c='ngx_ptocidr'/>
+<use f='nginx/src/core/ngx_inet.c' l='461' u='m' c='ngx_ptocidr'/>
+<use f='nginx/src/core/ngx_inet.c' l='465' u='m' c='ngx_ptocidr'/>
+<use f='nginx/src/core/ngx_inet.c' l='465' u='m' c='ngx_ptocidr'/>
+<use f='nginx/src/core/ngx_inet.c' l='543' u='m' c='ngx_cidr_match'/>
+<use f='nginx/src/core/ngx_inet.c' l='543' u='m' c='ngx_cidr_match'/>
+<use f='nginx/src/http/modules/ngx_http_access_module.c' l='355' u='m' c='ngx_http_access_rule'/>
+<use f='nginx/src/http/modules/ngx_http_access_module.c' l='356' u='m' c='ngx_http_access_rule'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1064' u='m' c='ngx_http_geo_cidr'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1065' u='m' c='ngx_http_geo_cidr'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1101' u='m' c='ngx_http_geo_cidr'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1101' u='m' c='ngx_http_geo_cidr'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1102' u='m' c='ngx_http_geo_cidr'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1102' u='m' c='ngx_http_geo_cidr'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1117' u='m' c='ngx_http_geo_cidr'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1118' u='m' c='ngx_http_geo_cidr'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1190' u='m' c='ngx_http_geo_cidr_add'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1191' u='m' c='ngx_http_geo_cidr_add'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1204' u='m' c='ngx_http_geo_cidr_add'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1211' u='m' c='ngx_http_geo_cidr_add'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1211' u='m' c='ngx_http_geo_cidr_add'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1218' u='m' c='ngx_http_geo_cidr_add'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1219' u='m' c='ngx_http_geo_cidr_add'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1316' u='m' c='ngx_http_geo_cidr_value'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1317' u='m' c='ngx_http_geo_cidr_value'/>

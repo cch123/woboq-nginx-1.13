@@ -1,0 +1,17 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='390' type='unsigned int'/>
+<offset>8456</offset>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2160' u='w' c='ngx_http_fastcgi_input_filter'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2394' u='w' c='ngx_http_fastcgi_non_buffered_filter'/>
+<use f='nginx/src/http/modules/ngx_http_memcached_module.c' l='431' u='w' c='ngx_http_memcached_process_header'/>
+<use f='nginx/src/http/modules/ngx_http_memcached_module.c' l='499' u='w' c='ngx_http_memcached_filter'/>
+<use f='nginx/src/http/modules/ngx_http_memcached_module.c' l='554' u='w' c='ngx_http_memcached_filter'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1913' u='w' c='ngx_http_proxy_process_header'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1917' u='w' c='ngx_http_proxy_process_header'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1971' u='w' c='ngx_http_proxy_input_filter_init'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1987' u='w' c='ngx_http_proxy_input_filter_init'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='2043' u='w' c='ngx_http_proxy_copy_filter'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='2141' u='w' c='ngx_http_proxy_chunked_filter'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='2226' u='w' c='ngx_http_proxy_non_buffered_copy_filter'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='2306' u='w' c='ngx_http_proxy_non_buffered_chunked_filter'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_keepalive_module.c' l='301' u='r' c='ngx_http_upstream_free_keepalive_peer'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1887' u='w' c='ngx_http_upstream_reinit'/>

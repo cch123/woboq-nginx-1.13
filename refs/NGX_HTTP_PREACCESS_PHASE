@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='117' type='5'/>
+<use f='nginx/src/http/modules/ngx_http_limit_conn_module.c' l='662' u='m' c='ngx_http_limit_conn_init'/>
+<use f='nginx/src/http/modules/ngx_http_limit_req_module.c' l='952' u='m' c='ngx_http_limit_req_init'/>
+<use f='nginx/src/http/ngx_http.c' l='371' u='m' c='ngx_http_init_phases'/>

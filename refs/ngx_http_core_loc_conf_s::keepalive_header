@@ -1,0 +1,15 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='366' type='time_t'/>
+<offset>2560</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='366'>/* keepalive_timeout */</doc>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3394' u='w' c='ngx_http_core_create_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3626' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3626' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3627' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3627' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4792' u='w' c='ngx_http_core_keepalive'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4794' u='r' c='ngx_http_core_keepalive'/>
+<use f='nginx/src/http/ngx_http_header_filter_module.c' l='392' u='r' c='ngx_http_header_filter'/>
+<use f='nginx/src/http/ngx_http_header_filter_module.c' l='562' u='r' c='ngx_http_header_filter'/>
+<use f='nginx/src/http/ngx_http_header_filter_module.c' l='564' u='r' c='ngx_http_header_filter'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1954' u='r' c='ngx_http_variable_sent_keep_alive'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1961' u='r' c='ngx_http_variable_sent_keep_alive'/>

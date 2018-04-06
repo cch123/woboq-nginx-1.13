@@ -1,0 +1,10 @@
+<dec f='nginx/src/core/ngx_regex.h' l='32' type='ngx_int_t'/>
+<offset>192</offset>
+<use f='nginx/src/core/ngx_regex.c' l='105' u='r' c='ngx_regex_compile'/>
+<use f='nginx/src/http/modules/ngx_http_map_module.c' l='547' u='w' c='ngx_http_map'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='4018' u='w' c='ngx_http_proxy_rewrite_regex'/>
+<use f='nginx/src/http/modules/ngx_http_referer_module.c' l='617' u='w' c='ngx_http_add_regex_referer'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='767' u='w' c='ngx_http_rewrite_if_condition'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3042' u='w' c='ngx_http_core_regex_location'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4180' u='w' c='ngx_http_core_server_name'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4892' u='w' c='ngx_http_gzip_disable'/>

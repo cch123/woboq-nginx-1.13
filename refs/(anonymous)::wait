@@ -1,0 +1,16 @@
+<dec f='nginx/src/core/ngx_shmtx.h' l='19' type='ngx_atomic_t'/>
+<dec f='nginx/src/core/ngx_shmtx.h' l='28' type='ngx_atomic_t *'/>
+<offset>64</offset>
+<use f='nginx/src/core/ngx_shmtx.c' l='31' u='w' c='ngx_shmtx_create'/>
+<use f='nginx/src/core/ngx_shmtx.c' l='31' u='a' c='ngx_shmtx_create'/>
+<use f='nginx/src/core/ngx_shmtx.c' l='101' u='r' c='ngx_shmtx_lock'/>
+<use f='nginx/src/core/ngx_shmtx.c' l='104' u='r' c='ngx_shmtx_lock'/>
+<use f='nginx/src/core/ngx_shmtx.c' l='176' u='r' c='ngx_shmtx_wakeup'/>
+<use f='nginx/src/core/ngx_shmtx.c' l='182' u='r' c='ngx_shmtx_wakeup'/>
+<dec f='nginx/src/http/modules/ngx_http_ssi_filter_module.h' l='80' type='ngx_http_request_t *'/>
+<offset>3392</offset>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='427' u='r' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='437' u='r' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='442' u='w' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2187' u='r' c='ngx_http_ssi_include'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2188' u='w' c='ngx_http_ssi_include'/>

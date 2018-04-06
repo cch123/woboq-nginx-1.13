@@ -1,0 +1,4 @@
+<dec f='include/x86_64-linux-gnu/sys/socket.h' l='127' type='int getsockname(int __fd, __SOCKADDR_ARG __addr, socklen_t *restrict __len)'/>
+<doc f='include/x86_64-linux-gnu/sys/socket.h' l='126'>/* Put the local address of FD into *ADDR and its length in *LEN.  */</doc>
+<use f='nginx/src/core/ngx_connection.c' l='160' u='c' c='ngx_set_inherited_sockets'/>
+<use f='nginx/src/core/ngx_connection.c' l='1326' u='c' c='ngx_connection_local_sockaddr'/>

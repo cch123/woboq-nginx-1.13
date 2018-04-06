@@ -1,0 +1,2 @@
+<dec f='nginx/src/event/ngx_event.h' l='365'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='997' u='c'/>

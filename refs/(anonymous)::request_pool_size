@@ -1,0 +1,8 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='190' type='size_t'/>
+<offset>576</offset>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3252' u='w' c='ngx_http_core_create_srv_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3276' u='r' c='ngx_http_core_merge_srv_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3276' u='w' c='ngx_http_core_merge_srv_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3277' u='r' c='ngx_http_core_merge_srv_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3277' u='r' c='ngx_http_core_merge_srv_conf'/>
+<use f='nginx/src/http/ngx_http_request.c' l='532' u='r' c='ngx_http_create_request'/>

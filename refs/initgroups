@@ -1,0 +1,10 @@
+<dec f='include/grp.h' l='198' type='int initgroups(const char * __user, __gid_t __group)'/>
+<doc f='include/grp.h' l='190'>/* Initialize the group set for the current user
+   by reading the group database and using all groups
+   of which USER is a member.  Also include GROUP.
+
+   This function is not part of POSIX and therefore no official
+   cancellation point.  But due to similarity with an POSIX interface
+   or due to the implementation it is a cancellation point and
+   therefore not marked with __THROW.  */</doc>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='836' u='c' c='ngx_worker_process_init'/>

@@ -1,0 +1,8 @@
+<dec f='nginx/src/core/ngx_conf_file.h' l='93' type='void (*)(ngx_open_file_t *, ngx_log_t *)'/>
+<offset>192</offset>
+<use f='nginx/src/core/ngx_conf_file.c' l='953' u='w' c='ngx_conf_open_file'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='983' u='r' c='ngx_conf_flush_files'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='984' u='r' c='ngx_conf_flush_files'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1116' u='r' c='ngx_reopen_files'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1117' u='r' c='ngx_reopen_files'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='1528' u='w' c='ngx_http_log_set_log'/>

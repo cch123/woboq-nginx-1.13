@@ -1,0 +1,12 @@
+<dec f='nginx/src/event/ngx_event.h' l='219'/>
+<doc f='nginx/src/event/ngx_event.h' l='215'>/*
+ * The event filter notifies only the changes and an initial level:
+ * kqueue, epoll.
+ */</doc>
+<use f='nginx/src/core/ngx_resolver.c' l='4438' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4598' u='c'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='372' u='c'/>
+<use f='nginx/src/event/ngx_event.c' l='266' u='c'/>
+<use f='nginx/src/event/ngx_event.c' l='344' u='c'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='275' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='528' u='c'/>

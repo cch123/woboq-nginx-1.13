@@ -1,0 +1,5 @@
+<dec f='nginx/src/event/ngx_event_pipe.h' l='74' type='ssize_t'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='617' u='r' c='ngx_event_pipe_write_to_downstream'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='647' u='r' c='ngx_event_pipe_write_to_downstream'/>
+<offset>1152</offset>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3069' u='w' c='ngx_http_upstream_send_response'/>

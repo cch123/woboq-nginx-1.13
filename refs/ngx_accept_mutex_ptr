@@ -1,0 +1,5 @@
+<dec f='nginx/src/event/ngx_event.h' l='469' type='ngx_atomic_t *'/>
+<def f='nginx/src/event/ngx_event.c' l='51' type='ngx_atomic_t *'/>
+<use f='nginx/src/event/ngx_event.c' l='477' u='r' c='ngx_event_module_init'/>
+<use f='nginx/src/event/ngx_event.c' l='512' u='w' c='ngx_event_module_init'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='577' u='r' c='ngx_unlock_mutexes'/>

@@ -1,0 +1,12 @@
+<dec f='nginx/src/core/ngx_parse.h' l='16' type='ssize_t ngx_parse_size(ngx_str_t * line)'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1213' u='c' c='ngx_conf_set_size_slot'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1341' u='c' c='ngx_conf_set_bufs_slot'/>
+<def f='nginx/src/core/ngx_parse.c' l='12' ll='55' type='ssize_t ngx_parse_size(ngx_str_t * line)'/>
+<use f='nginx/src/http/modules/ngx_http_limit_conn_module.c' l='542' u='c' c='ngx_http_limit_conn_zone'/>
+<use f='nginx/src/http/modules/ngx_http_limit_req_module.c' l='775' u='c' c='ngx_http_limit_req_zone'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='1374' u='c' c='ngx_http_log_set_log'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_zone_module.c' l='87' u='c' c='ngx_http_upstream_zone'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3855' u='c' c='ngx_http_core_listen'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3872' u='c' c='ngx_http_core_listen'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2429' u='c' c='ngx_http_file_cache_set_slot'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='801' u='c' c='ngx_http_variable_request_set_size'/>

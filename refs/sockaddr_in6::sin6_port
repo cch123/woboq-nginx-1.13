@@ -1,0 +1,12 @@
+<dec f='include/netinet/in.h' l='257' type='in_port_t'/>
+<offset>16</offset>
+<doc f='include/netinet/in.h' l='257'>/* Transport layer port # */</doc>
+<use f='nginx/src/core/ngx_inet.c' l='229' u='r' c='ngx_sock_ntop'/>
+<use f='nginx/src/core/ngx_inet.c' l='1033' u='w' c='ngx_parse_inet6_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='1041' u='w' c='ngx_parse_inet6_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='1218' u='w' c='ngx_inet_resolve_host'/>
+<use f='nginx/src/core/ngx_inet.c' l='1387' u='r' c='ngx_cmp_sockaddr'/>
+<use f='nginx/src/core/ngx_inet.c' l='1387' u='r' c='ngx_cmp_sockaddr'/>
+<use f='nginx/src/core/ngx_inet.c' l='1455' u='r' c='ngx_inet_get_port'/>
+<use f='nginx/src/core/ngx_inet.c' l='1483' u='w' c='ngx_inet_set_port'/>
+<use f='nginx/src/core/ngx_proxy_protocol.c' l='304' u='w' c='ngx_proxy_protocol_v2_read'/>

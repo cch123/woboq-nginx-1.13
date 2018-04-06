@@ -1,0 +1,2 @@
+<dec f='nginx/src/http/ngx_http_script.h' l='254' type='void ngx_http_script_nop_code(ngx_http_script_engine_t * e)'/>
+<def f='nginx/src/http/ngx_http_script.c' l='1758' ll='1762' type='void ngx_http_script_nop_code(ngx_http_script_engine_t * e)'/>

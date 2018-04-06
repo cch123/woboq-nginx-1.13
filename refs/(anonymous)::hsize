@@ -1,0 +1,11 @@
+<dec f='nginx/src/core/ngx_hash.h' l='76' type='ngx_uint_t'/>
+<offset>0</offset>
+<use f='nginx/src/core/ngx_hash.c' l='664' u='w' c='ngx_hash_keys_array_init'/>
+<use f='nginx/src/core/ngx_hash.c' l='668' u='w' c='ngx_hash_keys_array_init'/>
+<use f='nginx/src/core/ngx_hash.c' l='691' u='r' c='ngx_hash_keys_array_init'/>
+<use f='nginx/src/core/ngx_hash.c' l='697' u='r' c='ngx_hash_keys_array_init'/>
+<use f='nginx/src/core/ngx_hash.c' l='703' u='r' c='ngx_hash_keys_array_init'/>
+<use f='nginx/src/core/ngx_hash.c' l='786' u='r' c='ngx_hash_add_key'/>
+<use f='nginx/src/core/ngx_hash.c' l='837' u='r' c='ngx_hash_add_key'/>
+<use f='nginx/src/http/modules/ngx_http_map_module.c' l='251' u='r' c='ngx_http_map_block'/>
+<use f='nginx/src/http/modules/ngx_http_map_module.c' l='427' u='r' c='ngx_http_map'/>

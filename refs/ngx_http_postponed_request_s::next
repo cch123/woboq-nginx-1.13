@@ -1,0 +1,13 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='355' type='ngx_http_postponed_request_t *'/>
+<offset>128</offset>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2350' u='w' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2353' u='r' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2353' u='r' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2354' u='w' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_postpone_filter_module.c' l='112' u='r' c='ngx_http_postpone_filter'/>
+<use f='nginx/src/http/ngx_http_postpone_filter_module.c' l='133' u='r' c='ngx_http_postpone_filter'/>
+<use f='nginx/src/http/ngx_http_postpone_filter_module.c' l='147' u='r' c='ngx_http_postpone_filter_add'/>
+<use f='nginx/src/http/ngx_http_postpone_filter_module.c' l='147' u='r' c='ngx_http_postpone_filter_add'/>
+<use f='nginx/src/http/ngx_http_postpone_filter_module.c' l='153' u='a' c='ngx_http_postpone_filter_add'/>
+<use f='nginx/src/http/ngx_http_postpone_filter_module.c' l='168' u='w' c='ngx_http_postpone_filter_add'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2436' u='r' c='ngx_http_finalize_request'/>

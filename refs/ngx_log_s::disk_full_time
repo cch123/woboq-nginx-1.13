@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_log.h' l='56' type='time_t'/>
+<offset>192</offset>
+<use f='nginx/src/core/ngx_log.c' l='172' u='r' c='ngx_log_error_core'/>
+<use f='nginx/src/core/ngx_log.c' l='186' u='w' c='ngx_log_error_core'/>

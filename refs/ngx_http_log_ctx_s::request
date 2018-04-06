@@ -1,0 +1,6 @@
+<dec f='nginx/src/http/ngx_http.h' l='54' type='ngx_http_request_t *'/>
+<offset>64</offset>
+<use f='nginx/src/http/ngx_http_request.c' l='312' u='w' c='ngx_http_init_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='619' u='w' c='ngx_http_create_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3535' u='w' c='ngx_http_free_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3622' u='r' c='ngx_http_log_error'/>

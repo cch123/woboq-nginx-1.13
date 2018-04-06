@@ -1,0 +1,8 @@
+<dec f='include/x86_64-linux-gnu/bits/socket.h' l='230' type='void *'/>
+<offset>0</offset>
+<doc f='include/x86_64-linux-gnu/bits/socket.h' l='230'>/* Address to send to/receive from.  */</doc>
+<use f='nginx/src/event/ngx_event_accept.c' l='381' u='w' c='ngx_event_recvmsg'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='467' u='r' c='ngx_event_recvmsg'/>
+<use f='nginx/src/os/unix/ngx_channel.c' l='74' u='w' c='ngx_write_channel'/>
+<use f='nginx/src/os/unix/ngx_channel.c' l='115' u='w' c='ngx_read_channel'/>
+<use f='nginx/src/os/unix/ngx_udp_sendmsg_chain.c' l='223' u='w' c='ngx_sendmsg'/>

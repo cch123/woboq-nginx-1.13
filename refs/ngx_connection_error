@@ -1,0 +1,25 @@
+<dec f='nginx/src/core/ngx_connection.h' l='218' type='ngx_int_t ngx_connection_error(ngx_connection_t * c, ngx_err_t err, char * text)'/>
+<use f='nginx/src/core/ngx_connection.c' l='1327' u='c' c='ngx_connection_local_sockaddr'/>
+<use f='nginx/src/core/ngx_connection.c' l='1384' u='c' c='ngx_tcp_nodelay'/>
+<def f='nginx/src/core/ngx_connection.c' l='1395' ll='1451' type='ngx_int_t ngx_connection_error(ngx_connection_t * c, ngx_err_t err, char * text)'/>
+<use f='nginx/src/event/ngx_event.c' l='892' u='c' c='ngx_send_lowat'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3078' u='c' c='ngx_http_set_keepalive'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3275' u='c' c='ngx_http_set_lingering_close'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2651' u='c' c='ngx_http_upstream_test_connect'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3299' u='c' c='ngx_http_upstream_process_upgraded'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3305' u='c' c='ngx_http_upstream_process_upgraded'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3473' u='c' c='ngx_http_upstream_process_non_buffered_downstream'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3496' u='c' c='ngx_http_upstream_process_non_buffered_upstream'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3806' u='c' c='ngx_http_upstream_process_downstream'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3852' u='c' c='ngx_http_upstream_process_upstream'/>
+<use f='nginx/src/os/unix/ngx_linux_sendfile_chain.c' l='118' u='c' c='ngx_linux_sendfile_chain'/>
+<use f='nginx/src/os/unix/ngx_linux_sendfile_chain.c' l='143' u='c' c='ngx_linux_sendfile_chain'/>
+<use f='nginx/src/os/unix/ngx_linux_sendfile_chain.c' l='277' u='c' c='ngx_linux_sendfile'/>
+<use f='nginx/src/os/unix/ngx_readv_chain.c' l='201' u='c' c='ngx_readv_chain'/>
+<use f='nginx/src/os/unix/ngx_recv.c' l='154' u='c' c='ngx_unix_recv'/>
+<use f='nginx/src/os/unix/ngx_send.c' l='69' u='c' c='ngx_unix_send'/>
+<use f='nginx/src/os/unix/ngx_udp_recv.c' l='59' u='c' c='ngx_udp_unix_recv'/>
+<use f='nginx/src/os/unix/ngx_udp_send.c' l='32' u='c' c='ngx_udp_unix_send'/>
+<use f='nginx/src/os/unix/ngx_udp_send.c' l='52' u='c' c='ngx_udp_unix_send'/>
+<use f='nginx/src/os/unix/ngx_udp_sendmsg_chain.c' l='329' u='c' c='ngx_sendmsg'/>
+<use f='nginx/src/os/unix/ngx_writev_chain.c' l='210' u='c' c='ngx_writev'/>

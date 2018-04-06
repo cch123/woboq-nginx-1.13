@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_regex.h' l='52'/>
+<use f='nginx/src/core/ngx_regex.c' l='208' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='3440' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1910' u='c'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2518' u='c'/>

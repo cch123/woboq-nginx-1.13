@@ -1,0 +1,4 @@
+<def f='nginx/src/core/ngx_queue.h' l='18' ll='21'/>
+<size>16</size>
+<mbr r='ngx_queue_s::prev' o='0' t='ngx_queue_t *'/>
+<mbr r='ngx_queue_s::next' o='64' t='ngx_queue_t *'/>

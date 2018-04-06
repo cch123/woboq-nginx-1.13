@@ -1,0 +1,398 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ngx_http_copy_filter_module.c source code [nginx/src/http/ngx_http_copy_filter_module.c] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../../../data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../../data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../../data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'nginx/src/http/ngx_http_copy_filter_module.c'; var root_path = '../../..'; var data_path = '../../../../data';</script>
+<script src='../../../../data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../..'>nginx</a>/<a href='..'>src</a>/<a href='./'>http</a>/<a href='ngx_http_copy_filter_module.c.html'>ngx_http_copy_filter_module.c</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td></td></tr>
+<tr><th id="2">2</th><td><i>/*</i></td></tr>
+<tr><th id="3">3</th><td><i> * Copyright (C) Igor Sysoev</i></td></tr>
+<tr><th id="4">4</th><td><i> * Copyright (C) Nginx, Inc.</i></td></tr>
+<tr><th id="5">5</th><td><i> */</i></td></tr>
+<tr><th id="6">6</th><td></td></tr>
+<tr><th id="7">7</th><td></td></tr>
+<tr><th id="8">8</th><td><u>#include <a href="../core/ngx_config.h.html">&lt;ngx_config.h&gt;</a></u></td></tr>
+<tr><th id="9">9</th><td><u>#include <a href="../core/ngx_core.h.html">&lt;ngx_core.h&gt;</a></u></td></tr>
+<tr><th id="10">10</th><td><u>#include <a href="ngx_http.h.html">&lt;ngx_http.h&gt;</a></u></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td></td></tr>
+<tr><th id="13">13</th><td><b>typedef</b> <b>struct</b> {</td></tr>
+<tr><th id="14">14</th><td>    <a class="typedef" href="../core/ngx_buf.h.html#ngx_bufs_t" title='ngx_bufs_t' data-type='struct ngx_bufs_t' data-ref="ngx_bufs_t">ngx_bufs_t</a>  <dfn class="tu decl field" id="(anonymous)::bufs" title='(anonymous struct)::bufs' data-type='ngx_bufs_t' data-ref="(anonymous)::bufs">bufs</dfn>;</td></tr>
+<tr><th id="15">15</th><td>} <dfn class="typedef" id="ngx_http_copy_filter_conf_t" title='ngx_http_copy_filter_conf_t' data-type='struct ngx_http_copy_filter_conf_t' data-ref="ngx_http_copy_filter_conf_t">ngx_http_copy_filter_conf_t</dfn>;</td></tr>
+<tr><th id="16">16</th><td></td></tr>
+<tr><th id="17">17</th><td></td></tr>
+<tr><th id="18">18</th><td><u>#<span data-ppcond="18">if</span> (NGX_HAVE_FILE_AIO)</u></td></tr>
+<tr><th id="19">19</th><td><em>static</em> <em>void</em> ngx_http_copy_aio_handler(ngx_output_chain_ctx_t *ctx,</td></tr>
+<tr><th id="20">20</th><td>    ngx_file_t *file);</td></tr>
+<tr><th id="21">21</th><td><em>static</em> <em>void</em> ngx_http_copy_aio_event_handler(ngx_event_t *ev);</td></tr>
+<tr><th id="22">22</th><td><u>#if (NGX_HAVE_AIO_SENDFILE)</u></td></tr>
+<tr><th id="23">23</th><td><em>static</em> ssize_t ngx_http_copy_aio_sendfile_preload(ngx_buf_t *file);</td></tr>
+<tr><th id="24">24</th><td><em>static</em> <em>void</em> ngx_http_copy_aio_sendfile_event_handler(ngx_event_t *ev);</td></tr>
+<tr><th id="25">25</th><td><u>#endif</u></td></tr>
+<tr><th id="26">26</th><td><u>#<span data-ppcond="18">endif</span></u></td></tr>
+<tr><th id="27">27</th><td><u>#<span data-ppcond="27">if</span> (NGX_THREADS)</u></td></tr>
+<tr><th id="28">28</th><td><em>static</em> ngx_int_t ngx_http_copy_thread_handler(ngx_thread_task_t *task,</td></tr>
+<tr><th id="29">29</th><td>    ngx_file_t *file);</td></tr>
+<tr><th id="30">30</th><td><em>static</em> <em>void</em> ngx_http_copy_thread_event_handler(ngx_event_t *ev);</td></tr>
+<tr><th id="31">31</th><td><u>#<span data-ppcond="27">endif</span></u></td></tr>
+<tr><th id="32">32</th><td></td></tr>
+<tr><th id="33">33</th><td><em>static</em> <em>void</em> *<a class="tu decl fn" href="#ngx_http_copy_filter_create_conf" title='ngx_http_copy_filter_create_conf' data-type='void * ngx_http_copy_filter_create_conf(ngx_conf_t * cf)' data-ref="ngx_http_copy_filter_create_conf">ngx_http_copy_filter_create_conf</a>(<a class="typedef" href="../core/ngx_core.h.html#ngx_conf_t" title='ngx_conf_t' data-type='struct ngx_conf_s' data-ref="ngx_conf_t">ngx_conf_t</a> *<dfn class="local col1 decl" id="1cf" title='cf' data-type='ngx_conf_t *' data-ref="1cf">cf</dfn>);</td></tr>
+<tr><th id="34">34</th><td><em>static</em> <em>char</em> *<a class="tu decl fn" href="#ngx_http_copy_filter_merge_conf" title='ngx_http_copy_filter_merge_conf' data-type='char * ngx_http_copy_filter_merge_conf(ngx_conf_t * cf, void * parent, void * child)' data-ref="ngx_http_copy_filter_merge_conf">ngx_http_copy_filter_merge_conf</a>(<a class="typedef" href="../core/ngx_core.h.html#ngx_conf_t" title='ngx_conf_t' data-type='struct ngx_conf_s' data-ref="ngx_conf_t">ngx_conf_t</a> *<dfn class="local col2 decl" id="2cf" title='cf' data-type='ngx_conf_t *' data-ref="2cf">cf</dfn>,</td></tr>
+<tr><th id="35">35</th><td>    <em>void</em> *<dfn class="local col3 decl" id="3parent" title='parent' data-type='void *' data-ref="3parent">parent</dfn>, <em>void</em> *<dfn class="local col4 decl" id="4child" title='child' data-type='void *' data-ref="4child">child</dfn>);</td></tr>
+<tr><th id="36">36</th><td><em>static</em> <a class="typedef" href="../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a> <a class="tu decl fn" href="#ngx_http_copy_filter_init" title='ngx_http_copy_filter_init' data-type='ngx_int_t ngx_http_copy_filter_init(ngx_conf_t * cf)' data-ref="ngx_http_copy_filter_init">ngx_http_copy_filter_init</a>(<a class="typedef" href="../core/ngx_core.h.html#ngx_conf_t" title='ngx_conf_t' data-type='struct ngx_conf_s' data-ref="ngx_conf_t">ngx_conf_t</a> *<dfn class="local col5 decl" id="5cf" title='cf' data-type='ngx_conf_t *' data-ref="5cf">cf</dfn>);</td></tr>
+<tr><th id="37">37</th><td></td></tr>
+<tr><th id="38">38</th><td></td></tr>
+<tr><th id="39">39</th><td><em>static</em> <a class="typedef" href="../core/ngx_core.h.html#ngx_command_t" title='ngx_command_t' data-type='struct ngx_command_s' data-ref="ngx_command_t">ngx_command_t</a>  <dfn class="tu decl def" id="ngx_http_copy_filter_commands" title='ngx_http_copy_filter_commands' data-type='ngx_command_t [2]' data-ref="ngx_http_copy_filter_commands">ngx_http_copy_filter_commands</dfn>[] = {</td></tr>
+<tr><th id="40">40</th><td></td></tr>
+<tr><th id="41">41</th><td>    { <a class="macro" href="../core/ngx_string.h.html#40" title="{ sizeof(&quot;output_buffers&quot;) - 1, (u_char *) &quot;output_buffers&quot; }" data-ref="_M/ngx_string">ngx_string</a>(<q>"output_buffers"</q>),</td></tr>
+<tr><th id="42">42</th><td>      <a class="macro" href="ngx_http_config.h.html#41" title="0x02000000" data-ref="_M/NGX_HTTP_MAIN_CONF">NGX_HTTP_MAIN_CONF</a>|<a class="macro" href="ngx_http_config.h.html#42" title="0x04000000" data-ref="_M/NGX_HTTP_SRV_CONF">NGX_HTTP_SRV_CONF</a>|<a class="macro" href="ngx_http_config.h.html#43" title="0x08000000" data-ref="_M/NGX_HTTP_LOC_CONF">NGX_HTTP_LOC_CONF</a>|<a class="macro" href="../core/ngx_conf_file.h.html#24" title="0x00000004" data-ref="_M/NGX_CONF_TAKE2">NGX_CONF_TAKE2</a>,</td></tr>
+<tr><th id="43">43</th><td>      <a class="ref fn" href="../core/ngx_conf_file.h.html#ngx_conf_set_bufs_slot" title='ngx_conf_set_bufs_slot' data-ref="ngx_conf_set_bufs_slot">ngx_conf_set_bufs_slot</a>,</td></tr>
+<tr><th id="44">44</th><td>      <a class="macro" href="ngx_http_config.h.html#52" title="__builtin_offsetof(ngx_http_conf_ctx_t, loc_conf)" data-ref="_M/NGX_HTTP_LOC_CONF_OFFSET">NGX_HTTP_LOC_CONF_OFFSET</a>,</td></tr>
+<tr><th id="45">45</th><td>      <span class="macro" title="__builtin_offsetof(ngx_http_copy_filter_conf_t, bufs)" data-ref="_M/offsetof">offsetof</span>(<a class="typedef" href="#ngx_http_copy_filter_conf_t" title='ngx_http_copy_filter_conf_t' data-type='struct ngx_http_copy_filter_conf_t' data-ref="ngx_http_copy_filter_conf_t">ngx_http_copy_filter_conf_t</a>, bufs),</td></tr>
+<tr><th id="46">46</th><td>      <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span> },</td></tr>
+<tr><th id="47">47</th><td></td></tr>
+<tr><th id="48">48</th><td>      <a class="macro" href="../core/ngx_conf_file.h.html#86" title="{ { 0, ((void*)0) }, 0, ((void*)0), 0, 0, ((void*)0) }" data-ref="_M/ngx_null_command">ngx_null_command</a></td></tr>
+<tr><th id="49">49</th><td>};</td></tr>
+<tr><th id="50">50</th><td></td></tr>
+<tr><th id="51">51</th><td></td></tr>
+<tr><th id="52">52</th><td><em>static</em> <a class="typedef" href="ngx_http_config.h.html#ngx_http_module_t" title='ngx_http_module_t' data-type='struct ngx_http_module_t' data-ref="ngx_http_module_t">ngx_http_module_t</a>  <dfn class="tu decl def" id="ngx_http_copy_filter_module_ctx" title='ngx_http_copy_filter_module_ctx' data-type='ngx_http_module_t' data-ref="ngx_http_copy_filter_module_ctx">ngx_http_copy_filter_module_ctx</dfn> = {</td></tr>
+<tr><th id="53">53</th><td>    <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>,                                  <i>/* preconfiguration */</i></td></tr>
+<tr><th id="54">54</th><td>    <a class="tu ref fn" href="#ngx_http_copy_filter_init" title='ngx_http_copy_filter_init' data-ref="ngx_http_copy_filter_init">ngx_http_copy_filter_init</a>,             <i>/* postconfiguration */</i></td></tr>
+<tr><th id="55">55</th><td></td></tr>
+<tr><th id="56">56</th><td>    <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>,                                  <i>/* create main configuration */</i></td></tr>
+<tr><th id="57">57</th><td>    <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>,                                  <i>/* init main configuration */</i></td></tr>
+<tr><th id="58">58</th><td></td></tr>
+<tr><th id="59">59</th><td>    <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>,                                  <i>/* create server configuration */</i></td></tr>
+<tr><th id="60">60</th><td>    <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>,                                  <i>/* merge server configuration */</i></td></tr>
+<tr><th id="61">61</th><td></td></tr>
+<tr><th id="62">62</th><td>    <a class="tu ref fn" href="#ngx_http_copy_filter_create_conf" title='ngx_http_copy_filter_create_conf' data-ref="ngx_http_copy_filter_create_conf">ngx_http_copy_filter_create_conf</a>,      <i>/* create location configuration */</i></td></tr>
+<tr><th id="63">63</th><td>    <a class="tu ref fn" href="#ngx_http_copy_filter_merge_conf" title='ngx_http_copy_filter_merge_conf' data-ref="ngx_http_copy_filter_merge_conf">ngx_http_copy_filter_merge_conf</a>        <i>/* merge location configuration */</i></td></tr>
+<tr><th id="64">64</th><td>};</td></tr>
+<tr><th id="65">65</th><td></td></tr>
+<tr><th id="66">66</th><td></td></tr>
+<tr><th id="67">67</th><td><a class="typedef" href="../core/ngx_core.h.html#ngx_module_t" title='ngx_module_t' data-type='struct ngx_module_s' data-ref="ngx_module_t">ngx_module_t</a>  <dfn class="decl def" id="ngx_http_copy_filter_module" title='ngx_http_copy_filter_module' data-ref="ngx_http_copy_filter_module">ngx_http_copy_filter_module</dfn> = {</td></tr>
+<tr><th id="68">68</th><td>    <a class="macro" href="../core/ngx_module.h.html#215" title="(ngx_uint_t) -1, (ngx_uint_t) -1, ((void*)0), 0, 0, 1013011, &quot;8&quot; &quot;,&quot; &quot;4&quot; &quot;,&quot; &quot;8&quot; &quot;,&quot; &quot;0&quot; &quot;0&quot; &quot;0&quot; &quot;0&quot; &quot;1&quot; &quot;1&quot; &quot;1&quot; &quot;1&quot; &quot;1&quot; &quot;1&quot; &quot;0&quot; &quot;1&quot; &quot;0&quot; &quot;1&quot; &quot;1&quot; &quot;1&quot; &quot;0&quot; &quot;0&quot; &quot;1&quot; &quot;1&quot; &quot;1&quot; &quot;0&quot; &quot;1&quot; &quot;0&quot; &quot;1&quot; &quot;1&quot; &quot;1&quot; &quot;1&quot; &quot;0&quot; &quot;0&quot; &quot;0&quot; &quot;1&quot; &quot;1&quot; &quot;0&quot;" data-ref="_M/NGX_MODULE_V1">NGX_MODULE_V1</a>,</td></tr>
+<tr><th id="69">69</th><td>    &amp;<a class="tu ref" href="#ngx_http_copy_filter_module_ctx" title='ngx_http_copy_filter_module_ctx' data-use='a' data-ref="ngx_http_copy_filter_module_ctx">ngx_http_copy_filter_module_ctx</a>,      <i>/* module context */</i></td></tr>
+<tr><th id="70">70</th><td>    <a class="tu ref" href="#ngx_http_copy_filter_commands" title='ngx_http_copy_filter_commands' data-ref="ngx_http_copy_filter_commands">ngx_http_copy_filter_commands</a>,         <i>/* module directives */</i></td></tr>
+<tr><th id="71">71</th><td>    <a class="macro" href="ngx_http_config.h.html#39" title="0x50545448" data-ref="_M/NGX_HTTP_MODULE">NGX_HTTP_MODULE</a>,                       <i>/* module type */</i></td></tr>
+<tr><th id="72">72</th><td>    <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>,                                  <i>/* init master */</i></td></tr>
+<tr><th id="73">73</th><td>    <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>,                                  <i>/* init module */</i></td></tr>
+<tr><th id="74">74</th><td>    <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>,                                  <i>/* init process */</i></td></tr>
+<tr><th id="75">75</th><td>    <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>,                                  <i>/* init thread */</i></td></tr>
+<tr><th id="76">76</th><td>    <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>,                                  <i>/* exit thread */</i></td></tr>
+<tr><th id="77">77</th><td>    <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>,                                  <i>/* exit process */</i></td></tr>
+<tr><th id="78">78</th><td>    <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>,                                  <i>/* exit master */</i></td></tr>
+<tr><th id="79">79</th><td>    <a class="macro" href="../core/ngx_module.h.html#219" title="0, 0, 0, 0, 0, 0, 0, 0" data-ref="_M/NGX_MODULE_V1_PADDING">NGX_MODULE_V1_PADDING</a></td></tr>
+<tr><th id="80">80</th><td>};</td></tr>
+<tr><th id="81">81</th><td></td></tr>
+<tr><th id="82">82</th><td></td></tr>
+<tr><th id="83">83</th><td><em>static</em> <a class="typedef" href="ngx_http_core_module.h.html#ngx_http_output_body_filter_pt" title='ngx_http_output_body_filter_pt' data-type='ngx_int_t (*)(ngx_http_request_t *, ngx_chain_t *)' data-ref="ngx_http_output_body_filter_pt">ngx_http_output_body_filter_pt</a>    <dfn class="tu decl def" id="ngx_http_next_body_filter" title='ngx_http_next_body_filter' data-type='ngx_http_output_body_filter_pt' data-ref="ngx_http_next_body_filter">ngx_http_next_body_filter</dfn>;</td></tr>
+<tr><th id="84">84</th><td></td></tr>
+<tr><th id="85">85</th><td></td></tr>
+<tr><th id="86">86</th><td><em>static</em> <a class="typedef" href="../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a></td></tr>
+<tr><th id="87">87</th><td><dfn class="tu decl def fn" id="ngx_http_copy_filter" title='ngx_http_copy_filter' data-type='ngx_int_t ngx_http_copy_filter(ngx_http_request_t * r, ngx_chain_t * in)' data-ref="ngx_http_copy_filter">ngx_http_copy_filter</dfn>(<a class="typedef" href="ngx_http.h.html#ngx_http_request_t" title='ngx_http_request_t' data-type='struct ngx_http_request_s' data-ref="ngx_http_request_t">ngx_http_request_t</a> *<dfn class="local col6 decl" id="6r" title='r' data-type='ngx_http_request_t *' data-ref="6r">r</dfn>, <a class="typedef" href="../core/ngx_core.h.html#ngx_chain_t" title='ngx_chain_t' data-type='struct ngx_chain_s' data-ref="ngx_chain_t">ngx_chain_t</a> *<dfn class="local col7 decl" id="7in" title='in' data-type='ngx_chain_t *' data-ref="7in">in</dfn>)</td></tr>
+<tr><th id="88">88</th><td>{</td></tr>
+<tr><th id="89">89</th><td>    <a class="typedef" href="../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a>                     <dfn class="local col8 decl" id="8rc" title='rc' data-type='ngx_int_t' data-ref="8rc">rc</dfn>;</td></tr>
+<tr><th id="90">90</th><td>    <a class="typedef" href="../core/ngx_core.h.html#ngx_connection_t" title='ngx_connection_t' data-type='struct ngx_connection_s' data-ref="ngx_connection_t">ngx_connection_t</a>             *<dfn class="local col9 decl" id="9c" title='c' data-type='ngx_connection_t *' data-ref="9c">c</dfn>;</td></tr>
+<tr><th id="91">91</th><td>    <a class="typedef" href="../core/ngx_buf.h.html#ngx_output_chain_ctx_t" title='ngx_output_chain_ctx_t' data-type='struct ngx_output_chain_ctx_s' data-ref="ngx_output_chain_ctx_t">ngx_output_chain_ctx_t</a>       *<dfn class="local col0 decl" id="10ctx" title='ctx' data-type='ngx_output_chain_ctx_t *' data-ref="10ctx">ctx</dfn>;</td></tr>
+<tr><th id="92">92</th><td>    <a class="typedef" href="ngx_http_core_module.h.html#ngx_http_core_loc_conf_t" title='ngx_http_core_loc_conf_t' data-type='struct ngx_http_core_loc_conf_s' data-ref="ngx_http_core_loc_conf_t">ngx_http_core_loc_conf_t</a>     *<dfn class="local col1 decl" id="11clcf" title='clcf' data-type='ngx_http_core_loc_conf_t *' data-ref="11clcf">clcf</dfn>;</td></tr>
+<tr><th id="93">93</th><td>    <a class="typedef" href="#ngx_http_copy_filter_conf_t" title='ngx_http_copy_filter_conf_t' data-type='struct ngx_http_copy_filter_conf_t' data-ref="ngx_http_copy_filter_conf_t">ngx_http_copy_filter_conf_t</a>  *<dfn class="local col2 decl" id="12conf" title='conf' data-type='ngx_http_copy_filter_conf_t *' data-ref="12conf">conf</dfn>;</td></tr>
+<tr><th id="94">94</th><td></td></tr>
+<tr><th id="95">95</th><td>    <a class="local col9 ref" href="#9c" title='c' data-ref="9c">c</a> = <a class="local col6 ref" href="#6r" title='r' data-ref="6r">r</a>-&gt;<a class="ref field" href="ngx_http_request.h.html#ngx_http_request_s::connection" title='ngx_http_request_s::connection' data-ref="ngx_http_request_s::connection">connection</a>;</td></tr>
+<tr><th id="96">96</th><td></td></tr>
+<tr><th id="97">97</th><td>    <a class="macro" href="../core/ngx_log.h.html#217" title="" data-ref="_M/ngx_log_debug2">ngx_log_debug2</a>(NGX_LOG_DEBUG_HTTP, c-&gt;log, <var>0</var>,</td></tr>
+<tr><th id="98">98</th><td>                   <q>"http copy filter: \"%V?%V\""</q>, &amp;r-&gt;uri, &amp;r-&gt;args);</td></tr>
+<tr><th id="99">99</th><td></td></tr>
+<tr><th id="100">100</th><td>    <a class="local col0 ref" href="#10ctx" title='ctx' data-ref="10ctx">ctx</a> = <a class="macro" href="ngx_http.h.html#75" title="(r)-&gt;ctx[ngx_http_copy_filter_module.ctx_index]" data-ref="_M/ngx_http_get_module_ctx">ngx_http_get_module_ctx</a>(<a class="local col6 ref" href="#6r" title='r' data-ref="6r">r</a>, <a class="ref" href="#ngx_http_copy_filter_module" title='ngx_http_copy_filter_module' data-ref="ngx_http_copy_filter_module">ngx_http_copy_filter_module</a>);</td></tr>
+<tr><th id="101">101</th><td></td></tr>
+<tr><th id="102">102</th><td>    <b>if</b> (<a class="local col0 ref" href="#10ctx" title='ctx' data-ref="10ctx">ctx</a> == <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>) {</td></tr>
+<tr><th id="103">103</th><td>        <a class="local col0 ref" href="#10ctx" title='ctx' data-ref="10ctx">ctx</a> = <a class="ref fn" href="../core/ngx_palloc.h.html#ngx_pcalloc" title='ngx_pcalloc' data-ref="ngx_pcalloc">ngx_pcalloc</a>(<a class="local col6 ref" href="#6r" title='r' data-ref="6r">r</a>-&gt;<a class="ref field" href="ngx_http_request.h.html#ngx_http_request_s::pool" title='ngx_http_request_s::pool' data-ref="ngx_http_request_s::pool">pool</a>, <b>sizeof</b>(<a class="typedef" href="../core/ngx_buf.h.html#ngx_output_chain_ctx_t" title='ngx_output_chain_ctx_t' data-type='struct ngx_output_chain_ctx_s' data-ref="ngx_output_chain_ctx_t">ngx_output_chain_ctx_t</a>));</td></tr>
+<tr><th id="104">104</th><td>        <b>if</b> (<a class="local col0 ref" href="#10ctx" title='ctx' data-ref="10ctx">ctx</a> == <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>) {</td></tr>
+<tr><th id="105">105</th><td>            <b>return</b> <a class="macro" href="../core/ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>;</td></tr>
+<tr><th id="106">106</th><td>        }</td></tr>
+<tr><th id="107">107</th><td></td></tr>
+<tr><th id="108">108</th><td>        <a class="macro" href="ngx_http.h.html#76" title="r-&gt;ctx[ngx_http_copy_filter_module.ctx_index] = ctx;" data-ref="_M/ngx_http_set_ctx">ngx_http_set_ctx</a>(<a class="local col6 ref" href="#6r" title='r' data-ref="6r">r</a>, <a class="local col0 ref" href="#10ctx" title='ctx' data-ref="10ctx">ctx</a>, <a class="ref" href="#ngx_http_copy_filter_module" title='ngx_http_copy_filter_module' data-ref="ngx_http_copy_filter_module">ngx_http_copy_filter_module</a>);</td></tr>
+<tr><th id="109">109</th><td></td></tr>
+<tr><th id="110">110</th><td>        <a class="local col2 ref" href="#12conf" title='conf' data-ref="12conf">conf</a> = <a class="macro" href="ngx_http_config.h.html#58" title="(r)-&gt;loc_conf[ngx_http_copy_filter_module.ctx_index]" data-ref="_M/ngx_http_get_module_loc_conf">ngx_http_get_module_loc_conf</a>(<a class="local col6 ref" href="#6r" title='r' data-ref="6r">r</a>, <a class="ref" href="#ngx_http_copy_filter_module" title='ngx_http_copy_filter_module' data-ref="ngx_http_copy_filter_module">ngx_http_copy_filter_module</a>);</td></tr>
+<tr><th id="111">111</th><td>        <a class="local col1 ref" href="#11clcf" title='clcf' data-ref="11clcf">clcf</a> = <a class="macro" href="ngx_http_config.h.html#58" title="(r)-&gt;loc_conf[ngx_http_core_module.ctx_index]" data-ref="_M/ngx_http_get_module_loc_conf">ngx_http_get_module_loc_conf</a>(<a class="local col6 ref" href="#6r" title='r' data-ref="6r">r</a>, <a class="ref" href="ngx_http_core_module.h.html#ngx_http_core_module" title='ngx_http_core_module' data-ref="ngx_http_core_module">ngx_http_core_module</a>);</td></tr>
+<tr><th id="112">112</th><td></td></tr>
+<tr><th id="113">113</th><td>        <a class="local col0 ref" href="#10ctx" title='ctx' data-ref="10ctx">ctx</a>-&gt;<a class="ref field" href="../core/ngx_buf.h.html#ngx_output_chain_ctx_s::sendfile" title='ngx_output_chain_ctx_s::sendfile' data-ref="ngx_output_chain_ctx_s::sendfile">sendfile</a> = <a class="local col9 ref" href="#9c" title='c' data-ref="9c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::sendfile" title='ngx_connection_s::sendfile' data-ref="ngx_connection_s::sendfile">sendfile</a>;</td></tr>
+<tr><th id="114">114</th><td>        <a class="local col0 ref" href="#10ctx" title='ctx' data-ref="10ctx">ctx</a>-&gt;<a class="ref field" href="../core/ngx_buf.h.html#ngx_output_chain_ctx_s::need_in_memory" title='ngx_output_chain_ctx_s::need_in_memory' data-ref="ngx_output_chain_ctx_s::need_in_memory">need_in_memory</a> = <a class="local col6 ref" href="#6r" title='r' data-ref="6r">r</a>-&gt;<a class="ref field" href="ngx_http_request.h.html#ngx_http_request_s::main_filter_need_in_memory" title='ngx_http_request_s::main_filter_need_in_memory' data-ref="ngx_http_request_s::main_filter_need_in_memory">main_filter_need_in_memory</a></td></tr>
+<tr><th id="115">115</th><td>                              || <a class="local col6 ref" href="#6r" title='r' data-ref="6r">r</a>-&gt;<a class="ref field" href="ngx_http_request.h.html#ngx_http_request_s::filter_need_in_memory" title='ngx_http_request_s::filter_need_in_memory' data-ref="ngx_http_request_s::filter_need_in_memory">filter_need_in_memory</a>;</td></tr>
+<tr><th id="116">116</th><td>        <a class="local col0 ref" href="#10ctx" title='ctx' data-ref="10ctx">ctx</a>-&gt;<a class="ref field" href="../core/ngx_buf.h.html#ngx_output_chain_ctx_s::need_in_temp" title='ngx_output_chain_ctx_s::need_in_temp' data-ref="ngx_output_chain_ctx_s::need_in_temp">need_in_temp</a> = <a class="local col6 ref" href="#6r" title='r' data-ref="6r">r</a>-&gt;<a class="ref field" href="ngx_http_request.h.html#ngx_http_request_s::filter_need_temporary" title='ngx_http_request_s::filter_need_temporary' data-ref="ngx_http_request_s::filter_need_temporary">filter_need_temporary</a>;</td></tr>
+<tr><th id="117">117</th><td></td></tr>
+<tr><th id="118">118</th><td>        <a class="local col0 ref" href="#10ctx" title='ctx' data-ref="10ctx">ctx</a>-&gt;<a class="ref field" href="../core/ngx_buf.h.html#ngx_output_chain_ctx_s::alignment" title='ngx_output_chain_ctx_s::alignment' data-ref="ngx_output_chain_ctx_s::alignment">alignment</a> = <a class="local col1 ref" href="#11clcf" title='clcf' data-ref="11clcf">clcf</a>-&gt;<a class="ref field" href="ngx_http_core_module.h.html#ngx_http_core_loc_conf_s::directio_alignment" title='ngx_http_core_loc_conf_s::directio_alignment' data-ref="ngx_http_core_loc_conf_s::directio_alignment">directio_alignment</a>;</td></tr>
+<tr><th id="119">119</th><td></td></tr>
+<tr><th id="120">120</th><td>        <a class="local col0 ref" href="#10ctx" title='ctx' data-ref="10ctx">ctx</a>-&gt;<a class="ref field" href="../core/ngx_buf.h.html#ngx_output_chain_ctx_s::pool" title='ngx_output_chain_ctx_s::pool' data-ref="ngx_output_chain_ctx_s::pool">pool</a> = <a class="local col6 ref" href="#6r" title='r' data-ref="6r">r</a>-&gt;<a class="ref field" href="ngx_http_request.h.html#ngx_http_request_s::pool" title='ngx_http_request_s::pool' data-ref="ngx_http_request_s::pool">pool</a>;</td></tr>
+<tr><th id="121">121</th><td>        <a class="local col0 ref" href="#10ctx" title='ctx' data-ref="10ctx">ctx</a>-&gt;<a class="ref field" href="../core/ngx_buf.h.html#ngx_output_chain_ctx_s::bufs" title='ngx_output_chain_ctx_s::bufs' data-ref="ngx_output_chain_ctx_s::bufs">bufs</a> = <a class="local col2 ref" href="#12conf" title='conf' data-ref="12conf">conf</a>-&gt;<a class="tu ref field" href="#(anonymous)::bufs" title='(anonymous struct)::bufs' data-use='r' data-ref="(anonymous)::bufs">bufs</a>;</td></tr>
+<tr><th id="122">122</th><td>        <a class="local col0 ref" href="#10ctx" title='ctx' data-ref="10ctx">ctx</a>-&gt;<a class="ref field" href="../core/ngx_buf.h.html#ngx_output_chain_ctx_s::tag" title='ngx_output_chain_ctx_s::tag' data-ref="ngx_output_chain_ctx_s::tag">tag</a> = (<a class="typedef" href="../core/ngx_buf.h.html#ngx_buf_tag_t" title='ngx_buf_tag_t' data-type='void *' data-ref="ngx_buf_tag_t">ngx_buf_tag_t</a>) &amp;<a class="ref" href="#ngx_http_copy_filter_module" title='ngx_http_copy_filter_module' data-ref="ngx_http_copy_filter_module">ngx_http_copy_filter_module</a>;</td></tr>
+<tr><th id="123">123</th><td></td></tr>
+<tr><th id="124">124</th><td>        <a class="local col0 ref" href="#10ctx" title='ctx' data-ref="10ctx">ctx</a>-&gt;<a class="ref field" href="../core/ngx_buf.h.html#ngx_output_chain_ctx_s::output_filter" title='ngx_output_chain_ctx_s::output_filter' data-ref="ngx_output_chain_ctx_s::output_filter">output_filter</a> = (<a class="typedef" href="../core/ngx_buf.h.html#ngx_output_chain_filter_pt" title='ngx_output_chain_filter_pt' data-type='ngx_int_t (*)(void *, ngx_chain_t *)' data-ref="ngx_output_chain_filter_pt">ngx_output_chain_filter_pt</a>)</td></tr>
+<tr><th id="125">125</th><td>                                  <a class="tu ref" href="#ngx_http_next_body_filter" title='ngx_http_next_body_filter' data-use='r' data-ref="ngx_http_next_body_filter">ngx_http_next_body_filter</a>;</td></tr>
+<tr><th id="126">126</th><td>        <a class="local col0 ref" href="#10ctx" title='ctx' data-ref="10ctx">ctx</a>-&gt;<a class="ref field" href="../core/ngx_buf.h.html#ngx_output_chain_ctx_s::filter_ctx" title='ngx_output_chain_ctx_s::filter_ctx' data-ref="ngx_output_chain_ctx_s::filter_ctx">filter_ctx</a> = <a class="local col6 ref" href="#6r" title='r' data-ref="6r">r</a>;</td></tr>
+<tr><th id="127">127</th><td></td></tr>
+<tr><th id="128">128</th><td><u>#<span data-ppcond="128">if</span> (NGX_HAVE_FILE_AIO)</u></td></tr>
+<tr><th id="129">129</th><td>        <b>if</b> (ngx_file_aio &amp;&amp; clcf-&gt;aio == NGX_HTTP_AIO_ON) {</td></tr>
+<tr><th id="130">130</th><td>            ctx-&gt;aio_handler = ngx_http_copy_aio_handler;</td></tr>
+<tr><th id="131">131</th><td><u>#if (NGX_HAVE_AIO_SENDFILE)</u></td></tr>
+<tr><th id="132">132</th><td>            ctx-&gt;aio_preload = ngx_http_copy_aio_sendfile_preload;</td></tr>
+<tr><th id="133">133</th><td><u>#endif</u></td></tr>
+<tr><th id="134">134</th><td>        }</td></tr>
+<tr><th id="135">135</th><td><u>#<span data-ppcond="128">endif</span></u></td></tr>
+<tr><th id="136">136</th><td></td></tr>
+<tr><th id="137">137</th><td><u>#<span data-ppcond="137">if</span> (NGX_THREADS)</u></td></tr>
+<tr><th id="138">138</th><td>        <b>if</b> (clcf-&gt;aio == NGX_HTTP_AIO_THREADS) {</td></tr>
+<tr><th id="139">139</th><td>            ctx-&gt;thread_handler = ngx_http_copy_thread_handler;</td></tr>
+<tr><th id="140">140</th><td>        }</td></tr>
+<tr><th id="141">141</th><td><u>#<span data-ppcond="137">endif</span></u></td></tr>
+<tr><th id="142">142</th><td></td></tr>
+<tr><th id="143">143</th><td>        <b>if</b> (<a class="local col7 ref" href="#7in" title='in' data-ref="7in">in</a> &amp;&amp; <a class="local col7 ref" href="#7in" title='in' data-ref="7in">in</a>-&gt;<a class="ref field" href="../core/ngx_buf.h.html#ngx_chain_s::buf" title='ngx_chain_s::buf' data-ref="ngx_chain_s::buf">buf</a> &amp;&amp; <a class="macro" href="../core/ngx_buf.h.html#139" title="((in-&gt;buf-&gt;temporary || in-&gt;buf-&gt;memory || in-&gt;buf-&gt;mmap) ? (off_t) (in-&gt;buf-&gt;last - in-&gt;buf-&gt;pos): (in-&gt;buf-&gt;file_last - in-&gt;buf-&gt;file_pos))" data-ref="_M/ngx_buf_size">ngx_buf_size</a>(<a class="local col7 ref" href="#7in" title='in' data-ref="7in">in</a>-&gt;<a class="ref field" href="../core/ngx_buf.h.html#ngx_chain_s::buf" title='ngx_chain_s::buf' data-ref="ngx_chain_s::buf">buf</a>)) {</td></tr>
+<tr><th id="144">144</th><td>            <a class="local col6 ref" href="#6r" title='r' data-ref="6r">r</a>-&gt;<a class="ref field" href="ngx_http_request.h.html#ngx_http_request_s::request_output" title='ngx_http_request_s::request_output' data-ref="ngx_http_request_s::request_output">request_output</a> = <var>1</var>;</td></tr>
+<tr><th id="145">145</th><td>        }</td></tr>
+<tr><th id="146">146</th><td>    }</td></tr>
+<tr><th id="147">147</th><td></td></tr>
+<tr><th id="148">148</th><td><u>#<span data-ppcond="148">if</span> (NGX_HAVE_FILE_AIO || NGX_THREADS)</u></td></tr>
+<tr><th id="149">149</th><td>    ctx-&gt;aio = r-&gt;aio;</td></tr>
+<tr><th id="150">150</th><td><u>#<span data-ppcond="148">endif</span></u></td></tr>
+<tr><th id="151">151</th><td></td></tr>
+<tr><th id="152">152</th><td>    <a class="local col8 ref" href="#8rc" title='rc' data-ref="8rc">rc</a> = <a class="ref fn" href="../core/ngx_buf.h.html#ngx_output_chain" title='ngx_output_chain' data-ref="ngx_output_chain">ngx_output_chain</a>(<a class="local col0 ref" href="#10ctx" title='ctx' data-ref="10ctx">ctx</a>, <a class="local col7 ref" href="#7in" title='in' data-ref="7in">in</a>);</td></tr>
+<tr><th id="153">153</th><td></td></tr>
+<tr><th id="154">154</th><td>    <b>if</b> (<a class="local col0 ref" href="#10ctx" title='ctx' data-ref="10ctx">ctx</a>-&gt;<a class="ref field" href="../core/ngx_buf.h.html#ngx_output_chain_ctx_s::in" title='ngx_output_chain_ctx_s::in' data-ref="ngx_output_chain_ctx_s::in">in</a> == <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>) {</td></tr>
+<tr><th id="155">155</th><td>        <a class="local col6 ref" href="#6r" title='r' data-ref="6r">r</a>-&gt;<a class="ref field" href="ngx_http_request.h.html#ngx_http_request_s::buffered" title='ngx_http_request_s::buffered' data-ref="ngx_http_request_s::buffered">buffered</a> &amp;= ~<a class="macro" href="ngx_http_request.h.html#150" title="0x04" data-ref="_M/NGX_HTTP_COPY_BUFFERED">NGX_HTTP_COPY_BUFFERED</a>;</td></tr>
+<tr><th id="156">156</th><td></td></tr>
+<tr><th id="157">157</th><td>    } <b>else</b> {</td></tr>
+<tr><th id="158">158</th><td>        <a class="local col6 ref" href="#6r" title='r' data-ref="6r">r</a>-&gt;<a class="ref field" href="ngx_http_request.h.html#ngx_http_request_s::buffered" title='ngx_http_request_s::buffered' data-ref="ngx_http_request_s::buffered">buffered</a> |= <a class="macro" href="ngx_http_request.h.html#150" title="0x04" data-ref="_M/NGX_HTTP_COPY_BUFFERED">NGX_HTTP_COPY_BUFFERED</a>;</td></tr>
+<tr><th id="159">159</th><td>    }</td></tr>
+<tr><th id="160">160</th><td></td></tr>
+<tr><th id="161">161</th><td>    <a class="macro" href="../core/ngx_log.h.html#218" title="" data-ref="_M/ngx_log_debug3">ngx_log_debug3</a>(NGX_LOG_DEBUG_HTTP, c-&gt;log, <var>0</var>,</td></tr>
+<tr><th id="162">162</th><td>                   <q>"http copy filter: %i \"%V?%V\""</q>, rc, &amp;r-&gt;uri, &amp;r-&gt;args);</td></tr>
+<tr><th id="163">163</th><td></td></tr>
+<tr><th id="164">164</th><td>    <b>return</b> <a class="local col8 ref" href="#8rc" title='rc' data-ref="8rc">rc</a>;</td></tr>
+<tr><th id="165">165</th><td>}</td></tr>
+<tr><th id="166">166</th><td></td></tr>
+<tr><th id="167">167</th><td></td></tr>
+<tr><th id="168">168</th><td><u>#<span data-ppcond="168">if</span> (NGX_HAVE_FILE_AIO)</u></td></tr>
+<tr><th id="169">169</th><td></td></tr>
+<tr><th id="170">170</th><td><em>static</em> <em>void</em></td></tr>
+<tr><th id="171">171</th><td>ngx_http_copy_aio_handler(ngx_output_chain_ctx_t *ctx, ngx_file_t *file)</td></tr>
+<tr><th id="172">172</th><td>{</td></tr>
+<tr><th id="173">173</th><td>    ngx_http_request_t *r;</td></tr>
+<tr><th id="174">174</th><td></td></tr>
+<tr><th id="175">175</th><td>    r = ctx-&gt;filter_ctx;</td></tr>
+<tr><th id="176">176</th><td></td></tr>
+<tr><th id="177">177</th><td>    file-&gt;aio-&gt;data = r;</td></tr>
+<tr><th id="178">178</th><td>    file-&gt;aio-&gt;handler = ngx_http_copy_aio_event_handler;</td></tr>
+<tr><th id="179">179</th><td></td></tr>
+<tr><th id="180">180</th><td>    r-&gt;main-&gt;blocked++;</td></tr>
+<tr><th id="181">181</th><td>    r-&gt;aio = <var>1</var>;</td></tr>
+<tr><th id="182">182</th><td>    ctx-&gt;aio = <var>1</var>;</td></tr>
+<tr><th id="183">183</th><td>}</td></tr>
+<tr><th id="184">184</th><td></td></tr>
+<tr><th id="185">185</th><td></td></tr>
+<tr><th id="186">186</th><td><em>static</em> <em>void</em></td></tr>
+<tr><th id="187">187</th><td>ngx_http_copy_aio_event_handler(ngx_event_t *ev)</td></tr>
+<tr><th id="188">188</th><td>{</td></tr>
+<tr><th id="189">189</th><td>    ngx_event_aio_t     *aio;</td></tr>
+<tr><th id="190">190</th><td>    ngx_connection_t    *c;</td></tr>
+<tr><th id="191">191</th><td>    ngx_http_request_t  *r;</td></tr>
+<tr><th id="192">192</th><td></td></tr>
+<tr><th id="193">193</th><td>    aio = ev-&gt;data;</td></tr>
+<tr><th id="194">194</th><td>    r = aio-&gt;data;</td></tr>
+<tr><th id="195">195</th><td>    c = r-&gt;connection;</td></tr>
+<tr><th id="196">196</th><td></td></tr>
+<tr><th id="197">197</th><td>    ngx_http_set_log_request(c-&gt;log, r);</td></tr>
+<tr><th id="198">198</th><td></td></tr>
+<tr><th id="199">199</th><td>    ngx_log_debug2(NGX_LOG_DEBUG_HTTP, c-&gt;log, <var>0</var>,</td></tr>
+<tr><th id="200">200</th><td>                   <q>"http aio: \"%V?%V\""</q>, &amp;r-&gt;uri, &amp;r-&gt;args);</td></tr>
+<tr><th id="201">201</th><td></td></tr>
+<tr><th id="202">202</th><td>    r-&gt;main-&gt;blocked--;</td></tr>
+<tr><th id="203">203</th><td>    r-&gt;aio = <var>0</var>;</td></tr>
+<tr><th id="204">204</th><td></td></tr>
+<tr><th id="205">205</th><td>    r-&gt;write_event_handler(r);</td></tr>
+<tr><th id="206">206</th><td></td></tr>
+<tr><th id="207">207</th><td>    ngx_http_run_posted_requests(c);</td></tr>
+<tr><th id="208">208</th><td>}</td></tr>
+<tr><th id="209">209</th><td></td></tr>
+<tr><th id="210">210</th><td></td></tr>
+<tr><th id="211">211</th><td><u>#if (NGX_HAVE_AIO_SENDFILE)</u></td></tr>
+<tr><th id="212">212</th><td></td></tr>
+<tr><th id="213">213</th><td><em>static</em> ssize_t</td></tr>
+<tr><th id="214">214</th><td>ngx_http_copy_aio_sendfile_preload(ngx_buf_t *file)</td></tr>
+<tr><th id="215">215</th><td>{</td></tr>
+<tr><th id="216">216</th><td>    ssize_t                  n;</td></tr>
+<tr><th id="217">217</th><td>    <em>static</em> u_char            buf[<var>1</var>];</td></tr>
+<tr><th id="218">218</th><td>    ngx_event_aio_t         *aio;</td></tr>
+<tr><th id="219">219</th><td>    ngx_http_request_t      *r;</td></tr>
+<tr><th id="220">220</th><td>    ngx_output_chain_ctx_t  *ctx;</td></tr>
+<tr><th id="221">221</th><td></td></tr>
+<tr><th id="222">222</th><td>    n = ngx_file_aio_read(file-&gt;file, buf, <var>1</var>, file-&gt;file_pos, NULL);</td></tr>
+<tr><th id="223">223</th><td></td></tr>
+<tr><th id="224">224</th><td>    <b>if</b> (n == NGX_AGAIN) {</td></tr>
+<tr><th id="225">225</th><td>        aio = file-&gt;file-&gt;aio;</td></tr>
+<tr><th id="226">226</th><td>        aio-&gt;handler = ngx_http_copy_aio_sendfile_event_handler;</td></tr>
+<tr><th id="227">227</th><td></td></tr>
+<tr><th id="228">228</th><td>        r = aio-&gt;data;</td></tr>
+<tr><th id="229">229</th><td>        r-&gt;main-&gt;blocked++;</td></tr>
+<tr><th id="230">230</th><td>        r-&gt;aio = <var>1</var>;</td></tr>
+<tr><th id="231">231</th><td></td></tr>
+<tr><th id="232">232</th><td>        ctx = ngx_http_get_module_ctx(r, ngx_http_copy_filter_module);</td></tr>
+<tr><th id="233">233</th><td>        ctx-&gt;aio = <var>1</var>;</td></tr>
+<tr><th id="234">234</th><td>    }</td></tr>
+<tr><th id="235">235</th><td></td></tr>
+<tr><th id="236">236</th><td>    <b>return</b> n;</td></tr>
+<tr><th id="237">237</th><td>}</td></tr>
+<tr><th id="238">238</th><td></td></tr>
+<tr><th id="239">239</th><td></td></tr>
+<tr><th id="240">240</th><td><em>static</em> <em>void</em></td></tr>
+<tr><th id="241">241</th><td>ngx_http_copy_aio_sendfile_event_handler(ngx_event_t *ev)</td></tr>
+<tr><th id="242">242</th><td>{</td></tr>
+<tr><th id="243">243</th><td>    ngx_event_aio_t     *aio;</td></tr>
+<tr><th id="244">244</th><td>    ngx_http_request_t  *r;</td></tr>
+<tr><th id="245">245</th><td></td></tr>
+<tr><th id="246">246</th><td>    aio = ev-&gt;data;</td></tr>
+<tr><th id="247">247</th><td>    r = aio-&gt;data;</td></tr>
+<tr><th id="248">248</th><td></td></tr>
+<tr><th id="249">249</th><td>    r-&gt;main-&gt;blocked--;</td></tr>
+<tr><th id="250">250</th><td>    r-&gt;aio = <var>0</var>;</td></tr>
+<tr><th id="251">251</th><td>    ev-&gt;complete = <var>0</var>;</td></tr>
+<tr><th id="252">252</th><td></td></tr>
+<tr><th id="253">253</th><td>    r-&gt;connection-&gt;write-&gt;handler(r-&gt;connection-&gt;write);</td></tr>
+<tr><th id="254">254</th><td>}</td></tr>
+<tr><th id="255">255</th><td></td></tr>
+<tr><th id="256">256</th><td><u>#endif</u></td></tr>
+<tr><th id="257">257</th><td><u>#<span data-ppcond="168">endif</span></u></td></tr>
+<tr><th id="258">258</th><td></td></tr>
+<tr><th id="259">259</th><td></td></tr>
+<tr><th id="260">260</th><td><u>#<span data-ppcond="260">if</span> (NGX_THREADS)</u></td></tr>
+<tr><th id="261">261</th><td></td></tr>
+<tr><th id="262">262</th><td><em>static</em> ngx_int_t</td></tr>
+<tr><th id="263">263</th><td>ngx_http_copy_thread_handler(ngx_thread_task_t *task, ngx_file_t *file)</td></tr>
+<tr><th id="264">264</th><td>{</td></tr>
+<tr><th id="265">265</th><td>    ngx_str_t                  name;</td></tr>
+<tr><th id="266">266</th><td>    ngx_thread_pool_t         *tp;</td></tr>
+<tr><th id="267">267</th><td>    ngx_http_request_t        *r;</td></tr>
+<tr><th id="268">268</th><td>    ngx_output_chain_ctx_t    *ctx;</td></tr>
+<tr><th id="269">269</th><td>    ngx_http_core_loc_conf_t  *clcf;</td></tr>
+<tr><th id="270">270</th><td></td></tr>
+<tr><th id="271">271</th><td>    r = file-&gt;thread_ctx;</td></tr>
+<tr><th id="272">272</th><td></td></tr>
+<tr><th id="273">273</th><td>    clcf = ngx_http_get_module_loc_conf(r, ngx_http_core_module);</td></tr>
+<tr><th id="274">274</th><td>    tp = clcf-&gt;thread_pool;</td></tr>
+<tr><th id="275">275</th><td></td></tr>
+<tr><th id="276">276</th><td>    <b>if</b> (tp == NULL) {</td></tr>
+<tr><th id="277">277</th><td>        <b>if</b> (ngx_http_complex_value(r, clcf-&gt;thread_pool_value, &amp;name)</td></tr>
+<tr><th id="278">278</th><td>            != NGX_OK)</td></tr>
+<tr><th id="279">279</th><td>        {</td></tr>
+<tr><th id="280">280</th><td>            <b>return</b> NGX_ERROR;</td></tr>
+<tr><th id="281">281</th><td>        }</td></tr>
+<tr><th id="282">282</th><td></td></tr>
+<tr><th id="283">283</th><td>        tp = ngx_thread_pool_get((ngx_cycle_t *) ngx_cycle, &amp;name);</td></tr>
+<tr><th id="284">284</th><td></td></tr>
+<tr><th id="285">285</th><td>        <b>if</b> (tp == NULL) {</td></tr>
+<tr><th id="286">286</th><td>            ngx_log_error(NGX_LOG_ERR, r-&gt;connection-&gt;log, <var>0</var>,</td></tr>
+<tr><th id="287">287</th><td>                          <q>"thread pool \"%V\" not found"</q>, &amp;name);</td></tr>
+<tr><th id="288">288</th><td>            <b>return</b> NGX_ERROR;</td></tr>
+<tr><th id="289">289</th><td>        }</td></tr>
+<tr><th id="290">290</th><td>    }</td></tr>
+<tr><th id="291">291</th><td></td></tr>
+<tr><th id="292">292</th><td>    task-&gt;event.data = r;</td></tr>
+<tr><th id="293">293</th><td>    task-&gt;event.handler = ngx_http_copy_thread_event_handler;</td></tr>
+<tr><th id="294">294</th><td></td></tr>
+<tr><th id="295">295</th><td>    <b>if</b> (ngx_thread_task_post(tp, task) != NGX_OK) {</td></tr>
+<tr><th id="296">296</th><td>        <b>return</b> NGX_ERROR;</td></tr>
+<tr><th id="297">297</th><td>    }</td></tr>
+<tr><th id="298">298</th><td></td></tr>
+<tr><th id="299">299</th><td>    r-&gt;main-&gt;blocked++;</td></tr>
+<tr><th id="300">300</th><td>    r-&gt;aio = <var>1</var>;</td></tr>
+<tr><th id="301">301</th><td></td></tr>
+<tr><th id="302">302</th><td>    ctx = ngx_http_get_module_ctx(r, ngx_http_copy_filter_module);</td></tr>
+<tr><th id="303">303</th><td>    ctx-&gt;aio = <var>1</var>;</td></tr>
+<tr><th id="304">304</th><td></td></tr>
+<tr><th id="305">305</th><td>    <b>return</b> NGX_OK;</td></tr>
+<tr><th id="306">306</th><td>}</td></tr>
+<tr><th id="307">307</th><td></td></tr>
+<tr><th id="308">308</th><td></td></tr>
+<tr><th id="309">309</th><td><em>static</em> <em>void</em></td></tr>
+<tr><th id="310">310</th><td>ngx_http_copy_thread_event_handler(ngx_event_t *ev)</td></tr>
+<tr><th id="311">311</th><td>{</td></tr>
+<tr><th id="312">312</th><td>    ngx_connection_t    *c;</td></tr>
+<tr><th id="313">313</th><td>    ngx_http_request_t  *r;</td></tr>
+<tr><th id="314">314</th><td></td></tr>
+<tr><th id="315">315</th><td>    r = ev-&gt;data;</td></tr>
+<tr><th id="316">316</th><td>    c = r-&gt;connection;</td></tr>
+<tr><th id="317">317</th><td></td></tr>
+<tr><th id="318">318</th><td>    ngx_http_set_log_request(c-&gt;log, r);</td></tr>
+<tr><th id="319">319</th><td></td></tr>
+<tr><th id="320">320</th><td>    ngx_log_debug2(NGX_LOG_DEBUG_HTTP, c-&gt;log, <var>0</var>,</td></tr>
+<tr><th id="321">321</th><td>                   <q>"http thread: \"%V?%V\""</q>, &amp;r-&gt;uri, &amp;r-&gt;args);</td></tr>
+<tr><th id="322">322</th><td></td></tr>
+<tr><th id="323">323</th><td>    r-&gt;main-&gt;blocked--;</td></tr>
+<tr><th id="324">324</th><td>    r-&gt;aio = <var>0</var>;</td></tr>
+<tr><th id="325">325</th><td></td></tr>
+<tr><th id="326">326</th><td>    <b>if</b> (r-&gt;done) {</td></tr>
+<tr><th id="327">327</th><td>        <i>/*</i></td></tr>
+<tr><th id="328">328</th><td><i>         * trigger connection event handler if the subrequest was</i></td></tr>
+<tr><th id="329">329</th><td><i>         * already finalized; this can happen if the handler is used</i></td></tr>
+<tr><th id="330">330</th><td><i>         * for sendfile() in threads</i></td></tr>
+<tr><th id="331">331</th><td><i>         */</i></td></tr>
+<tr><th id="332">332</th><td></td></tr>
+<tr><th id="333">333</th><td>        c-&gt;write-&gt;handler(c-&gt;write);</td></tr>
+<tr><th id="334">334</th><td></td></tr>
+<tr><th id="335">335</th><td>    } <b>else</b> {</td></tr>
+<tr><th id="336">336</th><td>        r-&gt;write_event_handler(r);</td></tr>
+<tr><th id="337">337</th><td>        ngx_http_run_posted_requests(c);</td></tr>
+<tr><th id="338">338</th><td>    }</td></tr>
+<tr><th id="339">339</th><td>}</td></tr>
+<tr><th id="340">340</th><td></td></tr>
+<tr><th id="341">341</th><td><u>#<span data-ppcond="260">endif</span></u></td></tr>
+<tr><th id="342">342</th><td></td></tr>
+<tr><th id="343">343</th><td></td></tr>
+<tr><th id="344">344</th><td><em>static</em> <em>void</em> *</td></tr>
+<tr><th id="345">345</th><td><dfn class="tu decl def fn" id="ngx_http_copy_filter_create_conf" title='ngx_http_copy_filter_create_conf' data-type='void * ngx_http_copy_filter_create_conf(ngx_conf_t * cf)' data-ref="ngx_http_copy_filter_create_conf">ngx_http_copy_filter_create_conf</dfn>(<a class="typedef" href="../core/ngx_core.h.html#ngx_conf_t" title='ngx_conf_t' data-type='struct ngx_conf_s' data-ref="ngx_conf_t">ngx_conf_t</a> *<dfn class="local col3 decl" id="13cf" title='cf' data-type='ngx_conf_t *' data-ref="13cf">cf</dfn>)</td></tr>
+<tr><th id="346">346</th><td>{</td></tr>
+<tr><th id="347">347</th><td>    <a class="typedef" href="#ngx_http_copy_filter_conf_t" title='ngx_http_copy_filter_conf_t' data-type='struct ngx_http_copy_filter_conf_t' data-ref="ngx_http_copy_filter_conf_t">ngx_http_copy_filter_conf_t</a> *<dfn class="local col4 decl" id="14conf" title='conf' data-type='ngx_http_copy_filter_conf_t *' data-ref="14conf">conf</dfn>;</td></tr>
+<tr><th id="348">348</th><td></td></tr>
+<tr><th id="349">349</th><td>    <a class="local col4 ref" href="#14conf" title='conf' data-ref="14conf">conf</a> = <a class="ref fn" href="../core/ngx_palloc.h.html#ngx_palloc" title='ngx_palloc' data-ref="ngx_palloc">ngx_palloc</a>(<a class="local col3 ref" href="#13cf" title='cf' data-ref="13cf">cf</a>-&gt;<a class="ref field" href="../core/ngx_conf_file.h.html#ngx_conf_s::pool" title='ngx_conf_s::pool' data-ref="ngx_conf_s::pool">pool</a>, <b>sizeof</b>(<a class="typedef" href="#ngx_http_copy_filter_conf_t" title='ngx_http_copy_filter_conf_t' data-type='struct ngx_http_copy_filter_conf_t' data-ref="ngx_http_copy_filter_conf_t">ngx_http_copy_filter_conf_t</a>));</td></tr>
+<tr><th id="350">350</th><td>    <b>if</b> (<a class="local col4 ref" href="#14conf" title='conf' data-ref="14conf">conf</a> == <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>) {</td></tr>
+<tr><th id="351">351</th><td>        <b>return</b> <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>;</td></tr>
+<tr><th id="352">352</th><td>    }</td></tr>
+<tr><th id="353">353</th><td></td></tr>
+<tr><th id="354">354</th><td>    <a class="local col4 ref" href="#14conf" title='conf' data-ref="14conf">conf</a>-&gt;<a class="tu ref field" href="#(anonymous)::bufs" title='(anonymous struct)::bufs' data-use='m' data-ref="(anonymous)::bufs">bufs</a>.<a class="ref field" href="../core/ngx_buf.h.html#(anonymous)::num" title='(anonymous struct)::num' data-ref="(anonymous)::num">num</a> = <var>0</var>;</td></tr>
+<tr><th id="355">355</th><td></td></tr>
+<tr><th id="356">356</th><td>    <b>return</b> <a class="local col4 ref" href="#14conf" title='conf' data-ref="14conf">conf</a>;</td></tr>
+<tr><th id="357">357</th><td>}</td></tr>
+<tr><th id="358">358</th><td></td></tr>
+<tr><th id="359">359</th><td></td></tr>
+<tr><th id="360">360</th><td><em>static</em> <em>char</em> *</td></tr>
+<tr><th id="361">361</th><td><dfn class="tu decl def fn" id="ngx_http_copy_filter_merge_conf" title='ngx_http_copy_filter_merge_conf' data-type='char * ngx_http_copy_filter_merge_conf(ngx_conf_t * cf, void * parent, void * child)' data-ref="ngx_http_copy_filter_merge_conf">ngx_http_copy_filter_merge_conf</dfn>(<a class="typedef" href="../core/ngx_core.h.html#ngx_conf_t" title='ngx_conf_t' data-type='struct ngx_conf_s' data-ref="ngx_conf_t">ngx_conf_t</a> *<dfn class="local col5 decl" id="15cf" title='cf' data-type='ngx_conf_t *' data-ref="15cf">cf</dfn>, <em>void</em> *<dfn class="local col6 decl" id="16parent" title='parent' data-type='void *' data-ref="16parent">parent</dfn>, <em>void</em> *<dfn class="local col7 decl" id="17child" title='child' data-type='void *' data-ref="17child">child</dfn>)</td></tr>
+<tr><th id="362">362</th><td>{</td></tr>
+<tr><th id="363">363</th><td>    <a class="typedef" href="#ngx_http_copy_filter_conf_t" title='ngx_http_copy_filter_conf_t' data-type='struct ngx_http_copy_filter_conf_t' data-ref="ngx_http_copy_filter_conf_t">ngx_http_copy_filter_conf_t</a> *<dfn class="local col8 decl" id="18prev" title='prev' data-type='ngx_http_copy_filter_conf_t *' data-ref="18prev">prev</dfn> = <a class="local col6 ref" href="#16parent" title='parent' data-ref="16parent">parent</a>;</td></tr>
+<tr><th id="364">364</th><td>    <a class="typedef" href="#ngx_http_copy_filter_conf_t" title='ngx_http_copy_filter_conf_t' data-type='struct ngx_http_copy_filter_conf_t' data-ref="ngx_http_copy_filter_conf_t">ngx_http_copy_filter_conf_t</a> *<dfn class="local col9 decl" id="19conf" title='conf' data-type='ngx_http_copy_filter_conf_t *' data-ref="19conf">conf</dfn> = <a class="local col7 ref" href="#17child" title='child' data-ref="17child">child</a>;</td></tr>
+<tr><th id="365">365</th><td></td></tr>
+<tr><th id="366">366</th><td>    <a class="macro" href="../core/ngx_conf_file.h.html#251" title="if (conf-&gt;bufs.num == 0) { if (prev-&gt;bufs.num) { conf-&gt;bufs.num = prev-&gt;bufs.num; conf-&gt;bufs.size = prev-&gt;bufs.size; } else { conf-&gt;bufs.num = 2; conf-&gt;bufs.size = 32768; } }" data-ref="_M/ngx_conf_merge_bufs_value">ngx_conf_merge_bufs_value</a>(<a class="local col9 ref" href="#19conf" title='conf' data-ref="19conf">conf</a>-&gt;<a class="tu ref field" href="#(anonymous)::bufs" title='(anonymous struct)::bufs' data-use='m' data-ref="(anonymous)::bufs">bufs</a>, <a class="local col8 ref" href="#18prev" title='prev' data-ref="18prev">prev</a>-&gt;<a class="tu ref field" href="#(anonymous)::bufs" title='(anonymous struct)::bufs' data-use='m' data-ref="(anonymous)::bufs">bufs</a>, <var>2</var>, <var>32768</var>);</td></tr>
+<tr><th id="367">367</th><td></td></tr>
+<tr><th id="368">368</th><td>    <b>return</b> <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>;</td></tr>
+<tr><th id="369">369</th><td>}</td></tr>
+<tr><th id="370">370</th><td></td></tr>
+<tr><th id="371">371</th><td></td></tr>
+<tr><th id="372">372</th><td><em>static</em> <a class="typedef" href="../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a></td></tr>
+<tr><th id="373">373</th><td><dfn class="tu decl def fn" id="ngx_http_copy_filter_init" title='ngx_http_copy_filter_init' data-type='ngx_int_t ngx_http_copy_filter_init(ngx_conf_t * cf)' data-ref="ngx_http_copy_filter_init">ngx_http_copy_filter_init</dfn>(<a class="typedef" href="../core/ngx_core.h.html#ngx_conf_t" title='ngx_conf_t' data-type='struct ngx_conf_s' data-ref="ngx_conf_t">ngx_conf_t</a> *<dfn class="local col0 decl" id="20cf" title='cf' data-type='ngx_conf_t *' data-ref="20cf">cf</dfn>)</td></tr>
+<tr><th id="374">374</th><td>{</td></tr>
+<tr><th id="375">375</th><td>    <a class="tu ref" href="#ngx_http_next_body_filter" title='ngx_http_next_body_filter' data-use='w' data-ref="ngx_http_next_body_filter">ngx_http_next_body_filter</a> = <a class="ref" href="ngx_http.h.html#ngx_http_top_body_filter" title='ngx_http_top_body_filter' data-ref="ngx_http_top_body_filter">ngx_http_top_body_filter</a>;</td></tr>
+<tr><th id="376">376</th><td>    <a class="ref" href="ngx_http.h.html#ngx_http_top_body_filter" title='ngx_http_top_body_filter' data-ref="ngx_http_top_body_filter">ngx_http_top_body_filter</a> = <a class="tu ref fn" href="#ngx_http_copy_filter" title='ngx_http_copy_filter' data-use='r' data-ref="ngx_http_copy_filter">ngx_http_copy_filter</a>;</td></tr>
+<tr><th id="377">377</th><td></td></tr>
+<tr><th id="378">378</th><td>    <b>return</b> <a class="macro" href="../core/ngx_core.h.html#35" title="0" data-ref="_M/NGX_OK">NGX_OK</a>;</td></tr>
+<tr><th id="379">379</th><td>}</td></tr>
+<tr><th id="380">380</th><td></td></tr>
+<tr><th id="381">381</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated on <em>2018-Apr-06</em> from project nginx<br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

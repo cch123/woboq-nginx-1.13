@@ -1,0 +1,5 @@
+<dec f='nginx/src/os/unix/ngx_process_cycle.h' l='45' type='ngx_uint_t'/>
+<use f='nginx/src/core/nginx.c' l='347' u='r' c='main'/>
+<use f='nginx/src/core/nginx.c' l='355' u='r' c='main'/>
+<use f='nginx/src/core/nginx.c' l='504' u='w' c='ngx_add_inherited_sockets'/>
+<def f='nginx/src/os/unix/ngx_process_cycle.c' l='48' type='ngx_uint_t'/>

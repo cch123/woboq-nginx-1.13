@@ -1,0 +1,9 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='183' type='ngx_queue_t'/>
+<offset>3648</offset>
+<use f='nginx/src/core/ngx_resolver.c' l='188' u='a' c='ngx_resolver_create'/>
+<use f='nginx/src/core/ngx_resolver.c' l='188' u='a' c='ngx_resolver_create'/>
+<use f='nginx/src/core/ngx_resolver.c' l='188' u='a' c='ngx_resolver_create'/>
+<use f='nginx/src/core/ngx_resolver.c' l='188' u='a' c='ngx_resolver_create'/>
+<use f='nginx/src/core/ngx_resolver.c' l='941' u='a' c='ngx_resolve_addr'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1131' u='a' c='ngx_resolve_addr_done'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3133' u='a' c='ngx_resolver_process_ptr'/>

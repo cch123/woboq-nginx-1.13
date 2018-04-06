@@ -1,0 +1,12 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='352' type='size_t'/>
+<offset>1920</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='352'>/* sendfile_max_chunk */</doc>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3375' u='w' c='ngx_http_core_create_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3597' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3597' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3598' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3598' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_write_filter_module.c' l='239' u='r' c='ngx_http_write_filter'/>
+<use f='nginx/src/http/ngx_http_write_filter_module.c' l='240' u='r' c='ngx_http_write_filter'/>
+<use f='nginx/src/http/ngx_http_write_filter_module.c' l='242' u='r' c='ngx_http_write_filter'/>
+<use f='nginx/src/http/ngx_http_write_filter_module.c' l='246' u='r' c='ngx_http_write_filter'/>

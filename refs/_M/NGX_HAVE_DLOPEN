@@ -1,0 +1,6 @@
+<dec f='nginx/objs/ngx_auto_config.h' l='117'/>
+<use f='nginx/src/os/unix/ngx_dlopen.h' l='26' u='c'/>
+<use f='nginx/src/core/nginx.c' l='29' u='c'/>
+<use f='nginx/src/core/nginx.c' l='1498' u='c'/>
+<use f='nginx/src/core/nginx.c' l='1577' u='c'/>
+<use f='nginx/src/os/unix/ngx_dlopen.c' l='12' u='c'/>

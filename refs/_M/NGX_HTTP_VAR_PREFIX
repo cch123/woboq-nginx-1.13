@@ -1,0 +1,10 @@
+<dec f='nginx/src/http/ngx_http_variables.h' l='34'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='428' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='431' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='434' u='c'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='368' u='c'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='371' u='c'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='374' u='c'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='377' u='c'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='380' u='c'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='410' u='c'/>

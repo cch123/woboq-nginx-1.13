@@ -1,0 +1,17 @@
+<dec f='nginx/src/core/ngx_md5.h' l='18' type='uint32_t'/>
+<dec f='nginx/src/core/ngx_sha1.h' l='18' type='uint32_t'/>
+<offset>160</offset>
+<use f='nginx/src/core/ngx_md5.c' l='24' u='w' c='ngx_md5_init'/>
+<use f='nginx/src/core/ngx_md5.c' l='105' u='r' c='ngx_md5_final'/>
+<use f='nginx/src/core/ngx_md5.c' l='106' u='r' c='ngx_md5_final'/>
+<use f='nginx/src/core/ngx_md5.c' l='107' u='r' c='ngx_md5_final'/>
+<use f='nginx/src/core/ngx_md5.c' l='108' u='r' c='ngx_md5_final'/>
+<use f='nginx/src/core/ngx_md5.c' l='184' u='r' c='ngx_md5_body'/>
+<use f='nginx/src/core/ngx_md5.c' l='280' u='w' c='ngx_md5_body'/>
+<use f='nginx/src/core/ngx_sha1.c' l='25' u='w' c='ngx_sha1_init'/>
+<use f='nginx/src/core/ngx_sha1.c' l='107' u='r' c='ngx_sha1_final'/>
+<use f='nginx/src/core/ngx_sha1.c' l='108' u='r' c='ngx_sha1_final'/>
+<use f='nginx/src/core/ngx_sha1.c' l='109' u='r' c='ngx_sha1_final'/>
+<use f='nginx/src/core/ngx_sha1.c' l='110' u='r' c='ngx_sha1_final'/>
+<use f='nginx/src/core/ngx_sha1.c' l='170' u='r' c='ngx_sha1_body'/>
+<use f='nginx/src/core/ngx_sha1.c' l='290' u='w' c='ngx_sha1_body'/>

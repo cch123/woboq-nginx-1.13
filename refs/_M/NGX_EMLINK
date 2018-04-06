@@ -1,0 +1,4 @@
+<dec f='nginx/src/os/unix/ngx_errno.h' l='59'/>
+<use f='nginx/src/http/modules/ngx_http_index_module.c' l='228' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_index_module.c' l='322' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_static_module.c' l='120' u='c'/>

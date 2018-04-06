@@ -1,0 +1,3 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='486' type='ngx_int_t ngx_http_set_etag(ngx_http_request_t * r)'/>
+<use f='nginx/src/http/modules/ngx_http_static_module.c' l='221' u='c' c='ngx_http_static_handler'/>
+<def f='nginx/src/http/ngx_http_core_module.c' l='1581' ll='1615' type='ngx_int_t ngx_http_set_etag(ngx_http_request_t * r)'/>

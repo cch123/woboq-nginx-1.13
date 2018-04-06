@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_cache.h' l='27'/>
+<use f='nginx/src/http/ngx_http_cache.h' l='138' u='c'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1269' u='c'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1532' u='c'/>

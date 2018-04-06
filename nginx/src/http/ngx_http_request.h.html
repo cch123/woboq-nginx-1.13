@@ -1,0 +1,626 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ngx_http_request.h source code [nginx/src/http/ngx_http_request.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="ngx_http_cleanup_s,ngx_http_posted_request_s,ngx_http_postponed_request_s,ngx_http_request_s "/>
+<link rel="stylesheet" href="../../../../data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../../data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../../data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'nginx/src/http/ngx_http_request.h'; var root_path = '../../..'; var data_path = '../../../../data';</script>
+<script src='../../../../data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../..'>nginx</a>/<a href='..'>src</a>/<a href='./'>http</a>/<a href='ngx_http_request.h.html'>ngx_http_request.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td></td></tr>
+<tr><th id="2">2</th><td><i>/*</i></td></tr>
+<tr><th id="3">3</th><td><i> * Copyright (C) Igor Sysoev</i></td></tr>
+<tr><th id="4">4</th><td><i> * Copyright (C) Nginx, Inc.</i></td></tr>
+<tr><th id="5">5</th><td><i> */</i></td></tr>
+<tr><th id="6">6</th><td></td></tr>
+<tr><th id="7">7</th><td></td></tr>
+<tr><th id="8">8</th><td><u>#<span data-ppcond="8">ifndef</span> <span class="macro" data-ref="_M/_NGX_HTTP_REQUEST_H_INCLUDED_">_NGX_HTTP_REQUEST_H_INCLUDED_</span></u></td></tr>
+<tr><th id="9">9</th><td><u>#define <dfn class="macro" id="_M/_NGX_HTTP_REQUEST_H_INCLUDED_" data-ref="_M/_NGX_HTTP_REQUEST_H_INCLUDED_">_NGX_HTTP_REQUEST_H_INCLUDED_</dfn></u></td></tr>
+<tr><th id="10">10</th><td></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_MAX_URI_CHANGES" data-ref="_M/NGX_HTTP_MAX_URI_CHANGES">NGX_HTTP_MAX_URI_CHANGES</dfn>           10</u></td></tr>
+<tr><th id="13">13</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_MAX_SUBREQUESTS" data-ref="_M/NGX_HTTP_MAX_SUBREQUESTS">NGX_HTTP_MAX_SUBREQUESTS</dfn>           50</u></td></tr>
+<tr><th id="14">14</th><td></td></tr>
+<tr><th id="15">15</th><td><i>/* must be 2^n */</i></td></tr>
+<tr><th id="16">16</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_LC_HEADER_LEN" data-ref="_M/NGX_HTTP_LC_HEADER_LEN">NGX_HTTP_LC_HEADER_LEN</dfn>             32</u></td></tr>
+<tr><th id="17">17</th><td></td></tr>
+<tr><th id="18">18</th><td></td></tr>
+<tr><th id="19">19</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_DISCARD_BUFFER_SIZE" data-ref="_M/NGX_HTTP_DISCARD_BUFFER_SIZE">NGX_HTTP_DISCARD_BUFFER_SIZE</dfn>       4096</u></td></tr>
+<tr><th id="20">20</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_LINGERING_BUFFER_SIZE" data-ref="_M/NGX_HTTP_LINGERING_BUFFER_SIZE">NGX_HTTP_LINGERING_BUFFER_SIZE</dfn>     4096</u></td></tr>
+<tr><th id="21">21</th><td></td></tr>
+<tr><th id="22">22</th><td></td></tr>
+<tr><th id="23">23</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_VERSION_9" data-ref="_M/NGX_HTTP_VERSION_9">NGX_HTTP_VERSION_9</dfn>                 9</u></td></tr>
+<tr><th id="24">24</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_VERSION_10" data-ref="_M/NGX_HTTP_VERSION_10">NGX_HTTP_VERSION_10</dfn>                1000</u></td></tr>
+<tr><th id="25">25</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_VERSION_11" data-ref="_M/NGX_HTTP_VERSION_11">NGX_HTTP_VERSION_11</dfn>                1001</u></td></tr>
+<tr><th id="26">26</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_VERSION_20" data-ref="_M/NGX_HTTP_VERSION_20">NGX_HTTP_VERSION_20</dfn>                2000</u></td></tr>
+<tr><th id="27">27</th><td></td></tr>
+<tr><th id="28">28</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_UNKNOWN" data-ref="_M/NGX_HTTP_UNKNOWN">NGX_HTTP_UNKNOWN</dfn>                   0x0001</u></td></tr>
+<tr><th id="29">29</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_GET" data-ref="_M/NGX_HTTP_GET">NGX_HTTP_GET</dfn>                       0x0002</u></td></tr>
+<tr><th id="30">30</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_HEAD" data-ref="_M/NGX_HTTP_HEAD">NGX_HTTP_HEAD</dfn>                      0x0004</u></td></tr>
+<tr><th id="31">31</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_POST" data-ref="_M/NGX_HTTP_POST">NGX_HTTP_POST</dfn>                      0x0008</u></td></tr>
+<tr><th id="32">32</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_PUT" data-ref="_M/NGX_HTTP_PUT">NGX_HTTP_PUT</dfn>                       0x0010</u></td></tr>
+<tr><th id="33">33</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_DELETE" data-ref="_M/NGX_HTTP_DELETE">NGX_HTTP_DELETE</dfn>                    0x0020</u></td></tr>
+<tr><th id="34">34</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_MKCOL" data-ref="_M/NGX_HTTP_MKCOL">NGX_HTTP_MKCOL</dfn>                     0x0040</u></td></tr>
+<tr><th id="35">35</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_COPY" data-ref="_M/NGX_HTTP_COPY">NGX_HTTP_COPY</dfn>                      0x0080</u></td></tr>
+<tr><th id="36">36</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_MOVE" data-ref="_M/NGX_HTTP_MOVE">NGX_HTTP_MOVE</dfn>                      0x0100</u></td></tr>
+<tr><th id="37">37</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_OPTIONS" data-ref="_M/NGX_HTTP_OPTIONS">NGX_HTTP_OPTIONS</dfn>                   0x0200</u></td></tr>
+<tr><th id="38">38</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_PROPFIND" data-ref="_M/NGX_HTTP_PROPFIND">NGX_HTTP_PROPFIND</dfn>                  0x0400</u></td></tr>
+<tr><th id="39">39</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_PROPPATCH" data-ref="_M/NGX_HTTP_PROPPATCH">NGX_HTTP_PROPPATCH</dfn>                 0x0800</u></td></tr>
+<tr><th id="40">40</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_LOCK" data-ref="_M/NGX_HTTP_LOCK">NGX_HTTP_LOCK</dfn>                      0x1000</u></td></tr>
+<tr><th id="41">41</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_UNLOCK" data-ref="_M/NGX_HTTP_UNLOCK">NGX_HTTP_UNLOCK</dfn>                    0x2000</u></td></tr>
+<tr><th id="42">42</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_PATCH" data-ref="_M/NGX_HTTP_PATCH">NGX_HTTP_PATCH</dfn>                     0x4000</u></td></tr>
+<tr><th id="43">43</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_TRACE" data-ref="_M/NGX_HTTP_TRACE">NGX_HTTP_TRACE</dfn>                     0x8000</u></td></tr>
+<tr><th id="44">44</th><td></td></tr>
+<tr><th id="45">45</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_CONNECTION_CLOSE" data-ref="_M/NGX_HTTP_CONNECTION_CLOSE">NGX_HTTP_CONNECTION_CLOSE</dfn>          1</u></td></tr>
+<tr><th id="46">46</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_CONNECTION_KEEP_ALIVE" data-ref="_M/NGX_HTTP_CONNECTION_KEEP_ALIVE">NGX_HTTP_CONNECTION_KEEP_ALIVE</dfn>     2</u></td></tr>
+<tr><th id="47">47</th><td></td></tr>
+<tr><th id="48">48</th><td></td></tr>
+<tr><th id="49">49</th><td><u>#define <dfn class="macro" id="_M/NGX_NONE" data-ref="_M/NGX_NONE">NGX_NONE</dfn>                           1</u></td></tr>
+<tr><th id="50">50</th><td></td></tr>
+<tr><th id="51">51</th><td></td></tr>
+<tr><th id="52">52</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_PARSE_HEADER_DONE" data-ref="_M/NGX_HTTP_PARSE_HEADER_DONE">NGX_HTTP_PARSE_HEADER_DONE</dfn>         1</u></td></tr>
+<tr><th id="53">53</th><td></td></tr>
+<tr><th id="54">54</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_CLIENT_ERROR" data-ref="_M/NGX_HTTP_CLIENT_ERROR">NGX_HTTP_CLIENT_ERROR</dfn>              10</u></td></tr>
+<tr><th id="55">55</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_PARSE_INVALID_METHOD" data-ref="_M/NGX_HTTP_PARSE_INVALID_METHOD">NGX_HTTP_PARSE_INVALID_METHOD</dfn>      10</u></td></tr>
+<tr><th id="56">56</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_PARSE_INVALID_REQUEST" data-ref="_M/NGX_HTTP_PARSE_INVALID_REQUEST">NGX_HTTP_PARSE_INVALID_REQUEST</dfn>     11</u></td></tr>
+<tr><th id="57">57</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_PARSE_INVALID_VERSION" data-ref="_M/NGX_HTTP_PARSE_INVALID_VERSION">NGX_HTTP_PARSE_INVALID_VERSION</dfn>     12</u></td></tr>
+<tr><th id="58">58</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_PARSE_INVALID_09_METHOD" data-ref="_M/NGX_HTTP_PARSE_INVALID_09_METHOD">NGX_HTTP_PARSE_INVALID_09_METHOD</dfn>   13</u></td></tr>
+<tr><th id="59">59</th><td></td></tr>
+<tr><th id="60">60</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_PARSE_INVALID_HEADER" data-ref="_M/NGX_HTTP_PARSE_INVALID_HEADER">NGX_HTTP_PARSE_INVALID_HEADER</dfn>      14</u></td></tr>
+<tr><th id="61">61</th><td></td></tr>
+<tr><th id="62">62</th><td></td></tr>
+<tr><th id="63">63</th><td><i>/* unused                                  1 */</i></td></tr>
+<tr><th id="64">64</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_SUBREQUEST_IN_MEMORY" data-ref="_M/NGX_HTTP_SUBREQUEST_IN_MEMORY">NGX_HTTP_SUBREQUEST_IN_MEMORY</dfn>      2</u></td></tr>
+<tr><th id="65">65</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_SUBREQUEST_WAITED" data-ref="_M/NGX_HTTP_SUBREQUEST_WAITED">NGX_HTTP_SUBREQUEST_WAITED</dfn>         4</u></td></tr>
+<tr><th id="66">66</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_SUBREQUEST_CLONE" data-ref="_M/NGX_HTTP_SUBREQUEST_CLONE">NGX_HTTP_SUBREQUEST_CLONE</dfn>          8</u></td></tr>
+<tr><th id="67">67</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_SUBREQUEST_BACKGROUND" data-ref="_M/NGX_HTTP_SUBREQUEST_BACKGROUND">NGX_HTTP_SUBREQUEST_BACKGROUND</dfn>     16</u></td></tr>
+<tr><th id="68">68</th><td></td></tr>
+<tr><th id="69">69</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_LOG_UNSAFE" data-ref="_M/NGX_HTTP_LOG_UNSAFE">NGX_HTTP_LOG_UNSAFE</dfn>                1</u></td></tr>
+<tr><th id="70">70</th><td></td></tr>
+<tr><th id="71">71</th><td></td></tr>
+<tr><th id="72">72</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_CONTINUE" data-ref="_M/NGX_HTTP_CONTINUE">NGX_HTTP_CONTINUE</dfn>                  100</u></td></tr>
+<tr><th id="73">73</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_SWITCHING_PROTOCOLS" data-ref="_M/NGX_HTTP_SWITCHING_PROTOCOLS">NGX_HTTP_SWITCHING_PROTOCOLS</dfn>       101</u></td></tr>
+<tr><th id="74">74</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_PROCESSING" data-ref="_M/NGX_HTTP_PROCESSING">NGX_HTTP_PROCESSING</dfn>                102</u></td></tr>
+<tr><th id="75">75</th><td></td></tr>
+<tr><th id="76">76</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_OK" data-ref="_M/NGX_HTTP_OK">NGX_HTTP_OK</dfn>                        200</u></td></tr>
+<tr><th id="77">77</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_CREATED" data-ref="_M/NGX_HTTP_CREATED">NGX_HTTP_CREATED</dfn>                   201</u></td></tr>
+<tr><th id="78">78</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_ACCEPTED" data-ref="_M/NGX_HTTP_ACCEPTED">NGX_HTTP_ACCEPTED</dfn>                  202</u></td></tr>
+<tr><th id="79">79</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_NO_CONTENT" data-ref="_M/NGX_HTTP_NO_CONTENT">NGX_HTTP_NO_CONTENT</dfn>                204</u></td></tr>
+<tr><th id="80">80</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_PARTIAL_CONTENT" data-ref="_M/NGX_HTTP_PARTIAL_CONTENT">NGX_HTTP_PARTIAL_CONTENT</dfn>           206</u></td></tr>
+<tr><th id="81">81</th><td></td></tr>
+<tr><th id="82">82</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_SPECIAL_RESPONSE" data-ref="_M/NGX_HTTP_SPECIAL_RESPONSE">NGX_HTTP_SPECIAL_RESPONSE</dfn>          300</u></td></tr>
+<tr><th id="83">83</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_MOVED_PERMANENTLY" data-ref="_M/NGX_HTTP_MOVED_PERMANENTLY">NGX_HTTP_MOVED_PERMANENTLY</dfn>         301</u></td></tr>
+<tr><th id="84">84</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_MOVED_TEMPORARILY" data-ref="_M/NGX_HTTP_MOVED_TEMPORARILY">NGX_HTTP_MOVED_TEMPORARILY</dfn>         302</u></td></tr>
+<tr><th id="85">85</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_SEE_OTHER" data-ref="_M/NGX_HTTP_SEE_OTHER">NGX_HTTP_SEE_OTHER</dfn>                 303</u></td></tr>
+<tr><th id="86">86</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_NOT_MODIFIED" data-ref="_M/NGX_HTTP_NOT_MODIFIED">NGX_HTTP_NOT_MODIFIED</dfn>              304</u></td></tr>
+<tr><th id="87">87</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_TEMPORARY_REDIRECT" data-ref="_M/NGX_HTTP_TEMPORARY_REDIRECT">NGX_HTTP_TEMPORARY_REDIRECT</dfn>        307</u></td></tr>
+<tr><th id="88">88</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_PERMANENT_REDIRECT" data-ref="_M/NGX_HTTP_PERMANENT_REDIRECT">NGX_HTTP_PERMANENT_REDIRECT</dfn>        308</u></td></tr>
+<tr><th id="89">89</th><td></td></tr>
+<tr><th id="90">90</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_BAD_REQUEST" data-ref="_M/NGX_HTTP_BAD_REQUEST">NGX_HTTP_BAD_REQUEST</dfn>               400</u></td></tr>
+<tr><th id="91">91</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_UNAUTHORIZED" data-ref="_M/NGX_HTTP_UNAUTHORIZED">NGX_HTTP_UNAUTHORIZED</dfn>              401</u></td></tr>
+<tr><th id="92">92</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_FORBIDDEN" data-ref="_M/NGX_HTTP_FORBIDDEN">NGX_HTTP_FORBIDDEN</dfn>                 403</u></td></tr>
+<tr><th id="93">93</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_NOT_FOUND" data-ref="_M/NGX_HTTP_NOT_FOUND">NGX_HTTP_NOT_FOUND</dfn>                 404</u></td></tr>
+<tr><th id="94">94</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_NOT_ALLOWED" data-ref="_M/NGX_HTTP_NOT_ALLOWED">NGX_HTTP_NOT_ALLOWED</dfn>               405</u></td></tr>
+<tr><th id="95">95</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_REQUEST_TIME_OUT" data-ref="_M/NGX_HTTP_REQUEST_TIME_OUT">NGX_HTTP_REQUEST_TIME_OUT</dfn>          408</u></td></tr>
+<tr><th id="96">96</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_CONFLICT" data-ref="_M/NGX_HTTP_CONFLICT">NGX_HTTP_CONFLICT</dfn>                  409</u></td></tr>
+<tr><th id="97">97</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_LENGTH_REQUIRED" data-ref="_M/NGX_HTTP_LENGTH_REQUIRED">NGX_HTTP_LENGTH_REQUIRED</dfn>           411</u></td></tr>
+<tr><th id="98">98</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_PRECONDITION_FAILED" data-ref="_M/NGX_HTTP_PRECONDITION_FAILED">NGX_HTTP_PRECONDITION_FAILED</dfn>       412</u></td></tr>
+<tr><th id="99">99</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_REQUEST_ENTITY_TOO_LARGE" data-ref="_M/NGX_HTTP_REQUEST_ENTITY_TOO_LARGE">NGX_HTTP_REQUEST_ENTITY_TOO_LARGE</dfn>  413</u></td></tr>
+<tr><th id="100">100</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_REQUEST_URI_TOO_LARGE" data-ref="_M/NGX_HTTP_REQUEST_URI_TOO_LARGE">NGX_HTTP_REQUEST_URI_TOO_LARGE</dfn>     414</u></td></tr>
+<tr><th id="101">101</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_UNSUPPORTED_MEDIA_TYPE" data-ref="_M/NGX_HTTP_UNSUPPORTED_MEDIA_TYPE">NGX_HTTP_UNSUPPORTED_MEDIA_TYPE</dfn>    415</u></td></tr>
+<tr><th id="102">102</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_RANGE_NOT_SATISFIABLE" data-ref="_M/NGX_HTTP_RANGE_NOT_SATISFIABLE">NGX_HTTP_RANGE_NOT_SATISFIABLE</dfn>     416</u></td></tr>
+<tr><th id="103">103</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_MISDIRECTED_REQUEST" data-ref="_M/NGX_HTTP_MISDIRECTED_REQUEST">NGX_HTTP_MISDIRECTED_REQUEST</dfn>       421</u></td></tr>
+<tr><th id="104">104</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_TOO_MANY_REQUESTS" data-ref="_M/NGX_HTTP_TOO_MANY_REQUESTS">NGX_HTTP_TOO_MANY_REQUESTS</dfn>         429</u></td></tr>
+<tr><th id="105">105</th><td></td></tr>
+<tr><th id="106">106</th><td></td></tr>
+<tr><th id="107">107</th><td><i>/* Our own HTTP codes */</i></td></tr>
+<tr><th id="108">108</th><td></td></tr>
+<tr><th id="109">109</th><td><i>/* The special code to close connection without any response */</i></td></tr>
+<tr><th id="110">110</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_CLOSE" data-ref="_M/NGX_HTTP_CLOSE">NGX_HTTP_CLOSE</dfn>                     444</u></td></tr>
+<tr><th id="111">111</th><td></td></tr>
+<tr><th id="112">112</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_NGINX_CODES" data-ref="_M/NGX_HTTP_NGINX_CODES">NGX_HTTP_NGINX_CODES</dfn>               494</u></td></tr>
+<tr><th id="113">113</th><td></td></tr>
+<tr><th id="114">114</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_REQUEST_HEADER_TOO_LARGE" data-ref="_M/NGX_HTTP_REQUEST_HEADER_TOO_LARGE">NGX_HTTP_REQUEST_HEADER_TOO_LARGE</dfn>  494</u></td></tr>
+<tr><th id="115">115</th><td></td></tr>
+<tr><th id="116">116</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTPS_CERT_ERROR" data-ref="_M/NGX_HTTPS_CERT_ERROR">NGX_HTTPS_CERT_ERROR</dfn>               495</u></td></tr>
+<tr><th id="117">117</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTPS_NO_CERT" data-ref="_M/NGX_HTTPS_NO_CERT">NGX_HTTPS_NO_CERT</dfn>                  496</u></td></tr>
+<tr><th id="118">118</th><td></td></tr>
+<tr><th id="119">119</th><td><i>/*</i></td></tr>
+<tr><th id="120">120</th><td><i> * We use the special code for the plain HTTP requests that are sent to</i></td></tr>
+<tr><th id="121">121</th><td><i> * HTTPS port to distinguish it from 4XX in an error page redirection</i></td></tr>
+<tr><th id="122">122</th><td><i> */</i></td></tr>
+<tr><th id="123">123</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_TO_HTTPS" data-ref="_M/NGX_HTTP_TO_HTTPS">NGX_HTTP_TO_HTTPS</dfn>                  497</u></td></tr>
+<tr><th id="124">124</th><td></td></tr>
+<tr><th id="125">125</th><td><i>/* 498 is the canceled code for the requests with invalid host name */</i></td></tr>
+<tr><th id="126">126</th><td></td></tr>
+<tr><th id="127">127</th><td><i>/*</i></td></tr>
+<tr><th id="128">128</th><td><i> * HTTP does not define the code for the case when a client closed</i></td></tr>
+<tr><th id="129">129</th><td><i> * the connection while we are processing its request so we introduce</i></td></tr>
+<tr><th id="130">130</th><td><i> * own code to log such situation when a client has closed the connection</i></td></tr>
+<tr><th id="131">131</th><td><i> * before we even try to send the HTTP header to it</i></td></tr>
+<tr><th id="132">132</th><td><i> */</i></td></tr>
+<tr><th id="133">133</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_CLIENT_CLOSED_REQUEST" data-ref="_M/NGX_HTTP_CLIENT_CLOSED_REQUEST">NGX_HTTP_CLIENT_CLOSED_REQUEST</dfn>     499</u></td></tr>
+<tr><th id="134">134</th><td></td></tr>
+<tr><th id="135">135</th><td></td></tr>
+<tr><th id="136">136</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_INTERNAL_SERVER_ERROR" data-ref="_M/NGX_HTTP_INTERNAL_SERVER_ERROR">NGX_HTTP_INTERNAL_SERVER_ERROR</dfn>     500</u></td></tr>
+<tr><th id="137">137</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_NOT_IMPLEMENTED" data-ref="_M/NGX_HTTP_NOT_IMPLEMENTED">NGX_HTTP_NOT_IMPLEMENTED</dfn>           501</u></td></tr>
+<tr><th id="138">138</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_BAD_GATEWAY" data-ref="_M/NGX_HTTP_BAD_GATEWAY">NGX_HTTP_BAD_GATEWAY</dfn>               502</u></td></tr>
+<tr><th id="139">139</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_SERVICE_UNAVAILABLE" data-ref="_M/NGX_HTTP_SERVICE_UNAVAILABLE">NGX_HTTP_SERVICE_UNAVAILABLE</dfn>       503</u></td></tr>
+<tr><th id="140">140</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_GATEWAY_TIME_OUT" data-ref="_M/NGX_HTTP_GATEWAY_TIME_OUT">NGX_HTTP_GATEWAY_TIME_OUT</dfn>          504</u></td></tr>
+<tr><th id="141">141</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_VERSION_NOT_SUPPORTED" data-ref="_M/NGX_HTTP_VERSION_NOT_SUPPORTED">NGX_HTTP_VERSION_NOT_SUPPORTED</dfn>     505</u></td></tr>
+<tr><th id="142">142</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_INSUFFICIENT_STORAGE" data-ref="_M/NGX_HTTP_INSUFFICIENT_STORAGE">NGX_HTTP_INSUFFICIENT_STORAGE</dfn>      507</u></td></tr>
+<tr><th id="143">143</th><td></td></tr>
+<tr><th id="144">144</th><td></td></tr>
+<tr><th id="145">145</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_LOWLEVEL_BUFFERED" data-ref="_M/NGX_HTTP_LOWLEVEL_BUFFERED">NGX_HTTP_LOWLEVEL_BUFFERED</dfn>         0xf0</u></td></tr>
+<tr><th id="146">146</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_WRITE_BUFFERED" data-ref="_M/NGX_HTTP_WRITE_BUFFERED">NGX_HTTP_WRITE_BUFFERED</dfn>            0x10</u></td></tr>
+<tr><th id="147">147</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_GZIP_BUFFERED" data-ref="_M/NGX_HTTP_GZIP_BUFFERED">NGX_HTTP_GZIP_BUFFERED</dfn>             0x20</u></td></tr>
+<tr><th id="148">148</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_SSI_BUFFERED" data-ref="_M/NGX_HTTP_SSI_BUFFERED">NGX_HTTP_SSI_BUFFERED</dfn>              0x01</u></td></tr>
+<tr><th id="149">149</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_SUB_BUFFERED" data-ref="_M/NGX_HTTP_SUB_BUFFERED">NGX_HTTP_SUB_BUFFERED</dfn>              0x02</u></td></tr>
+<tr><th id="150">150</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_COPY_BUFFERED" data-ref="_M/NGX_HTTP_COPY_BUFFERED">NGX_HTTP_COPY_BUFFERED</dfn>             0x04</u></td></tr>
+<tr><th id="151">151</th><td></td></tr>
+<tr><th id="152">152</th><td></td></tr>
+<tr><th id="153">153</th><td><b>typedef</b> <b>enum</b> {</td></tr>
+<tr><th id="154">154</th><td>    <dfn class="enum" id="NGX_HTTP_INITING_REQUEST_STATE" title='NGX_HTTP_INITING_REQUEST_STATE' data-ref="NGX_HTTP_INITING_REQUEST_STATE">NGX_HTTP_INITING_REQUEST_STATE</dfn> = <var>0</var>,</td></tr>
+<tr><th id="155">155</th><td>    <dfn class="enum" id="NGX_HTTP_READING_REQUEST_STATE" title='NGX_HTTP_READING_REQUEST_STATE' data-ref="NGX_HTTP_READING_REQUEST_STATE">NGX_HTTP_READING_REQUEST_STATE</dfn>,</td></tr>
+<tr><th id="156">156</th><td>    <dfn class="enum" id="NGX_HTTP_PROCESS_REQUEST_STATE" title='NGX_HTTP_PROCESS_REQUEST_STATE' data-ref="NGX_HTTP_PROCESS_REQUEST_STATE">NGX_HTTP_PROCESS_REQUEST_STATE</dfn>,</td></tr>
+<tr><th id="157">157</th><td></td></tr>
+<tr><th id="158">158</th><td>    <dfn class="enum" id="NGX_HTTP_CONNECT_UPSTREAM_STATE" title='NGX_HTTP_CONNECT_UPSTREAM_STATE' data-ref="NGX_HTTP_CONNECT_UPSTREAM_STATE">NGX_HTTP_CONNECT_UPSTREAM_STATE</dfn>,</td></tr>
+<tr><th id="159">159</th><td>    <dfn class="enum" id="NGX_HTTP_WRITING_UPSTREAM_STATE" title='NGX_HTTP_WRITING_UPSTREAM_STATE' data-ref="NGX_HTTP_WRITING_UPSTREAM_STATE">NGX_HTTP_WRITING_UPSTREAM_STATE</dfn>,</td></tr>
+<tr><th id="160">160</th><td>    <dfn class="enum" id="NGX_HTTP_READING_UPSTREAM_STATE" title='NGX_HTTP_READING_UPSTREAM_STATE' data-ref="NGX_HTTP_READING_UPSTREAM_STATE">NGX_HTTP_READING_UPSTREAM_STATE</dfn>,</td></tr>
+<tr><th id="161">161</th><td></td></tr>
+<tr><th id="162">162</th><td>    <dfn class="enum" id="NGX_HTTP_WRITING_REQUEST_STATE" title='NGX_HTTP_WRITING_REQUEST_STATE' data-ref="NGX_HTTP_WRITING_REQUEST_STATE">NGX_HTTP_WRITING_REQUEST_STATE</dfn>,</td></tr>
+<tr><th id="163">163</th><td>    <dfn class="enum" id="NGX_HTTP_LINGERING_CLOSE_STATE" title='NGX_HTTP_LINGERING_CLOSE_STATE' data-ref="NGX_HTTP_LINGERING_CLOSE_STATE">NGX_HTTP_LINGERING_CLOSE_STATE</dfn>,</td></tr>
+<tr><th id="164">164</th><td>    <dfn class="enum" id="NGX_HTTP_KEEPALIVE_STATE" title='NGX_HTTP_KEEPALIVE_STATE' data-ref="NGX_HTTP_KEEPALIVE_STATE">NGX_HTTP_KEEPALIVE_STATE</dfn></td></tr>
+<tr><th id="165">165</th><td>} <dfn class="typedef" id="ngx_http_state_e" title='ngx_http_state_e' data-type='enum ngx_http_state_e' data-ref="ngx_http_state_e">ngx_http_state_e</dfn>;</td></tr>
+<tr><th id="166">166</th><td></td></tr>
+<tr><th id="167">167</th><td></td></tr>
+<tr><th id="168">168</th><td><b>typedef</b> <b>struct</b> {</td></tr>
+<tr><th id="169">169</th><td>    <a class="typedef" href="../core/ngx_string.h.html#ngx_str_t" title='ngx_str_t' data-type='struct ngx_str_t' data-ref="ngx_str_t">ngx_str_t</a>                         <dfn class="decl field" id="(anonymous)::name" title='(anonymous struct)::name' data-ref="(anonymous)::name">name</dfn>;</td></tr>
+<tr><th id="170">170</th><td>    <a class="typedef" href="../core/ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>                        <dfn class="decl field" id="(anonymous)::offset" title='(anonymous struct)::offset' data-ref="(anonymous)::offset">offset</dfn>;</td></tr>
+<tr><th id="171">171</th><td>    <a class="typedef" href="ngx_http.h.html#ngx_http_header_handler_pt" title='ngx_http_header_handler_pt' data-type='ngx_int_t (*)(ngx_http_request_t *, ngx_table_elt_t *, ngx_uint_t)' data-ref="ngx_http_header_handler_pt">ngx_http_header_handler_pt</a>        <dfn class="decl field" id="(anonymous)::handler" title='(anonymous struct)::handler' data-ref="(anonymous)::handler">handler</dfn>;</td></tr>
+<tr><th id="172">172</th><td>} <dfn class="typedef" id="ngx_http_header_t" title='ngx_http_header_t' data-type='struct ngx_http_header_t' data-ref="ngx_http_header_t">ngx_http_header_t</dfn>;</td></tr>
+<tr><th id="173">173</th><td></td></tr>
+<tr><th id="174">174</th><td></td></tr>
+<tr><th id="175">175</th><td><b>typedef</b> <b>struct</b> {</td></tr>
+<tr><th id="176">176</th><td>    <a class="typedef" href="../core/ngx_string.h.html#ngx_str_t" title='ngx_str_t' data-type='struct ngx_str_t' data-ref="ngx_str_t">ngx_str_t</a>                         <dfn class="decl field" id="(anonymous)::name" title='(anonymous struct)::name' data-ref="(anonymous)::name">name</dfn>;</td></tr>
+<tr><th id="177">177</th><td>    <a class="typedef" href="../core/ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>                        <dfn class="decl field" id="(anonymous)::offset" title='(anonymous struct)::offset' data-ref="(anonymous)::offset">offset</dfn>;</td></tr>
+<tr><th id="178">178</th><td>} <dfn class="typedef" id="ngx_http_header_out_t" title='ngx_http_header_out_t' data-type='struct ngx_http_header_out_t' data-ref="ngx_http_header_out_t">ngx_http_header_out_t</dfn>;</td></tr>
+<tr><th id="179">179</th><td></td></tr>
+<tr><th id="180">180</th><td></td></tr>
+<tr><th id="181">181</th><td><b>typedef</b> <b>struct</b> {</td></tr>
+<tr><th id="182">182</th><td>    <a class="typedef" href="../core/ngx_list.h.html#ngx_list_t" title='ngx_list_t' data-type='struct ngx_list_t' data-ref="ngx_list_t">ngx_list_t</a>                        <dfn class="decl field" id="(anonymous)::headers" title='(anonymous struct)::headers' data-ref="(anonymous)::headers">headers</dfn>;</td></tr>
+<tr><th id="183">183</th><td></td></tr>
+<tr><th id="184">184</th><td>    <a class="typedef" href="../core/ngx_hash.h.html#ngx_table_elt_t" title='ngx_table_elt_t' data-type='struct ngx_table_elt_t' data-ref="ngx_table_elt_t">ngx_table_elt_t</a>                  *<dfn class="decl field" id="(anonymous)::host" title='(anonymous struct)::host' data-ref="(anonymous)::host">host</dfn>;</td></tr>
+<tr><th id="185">185</th><td>    <a class="typedef" href="../core/ngx_hash.h.html#ngx_table_elt_t" title='ngx_table_elt_t' data-type='struct ngx_table_elt_t' data-ref="ngx_table_elt_t">ngx_table_elt_t</a>                  *<dfn class="decl field" id="(anonymous)::connection" title='(anonymous struct)::connection' data-ref="(anonymous)::connection">connection</dfn>;</td></tr>
+<tr><th id="186">186</th><td>    <a class="typedef" href="../core/ngx_hash.h.html#ngx_table_elt_t" title='ngx_table_elt_t' data-type='struct ngx_table_elt_t' data-ref="ngx_table_elt_t">ngx_table_elt_t</a>                  *<dfn class="decl field" id="(anonymous)::if_modified_since" title='(anonymous struct)::if_modified_since' data-ref="(anonymous)::if_modified_since">if_modified_since</dfn>;</td></tr>
+<tr><th id="187">187</th><td>    <a class="typedef" href="../core/ngx_hash.h.html#ngx_table_elt_t" title='ngx_table_elt_t' data-type='struct ngx_table_elt_t' data-ref="ngx_table_elt_t">ngx_table_elt_t</a>                  *<dfn class="decl field" id="(anonymous)::if_unmodified_since" title='(anonymous struct)::if_unmodified_since' data-ref="(anonymous)::if_unmodified_since">if_unmodified_since</dfn>;</td></tr>
+<tr><th id="188">188</th><td>    <a class="typedef" href="../core/ngx_hash.h.html#ngx_table_elt_t" title='ngx_table_elt_t' data-type='struct ngx_table_elt_t' data-ref="ngx_table_elt_t">ngx_table_elt_t</a>                  *<dfn class="decl field" id="(anonymous)::if_match" title='(anonymous struct)::if_match' data-ref="(anonymous)::if_match">if_match</dfn>;</td></tr>
+<tr><th id="189">189</th><td>    <a class="typedef" href="../core/ngx_hash.h.html#ngx_table_elt_t" title='ngx_table_elt_t' data-type='struct ngx_table_elt_t' data-ref="ngx_table_elt_t">ngx_table_elt_t</a>                  *<dfn class="decl field" id="(anonymous)::if_none_match" title='(anonymous struct)::if_none_match' data-ref="(anonymous)::if_none_match">if_none_match</dfn>;</td></tr>
+<tr><th id="190">190</th><td>    <a class="typedef" href="../core/ngx_hash.h.html#ngx_table_elt_t" title='ngx_table_elt_t' data-type='struct ngx_table_elt_t' data-ref="ngx_table_elt_t">ngx_table_elt_t</a>                  *<dfn class="decl field" id="(anonymous)::user_agent" title='(anonymous struct)::user_agent' data-ref="(anonymous)::user_agent">user_agent</dfn>;</td></tr>
+<tr><th id="191">191</th><td>    <a class="typedef" href="../core/ngx_hash.h.html#ngx_table_elt_t" title='ngx_table_elt_t' data-type='struct ngx_table_elt_t' data-ref="ngx_table_elt_t">ngx_table_elt_t</a>                  *<dfn class="decl field" id="(anonymous)::referer" title='(anonymous struct)::referer' data-ref="(anonymous)::referer">referer</dfn>;</td></tr>
+<tr><th id="192">192</th><td>    <a class="typedef" href="../core/ngx_hash.h.html#ngx_table_elt_t" title='ngx_table_elt_t' data-type='struct ngx_table_elt_t' data-ref="ngx_table_elt_t">ngx_table_elt_t</a>                  *<dfn class="decl field" id="(anonymous)::content_length" title='(anonymous struct)::content_length' data-ref="(anonymous)::content_length">content_length</dfn>;</td></tr>
+<tr><th id="193">193</th><td>    <a class="typedef" href="../core/ngx_hash.h.html#ngx_table_elt_t" title='ngx_table_elt_t' data-type='struct ngx_table_elt_t' data-ref="ngx_table_elt_t">ngx_table_elt_t</a>                  *<dfn class="decl field" id="(anonymous)::content_range" title='(anonymous struct)::content_range' data-ref="(anonymous)::content_range">content_range</dfn>;</td></tr>
+<tr><th id="194">194</th><td>    <a class="typedef" href="../core/ngx_hash.h.html#ngx_table_elt_t" title='ngx_table_elt_t' data-type='struct ngx_table_elt_t' data-ref="ngx_table_elt_t">ngx_table_elt_t</a>                  *<dfn class="decl field" id="(anonymous)::content_type" title='(anonymous struct)::content_type' data-ref="(anonymous)::content_type">content_type</dfn>;</td></tr>
+<tr><th id="195">195</th><td></td></tr>
+<tr><th id="196">196</th><td>    <a class="typedef" href="../core/ngx_hash.h.html#ngx_table_elt_t" title='ngx_table_elt_t' data-type='struct ngx_table_elt_t' data-ref="ngx_table_elt_t">ngx_table_elt_t</a>                  *<dfn class="decl field" id="(anonymous)::range" title='(anonymous struct)::range' data-ref="(anonymous)::range">range</dfn>;</td></tr>
+<tr><th id="197">197</th><td>    <a class="typedef" href="../core/ngx_hash.h.html#ngx_table_elt_t" title='ngx_table_elt_t' data-type='struct ngx_table_elt_t' data-ref="ngx_table_elt_t">ngx_table_elt_t</a>                  *<dfn class="decl field" id="(anonymous)::if_range" title='(anonymous struct)::if_range' data-ref="(anonymous)::if_range">if_range</dfn>;</td></tr>
+<tr><th id="198">198</th><td></td></tr>
+<tr><th id="199">199</th><td>    <a class="typedef" href="../core/ngx_hash.h.html#ngx_table_elt_t" title='ngx_table_elt_t' data-type='struct ngx_table_elt_t' data-ref="ngx_table_elt_t">ngx_table_elt_t</a>                  *<dfn class="decl field" id="(anonymous)::transfer_encoding" title='(anonymous struct)::transfer_encoding' data-ref="(anonymous)::transfer_encoding">transfer_encoding</dfn>;</td></tr>
+<tr><th id="200">200</th><td>    <a class="typedef" href="../core/ngx_hash.h.html#ngx_table_elt_t" title='ngx_table_elt_t' data-type='struct ngx_table_elt_t' data-ref="ngx_table_elt_t">ngx_table_elt_t</a>                  *<dfn class="decl field" id="(anonymous)::te" title='(anonymous struct)::te' data-ref="(anonymous)::te">te</dfn>;</td></tr>
+<tr><th id="201">201</th><td>    <a class="typedef" href="../core/ngx_hash.h.html#ngx_table_elt_t" title='ngx_table_elt_t' data-type='struct ngx_table_elt_t' data-ref="ngx_table_elt_t">ngx_table_elt_t</a>                  *<dfn class="decl field" id="(anonymous)::expect" title='(anonymous struct)::expect' data-ref="(anonymous)::expect">expect</dfn>;</td></tr>
+<tr><th id="202">202</th><td>    <a class="typedef" href="../core/ngx_hash.h.html#ngx_table_elt_t" title='ngx_table_elt_t' data-type='struct ngx_table_elt_t' data-ref="ngx_table_elt_t">ngx_table_elt_t</a>                  *<dfn class="decl field" id="(anonymous)::upgrade" title='(anonymous struct)::upgrade' data-ref="(anonymous)::upgrade">upgrade</dfn>;</td></tr>
+<tr><th id="203">203</th><td></td></tr>
+<tr><th id="204">204</th><td><u>#<span data-ppcond="204">if</span> (<a class="macro" href="../../objs/ngx_auto_config.h.html#357" title="1" data-ref="_M/NGX_HTTP_GZIP">NGX_HTTP_GZIP</a> || NGX_HTTP_HEADERS)</u></td></tr>
+<tr><th id="205">205</th><td>    <a class="typedef" href="../core/ngx_hash.h.html#ngx_table_elt_t" title='ngx_table_elt_t' data-type='struct ngx_table_elt_t' data-ref="ngx_table_elt_t">ngx_table_elt_t</a>                  *<dfn class="decl field" id="(anonymous)::accept_encoding" title='(anonymous struct)::accept_encoding' data-ref="(anonymous)::accept_encoding">accept_encoding</dfn>;</td></tr>
+<tr><th id="206">206</th><td>    <a class="typedef" href="../core/ngx_hash.h.html#ngx_table_elt_t" title='ngx_table_elt_t' data-type='struct ngx_table_elt_t' data-ref="ngx_table_elt_t">ngx_table_elt_t</a>                  *<dfn class="decl field" id="(anonymous)::via" title='(anonymous struct)::via' data-ref="(anonymous)::via">via</dfn>;</td></tr>
+<tr><th id="207">207</th><td><u>#<span data-ppcond="204">endif</span></u></td></tr>
+<tr><th id="208">208</th><td></td></tr>
+<tr><th id="209">209</th><td>    <a class="typedef" href="../core/ngx_hash.h.html#ngx_table_elt_t" title='ngx_table_elt_t' data-type='struct ngx_table_elt_t' data-ref="ngx_table_elt_t">ngx_table_elt_t</a>                  *<dfn class="decl field" id="(anonymous)::authorization" title='(anonymous struct)::authorization' data-ref="(anonymous)::authorization">authorization</dfn>;</td></tr>
+<tr><th id="210">210</th><td></td></tr>
+<tr><th id="211">211</th><td>    <a class="typedef" href="../core/ngx_hash.h.html#ngx_table_elt_t" title='ngx_table_elt_t' data-type='struct ngx_table_elt_t' data-ref="ngx_table_elt_t">ngx_table_elt_t</a>                  *<dfn class="decl field" id="(anonymous)::keep_alive" title='(anonymous struct)::keep_alive' data-ref="(anonymous)::keep_alive">keep_alive</dfn>;</td></tr>
+<tr><th id="212">212</th><td></td></tr>
+<tr><th id="213">213</th><td><u>#<span data-ppcond="213">if</span> (<a class="macro" href="../../objs/ngx_auto_config.h.html#372" title="1" data-ref="_M/NGX_HTTP_X_FORWARDED_FOR">NGX_HTTP_X_FORWARDED_FOR</a>)</u></td></tr>
+<tr><th id="214">214</th><td>    <a class="typedef" href="../core/ngx_array.h.html#ngx_array_t" title='ngx_array_t' data-type='struct ngx_array_t' data-ref="ngx_array_t">ngx_array_t</a>                       <dfn class="decl field" id="(anonymous)::x_forwarded_for" title='(anonymous struct)::x_forwarded_for' data-ref="(anonymous)::x_forwarded_for">x_forwarded_for</dfn>;</td></tr>
+<tr><th id="215">215</th><td><u>#<span data-ppcond="213">endif</span></u></td></tr>
+<tr><th id="216">216</th><td></td></tr>
+<tr><th id="217">217</th><td><u>#<span data-ppcond="217">if</span> (NGX_HTTP_REALIP)</u></td></tr>
+<tr><th id="218">218</th><td>    ngx_table_elt_t                  *x_real_ip;</td></tr>
+<tr><th id="219">219</th><td><u>#<span data-ppcond="217">endif</span></u></td></tr>
+<tr><th id="220">220</th><td></td></tr>
+<tr><th id="221">221</th><td><u>#<span data-ppcond="221">if</span> (NGX_HTTP_HEADERS)</u></td></tr>
+<tr><th id="222">222</th><td>    ngx_table_elt_t                  *accept;</td></tr>
+<tr><th id="223">223</th><td>    ngx_table_elt_t                  *accept_language;</td></tr>
+<tr><th id="224">224</th><td><u>#<span data-ppcond="221">endif</span></u></td></tr>
+<tr><th id="225">225</th><td></td></tr>
+<tr><th id="226">226</th><td><u>#<span data-ppcond="226">if</span> (NGX_HTTP_DAV)</u></td></tr>
+<tr><th id="227">227</th><td>    ngx_table_elt_t                  *depth;</td></tr>
+<tr><th id="228">228</th><td>    ngx_table_elt_t                  *destination;</td></tr>
+<tr><th id="229">229</th><td>    ngx_table_elt_t                  *overwrite;</td></tr>
+<tr><th id="230">230</th><td>    ngx_table_elt_t                  *date;</td></tr>
+<tr><th id="231">231</th><td><u>#<span data-ppcond="226">endif</span></u></td></tr>
+<tr><th id="232">232</th><td></td></tr>
+<tr><th id="233">233</th><td>    <a class="typedef" href="../core/ngx_string.h.html#ngx_str_t" title='ngx_str_t' data-type='struct ngx_str_t' data-ref="ngx_str_t">ngx_str_t</a>                         <dfn class="decl field" id="(anonymous)::user" title='(anonymous struct)::user' data-ref="(anonymous)::user">user</dfn>;</td></tr>
+<tr><th id="234">234</th><td>    <a class="typedef" href="../core/ngx_string.h.html#ngx_str_t" title='ngx_str_t' data-type='struct ngx_str_t' data-ref="ngx_str_t">ngx_str_t</a>                         <dfn class="decl field" id="(anonymous)::passwd" title='(anonymous struct)::passwd' data-ref="(anonymous)::passwd">passwd</dfn>;</td></tr>
+<tr><th id="235">235</th><td></td></tr>
+<tr><th id="236">236</th><td>    <a class="typedef" href="../core/ngx_array.h.html#ngx_array_t" title='ngx_array_t' data-type='struct ngx_array_t' data-ref="ngx_array_t">ngx_array_t</a>                       <dfn class="decl field" id="(anonymous)::cookies" title='(anonymous struct)::cookies' data-ref="(anonymous)::cookies">cookies</dfn>;</td></tr>
+<tr><th id="237">237</th><td></td></tr>
+<tr><th id="238">238</th><td>    <a class="typedef" href="../core/ngx_string.h.html#ngx_str_t" title='ngx_str_t' data-type='struct ngx_str_t' data-ref="ngx_str_t">ngx_str_t</a>                         <dfn class="decl field" id="(anonymous)::server" title='(anonymous struct)::server' data-ref="(anonymous)::server">server</dfn>;</td></tr>
+<tr><th id="239">239</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#off_t" title='off_t' data-type='__off64_t' data-ref="off_t">off_t</a>                             <dfn class="decl field" id="(anonymous)::content_length_n" title='(anonymous struct)::content_length_n' data-ref="(anonymous)::content_length_n">content_length_n</dfn>;</td></tr>
+<tr><th id="240">240</th><td>    <a class="typedef" href="../../../include/time.h.html#time_t" title='time_t' data-type='__time_t' data-ref="time_t">time_t</a>                            <dfn class="decl field" id="(anonymous)::keep_alive_n" title='(anonymous struct)::keep_alive_n' data-ref="(anonymous)::keep_alive_n">keep_alive_n</dfn>;</td></tr>
+<tr><th id="241">241</th><td></td></tr>
+<tr><th id="242">242</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="(anonymous)::connection_type" title='(anonymous struct)::connection_type' data-ref="(anonymous)::connection_type">connection_type</dfn>:<var>2</var>;</td></tr>
+<tr><th id="243">243</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="(anonymous)::chunked" title='(anonymous struct)::chunked' data-ref="(anonymous)::chunked">chunked</dfn>:<var>1</var>;</td></tr>
+<tr><th id="244">244</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="(anonymous)::msie" title='(anonymous struct)::msie' data-ref="(anonymous)::msie">msie</dfn>:<var>1</var>;</td></tr>
+<tr><th id="245">245</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="(anonymous)::msie6" title='(anonymous struct)::msie6' data-ref="(anonymous)::msie6">msie6</dfn>:<var>1</var>;</td></tr>
+<tr><th id="246">246</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="(anonymous)::opera" title='(anonymous struct)::opera' data-ref="(anonymous)::opera">opera</dfn>:<var>1</var>;</td></tr>
+<tr><th id="247">247</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="(anonymous)::gecko" title='(anonymous struct)::gecko' data-ref="(anonymous)::gecko">gecko</dfn>:<var>1</var>;</td></tr>
+<tr><th id="248">248</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="(anonymous)::chrome" title='(anonymous struct)::chrome' data-ref="(anonymous)::chrome">chrome</dfn>:<var>1</var>;</td></tr>
+<tr><th id="249">249</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="(anonymous)::safari" title='(anonymous struct)::safari' data-ref="(anonymous)::safari">safari</dfn>:<var>1</var>;</td></tr>
+<tr><th id="250">250</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="(anonymous)::konqueror" title='(anonymous struct)::konqueror' data-ref="(anonymous)::konqueror">konqueror</dfn>:<var>1</var>;</td></tr>
+<tr><th id="251">251</th><td>} <dfn class="typedef" id="ngx_http_headers_in_t" title='ngx_http_headers_in_t' data-type='struct ngx_http_headers_in_t' data-ref="ngx_http_headers_in_t">ngx_http_headers_in_t</dfn>;</td></tr>
+<tr><th id="252">252</th><td></td></tr>
+<tr><th id="253">253</th><td></td></tr>
+<tr><th id="254">254</th><td><b>typedef</b> <b>struct</b> {</td></tr>
+<tr><th id="255">255</th><td>    <a class="typedef" href="../core/ngx_list.h.html#ngx_list_t" title='ngx_list_t' data-type='struct ngx_list_t' data-ref="ngx_list_t">ngx_list_t</a>                        <dfn class="decl field" id="(anonymous)::headers" title='(anonymous struct)::headers' data-ref="(anonymous)::headers">headers</dfn>;</td></tr>
+<tr><th id="256">256</th><td>    <a class="typedef" href="../core/ngx_list.h.html#ngx_list_t" title='ngx_list_t' data-type='struct ngx_list_t' data-ref="ngx_list_t">ngx_list_t</a>                        <dfn class="decl field" id="(anonymous)::trailers" title='(anonymous struct)::trailers' data-ref="(anonymous)::trailers">trailers</dfn>;</td></tr>
+<tr><th id="257">257</th><td></td></tr>
+<tr><th id="258">258</th><td>    <a class="typedef" href="../core/ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>                        <dfn class="decl field" id="(anonymous)::status" title='(anonymous struct)::status' data-ref="(anonymous)::status">status</dfn>;</td></tr>
+<tr><th id="259">259</th><td>    <a class="typedef" href="../core/ngx_string.h.html#ngx_str_t" title='ngx_str_t' data-type='struct ngx_str_t' data-ref="ngx_str_t">ngx_str_t</a>                         <dfn class="decl field" id="(anonymous)::status_line" title='(anonymous struct)::status_line' data-ref="(anonymous)::status_line">status_line</dfn>;</td></tr>
+<tr><th id="260">260</th><td></td></tr>
+<tr><th id="261">261</th><td>    <a class="typedef" href="../core/ngx_hash.h.html#ngx_table_elt_t" title='ngx_table_elt_t' data-type='struct ngx_table_elt_t' data-ref="ngx_table_elt_t">ngx_table_elt_t</a>                  *<dfn class="decl field" id="(anonymous)::server" title='(anonymous struct)::server' data-ref="(anonymous)::server">server</dfn>;</td></tr>
+<tr><th id="262">262</th><td>    <a class="typedef" href="../core/ngx_hash.h.html#ngx_table_elt_t" title='ngx_table_elt_t' data-type='struct ngx_table_elt_t' data-ref="ngx_table_elt_t">ngx_table_elt_t</a>                  *<dfn class="decl field" id="(anonymous)::date" title='(anonymous struct)::date' data-ref="(anonymous)::date">date</dfn>;</td></tr>
+<tr><th id="263">263</th><td>    <a class="typedef" href="../core/ngx_hash.h.html#ngx_table_elt_t" title='ngx_table_elt_t' data-type='struct ngx_table_elt_t' data-ref="ngx_table_elt_t">ngx_table_elt_t</a>                  *<dfn class="decl field" id="(anonymous)::content_length" title='(anonymous struct)::content_length' data-ref="(anonymous)::content_length">content_length</dfn>;</td></tr>
+<tr><th id="264">264</th><td>    <a class="typedef" href="../core/ngx_hash.h.html#ngx_table_elt_t" title='ngx_table_elt_t' data-type='struct ngx_table_elt_t' data-ref="ngx_table_elt_t">ngx_table_elt_t</a>                  *<dfn class="decl field" id="(anonymous)::content_encoding" title='(anonymous struct)::content_encoding' data-ref="(anonymous)::content_encoding">content_encoding</dfn>;</td></tr>
+<tr><th id="265">265</th><td>    <a class="typedef" href="../core/ngx_hash.h.html#ngx_table_elt_t" title='ngx_table_elt_t' data-type='struct ngx_table_elt_t' data-ref="ngx_table_elt_t">ngx_table_elt_t</a>                  *<dfn class="decl field" id="(anonymous)::location" title='(anonymous struct)::location' data-ref="(anonymous)::location">location</dfn>;</td></tr>
+<tr><th id="266">266</th><td>    <a class="typedef" href="../core/ngx_hash.h.html#ngx_table_elt_t" title='ngx_table_elt_t' data-type='struct ngx_table_elt_t' data-ref="ngx_table_elt_t">ngx_table_elt_t</a>                  *<dfn class="decl field" id="(anonymous)::refresh" title='(anonymous struct)::refresh' data-ref="(anonymous)::refresh">refresh</dfn>;</td></tr>
+<tr><th id="267">267</th><td>    <a class="typedef" href="../core/ngx_hash.h.html#ngx_table_elt_t" title='ngx_table_elt_t' data-type='struct ngx_table_elt_t' data-ref="ngx_table_elt_t">ngx_table_elt_t</a>                  *<dfn class="decl field" id="(anonymous)::last_modified" title='(anonymous struct)::last_modified' data-ref="(anonymous)::last_modified">last_modified</dfn>;</td></tr>
+<tr><th id="268">268</th><td>    <a class="typedef" href="../core/ngx_hash.h.html#ngx_table_elt_t" title='ngx_table_elt_t' data-type='struct ngx_table_elt_t' data-ref="ngx_table_elt_t">ngx_table_elt_t</a>                  *<dfn class="decl field" id="(anonymous)::content_range" title='(anonymous struct)::content_range' data-ref="(anonymous)::content_range">content_range</dfn>;</td></tr>
+<tr><th id="269">269</th><td>    <a class="typedef" href="../core/ngx_hash.h.html#ngx_table_elt_t" title='ngx_table_elt_t' data-type='struct ngx_table_elt_t' data-ref="ngx_table_elt_t">ngx_table_elt_t</a>                  *<dfn class="decl field" id="(anonymous)::accept_ranges" title='(anonymous struct)::accept_ranges' data-ref="(anonymous)::accept_ranges">accept_ranges</dfn>;</td></tr>
+<tr><th id="270">270</th><td>    <a class="typedef" href="../core/ngx_hash.h.html#ngx_table_elt_t" title='ngx_table_elt_t' data-type='struct ngx_table_elt_t' data-ref="ngx_table_elt_t">ngx_table_elt_t</a>                  *<dfn class="decl field" id="(anonymous)::www_authenticate" title='(anonymous struct)::www_authenticate' data-ref="(anonymous)::www_authenticate">www_authenticate</dfn>;</td></tr>
+<tr><th id="271">271</th><td>    <a class="typedef" href="../core/ngx_hash.h.html#ngx_table_elt_t" title='ngx_table_elt_t' data-type='struct ngx_table_elt_t' data-ref="ngx_table_elt_t">ngx_table_elt_t</a>                  *<dfn class="decl field" id="(anonymous)::expires" title='(anonymous struct)::expires' data-ref="(anonymous)::expires">expires</dfn>;</td></tr>
+<tr><th id="272">272</th><td>    <a class="typedef" href="../core/ngx_hash.h.html#ngx_table_elt_t" title='ngx_table_elt_t' data-type='struct ngx_table_elt_t' data-ref="ngx_table_elt_t">ngx_table_elt_t</a>                  *<dfn class="decl field" id="(anonymous)::etag" title='(anonymous struct)::etag' data-ref="(anonymous)::etag">etag</dfn>;</td></tr>
+<tr><th id="273">273</th><td></td></tr>
+<tr><th id="274">274</th><td>    <a class="typedef" href="../core/ngx_string.h.html#ngx_str_t" title='ngx_str_t' data-type='struct ngx_str_t' data-ref="ngx_str_t">ngx_str_t</a>                        *<dfn class="decl field" id="(anonymous)::override_charset" title='(anonymous struct)::override_charset' data-ref="(anonymous)::override_charset">override_charset</dfn>;</td></tr>
+<tr><th id="275">275</th><td></td></tr>
+<tr><th id="276">276</th><td>    <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span>                            <dfn class="decl field" id="(anonymous)::content_type_len" title='(anonymous struct)::content_type_len' data-ref="(anonymous)::content_type_len">content_type_len</dfn>;</td></tr>
+<tr><th id="277">277</th><td>    <a class="typedef" href="../core/ngx_string.h.html#ngx_str_t" title='ngx_str_t' data-type='struct ngx_str_t' data-ref="ngx_str_t">ngx_str_t</a>                         <dfn class="decl field" id="(anonymous)::content_type" title='(anonymous struct)::content_type' data-ref="(anonymous)::content_type">content_type</dfn>;</td></tr>
+<tr><th id="278">278</th><td>    <a class="typedef" href="../core/ngx_string.h.html#ngx_str_t" title='ngx_str_t' data-type='struct ngx_str_t' data-ref="ngx_str_t">ngx_str_t</a>                         <dfn class="decl field" id="(anonymous)::charset" title='(anonymous struct)::charset' data-ref="(anonymous)::charset">charset</dfn>;</td></tr>
+<tr><th id="279">279</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a>                           *<dfn class="decl field" id="(anonymous)::content_type_lowcase" title='(anonymous struct)::content_type_lowcase' data-ref="(anonymous)::content_type_lowcase">content_type_lowcase</dfn>;</td></tr>
+<tr><th id="280">280</th><td>    <a class="typedef" href="../core/ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>                        <dfn class="decl field" id="(anonymous)::content_type_hash" title='(anonymous struct)::content_type_hash' data-ref="(anonymous)::content_type_hash">content_type_hash</dfn>;</td></tr>
+<tr><th id="281">281</th><td></td></tr>
+<tr><th id="282">282</th><td>    <a class="typedef" href="../core/ngx_array.h.html#ngx_array_t" title='ngx_array_t' data-type='struct ngx_array_t' data-ref="ngx_array_t">ngx_array_t</a>                       <dfn class="decl field" id="(anonymous)::cache_control" title='(anonymous struct)::cache_control' data-ref="(anonymous)::cache_control">cache_control</dfn>;</td></tr>
+<tr><th id="283">283</th><td>    <a class="typedef" href="../core/ngx_array.h.html#ngx_array_t" title='ngx_array_t' data-type='struct ngx_array_t' data-ref="ngx_array_t">ngx_array_t</a>                       <dfn class="decl field" id="(anonymous)::link" title='(anonymous struct)::link' data-ref="(anonymous)::link">link</dfn>;</td></tr>
+<tr><th id="284">284</th><td></td></tr>
+<tr><th id="285">285</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#off_t" title='off_t' data-type='__off64_t' data-ref="off_t">off_t</a>                             <dfn class="decl field" id="(anonymous)::content_length_n" title='(anonymous struct)::content_length_n' data-ref="(anonymous)::content_length_n">content_length_n</dfn>;</td></tr>
+<tr><th id="286">286</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#off_t" title='off_t' data-type='__off64_t' data-ref="off_t">off_t</a>                             <dfn class="decl field" id="(anonymous)::content_offset" title='(anonymous struct)::content_offset' data-ref="(anonymous)::content_offset">content_offset</dfn>;</td></tr>
+<tr><th id="287">287</th><td>    <a class="typedef" href="../../../include/time.h.html#time_t" title='time_t' data-type='__time_t' data-ref="time_t">time_t</a>                            <dfn class="decl field" id="(anonymous)::date_time" title='(anonymous struct)::date_time' data-ref="(anonymous)::date_time">date_time</dfn>;</td></tr>
+<tr><th id="288">288</th><td>    <a class="typedef" href="../../../include/time.h.html#time_t" title='time_t' data-type='__time_t' data-ref="time_t">time_t</a>                            <dfn class="decl field" id="(anonymous)::last_modified_time" title='(anonymous struct)::last_modified_time' data-ref="(anonymous)::last_modified_time">last_modified_time</dfn>;</td></tr>
+<tr><th id="289">289</th><td>} <dfn class="typedef" id="ngx_http_headers_out_t" title='ngx_http_headers_out_t' data-type='struct ngx_http_headers_out_t' data-ref="ngx_http_headers_out_t">ngx_http_headers_out_t</dfn>;</td></tr>
+<tr><th id="290">290</th><td></td></tr>
+<tr><th id="291">291</th><td></td></tr>
+<tr><th id="292">292</th><td><b>typedef</b> <em>void</em> (*<dfn class="typedef" id="ngx_http_client_body_handler_pt" title='ngx_http_client_body_handler_pt' data-type='void (*)(ngx_http_request_t *)' data-ref="ngx_http_client_body_handler_pt">ngx_http_client_body_handler_pt</dfn>)(<a class="typedef" href="ngx_http.h.html#ngx_http_request_t" title='ngx_http_request_t' data-type='struct ngx_http_request_s' data-ref="ngx_http_request_t">ngx_http_request_t</a> *<dfn class="local col3 decl" id="53r" title='r' data-type='ngx_http_request_t *' data-ref="53r">r</dfn>);</td></tr>
+<tr><th id="293">293</th><td></td></tr>
+<tr><th id="294">294</th><td><b>typedef</b> <b>struct</b> {</td></tr>
+<tr><th id="295">295</th><td>    <a class="typedef" href="../core/ngx_file.h.html#ngx_temp_file_t" title='ngx_temp_file_t' data-type='struct ngx_temp_file_t' data-ref="ngx_temp_file_t">ngx_temp_file_t</a>                  *<dfn class="decl field" id="(anonymous)::temp_file" title='(anonymous struct)::temp_file' data-ref="(anonymous)::temp_file">temp_file</dfn>;</td></tr>
+<tr><th id="296">296</th><td>    <a class="typedef" href="../core/ngx_core.h.html#ngx_chain_t" title='ngx_chain_t' data-type='struct ngx_chain_s' data-ref="ngx_chain_t">ngx_chain_t</a>                      *<dfn class="decl field" id="(anonymous)::bufs" title='(anonymous struct)::bufs' data-ref="(anonymous)::bufs">bufs</dfn>;</td></tr>
+<tr><th id="297">297</th><td>    <a class="typedef" href="../core/ngx_buf.h.html#ngx_buf_t" title='ngx_buf_t' data-type='struct ngx_buf_s' data-ref="ngx_buf_t">ngx_buf_t</a>                        *<dfn class="decl field" id="(anonymous)::buf" title='(anonymous struct)::buf' data-ref="(anonymous)::buf">buf</dfn>;</td></tr>
+<tr><th id="298">298</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#off_t" title='off_t' data-type='__off64_t' data-ref="off_t">off_t</a>                             <dfn class="decl field" id="(anonymous)::rest" title='(anonymous struct)::rest' data-ref="(anonymous)::rest">rest</dfn>;</td></tr>
+<tr><th id="299">299</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#off_t" title='off_t' data-type='__off64_t' data-ref="off_t">off_t</a>                             <dfn class="decl field" id="(anonymous)::received" title='(anonymous struct)::received' data-ref="(anonymous)::received">received</dfn>;</td></tr>
+<tr><th id="300">300</th><td>    <a class="typedef" href="../core/ngx_core.h.html#ngx_chain_t" title='ngx_chain_t' data-type='struct ngx_chain_s' data-ref="ngx_chain_t">ngx_chain_t</a>                      *<dfn class="decl field" id="(anonymous)::free" title='(anonymous struct)::free' data-ref="(anonymous)::free">free</dfn>;</td></tr>
+<tr><th id="301">301</th><td>    <a class="typedef" href="../core/ngx_core.h.html#ngx_chain_t" title='ngx_chain_t' data-type='struct ngx_chain_s' data-ref="ngx_chain_t">ngx_chain_t</a>                      *<dfn class="decl field" id="(anonymous)::busy" title='(anonymous struct)::busy' data-ref="(anonymous)::busy">busy</dfn>;</td></tr>
+<tr><th id="302">302</th><td>    <a class="typedef" href="ngx_http.h.html#ngx_http_chunked_t" title='ngx_http_chunked_t' data-type='struct ngx_http_chunked_s' data-ref="ngx_http_chunked_t">ngx_http_chunked_t</a>               *<dfn class="decl field" id="(anonymous)::chunked" title='(anonymous struct)::chunked' data-ref="(anonymous)::chunked">chunked</dfn>;</td></tr>
+<tr><th id="303">303</th><td>    <a class="typedef" href="#ngx_http_client_body_handler_pt" title='ngx_http_client_body_handler_pt' data-type='void (*)(ngx_http_request_t *)' data-ref="ngx_http_client_body_handler_pt">ngx_http_client_body_handler_pt</a>   <dfn class="decl field" id="(anonymous)::post_handler" title='(anonymous struct)::post_handler' data-ref="(anonymous)::post_handler">post_handler</dfn>;</td></tr>
+<tr><th id="304">304</th><td>} <dfn class="typedef" id="ngx_http_request_body_t" title='ngx_http_request_body_t' data-type='struct ngx_http_request_body_t' data-ref="ngx_http_request_body_t">ngx_http_request_body_t</dfn>;</td></tr>
+<tr><th id="305">305</th><td></td></tr>
+<tr><th id="306">306</th><td></td></tr>
+<tr><th id="307">307</th><td><b>typedef</b> <b>struct</b> <a class="type" href="ngx_http_core_module.h.html#ngx_http_addr_conf_s" title='ngx_http_addr_conf_s' data-ref="ngx_http_addr_conf_s" id="ngx_http_addr_conf_s"><a class="type" href="ngx_http_core_module.h.html#ngx_http_addr_conf_s" title='ngx_http_addr_conf_s' data-ref="ngx_http_addr_conf_s">ngx_http_addr_conf_s</a></a>  <dfn class="typedef" id="ngx_http_addr_conf_t" title='ngx_http_addr_conf_t' data-type='struct ngx_http_addr_conf_s' data-ref="ngx_http_addr_conf_t">ngx_http_addr_conf_t</dfn>;</td></tr>
+<tr><th id="308">308</th><td></td></tr>
+<tr><th id="309">309</th><td><b>typedef</b> <b>struct</b> {</td></tr>
+<tr><th id="310">310</th><td>    <a class="typedef" href="#ngx_http_addr_conf_t" title='ngx_http_addr_conf_t' data-type='struct ngx_http_addr_conf_s' data-ref="ngx_http_addr_conf_t">ngx_http_addr_conf_t</a>             *<dfn class="decl field" id="(anonymous)::addr_conf" title='(anonymous struct)::addr_conf' data-ref="(anonymous)::addr_conf">addr_conf</dfn>;</td></tr>
+<tr><th id="311">311</th><td>    <a class="typedef" href="ngx_http_config.h.html#ngx_http_conf_ctx_t" title='ngx_http_conf_ctx_t' data-type='struct ngx_http_conf_ctx_t' data-ref="ngx_http_conf_ctx_t">ngx_http_conf_ctx_t</a>              *<dfn class="decl field" id="(anonymous)::conf_ctx" title='(anonymous struct)::conf_ctx' data-ref="(anonymous)::conf_ctx">conf_ctx</dfn>;</td></tr>
+<tr><th id="312">312</th><td></td></tr>
+<tr><th id="313">313</th><td><u>#<span data-ppcond="313">if</span> (NGX_HTTP_SSL || NGX_COMPAT)</u></td></tr>
+<tr><th id="314">314</th><td>    ngx_str_t                        *ssl_servername;</td></tr>
+<tr><th id="315">315</th><td><u>#if (NGX_PCRE)</u></td></tr>
+<tr><th id="316">316</th><td>    ngx_http_regex_t                 *ssl_servername_regex;</td></tr>
+<tr><th id="317">317</th><td><u>#endif</u></td></tr>
+<tr><th id="318">318</th><td><u>#<span data-ppcond="313">endif</span></u></td></tr>
+<tr><th id="319">319</th><td></td></tr>
+<tr><th id="320">320</th><td>    <a class="typedef" href="../core/ngx_core.h.html#ngx_chain_t" title='ngx_chain_t' data-type='struct ngx_chain_s' data-ref="ngx_chain_t">ngx_chain_t</a>                      *<dfn class="decl field" id="(anonymous)::busy" title='(anonymous struct)::busy' data-ref="(anonymous)::busy">busy</dfn>;</td></tr>
+<tr><th id="321">321</th><td>    <a class="typedef" href="../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a>                         <dfn class="decl field" id="(anonymous)::nbusy" title='(anonymous struct)::nbusy' data-ref="(anonymous)::nbusy">nbusy</dfn>;</td></tr>
+<tr><th id="322">322</th><td></td></tr>
+<tr><th id="323">323</th><td>    <a class="typedef" href="../core/ngx_core.h.html#ngx_chain_t" title='ngx_chain_t' data-type='struct ngx_chain_s' data-ref="ngx_chain_t">ngx_chain_t</a>                      *<dfn class="decl field" id="(anonymous)::free" title='(anonymous struct)::free' data-ref="(anonymous)::free">free</dfn>;</td></tr>
+<tr><th id="324">324</th><td></td></tr>
+<tr><th id="325">325</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="(anonymous)::ssl" title='(anonymous struct)::ssl' data-ref="(anonymous)::ssl">ssl</dfn>:<var>1</var>;</td></tr>
+<tr><th id="326">326</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="(anonymous)::proxy_protocol" title='(anonymous struct)::proxy_protocol' data-ref="(anonymous)::proxy_protocol">proxy_protocol</dfn>:<var>1</var>;</td></tr>
+<tr><th id="327">327</th><td>} <dfn class="typedef" id="ngx_http_connection_t" title='ngx_http_connection_t' data-type='struct ngx_http_connection_t' data-ref="ngx_http_connection_t">ngx_http_connection_t</dfn>;</td></tr>
+<tr><th id="328">328</th><td></td></tr>
+<tr><th id="329">329</th><td></td></tr>
+<tr><th id="330">330</th><td><b>typedef</b> <em>void</em> (*<dfn class="typedef" id="ngx_http_cleanup_pt" title='ngx_http_cleanup_pt' data-type='void (*)(void *)' data-ref="ngx_http_cleanup_pt">ngx_http_cleanup_pt</dfn>)(<em>void</em> *<dfn class="local col4 decl" id="54data" title='data' data-type='void *' data-ref="54data">data</dfn>);</td></tr>
+<tr><th id="331">331</th><td></td></tr>
+<tr><th id="332">332</th><td><b>typedef</b> <b>struct</b> <a class="type" href="#ngx_http_cleanup_s" title='ngx_http_cleanup_s' data-ref="ngx_http_cleanup_s">ngx_http_cleanup_s</a>  <dfn class="typedef" id="ngx_http_cleanup_t" title='ngx_http_cleanup_t' data-type='struct ngx_http_cleanup_s' data-ref="ngx_http_cleanup_t">ngx_http_cleanup_t</dfn>;</td></tr>
+<tr><th id="333">333</th><td></td></tr>
+<tr><th id="334">334</th><td><b>struct</b> <dfn class="type def" id="ngx_http_cleanup_s" title='ngx_http_cleanup_s' data-ref="ngx_http_cleanup_s">ngx_http_cleanup_s</dfn> {</td></tr>
+<tr><th id="335">335</th><td>    <a class="typedef" href="#ngx_http_cleanup_pt" title='ngx_http_cleanup_pt' data-type='void (*)(void *)' data-ref="ngx_http_cleanup_pt">ngx_http_cleanup_pt</a>               <dfn class="decl field" id="ngx_http_cleanup_s::handler" title='ngx_http_cleanup_s::handler' data-ref="ngx_http_cleanup_s::handler">handler</dfn>;</td></tr>
+<tr><th id="336">336</th><td>    <em>void</em>                             *<dfn class="decl field" id="ngx_http_cleanup_s::data" title='ngx_http_cleanup_s::data' data-ref="ngx_http_cleanup_s::data">data</dfn>;</td></tr>
+<tr><th id="337">337</th><td>    <a class="typedef" href="#ngx_http_cleanup_t" title='ngx_http_cleanup_t' data-type='struct ngx_http_cleanup_s' data-ref="ngx_http_cleanup_t">ngx_http_cleanup_t</a>               *<dfn class="decl field" id="ngx_http_cleanup_s::next" title='ngx_http_cleanup_s::next' data-ref="ngx_http_cleanup_s::next">next</dfn>;</td></tr>
+<tr><th id="338">338</th><td>};</td></tr>
+<tr><th id="339">339</th><td></td></tr>
+<tr><th id="340">340</th><td></td></tr>
+<tr><th id="341">341</th><td><b>typedef</b> <a class="typedef" href="../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a> (*<dfn class="typedef" id="ngx_http_post_subrequest_pt" title='ngx_http_post_subrequest_pt' data-type='ngx_int_t (*)(ngx_http_request_t *, void *, ngx_int_t)' data-ref="ngx_http_post_subrequest_pt">ngx_http_post_subrequest_pt</dfn>)(<a class="typedef" href="ngx_http.h.html#ngx_http_request_t" title='ngx_http_request_t' data-type='struct ngx_http_request_s' data-ref="ngx_http_request_t">ngx_http_request_t</a> *<dfn class="local col5 decl" id="55r" title='r' data-type='ngx_http_request_t *' data-ref="55r">r</dfn>,</td></tr>
+<tr><th id="342">342</th><td>    <em>void</em> *<dfn class="local col6 decl" id="56data" title='data' data-type='void *' data-ref="56data">data</dfn>, <a class="typedef" href="../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a> <dfn class="local col7 decl" id="57rc" title='rc' data-type='ngx_int_t' data-ref="57rc">rc</dfn>);</td></tr>
+<tr><th id="343">343</th><td></td></tr>
+<tr><th id="344">344</th><td><b>typedef</b> <b>struct</b> {</td></tr>
+<tr><th id="345">345</th><td>    <a class="typedef" href="#ngx_http_post_subrequest_pt" title='ngx_http_post_subrequest_pt' data-type='ngx_int_t (*)(ngx_http_request_t *, void *, ngx_int_t)' data-ref="ngx_http_post_subrequest_pt">ngx_http_post_subrequest_pt</a>       <dfn class="decl field" id="(anonymous)::handler" title='(anonymous struct)::handler' data-ref="(anonymous)::handler">handler</dfn>;</td></tr>
+<tr><th id="346">346</th><td>    <em>void</em>                             *<dfn class="decl field" id="(anonymous)::data" title='(anonymous struct)::data' data-ref="(anonymous)::data">data</dfn>;</td></tr>
+<tr><th id="347">347</th><td>} <dfn class="typedef" id="ngx_http_post_subrequest_t" title='ngx_http_post_subrequest_t' data-type='struct ngx_http_post_subrequest_t' data-ref="ngx_http_post_subrequest_t">ngx_http_post_subrequest_t</dfn>;</td></tr>
+<tr><th id="348">348</th><td></td></tr>
+<tr><th id="349">349</th><td></td></tr>
+<tr><th id="350">350</th><td><b>typedef</b> <b>struct</b> <a class="type" href="#ngx_http_postponed_request_s" title='ngx_http_postponed_request_s' data-ref="ngx_http_postponed_request_s">ngx_http_postponed_request_s</a>  <dfn class="typedef" id="ngx_http_postponed_request_t" title='ngx_http_postponed_request_t' data-type='struct ngx_http_postponed_request_s' data-ref="ngx_http_postponed_request_t">ngx_http_postponed_request_t</dfn>;</td></tr>
+<tr><th id="351">351</th><td></td></tr>
+<tr><th id="352">352</th><td><b>struct</b> <dfn class="type def" id="ngx_http_postponed_request_s" title='ngx_http_postponed_request_s' data-ref="ngx_http_postponed_request_s">ngx_http_postponed_request_s</dfn> {</td></tr>
+<tr><th id="353">353</th><td>    <a class="typedef" href="ngx_http.h.html#ngx_http_request_t" title='ngx_http_request_t' data-type='struct ngx_http_request_s' data-ref="ngx_http_request_t">ngx_http_request_t</a>               *<dfn class="decl field" id="ngx_http_postponed_request_s::request" title='ngx_http_postponed_request_s::request' data-ref="ngx_http_postponed_request_s::request">request</dfn>;</td></tr>
+<tr><th id="354">354</th><td>    <a class="typedef" href="../core/ngx_core.h.html#ngx_chain_t" title='ngx_chain_t' data-type='struct ngx_chain_s' data-ref="ngx_chain_t">ngx_chain_t</a>                      *<dfn class="decl field" id="ngx_http_postponed_request_s::out" title='ngx_http_postponed_request_s::out' data-ref="ngx_http_postponed_request_s::out">out</dfn>;</td></tr>
+<tr><th id="355">355</th><td>    <a class="typedef" href="#ngx_http_postponed_request_t" title='ngx_http_postponed_request_t' data-type='struct ngx_http_postponed_request_s' data-ref="ngx_http_postponed_request_t">ngx_http_postponed_request_t</a>     *<dfn class="decl field" id="ngx_http_postponed_request_s::next" title='ngx_http_postponed_request_s::next' data-ref="ngx_http_postponed_request_s::next">next</dfn>;</td></tr>
+<tr><th id="356">356</th><td>};</td></tr>
+<tr><th id="357">357</th><td></td></tr>
+<tr><th id="358">358</th><td></td></tr>
+<tr><th id="359">359</th><td><b>typedef</b> <b>struct</b> <a class="type" href="#ngx_http_posted_request_s" title='ngx_http_posted_request_s' data-ref="ngx_http_posted_request_s">ngx_http_posted_request_s</a>  <dfn class="typedef" id="ngx_http_posted_request_t" title='ngx_http_posted_request_t' data-type='struct ngx_http_posted_request_s' data-ref="ngx_http_posted_request_t">ngx_http_posted_request_t</dfn>;</td></tr>
+<tr><th id="360">360</th><td></td></tr>
+<tr><th id="361">361</th><td><b>struct</b> <dfn class="type def" id="ngx_http_posted_request_s" title='ngx_http_posted_request_s' data-ref="ngx_http_posted_request_s">ngx_http_posted_request_s</dfn> {</td></tr>
+<tr><th id="362">362</th><td>    <a class="typedef" href="ngx_http.h.html#ngx_http_request_t" title='ngx_http_request_t' data-type='struct ngx_http_request_s' data-ref="ngx_http_request_t">ngx_http_request_t</a>               *<dfn class="decl field" id="ngx_http_posted_request_s::request" title='ngx_http_posted_request_s::request' data-ref="ngx_http_posted_request_s::request">request</dfn>;</td></tr>
+<tr><th id="363">363</th><td>    <a class="typedef" href="#ngx_http_posted_request_t" title='ngx_http_posted_request_t' data-type='struct ngx_http_posted_request_s' data-ref="ngx_http_posted_request_t">ngx_http_posted_request_t</a>        *<dfn class="decl field" id="ngx_http_posted_request_s::next" title='ngx_http_posted_request_s::next' data-ref="ngx_http_posted_request_s::next">next</dfn>;</td></tr>
+<tr><th id="364">364</th><td>};</td></tr>
+<tr><th id="365">365</th><td></td></tr>
+<tr><th id="366">366</th><td></td></tr>
+<tr><th id="367">367</th><td><b>typedef</b> <a class="typedef" href="../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a> (*<dfn class="typedef" id="ngx_http_handler_pt" title='ngx_http_handler_pt' data-type='ngx_int_t (*)(ngx_http_request_t *)' data-ref="ngx_http_handler_pt">ngx_http_handler_pt</dfn>)(<a class="typedef" href="ngx_http.h.html#ngx_http_request_t" title='ngx_http_request_t' data-type='struct ngx_http_request_s' data-ref="ngx_http_request_t">ngx_http_request_t</a> *<dfn class="local col8 decl" id="58r" title='r' data-type='ngx_http_request_t *' data-ref="58r">r</dfn>);</td></tr>
+<tr><th id="368">368</th><td><b>typedef</b> <em>void</em> (*<dfn class="typedef" id="ngx_http_event_handler_pt" title='ngx_http_event_handler_pt' data-type='void (*)(ngx_http_request_t *)' data-ref="ngx_http_event_handler_pt">ngx_http_event_handler_pt</dfn>)(<a class="typedef" href="ngx_http.h.html#ngx_http_request_t" title='ngx_http_request_t' data-type='struct ngx_http_request_s' data-ref="ngx_http_request_t">ngx_http_request_t</a> *<dfn class="local col9 decl" id="59r" title='r' data-type='ngx_http_request_t *' data-ref="59r">r</dfn>);</td></tr>
+<tr><th id="369">369</th><td></td></tr>
+<tr><th id="370">370</th><td></td></tr>
+<tr><th id="371">371</th><td><b>struct</b> <dfn class="type def" id="ngx_http_request_s" title='ngx_http_request_s' data-ref="ngx_http_request_s">ngx_http_request_s</dfn> {</td></tr>
+<tr><th id="372">372</th><td>    <a class="typedef" href="../../../include/stdint.h.html#uint32_t" title='uint32_t' data-type='unsigned int' data-ref="uint32_t">uint32_t</a>                          <dfn class="decl field" id="ngx_http_request_s::signature" title='ngx_http_request_s::signature' data-ref="ngx_http_request_s::signature">signature</dfn>;         <i>/* "HTTP" */</i></td></tr>
+<tr><th id="373">373</th><td></td></tr>
+<tr><th id="374">374</th><td>    <a class="typedef" href="../core/ngx_core.h.html#ngx_connection_t" title='ngx_connection_t' data-type='struct ngx_connection_s' data-ref="ngx_connection_t">ngx_connection_t</a>                 *<dfn class="decl field" id="ngx_http_request_s::connection" title='ngx_http_request_s::connection' data-ref="ngx_http_request_s::connection">connection</dfn>;</td></tr>
+<tr><th id="375">375</th><td></td></tr>
+<tr><th id="376">376</th><td>    <em>void</em>                            **<dfn class="decl field" id="ngx_http_request_s::ctx" title='ngx_http_request_s::ctx' data-ref="ngx_http_request_s::ctx">ctx</dfn>;</td></tr>
+<tr><th id="377">377</th><td>    <em>void</em>                            **<dfn class="decl field" id="ngx_http_request_s::main_conf" title='ngx_http_request_s::main_conf' data-ref="ngx_http_request_s::main_conf">main_conf</dfn>;</td></tr>
+<tr><th id="378">378</th><td>    <em>void</em>                            **<dfn class="decl field" id="ngx_http_request_s::srv_conf" title='ngx_http_request_s::srv_conf' data-ref="ngx_http_request_s::srv_conf">srv_conf</dfn>;</td></tr>
+<tr><th id="379">379</th><td>    <em>void</em>                            **<dfn class="decl field" id="ngx_http_request_s::loc_conf" title='ngx_http_request_s::loc_conf' data-ref="ngx_http_request_s::loc_conf">loc_conf</dfn>;</td></tr>
+<tr><th id="380">380</th><td></td></tr>
+<tr><th id="381">381</th><td>    <a class="typedef" href="#ngx_http_event_handler_pt" title='ngx_http_event_handler_pt' data-type='void (*)(ngx_http_request_t *)' data-ref="ngx_http_event_handler_pt">ngx_http_event_handler_pt</a>         <dfn class="decl field" id="ngx_http_request_s::read_event_handler" title='ngx_http_request_s::read_event_handler' data-ref="ngx_http_request_s::read_event_handler">read_event_handler</dfn>;</td></tr>
+<tr><th id="382">382</th><td>    <a class="typedef" href="#ngx_http_event_handler_pt" title='ngx_http_event_handler_pt' data-type='void (*)(ngx_http_request_t *)' data-ref="ngx_http_event_handler_pt">ngx_http_event_handler_pt</a>         <dfn class="decl field" id="ngx_http_request_s::write_event_handler" title='ngx_http_request_s::write_event_handler' data-ref="ngx_http_request_s::write_event_handler">write_event_handler</dfn>;</td></tr>
+<tr><th id="383">383</th><td></td></tr>
+<tr><th id="384">384</th><td><u>#<span data-ppcond="384">if</span> (<a class="macro" href="../../objs/ngx_auto_config.h.html#352" title="1" data-ref="_M/NGX_HTTP_CACHE">NGX_HTTP_CACHE</a>)</u></td></tr>
+<tr><th id="385">385</th><td>    <a class="typedef" href="ngx_http.h.html#ngx_http_cache_t" title='ngx_http_cache_t' data-type='struct ngx_http_cache_s' data-ref="ngx_http_cache_t">ngx_http_cache_t</a>                 *<dfn class="decl field" id="ngx_http_request_s::cache" title='ngx_http_request_s::cache' data-ref="ngx_http_request_s::cache">cache</dfn>;</td></tr>
+<tr><th id="386">386</th><td><u>#<span data-ppcond="384">endif</span></u></td></tr>
+<tr><th id="387">387</th><td></td></tr>
+<tr><th id="388">388</th><td>    <a class="typedef" href="ngx_http.h.html#ngx_http_upstream_t" title='ngx_http_upstream_t' data-type='struct ngx_http_upstream_s' data-ref="ngx_http_upstream_t">ngx_http_upstream_t</a>              *<dfn class="decl field" id="ngx_http_request_s::upstream" title='ngx_http_request_s::upstream' data-ref="ngx_http_request_s::upstream">upstream</dfn>;</td></tr>
+<tr><th id="389">389</th><td>    <a class="typedef" href="../core/ngx_array.h.html#ngx_array_t" title='ngx_array_t' data-type='struct ngx_array_t' data-ref="ngx_array_t">ngx_array_t</a>                      *<dfn class="decl field" id="ngx_http_request_s::upstream_states" title='ngx_http_request_s::upstream_states' data-ref="ngx_http_request_s::upstream_states">upstream_states</dfn>;</td></tr>
+<tr><th id="390">390</th><td>                                         <i>/* of ngx_http_upstream_state_t */</i></td></tr>
+<tr><th id="391">391</th><td></td></tr>
+<tr><th id="392">392</th><td>    <a class="typedef" href="../core/ngx_core.h.html#ngx_pool_t" title='ngx_pool_t' data-type='struct ngx_pool_s' data-ref="ngx_pool_t">ngx_pool_t</a>                       *<dfn class="decl field" id="ngx_http_request_s::pool" title='ngx_http_request_s::pool' data-ref="ngx_http_request_s::pool">pool</dfn>;</td></tr>
+<tr><th id="393">393</th><td>    <a class="typedef" href="../core/ngx_buf.h.html#ngx_buf_t" title='ngx_buf_t' data-type='struct ngx_buf_s' data-ref="ngx_buf_t">ngx_buf_t</a>                        *<dfn class="decl field" id="ngx_http_request_s::header_in" title='ngx_http_request_s::header_in' data-ref="ngx_http_request_s::header_in">header_in</dfn>;</td></tr>
+<tr><th id="394">394</th><td></td></tr>
+<tr><th id="395">395</th><td>    <a class="typedef" href="#ngx_http_headers_in_t" title='ngx_http_headers_in_t' data-type='struct ngx_http_headers_in_t' data-ref="ngx_http_headers_in_t">ngx_http_headers_in_t</a>             <dfn class="decl field" id="ngx_http_request_s::headers_in" title='ngx_http_request_s::headers_in' data-ref="ngx_http_request_s::headers_in">headers_in</dfn>;</td></tr>
+<tr><th id="396">396</th><td>    <a class="typedef" href="#ngx_http_headers_out_t" title='ngx_http_headers_out_t' data-type='struct ngx_http_headers_out_t' data-ref="ngx_http_headers_out_t">ngx_http_headers_out_t</a>            <dfn class="decl field" id="ngx_http_request_s::headers_out" title='ngx_http_request_s::headers_out' data-ref="ngx_http_request_s::headers_out">headers_out</dfn>;</td></tr>
+<tr><th id="397">397</th><td></td></tr>
+<tr><th id="398">398</th><td>    <a class="typedef" href="#ngx_http_request_body_t" title='ngx_http_request_body_t' data-type='struct ngx_http_request_body_t' data-ref="ngx_http_request_body_t">ngx_http_request_body_t</a>          *<dfn class="decl field" id="ngx_http_request_s::request_body" title='ngx_http_request_s::request_body' data-ref="ngx_http_request_s::request_body">request_body</dfn>;</td></tr>
+<tr><th id="399">399</th><td></td></tr>
+<tr><th id="400">400</th><td>    <a class="typedef" href="../../../include/time.h.html#time_t" title='time_t' data-type='__time_t' data-ref="time_t">time_t</a>                            <dfn class="decl field" id="ngx_http_request_s::lingering_time" title='ngx_http_request_s::lingering_time' data-ref="ngx_http_request_s::lingering_time">lingering_time</dfn>;</td></tr>
+<tr><th id="401">401</th><td>    <a class="typedef" href="../../../include/time.h.html#time_t" title='time_t' data-type='__time_t' data-ref="time_t">time_t</a>                            <dfn class="decl field" id="ngx_http_request_s::start_sec" title='ngx_http_request_s::start_sec' data-ref="ngx_http_request_s::start_sec">start_sec</dfn>;</td></tr>
+<tr><th id="402">402</th><td>    <a class="typedef" href="../os/unix/ngx_time.h.html#ngx_msec_t" title='ngx_msec_t' data-type='ngx_rbtree_key_t' data-ref="ngx_msec_t">ngx_msec_t</a>                        <dfn class="decl field" id="ngx_http_request_s::start_msec" title='ngx_http_request_s::start_msec' data-ref="ngx_http_request_s::start_msec">start_msec</dfn>;</td></tr>
+<tr><th id="403">403</th><td></td></tr>
+<tr><th id="404">404</th><td>    <a class="typedef" href="../core/ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>                        <dfn class="decl field" id="ngx_http_request_s::method" title='ngx_http_request_s::method' data-ref="ngx_http_request_s::method">method</dfn>;</td></tr>
+<tr><th id="405">405</th><td>    <a class="typedef" href="../core/ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>                        <dfn class="decl field" id="ngx_http_request_s::http_version" title='ngx_http_request_s::http_version' data-ref="ngx_http_request_s::http_version">http_version</dfn>;</td></tr>
+<tr><th id="406">406</th><td></td></tr>
+<tr><th id="407">407</th><td>    <a class="typedef" href="../core/ngx_string.h.html#ngx_str_t" title='ngx_str_t' data-type='struct ngx_str_t' data-ref="ngx_str_t">ngx_str_t</a>                         <dfn class="decl field" id="ngx_http_request_s::request_line" title='ngx_http_request_s::request_line' data-ref="ngx_http_request_s::request_line">request_line</dfn>;</td></tr>
+<tr><th id="408">408</th><td>    <a class="typedef" href="../core/ngx_string.h.html#ngx_str_t" title='ngx_str_t' data-type='struct ngx_str_t' data-ref="ngx_str_t">ngx_str_t</a>                         <dfn class="decl field" id="ngx_http_request_s::uri" title='ngx_http_request_s::uri' data-ref="ngx_http_request_s::uri">uri</dfn>;</td></tr>
+<tr><th id="409">409</th><td>    <a class="typedef" href="../core/ngx_string.h.html#ngx_str_t" title='ngx_str_t' data-type='struct ngx_str_t' data-ref="ngx_str_t">ngx_str_t</a>                         <dfn class="decl field" id="ngx_http_request_s::args" title='ngx_http_request_s::args' data-ref="ngx_http_request_s::args">args</dfn>;</td></tr>
+<tr><th id="410">410</th><td>    <a class="typedef" href="../core/ngx_string.h.html#ngx_str_t" title='ngx_str_t' data-type='struct ngx_str_t' data-ref="ngx_str_t">ngx_str_t</a>                         <dfn class="decl field" id="ngx_http_request_s::exten" title='ngx_http_request_s::exten' data-ref="ngx_http_request_s::exten">exten</dfn>;</td></tr>
+<tr><th id="411">411</th><td>    <a class="typedef" href="../core/ngx_string.h.html#ngx_str_t" title='ngx_str_t' data-type='struct ngx_str_t' data-ref="ngx_str_t">ngx_str_t</a>                         <dfn class="decl field" id="ngx_http_request_s::unparsed_uri" title='ngx_http_request_s::unparsed_uri' data-ref="ngx_http_request_s::unparsed_uri">unparsed_uri</dfn>;</td></tr>
+<tr><th id="412">412</th><td></td></tr>
+<tr><th id="413">413</th><td>    <a class="typedef" href="../core/ngx_string.h.html#ngx_str_t" title='ngx_str_t' data-type='struct ngx_str_t' data-ref="ngx_str_t">ngx_str_t</a>                         <dfn class="decl field" id="ngx_http_request_s::method_name" title='ngx_http_request_s::method_name' data-ref="ngx_http_request_s::method_name">method_name</dfn>;</td></tr>
+<tr><th id="414">414</th><td>    <a class="typedef" href="../core/ngx_string.h.html#ngx_str_t" title='ngx_str_t' data-type='struct ngx_str_t' data-ref="ngx_str_t">ngx_str_t</a>                         <dfn class="decl field" id="ngx_http_request_s::http_protocol" title='ngx_http_request_s::http_protocol' data-ref="ngx_http_request_s::http_protocol">http_protocol</dfn>;</td></tr>
+<tr><th id="415">415</th><td></td></tr>
+<tr><th id="416">416</th><td>    <a class="typedef" href="../core/ngx_core.h.html#ngx_chain_t" title='ngx_chain_t' data-type='struct ngx_chain_s' data-ref="ngx_chain_t">ngx_chain_t</a>                      *<dfn class="decl field" id="ngx_http_request_s::out" title='ngx_http_request_s::out' data-ref="ngx_http_request_s::out">out</dfn>;</td></tr>
+<tr><th id="417">417</th><td>    <a class="typedef" href="ngx_http.h.html#ngx_http_request_t" title='ngx_http_request_t' data-type='struct ngx_http_request_s' data-ref="ngx_http_request_t">ngx_http_request_t</a>               *<dfn class="decl field" id="ngx_http_request_s::main" title='ngx_http_request_s::main' data-ref="ngx_http_request_s::main">main</dfn>;</td></tr>
+<tr><th id="418">418</th><td>    <a class="typedef" href="ngx_http.h.html#ngx_http_request_t" title='ngx_http_request_t' data-type='struct ngx_http_request_s' data-ref="ngx_http_request_t">ngx_http_request_t</a>               *<dfn class="decl field" id="ngx_http_request_s::parent" title='ngx_http_request_s::parent' data-ref="ngx_http_request_s::parent">parent</dfn>;</td></tr>
+<tr><th id="419">419</th><td>    <a class="typedef" href="#ngx_http_postponed_request_t" title='ngx_http_postponed_request_t' data-type='struct ngx_http_postponed_request_s' data-ref="ngx_http_postponed_request_t">ngx_http_postponed_request_t</a>     *<dfn class="decl field" id="ngx_http_request_s::postponed" title='ngx_http_request_s::postponed' data-ref="ngx_http_request_s::postponed">postponed</dfn>;</td></tr>
+<tr><th id="420">420</th><td>    <a class="typedef" href="#ngx_http_post_subrequest_t" title='ngx_http_post_subrequest_t' data-type='struct ngx_http_post_subrequest_t' data-ref="ngx_http_post_subrequest_t">ngx_http_post_subrequest_t</a>       *<dfn class="decl field" id="ngx_http_request_s::post_subrequest" title='ngx_http_request_s::post_subrequest' data-ref="ngx_http_request_s::post_subrequest">post_subrequest</dfn>;</td></tr>
+<tr><th id="421">421</th><td>    <a class="typedef" href="#ngx_http_posted_request_t" title='ngx_http_posted_request_t' data-type='struct ngx_http_posted_request_s' data-ref="ngx_http_posted_request_t">ngx_http_posted_request_t</a>        *<dfn class="decl field" id="ngx_http_request_s::posted_requests" title='ngx_http_request_s::posted_requests' data-ref="ngx_http_request_s::posted_requests">posted_requests</dfn>;</td></tr>
+<tr><th id="422">422</th><td></td></tr>
+<tr><th id="423">423</th><td>    <a class="typedef" href="../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a>                         <dfn class="decl field" id="ngx_http_request_s::phase_handler" title='ngx_http_request_s::phase_handler' data-ref="ngx_http_request_s::phase_handler">phase_handler</dfn>;</td></tr>
+<tr><th id="424">424</th><td>    <a class="typedef" href="#ngx_http_handler_pt" title='ngx_http_handler_pt' data-type='ngx_int_t (*)(ngx_http_request_t *)' data-ref="ngx_http_handler_pt">ngx_http_handler_pt</a>               <dfn class="decl field" id="ngx_http_request_s::content_handler" title='ngx_http_request_s::content_handler' data-ref="ngx_http_request_s::content_handler">content_handler</dfn>;</td></tr>
+<tr><th id="425">425</th><td>    <a class="typedef" href="../core/ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>                        <dfn class="decl field" id="ngx_http_request_s::access_code" title='ngx_http_request_s::access_code' data-ref="ngx_http_request_s::access_code">access_code</dfn>;</td></tr>
+<tr><th id="426">426</th><td></td></tr>
+<tr><th id="427">427</th><td>    <a class="typedef" href="ngx_http_variables.h.html#ngx_http_variable_value_t" title='ngx_http_variable_value_t' data-type='ngx_variable_value_t' data-ref="ngx_http_variable_value_t">ngx_http_variable_value_t</a>        *<dfn class="decl field" id="ngx_http_request_s::variables" title='ngx_http_request_s::variables' data-ref="ngx_http_request_s::variables">variables</dfn>;</td></tr>
+<tr><th id="428">428</th><td></td></tr>
+<tr><th id="429">429</th><td><u>#<span data-ppcond="429">if</span> (<a class="macro" href="../../objs/ngx_auto_config.h.html#387" title="1" data-ref="_M/NGX_PCRE">NGX_PCRE</a>)</u></td></tr>
+<tr><th id="430">430</th><td>    <a class="typedef" href="../core/ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>                        <dfn class="decl field" id="ngx_http_request_s::ncaptures" title='ngx_http_request_s::ncaptures' data-ref="ngx_http_request_s::ncaptures">ncaptures</dfn>;</td></tr>
+<tr><th id="431">431</th><td>    <em>int</em>                              *<dfn class="decl field" id="ngx_http_request_s::captures" title='ngx_http_request_s::captures' data-ref="ngx_http_request_s::captures">captures</dfn>;</td></tr>
+<tr><th id="432">432</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a>                           *<dfn class="decl field" id="ngx_http_request_s::captures_data" title='ngx_http_request_s::captures_data' data-ref="ngx_http_request_s::captures_data">captures_data</dfn>;</td></tr>
+<tr><th id="433">433</th><td><u>#<span data-ppcond="429">endif</span></u></td></tr>
+<tr><th id="434">434</th><td></td></tr>
+<tr><th id="435">435</th><td>    <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span>                            <dfn class="decl field" id="ngx_http_request_s::limit_rate" title='ngx_http_request_s::limit_rate' data-ref="ngx_http_request_s::limit_rate">limit_rate</dfn>;</td></tr>
+<tr><th id="436">436</th><td>    <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span>                            <dfn class="decl field" id="ngx_http_request_s::limit_rate_after" title='ngx_http_request_s::limit_rate_after' data-ref="ngx_http_request_s::limit_rate_after">limit_rate_after</dfn>;</td></tr>
+<tr><th id="437">437</th><td></td></tr>
+<tr><th id="438">438</th><td>    <i>/* used to learn the Apache compatible response length without a header */</i></td></tr>
+<tr><th id="439">439</th><td>    <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span>                            <dfn class="decl field" id="ngx_http_request_s::header_size" title='ngx_http_request_s::header_size' data-ref="ngx_http_request_s::header_size">header_size</dfn>;</td></tr>
+<tr><th id="440">440</th><td></td></tr>
+<tr><th id="441">441</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#off_t" title='off_t' data-type='__off64_t' data-ref="off_t">off_t</a>                             <dfn class="decl field" id="ngx_http_request_s::request_length" title='ngx_http_request_s::request_length' data-ref="ngx_http_request_s::request_length">request_length</dfn>;</td></tr>
+<tr><th id="442">442</th><td></td></tr>
+<tr><th id="443">443</th><td>    <a class="typedef" href="../core/ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>                        <dfn class="decl field" id="ngx_http_request_s::err_status" title='ngx_http_request_s::err_status' data-ref="ngx_http_request_s::err_status">err_status</dfn>;</td></tr>
+<tr><th id="444">444</th><td></td></tr>
+<tr><th id="445">445</th><td>    <a class="typedef" href="#ngx_http_connection_t" title='ngx_http_connection_t' data-type='struct ngx_http_connection_t' data-ref="ngx_http_connection_t">ngx_http_connection_t</a>            *<dfn class="decl field" id="ngx_http_request_s::http_connection" title='ngx_http_request_s::http_connection' data-ref="ngx_http_request_s::http_connection">http_connection</dfn>;</td></tr>
+<tr><th id="446">446</th><td>    <a class="typedef" href="ngx_http.h.html#ngx_http_v2_stream_t" title='ngx_http_v2_stream_t' data-type='struct ngx_http_v2_stream_s' data-ref="ngx_http_v2_stream_t">ngx_http_v2_stream_t</a>             *<dfn class="decl field" id="ngx_http_request_s::stream" title='ngx_http_request_s::stream' data-ref="ngx_http_request_s::stream">stream</dfn>;</td></tr>
+<tr><th id="447">447</th><td></td></tr>
+<tr><th id="448">448</th><td>    <a class="typedef" href="ngx_http.h.html#ngx_http_log_handler_pt" title='ngx_http_log_handler_pt' data-type='u_char *(*)(ngx_http_request_t *, ngx_http_request_t *, u_char *, size_t)' data-ref="ngx_http_log_handler_pt">ngx_http_log_handler_pt</a>           <dfn class="decl field" id="ngx_http_request_s::log_handler" title='ngx_http_request_s::log_handler' data-ref="ngx_http_request_s::log_handler">log_handler</dfn>;</td></tr>
+<tr><th id="449">449</th><td></td></tr>
+<tr><th id="450">450</th><td>    <a class="typedef" href="#ngx_http_cleanup_t" title='ngx_http_cleanup_t' data-type='struct ngx_http_cleanup_s' data-ref="ngx_http_cleanup_t">ngx_http_cleanup_t</a>               *<dfn class="decl field" id="ngx_http_request_s::cleanup" title='ngx_http_request_s::cleanup' data-ref="ngx_http_request_s::cleanup">cleanup</dfn>;</td></tr>
+<tr><th id="451">451</th><td></td></tr>
+<tr><th id="452">452</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::count" title='ngx_http_request_s::count' data-ref="ngx_http_request_s::count">count</dfn>:<var>16</var>;</td></tr>
+<tr><th id="453">453</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::subrequests" title='ngx_http_request_s::subrequests' data-ref="ngx_http_request_s::subrequests">subrequests</dfn>:<var>8</var>;</td></tr>
+<tr><th id="454">454</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::blocked" title='ngx_http_request_s::blocked' data-ref="ngx_http_request_s::blocked">blocked</dfn>:<var>8</var>;</td></tr>
+<tr><th id="455">455</th><td></td></tr>
+<tr><th id="456">456</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::aio" title='ngx_http_request_s::aio' data-ref="ngx_http_request_s::aio">aio</dfn>:<var>1</var>;</td></tr>
+<tr><th id="457">457</th><td></td></tr>
+<tr><th id="458">458</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::http_state" title='ngx_http_request_s::http_state' data-ref="ngx_http_request_s::http_state">http_state</dfn>:<var>4</var>;</td></tr>
+<tr><th id="459">459</th><td></td></tr>
+<tr><th id="460">460</th><td>    <i>/* URI with "/." and on Win32 with "//" */</i></td></tr>
+<tr><th id="461">461</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::complex_uri" title='ngx_http_request_s::complex_uri' data-ref="ngx_http_request_s::complex_uri">complex_uri</dfn>:<var>1</var>;</td></tr>
+<tr><th id="462">462</th><td></td></tr>
+<tr><th id="463">463</th><td>    <i>/* URI with "%" */</i></td></tr>
+<tr><th id="464">464</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::quoted_uri" title='ngx_http_request_s::quoted_uri' data-ref="ngx_http_request_s::quoted_uri">quoted_uri</dfn>:<var>1</var>;</td></tr>
+<tr><th id="465">465</th><td></td></tr>
+<tr><th id="466">466</th><td>    <i>/* URI with "+" */</i></td></tr>
+<tr><th id="467">467</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::plus_in_uri" title='ngx_http_request_s::plus_in_uri' data-ref="ngx_http_request_s::plus_in_uri">plus_in_uri</dfn>:<var>1</var>;</td></tr>
+<tr><th id="468">468</th><td></td></tr>
+<tr><th id="469">469</th><td>    <i>/* URI with " " */</i></td></tr>
+<tr><th id="470">470</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::space_in_uri" title='ngx_http_request_s::space_in_uri' data-ref="ngx_http_request_s::space_in_uri">space_in_uri</dfn>:<var>1</var>;</td></tr>
+<tr><th id="471">471</th><td></td></tr>
+<tr><th id="472">472</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::invalid_header" title='ngx_http_request_s::invalid_header' data-ref="ngx_http_request_s::invalid_header">invalid_header</dfn>:<var>1</var>;</td></tr>
+<tr><th id="473">473</th><td></td></tr>
+<tr><th id="474">474</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::add_uri_to_alias" title='ngx_http_request_s::add_uri_to_alias' data-ref="ngx_http_request_s::add_uri_to_alias">add_uri_to_alias</dfn>:<var>1</var>;</td></tr>
+<tr><th id="475">475</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::valid_location" title='ngx_http_request_s::valid_location' data-ref="ngx_http_request_s::valid_location">valid_location</dfn>:<var>1</var>;</td></tr>
+<tr><th id="476">476</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::valid_unparsed_uri" title='ngx_http_request_s::valid_unparsed_uri' data-ref="ngx_http_request_s::valid_unparsed_uri">valid_unparsed_uri</dfn>:<var>1</var>;</td></tr>
+<tr><th id="477">477</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::uri_changed" title='ngx_http_request_s::uri_changed' data-ref="ngx_http_request_s::uri_changed">uri_changed</dfn>:<var>1</var>;</td></tr>
+<tr><th id="478">478</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::uri_changes" title='ngx_http_request_s::uri_changes' data-ref="ngx_http_request_s::uri_changes">uri_changes</dfn>:<var>4</var>;</td></tr>
+<tr><th id="479">479</th><td></td></tr>
+<tr><th id="480">480</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::request_body_in_single_buf" title='ngx_http_request_s::request_body_in_single_buf' data-ref="ngx_http_request_s::request_body_in_single_buf">request_body_in_single_buf</dfn>:<var>1</var>;</td></tr>
+<tr><th id="481">481</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::request_body_in_file_only" title='ngx_http_request_s::request_body_in_file_only' data-ref="ngx_http_request_s::request_body_in_file_only">request_body_in_file_only</dfn>:<var>1</var>;</td></tr>
+<tr><th id="482">482</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::request_body_in_persistent_file" title='ngx_http_request_s::request_body_in_persistent_file' data-ref="ngx_http_request_s::request_body_in_persistent_file">request_body_in_persistent_file</dfn>:<var>1</var>;</td></tr>
+<tr><th id="483">483</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::request_body_in_clean_file" title='ngx_http_request_s::request_body_in_clean_file' data-ref="ngx_http_request_s::request_body_in_clean_file">request_body_in_clean_file</dfn>:<var>1</var>;</td></tr>
+<tr><th id="484">484</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::request_body_file_group_access" title='ngx_http_request_s::request_body_file_group_access' data-ref="ngx_http_request_s::request_body_file_group_access">request_body_file_group_access</dfn>:<var>1</var>;</td></tr>
+<tr><th id="485">485</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::request_body_file_log_level" title='ngx_http_request_s::request_body_file_log_level' data-ref="ngx_http_request_s::request_body_file_log_level">request_body_file_log_level</dfn>:<var>3</var>;</td></tr>
+<tr><th id="486">486</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::request_body_no_buffering" title='ngx_http_request_s::request_body_no_buffering' data-ref="ngx_http_request_s::request_body_no_buffering">request_body_no_buffering</dfn>:<var>1</var>;</td></tr>
+<tr><th id="487">487</th><td></td></tr>
+<tr><th id="488">488</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::subrequest_in_memory" title='ngx_http_request_s::subrequest_in_memory' data-ref="ngx_http_request_s::subrequest_in_memory">subrequest_in_memory</dfn>:<var>1</var>;</td></tr>
+<tr><th id="489">489</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::waited" title='ngx_http_request_s::waited' data-ref="ngx_http_request_s::waited">waited</dfn>:<var>1</var>;</td></tr>
+<tr><th id="490">490</th><td></td></tr>
+<tr><th id="491">491</th><td><u>#<span data-ppcond="491">if</span> (<a class="macro" href="../../objs/ngx_auto_config.h.html#352" title="1" data-ref="_M/NGX_HTTP_CACHE">NGX_HTTP_CACHE</a>)</u></td></tr>
+<tr><th id="492">492</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::cached" title='ngx_http_request_s::cached' data-ref="ngx_http_request_s::cached">cached</dfn>:<var>1</var>;</td></tr>
+<tr><th id="493">493</th><td><u>#<span data-ppcond="491">endif</span></u></td></tr>
+<tr><th id="494">494</th><td></td></tr>
+<tr><th id="495">495</th><td><u>#<span data-ppcond="495">if</span> (<a class="macro" href="../../objs/ngx_auto_config.h.html#357" title="1" data-ref="_M/NGX_HTTP_GZIP">NGX_HTTP_GZIP</a>)</u></td></tr>
+<tr><th id="496">496</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::gzip_tested" title='ngx_http_request_s::gzip_tested' data-ref="ngx_http_request_s::gzip_tested">gzip_tested</dfn>:<var>1</var>;</td></tr>
+<tr><th id="497">497</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::gzip_ok" title='ngx_http_request_s::gzip_ok' data-ref="ngx_http_request_s::gzip_ok">gzip_ok</dfn>:<var>1</var>;</td></tr>
+<tr><th id="498">498</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::gzip_vary" title='ngx_http_request_s::gzip_vary' data-ref="ngx_http_request_s::gzip_vary">gzip_vary</dfn>:<var>1</var>;</td></tr>
+<tr><th id="499">499</th><td><u>#<span data-ppcond="495">endif</span></u></td></tr>
+<tr><th id="500">500</th><td></td></tr>
+<tr><th id="501">501</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::proxy" title='ngx_http_request_s::proxy' data-ref="ngx_http_request_s::proxy">proxy</dfn>:<var>1</var>;</td></tr>
+<tr><th id="502">502</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::bypass_cache" title='ngx_http_request_s::bypass_cache' data-ref="ngx_http_request_s::bypass_cache">bypass_cache</dfn>:<var>1</var>;</td></tr>
+<tr><th id="503">503</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::no_cache" title='ngx_http_request_s::no_cache' data-ref="ngx_http_request_s::no_cache">no_cache</dfn>:<var>1</var>;</td></tr>
+<tr><th id="504">504</th><td></td></tr>
+<tr><th id="505">505</th><td>    <i>/*</i></td></tr>
+<tr><th id="506">506</th><td><i>     * instead of using the request context data in</i></td></tr>
+<tr><th id="507">507</th><td><i>     * ngx_http_limit_conn_module and ngx_http_limit_req_module</i></td></tr>
+<tr><th id="508">508</th><td><i>     * we use the single bits in the request structure</i></td></tr>
+<tr><th id="509">509</th><td><i>     */</i></td></tr>
+<tr><th id="510">510</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::limit_conn_set" title='ngx_http_request_s::limit_conn_set' data-ref="ngx_http_request_s::limit_conn_set">limit_conn_set</dfn>:<var>1</var>;</td></tr>
+<tr><th id="511">511</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::limit_req_set" title='ngx_http_request_s::limit_req_set' data-ref="ngx_http_request_s::limit_req_set">limit_req_set</dfn>:<var>1</var>;</td></tr>
+<tr><th id="512">512</th><td></td></tr>
+<tr><th id="513">513</th><td><u>#<span data-ppcond="513">if</span> 0</u></td></tr>
+<tr><th id="514">514</th><td>    <em>unsigned</em>                          cacheable:<var>1</var>;</td></tr>
+<tr><th id="515">515</th><td><u>#<span data-ppcond="513">endif</span></u></td></tr>
+<tr><th id="516">516</th><td></td></tr>
+<tr><th id="517">517</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::pipeline" title='ngx_http_request_s::pipeline' data-ref="ngx_http_request_s::pipeline">pipeline</dfn>:<var>1</var>;</td></tr>
+<tr><th id="518">518</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::chunked" title='ngx_http_request_s::chunked' data-ref="ngx_http_request_s::chunked">chunked</dfn>:<var>1</var>;</td></tr>
+<tr><th id="519">519</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::header_only" title='ngx_http_request_s::header_only' data-ref="ngx_http_request_s::header_only">header_only</dfn>:<var>1</var>;</td></tr>
+<tr><th id="520">520</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::expect_trailers" title='ngx_http_request_s::expect_trailers' data-ref="ngx_http_request_s::expect_trailers">expect_trailers</dfn>:<var>1</var>;</td></tr>
+<tr><th id="521">521</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::keepalive" title='ngx_http_request_s::keepalive' data-ref="ngx_http_request_s::keepalive">keepalive</dfn>:<var>1</var>;</td></tr>
+<tr><th id="522">522</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::lingering_close" title='ngx_http_request_s::lingering_close' data-ref="ngx_http_request_s::lingering_close">lingering_close</dfn>:<var>1</var>;</td></tr>
+<tr><th id="523">523</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::discard_body" title='ngx_http_request_s::discard_body' data-ref="ngx_http_request_s::discard_body">discard_body</dfn>:<var>1</var>;</td></tr>
+<tr><th id="524">524</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::reading_body" title='ngx_http_request_s::reading_body' data-ref="ngx_http_request_s::reading_body">reading_body</dfn>:<var>1</var>;</td></tr>
+<tr><th id="525">525</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::internal" title='ngx_http_request_s::internal' data-ref="ngx_http_request_s::internal">internal</dfn>:<var>1</var>;</td></tr>
+<tr><th id="526">526</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::error_page" title='ngx_http_request_s::error_page' data-ref="ngx_http_request_s::error_page">error_page</dfn>:<var>1</var>;</td></tr>
+<tr><th id="527">527</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::filter_finalize" title='ngx_http_request_s::filter_finalize' data-ref="ngx_http_request_s::filter_finalize">filter_finalize</dfn>:<var>1</var>;</td></tr>
+<tr><th id="528">528</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::post_action" title='ngx_http_request_s::post_action' data-ref="ngx_http_request_s::post_action">post_action</dfn>:<var>1</var>;</td></tr>
+<tr><th id="529">529</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::request_complete" title='ngx_http_request_s::request_complete' data-ref="ngx_http_request_s::request_complete">request_complete</dfn>:<var>1</var>;</td></tr>
+<tr><th id="530">530</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::request_output" title='ngx_http_request_s::request_output' data-ref="ngx_http_request_s::request_output">request_output</dfn>:<var>1</var>;</td></tr>
+<tr><th id="531">531</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::header_sent" title='ngx_http_request_s::header_sent' data-ref="ngx_http_request_s::header_sent">header_sent</dfn>:<var>1</var>;</td></tr>
+<tr><th id="532">532</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::expect_tested" title='ngx_http_request_s::expect_tested' data-ref="ngx_http_request_s::expect_tested">expect_tested</dfn>:<var>1</var>;</td></tr>
+<tr><th id="533">533</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::root_tested" title='ngx_http_request_s::root_tested' data-ref="ngx_http_request_s::root_tested">root_tested</dfn>:<var>1</var>;</td></tr>
+<tr><th id="534">534</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::done" title='ngx_http_request_s::done' data-ref="ngx_http_request_s::done">done</dfn>:<var>1</var>;</td></tr>
+<tr><th id="535">535</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::logged" title='ngx_http_request_s::logged' data-ref="ngx_http_request_s::logged">logged</dfn>:<var>1</var>;</td></tr>
+<tr><th id="536">536</th><td></td></tr>
+<tr><th id="537">537</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::buffered" title='ngx_http_request_s::buffered' data-ref="ngx_http_request_s::buffered">buffered</dfn>:<var>4</var>;</td></tr>
+<tr><th id="538">538</th><td></td></tr>
+<tr><th id="539">539</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::main_filter_need_in_memory" title='ngx_http_request_s::main_filter_need_in_memory' data-ref="ngx_http_request_s::main_filter_need_in_memory">main_filter_need_in_memory</dfn>:<var>1</var>;</td></tr>
+<tr><th id="540">540</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::filter_need_in_memory" title='ngx_http_request_s::filter_need_in_memory' data-ref="ngx_http_request_s::filter_need_in_memory">filter_need_in_memory</dfn>:<var>1</var>;</td></tr>
+<tr><th id="541">541</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::filter_need_temporary" title='ngx_http_request_s::filter_need_temporary' data-ref="ngx_http_request_s::filter_need_temporary">filter_need_temporary</dfn>:<var>1</var>;</td></tr>
+<tr><th id="542">542</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::preserve_body" title='ngx_http_request_s::preserve_body' data-ref="ngx_http_request_s::preserve_body">preserve_body</dfn>:<var>1</var>;</td></tr>
+<tr><th id="543">543</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::allow_ranges" title='ngx_http_request_s::allow_ranges' data-ref="ngx_http_request_s::allow_ranges">allow_ranges</dfn>:<var>1</var>;</td></tr>
+<tr><th id="544">544</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::subrequest_ranges" title='ngx_http_request_s::subrequest_ranges' data-ref="ngx_http_request_s::subrequest_ranges">subrequest_ranges</dfn>:<var>1</var>;</td></tr>
+<tr><th id="545">545</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::single_range" title='ngx_http_request_s::single_range' data-ref="ngx_http_request_s::single_range">single_range</dfn>:<var>1</var>;</td></tr>
+<tr><th id="546">546</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::disable_not_modified" title='ngx_http_request_s::disable_not_modified' data-ref="ngx_http_request_s::disable_not_modified">disable_not_modified</dfn>:<var>1</var>;</td></tr>
+<tr><th id="547">547</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::stat_reading" title='ngx_http_request_s::stat_reading' data-ref="ngx_http_request_s::stat_reading">stat_reading</dfn>:<var>1</var>;</td></tr>
+<tr><th id="548">548</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::stat_writing" title='ngx_http_request_s::stat_writing' data-ref="ngx_http_request_s::stat_writing">stat_writing</dfn>:<var>1</var>;</td></tr>
+<tr><th id="549">549</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::stat_processing" title='ngx_http_request_s::stat_processing' data-ref="ngx_http_request_s::stat_processing">stat_processing</dfn>:<var>1</var>;</td></tr>
+<tr><th id="550">550</th><td></td></tr>
+<tr><th id="551">551</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::background" title='ngx_http_request_s::background' data-ref="ngx_http_request_s::background">background</dfn>:<var>1</var>;</td></tr>
+<tr><th id="552">552</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::health_check" title='ngx_http_request_s::health_check' data-ref="ngx_http_request_s::health_check">health_check</dfn>:<var>1</var>;</td></tr>
+<tr><th id="553">553</th><td></td></tr>
+<tr><th id="554">554</th><td>    <i>/* used to parse HTTP headers */</i></td></tr>
+<tr><th id="555">555</th><td></td></tr>
+<tr><th id="556">556</th><td>    <a class="typedef" href="../core/ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>                        <dfn class="decl field" id="ngx_http_request_s::state" title='ngx_http_request_s::state' data-ref="ngx_http_request_s::state">state</dfn>;</td></tr>
+<tr><th id="557">557</th><td></td></tr>
+<tr><th id="558">558</th><td>    <a class="typedef" href="../core/ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>                        <dfn class="decl field" id="ngx_http_request_s::header_hash" title='ngx_http_request_s::header_hash' data-ref="ngx_http_request_s::header_hash">header_hash</dfn>;</td></tr>
+<tr><th id="559">559</th><td>    <a class="typedef" href="../core/ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>                        <dfn class="decl field" id="ngx_http_request_s::lowcase_index" title='ngx_http_request_s::lowcase_index' data-ref="ngx_http_request_s::lowcase_index">lowcase_index</dfn>;</td></tr>
+<tr><th id="560">560</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a>                            <dfn class="decl field" id="ngx_http_request_s::lowcase_header" title='ngx_http_request_s::lowcase_header' data-ref="ngx_http_request_s::lowcase_header">lowcase_header</dfn>[<a class="macro" href="#16" title="32" data-ref="_M/NGX_HTTP_LC_HEADER_LEN">NGX_HTTP_LC_HEADER_LEN</a>];</td></tr>
+<tr><th id="561">561</th><td></td></tr>
+<tr><th id="562">562</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a>                           *<dfn class="decl field" id="ngx_http_request_s::header_name_start" title='ngx_http_request_s::header_name_start' data-ref="ngx_http_request_s::header_name_start">header_name_start</dfn>;</td></tr>
+<tr><th id="563">563</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a>                           *<dfn class="decl field" id="ngx_http_request_s::header_name_end" title='ngx_http_request_s::header_name_end' data-ref="ngx_http_request_s::header_name_end">header_name_end</dfn>;</td></tr>
+<tr><th id="564">564</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a>                           *<dfn class="decl field" id="ngx_http_request_s::header_start" title='ngx_http_request_s::header_start' data-ref="ngx_http_request_s::header_start">header_start</dfn>;</td></tr>
+<tr><th id="565">565</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a>                           *<dfn class="decl field" id="ngx_http_request_s::header_end" title='ngx_http_request_s::header_end' data-ref="ngx_http_request_s::header_end">header_end</dfn>;</td></tr>
+<tr><th id="566">566</th><td></td></tr>
+<tr><th id="567">567</th><td>    <i>/*</i></td></tr>
+<tr><th id="568">568</th><td><i>     * a memory that can be reused after parsing a request line</i></td></tr>
+<tr><th id="569">569</th><td><i>     * via ngx_http_ephemeral_t</i></td></tr>
+<tr><th id="570">570</th><td><i>     */</i></td></tr>
+<tr><th id="571">571</th><td></td></tr>
+<tr><th id="572">572</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a>                           *<dfn class="decl field" id="ngx_http_request_s::uri_start" title='ngx_http_request_s::uri_start' data-ref="ngx_http_request_s::uri_start">uri_start</dfn>;</td></tr>
+<tr><th id="573">573</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a>                           *<dfn class="decl field" id="ngx_http_request_s::uri_end" title='ngx_http_request_s::uri_end' data-ref="ngx_http_request_s::uri_end">uri_end</dfn>;</td></tr>
+<tr><th id="574">574</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a>                           *<dfn class="decl field" id="ngx_http_request_s::uri_ext" title='ngx_http_request_s::uri_ext' data-ref="ngx_http_request_s::uri_ext">uri_ext</dfn>;</td></tr>
+<tr><th id="575">575</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a>                           *<dfn class="decl field" id="ngx_http_request_s::args_start" title='ngx_http_request_s::args_start' data-ref="ngx_http_request_s::args_start">args_start</dfn>;</td></tr>
+<tr><th id="576">576</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a>                           *<dfn class="decl field" id="ngx_http_request_s::request_start" title='ngx_http_request_s::request_start' data-ref="ngx_http_request_s::request_start">request_start</dfn>;</td></tr>
+<tr><th id="577">577</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a>                           *<dfn class="decl field" id="ngx_http_request_s::request_end" title='ngx_http_request_s::request_end' data-ref="ngx_http_request_s::request_end">request_end</dfn>;</td></tr>
+<tr><th id="578">578</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a>                           *<dfn class="decl field" id="ngx_http_request_s::method_end" title='ngx_http_request_s::method_end' data-ref="ngx_http_request_s::method_end">method_end</dfn>;</td></tr>
+<tr><th id="579">579</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a>                           *<dfn class="decl field" id="ngx_http_request_s::schema_start" title='ngx_http_request_s::schema_start' data-ref="ngx_http_request_s::schema_start">schema_start</dfn>;</td></tr>
+<tr><th id="580">580</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a>                           *<dfn class="decl field" id="ngx_http_request_s::schema_end" title='ngx_http_request_s::schema_end' data-ref="ngx_http_request_s::schema_end">schema_end</dfn>;</td></tr>
+<tr><th id="581">581</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a>                           *<dfn class="decl field" id="ngx_http_request_s::host_start" title='ngx_http_request_s::host_start' data-ref="ngx_http_request_s::host_start">host_start</dfn>;</td></tr>
+<tr><th id="582">582</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a>                           *<dfn class="decl field" id="ngx_http_request_s::host_end" title='ngx_http_request_s::host_end' data-ref="ngx_http_request_s::host_end">host_end</dfn>;</td></tr>
+<tr><th id="583">583</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a>                           *<dfn class="decl field" id="ngx_http_request_s::port_start" title='ngx_http_request_s::port_start' data-ref="ngx_http_request_s::port_start">port_start</dfn>;</td></tr>
+<tr><th id="584">584</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a>                           *<dfn class="decl field" id="ngx_http_request_s::port_end" title='ngx_http_request_s::port_end' data-ref="ngx_http_request_s::port_end">port_end</dfn>;</td></tr>
+<tr><th id="585">585</th><td></td></tr>
+<tr><th id="586">586</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::http_minor" title='ngx_http_request_s::http_minor' data-ref="ngx_http_request_s::http_minor">http_minor</dfn>:<var>16</var>;</td></tr>
+<tr><th id="587">587</th><td>    <em>unsigned</em>                          <dfn class="decl field" id="ngx_http_request_s::http_major" title='ngx_http_request_s::http_major' data-ref="ngx_http_request_s::http_major">http_major</dfn>:<var>16</var>;</td></tr>
+<tr><th id="588">588</th><td>};</td></tr>
+<tr><th id="589">589</th><td></td></tr>
+<tr><th id="590">590</th><td></td></tr>
+<tr><th id="591">591</th><td><b>typedef</b> <b>struct</b> {</td></tr>
+<tr><th id="592">592</th><td>    <a class="typedef" href="#ngx_http_posted_request_t" title='ngx_http_posted_request_t' data-type='struct ngx_http_posted_request_s' data-ref="ngx_http_posted_request_t">ngx_http_posted_request_t</a>         <dfn class="decl field" id="(anonymous)::terminal_posted_request" title='(anonymous struct)::terminal_posted_request' data-ref="(anonymous)::terminal_posted_request">terminal_posted_request</dfn>;</td></tr>
+<tr><th id="593">593</th><td>} <dfn class="typedef" id="ngx_http_ephemeral_t" title='ngx_http_ephemeral_t' data-type='struct ngx_http_ephemeral_t' data-ref="ngx_http_ephemeral_t">ngx_http_ephemeral_t</dfn>;</td></tr>
+<tr><th id="594">594</th><td></td></tr>
+<tr><th id="595">595</th><td></td></tr>
+<tr><th id="596">596</th><td><u>#define <dfn class="macro" id="_M/ngx_http_ephemeral" data-ref="_M/ngx_http_ephemeral">ngx_http_ephemeral</dfn>(r)  (void *) (&amp;r-&gt;uri_start)</u></td></tr>
+<tr><th id="597">597</th><td></td></tr>
+<tr><th id="598">598</th><td></td></tr>
+<tr><th id="599">599</th><td><b>extern</b> <a class="typedef" href="#ngx_http_header_t" title='ngx_http_header_t' data-type='struct ngx_http_header_t' data-ref="ngx_http_header_t">ngx_http_header_t</a>       <dfn class="decl" id="ngx_http_headers_in" title='ngx_http_headers_in' data-ref="ngx_http_headers_in">ngx_http_headers_in</dfn>[];</td></tr>
+<tr><th id="600">600</th><td><b>extern</b> <a class="typedef" href="#ngx_http_header_out_t" title='ngx_http_header_out_t' data-type='struct ngx_http_header_out_t' data-ref="ngx_http_header_out_t">ngx_http_header_out_t</a>   <dfn class="decl" id="ngx_http_headers_out" title='ngx_http_headers_out' data-ref="ngx_http_headers_out">ngx_http_headers_out</dfn>[];</td></tr>
+<tr><th id="601">601</th><td></td></tr>
+<tr><th id="602">602</th><td></td></tr>
+<tr><th id="603">603</th><td><u>#define <dfn class="macro" id="_M/ngx_http_set_log_request" data-ref="_M/ngx_http_set_log_request">ngx_http_set_log_request</dfn>(log, r)                                      \</u></td></tr>
+<tr><th id="604">604</th><td><u>    ((ngx_http_log_ctx_t *) log-&gt;data)-&gt;current_request = r</u></td></tr>
+<tr><th id="605">605</th><td></td></tr>
+<tr><th id="606">606</th><td></td></tr>
+<tr><th id="607">607</th><td><u>#<span data-ppcond="8">endif</span> /* _NGX_HTTP_REQUEST_H_INCLUDED_ */</u></td></tr>
+<tr><th id="608">608</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='modules/ngx_http_access_module.c.html'>nginx/src/http/modules/ngx_http_access_module.c</a><br/>Generated on <em>2018-Apr-06</em> from project nginx<br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

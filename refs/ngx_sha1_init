@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_sha1.h' l='23' type='void ngx_sha1_init(ngx_sha1_t * ctx)'/>
+<use f='nginx/src/core/ngx_crypt.c' l='217' u='c' c='ngx_crypt_ssha'/>
+<use f='nginx/src/core/ngx_crypt.c' l='252' u='c' c='ngx_crypt_sha'/>
+<def f='nginx/src/core/ngx_sha1.c' l='19' ll='29' type='void ngx_sha1_init(ngx_sha1_t * ctx)'/>

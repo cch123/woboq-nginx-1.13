@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_buf.h' l='53' type='unsigned int'/>
+<offset>586</offset>
+<use f='nginx/src/event/ngx_event_pipe.c' l='701' u='r' c='ngx_event_pipe_write_to_downstream'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='901' u='w' c='ngx_event_pipe_write_chain_to_temp_file'/>

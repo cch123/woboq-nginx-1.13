@@ -1,0 +1,15 @@
+<dec f='include/unistd.h' l='829' type='int unlink(const char * __name)'/>
+<doc f='include/unistd.h' l='828'>/* Remove the link NAME.  */</doc>
+<use f='nginx/src/core/ngx_connection.c' l='582' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='1018' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_cycle.c' l='720' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_cycle.c' l='998' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_file.c' l='749' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_file.c' l='763' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_file.c' l='778' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_palloc.c' l='388' macro='1' u='c'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1666' macro='1' u='c'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1938' macro='1' u='c'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2257' macro='1' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4322' macro='1' u='c'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='285' u='c' c='ngx_open_tempfile'/>

@@ -1,0 +1,21 @@
+<dec f='nginx/src/core/ngx_inet.h' l='95' type='unsigned int'/>
+<offset>579</offset>
+<use f='nginx/src/core/ngx_inet.c' l='878' u='w' c='ngx_parse_inet_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='1039' u='w' c='ngx_parse_inet6_url'/>
+<dec f='nginx/src/http/ngx_http_upstream.h' l='300' type='ngx_uint_t'/>
+<offset>192</offset>
+<doc f='nginx/src/http/ngx_http_upstream.h' l='300'>/* unsigned no_port:1 */</doc>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='793' u='w' c='ngx_http_fastcgi_eval'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='793' u='r' c='ngx_http_fastcgi_eval'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1035' u='r' c='ngx_http_proxy_eval'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1036' u='w' c='ngx_http_proxy_eval'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1036' u='r' c='ngx_http_proxy_eval'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='4321' u='r' c='ngx_http_proxy_set_vars'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='589' u='w' c='ngx_http_scgi_eval'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='589' u='r' c='ngx_http_scgi_eval'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='792' u='w' c='ngx_http_uwsgi_eval'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='792' u='r' c='ngx_http_uwsgi_eval'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='696' u='r' c='ngx_http_upstream_init_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5647' u='w' c='ngx_http_upstream'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5943' u='r' c='ngx_http_upstream_add'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5982' u='r' c='ngx_http_upstream_add'/>

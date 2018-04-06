@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_palloc.h' l='88' type='void ngx_pool_cleanup_file(void * data)'/>
+<use f='nginx/src/core/ngx_file.c' l='209' u='r' c='ngx_create_temp_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='189' u='r' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_palloc.c' l='349' u='r' c='ngx_pool_run_cleanup_file'/>
+<def f='nginx/src/core/ngx_palloc.c' l='363' ll='375' type='void ngx_pool_cleanup_file(void * data)'/>

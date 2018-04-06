@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_connection.h' l='54' type='ngx_uint_t'/>
+<offset>1792</offset>
+<use f='nginx/src/core/ngx_connection.c' l='122' u='w' c='ngx_clone_listening'/>
+<use f='nginx/src/event/ngx_event.c' l='737' u='r' c='ngx_event_process_init'/>

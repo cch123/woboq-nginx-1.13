@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_module.h' l='240' type='ngx_int_t (*)(ngx_cycle_t *)'/>
+<offset>704</offset>
+<use f='nginx/src/core/ngx_module.c' l='71' u='r' c='ngx_init_modules'/>
+<use f='nginx/src/core/ngx_module.c' l='72' u='r' c='ngx_init_modules'/>

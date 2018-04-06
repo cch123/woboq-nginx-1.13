@@ -1,0 +1,9 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='433' type='ngx_queue_t *'/>
+<offset>5312</offset>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='588' u='a' c='ngx_http_rewrite_if'/>
+<use f='nginx/src/http/ngx_http.c' l='605' u='r' c='ngx_http_merge_servers'/>
+<use f='nginx/src/http/ngx_http.c' l='654' u='r' c='ngx_http_merge_locations'/>
+<use f='nginx/src/http/ngx_http.c' l='681' u='r' c='ngx_http_init_locations'/>
+<use f='nginx/src/http/ngx_http.c' l='804' u='r' c='ngx_http_init_static_location_trees'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3009' u='a' c='ngx_http_core_location'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4411' u='a' c='ngx_http_core_limit_except'/>

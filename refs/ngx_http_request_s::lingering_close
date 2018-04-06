@@ -1,0 +1,12 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='522' type='unsigned int'/>
+<offset>9867</offset>
+<use f='nginx/src/http/ngx_http_core_module.c' l='824' u='w' c='ngx_http_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1263' u='w' c='ngx_http_process_request_headers'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2610' u='w' c='ngx_http_finalize_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2624' u='r' c='ngx_http_finalize_connection'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='561' u='w' c='ngx_http_discard_request_body'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='608' u='w' c='ngx_http_discarded_request_body_handler'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='621' u='w' c='ngx_http_discarded_request_body_handler'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='990' u='w' c='ngx_http_request_body_chunked_filter'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='442' u='r' c='ngx_http_special_response_handler'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='448' u='w' c='ngx_http_special_response_handler'/>

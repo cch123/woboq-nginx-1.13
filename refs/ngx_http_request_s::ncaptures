@@ -1,0 +1,8 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='430' type='ngx_uint_t'/>
+<offset>9024</offset>
+<use f='nginx/src/http/ngx_http_script.c' l='943' u='w' c='ngx_http_script_regex_start_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1018' u='r' c='ngx_http_script_regex_start_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1024' u='r' c='ngx_http_script_regex_start_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1221' u='r' c='ngx_http_script_copy_capture_len_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1261' u='r' c='ngx_http_script_copy_capture_code'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2555' u='w' c='ngx_http_regex_exec'/>

@@ -1,0 +1,6 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='545' type='unsigned int'/>
+<offset>9891</offset>
+<use f='nginx/src/http/modules/ngx_http_range_filter_module.c' l='227' u='r' c='ngx_http_range_header_filter'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2788' u='w' c='ngx_http_upstream_process_headers'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2792' u='w' c='ngx_http_upstream_process_headers'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5144' u='w' c='ngx_http_upstream_copy_allow_ranges'/>

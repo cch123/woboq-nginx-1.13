@@ -1,0 +1,9 @@
+<dec f='nginx/src/core/ngx_open_file_cache.h' l='36' type='size_t'/>
+<offset>704</offset>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='236' u='r' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='403' u='r' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='654' u='r' c='ngx_open_file_wrapper'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='656' u='r' c='ngx_open_file_wrapper'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='671' u='r' c='ngx_open_file_wrapper'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2595' u='w' c='ngx_http_set_disable_symlinks'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2602' u='w' c='ngx_http_set_disable_symlinks'/>

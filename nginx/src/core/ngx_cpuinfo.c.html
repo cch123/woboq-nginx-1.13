@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ngx_cpuinfo.c source code [nginx/src/core/ngx_cpuinfo.c] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../../../data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../../data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../../data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'nginx/src/core/ngx_cpuinfo.c'; var root_path = '../../..'; var data_path = '../../../../data';</script>
+<script src='../../../../data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../..'>nginx</a>/<a href='..'>src</a>/<a href='./'>core</a>/<a href='ngx_cpuinfo.c.html'>ngx_cpuinfo.c</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td></td></tr>
+<tr><th id="2">2</th><td><i>/*</i></td></tr>
+<tr><th id="3">3</th><td><i> * Copyright (C) Igor Sysoev</i></td></tr>
+<tr><th id="4">4</th><td><i> * Copyright (C) Nginx, Inc.</i></td></tr>
+<tr><th id="5">5</th><td><i> */</i></td></tr>
+<tr><th id="6">6</th><td></td></tr>
+<tr><th id="7">7</th><td></td></tr>
+<tr><th id="8">8</th><td><u>#include <a href="ngx_config.h.html">&lt;ngx_config.h&gt;</a></u></td></tr>
+<tr><th id="9">9</th><td><u>#include <a href="ngx_core.h.html">&lt;ngx_core.h&gt;</a></u></td></tr>
+<tr><th id="10">10</th><td></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td><u>#<span data-ppcond="12">if</span> (( __i386__ || <span class="macro" title="1" data-ref="_M/__amd64__">__amd64__</span> ) &amp;&amp; ( <span class="macro" title="4" data-ref="_M/__GNUC__">__GNUC__</span> || __INTEL_COMPILER ))</u></td></tr>
+<tr><th id="13">13</th><td></td></tr>
+<tr><th id="14">14</th><td></td></tr>
+<tr><th id="15">15</th><td><em>static</em> <a class="macro" href="ngx_config.h.html#114" title="inline" data-ref="_M/ngx_inline">ngx_inline</a> <em>void</em> <a class="tu decl fn" href="#ngx_cpuid" title='ngx_cpuid' data-type='void ngx_cpuid(uint32_t i, uint32_t * buf)' data-ref="ngx_cpuid">ngx_cpuid</a>(<a class="typedef" href="../../../include/stdint.h.html#uint32_t" title='uint32_t' data-type='unsigned int' data-ref="uint32_t">uint32_t</a> <dfn class="local col1 decl" id="1i" title='i' data-type='uint32_t' data-ref="1i">i</dfn>, <a class="typedef" href="../../../include/stdint.h.html#uint32_t" title='uint32_t' data-type='unsigned int' data-ref="uint32_t">uint32_t</a> *<dfn class="local col2 decl" id="2buf" title='buf' data-type='uint32_t *' data-ref="2buf">buf</dfn>);</td></tr>
+<tr><th id="16">16</th><td></td></tr>
+<tr><th id="17">17</th><td></td></tr>
+<tr><th id="18">18</th><td><u>#<span data-ppcond="18">if</span> ( __i386__ )</u></td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td><em>static</em> ngx_inline <em>void</em></td></tr>
+<tr><th id="21">21</th><td>ngx_cpuid(uint32_t i, uint32_t *buf)</td></tr>
+<tr><th id="22">22</th><td>{</td></tr>
+<tr><th id="23">23</th><td></td></tr>
+<tr><th id="24">24</th><td>    <i>/*</i></td></tr>
+<tr><th id="25">25</th><td><i>     * we could not use %ebx as output parameter if gcc builds PIC,</i></td></tr>
+<tr><th id="26">26</th><td><i>     * and we could not save %ebx on stack, because %esp is used,</i></td></tr>
+<tr><th id="27">27</th><td><i>     * when the -fomit-frame-pointer optimization is specified.</i></td></tr>
+<tr><th id="28">28</th><td><i>     */</i></td></tr>
+<tr><th id="29">29</th><td></td></tr>
+<tr><th id="30">30</th><td>    <b>__asm__</b> (</td></tr>
+<tr><th id="31">31</th><td></td></tr>
+<tr><th id="32">32</th><td>    <q>"    mov    %%ebx, %%esi;  "</q></td></tr>
+<tr><th id="33">33</th><td></td></tr>
+<tr><th id="34">34</th><td>    <q>"    cpuid;                "</q></td></tr>
+<tr><th id="35">35</th><td>    <q>"    mov    %%eax, (%1);   "</q></td></tr>
+<tr><th id="36">36</th><td>    <q>"    mov    %%ebx, 4(%1);  "</q></td></tr>
+<tr><th id="37">37</th><td>    <q>"    mov    %%edx, 8(%1);  "</q></td></tr>
+<tr><th id="38">38</th><td>    <q>"    mov    %%ecx, 12(%1); "</q></td></tr>
+<tr><th id="39">39</th><td></td></tr>
+<tr><th id="40">40</th><td>    <q>"    mov    %%esi, %%ebx;  "</q></td></tr>
+<tr><th id="41">41</th><td></td></tr>
+<tr><th id="42">42</th><td>    : : <q>"a"</q> (i), <q>"D"</q> (buf) : <q>"ecx"</q>, <q>"edx"</q>, <q>"esi"</q>, <q>"memory"</q> );</td></tr>
+<tr><th id="43">43</th><td>}</td></tr>
+<tr><th id="44">44</th><td></td></tr>
+<tr><th id="45">45</th><td></td></tr>
+<tr><th id="46">46</th><td><u>#<span data-ppcond="18">else</span> /* __amd64__ */</u></td></tr>
+<tr><th id="47">47</th><td></td></tr>
+<tr><th id="48">48</th><td></td></tr>
+<tr><th id="49">49</th><td><em>static</em> <a class="macro" href="ngx_config.h.html#114" title="inline" data-ref="_M/ngx_inline">ngx_inline</a> <em>void</em></td></tr>
+<tr><th id="50">50</th><td><dfn class="tu decl def fn" id="ngx_cpuid" title='ngx_cpuid' data-type='void ngx_cpuid(uint32_t i, uint32_t * buf)' data-ref="ngx_cpuid">ngx_cpuid</dfn>(<a class="typedef" href="../../../include/stdint.h.html#uint32_t" title='uint32_t' data-type='unsigned int' data-ref="uint32_t">uint32_t</a> <dfn class="local col3 decl" id="3i" title='i' data-type='uint32_t' data-ref="3i">i</dfn>, <a class="typedef" href="../../../include/stdint.h.html#uint32_t" title='uint32_t' data-type='unsigned int' data-ref="uint32_t">uint32_t</a> *<dfn class="local col4 decl" id="4buf" title='buf' data-type='uint32_t *' data-ref="4buf">buf</dfn>)</td></tr>
+<tr><th id="51">51</th><td>{</td></tr>
+<tr><th id="52">52</th><td>    <a class="typedef" href="../../../include/stdint.h.html#uint32_t" title='uint32_t' data-type='unsigned int' data-ref="uint32_t">uint32_t</a>  <dfn class="local col5 decl" id="5eax" title='eax' data-type='uint32_t' data-ref="5eax">eax</dfn>, <dfn class="local col6 decl" id="6ebx" title='ebx' data-type='uint32_t' data-ref="6ebx">ebx</dfn>, <dfn class="local col7 decl" id="7ecx" title='ecx' data-type='uint32_t' data-ref="7ecx">ecx</dfn>, <dfn class="local col8 decl" id="8edx" title='edx' data-type='uint32_t' data-ref="8edx">edx</dfn>;</td></tr>
+<tr><th id="53">53</th><td></td></tr>
+<tr><th id="54">54</th><td>    <b>__asm__</b> (</td></tr>
+<tr><th id="55">55</th><td></td></tr>
+<tr><th id="56">56</th><td>        <q>"cpuid"</q></td></tr>
+<tr><th id="57">57</th><td></td></tr>
+<tr><th id="58">58</th><td>    : <q>"=a"</q> (<a class="local col5 ref" href="#5eax" title='eax' data-ref="5eax">eax</a>), <q>"=b"</q> (<a class="local col6 ref" href="#6ebx" title='ebx' data-ref="6ebx">ebx</a>), <q>"=c"</q> (<a class="local col7 ref" href="#7ecx" title='ecx' data-ref="7ecx">ecx</a>), <q>"=d"</q> (<a class="local col8 ref" href="#8edx" title='edx' data-ref="8edx">edx</a>) : <q>"a"</q> (<a class="local col3 ref" href="#3i" title='i' data-ref="3i">i</a>) );</td></tr>
+<tr><th id="59">59</th><td></td></tr>
+<tr><th id="60">60</th><td>    <a class="local col4 ref" href="#4buf" title='buf' data-ref="4buf">buf</a>[<var>0</var>] = <a class="local col5 ref" href="#5eax" title='eax' data-ref="5eax">eax</a>;</td></tr>
+<tr><th id="61">61</th><td>    <a class="local col4 ref" href="#4buf" title='buf' data-ref="4buf">buf</a>[<var>1</var>] = <a class="local col6 ref" href="#6ebx" title='ebx' data-ref="6ebx">ebx</a>;</td></tr>
+<tr><th id="62">62</th><td>    <a class="local col4 ref" href="#4buf" title='buf' data-ref="4buf">buf</a>[<var>2</var>] = <a class="local col8 ref" href="#8edx" title='edx' data-ref="8edx">edx</a>;</td></tr>
+<tr><th id="63">63</th><td>    <a class="local col4 ref" href="#4buf" title='buf' data-ref="4buf">buf</a>[<var>3</var>] = <a class="local col7 ref" href="#7ecx" title='ecx' data-ref="7ecx">ecx</a>;</td></tr>
+<tr><th id="64">64</th><td>}</td></tr>
+<tr><th id="65">65</th><td></td></tr>
+<tr><th id="66">66</th><td></td></tr>
+<tr><th id="67">67</th><td><u>#<span data-ppcond="18">endif</span></u></td></tr>
+<tr><th id="68">68</th><td></td></tr>
+<tr><th id="69">69</th><td></td></tr>
+<tr><th id="70">70</th><td><i>/* auto detect the L2 cache line size of modern and widespread CPUs */</i></td></tr>
+<tr><th id="71">71</th><td></td></tr>
+<tr><th id="72">72</th><td><em>void</em></td></tr>
+<tr><th id="73">73</th><td><dfn class="decl def fn" id="ngx_cpuinfo" title='ngx_cpuinfo' data-ref="ngx_cpuinfo">ngx_cpuinfo</dfn>(<em>void</em>)</td></tr>
+<tr><th id="74">74</th><td>{</td></tr>
+<tr><th id="75">75</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a>    *<dfn class="local col9 decl" id="9vendor" title='vendor' data-type='u_char *' data-ref="9vendor">vendor</dfn>;</td></tr>
+<tr><th id="76">76</th><td>    <a class="typedef" href="../../../include/stdint.h.html#uint32_t" title='uint32_t' data-type='unsigned int' data-ref="uint32_t">uint32_t</a>   <dfn class="local col0 decl" id="10vbuf" title='vbuf' data-type='uint32_t [5]' data-ref="10vbuf">vbuf</dfn>[<var>5</var>], <dfn class="local col1 decl" id="11cpu" title='cpu' data-type='uint32_t [4]' data-ref="11cpu">cpu</dfn>[<var>4</var>], <dfn class="local col2 decl" id="12model" title='model' data-type='uint32_t' data-ref="12model">model</dfn>;</td></tr>
+<tr><th id="77">77</th><td></td></tr>
+<tr><th id="78">78</th><td>    <a class="local col0 ref" href="#10vbuf" title='vbuf' data-ref="10vbuf">vbuf</a>[<var>0</var>] = <var>0</var>;</td></tr>
+<tr><th id="79">79</th><td>    <a class="local col0 ref" href="#10vbuf" title='vbuf' data-ref="10vbuf">vbuf</a>[<var>1</var>] = <var>0</var>;</td></tr>
+<tr><th id="80">80</th><td>    <a class="local col0 ref" href="#10vbuf" title='vbuf' data-ref="10vbuf">vbuf</a>[<var>2</var>] = <var>0</var>;</td></tr>
+<tr><th id="81">81</th><td>    <a class="local col0 ref" href="#10vbuf" title='vbuf' data-ref="10vbuf">vbuf</a>[<var>3</var>] = <var>0</var>;</td></tr>
+<tr><th id="82">82</th><td>    <a class="local col0 ref" href="#10vbuf" title='vbuf' data-ref="10vbuf">vbuf</a>[<var>4</var>] = <var>0</var>;</td></tr>
+<tr><th id="83">83</th><td></td></tr>
+<tr><th id="84">84</th><td>    <a class="tu ref fn" href="#ngx_cpuid" title='ngx_cpuid' data-use='c' data-ref="ngx_cpuid">ngx_cpuid</a>(<var>0</var>, <a class="local col0 ref" href="#10vbuf" title='vbuf' data-ref="10vbuf">vbuf</a>);</td></tr>
+<tr><th id="85">85</th><td></td></tr>
+<tr><th id="86">86</th><td>    <a class="local col9 ref" href="#9vendor" title='vendor' data-ref="9vendor">vendor</a> = (<a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a> *) &amp;<a class="local col0 ref" href="#10vbuf" title='vbuf' data-ref="10vbuf">vbuf</a>[<var>1</var>];</td></tr>
+<tr><th id="87">87</th><td></td></tr>
+<tr><th id="88">88</th><td>    <b>if</b> (<a class="local col0 ref" href="#10vbuf" title='vbuf' data-ref="10vbuf">vbuf</a>[<var>0</var>] == <var>0</var>) {</td></tr>
+<tr><th id="89">89</th><td>        <b>return</b>;</td></tr>
+<tr><th id="90">90</th><td>    }</td></tr>
+<tr><th id="91">91</th><td></td></tr>
+<tr><th id="92">92</th><td>    <a class="tu ref fn" href="#ngx_cpuid" title='ngx_cpuid' data-use='c' data-ref="ngx_cpuid">ngx_cpuid</a>(<var>1</var>, <a class="local col1 ref" href="#11cpu" title='cpu' data-ref="11cpu">cpu</a>);</td></tr>
+<tr><th id="93">93</th><td></td></tr>
+<tr><th id="94">94</th><td>    <b>if</b> (<a class="macro" href="ngx_string.h.html#57" title="__extension__ ({ size_t __s1_len, __s2_len; (__builtin_constant_p ((const char *) vendor) &amp;&amp; __builtin_constant_p ((const char *) &quot;GenuineIntel&quot;) &amp;&amp; (__s1_len = __builtin_strlen ((const char *) vendor), __s2_len = __builtin_strlen ((const char *) &quot;GenuineIntel&quot;), (!((size_t)(const void *)(((const char *) vendor) + 1) - (size_t)(const void *)((const char *) vendor) == 1) || __s1_len &gt;= 4) &amp;&amp; (!((size_t)(const void *)(((const char *) &quot;GenuineIntel&quot;) + 1) - (size_t)(const void *)((const char *) &quot;GenuineIntel&quot;) == 1) || __s2_len &gt;= 4)) ? __builtin_strcmp ((const char *) vendor, (const char *) &quot;GenuineIntel&quot;) : (__builtin_constant_p ((const char *) vendor) &amp;&amp; ((size_t)(const void *)(((const char *) vendor) + 1) - (size_t)(const void *)((const char *) vendor) == 1) &amp;&amp; (__s1_len = __builtin_strlen ((const char *) vendor), __s1_len &lt; 4) ? (__builtin_constant_p ((const char *) &quot;GenuineIntel&quot;) &amp;&amp; ((size_t)(const void *)(((const char *) &quot;GenuineIntel&quot;) + 1) - (size_t)(const void *)((const char *) &quot;GenuineIntel&quot;) == 1) ? __builtin_strcmp ((const char *) vendor, (const char *) &quot;GenuineIntel&quot;) : (__extension__ ({ const unsigned char *__s2 = (const unsigned char *) (const char *) ((const char *) &quot;GenuineIntel&quot;); int __result = (((const unsigned char *) (const char *) ((const char *) vendor))[0] - __s2[0]); if (__s1_len &gt; 0 &amp;&amp; __result == 0) { __result = (((const unsigned char *) (const char *) ((const char *) vendor))[1] - __s2[1]); if (__s1_len &gt; 1 &amp;&amp; __result == 0) { __result = (((const unsigned char *) (const char *) ((const char *) vendor))[2] - __s2[2]); if (__s1_len &gt; 2 &amp;&amp; __result == 0) __result = (((const unsigned char *) (const char *) ((const char *) vendor))[3] - __s2[3]); } } __result; }))) : (__builtin_constant_p ((const char *) &quot;GenuineIntel&quot;) &amp;&amp; ((size_t)(const void *)(((const char *) &quot;GenuineIntel&quot;) + 1) - (size_t)(const void *)((const char *) &quot;GenuineIntel&quot;) == 1) &amp;&amp; (__s2_len = __builtin_strlen ((const char *) &quot;GenuineIntel&quot;), __s2_len &lt; 4) ? (__builtin_constant_p ((const char *) vendor) &amp;&amp; ((size_t)(const void *)(((const char *) vendor) + 1) - (size_t)(const void *)((const char *) vendor) == 1) ? __builtin_strcmp ((const char *) vendor, (const char *) &quot;GenuineIntel&quot;) : (- (__extension__ ({ const unsigned char *__s2 = (const unsigned char *) (const char *) ((const char *) vendor); int __result = (((const unsigned char *) (const char *) ((const char *) &quot;GenuineIntel&quot;))[0] - __s2[0]); if (__s2_len &gt; 0 &amp;&amp; __result == 0) { __result = (((const unsigned char *) (const char *) ((const char *) &quot;GenuineIntel&quot;))[1] - __s2[1]); if (__s2_len &gt; 1 &amp;&amp; __result == 0) { __result = (((const unsigned char *) (const char *) ((const char *) &quot;GenuineIntel&quot;))[2] - __s2[2]); if (__s2_len &gt; 2 &amp;&amp; __result == 0) __result = (((const unsigned char *) (const char *) ((const char *) &quot;GenuineIntel&quot;))[3] - __s2[3]); } } __result; })))) : __builtin_strcmp ((const char *) vendor, (const char *) &quot;GenuineIntel&quot;)))); })" data-ref="_M/ngx_strcmp">ngx_strcmp</a>(<a class="local col9 ref" href="#9vendor" title='vendor' data-ref="9vendor">vendor</a>, <q>"GenuineIntel"</q>) == <var>0</var>) {</td></tr>
+<tr><th id="95">95</th><td></td></tr>
+<tr><th id="96">96</th><td>        <b>switch</b> ((<a class="local col1 ref" href="#11cpu" title='cpu' data-ref="11cpu">cpu</a>[<var>0</var>] &amp; <var>0xf00</var>) &gt;&gt; <var>8</var>) {</td></tr>
+<tr><th id="97">97</th><td></td></tr>
+<tr><th id="98">98</th><td>        <i>/* Pentium */</i></td></tr>
+<tr><th id="99">99</th><td>        <b>case</b> <var>5</var>:</td></tr>
+<tr><th id="100">100</th><td>            <a class="ref" href="../os/unix/ngx_alloc.h.html#ngx_cacheline_size" title='ngx_cacheline_size' data-ref="ngx_cacheline_size">ngx_cacheline_size</a> = <var>32</var>;</td></tr>
+<tr><th id="101">101</th><td>            <b>break</b>;</td></tr>
+<tr><th id="102">102</th><td></td></tr>
+<tr><th id="103">103</th><td>        <i>/* Pentium Pro, II, III */</i></td></tr>
+<tr><th id="104">104</th><td>        <b>case</b> <var>6</var>:</td></tr>
+<tr><th id="105">105</th><td>            <a class="ref" href="../os/unix/ngx_alloc.h.html#ngx_cacheline_size" title='ngx_cacheline_size' data-ref="ngx_cacheline_size">ngx_cacheline_size</a> = <var>32</var>;</td></tr>
+<tr><th id="106">106</th><td></td></tr>
+<tr><th id="107">107</th><td>            <a class="local col2 ref" href="#12model" title='model' data-ref="12model">model</a> = ((<a class="local col1 ref" href="#11cpu" title='cpu' data-ref="11cpu">cpu</a>[<var>0</var>] &amp; <var>0xf0000</var>) &gt;&gt; <var>8</var>) | (<a class="local col1 ref" href="#11cpu" title='cpu' data-ref="11cpu">cpu</a>[<var>0</var>] &amp; <var>0xf0</var>);</td></tr>
+<tr><th id="108">108</th><td></td></tr>
+<tr><th id="109">109</th><td>            <b>if</b> (<a class="local col2 ref" href="#12model" title='model' data-ref="12model">model</a> &gt;= <var>0xd0</var>) {</td></tr>
+<tr><th id="110">110</th><td>                <i>/* Intel Core, Core 2, Atom */</i></td></tr>
+<tr><th id="111">111</th><td>                <a class="ref" href="../os/unix/ngx_alloc.h.html#ngx_cacheline_size" title='ngx_cacheline_size' data-ref="ngx_cacheline_size">ngx_cacheline_size</a> = <var>64</var>;</td></tr>
+<tr><th id="112">112</th><td>            }</td></tr>
+<tr><th id="113">113</th><td></td></tr>
+<tr><th id="114">114</th><td>            <b>break</b>;</td></tr>
+<tr><th id="115">115</th><td></td></tr>
+<tr><th id="116">116</th><td>        <i>/*</i></td></tr>
+<tr><th id="117">117</th><td><i>         * Pentium 4, although its cache line size is 64 bytes,</i></td></tr>
+<tr><th id="118">118</th><td><i>         * it prefetches up to two cache lines during memory read</i></td></tr>
+<tr><th id="119">119</th><td><i>         */</i></td></tr>
+<tr><th id="120">120</th><td>        <b>case</b> <var>15</var>:</td></tr>
+<tr><th id="121">121</th><td>            <a class="ref" href="../os/unix/ngx_alloc.h.html#ngx_cacheline_size" title='ngx_cacheline_size' data-ref="ngx_cacheline_size">ngx_cacheline_size</a> = <var>128</var>;</td></tr>
+<tr><th id="122">122</th><td>            <b>break</b>;</td></tr>
+<tr><th id="123">123</th><td>        }</td></tr>
+<tr><th id="124">124</th><td></td></tr>
+<tr><th id="125">125</th><td>    } <b>else</b> <b>if</b> (<a class="macro" href="ngx_string.h.html#57" title="__extension__ ({ size_t __s1_len, __s2_len; (__builtin_constant_p ((const char *) vendor) &amp;&amp; __builtin_constant_p ((const char *) &quot;AuthenticAMD&quot;) &amp;&amp; (__s1_len = __builtin_strlen ((const char *) vendor), __s2_len = __builtin_strlen ((const char *) &quot;AuthenticAMD&quot;), (!((size_t)(const void *)(((const char *) vendor) + 1) - (size_t)(const void *)((const char *) vendor) == 1) || __s1_len &gt;= 4) &amp;&amp; (!((size_t)(const void *)(((const char *) &quot;AuthenticAMD&quot;) + 1) - (size_t)(const void *)((const char *) &quot;AuthenticAMD&quot;) == 1) || __s2_len &gt;= 4)) ? __builtin_strcmp ((const char *) vendor, (const char *) &quot;AuthenticAMD&quot;) : (__builtin_constant_p ((const char *) vendor) &amp;&amp; ((size_t)(const void *)(((const char *) vendor) + 1) - (size_t)(const void *)((const char *) vendor) == 1) &amp;&amp; (__s1_len = __builtin_strlen ((const char *) vendor), __s1_len &lt; 4) ? (__builtin_constant_p ((const char *) &quot;AuthenticAMD&quot;) &amp;&amp; ((size_t)(const void *)(((const char *) &quot;AuthenticAMD&quot;) + 1) - (size_t)(const void *)((const char *) &quot;AuthenticAMD&quot;) == 1) ? __builtin_strcmp ((const char *) vendor, (const char *) &quot;AuthenticAMD&quot;) : (__extension__ ({ const unsigned char *__s2 = (const unsigned char *) (const char *) ((const char *) &quot;AuthenticAMD&quot;); int __result = (((const unsigned char *) (const char *) ((const char *) vendor))[0] - __s2[0]); if (__s1_len &gt; 0 &amp;&amp; __result == 0) { __result = (((const unsigned char *) (const char *) ((const char *) vendor))[1] - __s2[1]); if (__s1_len &gt; 1 &amp;&amp; __result == 0) { __result = (((const unsigned char *) (const char *) ((const char *) vendor))[2] - __s2[2]); if (__s1_len &gt; 2 &amp;&amp; __result == 0) __result = (((const unsigned char *) (const char *) ((const char *) vendor))[3] - __s2[3]); } } __result; }))) : (__builtin_constant_p ((const char *) &quot;AuthenticAMD&quot;) &amp;&amp; ((size_t)(const void *)(((const char *) &quot;AuthenticAMD&quot;) + 1) - (size_t)(const void *)((const char *) &quot;AuthenticAMD&quot;) == 1) &amp;&amp; (__s2_len = __builtin_strlen ((const char *) &quot;AuthenticAMD&quot;), __s2_len &lt; 4) ? (__builtin_constant_p ((const char *) vendor) &amp;&amp; ((size_t)(const void *)(((const char *) vendor) + 1) - (size_t)(const void *)((const char *) vendor) == 1) ? __builtin_strcmp ((const char *) vendor, (const char *) &quot;AuthenticAMD&quot;) : (- (__extension__ ({ const unsigned char *__s2 = (const unsigned char *) (const char *) ((const char *) vendor); int __result = (((const unsigned char *) (const char *) ((const char *) &quot;AuthenticAMD&quot;))[0] - __s2[0]); if (__s2_len &gt; 0 &amp;&amp; __result == 0) { __result = (((const unsigned char *) (const char *) ((const char *) &quot;AuthenticAMD&quot;))[1] - __s2[1]); if (__s2_len &gt; 1 &amp;&amp; __result == 0) { __result = (((const unsigned char *) (const char *) ((const char *) &quot;AuthenticAMD&quot;))[2] - __s2[2]); if (__s2_len &gt; 2 &amp;&amp; __result == 0) __result = (((const unsigned char *) (const char *) ((const char *) &quot;AuthenticAMD&quot;))[3] - __s2[3]); } } __result; })))) : __builtin_strcmp ((const char *) vendor, (const char *) &quot;AuthenticAMD&quot;)))); })" data-ref="_M/ngx_strcmp">ngx_strcmp</a>(<a class="local col9 ref" href="#9vendor" title='vendor' data-ref="9vendor">vendor</a>, <q>"AuthenticAMD"</q>) == <var>0</var>) {</td></tr>
+<tr><th id="126">126</th><td>        <a class="ref" href="../os/unix/ngx_alloc.h.html#ngx_cacheline_size" title='ngx_cacheline_size' data-ref="ngx_cacheline_size">ngx_cacheline_size</a> = <var>64</var>;</td></tr>
+<tr><th id="127">127</th><td>    }</td></tr>
+<tr><th id="128">128</th><td>}</td></tr>
+<tr><th id="129">129</th><td></td></tr>
+<tr><th id="130">130</th><td><u>#<span data-ppcond="12">else</span></u></td></tr>
+<tr><th id="131">131</th><td></td></tr>
+<tr><th id="132">132</th><td></td></tr>
+<tr><th id="133">133</th><td><em>void</em></td></tr>
+<tr><th id="134">134</th><td>ngx_cpuinfo(<em>void</em>)</td></tr>
+<tr><th id="135">135</th><td>{</td></tr>
+<tr><th id="136">136</th><td>}</td></tr>
+<tr><th id="137">137</th><td></td></tr>
+<tr><th id="138">138</th><td></td></tr>
+<tr><th id="139">139</th><td><u>#<span data-ppcond="12">endif</span></u></td></tr>
+<tr><th id="140">140</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated on <em>2018-Apr-06</em> from project nginx<br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

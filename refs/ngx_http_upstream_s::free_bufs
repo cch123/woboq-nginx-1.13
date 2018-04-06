@@ -1,0 +1,8 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='347' type='ngx_chain_t *'/>
+<offset>7104</offset>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2482' u='a' c='ngx_http_fastcgi_non_buffered_filter'/>
+<use f='nginx/src/http/modules/ngx_http_memcached_module.c' l='509' u='a' c='ngx_http_memcached_filter'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='2202' u='a' c='ngx_http_proxy_non_buffered_copy_filter'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='2268' u='a' c='ngx_http_proxy_non_buffered_chunked_filter'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3537' u='a' c='ngx_http_upstream_process_non_buffered_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3652' u='a' c='ngx_http_upstream_non_buffered_filter'/>

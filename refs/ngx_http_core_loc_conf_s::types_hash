@@ -1,0 +1,9 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='340' type='ngx_hash_t'/>
+<offset>1152</offset>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1539' u='a' c='ngx_http_set_content_type'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3498' u='m' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3500' u='a' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3517' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3517' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3540' u='m' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3542' u='a' c='ngx_http_core_merge_loc_conf'/>

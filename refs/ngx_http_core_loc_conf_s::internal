@@ -1,0 +1,12 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='378' type='ngx_flag_t'/>
+<offset>3136</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='377'>/* client_body_in_singe_buffer */</doc>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='378'>/* internal */</doc>
+<use f='nginx/src/http/ngx_http_core_module.c' l='952' u='r' c='ngx_http_core_find_config_phase'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3373' u='w' c='ngx_http_core_create_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3595' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3595' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3595' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3595' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4807' u='r' c='ngx_http_core_internal'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4811' u='w' c='ngx_http_core_internal'/>

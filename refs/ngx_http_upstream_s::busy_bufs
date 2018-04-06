@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='346' type='ngx_chain_t *'/>
+<offset>7040</offset>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3529' u='r' c='ngx_http_upstream_process_non_buffered_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3537' u='a' c='ngx_http_upstream_process_non_buffered_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3541' u='r' c='ngx_http_upstream_process_non_buffered_request'/>

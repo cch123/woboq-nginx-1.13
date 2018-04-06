@@ -1,0 +1,35 @@
+<dec f='nginx/src/core/ngx_cycle.h' l='111' type='ngx_str_t'/>
+<offset>1024</offset>
+<use f='nginx/src/core/nginx.c' l='1129' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1130' u='a' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1130' u='a' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1133' u='a' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1145' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1146' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1146' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1146' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1146' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1146' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1146' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1146' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1146' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1146' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1146' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1146' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1146' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1146' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1146' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1146' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1146' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1146' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1146' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1146' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1146' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1146' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1146' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1146' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1162' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1164' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1169' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1170' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1170' u='m' c='ngx_core_module_init_conf'/>

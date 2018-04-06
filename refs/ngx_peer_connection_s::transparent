@@ -1,0 +1,4 @@
+<dec f='nginx/src/event/ngx_event_connect.h' l='64' type='unsigned int'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='86' u='r' c='ngx_event_connect_peer'/>
+<offset>833</offset>
+<use f='nginx/src/http/ngx_http_upstream.c' l='6127' u='w' c='ngx_http_upstream_set_local'/>

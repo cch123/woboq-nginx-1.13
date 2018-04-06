@@ -1,0 +1,7 @@
+<dec f='nginx/src/core/ngx_connection.h' l='67' type='unsigned int'/>
+<offset>1866</offset>
+<use f='nginx/src/core/ngx_connection.c' l='916' u='r' c='ngx_configure_listening_sockets'/>
+<use f='nginx/src/core/ngx_connection.c' l='937' u='r' c='ngx_configure_listening_sockets'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='388' u='r' c='ngx_event_recvmsg'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='489' u='r' c='ngx_event_recvmsg'/>
+<use f='nginx/src/os/unix/ngx_udp_sendmsg_chain.c' l='232' u='r' c='ngx_sendmsg'/>

@@ -1,0 +1,6 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='485' type='void ngx_http_set_exten(ngx_http_request_t * r)'/>
+<use f='nginx/src/http/modules/ngx_http_try_files_module.c' l='278' u='c' c='ngx_http_try_files_handler'/>
+<def f='nginx/src/http/ngx_http_core_module.c' l='1557' ll='1578' type='void ngx_http_set_exten(ngx_http_request_t * r)'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2322' u='c' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2425' u='c' c='ngx_http_internal_redirect'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1162' u='c' c='ngx_http_script_regex_end_code'/>

@@ -1,0 +1,3 @@
+<dec f='nginx/src/os/unix/ngx_process.h' l='50'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='228' u='c'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='416' u='c'/>

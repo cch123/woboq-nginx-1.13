@@ -1,0 +1,20 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='565' type='u_char *'/>
+<offset>10560</offset>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='1912' u='r' c='ngx_http_fastcgi_process_header'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='1924' u='r' c='ngx_http_fastcgi_process_header'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1815' u='r' c='ngx_http_proxy_process_header'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='1037' u='r' c='ngx_http_scgi_process_header'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='1241' u='r' c='ngx_http_uwsgi_process_header'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='885' u='w' c='ngx_http_parse_header_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='889' u='w' c='ngx_http_parse_header_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='960' u='w' c='ngx_http_parse_header_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='968' u='w' c='ngx_http_parse_header_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='997' u='w' c='ngx_http_parse_header_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1002' u='w' c='ngx_http_parse_header_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1017' u='w' c='ngx_http_parse_header_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1021' u='w' c='ngx_http_parse_header_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1025' u='w' c='ngx_http_parse_header_line'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1312' u='r' c='ngx_http_process_request_headers'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1331' u='r' c='ngx_http_process_request_headers'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1599' u='w' c='ngx_http_alloc_large_header_buffer'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1599' u='r' c='ngx_http_alloc_large_header_buffer'/>

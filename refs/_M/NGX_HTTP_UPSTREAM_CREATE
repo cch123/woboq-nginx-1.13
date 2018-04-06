@@ -1,0 +1,11 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='111'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_hash_module.c' l='660' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_ip_hash_module.c' l='264' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_least_conn_module.c' l='305' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5649' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5910' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5935' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5936' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5943' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5950' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5964' u='c'/>

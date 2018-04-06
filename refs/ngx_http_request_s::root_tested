@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='533' type='unsigned int'/>
+<offset>9878</offset>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='484' u='r' c='ngx_http_log_script_write'/>
+<use f='nginx/src/http/modules/ngx_http_static_module.c' l='143' u='w' c='ngx_http_static_handler'/>

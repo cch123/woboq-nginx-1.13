@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_string.h' l='184'/>
+<use f='nginx/src/core/ngx_crypt.c' l='224' u='c'/>
+<use f='nginx/src/core/ngx_crypt.c' l='256' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_userid_filter_module.c' l='376' u='c'/>

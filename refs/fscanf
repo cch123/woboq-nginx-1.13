@@ -1,0 +1,5 @@
+<dec f='include/stdio.h' l='425' type='int fscanf(FILE *restrict __stream, const char *restrict __format)'/>
+<doc f='include/stdio.h' l='421'>/* Read formatted input from STREAM.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */</doc>

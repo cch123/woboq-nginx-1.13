@@ -1,0 +1,16 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='133'/>
+<doc f='nginx/src/http/ngx_http_request.h' l='127'>/*
+ * HTTP does not define the code for the case when a client closed
+ * the connection while we are processing its request so we introduce
+ * own code to log such situation when a client has closed the connection
+ * before we even try to send the HTTP header to it
+ */</doc>
+<use f='nginx/src/http/ngx_http_request.c' l='2346' u='c'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2885' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1333' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1418' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1428' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1481' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1490' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4149' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4364' u='c'/>

@@ -1,0 +1,1 @@
+<dec f='include/pcre.h' l='579' type='int pcre_jit_exec(const pcre * , const pcre_extra * , const char * , int , int , int , int * , int , pcre_jit_stack * )'/>

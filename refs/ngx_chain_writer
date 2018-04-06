@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_buf.h' l='158' type='ngx_int_t ngx_chain_writer(void * ctx, ngx_chain_t * in)'/>
+<def f='nginx/src/core/ngx_output_chain.c' l='655' ll='767' type='ngx_int_t ngx_chain_writer(void * data, ngx_chain_t * in)'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='1603' u='c' c='ngx_http_fastcgi_body_output_filter'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1699' u='c' c='ngx_http_proxy_body_output_filter'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='638' u='r' c='ngx_http_upstream_init_request'/>

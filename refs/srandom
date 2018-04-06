@@ -1,0 +1,4 @@
+<dec f='include/stdlib.h' l='324' type='void srandom(unsigned int __seed)'/>
+<doc f='include/stdlib.h' l='323'>/* Seed the random number generator with the given number.  */</doc>
+<use f='nginx/src/os/unix/ngx_posix_init.c' l='92' u='c' c='ngx_os_init'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='918' u='c' c='ngx_worker_process_init'/>

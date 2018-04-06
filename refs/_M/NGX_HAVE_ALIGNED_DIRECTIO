@@ -1,0 +1,4 @@
+<dec f='nginx/objs/ngx_auto_config.h' l='102'/>
+<use f='nginx/src/core/ngx_output_chain.c' l='417' u='c'/>
+<use f='nginx/src/core/ngx_output_chain.c' l='556' u='c'/>
+<use f='nginx/src/core/ngx_output_chain.c' l='599' u='c'/>

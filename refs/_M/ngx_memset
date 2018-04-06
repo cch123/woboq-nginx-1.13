@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_string.h' l='89'/>
+<use f='nginx/src/core/ngx_inet.c' l='404' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='617' u='c'/>
+<use f='nginx/src/os/unix/ngx_setproctitle.c' l='128' u='c'/>

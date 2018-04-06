@@ -1,0 +1,19 @@
+<def f='nginx/src/core/ngx_buf.h' l='78' ll='113'/>
+<size>104</size>
+<mbr r='ngx_output_chain_ctx_s::buf' o='0' t='ngx_buf_t *'/>
+<mbr r='ngx_output_chain_ctx_s::in' o='64' t='ngx_chain_t *'/>
+<mbr r='ngx_output_chain_ctx_s::free' o='128' t='ngx_chain_t *'/>
+<mbr r='ngx_output_chain_ctx_s::busy' o='192' t='ngx_chain_t *'/>
+<mbr r='ngx_output_chain_ctx_s::sendfile' o='256' t='unsigned int'/>
+<mbr r='ngx_output_chain_ctx_s::directio' o='257' t='unsigned int'/>
+<mbr r='ngx_output_chain_ctx_s::unaligned' o='258' t='unsigned int'/>
+<mbr r='ngx_output_chain_ctx_s::need_in_memory' o='259' t='unsigned int'/>
+<mbr r='ngx_output_chain_ctx_s::need_in_temp' o='260' t='unsigned int'/>
+<mbr r='ngx_output_chain_ctx_s::aio' o='261' t='unsigned int'/>
+<mbr r='ngx_output_chain_ctx_s::alignment' o='320' t='off_t'/>
+<mbr r='ngx_output_chain_ctx_s::pool' o='384' t='ngx_pool_t *'/>
+<mbr r='ngx_output_chain_ctx_s::allocated' o='448' t='ngx_int_t'/>
+<mbr r='ngx_output_chain_ctx_s::bufs' o='512' t='ngx_bufs_t'/>
+<mbr r='ngx_output_chain_ctx_s::tag' o='640' t='ngx_buf_tag_t'/>
+<mbr r='ngx_output_chain_ctx_s::output_filter' o='704' t='ngx_output_chain_filter_pt'/>
+<mbr r='ngx_output_chain_ctx_s::filter_ctx' o='768' t='void *'/>

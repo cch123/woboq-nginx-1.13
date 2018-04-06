@@ -1,0 +1,13 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='414' type='ngx_str_t'/>
+<offset>8256</offset>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2320' u='w' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2320' u='r' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='472' u='m' c='ngx_http_parse_request_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='614' u='m' c='ngx_http_parse_request_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='668' u='m' c='ngx_http_parse_request_line'/>
+<use f='nginx/src/http/ngx_http_request.c' l='993' u='m' c='ngx_http_process_request_line'/>
+<use f='nginx/src/http/ngx_http_request.c' l='994' u='m' c='ngx_http_process_request_line'/>
+<use f='nginx/src/http/ngx_http_request.c' l='994' u='m' c='ngx_http_process_request_line'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1591' u='m' c='ngx_http_alloc_large_header_buffer'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1592' u='m' c='ngx_http_alloc_large_header_buffer'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1592' u='m' c='ngx_http_alloc_large_header_buffer'/>

@@ -1,0 +1,10 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='188' type='time_t'/>
+<offset>3904</offset>
+<use f='nginx/src/core/ngx_resolver.c' l='199' u='w' c='ngx_resolver_create'/>
+<use f='nginx/src/core/ngx_resolver.c' l='630' u='r' c='ngx_resolve_name_locked'/>
+<use f='nginx/src/core/ngx_resolver.c' l='967' u='r' c='ngx_resolve_addr'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2378' u='r' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2450' u='r' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2799' u='r' c='ngx_resolver_process_srv'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2835' u='r' c='ngx_resolver_process_srv'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3307' u='r' c='ngx_resolver_process_ptr'/>

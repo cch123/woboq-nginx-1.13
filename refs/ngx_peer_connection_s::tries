@@ -1,0 +1,14 @@
+<dec f='nginx/src/event/ngx_event_connect.h' l='43' type='ngx_uint_t'/>
+<offset>256</offset>
+<use f='nginx/src/http/ngx_http_upstream.c' l='796' u='r' c='ngx_http_upstream_init_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='798' u='w' c='ngx_http_upstream_init_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1238' u='r' c='ngx_http_upstream_resolve_handler'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1240' u='w' c='ngx_http_upstream_resolve_handler'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2415' u='r' c='ngx_http_upstream_test_next'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4108' u='w' c='ngx_http_upstream_next'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4163' u='r' c='ngx_http_upstream_next'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='286' u='w' c='ngx_http_upstream_init_round_robin_peer'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='406' u='w' c='ngx_http_upstream_create_round_robin_peer'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='611' u='w' c='ngx_http_upstream_free_round_robin_peer'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='653' u='r' c='ngx_http_upstream_free_round_robin_peer'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='654' u='w' c='ngx_http_upstream_free_round_robin_peer'/>

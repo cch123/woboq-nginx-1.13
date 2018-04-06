@@ -1,0 +1,8 @@
+<dec f='nginx/src/core/ngx_inet.h' l='37' type='struct sockaddr_in'/>
+<offset>0</offset>
+<use f='nginx/src/core/ngx_proxy_protocol.c' l='281' u='m' c='ngx_proxy_protocol_v2_read'/>
+<use f='nginx/src/core/ngx_proxy_protocol.c' l='282' u='m' c='ngx_proxy_protocol_v2_read'/>
+<use f='nginx/src/core/ngx_proxy_protocol.c' l='283' u='m' c='ngx_proxy_protocol_v2_read'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4183' u='a' c='ngx_resolver_export'/>
+<use f='nginx/src/http/ngx_http.c' l='1798' u='a' c='ngx_http_add_addrs'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2796' u='a' c='ngx_http_core_server'/>

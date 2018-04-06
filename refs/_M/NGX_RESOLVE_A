@@ -1,0 +1,6 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='16'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1806' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2148' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2150' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2289' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3651' u='c'/>

@@ -1,0 +1,14 @@
+<def f='nginx/src/core/ngx_log.h' l='250' ll='254' type='void ngx_write_stderr(char * text)'/>
+<doc f='nginx/src/core/ngx_log.h' l='241'>/*
+ * ngx_write_stderr() cannot be implemented as macro, since
+ * MSVC does not allow to use #ifdef inside macro parameters.
+ *
+ * ngx_write_fd() is used instead of ngx_write_console(), since
+ * CharToOemBuff() inside ngx_write_console() cannot be used with
+ * read only buffer as destination and CharToOemBuff() is not needed
+ * for ngx_write_stderr() anyway.
+ */</doc>
+<use f='nginx/src/core/nginx.c' l='392' u='c' c='ngx_show_version_info'/>
+<use f='nginx/src/core/nginx.c' l='395' u='c' c='ngx_show_version_info'/>
+<use f='nginx/src/core/nginx.c' l='427' u='c' c='ngx_show_version_info'/>
+<use f='nginx/src/core/nginx.c' l='446' u='c' c='ngx_show_version_info'/>

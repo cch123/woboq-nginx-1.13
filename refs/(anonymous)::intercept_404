@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='223' type='unsigned int'/>
+<offset>3332</offset>
+<use f='nginx/src/http/modules/ngx_http_memcached_module.c' l='616' u='w' c='ngx_http_memcached_create_loc_conf'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2538' u='r' c='ngx_http_upstream_intercept_errors'/>

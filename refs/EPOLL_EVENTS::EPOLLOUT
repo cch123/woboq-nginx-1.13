@@ -1,0 +1,19 @@
+<dec f='include/x86_64-linux-gnu/sys/epoll.h' l='46' type='4'/>
+<use f='nginx/src/core/ngx_connection.c' l='1145' macro='1' c='ngx_close_connection'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4619' macro='1' c='ngx_tcp_connect'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='593' macro='1' u='r'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='666' macro='1' u='r'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='705' macro='1' u='r'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='872' macro='1' u='r'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='908' macro='1' u='r'/>
+<use f='nginx/src/event/ngx_event.c' l='349' macro='1' c='ngx_handle_write_event'/>
+<use f='nginx/src/event/ngx_event.c' l='364' macro='1' c='ngx_handle_write_event'/>
+<use f='nginx/src/event/ngx_event.c' l='374' macro='1' c='ngx_handle_write_event'/>
+<use f='nginx/src/event/ngx_event.c' l='388' macro='1' c='ngx_handle_write_event'/>
+<use f='nginx/src/event/ngx_event.c' l='396' macro='1' c='ngx_handle_write_event'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='296' macro='1' c='ngx_event_connect_peer'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3068' macro='1' c='ngx_http_set_keepalive'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3268' macro='1' c='ngx_http_set_lingering_close'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='531' macro='1' c='ngx_http_upstream_init'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1322' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1449' macro='1' u='r'/>

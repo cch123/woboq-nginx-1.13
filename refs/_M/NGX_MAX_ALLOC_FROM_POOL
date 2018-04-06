@@ -1,0 +1,7 @@
+<dec f='nginx/src/core/ngx_palloc.h' l='20'/>
+<doc f='nginx/src/core/ngx_palloc.h' l='16'>/*
+ * NGX_MAX_ALLOC_FROM_POOL should be (ngx_pagesize - 1), i.e. 4095 on x86.
+ * On Windows NT it decreases a number of locked pages in a kernel.
+ */</doc>
+<use f='nginx/src/core/ngx_palloc.c' l='34' u='c'/>
+<use f='nginx/src/core/ngx_palloc.c' l='34' u='c'/>

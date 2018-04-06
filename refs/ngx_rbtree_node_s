@@ -1,0 +1,8 @@
+<def f='nginx/src/core/ngx_rbtree.h' l='22' ll='29'/>
+<size>40</size>
+<mbr r='ngx_rbtree_node_s::key' o='0' t='ngx_rbtree_key_t'/>
+<mbr r='ngx_rbtree_node_s::left' o='64' t='ngx_rbtree_node_t *'/>
+<mbr r='ngx_rbtree_node_s::right' o='128' t='ngx_rbtree_node_t *'/>
+<mbr r='ngx_rbtree_node_s::parent' o='192' t='ngx_rbtree_node_t *'/>
+<mbr r='ngx_rbtree_node_s::color' o='256' t='u_char'/>
+<mbr r='ngx_rbtree_node_s::data' o='264' t='u_char'/>

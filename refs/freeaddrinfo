@@ -1,0 +1,4 @@
+<dec f='include/netdb.h' l='668' type='void freeaddrinfo(struct addrinfo * __ai)'/>
+<doc f='include/netdb.h' l='667'>/* Free `addrinfo&apos; structure AI including associated storage.  */</doc>
+<use f='nginx/src/core/ngx_inet.c' l='1239' u='c' c='ngx_inet_resolve_host'/>
+<use f='nginx/src/core/ngx_inet.c' l='1244' u='c' c='ngx_inet_resolve_host'/>

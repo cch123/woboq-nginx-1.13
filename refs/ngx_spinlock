@@ -1,0 +1,2 @@
+<dec f='nginx/src/os/unix/ngx_atomic.h' l='307' type='void ngx_spinlock(ngx_atomic_t * lock, ngx_atomic_int_t value, ngx_uint_t spin)'/>
+<def f='nginx/src/core/ngx_spinlock.c' l='12' ll='53' type='void ngx_spinlock(ngx_atomic_t * lock, ngx_atomic_int_t value, ngx_uint_t spin)'/>

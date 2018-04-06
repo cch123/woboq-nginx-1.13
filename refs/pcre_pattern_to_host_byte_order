@@ -1,0 +1,1 @@
+<dec f='include/pcre.h' l='644' type='int pcre_pattern_to_host_byte_order(pcre * , pcre_extra * , const unsigned char * )'/>

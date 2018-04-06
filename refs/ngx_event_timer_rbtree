@@ -1,0 +1,16 @@
+<dec f='nginx/src/event/ngx_event_timer.h' l='28' type='ngx_rbtree_t'/>
+<use f='nginx/src/event/ngx_event_timer.h' l='38' u='a' c='ngx_event_del_timer'/>
+<use f='nginx/src/event/ngx_event_timer.h' l='84' u='a' c='ngx_event_add_timer'/>
+<def f='nginx/src/event/ngx_event_timer.c' l='13' type='ngx_rbtree_t'/>
+<use f='nginx/src/event/ngx_event_timer.c' l='25' u='a' c='ngx_event_timer_init'/>
+<use f='nginx/src/event/ngx_event_timer.c' l='25' u='a' c='ngx_event_timer_init'/>
+<use f='nginx/src/event/ngx_event_timer.c' l='25' u='a' c='ngx_event_timer_init'/>
+<use f='nginx/src/event/ngx_event_timer.c' l='38' u='m' c='ngx_event_find_timer'/>
+<use f='nginx/src/event/ngx_event_timer.c' l='42' u='m' c='ngx_event_find_timer'/>
+<use f='nginx/src/event/ngx_event_timer.c' l='43' u='m' c='ngx_event_find_timer'/>
+<use f='nginx/src/event/ngx_event_timer.c' l='59' u='m' c='ngx_event_expire_timers'/>
+<use f='nginx/src/event/ngx_event_timer.c' l='62' u='m' c='ngx_event_expire_timers'/>
+<use f='nginx/src/event/ngx_event_timer.c' l='82' u='a' c='ngx_event_expire_timers'/>
+<use f='nginx/src/event/ngx_event_timer.c' l='105' u='m' c='ngx_event_no_timers_left'/>
+<use f='nginx/src/event/ngx_event_timer.c' l='106' u='m' c='ngx_event_no_timers_left'/>
+<use f='nginx/src/event/ngx_event_timer.c' l='114' u='a' c='ngx_event_no_timers_left'/>

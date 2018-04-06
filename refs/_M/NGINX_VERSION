@@ -1,0 +1,6 @@
+<dec f='nginx/src/core/nginx.h' l='13'/>
+<dec f='nginx/src/core/nginx.h' l='12'/>
+<use f='nginx/src/core/ngx_module.c' l='170' u='c'/>
+<use f='nginx/src/core/ngx_module.c' l='173' u='c'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2234' u='c'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2238' u='c'/>

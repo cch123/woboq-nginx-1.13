@@ -1,0 +1,11 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='101' type='struct in6_addr'/>
+<offset>512</offset>
+<doc f='nginx/src/core/ngx_resolver.h' l='100'>/* PTR: IPv6 address to resolve (IPv4 address is in rbtree node key) */</doc>
+<use f='nginx/src/core/ngx_resolver.c' l='1025' u='w' c='ngx_resolve_addr'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3492' u='a' c='ngx_resolver_lookup_addr6'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3574' u='a' c='ngx_resolver_rbtree_insert_addr6_value'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3574' u='a' c='ngx_resolver_rbtree_insert_addr6_value'/>
+<dec f='nginx/src/http/ngx_http_core_module.h' l='251' type='struct in6_addr'/>
+<offset>0</offset>
+<use f='nginx/src/http/ngx_http.c' l='1864' u='w' c='ngx_http_add_addrs6'/>
+<use f='nginx/src/http/ngx_http_request.c' l='256' u='a' c='ngx_http_init_connection'/>

@@ -1,0 +1,8 @@
+<use f='nginx/src/core/ngx_file.c' l='354' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4419' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4505' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_shmtx.c' l='101' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_shmtx.c' l='104' macro='1' u='c'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='262' macro='1' u='c'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='589' macro='1' u='c'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='182' macro='1' u='c'/>

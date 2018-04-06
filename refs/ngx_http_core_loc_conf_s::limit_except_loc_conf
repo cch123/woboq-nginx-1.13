@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='327' type='void **'/>
+<offset>512</offset>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1220' u='r' c='ngx_http_update_location_config'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4405' u='w' c='ngx_http_core_limit_except'/>

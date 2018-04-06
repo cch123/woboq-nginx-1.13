@@ -1,0 +1,5 @@
+<dec f='nginx/src/event/ngx_event_pipe.h' l='71' type='ngx_bufs_t'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='228' u='m' c='ngx_event_pipe_read_upstream'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='232' u='m' c='ngx_event_pipe_read_upstream'/>
+<offset>960</offset>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3068' u='w' c='ngx_http_upstream_send_response'/>

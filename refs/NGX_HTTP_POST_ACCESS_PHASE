@@ -1,0 +1,2 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='120' type='7'/>
+<use f='nginx/src/http/ngx_http.c' l='529' c='ngx_http_init_phase_handlers'/>

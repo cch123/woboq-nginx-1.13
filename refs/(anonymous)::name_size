@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_regex.h' l='37' type='int'/>
+<offset>384</offset>
+<use f='nginx/src/core/ngx_regex.c' l='167' u='a' c='ngx_regex_compile'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1939' u='r' c='ngx_http_ssi_regex_match'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2466' u='r' c='ngx_http_regex_compile'/>

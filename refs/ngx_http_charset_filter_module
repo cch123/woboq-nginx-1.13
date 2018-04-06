@@ -1,0 +1,20 @@
+<dec f='nginx/objs/ngx_modules.c' l='51' type='ngx_module_t'/>
+<use f='nginx/objs/ngx_modules.c' l='103' u='a'/>
+<use f='nginx/objs/ngx_modules.c' l='103' u='a'/>
+<def f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='196' ll='209' type='ngx_module_t'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='291' u='m' c='ngx_http_charset_header_filter'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='346' u='m' c='ngx_http_destination_charset'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='365' u='m' c='ngx_http_destination_charset'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='391' u='m' c='ngx_http_main_request_charset'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='409' u='m' c='ngx_http_main_request_charset'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='435' u='m' c='ngx_http_source_charset'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='445' u='m' c='ngx_http_source_charset'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='471' u='m' c='ngx_http_get_charset'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='524' u='m' c='ngx_http_charset_ctx'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='554' u='m' c='ngx_http_charset_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='622' u='a' c='ngx_http_charset_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='1120' u='a' c='ngx_http_charset_get_buf'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='1164' u='a' c='ngx_http_charset_get_buffer'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='1437' u='m' c='ngx_http_set_charset_slot'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='1585' u='m' c='ngx_http_charset_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='1619' u='m' c='ngx_http_charset_postconfiguration'/>

@@ -1,0 +1,3 @@
+<dec f='include/zlib.h' l='246' type='int deflate(z_streamp strm, int flush)'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='818' u='c' c='ngx_http_gzip_filter_deflate'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='650' u='c' c='ngx_http_log_gzip'/>

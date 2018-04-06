@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_cache.h' l='204' type='ngx_str_t []'/>
+<def f='nginx/src/http/ngx_http_file_cache.c' l='68' ll='76' type='ngx_str_t [7]'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5567' u='m' c='ngx_http_upstream_cache_status'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5568' u='m' c='ngx_http_upstream_cache_status'/>

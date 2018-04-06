@@ -1,0 +1,17 @@
+<dec f='nginx/src/core/ngx_radix_tree.h' l='16'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='39' u='c'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='91' u='c'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='137' u='c'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='154' u='c'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='198' u='c'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='199' u='c'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='223' u='c'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='244' u='c'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='248' u='c'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='307' u='c'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='324' u='c'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='386' u='c'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='387' u='c'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='411' u='c'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='434' u='c'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='438' u='c'/>

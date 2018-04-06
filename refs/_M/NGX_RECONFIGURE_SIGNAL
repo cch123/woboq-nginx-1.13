@@ -1,0 +1,6 @@
+<dec f='nginx/src/core/ngx_config.h' l='63'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='40' u='c'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='41' u='c'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='364' u='c'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='434' u='c'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='93' u='c'/>

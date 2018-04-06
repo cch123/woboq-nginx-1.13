@@ -1,0 +1,2 @@
+<dec f='include/x86_64-linux-gnu/bits/fcntl-linux.h' l='179'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='153' u='c'/>

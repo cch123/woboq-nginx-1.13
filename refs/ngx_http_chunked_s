@@ -1,0 +1,5 @@
+<def f='nginx/src/http/ngx_http.h' l='59' ll='63'/>
+<size>24</size>
+<mbr r='ngx_http_chunked_s::state' o='0' t='ngx_uint_t'/>
+<mbr r='ngx_http_chunked_s::size' o='64' t='off_t'/>
+<mbr r='ngx_http_chunked_s::length' o='128' t='off_t'/>

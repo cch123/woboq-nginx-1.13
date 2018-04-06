@@ -1,0 +1,2 @@
+<dec f='include/linux/capability.h' l='210'/>
+<doc f='include/linux/capability.h' l='208'>/* Allow sending USB messages to any device via /proc/bus/usb */</doc>

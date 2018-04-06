@@ -1,0 +1,7 @@
+<dec f='nginx/src/core/ngx_crc32.h' l='16' type='uint32_t *'/>
+<use f='nginx/src/core/ngx_crc32.h' l='30' u='r' c='ngx_crc32_short'/>
+<use f='nginx/src/core/ngx_crc32.h' l='31' u='r' c='ngx_crc32_short'/>
+<def f='nginx/src/core/ngx_crc32.c' l='102' type='uint32_t *'/>
+<use f='nginx/src/core/ngx_crc32.c' l='110' u='r' c='ngx_crc32_table_init'/>
+<use f='nginx/src/core/ngx_crc32.c' l='112' u='r' c='ngx_crc32_table_init'/>
+<use f='nginx/src/core/ngx_crc32.c' l='126' u='w' c='ngx_crc32_table_init'/>

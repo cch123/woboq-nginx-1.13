@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ngx_syslog.h source code [nginx/src/core/ngx_syslog.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../../../data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../../data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../../data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'nginx/src/core/ngx_syslog.h'; var root_path = '../../..'; var data_path = '../../../../data';</script>
+<script src='../../../../data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../..'>nginx</a>/<a href='..'>src</a>/<a href='./'>core</a>/<a href='ngx_syslog.h.html'>ngx_syslog.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td></td></tr>
+<tr><th id="2">2</th><td><i>/*</i></td></tr>
+<tr><th id="3">3</th><td><i> * Copyright (C) Nginx, Inc.</i></td></tr>
+<tr><th id="4">4</th><td><i> */</i></td></tr>
+<tr><th id="5">5</th><td></td></tr>
+<tr><th id="6">6</th><td></td></tr>
+<tr><th id="7">7</th><td><u>#<span data-ppcond="7">ifndef</span> <span class="macro" data-ref="_M/_NGX_SYSLOG_H_INCLUDED_">_NGX_SYSLOG_H_INCLUDED_</span></u></td></tr>
+<tr><th id="8">8</th><td><u>#define <dfn class="macro" id="_M/_NGX_SYSLOG_H_INCLUDED_" data-ref="_M/_NGX_SYSLOG_H_INCLUDED_">_NGX_SYSLOG_H_INCLUDED_</dfn></u></td></tr>
+<tr><th id="9">9</th><td></td></tr>
+<tr><th id="10">10</th><td></td></tr>
+<tr><th id="11">11</th><td><b>typedef</b> <b>struct</b> {</td></tr>
+<tr><th id="12">12</th><td>    <a class="typedef" href="ngx_core.h.html#ngx_pool_t" title='ngx_pool_t' data-type='struct ngx_pool_s' data-ref="ngx_pool_t">ngx_pool_t</a>       *<dfn class="decl field" id="(anonymous)::pool" title='(anonymous struct)::pool' data-ref="(anonymous)::pool">pool</dfn>;</td></tr>
+<tr><th id="13">13</th><td>    <a class="typedef" href="ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>        <dfn class="decl field" id="(anonymous)::facility" title='(anonymous struct)::facility' data-ref="(anonymous)::facility">facility</dfn>;</td></tr>
+<tr><th id="14">14</th><td>    <a class="typedef" href="ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>        <dfn class="decl field" id="(anonymous)::severity" title='(anonymous struct)::severity' data-ref="(anonymous)::severity">severity</dfn>;</td></tr>
+<tr><th id="15">15</th><td>    <a class="typedef" href="ngx_string.h.html#ngx_str_t" title='ngx_str_t' data-type='struct ngx_str_t' data-ref="ngx_str_t">ngx_str_t</a>         <dfn class="decl field" id="(anonymous)::tag" title='(anonymous struct)::tag' data-ref="(anonymous)::tag">tag</dfn>;</td></tr>
+<tr><th id="16">16</th><td></td></tr>
+<tr><th id="17">17</th><td>    <a class="typedef" href="ngx_inet.h.html#ngx_addr_t" title='ngx_addr_t' data-type='struct ngx_addr_t' data-ref="ngx_addr_t">ngx_addr_t</a>        <dfn class="decl field" id="(anonymous)::server" title='(anonymous struct)::server' data-ref="(anonymous)::server">server</dfn>;</td></tr>
+<tr><th id="18">18</th><td>    <a class="typedef" href="ngx_core.h.html#ngx_connection_t" title='ngx_connection_t' data-type='struct ngx_connection_s' data-ref="ngx_connection_t">ngx_connection_t</a>  <dfn class="decl field" id="(anonymous)::conn" title='(anonymous struct)::conn' data-ref="(anonymous)::conn">conn</dfn>;</td></tr>
+<tr><th id="19">19</th><td>    <em>unsigned</em>          <dfn class="decl field" id="(anonymous)::busy" title='(anonymous struct)::busy' data-ref="(anonymous)::busy">busy</dfn>:<var>1</var>;</td></tr>
+<tr><th id="20">20</th><td>    <em>unsigned</em>          <dfn class="decl field" id="(anonymous)::nohostname" title='(anonymous struct)::nohostname' data-ref="(anonymous)::nohostname">nohostname</dfn>:<var>1</var>;</td></tr>
+<tr><th id="21">21</th><td>} <dfn class="typedef" id="ngx_syslog_peer_t" title='ngx_syslog_peer_t' data-type='struct ngx_syslog_peer_t' data-ref="ngx_syslog_peer_t">ngx_syslog_peer_t</dfn>;</td></tr>
+<tr><th id="22">22</th><td></td></tr>
+<tr><th id="23">23</th><td></td></tr>
+<tr><th id="24">24</th><td><em>char</em> *<dfn class="decl fn" id="ngx_syslog_process_conf" title='ngx_syslog_process_conf' data-ref="ngx_syslog_process_conf">ngx_syslog_process_conf</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_conf_t" title='ngx_conf_t' data-type='struct ngx_conf_s' data-ref="ngx_conf_t">ngx_conf_t</a> *<dfn class="local col9 decl" id="2839cf" title='cf' data-type='ngx_conf_t *' data-ref="2839cf">cf</dfn>, <a class="typedef" href="#ngx_syslog_peer_t" title='ngx_syslog_peer_t' data-type='struct ngx_syslog_peer_t' data-ref="ngx_syslog_peer_t">ngx_syslog_peer_t</a> *<dfn class="local col0 decl" id="2840peer" title='peer' data-type='ngx_syslog_peer_t *' data-ref="2840peer">peer</dfn>);</td></tr>
+<tr><th id="25">25</th><td><a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a> *<dfn class="decl fn" id="ngx_syslog_add_header" title='ngx_syslog_add_header' data-ref="ngx_syslog_add_header">ngx_syslog_add_header</dfn>(<a class="typedef" href="#ngx_syslog_peer_t" title='ngx_syslog_peer_t' data-type='struct ngx_syslog_peer_t' data-ref="ngx_syslog_peer_t">ngx_syslog_peer_t</a> *<dfn class="local col1 decl" id="2841peer" title='peer' data-type='ngx_syslog_peer_t *' data-ref="2841peer">peer</dfn>, <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a> *<dfn class="local col2 decl" id="2842buf" title='buf' data-type='u_char *' data-ref="2842buf">buf</dfn>);</td></tr>
+<tr><th id="26">26</th><td><em>void</em> <dfn class="decl fn" id="ngx_syslog_writer" title='ngx_syslog_writer' data-ref="ngx_syslog_writer">ngx_syslog_writer</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_log_t" title='ngx_log_t' data-type='struct ngx_log_s' data-ref="ngx_log_t">ngx_log_t</a> *<dfn class="local col3 decl" id="2843log" title='log' data-type='ngx_log_t *' data-ref="2843log">log</dfn>, <a class="typedef" href="ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a> <dfn class="local col4 decl" id="2844level" title='level' data-type='ngx_uint_t' data-ref="2844level">level</dfn>, <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a> *<dfn class="local col5 decl" id="2845buf" title='buf' data-type='u_char *' data-ref="2845buf">buf</dfn>,</td></tr>
+<tr><th id="27">27</th><td>    <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span> <dfn class="local col6 decl" id="2846len" title='len' data-type='size_t' data-ref="2846len">len</dfn>);</td></tr>
+<tr><th id="28">28</th><td><a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#ssize_t" title='ssize_t' data-type='__ssize_t' data-ref="ssize_t">ssize_t</a> <dfn class="decl fn" id="ngx_syslog_send" title='ngx_syslog_send' data-ref="ngx_syslog_send">ngx_syslog_send</dfn>(<a class="typedef" href="#ngx_syslog_peer_t" title='ngx_syslog_peer_t' data-type='struct ngx_syslog_peer_t' data-ref="ngx_syslog_peer_t">ngx_syslog_peer_t</a> *<dfn class="local col7 decl" id="2847peer" title='peer' data-type='ngx_syslog_peer_t *' data-ref="2847peer">peer</dfn>, <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a> *<dfn class="local col8 decl" id="2848buf" title='buf' data-type='u_char *' data-ref="2848buf">buf</dfn>, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span> <dfn class="local col9 decl" id="2849len" title='len' data-type='size_t' data-ref="2849len">len</dfn>);</td></tr>
+<tr><th id="29">29</th><td></td></tr>
+<tr><th id="30">30</th><td></td></tr>
+<tr><th id="31">31</th><td><u>#<span data-ppcond="7">endif</span> /* _NGX_SYSLOG_H_INCLUDED_ */</u></td></tr>
+<tr><th id="32">32</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../../objs/ngx_modules.c.html'>nginx/objs/ngx_modules.c</a><br/>Generated on <em>2018-Apr-06</em> from project nginx<br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

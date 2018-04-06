@@ -1,0 +1,3 @@
+<dec f='nginx/src/http/ngx_http_script.h' l='234' type='void ngx_http_script_copy_var_code(ngx_http_script_engine_t * e)'/>
+<use f='nginx/src/http/ngx_http_script.c' l='797' u='r' c='ngx_http_script_add_var_code'/>
+<def f='nginx/src/http/ngx_http_script.c' l='829' ll='858' type='void ngx_http_script_copy_var_code(ngx_http_script_engine_t * e)'/>

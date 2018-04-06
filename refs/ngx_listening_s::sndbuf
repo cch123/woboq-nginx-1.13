@@ -1,0 +1,9 @@
+<dec f='nginx/src/core/ngx_connection.h' l='30' type='int'/>
+<offset>480</offset>
+<use f='nginx/src/core/ngx_connection.c' l='80' u='w' c='ngx_create_listening'/>
+<use f='nginx/src/core/ngx_connection.c' l='243' u='a' c='ngx_set_inherited_sockets'/>
+<use f='nginx/src/core/ngx_connection.c' l='251' u='w' c='ngx_set_inherited_sockets'/>
+<use f='nginx/src/core/ngx_connection.c' l='680' u='r' c='ngx_configure_listening_sockets'/>
+<use f='nginx/src/core/ngx_connection.c' l='682' u='a' c='ngx_configure_listening_sockets'/>
+<use f='nginx/src/core/ngx_connection.c' l='687' u='r' c='ngx_configure_listening_sockets'/>
+<use f='nginx/src/http/ngx_http.c' l='1742' u='w' c='ngx_http_add_listening'/>

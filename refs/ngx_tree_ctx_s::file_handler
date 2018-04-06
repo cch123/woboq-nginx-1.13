@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_file.h' l='123' type='ngx_tree_handler_pt'/>
+<offset>320</offset>
+<use f='nginx/src/core/ngx_file.c' l='1058' u='r' c='ngx_walk_tree'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2051' u='w' c='ngx_http_file_cache_loader'/>

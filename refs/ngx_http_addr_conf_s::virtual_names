@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='234' type='ngx_http_virtual_names_t *'/>
+<offset>64</offset>
+<use f='nginx/src/http/ngx_http.c' l='1827' u='w' c='ngx_http_add_addrs'/>
+<use f='nginx/src/http/ngx_http.c' l='1892' u='w' c='ngx_http_add_addrs6'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2086' u='r' c='ngx_http_set_virtual_server'/>

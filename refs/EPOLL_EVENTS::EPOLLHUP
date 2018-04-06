@@ -1,0 +1,2 @@
+<dec f='include/x86_64-linux-gnu/sys/epoll.h' l='60' type='16'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='862' macro='1' u='r'/>

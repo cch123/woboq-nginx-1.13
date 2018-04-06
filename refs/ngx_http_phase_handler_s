@@ -1,0 +1,5 @@
+<def f='nginx/src/http/ngx_http_core_module.h' l='134' ll='138'/>
+<size>24</size>
+<mbr r='ngx_http_phase_handler_s::checker' o='0' t='ngx_http_phase_handler_pt'/>
+<mbr r='ngx_http_phase_handler_s::handler' o='64' t='ngx_http_handler_pt'/>
+<mbr r='ngx_http_phase_handler_s::next' o='128' t='ngx_uint_t'/>

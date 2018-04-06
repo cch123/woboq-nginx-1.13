@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http.h' l='106' type='ngx_int_t ngx_http_arg(ngx_http_request_t * r, u_char * name, size_t len, ngx_str_t * value)'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='808' u='c' c='ngx_http_autoindex_jsonp_callback'/>
+<def f='nginx/src/http/ngx_http_parse.c' l='2063' ll='2102' type='ngx_int_t ngx_http_arg(ngx_http_request_t * r, u_char * name, size_t len, ngx_str_t * value)'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1094' u='c' c='ngx_http_variable_argument'/>

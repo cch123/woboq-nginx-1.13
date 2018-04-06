@@ -1,0 +1,19 @@
+<dec f='nginx/src/event/ngx_event.h' l='179' type='ngx_int_t (*)(ngx_event_t *, ngx_int_t, ngx_uint_t)'/>
+<use f='nginx/src/core/ngx_connection.c' l='990' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_connection.c' l='993' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_connection.c' l='1141' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_connection.c' l='1145' macro='1' u='r'/>
+<offset>64</offset>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1084' macro='1' u='r'/>
+<use f='nginx/src/event/ngx_event.c' l='295' macro='1' u='r'/>
+<use f='nginx/src/event/ngx_event.c' l='317' macro='1' u='r'/>
+<use f='nginx/src/event/ngx_event.c' l='374' macro='1' u='r'/>
+<use f='nginx/src/event/ngx_event.c' l='396' macro='1' u='r'/>
+<use f='nginx/src/event/ngx_event.c' l='773' macro='1' u='r'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='738' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2763' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2869' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3068' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3268' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1324' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1451' macro='1' u='r'/>

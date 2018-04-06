@@ -1,0 +1,13 @@
+<def f='nginx/src/core/ngx_crc32.h' l='57' ll='69' type='void ngx_crc32_update(uint32_t * crc, u_char * p, size_t len)'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1500' u='c' c='ngx_http_geo_include_binary_base'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1504' u='c' c='ngx_http_geo_include_binary_base'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1510' u='c' c='ngx_http_geo_include_binary_base'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1521' u='c' c='ngx_http_geo_include_binary_base'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1527' u='c' c='ngx_http_geo_include_binary_base'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_hash_module.c' l='203' u='c' c='ngx_http_upstream_get_hash_peer'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_hash_module.c' l='206' u='c' c='ngx_http_upstream_get_hash_peer'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_hash_module.c' l='357' u='c' c='ngx_http_upstream_init_chash'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_hash_module.c' l='358' u='c' c='ngx_http_upstream_init_chash'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_hash_module.c' l='359' u='c' c='ngx_http_upstream_init_chash'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_hash_module.c' l='367' u='c' c='ngx_http_upstream_init_chash'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='250' u='c' c='ngx_http_file_cache_create_key'/>

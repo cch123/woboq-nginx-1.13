@@ -1,0 +1,4 @@
+<dec f='nginx/src/event/ngx_event.h' l='472' type='ngx_uint_t'/>
+<def f='nginx/src/event/ngx_event.c' l='54' type='ngx_uint_t'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='654' u='r' c='ngx_trylock_accept_mutex'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='663' u='w' c='ngx_trylock_accept_mutex'/>

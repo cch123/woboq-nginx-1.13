@@ -1,0 +1,20 @@
+<dec f='nginx/src/core/ngx_open_file_cache.h' l='21' type='ngx_file_uniq_t'/>
+<offset>64</offset>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='169' u='w' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='232' u='r' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='232' u='r' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='243' u='w' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='287' u='w' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='309' u='r' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='407' u='r' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='853' u='r' c='ngx_open_and_stat_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='935' u='w' c='ngx_open_and_stat_file'/>
+<dec f='nginx/src/http/ngx_http_cache.h' l='56' type='ngx_file_uniq_t'/>
+<offset>576</offset>
+<doc f='nginx/src/http/ngx_http_cache.h' l='54'>/* 10 unused bits */</doc>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='350' u='w' c='ngx_http_file_cache_open'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='381' u='r' c='ngx_http_file_cache_open'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='626' u='w' c='ngx_http_file_cache_read'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='910' u='w' c='ngx_http_file_cache_exists'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='920' u='r' c='ngx_http_file_cache_exists'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1414' u='w' c='ngx_http_file_cache_update'/>

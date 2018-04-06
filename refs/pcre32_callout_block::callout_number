@@ -1,0 +1,4 @@
+<dec f='include/pcre.h' l='465' type='int'/>
+<offset>32</offset>
+<doc f='include/pcre.h' l='464'>/* ------------------------ Version 0 ------------------------------- */</doc>
+<doc f='include/pcre.h' l='465'>/* Number compiled into pattern */</doc>

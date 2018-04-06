@@ -1,0 +1,3 @@
+<dec f='include/sched.h' l='82'/>
+<use f='nginx/src/core/nginx.c' l='1434' u='c'/>
+<use f='nginx/src/os/unix/ngx_setaffinity.c' l='41' u='c'/>

@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='147'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='376' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='568' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='896' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='1013' u='c'/>

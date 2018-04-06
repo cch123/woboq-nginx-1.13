@@ -1,0 +1,4 @@
+<dec f='nginx/src/os/unix/ngx_errno.h' l='49'/>
+<use f='nginx/src/core/ngx_connection.c' l='1429' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4540' u='c'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='217' u='c'/>

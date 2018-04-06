@@ -1,0 +1,10 @@
+<dec f='nginx/src/core/ngx_config.h' l='84'/>
+<use f='nginx/src/core/ngx_cycle.c' l='949' u='c'/>
+<use f='nginx/src/core/ngx_cycle.c' l='972' u='c'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1012' u='c'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1032' u='c'/>
+<use f='nginx/src/core/ngx_string.c' l='497' u='c'/>
+<use f='nginx/src/core/ngx_string.c' l='507' u='c'/>
+<use f='nginx/src/core/ngx_string.c' l='561' u='c'/>
+<use f='nginx/src/core/ngx_string.c' l='569' u='c'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2264' u='c'/>

@@ -1,0 +1,3 @@
+<dec f='include/x86_64-linux-gnu/bits/fcntl-linux.h' l='217'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='764' u='c'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='781' u='c'/>

@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_hash.h' l='88' type='ngx_array_t *'/>
+<offset>1280</offset>
+<use f='nginx/src/core/ngx_hash.c' l='702' u='w' c='ngx_hash_keys_array_init'/>
+<use f='nginx/src/core/ngx_hash.c' l='704' u='r' c='ngx_hash_keys_array_init'/>
+<use f='nginx/src/core/ngx_hash.c' l='933' u='r' c='ngx_hash_add_key'/>

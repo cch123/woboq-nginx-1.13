@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_file.h' l='139' type='ngx_int_t ngx_create_temp_file(ngx_file_t * file, ngx_path_t * path, ngx_pool_t * pool, ngx_uint_t persistent, ngx_uint_t clean, ngx_uint_t access)'/>
+<use f='nginx/src/core/ngx_file.c' l='114' u='c' c='ngx_write_chain_to_temp_file'/>
+<def f='nginx/src/core/ngx_file.c' l='140' ll='237' type='ngx_int_t ngx_create_temp_file(ngx_file_t * file, ngx_path_t * path, ngx_pool_t * pool, ngx_uint_t persistent, ngx_uint_t clean, ngx_uint_t access)'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='468' u='c' c='ngx_http_write_request_body'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4013' u='c' c='ngx_http_upstream_store'/>

@@ -1,0 +1,25 @@
+<dec f='nginx/src/http/ngx_http_cache.h' l='73' type='time_t'/>
+<offset>2304</offset>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='604' u='w' c='ngx_http_file_cache_read'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='637' u='r' c='ngx_http_file_cache_read'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='638' u='r' c='ngx_http_file_cache_read'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='639' u='r' c='ngx_http_file_cache_read'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1259' u='r' c='ngx_http_file_cache_set_header'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1522' u='r' c='ngx_http_file_cache_update_header'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1642' u='r' c='ngx_http_file_cache_free'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1643' u='r' c='ngx_http_file_cache_free'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='929' u='w' c='ngx_http_upstream_cache'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2470' u='r' c='ngx_http_upstream_test_next'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2493' u='r' c='ngx_http_upstream_test_next'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2507' u='w' c='ngx_http_upstream_test_next'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2581' u='r' c='ngx_http_upstream_intercept_errors'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2587' u='w' c='ngx_http_upstream_intercept_errors'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3008' u='r' c='ngx_http_upstream_send_response'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3014' u='w' c='ngx_http_upstream_send_response'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4343' u='w' c='ngx_http_upstream_finalize_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4530' u='r' c='ngx_http_upstream_process_cache_control'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4575' u='w' c='ngx_http_upstream_process_cache_control'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4651' u='r' c='ngx_http_upstream_process_expires'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4662' u='w' c='ngx_http_upstream_process_expires'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4708' u='w' c='ngx_http_upstream_process_accel_expires'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4719' u='w' c='ngx_http_upstream_process_accel_expires'/>

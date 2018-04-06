@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='187' type='time_t'/>
+<offset>3840</offset>
+<use f='nginx/src/core/ngx_resolver.c' l='198' u='w' c='ngx_resolver_create'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1379' u='r' c='ngx_resolver_send_tcp_query'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1599' u='r' c='ngx_resolver_tcp_write'/>

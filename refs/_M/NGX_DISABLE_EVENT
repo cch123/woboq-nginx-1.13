@@ -1,0 +1,6 @@
+<dec f='nginx/src/event/ngx_event.h' l='298'/>
+<doc f='nginx/src/event/ngx_event.h' l='294'>/*
+ * disable temporarily event filter, this may avoid locks
+ * in kernel malloc()/free(): kqueue.
+ */</doc>
+<use f='nginx/src/event/ngx_event_accept.c' l='738' u='c'/>

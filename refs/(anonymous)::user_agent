@@ -1,0 +1,9 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='190' type='ngx_table_elt_t *'/>
+<offset>832</offset>
+<use f='nginx/src/http/modules/ngx_http_browser_module.c' l='264' u='r' c='ngx_http_browser'/>
+<use f='nginx/src/http/modules/ngx_http_browser_module.c' l='272' u='r' c='ngx_http_browser'/>
+<use f='nginx/src/http/modules/ngx_http_browser_module.c' l='273' u='r' c='ngx_http_browser'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2070' u='r' c='ngx_http_gzip_ok'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2073' u='r' c='ngx_http_gzip_ok'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1710' u='r' c='ngx_http_process_user_agent'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1714' u='w' c='ngx_http_process_user_agent'/>

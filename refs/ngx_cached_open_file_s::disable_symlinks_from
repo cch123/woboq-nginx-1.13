@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_open_file_cache.h' l='73' type='size_t'/>
+<offset>960</offset>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='236' u='r' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='403' u='w' c='ngx_open_cached_file'/>

@@ -1,0 +1,44 @@
+<def f='nginx/src/http/ngx_http_cache.h' l='65' ll='123'/>
+<size>600</size>
+<mbr r='ngx_http_cache_s::file' o='0' t='ngx_file_t'/>
+<mbr r='ngx_http_cache_s::keys' o='1600' t='ngx_array_t'/>
+<mbr r='ngx_http_cache_s::crc32' o='1920' t='uint32_t'/>
+<mbr r='ngx_http_cache_s::key' o='1952' t='u_char [16]'/>
+<mbr r='ngx_http_cache_s::main' o='2080' t='u_char [16]'/>
+<mbr r='ngx_http_cache_s::uniq' o='2240' t='ngx_file_uniq_t'/>
+<mbr r='ngx_http_cache_s::valid_sec' o='2304' t='time_t'/>
+<mbr r='ngx_http_cache_s::updating_sec' o='2368' t='time_t'/>
+<mbr r='ngx_http_cache_s::error_sec' o='2432' t='time_t'/>
+<mbr r='ngx_http_cache_s::last_modified' o='2496' t='time_t'/>
+<mbr r='ngx_http_cache_s::date' o='2560' t='time_t'/>
+<mbr r='ngx_http_cache_s::etag' o='2624' t='ngx_str_t'/>
+<mbr r='ngx_http_cache_s::vary' o='2752' t='ngx_str_t'/>
+<mbr r='ngx_http_cache_s::variant' o='2880' t='u_char [16]'/>
+<mbr r='ngx_http_cache_s::header_start' o='3008' t='size_t'/>
+<mbr r='ngx_http_cache_s::body_start' o='3072' t='size_t'/>
+<mbr r='ngx_http_cache_s::length' o='3136' t='off_t'/>
+<mbr r='ngx_http_cache_s::fs_size' o='3200' t='off_t'/>
+<mbr r='ngx_http_cache_s::min_uses' o='3264' t='ngx_uint_t'/>
+<mbr r='ngx_http_cache_s::error' o='3328' t='ngx_uint_t'/>
+<mbr r='ngx_http_cache_s::valid_msec' o='3392' t='ngx_uint_t'/>
+<mbr r='ngx_http_cache_s::vary_tag' o='3456' t='ngx_uint_t'/>
+<mbr r='ngx_http_cache_s::buf' o='3520' t='ngx_buf_t *'/>
+<mbr r='ngx_http_cache_s::file_cache' o='3584' t='ngx_http_file_cache_t *'/>
+<mbr r='ngx_http_cache_s::node' o='3648' t='ngx_http_file_cache_node_t *'/>
+<mbr r='ngx_http_cache_s::lock_timeout' o='3712' t='ngx_msec_t'/>
+<mbr r='ngx_http_cache_s::lock_age' o='3776' t='ngx_msec_t'/>
+<mbr r='ngx_http_cache_s::lock_time' o='3840' t='ngx_msec_t'/>
+<mbr r='ngx_http_cache_s::wait_time' o='3904' t='ngx_msec_t'/>
+<mbr r='ngx_http_cache_s::wait_event' o='3968' t='ngx_event_t'/>
+<mbr r='ngx_http_cache_s::lock' o='4736' t='unsigned int'/>
+<mbr r='ngx_http_cache_s::waiting' o='4737' t='unsigned int'/>
+<mbr r='ngx_http_cache_s::updated' o='4738' t='unsigned int'/>
+<mbr r='ngx_http_cache_s::updating' o='4739' t='unsigned int'/>
+<mbr r='ngx_http_cache_s::exists' o='4740' t='unsigned int'/>
+<mbr r='ngx_http_cache_s::temp_file' o='4741' t='unsigned int'/>
+<mbr r='ngx_http_cache_s::purged' o='4742' t='unsigned int'/>
+<mbr r='ngx_http_cache_s::reading' o='4743' t='unsigned int'/>
+<mbr r='ngx_http_cache_s::secondary' o='4744' t='unsigned int'/>
+<mbr r='ngx_http_cache_s::background' o='4745' t='unsigned int'/>
+<mbr r='ngx_http_cache_s::stale_updating' o='4746' t='unsigned int'/>
+<mbr r='ngx_http_cache_s::stale_error' o='4747' t='unsigned int'/>

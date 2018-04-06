@@ -1,0 +1,13 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='68' type='ngx_str_t *'/>
+<offset>448</offset>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1531' u='w' c='ngx_http_upstream_connect'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5227' u='r' c='ngx_http_upstream_addr_variable'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5228' u='r' c='ngx_http_upstream_addr_variable'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5245' u='r' c='ngx_http_upstream_addr_variable'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5246' u='r' c='ngx_http_upstream_addr_variable'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5246' u='r' c='ngx_http_upstream_addr_variable'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5246' u='r' c='ngx_http_upstream_addr_variable'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5253' u='r' c='ngx_http_upstream_addr_variable'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5318' u='r' c='ngx_http_upstream_status_variable'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5396' u='r' c='ngx_http_upstream_response_time_variable'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5462' u='r' c='ngx_http_upstream_response_length_variable'/>

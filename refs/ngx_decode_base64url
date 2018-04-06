@@ -1,0 +1,2 @@
+<dec f='nginx/src/core/ngx_string.h' l='190' type='ngx_int_t ngx_decode_base64url(ngx_str_t * dst, ngx_str_t * src)'/>
+<def f='nginx/src/core/ngx_string.c' l='1228' ll='1252' type='ngx_int_t ngx_decode_base64url(ngx_str_t * dst, ngx_str_t * src)'/>

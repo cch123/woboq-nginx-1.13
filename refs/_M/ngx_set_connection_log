@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_connection.h' l='195'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1225' u='c'/>
+<use f='nginx/src/http/ngx_http_request.c' l='557' u='c'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2126' u='c'/>

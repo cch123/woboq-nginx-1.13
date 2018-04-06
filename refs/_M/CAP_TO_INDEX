@@ -1,0 +1,4 @@
+<dec f='include/linux/capability.h' l='361'/>
+<doc f='include/linux/capability.h' l='357'>/*
+ * Bit location of each capability (used by user-space library and kernel)
+ */</doc>

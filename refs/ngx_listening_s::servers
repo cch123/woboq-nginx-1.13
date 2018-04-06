@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_connection.h' l='40' type='void *'/>
+<offset>704</offset>
+<doc f='nginx/src/core/ngx_connection.h' l='40'>/* array of ngx_http_in_addr_t, for example */</doc>
+<use f='nginx/src/http/ngx_http.c' l='1668' u='w' c='ngx_http_init_listening'/>
+<use f='nginx/src/http/ngx_http_request.c' l='230' u='r' c='ngx_http_init_connection'/>

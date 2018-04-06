@@ -1,0 +1,24 @@
+<dec f='nginx/src/os/unix/ngx_files.h' l='43' type='u_char *'/>
+<dec f='nginx/src/core/ngx_regex.h' l='30' type='ngx_str_t'/>
+<offset>0</offset>
+<use f='nginx/src/core/ngx_conf_file.c' l='845' u='w' c='ngx_conf_include'/>
+<use f='nginx/src/core/ngx_regex.c' l='105' u='m' c='ngx_regex_compile'/>
+<use f='nginx/src/core/ngx_regex.c' l='112' u='m' c='ngx_regex_compile'/>
+<use f='nginx/src/core/ngx_regex.c' l='115' u='a' c='ngx_regex_compile'/>
+<use f='nginx/src/core/ngx_regex.c' l='121' u='a' c='ngx_regex_compile'/>
+<use f='nginx/src/core/ngx_regex.c' l='121' u='m' c='ngx_regex_compile'/>
+<use f='nginx/src/core/ngx_regex.c' l='144' u='m' c='ngx_regex_compile'/>
+<use f='nginx/src/core/ngx_regex.c' l='183' u='a' c='ngx_regex_compile'/>
+<use f='nginx/src/core/ngx_regex.c' l='191' u='a' c='ngx_regex_compile'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='3561' u='w' c='ngx_http_fastcgi_split_path_info'/>
+<use f='nginx/src/http/modules/ngx_http_map_module.c' l='550' u='w' c='ngx_http_map'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='4013' u='w' c='ngx_http_proxy_rewrite_regex'/>
+<use f='nginx/src/http/modules/ngx_http_referer_module.c' l='615' u='w' c='ngx_http_add_regex_referer'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='331' u='w' c='ngx_http_rewrite'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='766' u='w' c='ngx_http_rewrite_if_condition'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1893' u='w' c='ngx_http_ssi_regex_match'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3035' u='w' c='ngx_http_core_regex_location'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4174' u='w' c='ngx_http_core_server_name'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4891' u='w' c='ngx_http_gzip_disable'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2447' u='r' c='ngx_http_regex_compile'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='709' u='r' c='ngx_open_glob'/>

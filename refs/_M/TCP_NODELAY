@@ -1,0 +1,6 @@
+<dec f='include/netinet/tcp.h' l='40'/>
+<doc f='include/netinet/tcp.h' l='37'>/*
+ * User-settable options (used with setsockopt).
+ */</doc>
+<use f='nginx/src/core/ngx_connection.c' l='1365' u='c'/>
+<use f='nginx/src/os/unix/ngx_linux_sendfile_chain.c' l='105' u='c'/>

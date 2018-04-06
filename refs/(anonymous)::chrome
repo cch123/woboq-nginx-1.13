@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='248' type='unsigned int'/>
+<offset>2951</offset>
+<use f='nginx/src/http/ngx_http_request.c' l='1761' u='w' c='ngx_http_process_user_agent'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='690' u='r' c='ngx_http_send_special_response'/>

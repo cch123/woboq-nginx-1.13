@@ -1,0 +1,5 @@
+<dec f='nginx/src/event/ngx_event.h' l='463' type='ngx_event_actions_t'/>
+<offset>192</offset>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='340' u='m' c='ngx_epoll_init'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='369' u='r' c='ngx_epoll_init'/>
+<use f='nginx/src/event/ngx_event.c' l='619' u='m' c='ngx_event_process_init'/>

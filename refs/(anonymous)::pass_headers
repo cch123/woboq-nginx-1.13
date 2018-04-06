@@ -1,0 +1,17 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='188' type='ngx_array_t *'/>
+<offset>2048</offset>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2756' u='w' c='ngx_http_fastcgi_create_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='2869' u='w' c='ngx_http_proxy_create_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='1235' u='w' c='ngx_http_scgi_create_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='1442' u='w' c='ngx_http_uwsgi_create_loc_conf'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='6221' u='r' c='ngx_http_upstream_hide_headers_hash'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='6224' u='w' c='ngx_http_upstream_hide_headers_hash'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='6224' u='r' c='ngx_http_upstream_hide_headers_hash'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='6237' u='r' c='ngx_http_upstream_hide_headers_hash'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='6238' u='w' c='ngx_http_upstream_hide_headers_hash'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='6238' u='r' c='ngx_http_upstream_hide_headers_hash'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='6288' u='r' c='ngx_http_upstream_hide_headers_hash'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='6290' u='r' c='ngx_http_upstream_hide_headers_hash'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='6293' u='r' c='ngx_http_upstream_hide_headers_hash'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='6324' u='r' c='ngx_http_upstream_hide_headers_hash'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='6324' u='r' c='ngx_http_upstream_hide_headers_hash'/>

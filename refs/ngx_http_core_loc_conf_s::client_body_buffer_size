@@ -1,0 +1,11 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='347' type='size_t'/>
+<offset>1600</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='347'>/* client_body_buffer_size */</doc>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3366' u='w' c='ngx_http_core_create_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3574' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3574' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3575' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3575' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='160' u='r' c='ngx_http_read_client_request_body'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='173' u='r' c='ngx_http_read_client_request_body'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='635' u='r' c='ngx_http_upstream_init_request'/>

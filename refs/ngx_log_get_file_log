@@ -1,0 +1,6 @@
+<dec f='nginx/src/core/ngx_log.h' l='237' type='ngx_log_t * ngx_log_get_file_log(ngx_log_t * head)'/>
+<use f='nginx/src/core/ngx_log.c' l='409' u='c' c='ngx_log_open_default'/>
+<use f='nginx/src/core/ngx_log.c' l='451' u='c' c='ngx_log_redirect_stderr'/>
+<def f='nginx/src/core/ngx_log.c' l='466' ll='478' type='ngx_log_t * ngx_log_get_file_log(ngx_log_t * head)'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='709' u='c' c='ngx_master_process_exit'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='1018' u='c' c='ngx_worker_process_exit'/>

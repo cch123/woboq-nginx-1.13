@@ -1,0 +1,15 @@
+<dec f='nginx/src/core/ngx_string.h' l='164' type='u_char * ngx_strstrn(u_char * s1, char * s2, size_t n)'/>
+<def f='nginx/src/core/ngx_string.c' l='681' ll='701' type='u_char * ngx_strstrn(u_char * s1, char * s2, size_t n)'/>
+<doc f='nginx/src/core/ngx_string.c' l='675'>/*
+ * ngx_strstrn() and ngx_strcasestrn() are intended to search for static
+ * substring with known length in null-terminated string. The argument n
+ * must be length of the second substring - 1.
+ */</doc>
+<use f='nginx/src/http/ngx_http_request.c' l='1720' u='c' c='ngx_http_process_user_agent'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1734' u='c' c='ngx_http_process_user_agent'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1749' u='c' c='ngx_http_process_user_agent'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1757' u='c' c='ngx_http_process_user_agent'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1760' u='c' c='ngx_http_process_user_agent'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1763' u='c' c='ngx_http_process_user_agent'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1764' u='c' c='ngx_http_process_user_agent'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1768' u='c' c='ngx_http_process_user_agent'/>

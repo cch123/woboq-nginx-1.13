@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_connection.h' l='179' type='unsigned int'/>
+<offset>1747</offset>
+<use f='nginx/src/event/ngx_event.c' l='882' u='r' c='ngx_send_lowat'/>
+<use f='nginx/src/event/ngx_event.c' l='897' u='w' c='ngx_send_lowat'/>

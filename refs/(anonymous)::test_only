@@ -1,0 +1,8 @@
+<dec f='nginx/src/core/ngx_open_file_cache.h' l='41' type='unsigned int'/>
+<offset>771</offset>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='161' u='r' c='ngx_open_cached_file'/>
+<use f='nginx/src/http/modules/ngx_http_index_module.c' l='209' u='w' c='ngx_http_index_handler'/>
+<use f='nginx/src/http/modules/ngx_http_index_module.c' l='308' u='w' c='ngx_http_index_test_dir'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='500' u='w' c='ngx_http_log_script_write'/>
+<use f='nginx/src/http/modules/ngx_http_try_files_module.c' l='222' u='w' c='ngx_http_try_files_handler'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1503' u='w' c='ngx_http_script_file_code'/>

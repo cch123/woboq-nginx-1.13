@@ -1,0 +1,14 @@
+<def f='nginx/src/core/ngx_file.h' l='116' ll='132'/>
+<size>96</size>
+<mbr r='ngx_tree_ctx_s::size' o='0' t='off_t'/>
+<mbr r='ngx_tree_ctx_s::fs_size' o='64' t='off_t'/>
+<mbr r='ngx_tree_ctx_s::access' o='128' t='ngx_uint_t'/>
+<mbr r='ngx_tree_ctx_s::mtime' o='192' t='time_t'/>
+<mbr r='ngx_tree_ctx_s::init_handler' o='256' t='ngx_tree_init_handler_pt'/>
+<mbr r='ngx_tree_ctx_s::file_handler' o='320' t='ngx_tree_handler_pt'/>
+<mbr r='ngx_tree_ctx_s::pre_tree_handler' o='384' t='ngx_tree_handler_pt'/>
+<mbr r='ngx_tree_ctx_s::post_tree_handler' o='448' t='ngx_tree_handler_pt'/>
+<mbr r='ngx_tree_ctx_s::spec_handler' o='512' t='ngx_tree_handler_pt'/>
+<mbr r='ngx_tree_ctx_s::data' o='576' t='void *'/>
+<mbr r='ngx_tree_ctx_s::alloc' o='640' t='size_t'/>
+<mbr r='ngx_tree_ctx_s::log' o='704' t='ngx_log_t *'/>

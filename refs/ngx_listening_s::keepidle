@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_connection.h' l='32' type='int'/>
+<offset>512</offset>
+<use f='nginx/src/core/ngx_connection.c' l='706' u='r' c='ngx_configure_listening_sockets'/>
+<use f='nginx/src/core/ngx_connection.c' l='707' u='r' c='ngx_configure_listening_sockets'/>
+<use f='nginx/src/http/ngx_http.c' l='1746' u='w' c='ngx_http_add_listening'/>

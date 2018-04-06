@@ -1,0 +1,8 @@
+<def f='nginx/src/core/ngx_conf_file.h' l='77' ll='84'/>
+<size>56</size>
+<mbr r='ngx_command_s::name' o='0' t='ngx_str_t'/>
+<mbr r='ngx_command_s::type' o='128' t='ngx_uint_t'/>
+<mbr r='ngx_command_s::set' o='192' t='char *(*)(ngx_conf_t *, ngx_command_t *, void *)'/>
+<mbr r='ngx_command_s::conf' o='256' t='ngx_uint_t'/>
+<mbr r='ngx_command_s::offset' o='320' t='ngx_uint_t'/>
+<mbr r='ngx_command_s::post' o='384' t='void *'/>

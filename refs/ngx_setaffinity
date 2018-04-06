@@ -1,0 +1,3 @@
+<dec f='nginx/src/os/unix/ngx_setaffinity.h' l='26' type='void ngx_setaffinity(ngx_cpuset_t * cpu_affinity, ngx_log_t * log)'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='886' u='c' c='ngx_worker_process_init'/>
+<def f='nginx/src/os/unix/ngx_setaffinity.c' l='35' ll='51' type='void ngx_setaffinity(ngx_cpuset_t * cpu_affinity, ngx_log_t * log)'/>

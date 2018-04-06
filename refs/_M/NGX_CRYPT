@@ -1,0 +1,3 @@
+<dec f='nginx/objs/ngx_auto_config.h' l='367'/>
+<use f='nginx/src/core/ngx_crypt.c' l='14' u='c'/>
+<use f='nginx/src/os/unix/ngx_user.c' l='12' u='c'/>

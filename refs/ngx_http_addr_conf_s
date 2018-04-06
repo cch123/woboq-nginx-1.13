@@ -1,0 +1,7 @@
+<def f='nginx/src/http/ngx_http_core_module.h' l='230' ll='239'/>
+<size>24</size>
+<mbr r='ngx_http_addr_conf_s::default_server' o='0' t='ngx_http_core_srv_conf_t *'/>
+<mbr r='ngx_http_addr_conf_s::virtual_names' o='64' t='ngx_http_virtual_names_t *'/>
+<mbr r='ngx_http_addr_conf_s::ssl' o='128' t='unsigned int'/>
+<mbr r='ngx_http_addr_conf_s::http2' o='129' t='unsigned int'/>
+<mbr r='ngx_http_addr_conf_s::proxy_protocol' o='130' t='unsigned int'/>

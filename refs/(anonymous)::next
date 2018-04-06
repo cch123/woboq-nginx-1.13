@@ -1,0 +1,20 @@
+<dec f='nginx/src/core/ngx_palloc.h' l='52' type='ngx_pool_t *'/>
+<offset>128</offset>
+<use f='nginx/src/core/ngx_palloc.c' l='30' u='w' c='ngx_create_pool'/>
+<use f='nginx/src/core/ngx_palloc.c' l='89' u='r' c='ngx_destroy_pool'/>
+<use f='nginx/src/core/ngx_palloc.c' l='89' u='r' c='ngx_destroy_pool'/>
+<use f='nginx/src/core/ngx_palloc.c' l='111' u='r' c='ngx_reset_pool'/>
+<use f='nginx/src/core/ngx_palloc.c' l='169' u='r' c='ngx_palloc_small'/>
+<use f='nginx/src/core/ngx_palloc.c' l='194' u='w' c='ngx_palloc_block'/>
+<use f='nginx/src/core/ngx_palloc.c' l='201' u='r' c='ngx_palloc_block'/>
+<use f='nginx/src/core/ngx_palloc.c' l='201' u='r' c='ngx_palloc_block'/>
+<use f='nginx/src/core/ngx_palloc.c' l='203' u='r' c='ngx_palloc_block'/>
+<use f='nginx/src/core/ngx_palloc.c' l='207' u='w' c='ngx_palloc_block'/>
+<dec f='nginx/src/http/ngx_http_script.h' l='122' type='uintptr_t'/>
+<dec f='nginx/src/http/ngx_http_script.h' l='187' type='uintptr_t'/>
+<offset>64</offset>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='437' u='w' c='ngx_http_rewrite'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='638' u='w' c='ngx_http_rewrite_if'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='777' u='w' c='ngx_http_rewrite_if_condition'/>
+<use f='nginx/src/http/ngx_http_script.c' l='961' u='r' c='ngx_http_script_regex_start_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1412' u='r' c='ngx_http_script_if_code'/>

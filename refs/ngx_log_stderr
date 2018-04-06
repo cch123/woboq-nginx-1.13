@@ -1,0 +1,14 @@
+<dec f='nginx/src/core/ngx_log.h' l='233' type='void ngx_log_stderr(ngx_err_t err, const char * fmt)'/>
+<use f='nginx/src/core/nginx.c' l='294' u='c' c='main'/>
+<use f='nginx/src/core/nginx.c' l='303' u='c' c='main'/>
+<use f='nginx/src/core/nginx.c' l='752' u='c' c='ngx_get_options'/>
+<use f='nginx/src/core/nginx.c' l='799' u='c' c='ngx_get_options'/>
+<use f='nginx/src/core/nginx.c' l='813' u='c' c='ngx_get_options'/>
+<use f='nginx/src/core/nginx.c' l='827' u='c' c='ngx_get_options'/>
+<use f='nginx/src/core/nginx.c' l='838' u='c' c='ngx_get_options'/>
+<use f='nginx/src/core/nginx.c' l='851' u='c' c='ngx_get_options'/>
+<use f='nginx/src/core/nginx.c' l='855' u='c' c='ngx_get_options'/>
+<use f='nginx/src/core/ngx_cycle.c' l='282' u='c' c='ngx_init_cycle'/>
+<def f='nginx/src/core/ngx_log.c' l='258' ll='284' type='void ngx_log_stderr(ngx_err_t err, const char * fmt)'/>
+<use f='nginx/src/core/ngx_log.c' l='383' u='c' c='ngx_log_init'/>
+<use f='nginx/src/os/unix/ngx_errno.c' l='84' u='c' c='ngx_strerror_init'/>

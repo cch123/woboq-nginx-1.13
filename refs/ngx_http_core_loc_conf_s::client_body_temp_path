@@ -1,0 +1,6 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='420' type='ngx_path_t *'/>
+<offset>4736</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='420'>/* client_body_temp_path */</doc>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3657' u='a' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3658' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='452' u='r' c='ngx_http_write_request_body'/>

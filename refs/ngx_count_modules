@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_module.h' l='270' type='ngx_int_t ngx_count_modules(ngx_cycle_t * cycle, ngx_uint_t type)'/>
+<def f='nginx/src/core/ngx_module.c' l='82' ll='153' type='ngx_int_t ngx_count_modules(ngx_cycle_t * cycle, ngx_uint_t type)'/>
+<use f='nginx/src/event/ngx_event.c' l='918' u='c' c='ngx_events_block'/>
+<use f='nginx/src/http/ngx_http.c' l='147' u='c' c='ngx_http_block'/>

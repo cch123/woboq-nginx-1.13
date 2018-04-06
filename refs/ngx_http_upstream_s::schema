@@ -1,0 +1,19 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='372' type='ngx_str_t'/>
+<offset>8128</offset>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='702' u='a' c='ngx_http_fastcgi_handler'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='702' u='a' c='ngx_http_fastcgi_handler'/>
+<use f='nginx/src/http/modules/ngx_http_memcached_module.c' l='196' u='a' c='ngx_http_memcached_handler'/>
+<use f='nginx/src/http/modules/ngx_http_memcached_module.c' l='196' u='a' c='ngx_http_memcached_handler'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='869' u='w' c='ngx_http_proxy_handler'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='983' u='m' c='ngx_http_proxy_eval'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='984' u='m' c='ngx_http_proxy_eval'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1018' u='r' c='ngx_http_proxy_eval'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='501' u='a' c='ngx_http_scgi_handler'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='501' u='a' c='ngx_http_scgi_handler'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='662' u='a' c='ngx_http_uwsgi_handler'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='662' u='a' c='ngx_http_uwsgi_handler'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='757' u='m' c='ngx_http_uwsgi_eval'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='758' u='m' c='ngx_http_uwsgi_eval'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='764' u='a' c='ngx_http_uwsgi_eval'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='764' u='a' c='ngx_http_uwsgi_eval'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3687' u='a' c='ngx_http_log_error_handler'/>

@@ -1,0 +1,6 @@
+<dec f='nginx/src/os/unix/ngx_linux_config.h' l='112'/>
+<use f='nginx/src/core/ngx_config.h' l='47' u='a'/>
+<doc f='nginx/src/os/unix/ngx_linux_config.h' l='111'>/* setsockopt(SO_SNDLOWAT) returns ENOPROTOOPT */</doc>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='3749' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='4225' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='5050' u='c'/>

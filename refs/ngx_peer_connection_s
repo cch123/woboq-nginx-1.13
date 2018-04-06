@@ -1,0 +1,19 @@
+<def f='nginx/src/event/ngx_event_connect.h' l='36' ll='71'/>
+<size>112</size>
+<mbr r='ngx_peer_connection_s::connection' o='0' t='ngx_connection_t *'/>
+<mbr r='ngx_peer_connection_s::sockaddr' o='64' t='struct sockaddr *'/>
+<mbr r='ngx_peer_connection_s::socklen' o='128' t='socklen_t'/>
+<mbr r='ngx_peer_connection_s::name' o='192' t='ngx_str_t *'/>
+<mbr r='ngx_peer_connection_s::tries' o='256' t='ngx_uint_t'/>
+<mbr r='ngx_peer_connection_s::start_time' o='320' t='ngx_msec_t'/>
+<mbr r='ngx_peer_connection_s::get' o='384' t='ngx_event_get_peer_pt'/>
+<mbr r='ngx_peer_connection_s::free' o='448' t='ngx_event_free_peer_pt'/>
+<mbr r='ngx_peer_connection_s::notify' o='512' t='ngx_event_notify_peer_pt'/>
+<mbr r='ngx_peer_connection_s::data' o='576' t='void *'/>
+<mbr r='ngx_peer_connection_s::local' o='640' t='ngx_addr_t *'/>
+<mbr r='ngx_peer_connection_s::type' o='704' t='int'/>
+<mbr r='ngx_peer_connection_s::rcvbuf' o='736' t='int'/>
+<mbr r='ngx_peer_connection_s::log' o='768' t='ngx_log_t *'/>
+<mbr r='ngx_peer_connection_s::cached' o='832' t='unsigned int'/>
+<mbr r='ngx_peer_connection_s::transparent' o='833' t='unsigned int'/>
+<mbr r='ngx_peer_connection_s::log_error' o='834' t='unsigned int'/>

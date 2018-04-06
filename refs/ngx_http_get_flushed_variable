@@ -1,0 +1,7 @@
+<dec f='nginx/src/http/ngx_http_variables.h' l='54' type='ngx_http_variable_value_t * ngx_http_get_flushed_variable(ngx_http_request_t * r, ngx_uint_t index)'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='351' u='c' c='ngx_http_geo_real_addr'/>
+<use f='nginx/src/http/ngx_http_script.c' l='818' u='c' c='ngx_http_script_copy_var_len_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='846' u='c' c='ngx_http_script_copy_var_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1741' u='c' c='ngx_http_script_var_code'/>
+<def f='nginx/src/http/ngx_http_variables.c' l='639' ll='656' type='ngx_http_variable_value_t * ngx_http_get_flushed_variable(ngx_http_request_t * r, ngx_uint_t index)'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='674' u='c' c='ngx_http_get_variable'/>

@@ -1,0 +1,3 @@
+<dec f='include/glob.h' l='158' type='void globfree(glob_t * __pglob)'/>
+<dec f='include/glob.h' l='166' type='void globfree64(glob64_t * __pglob)'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='754' u='c' c='ngx_close_glob'/>

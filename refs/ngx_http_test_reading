@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http.h' l='151' type='void ngx_http_test_reading(ngx_http_request_t * r)'/>
+<use f='nginx/src/http/modules/ngx_http_limit_req_module.c' l='277' u='r' c='ngx_http_limit_req_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2646' u='r' c='ngx_http_set_write_handler'/>
+<def f='nginx/src/http/ngx_http_request.c' l='2770' ll='2886' type='void ngx_http_test_reading(ngx_http_request_t * r)'/>

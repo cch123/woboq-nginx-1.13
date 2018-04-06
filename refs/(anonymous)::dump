@@ -1,0 +1,6 @@
+<dec f='nginx/src/core/ngx_conf_file.h' l='101' type='ngx_buf_t *'/>
+<offset>1664</offset>
+<use f='nginx/src/core/ngx_conf_file.c' l='116' u='w' c='ngx_conf_add_dump'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='141' u='w' c='ngx_conf_add_dump'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='230' u='w' c='ngx_conf_parse'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='525' u='r' c='ngx_conf_read_token'/>

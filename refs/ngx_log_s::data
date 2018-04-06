@@ -1,0 +1,17 @@
+<dec f='nginx/src/core/ngx_log.h' l='59' type='void *'/>
+<offset>320</offset>
+<use f='nginx/src/core/ngx_resolver.c' l='1253' u='w' c='ngx_resolver_send_query'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4364' u='r' c='ngx_resolver_log_error'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='310' u='w' c='ngx_event_accept'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='631' u='w' c='ngx_event_recvmsg'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='778' u='r' c='ngx_accept_log_error'/>
+<use f='nginx/src/http/ngx_http.c' l='1724' u='w' c='ngx_http_add_listening'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='470' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_request.c' l='317' u='w' c='ngx_http_init_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='618' u='r' c='ngx_http_create_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2227' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2278' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3534' u='r' c='ngx_http_free_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3617' u='r' c='ngx_http_log_error'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1190' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1266' macro='1' u='r'/>

@@ -1,0 +1,34 @@
+<dec f='include/unistd.h' l='548' type='char **'/>
+<dec f='nginx/src/os/unix/ngx_linux_config.h' l='125' type='char **'/>
+<use f='nginx/src/core/nginx.c' l='614' u='w' c='ngx_set_environment'/>
+<use f='nginx/src/core/nginx.c' l='626' u='r' c='ngx_cleanup_environment'/>
+<use f='nginx/src/core/nginx.c' l='905' u='r' c='ngx_save_argv'/>
+<use f='nginx/src/core/ngx_cycle.c' l='240' u='r' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='270' u='w' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='276' u='w' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='298' u='w' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='815' u='w' c='ngx_init_cycle'/>
+<dec f='nginx/src/os/unix/ngx_setproctitle.c' l='30' type='char **'/>
+<use f='nginx/src/os/unix/ngx_setproctitle.c' l='43' u='r' c='ngx_init_setproctitle'/>
+<use f='nginx/src/os/unix/ngx_setproctitle.c' l='44' u='r' c='ngx_init_setproctitle'/>
+<use f='nginx/src/os/unix/ngx_setproctitle.c' l='60' u='r' c='ngx_init_setproctitle'/>
+<use f='nginx/src/os/unix/ngx_setproctitle.c' l='61' u='r' c='ngx_init_setproctitle'/>
+<use f='nginx/src/os/unix/ngx_setproctitle.c' l='63' u='r' c='ngx_init_setproctitle'/>
+<use f='nginx/src/os/unix/ngx_setproctitle.c' l='64' u='r' c='ngx_init_setproctitle'/>
+<use f='nginx/src/os/unix/ngx_setproctitle.c' l='66' u='r' c='ngx_init_setproctitle'/>
+<use f='nginx/src/os/unix/ngx_setproctitle.c' l='67' u='r' c='ngx_init_setproctitle'/>
+<doc f='nginx/src/os/unix/ngx_setproctitle.c' l='14'>/*
+ * To change the process title in Linux and Solaris we have to set argv[1]
+ * to NULL and to copy the title to the same place where the argv[0] points to.
+ * However, argv[0] may be too small to hold a new title.  Fortunately, Linux
+ * and Solaris store argv[] and environ[] one after another.  So we should
+ * ensure that is the continuous memory and then we allocate the new memory
+ * for environ[] and copy it.  After this we could use the memory starting
+ * from argv[0] for our process title.
+ *
+ * The Solaris&apos;s standard /bin/ps does not show the changed process title.
+ * You have to use &quot;/usr/ucb/ps -w&quot; instead.  Besides, the UCB ps does not
+ * show a new title if its length less than the origin command line length.
+ * To avoid it we append to a new title the origin command line in the
+ * parenthesis.
+ */</doc>

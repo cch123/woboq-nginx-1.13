@@ -1,0 +1,17 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='270' type='ngx_table_elt_t *'/>
+<dec f='nginx/src/http/ngx_http_upstream.h' l='278' type='ngx_table_elt_t *'/>
+<offset>1984</offset>
+<use f='nginx/src/http/modules/ngx_http_auth_basic_module.c' l='315' u='w' c='ngx_http_auth_basic_set_realm'/>
+<use f='nginx/src/http/modules/ngx_http_auth_basic_module.c' l='316' u='r' c='ngx_http_auth_basic_set_realm'/>
+<use f='nginx/src/http/modules/ngx_http_auth_basic_module.c' l='324' u='r' c='ngx_http_auth_basic_set_realm'/>
+<use f='nginx/src/http/modules/ngx_http_auth_basic_module.c' l='325' u='w' c='ngx_http_auth_basic_set_realm'/>
+<use f='nginx/src/http/modules/ngx_http_auth_basic_module.c' l='333' u='r' c='ngx_http_auth_basic_set_realm'/>
+<use f='nginx/src/http/modules/ngx_http_auth_basic_module.c' l='334' u='r' c='ngx_http_auth_basic_set_realm'/>
+<use f='nginx/src/http/modules/ngx_http_auth_basic_module.c' l='334' u='r' c='ngx_http_auth_basic_set_realm'/>
+<use f='nginx/src/http/modules/ngx_http_auth_basic_module.c' l='335' u='r' c='ngx_http_auth_basic_set_realm'/>
+<use f='nginx/src/http/modules/ngx_http_auth_basic_module.c' l='336' u='r' c='ngx_http_auth_basic_set_realm'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1107' u='r' c='ngx_http_core_access_phase'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1108' u='r' c='ngx_http_core_access_phase'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2559' u='r' c='ngx_http_upstream_intercept_errors'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2569' u='r' c='ngx_http_upstream_intercept_errors'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2571' u='w' c='ngx_http_upstream_intercept_errors'/>

@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_inet.h' l='124' type='ngx_int_t ngx_cmp_sockaddr(struct sockaddr * sa1, socklen_t slen1, struct sockaddr * sa2, socklen_t slen2, ngx_uint_t cmp_port)'/>
+<use f='nginx/src/core/ngx_cycle.c' l='518' u='c' c='ngx_init_cycle'/>
+<def f='nginx/src/core/ngx_inet.c' l='1362' ll='1439' type='ngx_int_t ngx_cmp_sockaddr(struct sockaddr * sa1, socklen_t slen1, struct sockaddr * sa2, socklen_t slen2, ngx_uint_t cmp_port)'/>
+<use f='nginx/src/http/ngx_http.c' l='1212' u='c' c='ngx_http_add_addresses'/>

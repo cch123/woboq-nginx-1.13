@@ -1,0 +1,8 @@
+<dec f='nginx/src/core/ngx_file.h' l='128' type='void *'/>
+<offset>576</offset>
+<use f='nginx/src/core/ngx_file.c' l='964' u='r' c='ngx_walk_tree'/>
+<use f='nginx/src/core/ngx_file.c' l='976' u='w' c='ngx_walk_tree'/>
+<use f='nginx/src/core/ngx_file.c' l='1116' u='w' c='ngx_walk_tree'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2055' u='w' c='ngx_http_file_cache_loader'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2091' u='r' c='ngx_http_file_cache_manage_file'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2173' u='r' c='ngx_http_file_cache_add_file'/>

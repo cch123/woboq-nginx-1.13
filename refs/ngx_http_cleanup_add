@@ -1,0 +1,3 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='506' type='ngx_http_cleanup_t * ngx_http_cleanup_add(ngx_http_request_t * r, size_t size)'/>
+<def f='nginx/src/http/ngx_http_core_module.c' l='2526' ll='2557' type='ngx_http_cleanup_t * ngx_http_cleanup_add(ngx_http_request_t * r, size_t size)'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='665' u='c' c='ngx_http_upstream_init_request'/>

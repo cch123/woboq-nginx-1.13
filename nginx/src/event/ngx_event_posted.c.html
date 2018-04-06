@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ngx_event_posted.c source code [nginx/src/event/ngx_event_posted.c] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../../../data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../../data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../../data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'nginx/src/event/ngx_event_posted.c'; var root_path = '../../..'; var data_path = '../../../../data';</script>
+<script src='../../../../data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../..'>nginx</a>/<a href='..'>src</a>/<a href='./'>event</a>/<a href='ngx_event_posted.c.html'>ngx_event_posted.c</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td></td></tr>
+<tr><th id="2">2</th><td><i>/*</i></td></tr>
+<tr><th id="3">3</th><td><i> * Copyright (C) Igor Sysoev</i></td></tr>
+<tr><th id="4">4</th><td><i> * Copyright (C) Nginx, Inc.</i></td></tr>
+<tr><th id="5">5</th><td><i> */</i></td></tr>
+<tr><th id="6">6</th><td></td></tr>
+<tr><th id="7">7</th><td></td></tr>
+<tr><th id="8">8</th><td><u>#include <a href="../core/ngx_config.h.html">&lt;ngx_config.h&gt;</a></u></td></tr>
+<tr><th id="9">9</th><td><u>#include <a href="../core/ngx_core.h.html">&lt;ngx_core.h&gt;</a></u></td></tr>
+<tr><th id="10">10</th><td><u>#include <a href="ngx_event.h.html">&lt;ngx_event.h&gt;</a></u></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td></td></tr>
+<tr><th id="13">13</th><td><a class="typedef" href="../core/ngx_queue.h.html#ngx_queue_t" title='ngx_queue_t' data-type='struct ngx_queue_s' data-ref="ngx_queue_t">ngx_queue_t</a>  <dfn class="decl def" id="ngx_posted_accept_events" title='ngx_posted_accept_events' data-ref="ngx_posted_accept_events">ngx_posted_accept_events</dfn>;</td></tr>
+<tr><th id="14">14</th><td><a class="typedef" href="../core/ngx_queue.h.html#ngx_queue_t" title='ngx_queue_t' data-type='struct ngx_queue_s' data-ref="ngx_queue_t">ngx_queue_t</a>  <dfn class="decl def" id="ngx_posted_events" title='ngx_posted_events' data-ref="ngx_posted_events">ngx_posted_events</dfn>;</td></tr>
+<tr><th id="15">15</th><td></td></tr>
+<tr><th id="16">16</th><td></td></tr>
+<tr><th id="17">17</th><td><em>void</em></td></tr>
+<tr><th id="18">18</th><td><dfn class="decl def fn" id="ngx_event_process_posted" title='ngx_event_process_posted' data-ref="ngx_event_process_posted">ngx_event_process_posted</dfn>(<a class="typedef" href="../core/ngx_core.h.html#ngx_cycle_t" title='ngx_cycle_t' data-type='struct ngx_cycle_s' data-ref="ngx_cycle_t">ngx_cycle_t</a> *<dfn class="local col1 decl" id="1cycle" title='cycle' data-type='ngx_cycle_t *' data-ref="1cycle">cycle</dfn>, <a class="typedef" href="../core/ngx_queue.h.html#ngx_queue_t" title='ngx_queue_t' data-type='struct ngx_queue_s' data-ref="ngx_queue_t">ngx_queue_t</a> *<dfn class="local col2 decl" id="2posted" title='posted' data-type='ngx_queue_t *' data-ref="2posted">posted</dfn>)</td></tr>
+<tr><th id="19">19</th><td>{</td></tr>
+<tr><th id="20">20</th><td>    <a class="typedef" href="../core/ngx_queue.h.html#ngx_queue_t" title='ngx_queue_t' data-type='struct ngx_queue_s' data-ref="ngx_queue_t">ngx_queue_t</a>  *<dfn class="local col3 decl" id="3q" title='q' data-type='ngx_queue_t *' data-ref="3q">q</dfn>;</td></tr>
+<tr><th id="21">21</th><td>    <a class="typedef" href="../core/ngx_core.h.html#ngx_event_t" title='ngx_event_t' data-type='struct ngx_event_s' data-ref="ngx_event_t">ngx_event_t</a>  *<dfn class="local col4 decl" id="4ev" title='ev' data-type='ngx_event_t *' data-ref="4ev">ev</dfn>;</td></tr>
+<tr><th id="22">22</th><td></td></tr>
+<tr><th id="23">23</th><td>    <b>while</b> (!<a class="macro" href="../core/ngx_queue.h.html#29" title="(posted == (posted)-&gt;prev)" data-ref="_M/ngx_queue_empty">ngx_queue_empty</a>(<a class="local col2 ref" href="#2posted" title='posted' data-ref="2posted">posted</a>)) {</td></tr>
+<tr><th id="24">24</th><td></td></tr>
+<tr><th id="25">25</th><td>        <a class="local col3 ref" href="#3q" title='q' data-ref="3q">q</a> = <a class="macro" href="../core/ngx_queue.h.html#50" title="(posted)-&gt;next" data-ref="_M/ngx_queue_head">ngx_queue_head</a>(<a class="local col2 ref" href="#2posted" title='posted' data-ref="2posted">posted</a>);</td></tr>
+<tr><th id="26">26</th><td>        <a class="local col4 ref" href="#4ev" title='ev' data-ref="4ev">ev</a> = <a class="macro" href="../core/ngx_queue.h.html#103" title="(ngx_event_t *) ((u_char *) q - __builtin_offsetof(ngx_event_t, queue))" data-ref="_M/ngx_queue_data">ngx_queue_data</a>(<a class="local col3 ref" href="#3q" title='q' data-ref="3q">q</a>, <a class="typedef" href="../core/ngx_core.h.html#ngx_event_t" title='ngx_event_t' data-type='struct ngx_event_s' data-ref="ngx_event_t">ngx_event_t</a>, queue);</td></tr>
+<tr><th id="27">27</th><td></td></tr>
+<tr><th id="28">28</th><td>        <a class="macro" href="../core/ngx_log.h.html#216" title="" data-ref="_M/ngx_log_debug1">ngx_log_debug1</a>(NGX_LOG_DEBUG_EVENT, cycle-&gt;log, <var>0</var>,</td></tr>
+<tr><th id="29">29</th><td>                      <q>"posted event %p"</q>, ev);</td></tr>
+<tr><th id="30">30</th><td></td></tr>
+<tr><th id="31">31</th><td>        <a class="macro" href="ngx_event_posted.h.html#31" title="(ev)-&gt;posted = 0; (&amp;(ev)-&gt;queue)-&gt;next-&gt;prev = (&amp;(ev)-&gt;queue)-&gt;prev; (&amp;(ev)-&gt;queue)-&gt;prev-&gt;next = (&amp;(ev)-&gt;queue)-&gt;next; ;" data-ref="_M/ngx_delete_posted_event">ngx_delete_posted_event</a>(<a class="local col4 ref" href="#4ev" title='ev' data-ref="4ev">ev</a>);</td></tr>
+<tr><th id="32">32</th><td></td></tr>
+<tr><th id="33">33</th><td>        <a class="local col4 ref" href="#4ev" title='ev' data-ref="4ev">ev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::handler" title='ngx_event_s::handler' data-ref="ngx_event_s::handler">handler</a>(<a class="local col4 ref" href="#4ev" title='ev' data-ref="4ev">ev</a>);</td></tr>
+<tr><th id="34">34</th><td>    }</td></tr>
+<tr><th id="35">35</th><td>}</td></tr>
+<tr><th id="36">36</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated on <em>2018-Apr-06</em> from project nginx<br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

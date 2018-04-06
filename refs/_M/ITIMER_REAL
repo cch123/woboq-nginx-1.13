@@ -1,0 +1,3 @@
+<dec f='include/x86_64-linux-gnu/sys/time.h' l='95'/>
+<use f='nginx/src/event/ngx_event.c' l='648' u='c'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='156' u='c'/>

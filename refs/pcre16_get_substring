@@ -1,0 +1,1 @@
+<dec f='include/pcre.h' l='617' type='int pcre16_get_substring(const unsigned short * , int * , int , int , const unsigned short ** )'/>

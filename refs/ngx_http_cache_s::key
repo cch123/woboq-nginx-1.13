@@ -1,0 +1,15 @@
+<dec f='nginx/src/http/ngx_http_cache.h' l='69' type='u_char [16]'/>
+<offset>1952</offset>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='258' u='r' c='ngx_http_file_cache_create_key'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='260' u='r' c='ngx_http_file_cache_create_key'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='830' u='r' c='ngx_http_file_cache_exists'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='892' u='r' c='ngx_http_file_cache_exists'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='894' u='a' c='ngx_http_file_cache_exists'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='955' u='r' c='ngx_http_file_cache_name'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1235' u='r' c='ngx_http_file_cache_reopen'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1316' u='r' c='ngx_http_file_cache_update_variant'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1341' u='r' c='ngx_http_file_cache_update_variant'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2189' u='w' c='ngx_http_file_cache_add_file'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2203' u='r' c='ngx_http_file_cache_add'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2224' u='r' c='ngx_http_file_cache_add'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2226' u='a' c='ngx_http_file_cache_add'/>

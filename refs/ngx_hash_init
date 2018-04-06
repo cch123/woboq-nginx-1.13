@@ -1,0 +1,19 @@
+<dec f='nginx/src/core/ngx_hash.h' l='106' type='ngx_int_t ngx_hash_init(ngx_hash_init_t * hinit, ngx_hash_key_t * names, ngx_uint_t nelts)'/>
+<def f='nginx/src/core/ngx_hash.c' l='251' ll='461' type='ngx_int_t ngx_hash_init(ngx_hash_init_t * hinit, ngx_hash_key_t * names, ngx_uint_t nelts)'/>
+<use f='nginx/src/core/ngx_hash.c' l='598' u='c' c='ngx_hash_wildcard_init'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='3341' u='c' c='ngx_http_fastcgi_init_params'/>
+<use f='nginx/src/http/modules/ngx_http_map_module.c' l='305' u='c' c='ngx_http_map_block'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='3557' u='c' c='ngx_http_proxy_init_headers'/>
+<use f='nginx/src/http/modules/ngx_http_referer_module.c' l='404' u='c' c='ngx_http_referer_merge_conf'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='1801' u='c' c='ngx_http_scgi_init_params'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2856' u='c' c='ngx_http_ssi_init_main_conf'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='2064' u='c' c='ngx_http_uwsgi_init_params'/>
+<use f='nginx/src/http/ngx_http.c' l='443' u='c' c='ngx_http_init_headers_in_hash'/>
+<use f='nginx/src/http/ngx_http.c' l='1497' u='c' c='ngx_http_server_names'/>
+<use f='nginx/src/http/ngx_http.c' l='2007' u='c' c='ngx_http_merge_types'/>
+<use f='nginx/src/http/ngx_http.c' l='2037' u='c' c='ngx_http_merge_types'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3508' u='c' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3550' u='c' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='6313' u='c' c='ngx_http_upstream_hide_headers_hash'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='6407' u='c' c='ngx_http_upstream_init_main_conf'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2703' u='c' c='ngx_http_variables_init_vars'/>

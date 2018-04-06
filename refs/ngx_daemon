@@ -1,0 +1,3 @@
+<dec f='nginx/src/os/unix/ngx_os.h' l='42' type='ngx_int_t ngx_daemon(ngx_log_t * log)'/>
+<use f='nginx/src/core/nginx.c' l='348' u='c' c='main'/>
+<def f='nginx/src/os/unix/ngx_daemon.c' l='12' ll='71' type='ngx_int_t ngx_daemon(ngx_log_t * log)'/>

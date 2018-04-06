@@ -1,0 +1,5 @@
+<dec f='nginx/src/event/ngx_event_timer.h' l='17'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='827' u='c'/>
+<use f='nginx/src/event/ngx_event.c' l='200' u='c'/>
+<use f='nginx/src/event/ngx_event.c' l='231' u='c'/>
+<use f='nginx/src/event/ngx_event_timer.c' l='39' u='c'/>

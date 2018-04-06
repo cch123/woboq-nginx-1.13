@@ -1,0 +1,12 @@
+<dec f='nginx/src/os/unix/ngx_files.h' l='41' type='size_t'/>
+<offset>0</offset>
+<dec f='nginx/src/http/ngx_http_script.h' l='110' type='uintptr_t'/>
+<offset>64</offset>
+<use f='nginx/src/http/ngx_http_script.c' l='1183' u='w' c='ngx_http_script_add_capture_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1194' u='w' c='ngx_http_script_add_capture_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1219' u='r' c='ngx_http_script_copy_capture_len_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1257' u='r' c='ngx_http_script_copy_capture_code'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='738' u='r' c='ngx_read_glob'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='740' u='r' c='ngx_read_glob'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='741' u='r' c='ngx_read_glob'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='742' u='w' c='ngx_read_glob'/>

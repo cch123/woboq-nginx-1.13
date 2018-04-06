@@ -1,0 +1,25 @@
+<dec f='nginx/src/os/unix/ngx_files.h' l='158'/>
+<dec f='nginx/src/os/unix/ngx_files.h' l='156'/>
+<use f='nginx/src/core/nginx.c' l='315' u='c'/>
+<use f='nginx/src/core/nginx.c' l='320' u='c'/>
+<use f='nginx/src/core/nginx.c' l='392' u='c'/>
+<use f='nginx/src/core/nginx.c' l='397' u='c'/>
+<use f='nginx/src/core/nginx.c' l='398' u='c'/>
+<use f='nginx/src/core/nginx.c' l='399' u='c'/>
+<use f='nginx/src/core/nginx.c' l='400' u='c'/>
+<use f='nginx/src/core/nginx.c' l='401' u='c'/>
+<use f='nginx/src/core/nginx.c' l='403' u='c'/>
+<use f='nginx/src/core/nginx.c' l='404' u='c'/>
+<use f='nginx/src/core/nginx.c' l='406' u='c'/>
+<use f='nginx/src/core/nginx.c' l='408' u='c'/>
+<use f='nginx/src/core/nginx.c' l='410' u='c'/>
+<use f='nginx/src/core/nginx.c' l='413' u='c'/>
+<use f='nginx/src/core/nginx.c' l='418' u='c'/>
+<use f='nginx/src/core/nginx.c' l='420' u='c'/>
+<use f='nginx/src/core/nginx.c' l='420' u='c'/>
+<use f='nginx/src/core/nginx.c' l='427' u='c'/>
+<use f='nginx/src/core/nginx.c' l='446' u='c'/>
+<use f='nginx/src/core/ngx_log.c' l='156' u='c'/>
+<use f='nginx/src/core/ngx_log.c' l='281' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='348' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='396' u='c'/>

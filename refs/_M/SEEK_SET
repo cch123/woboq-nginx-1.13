@@ -1,0 +1,9 @@
+<dec f='include/unistd.h' l='314'/>
+<dec f='include/stdio.h' l='140'/>
+<dec f='include/fcntl.h' l='136'/>
+<doc f='include/stdio.h' l='138'>/* The possibilities for the third argument to `fseek&apos;.
+   These values should not be changed.  */</doc>
+<use f='include/zconf.h' l='474' u='a'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='765' u='c'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='782' u='c'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='799' u='c'/>

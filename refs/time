@@ -1,0 +1,2 @@
+<dec f='include/time.h' l='192' type='time_t time(time_t * __timer)'/>
+<use f='nginx/src/os/unix/ngx_time.c' l='46' u='c' c='ngx_timezone_update'/>

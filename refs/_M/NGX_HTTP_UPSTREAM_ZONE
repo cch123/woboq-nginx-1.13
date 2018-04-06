@@ -1,0 +1,6 @@
+<dec f='nginx/objs/ngx_auto_config.h' l='382'/>
+<use f='nginx/src/core/ngx_module.h' l='188' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.h' l='133' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.h' l='48' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.h' l='64' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.h' l='83' u='c'/>

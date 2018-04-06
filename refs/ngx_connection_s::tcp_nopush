@@ -1,0 +1,12 @@
+<dec f='nginx/src/core/ngx_connection.h' l='181' type='unsigned int'/>
+<offset>1750</offset>
+<doc f='nginx/src/core/ngx_connection.h' l='181'>/* ngx_connection_tcp_nopush_e */</doc>
+<use f='nginx/src/event/ngx_event_accept.c' l='225' u='w' c='ngx_event_accept'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='157' u='w' c='ngx_event_connect_peer'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1281' u='w' c='ngx_http_update_location_config'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3076' u='r' c='ngx_http_set_keepalive'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3083' u='w' c='ngx_http_set_keepalive'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2022' u='r' c='ngx_http_upstream_send_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2031' u='w' c='ngx_http_upstream_send_request'/>
+<use f='nginx/src/os/unix/ngx_linux_sendfile_chain.c' l='94' u='r' c='ngx_linux_sendfile_chain'/>
+<use f='nginx/src/os/unix/ngx_linux_sendfile_chain.c' l='149' u='w' c='ngx_linux_sendfile_chain'/>

@@ -1,0 +1,2 @@
+<dec f='include/linux/capability.h' l='342'/>
+<doc f='include/linux/capability.h' l='340'>/* Allow triggering something that will wake the system */</doc>

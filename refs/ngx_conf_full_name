@@ -1,0 +1,16 @@
+<dec f='nginx/src/core/ngx_conf_file.h' l='273' type='ngx_int_t ngx_conf_full_name(ngx_cycle_t * cycle, ngx_str_t * name, ngx_uint_t conf_prefix)'/>
+<use f='nginx/src/core/nginx.c' l='979' u='c' c='ngx_process_options'/>
+<use f='nginx/src/core/nginx.c' l='1085' u='c' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1133' u='c' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1514' u='c' c='ngx_load_module'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='832' u='c' c='ngx_conf_include'/>
+<def f='nginx/src/core/ngx_conf_file.c' l='885' ll='893' type='ngx_int_t ngx_conf_full_name(ngx_cycle_t * cycle, ngx_str_t * name, ngx_uint_t conf_prefix)'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='911' u='c' c='ngx_conf_open_file'/>
+<use f='nginx/src/core/ngx_file.c' l='389' u='c' c='ngx_conf_set_path_slot'/>
+<use f='nginx/src/core/ngx_file.c' l='442' u='c' c='ngx_conf_merge_path_value'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1353' u='c' c='ngx_http_geo_include'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='1310' u='c' c='ngx_http_log_set_log'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3474' u='c' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4274' u='c' c='ngx_http_core_root'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2353' u='c' c='ngx_http_file_cache_set_slot'/>
+<use f='nginx/src/http/ngx_http_script.c' l='134' u='c' c='ngx_http_compile_complex_value'/>

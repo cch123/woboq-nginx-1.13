@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='268' type='ngx_table_elt_t *'/>
+<offset>1472</offset>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4530' u='r' c='ngx_http_upstream_process_cache_control'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4677' u='w' c='ngx_http_upstream_process_accel_expires'/>

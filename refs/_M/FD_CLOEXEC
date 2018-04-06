@@ -1,0 +1,6 @@
+<dec f='include/x86_64-linux-gnu/bits/fcntl-linux.h' l='212'/>
+<doc f='include/x86_64-linux-gnu/bits/fcntl-linux.h' l='211'>/* For F_[GET|SET]FD.  */</doc>
+<use f='nginx/src/core/ngx_cycle.c' l='391' u='c'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1186' u='c'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='160' u='c'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='168' u='c'/>

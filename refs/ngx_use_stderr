@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_log.h' l='265' type='ngx_uint_t'/>
+<use f='nginx/src/core/nginx.c' l='376' u='w' c='main'/>
+<use f='nginx/src/core/ngx_cycle.c' l='619' u='r' c='ngx_init_cycle'/>
+<def f='nginx/src/core/ngx_log.c' l='72' type='ngx_uint_t'/>
+<use f='nginx/src/core/ngx_log.c' l='198' u='r' c='ngx_log_error_core'/>

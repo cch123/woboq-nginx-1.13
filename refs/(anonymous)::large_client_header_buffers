@@ -1,0 +1,14 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='193' type='ngx_bufs_t'/>
+<offset>704</offset>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3282' u='m' c='ngx_http_core_merge_srv_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3283' u='m' c='ngx_http_core_merge_srv_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3282' u='m' c='ngx_http_core_merge_srv_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3283' u='m' c='ngx_http_core_merge_srv_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3282' u='m' c='ngx_http_core_merge_srv_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3283' u='m' c='ngx_http_core_merge_srv_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3282' u='m' c='ngx_http_core_merge_srv_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3282' u='m' c='ngx_http_core_merge_srv_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3286' u='m' c='ngx_http_core_merge_srv_conf'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1488' u='m' c='ngx_http_alloc_large_header_buffer'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1505' u='m' c='ngx_http_alloc_large_header_buffer'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1508' u='m' c='ngx_http_alloc_large_header_buffer'/>

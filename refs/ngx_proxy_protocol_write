@@ -1,0 +1,2 @@
+<dec f='nginx/src/core/ngx_proxy_protocol.h' l='21' type='u_char * ngx_proxy_protocol_write(ngx_connection_t * c, u_char * buf, u_char * last)'/>
+<def f='nginx/src/core/ngx_proxy_protocol.c' l='171' ll='212' type='u_char * ngx_proxy_protocol_write(ngx_connection_t * c, u_char * buf, u_char * last)'/>

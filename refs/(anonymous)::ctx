@@ -1,0 +1,35 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='84' type='ngx_resolver_ctx_t *'/>
+<offset>192</offset>
+<use f='nginx/src/core/ngx_resolver.c' l='520' u='r' c='ngx_resolve_name_done'/>
+<use f='nginx/src/core/ngx_resolver.c' l='521' u='r' c='ngx_resolve_name_done'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2953' u='w' c='ngx_resolver_resolve_srv_names'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2956' u='w' c='ngx_resolver_resolve_srv_names'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2989' u='w' c='ngx_resolver_srv_names_handler'/>
+<dec f='nginx/src/http/ngx_http_upstream.h' l='309' type='ngx_resolver_ctx_t *'/>
+<dec f='nginx/src/http/ngx_http_core_module.h' l='185' type='ngx_http_conf_ctx_t *'/>
+<offset>320</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='184'>/* server ctx */</doc>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='150' u='r' c='ngx_http_rewrite_handler'/>
+<use f='nginx/src/http/ngx_http.c' l='279' u='r' c='ngx_http_block'/>
+<use f='nginx/src/http/ngx_http.c' l='579' u='r' c='ngx_http_merge_servers'/>
+<use f='nginx/src/http/ngx_http.c' l='583' u='r' c='ngx_http_merge_servers'/>
+<use f='nginx/src/http/ngx_http.c' l='593' u='r' c='ngx_http_merge_servers'/>
+<use f='nginx/src/http/ngx_http.c' l='596' u='r' c='ngx_http_merge_servers'/>
+<use f='nginx/src/http/ngx_http.c' l='603' u='r' c='ngx_http_merge_servers'/>
+<use f='nginx/src/http/ngx_http.c' l='606' u='r' c='ngx_http_merge_servers'/>
+<use f='nginx/src/http/ngx_http.c' l='1721' u='r' c='ngx_http_add_listening'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1063' u='r' c='ngx_http_core_post_rewrite_phase'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2283' u='r' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2284' u='r' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2285' u='r' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2431' u='r' c='ngx_http_internal_redirect'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2770' u='w' c='ngx_http_core_server'/>
+<use f='nginx/src/http/ngx_http_request.c' l='303' u='r' c='ngx_http_init_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2121' u='r' c='ngx_http_set_virtual_server'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2122' u='r' c='ngx_http_set_virtual_server'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='759' u='w' c='ngx_http_upstream_init_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='762' u='w' c='ngx_http_upstream_init_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1233' u='w' c='ngx_http_upstream_resolve_handler'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4258' u='r' c='ngx_http_upstream_finalize_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4259' u='r' c='ngx_http_upstream_finalize_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4260' u='w' c='ngx_http_upstream_finalize_request'/>

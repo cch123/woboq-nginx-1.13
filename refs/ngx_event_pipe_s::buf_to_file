@@ -1,0 +1,22 @@
+<dec f='nginx/src/event/ngx_event_pipe.h' l='91' type='ngx_buf_t *'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='472' u='r' c='ngx_event_pipe_read_upstream'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='481' u='r' c='ngx_event_pipe_read_upstream'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='763' u='r' c='ngx_event_pipe_write_chain_to_temp_file'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='769' u='r' c='ngx_event_pipe_write_chain_to_temp_file'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='857' u='r' c='ngx_event_pipe_write_chain_to_temp_file'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='858' u='r' c='ngx_event_pipe_write_chain_to_temp_file'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='858' u='r' c='ngx_event_pipe_write_chain_to_temp_file'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='859' u='r' c='ngx_event_pipe_write_chain_to_temp_file'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='859' u='r' c='ngx_event_pipe_write_chain_to_temp_file'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='860' u='w' c='ngx_event_pipe_write_chain_to_temp_file'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='1033' u='r' c='ngx_event_pipe_add_free_buf'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='1033' u='r' c='ngx_event_pipe_add_free_buf'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='1034' u='r' c='ngx_event_pipe_add_free_buf'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='1035' u='r' c='ngx_event_pipe_add_free_buf'/>
+<offset>1920</offset>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3130' u='w' c='ngx_http_upstream_send_response'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3131' u='r' c='ngx_http_upstream_send_response'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3136' u='r' c='ngx_http_upstream_send_response'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3137' u='r' c='ngx_http_upstream_send_response'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3138' u='r' c='ngx_http_upstream_send_response'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3139' u='r' c='ngx_http_upstream_send_response'/>

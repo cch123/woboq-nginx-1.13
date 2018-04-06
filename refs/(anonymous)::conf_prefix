@@ -1,0 +1,17 @@
+<dec f='nginx/src/http/ngx_http_script.h' l='58' type='unsigned int'/>
+<dec f='nginx/src/http/ngx_http_script.h' l='80' type='unsigned int'/>
+<dec f='nginx/src/http/ngx_http_script.h' l='156' type='uintptr_t'/>
+<offset>64</offset>
+<use f='nginx/src/http/modules/ngx_http_auth_basic_module.c' l='422' u='w' c='ngx_http_auth_basic_user_file'/>
+<use f='nginx/src/http/ngx_http_script.c' l='132' u='r' c='ngx_http_compile_complex_value'/>
+<use f='nginx/src/http/ngx_http_script.c' l='134' u='r' c='ngx_http_compile_complex_value'/>
+<use f='nginx/src/http/ngx_http_script.c' l='138' u='w' c='ngx_http_compile_complex_value'/>
+<use f='nginx/src/http/ngx_http_script.c' l='192' u='w' c='ngx_http_compile_complex_value'/>
+<use f='nginx/src/http/ngx_http_script.c' l='192' u='r' c='ngx_http_compile_complex_value'/>
+<use f='nginx/src/http/ngx_http_script.c' l='614' u='r' c='ngx_http_script_done'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1297' u='w' c='ngx_http_script_add_full_name_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1297' u='r' c='ngx_http_script_add_full_name_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1307' u='w' c='ngx_http_script_add_full_name_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1307' u='r' c='ngx_http_script_add_full_name_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1322' u='r' c='ngx_http_script_full_name_len_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1339' u='r' c='ngx_http_script_full_name_code'/>

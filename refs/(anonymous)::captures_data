@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/modules/ngx_http_ssi_filter_module.h' l='71' type='u_char *'/>
+<offset>3264</offset>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1581' u='r' c='ngx_http_ssi_get_variable'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1927' u='w' c='ngx_http_ssi_regex_match'/>

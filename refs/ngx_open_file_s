@@ -1,0 +1,6 @@
+<def f='nginx/src/core/ngx_conf_file.h' l='89' ll='95'/>
+<size>40</size>
+<mbr r='ngx_open_file_s::fd' o='0' t='ngx_fd_t'/>
+<mbr r='ngx_open_file_s::name' o='64' t='ngx_str_t'/>
+<mbr r='ngx_open_file_s::flush' o='192' t='void (*)(ngx_open_file_t *, ngx_log_t *)'/>
+<mbr r='ngx_open_file_s::data' o='256' t='void *'/>

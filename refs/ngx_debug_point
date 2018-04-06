@@ -1,0 +1,16 @@
+<dec f='nginx/src/os/unix/ngx_process.h' l='68' type='void ngx_debug_point()'/>
+<use f='nginx/src/core/ngx_output_chain.c' l='122' u='c' c='ngx_output_chain'/>
+<use f='nginx/src/core/ngx_output_chain.c' l='684' u='c' c='ngx_chain_writer'/>
+<use f='nginx/src/core/ngx_output_chain.c' l='728' u='c' c='ngx_chain_writer'/>
+<use f='nginx/src/core/ngx_slab.c' l='329' u='c' c='ngx_slab_alloc_locked'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='929' u='c' c='ngx_http_ssi_output'/>
+<use f='nginx/src/http/ngx_http_write_filter_module.c' l='98' u='c' c='ngx_http_write_filter'/>
+<use f='nginx/src/http/ngx_http_write_filter_module.c' l='154' u='c' c='ngx_http_write_filter'/>
+<use f='nginx/src/http/ngx_http_write_filter_module.c' l='216' u='c' c='ngx_http_write_filter'/>
+<use f='nginx/src/os/unix/ngx_linux_sendfile_chain.c' l='169' u='c' c='ngx_linux_sendfile_chain'/>
+<def f='nginx/src/os/unix/ngx_process.c' l='611' ll='628' type='void ngx_debug_point()'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='1007' u='c' c='ngx_worker_process_exit'/>
+<use f='nginx/src/os/unix/ngx_udp_sendmsg_chain.c' l='80' u='c' c='ngx_udp_unix_sendmsg_chain'/>
+<use f='nginx/src/os/unix/ngx_udp_sendmsg_chain.c' l='157' u='c' c='ngx_udp_output_chain_to_iovec'/>
+<use f='nginx/src/os/unix/ngx_writev_chain.c' l='76' u='c' c='ngx_writev_chain'/>
+<use f='nginx/src/os/unix/ngx_writev_chain.c' l='145' u='c' c='ngx_output_chain_to_iovec'/>

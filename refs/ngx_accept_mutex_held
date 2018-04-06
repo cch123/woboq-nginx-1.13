@@ -1,0 +1,12 @@
+<dec f='nginx/src/event/ngx_event.h' l='473' type='ngx_uint_t'/>
+<use f='nginx/src/core/ngx_connection.c' l='972' u='w' c='ngx_close_listening_sockets'/>
+<def f='nginx/src/event/ngx_event.c' l='55' type='ngx_uint_t'/>
+<use f='nginx/src/event/ngx_event.c' l='227' u='r' c='ngx_process_events_and_timers'/>
+<use f='nginx/src/event/ngx_event.c' l='251' u='r' c='ngx_process_events_and_timers'/>
+<use f='nginx/src/event/ngx_event.c' l='583' u='w' c='ngx_event_process_init'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='122' u='r' c='ngx_event_accept'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='124' u='w' c='ngx_event_accept'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='654' u='r' c='ngx_trylock_accept_mutex'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='664' u='w' c='ngx_trylock_accept_mutex'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='672' u='r' c='ngx_trylock_accept_mutex'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='677' u='w' c='ngx_trylock_accept_mutex'/>

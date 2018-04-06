@@ -1,0 +1,8 @@
+<dec f='nginx/src/os/unix/ngx_atomic.h' l='101'/>
+<use f='nginx/src/core/ngx_string.c' l='372' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_range_filter_module.c' l='472' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_range_filter_module.c' l='530' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_range_filter_module.c' l='552' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_range_filter_module.c' l='890' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_range_filter_module.c' l='897' u='c'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2194' u='c'/>

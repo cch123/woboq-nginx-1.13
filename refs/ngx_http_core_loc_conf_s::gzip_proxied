@@ -1,0 +1,8 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='401' type='ngx_uint_t'/>
+<offset>4416</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='401'>/* gzip_proxied */</doc>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1981' u='r' c='ngx_http_gzip_ok'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3704' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3704' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3704' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3704' u='r' c='ngx_http_core_merge_loc_conf'/>

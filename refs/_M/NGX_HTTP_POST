@@ -1,0 +1,10 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='31'/>
+<use f='nginx/src/http/modules/ngx_http_index_module.c' l='116' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_static_module.c' l='62' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_static_module.c' l='205' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1256' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4311' u='c'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='183' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='455' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2407' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4158' u='c'/>

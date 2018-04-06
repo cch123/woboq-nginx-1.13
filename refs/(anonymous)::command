@@ -1,0 +1,47 @@
+<dec f='nginx/src/http/modules/ngx_http_ssi_filter_module.h' l='47' type='ngx_str_t'/>
+<offset>320</offset>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='634' u='m' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='635' u='m' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='641' u='a' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='654' u='m' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='682' u='m' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='683' u='m' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='683' u='m' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='729' u='a' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='736' u='a' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='762' u='a' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='785' u='a' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='796' u='a' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1146' u='m' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1147' u='m' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1149' u='m' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1153' u='m' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1180' u='m' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1183' u='a' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1189' u='m' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1189' u='m' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1260' u='a' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1269' u='a' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1300' u='a' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1332' u='a' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1356' u='a' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1384' u='a' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1402' u='a' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1446' u='a' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1462' u='a' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1486' u='a' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2475' u='m' c='ngx_http_ssi_if'/>
+<dec f='nginx/src/os/unix/ngx_channel.h' l='18' type='ngx_uint_t'/>
+<use f='nginx/src/os/unix/ngx_channel.c' l='153' u='r' c='ngx_read_channel'/>
+<offset>0</offset>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='355' u='w' c='ngx_start_worker_processes'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='403' u='w' c='ngx_start_cache_manager_processes'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='418' u='w' c='ngx_start_cache_manager_processes'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='473' u='w' c='ngx_signal_worker_processes'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='477' u='w' c='ngx_signal_worker_processes'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='481' u='w' c='ngx_signal_worker_processes'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='485' u='w' c='ngx_signal_worker_processes'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='520' u='r' c='ngx_signal_worker_processes'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='567' u='w' c='ngx_reap_children'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='634' u='w' c='ngx_reap_children'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='1083' u='r' c='ngx_channel_handler'/>

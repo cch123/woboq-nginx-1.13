@@ -1,0 +1,9 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='537' type='unsigned int'/>
+<offset>9881</offset>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='982' u='w' c='ngx_http_ssi_buffered'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='985' u='w' c='ngx_http_ssi_buffered'/>
+<use f='nginx/src/http/ngx_http_copy_filter_module.c' l='155' u='w' c='ngx_http_copy_filter'/>
+<use f='nginx/src/http/ngx_http_copy_filter_module.c' l='158' u='w' c='ngx_http_copy_filter'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2405' u='r' c='ngx_http_finalize_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2467' u='r' c='ngx_http_finalize_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2720' u='r' c='ngx_http_writer'/>

@@ -1,0 +1,2 @@
+<dec f='include/linux/capability.h' l='214'/>
+<doc f='include/linux/capability.h' l='212'>/* Allow use of chroot() */</doc>

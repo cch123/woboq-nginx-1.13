@@ -1,0 +1,13 @@
+<dec f='nginx/src/core/ngx_times.h' l='18' type='ngx_uint_t'/>
+<offset>64</offset>
+<use f='nginx/src/core/ngx_times.c' l='104' u='w' c='ngx_time_update'/>
+<use f='nginx/src/core/ngx_times.c' l='118' u='w' c='ngx_time_update'/>
+<use f='nginx/src/event/ngx_event.c' l='534' u='r' c='ngx_event_module_init'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='833' u='r' c='ngx_http_log_msec'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='847' u='r' c='ngx_http_log_request_time'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2372' u='r' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_request.c' l='603' u='r' c='ngx_http_create_request'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2134' u='r' c='ngx_http_variable_request_time'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2293' u='r' c='ngx_http_variable_msec'/>
+<use f='nginx/src/os/unix/ngx_posix_init.c' l='92' u='r' c='ngx_os_init'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='918' u='r' c='ngx_worker_process_init'/>

@@ -1,0 +1,12 @@
+<dec f='nginx/src/core/ngx_times.h' l='24' type='void ngx_time_update()'/>
+<use f='nginx/src/core/ngx_cycle.c' l='64' u='c' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_times.c' l='76' u='c' c='ngx_time_init'/>
+<def f='nginx/src/core/ngx_times.c' l='80' ll='192' type='void ngx_time_update()'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='805' u='c' c='ngx_epoll_process_events'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1888' u='c' c='ngx_http_file_cache_expire'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2010' u='c' c='ngx_http_file_cache_manager'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2101' u='c' c='ngx_http_file_cache_manage_file'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2135' u='c' c='ngx_http_file_cache_loader_sleep'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='166' u='c' c='ngx_master_process_cycle'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='1194' u='c' c='ngx_cache_manager_process_handler'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='1224' u='c' c='ngx_cache_loader_process_handler'/>

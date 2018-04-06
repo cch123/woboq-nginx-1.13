@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='122' type='8'/>
+<use f='nginx/src/http/modules/ngx_http_mirror_module.c' l='256' u='m' c='ngx_http_mirror_init'/>
+<use f='nginx/src/http/modules/ngx_http_try_files_module.c' l='396' u='m' c='ngx_http_try_files_init'/>
+<use f='nginx/src/http/ngx_http.c' l='385' u='m' c='ngx_http_init_phases'/>

@@ -1,0 +1,24 @@
+<dec f='nginx/src/core/ngx_connection.h' l='21' type='struct sockaddr *'/>
+<offset>64</offset>
+<use f='nginx/src/core/ngx_connection.c' l='42' u='w' c='ngx_create_listening'/>
+<use f='nginx/src/core/ngx_connection.c' l='48' u='r' c='ngx_create_listening'/>
+<use f='nginx/src/core/ngx_connection.c' l='154' u='w' c='ngx_set_inherited_sockets'/>
+<use f='nginx/src/core/ngx_connection.c' l='155' u='r' c='ngx_set_inherited_sockets'/>
+<use f='nginx/src/core/ngx_connection.c' l='160' u='r' c='ngx_set_inherited_sockets'/>
+<use f='nginx/src/core/ngx_connection.c' l='172' u='r' c='ngx_set_inherited_sockets'/>
+<use f='nginx/src/core/ngx_connection.c' l='206' u='r' c='ngx_set_inherited_sockets'/>
+<use f='nginx/src/core/ngx_connection.c' l='453' u='r' c='ngx_open_listening_sockets'/>
+<use f='nginx/src/core/ngx_connection.c' l='506' u='r' c='ngx_open_listening_sockets'/>
+<use f='nginx/src/core/ngx_connection.c' l='542' u='r' c='ngx_open_listening_sockets'/>
+<use f='nginx/src/core/ngx_connection.c' l='569' u='r' c='ngx_open_listening_sockets'/>
+<use f='nginx/src/core/ngx_connection.c' l='918' u='r' c='ngx_configure_listening_sockets'/>
+<use f='nginx/src/core/ngx_connection.c' l='939' u='r' c='ngx_configure_listening_sockets'/>
+<use f='nginx/src/core/ngx_connection.c' l='1012' u='r' c='ngx_close_listening_sockets'/>
+<use f='nginx/src/core/ngx_cycle.c' l='518' u='r' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='519' u='r' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='712' u='r' c='ngx_init_cycle'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='220' u='r' c='ngx_event_accept'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='391' u='r' c='ngx_event_recvmsg'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='398' u='r' c='ngx_event_recvmsg'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='484' u='r' c='ngx_event_recvmsg'/>
+<use f='nginx/src/http/ngx_http.c' l='1672' u='r' c='ngx_http_init_listening'/>

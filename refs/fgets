@@ -1,0 +1,5 @@
+<dec f='include/stdio.h' l='622' type='char * fgets(char *restrict __s, int __n, FILE *restrict __stream)'/>
+<doc f='include/stdio.h' l='618'>/* Get a newline-terminated string of finite length from STREAM.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */</doc>

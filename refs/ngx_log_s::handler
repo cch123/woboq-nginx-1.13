@@ -1,0 +1,12 @@
+<dec f='nginx/src/core/ngx_log.h' l='58' type='ngx_log_handler_pt'/>
+<offset>256</offset>
+<use f='nginx/src/core/ngx_log.c' l='148' u='r' c='ngx_log_error_core'/>
+<use f='nginx/src/core/ngx_log.c' l='149' u='r' c='ngx_log_error_core'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1250' u='r' c='ngx_resolver_send_query'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1252' u='w' c='ngx_resolver_send_query'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='311' u='w' c='ngx_event_accept'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='632' u='w' c='ngx_event_recvmsg'/>
+<use f='nginx/src/http/ngx_http.c' l='1725' u='w' c='ngx_http_add_listening'/>
+<use f='nginx/src/http/ngx_http_request.c' l='316' u='w' c='ngx_http_init_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3209' u='w' c='ngx_http_keepalive_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3220' u='w' c='ngx_http_keepalive_handler'/>

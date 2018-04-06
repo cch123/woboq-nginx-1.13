@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='209' type='ngx_table_elt_t *'/>
+<offset>1664</offset>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1864' u='r' c='ngx_http_auth_basic_user'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1869' u='r' c='ngx_http_auth_basic_user'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1991' u='r' c='ngx_http_gzip_ok'/>

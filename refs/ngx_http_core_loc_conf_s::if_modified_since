@@ -1,0 +1,10 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='372' type='ngx_uint_t'/>
+<offset>2880</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='372'>/* if_modified_since */</doc>
+<use f='nginx/src/http/modules/ngx_http_not_modified_filter_module.c' l='147' u='r' c='ngx_http_test_if_modified'/>
+<use f='nginx/src/http/modules/ngx_http_not_modified_filter_module.c' l='161' u='r' c='ngx_http_test_if_modified'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3369' u='w' c='ngx_http_core_create_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3586' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3586' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3586' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3586' u='r' c='ngx_http_core_merge_loc_conf'/>

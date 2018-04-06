@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_palloc.h' l='82' type='void * ngx_pmemalign(ngx_pool_t * pool, size_t size, size_t alignment)'/>
+<use f='nginx/src/core/ngx_output_chain.c' l='475' u='c' c='ngx_output_chain_get_buf'/>
+<def f='nginx/src/core/ngx_palloc.c' l='252' ll='274' type='void * ngx_pmemalign(ngx_pool_t * pool, size_t size, size_t alignment)'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='475' u='c' c='ngx_radix_alloc'/>

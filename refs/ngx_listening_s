@@ -1,0 +1,43 @@
+<def f='nginx/src/core/ngx_connection.h' l='18' ll='90'/>
+<size>240</size>
+<mbr r='ngx_listening_s::fd' o='0' t='ngx_socket_t'/>
+<mbr r='ngx_listening_s::sockaddr' o='64' t='struct sockaddr *'/>
+<mbr r='ngx_listening_s::socklen' o='128' t='socklen_t'/>
+<mbr r='ngx_listening_s::addr_text_max_len' o='192' t='size_t'/>
+<mbr r='ngx_listening_s::addr_text' o='256' t='ngx_str_t'/>
+<mbr r='ngx_listening_s::type' o='384' t='int'/>
+<mbr r='ngx_listening_s::backlog' o='416' t='int'/>
+<mbr r='ngx_listening_s::rcvbuf' o='448' t='int'/>
+<mbr r='ngx_listening_s::sndbuf' o='480' t='int'/>
+<mbr r='ngx_listening_s::keepidle' o='512' t='int'/>
+<mbr r='ngx_listening_s::keepintvl' o='544' t='int'/>
+<mbr r='ngx_listening_s::keepcnt' o='576' t='int'/>
+<mbr r='ngx_listening_s::handler' o='640' t='ngx_connection_handler_pt'/>
+<mbr r='ngx_listening_s::servers' o='704' t='void *'/>
+<mbr r='ngx_listening_s::log' o='768' t='ngx_log_t'/>
+<mbr r='ngx_listening_s::logp' o='1408' t='ngx_log_t *'/>
+<mbr r='ngx_listening_s::pool_size' o='1472' t='size_t'/>
+<mbr r='ngx_listening_s::post_accept_buffer_size' o='1536' t='size_t'/>
+<mbr r='ngx_listening_s::post_accept_timeout' o='1600' t='ngx_msec_t'/>
+<mbr r='ngx_listening_s::previous' o='1664' t='ngx_listening_t *'/>
+<mbr r='ngx_listening_s::connection' o='1728' t='ngx_connection_t *'/>
+<mbr r='ngx_listening_s::worker' o='1792' t='ngx_uint_t'/>
+<mbr r='ngx_listening_s::open' o='1856' t='unsigned int'/>
+<mbr r='ngx_listening_s::remain' o='1857' t='unsigned int'/>
+<mbr r='ngx_listening_s::ignore' o='1858' t='unsigned int'/>
+<mbr r='ngx_listening_s::bound' o='1859' t='unsigned int'/>
+<mbr r='ngx_listening_s::inherited' o='1860' t='unsigned int'/>
+<mbr r='ngx_listening_s::nonblocking_accept' o='1861' t='unsigned int'/>
+<mbr r='ngx_listening_s::listen' o='1862' t='unsigned int'/>
+<mbr r='ngx_listening_s::nonblocking' o='1863' t='unsigned int'/>
+<mbr r='ngx_listening_s::shared' o='1864' t='unsigned int'/>
+<mbr r='ngx_listening_s::addr_ntop' o='1865' t='unsigned int'/>
+<mbr r='ngx_listening_s::wildcard' o='1866' t='unsigned int'/>
+<mbr r='ngx_listening_s::ipv6only' o='1867' t='unsigned int'/>
+<mbr r='ngx_listening_s::reuseport' o='1868' t='unsigned int'/>
+<mbr r='ngx_listening_s::add_reuseport' o='1869' t='unsigned int'/>
+<mbr r='ngx_listening_s::keepalive' o='1870' t='unsigned int'/>
+<mbr r='ngx_listening_s::deferred_accept' o='1872' t='unsigned int'/>
+<mbr r='ngx_listening_s::delete_deferred' o='1873' t='unsigned int'/>
+<mbr r='ngx_listening_s::add_deferred' o='1874' t='unsigned int'/>
+<mbr r='ngx_listening_s::fastopen' o='1888' t='int'/>

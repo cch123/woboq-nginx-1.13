@@ -1,0 +1,8 @@
+<dec f='nginx/objs/ngx_modules.c' l='54' type='ngx_module_t'/>
+<use f='nginx/objs/ngx_modules.c' l='106' u='a'/>
+<use f='nginx/objs/ngx_modules.c' l='106' u='a'/>
+<def f='nginx/src/http/ngx_http_copy_filter_module.c' l='67' ll='80' type='ngx_module_t'/>
+<use f='nginx/src/http/ngx_http_copy_filter_module.c' l='100' u='m' c='ngx_http_copy_filter'/>
+<use f='nginx/src/http/ngx_http_copy_filter_module.c' l='108' u='m' c='ngx_http_copy_filter'/>
+<use f='nginx/src/http/ngx_http_copy_filter_module.c' l='110' u='m' c='ngx_http_copy_filter'/>
+<use f='nginx/src/http/ngx_http_copy_filter_module.c' l='122' u='a' c='ngx_http_copy_filter'/>

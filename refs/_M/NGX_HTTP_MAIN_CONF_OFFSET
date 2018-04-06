@@ -1,0 +1,16 @@
+<dec f='nginx/src/http/ngx_http_config.h' l='50'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='173' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='392' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='118' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='170' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_map_module.c' l='54' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_map_module.c' l='61' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_map_module.c' l='68' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='465' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='242' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_split_clients_module.c' l='35' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='303' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='185' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='192' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='199' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='206' u='c'/>

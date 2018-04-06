@@ -1,0 +1,30 @@
+<dec f='nginx/src/core/ngx_conf_file.h' l='287' type='char * ngx_conf_set_off_slot(ngx_conf_t * cf, ngx_command_t * cmd, void * conf)'/>
+<use f='nginx/src/core/nginx.c' l='122'/>
+<use f='nginx/src/core/nginx.c' l='122'/>
+<use f='nginx/src/core/nginx.c' l='122'/>
+<use f='nginx/src/core/nginx.c' l='122'/>
+<def f='nginx/src/core/ngx_conf_file.c' l='1227' ll='1255' type='char * ngx_conf_set_off_slot(ngx_conf_t * cf, ngx_command_t * cmd, void * conf)'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='426'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='426'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='426'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='426'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='499'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='499'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='499'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='499'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='276'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='276'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='276'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='276'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='337'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='337'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='337'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='337'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='347'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='347'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='439'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='439'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='347'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='347'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='439'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='439'/>

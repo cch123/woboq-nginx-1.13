@@ -1,0 +1,16 @@
+<dec f='nginx/src/http/ngx_http_script.h' l='229' type='void * ngx_http_script_add_code(ngx_array_t * codes, size_t size, void * code)'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='415' u='c' c='ngx_http_rewrite'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='429' u='c' c='ngx_http_rewrite'/>
+<use f='nginx/src/http/ngx_http_script.c' l='621' u='c' c='ngx_http_script_done'/>
+<use f='nginx/src/http/ngx_http_script.c' l='630' u='c' c='ngx_http_script_done'/>
+<def f='nginx/src/http/ngx_http_script.c' l='657' ll='678' type='void * ngx_http_script_add_code(ngx_array_t * codes, size_t size, void * code)'/>
+<use f='nginx/src/http/ngx_http_script.c' l='692' u='c' c='ngx_http_script_add_copy_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='704' u='c' c='ngx_http_script_add_copy_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='781' u='c' c='ngx_http_script_add_var_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='790' u='c' c='ngx_http_script_add_var_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='866' u='c' c='ngx_http_script_add_args_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='873' u='c' c='ngx_http_script_add_args_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1174' u='c' c='ngx_http_script_add_capture_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1186' u='c' c='ngx_http_script_add_capture_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1289' u='c' c='ngx_http_script_add_full_name_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1299' u='c' c='ngx_http_script_add_full_name_code'/>

@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_config.h' l='128'/>
+<use f='nginx/src/core/ngx_resolver.c' l='874' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1080' u='c'/>
+<use f='nginx/src/core/ngx_string.c' l='511' u='c'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='439' u='c'/>

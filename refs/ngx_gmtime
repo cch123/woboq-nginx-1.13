@@ -1,0 +1,8 @@
+<dec f='nginx/src/core/ngx_times.h' l='28' type='void ngx_gmtime(time_t t, ngx_tm_t * tp)'/>
+<use f='nginx/src/core/ngx_times.c' l='120' u='c' c='ngx_time_update'/>
+<use f='nginx/src/core/ngx_times.c' l='256' u='c' c='ngx_time_sigsafe_update'/>
+<use f='nginx/src/core/ngx_times.c' l='287' u='c' c='ngx_http_time'/>
+<use f='nginx/src/core/ngx_times.c' l='305' u='c' c='ngx_http_cookie_time'/>
+<def f='nginx/src/core/ngx_times.c' l='327' ll='429' type='void ngx_gmtime(time_t t, ngx_tm_t * tp)'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='624' u='c' c='ngx_http_autoindex_html'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='897' u='c' c='ngx_http_autoindex_xml'/>

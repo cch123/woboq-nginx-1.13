@@ -1,0 +1,5 @@
+<dec f='nginx/src/event/ngx_event.h' l='213'/>
+<doc f='nginx/src/event/ngx_event.h' l='209'>/*
+ * The event filter is deleted after a notification without an additional
+ * syscall: kqueue, epoll.
+ */</doc>

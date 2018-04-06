@@ -1,0 +1,34 @@
+<def f='nginx/src/core/ngx_cycle.h' l='39' ll='84'/>
+<size>624</size>
+<mbr r='ngx_cycle_s::conf_ctx' o='0' t='void ****'/>
+<mbr r='ngx_cycle_s::pool' o='64' t='ngx_pool_t *'/>
+<mbr r='ngx_cycle_s::log' o='128' t='ngx_log_t *'/>
+<mbr r='ngx_cycle_s::new_log' o='192' t='ngx_log_t'/>
+<mbr r='ngx_cycle_s::log_use_stderr' o='832' t='ngx_uint_t'/>
+<mbr r='ngx_cycle_s::files' o='896' t='ngx_connection_t **'/>
+<mbr r='ngx_cycle_s::free_connections' o='960' t='ngx_connection_t *'/>
+<mbr r='ngx_cycle_s::free_connection_n' o='1024' t='ngx_uint_t'/>
+<mbr r='ngx_cycle_s::modules' o='1088' t='ngx_module_t **'/>
+<mbr r='ngx_cycle_s::modules_n' o='1152' t='ngx_uint_t'/>
+<mbr r='ngx_cycle_s::modules_used' o='1216' t='ngx_uint_t'/>
+<mbr r='ngx_cycle_s::reusable_connections_queue' o='1280' t='ngx_queue_t'/>
+<mbr r='ngx_cycle_s::reusable_connections_n' o='1408' t='ngx_uint_t'/>
+<mbr r='ngx_cycle_s::listening' o='1472' t='ngx_array_t'/>
+<mbr r='ngx_cycle_s::paths' o='1792' t='ngx_array_t'/>
+<mbr r='ngx_cycle_s::config_dump' o='2112' t='ngx_array_t'/>
+<mbr r='ngx_cycle_s::config_dump_rbtree' o='2432' t='ngx_rbtree_t'/>
+<mbr r='ngx_cycle_s::config_dump_sentinel' o='2624' t='ngx_rbtree_node_t'/>
+<mbr r='ngx_cycle_s::open_files' o='2944' t='ngx_list_t'/>
+<mbr r='ngx_cycle_s::shared_memory' o='3392' t='ngx_list_t'/>
+<mbr r='ngx_cycle_s::connection_n' o='3840' t='ngx_uint_t'/>
+<mbr r='ngx_cycle_s::files_n' o='3904' t='ngx_uint_t'/>
+<mbr r='ngx_cycle_s::connections' o='3968' t='ngx_connection_t *'/>
+<mbr r='ngx_cycle_s::read_events' o='4032' t='ngx_event_t *'/>
+<mbr r='ngx_cycle_s::write_events' o='4096' t='ngx_event_t *'/>
+<mbr r='ngx_cycle_s::old_cycle' o='4160' t='ngx_cycle_t *'/>
+<mbr r='ngx_cycle_s::conf_file' o='4224' t='ngx_str_t'/>
+<mbr r='ngx_cycle_s::conf_param' o='4352' t='ngx_str_t'/>
+<mbr r='ngx_cycle_s::conf_prefix' o='4480' t='ngx_str_t'/>
+<mbr r='ngx_cycle_s::prefix' o='4608' t='ngx_str_t'/>
+<mbr r='ngx_cycle_s::lock_file' o='4736' t='ngx_str_t'/>
+<mbr r='ngx_cycle_s::hostname' o='4864' t='ngx_str_t'/>

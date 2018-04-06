@@ -1,0 +1,14 @@
+<dec f='nginx/src/core/ngx_cycle.h' l='114' type='ngx_str_t'/>
+<offset>1280</offset>
+<use f='nginx/src/core/nginx.c' l='709' u='m' c='ngx_exec_new_binary'/>
+<use f='nginx/src/core/nginx.c' l='713' u='m' c='ngx_exec_new_binary'/>
+<use f='nginx/src/core/nginx.c' l='724' u='m' c='ngx_exec_new_binary'/>
+<use f='nginx/src/core/nginx.c' l='730' u='m' c='ngx_exec_new_binary'/>
+<use f='nginx/src/core/nginx.c' l='1089' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1091' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1091' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1092' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1096' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/ngx_cycle.c' l='996' u='m' c='ngx_delete_pidfile'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='651' u='m' c='ngx_reap_children'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='658' u='m' c='ngx_reap_children'/>

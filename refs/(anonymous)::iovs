@@ -1,0 +1,12 @@
+<dec f='nginx/src/os/unix/ngx_os.h' l='65' type='struct iovec *'/>
+<offset>0</offset>
+<use f='nginx/src/os/unix/ngx_files.c' l='310' u='w' c='ngx_write_chain_to_file'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='374' u='r' c='ngx_chain_to_iovec'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='404' u='r' c='ngx_writev_file'/>
+<use f='nginx/src/os/unix/ngx_linux_sendfile_chain.c' l='76' u='w' c='ngx_linux_sendfile_chain'/>
+<use f='nginx/src/os/unix/ngx_udp_sendmsg_chain.c' l='53' u='w' c='ngx_udp_unix_sendmsg_chain'/>
+<use f='nginx/src/os/unix/ngx_udp_sendmsg_chain.c' l='174' u='r' c='ngx_udp_output_chain_to_iovec'/>
+<use f='nginx/src/os/unix/ngx_udp_sendmsg_chain.c' l='227' u='r' c='ngx_sendmsg'/>
+<use f='nginx/src/os/unix/ngx_writev_chain.c' l='48' u='w' c='ngx_writev_chain'/>
+<use f='nginx/src/os/unix/ngx_writev_chain.c' l='164' u='r' c='ngx_output_chain_to_iovec'/>
+<use f='nginx/src/os/unix/ngx_writev_chain.c' l='189' u='r' c='ngx_writev'/>

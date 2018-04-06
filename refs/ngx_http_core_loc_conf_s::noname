@@ -1,0 +1,18 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='305' type='unsigned int'/>
+<offset>192</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='305'>/* &quot;if () {}&quot; block or limit_except */</doc>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='3078' u='r' c='ngx_http_fastcgi_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='3306' u='r' c='ngx_http_proxy_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='3662' u='r' c='ngx_http_proxy_pass'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='586' u='w' c='ngx_http_rewrite_if'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='1545' u='r' c='ngx_http_scgi_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='1800' u='r' c='ngx_http_uwsgi_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http.c' l='732' u='r' c='ngx_http_init_locations'/>
+<use f='nginx/src/http/ngx_http.c' l='867' u='r' c='ngx_http_add_location'/>
+<use f='nginx/src/http/ngx_http.c' l='902' u='r' c='ngx_http_cmp_locations'/>
+<use f='nginx/src/http/ngx_http.c' l='902' u='r' c='ngx_http_cmp_locations'/>
+<use f='nginx/src/http/ngx_http.c' l='907' u='r' c='ngx_http_cmp_locations'/>
+<use f='nginx/src/http/ngx_http.c' l='907' u='r' c='ngx_http_cmp_locations'/>
+<use f='nginx/src/http/ngx_http.c' l='912' u='r' c='ngx_http_cmp_locations'/>
+<use f='nginx/src/http/ngx_http.c' l='912' u='r' c='ngx_http_cmp_locations'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4408' u='w' c='ngx_http_core_limit_except'/>

@@ -1,0 +1,9 @@
+<dec f='nginx/src/http/ngx_http_cache.h' l='68' type='uint32_t'/>
+<offset>1920</offset>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='240' u='w' c='ngx_http_file_cache_create_key'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='250' u='a' c='ngx_http_file_cache_create_key'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='257' u='w' c='ngx_http_file_cache_create_key'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='557' u='r' c='ngx_http_file_cache_read'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1264' u='r' c='ngx_http_file_cache_set_header'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1504' u='r' c='ngx_http_file_cache_update_header'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1527' u='r' c='ngx_http_file_cache_update_header'/>

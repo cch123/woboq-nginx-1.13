@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_sha1.h' l='24' type='void ngx_sha1_update(ngx_sha1_t * ctx, const void * data, size_t size)'/>
+<use f='nginx/src/core/ngx_crypt.c' l='218' u='c' c='ngx_crypt_ssha'/>
+<use f='nginx/src/core/ngx_crypt.c' l='219' u='c' c='ngx_crypt_ssha'/>
+<use f='nginx/src/core/ngx_crypt.c' l='253' u='c' c='ngx_crypt_sha'/>
+<def f='nginx/src/core/ngx_sha1.c' l='32' ll='60' type='void ngx_sha1_update(ngx_sha1_t * ctx, const void * data, size_t size)'/>

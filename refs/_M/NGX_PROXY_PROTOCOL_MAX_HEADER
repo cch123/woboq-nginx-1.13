@@ -1,0 +1,2 @@
+<dec f='nginx/src/core/ngx_proxy_protocol.h' l='16'/>
+<use f='nginx/src/core/ngx_proxy_protocol.c' l='176' u='c'/>

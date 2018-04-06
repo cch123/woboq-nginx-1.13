@@ -1,0 +1,11 @@
+<dec f='nginx/src/core/ngx_syslog.h' l='15' type='ngx_str_t'/>
+<offset>192</offset>
+<use f='nginx/src/core/ngx_syslog.c' l='64' u='m' c='ngx_syslog_process_conf'/>
+<use f='nginx/src/core/ngx_syslog.c' l='65' u='a' c='ngx_syslog_process_conf'/>
+<use f='nginx/src/core/ngx_syslog.c' l='65' u='a' c='ngx_syslog_process_conf'/>
+<use f='nginx/src/core/ngx_syslog.c' l='166' u='m' c='ngx_syslog_parse_args'/>
+<use f='nginx/src/core/ngx_syslog.c' l='194' u='m' c='ngx_syslog_parse_args'/>
+<use f='nginx/src/core/ngx_syslog.c' l='195' u='m' c='ngx_syslog_parse_args'/>
+<use f='nginx/src/core/ngx_syslog.c' l='228' u='a' c='ngx_syslog_add_header'/>
+<use f='nginx/src/core/ngx_syslog.c' l='232' u='a' c='ngx_syslog_add_header'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='317' u='m' c='ngx_http_log_handler'/>

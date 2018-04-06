@@ -1,0 +1,10 @@
+<dec f='nginx/src/http/ngx_http.h' l='127' type='void ngx_http_request_empty_handler(ngx_http_request_t * r)'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1168' u='r' c='ngx_http_core_content_phase'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2327' u='r' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2486' u='r' c='ngx_http_finalize_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2736' u='r' c='ngx_http_writer'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2908' u='r' c='ngx_http_set_keepalive'/>
+<def f='nginx/src/http/ngx_http_request.c' l='3352' ll='3359' type='void ngx_http_request_empty_handler(ngx_http_request_t * r)'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='129' u='r' c='ngx_http_read_client_request_body'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='183' u='r' c='ngx_http_read_client_request_body'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='574' u='r' c='ngx_http_upstream_init_request'/>

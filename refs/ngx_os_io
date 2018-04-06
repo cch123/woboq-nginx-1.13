@@ -1,0 +1,5 @@
+<dec f='nginx/src/os/unix/ngx_os.h' l='78' type='ngx_os_io_t'/>
+<use f='nginx/src/core/ngx_syslog.c' l='289' u='m' c='ngx_syslog_send'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='367' u='r' c='ngx_epoll_init'/>
+<use f='nginx/src/os/unix/ngx_linux_init.c' l='49' u='w' c='ngx_os_specific_init'/>
+<def f='nginx/src/os/unix/ngx_posix_init.c' l='22' ll='31' type='ngx_os_io_t'/>

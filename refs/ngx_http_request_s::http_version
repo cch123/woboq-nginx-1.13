@@ -1,0 +1,22 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='405' type='ngx_uint_t'/>
+<offset>7424</offset>
+<use f='nginx/src/http/modules/ngx_http_chunked_filter_module.c' l='79' u='r' c='ngx_http_chunked_header_filter'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='865' u='r' c='ngx_http_log_status'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1735' u='w' c='ngx_http_proxy_process_status_line'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1750' u='w' c='ngx_http_proxy_process_status_line'/>
+<use f='nginx/src/http/modules/ngx_http_range_filter_module.c' l='155' u='r' c='ngx_http_range_header_filter'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='812' u='r' c='ngx_http_handler'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1973' u='r' c='ngx_http_gzip_ok'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2302' u='w' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2302' u='r' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_header_filter_module.c' l='182' u='r' c='ngx_http_header_filter'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='829' u='w' c='ngx_http_parse_request_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='832' u='r' c='ngx_http_parse_request_line'/>
+<use f='nginx/src/http/ngx_http_request.c' l='606' u='w' c='ngx_http_create_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1027' u='r' c='ngx_http_process_request_line'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1816' u='r' c='ngx_http_process_request_header'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3415' u='w' c='ngx_http_post_action'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='808' u='r' c='ngx_http_test_expect'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='691' u='r' c='ngx_http_send_special_response'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1036' u='w' c='ngx_http_upstream_cache_send'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1781' u='r' c='ngx_http_variable_status'/>

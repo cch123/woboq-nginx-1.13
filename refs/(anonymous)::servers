@@ -1,0 +1,21 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='154' type='ngx_array_t'/>
+<dec f='nginx/src/http/ngx_http_core_module.h' l='286' type='ngx_array_t'/>
+<offset>2560</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='154'>/* ngx_http_core_srv_conf_t */</doc>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='286'>/* array of ngx_http_core_srv_conf_t */</doc>
+<use f='nginx/src/http/ngx_http.c' l='249' u='m' c='ngx_http_block'/>
+<use f='nginx/src/http/ngx_http.c' l='277' u='m' c='ngx_http_block'/>
+<use f='nginx/src/http/ngx_http.c' l='570' u='m' c='ngx_http_merge_servers'/>
+<use f='nginx/src/http/ngx_http.c' l='575' u='m' c='ngx_http_merge_servers'/>
+<use f='nginx/src/http/ngx_http.c' l='1329' u='m' c='ngx_http_add_address'/>
+<use f='nginx/src/http/ngx_http.c' l='1344' u='m' c='ngx_http_add_server'/>
+<use f='nginx/src/http/ngx_http.c' l='1345' u='a' c='ngx_http_add_server'/>
+<use f='nginx/src/http/ngx_http.c' l='1353' u='m' c='ngx_http_add_server'/>
+<use f='nginx/src/http/ngx_http.c' l='1354' u='m' c='ngx_http_add_server'/>
+<use f='nginx/src/http/ngx_http.c' l='1363' u='a' c='ngx_http_add_server'/>
+<use f='nginx/src/http/ngx_http.c' l='1400' u='m' c='ngx_http_optimize_servers'/>
+<use f='nginx/src/http/ngx_http.c' l='1450' u='m' c='ngx_http_server_names'/>
+<use f='nginx/src/http/ngx_http.c' l='1452' u='m' c='ngx_http_server_names'/>
+<use f='nginx/src/http/ngx_http.c' l='1554' u='m' c='ngx_http_server_names'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2775' u='a' c='ngx_http_core_server'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3184' u='a' c='ngx_http_core_create_main_conf'/>

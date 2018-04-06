@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_file.h' l='38' type='unsigned int'/>
+<offset>1537</offset>
+<use f='nginx/src/core/ngx_output_chain.c' l='243' u='r' c='ngx_output_chain_as_is'/>
+<use f='nginx/src/core/ngx_output_chain.c' l='383' u='r' c='ngx_output_chain_align_file_buf'/>
+<use f='nginx/src/http/modules/ngx_http_static_module.c' l='263' u='w' c='ngx_http_static_handler'/>

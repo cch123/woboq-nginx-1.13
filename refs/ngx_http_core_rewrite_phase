@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='469' type='ngx_int_t ngx_http_core_rewrite_phase(ngx_http_request_t * r, ngx_http_phase_handler_t * ph)'/>
+<use f='nginx/src/http/ngx_http.c' l='493' u='r' c='ngx_http_init_phase_handlers'/>
+<use f='nginx/src/http/ngx_http.c' l='510' u='r' c='ngx_http_init_phase_handlers'/>
+<def f='nginx/src/http/ngx_http_core_module.c' l='904' ll='928' type='ngx_int_t ngx_http_core_rewrite_phase(ngx_http_request_t * r, ngx_http_phase_handler_t * ph)'/>

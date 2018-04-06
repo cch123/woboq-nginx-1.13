@@ -1,0 +1,8 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='415' type='ngx_http_upstream_srv_conf_t * ngx_http_upstream_add(ngx_conf_t * cf, ngx_url_t * u, ngx_uint_t flags)'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='3536' u='c' c='ngx_http_fastcgi_pass'/>
+<use f='nginx/src/http/modules/ngx_http_memcached_module.c' l='701' u='c' c='ngx_http_memcached_pass'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='3645' u='c' c='ngx_http_proxy_pass'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='1853' u='c' c='ngx_http_scgi_pass'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='2140' u='c' c='ngx_http_uwsgi_pass'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5649' u='c' c='ngx_http_upstream'/>
+<def f='nginx/src/http/ngx_http_upstream.c' l='5902' ll='6010' type='ngx_http_upstream_srv_conf_t * ngx_http_upstream_add(ngx_conf_t * cf, ngx_url_t * u, ngx_uint_t flags)'/>

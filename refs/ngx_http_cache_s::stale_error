@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http_cache.h' l='122' type='unsigned int'/>
+<offset>4747</offset>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='639' u='w' c='ngx_http_file_cache_read'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2427' u='r' c='ngx_http_upstream_test_next'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4171' u='r' c='ngx_http_upstream_next'/>

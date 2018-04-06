@@ -1,0 +1,37 @@
+<dec f='nginx/src/core/ngx_conf_file.h' l='78' type='ngx_str_t'/>
+<offset>0</offset>
+<use f='nginx/src/core/ngx_conf_file.c' l='375' u='m' c='ngx_conf_handler'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='377' u='m' c='ngx_conf_handler'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='381' u='m' c='ngx_conf_handler'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='381' u='m' c='ngx_conf_handler'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='381' u='m' c='ngx_conf_handler'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='381' u='m' c='ngx_conf_handler'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='381' u='m' c='ngx_conf_handler'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='381' u='m' c='ngx_conf_handler'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='381' u='m' c='ngx_conf_handler'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='381' u='m' c='ngx_conf_handler'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='381' u='m' c='ngx_conf_handler'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='381' u='m' c='ngx_conf_handler'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='381' u='m' c='ngx_conf_handler'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='381' u='m' c='ngx_conf_handler'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='381' u='m' c='ngx_conf_handler'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='381' u='m' c='ngx_conf_handler'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='381' u='m' c='ngx_conf_handler'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='381' u='m' c='ngx_conf_handler'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='381' u='m' c='ngx_conf_handler'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='381' u='m' c='ngx_conf_handler'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='381' u='m' c='ngx_conf_handler'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='381' u='m' c='ngx_conf_handler'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1051' u='m' c='ngx_conf_set_flag_slot'/>
+<use f='nginx/src/http/modules/ngx_http_limit_conn_module.c' l='567' u='a' c='ngx_http_limit_conn_zone'/>
+<use f='nginx/src/http/modules/ngx_http_limit_conn_module.c' l='582' u='a' c='ngx_http_limit_conn_zone'/>
+<use f='nginx/src/http/modules/ngx_http_limit_req_module.c' l='824' u='a' c='ngx_http_limit_req_zone'/>
+<use f='nginx/src/http/modules/ngx_http_limit_req_module.c' l='841' u='a' c='ngx_http_limit_req_zone'/>
+<use f='nginx/src/http/modules/ngx_http_limit_req_module.c' l='910' u='a' c='ngx_http_limit_req'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_keepalive_module.c' l='515' u='a' c='ngx_http_upstream_keepalive'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4216' u='m' c='ngx_http_core_root'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4227' u='a' c='ngx_http_core_root'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4248' u='a' c='ngx_http_core_root'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4259' u='a' c='ngx_http_core_root'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='5007' u='a' c='ngx_http_disable_symlinks'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2562' u='a' c='ngx_http_file_cache_set_slot'/>

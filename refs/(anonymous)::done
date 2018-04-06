@@ -1,0 +1,2 @@
+<dec f='nginx/src/event/ngx_event.h' l='193' type='void (*)(ngx_cycle_t *)'/>
+<offset>576</offset>

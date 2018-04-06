@@ -1,0 +1,6 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='534' type='ngx_str_t'/>
+<def f='nginx/src/http/ngx_http_core_module.c' l='799' type='ngx_str_t'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2319' u='r' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='616' u='r' c='ngx_http_send_error_page'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='829' u='r' c='ngx_http_upstream_cache'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2720' u='r' c='ngx_http_upstream_process_headers'/>

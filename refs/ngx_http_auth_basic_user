@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='492' type='ngx_int_t ngx_http_auth_basic_user(ngx_http_request_t * r)'/>
+<use f='nginx/src/http/modules/ngx_http_auth_basic_module.c' l='123' u='c' c='ngx_http_auth_basic_handler'/>
+<def f='nginx/src/http/ngx_http_core_module.c' l='1854' ll='1923' type='ngx_int_t ngx_http_auth_basic_user(ngx_http_request_t * r)'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1680' u='c' c='ngx_http_variable_remote_user'/>

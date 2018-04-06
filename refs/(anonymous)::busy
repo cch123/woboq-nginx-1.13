@@ -1,0 +1,30 @@
+<dec f='nginx/src/core/ngx_syslog.h' l='19' type='unsigned int'/>
+<offset>2368</offset>
+<use f='nginx/src/core/ngx_syslog.c' l='246' u='r' c='ngx_syslog_writer'/>
+<use f='nginx/src/core/ngx_syslog.c' l='250' u='w' c='ngx_syslog_writer'/>
+<use f='nginx/src/core/ngx_syslog.c' l='266' u='w' c='ngx_syslog_writer'/>
+<use f='nginx/src/core/ngx_syslog.c' l='372' u='w' c='ngx_syslog_cleanup'/>
+<dec f='nginx/src/http/ngx_http_request.h' l='301' type='ngx_chain_t *'/>
+<dec f='nginx/src/http/ngx_http_request.h' l='320' type='ngx_chain_t *'/>
+<dec f='nginx/src/http/modules/ngx_http_ssi_filter_module.h' l='55' type='ngx_chain_t *'/>
+<offset>2560</offset>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='411' u='r' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='906' u='r' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='938' u='r' c='ngx_http_ssi_output'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='939' u='w' c='ngx_http_ssi_output'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='942' u='r' c='ngx_http_ssi_output'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='949' u='r' c='ngx_http_ssi_output'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='951' u='r' c='ngx_http_ssi_output'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='962' u='w' c='ngx_http_ssi_output'/>
+<use f='nginx/src/http/ngx_http_request.c' l='559' u='r' c='ngx_http_create_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='559' u='r' c='ngx_http_create_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1528' u='r' c='ngx_http_alloc_large_header_buffer'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1529' u='w' c='ngx_http_alloc_large_header_buffer'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2933' u='r' c='ngx_http_set_keepalive'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2959' u='w' c='ngx_http_set_keepalive'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3047' u='r' c='ngx_http_set_keepalive'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3048' u='r' c='ngx_http_set_keepalive'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3055' u='w' c='ngx_http_set_keepalive'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='309' u='r' c='ngx_http_do_read_client_request_body'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='923' u='a' c='ngx_http_request_body_length_filter'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='1076' u='a' c='ngx_http_request_body_chunked_filter'/>

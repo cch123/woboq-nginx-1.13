@@ -1,0 +1,9 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='195' type='ngx_msec_t'/>
+<offset>832</offset>
+<use f='nginx/src/http/ngx_http.c' l='1719' u='r' c='ngx_http_add_listening'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3253' u='w' c='ngx_http_core_create_srv_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3278' u='r' c='ngx_http_core_merge_srv_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3278' u='w' c='ngx_http_core_merge_srv_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3279' u='r' c='ngx_http_core_merge_srv_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3279' u='r' c='ngx_http_core_merge_srv_conf'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1429' u='r' c='ngx_http_read_request_header'/>

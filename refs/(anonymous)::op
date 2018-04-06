@@ -1,0 +1,12 @@
+<dec f='nginx/src/http/ngx_http_script.h' l='181' type='uintptr_t'/>
+<offset>64</offset>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='816' u='w' c='ngx_http_rewrite_if_condition'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='821' u='w' c='ngx_http_rewrite_if_condition'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='826' u='w' c='ngx_http_rewrite_if_condition'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='831' u='w' c='ngx_http_rewrite_if_condition'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='837' u='w' c='ngx_http_rewrite_if_condition'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='842' u='w' c='ngx_http_rewrite_if_condition'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='847' u='w' c='ngx_http_rewrite_if_condition'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='852' u='w' c='ngx_http_rewrite_if_condition'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1530' u='r' c='ngx_http_script_file_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1548' u='r' c='ngx_http_script_file_code'/>

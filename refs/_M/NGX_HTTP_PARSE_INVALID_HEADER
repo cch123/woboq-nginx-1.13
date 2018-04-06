@@ -1,0 +1,8 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='60'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='917' u='c'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='983' u='c'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1005' u='c'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1028' u='c'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1043' u='c'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1069' u='c'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1079' u='c'/>

@@ -1,0 +1,2 @@
+<dec f='include/pcre.h' l='552' type='int pcre_config(int , void * )'/>
+<use f='nginx/src/core/ngx_regex.c' l='420' u='c' c='ngx_regex_pcre_jit'/>

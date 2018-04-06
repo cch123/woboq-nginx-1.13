@@ -1,0 +1,16 @@
+<def f='include/pcre.h' l='462' ll='480'/>
+<size>72</size>
+<doc f='include/pcre.h' l='460'>/* Same structure as above, but with 32 bit char pointers. */</doc>
+<mbr r='pcre32_callout_block::version' o='0' t='int'/>
+<mbr r='pcre32_callout_block::callout_number' o='32' t='int'/>
+<mbr r='pcre32_callout_block::offset_vector' o='64' t='int *'/>
+<mbr r='pcre32_callout_block::subject' o='128' t='const unsigned int *'/>
+<mbr r='pcre32_callout_block::subject_length' o='192' t='int'/>
+<mbr r='pcre32_callout_block::start_match' o='224' t='int'/>
+<mbr r='pcre32_callout_block::current_position' o='256' t='int'/>
+<mbr r='pcre32_callout_block::capture_top' o='288' t='int'/>
+<mbr r='pcre32_callout_block::capture_last' o='320' t='int'/>
+<mbr r='pcre32_callout_block::callout_data' o='384' t='void *'/>
+<mbr r='pcre32_callout_block::pattern_position' o='448' t='int'/>
+<mbr r='pcre32_callout_block::next_item_length' o='480' t='int'/>
+<mbr r='pcre32_callout_block::mark' o='512' t='const unsigned int *'/>

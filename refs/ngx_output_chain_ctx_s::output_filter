@@ -1,0 +1,10 @@
+<dec f='nginx/src/core/ngx_buf.h' l='111' type='ngx_output_chain_filter_pt'/>
+<offset>704</offset>
+<use f='nginx/src/core/ngx_output_chain.c' l='65' u='r' c='ngx_output_chain'/>
+<use f='nginx/src/core/ngx_output_chain.c' l='74' u='r' c='ngx_output_chain'/>
+<use f='nginx/src/core/ngx_output_chain.c' l='214' u='r' c='ngx_output_chain'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='1178' u='w' c='ngx_http_fastcgi_create_request'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1476' u='w' c='ngx_http_proxy_create_request'/>
+<use f='nginx/src/http/ngx_http_copy_filter_module.c' l='124' u='w' c='ngx_http_copy_filter'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='637' u='r' c='ngx_http_upstream_init_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='638' u='w' c='ngx_http_upstream_init_request'/>

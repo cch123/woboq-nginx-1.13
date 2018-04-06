@@ -1,0 +1,6 @@
+<dec f='nginx/src/event/ngx_event.h' l='262'/>
+<doc f='nginx/src/event/ngx_event.h' l='258'>/*
+ * The event filter has no opaque data and requires file descriptors table:
+ * poll, /dev/poll.
+ */</doc>
+<use f='nginx/src/event/ngx_event.c' l='654' u='c'/>

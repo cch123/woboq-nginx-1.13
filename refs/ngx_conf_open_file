@@ -1,0 +1,7 @@
+<dec f='nginx/src/core/ngx_conf_file.h' l='275' type='ngx_open_file_t * ngx_conf_open_file(ngx_cycle_t * cycle, ngx_str_t * name)'/>
+<def f='nginx/src/core/ngx_conf_file.c' l='896' ll='957' type='ngx_open_file_t * ngx_conf_open_file(ngx_cycle_t * cycle, ngx_str_t * name)'/>
+<use f='nginx/src/core/ngx_log.c' l='428' u='c' c='ngx_log_open_default'/>
+<use f='nginx/src/core/ngx_log.c' l='583' u='c' c='ngx_log_set_log'/>
+<use f='nginx/src/core/ngx_log.c' l='661' u='c' c='ngx_log_set_log'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='1221' u='c' c='ngx_http_log_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='1304' u='c' c='ngx_http_log_set_log'/>

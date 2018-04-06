@@ -1,0 +1,16 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='443' type='ngx_uint_t'/>
+<offset>9472</offset>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='859' u='r' c='ngx_http_log_status'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='860' u='r' c='ngx_http_log_status'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='187' u='r' c='ngx_http_rewrite_handler'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='191' u='r' c='ngx_http_rewrite_handler'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1750' u='r' c='ngx_http_send_header'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1751' u='r' c='ngx_http_send_header'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='426' u='w' c='ngx_http_special_response_handler'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='515' u='w' c='ngx_http_special_response_handler'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='598' u='w' c='ngx_http_send_error_page'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='638' u='w' c='ngx_http_send_error_page'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='655' u='r' c='ngx_http_send_error_page'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='795' u='w' c='ngx_http_send_refresh'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1775' u='r' c='ngx_http_variable_status'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1776' u='r' c='ngx_http_variable_status'/>

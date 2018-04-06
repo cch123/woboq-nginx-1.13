@@ -1,0 +1,12 @@
+<dec f='include/x86_64-linux-gnu/sys/stat.h' l='219' type='int fstat(int __fd, struct stat * __buf)'/>
+<dec f='include/x86_64-linux-gnu/sys/stat.h' l='229' type='int fstat64(int __fd, struct stat64 * __buf)'/>
+<def f='include/x86_64-linux-gnu/sys/stat.h' l='465' ll='469' macro='1' type='int fstat(int __fd, struct stat * __statbuf)'/>
+<def f='include/x86_64-linux-gnu/sys/stat.h' l='514' ll='518' macro='1' type='int fstat64(int __fd, struct stat64 * __statbuf)'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='193' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_file.c' l='821' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='586' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='822' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='890' macro='1' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1439' macro='1' u='c'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1398' macro='1' u='c'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1473' macro='1' u='c'/>

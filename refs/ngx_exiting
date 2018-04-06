@@ -1,0 +1,8 @@
+<dec f='nginx/src/os/unix/ngx_process_cycle.h' l='47' type='ngx_uint_t'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_keepalive_module.c' l='309' u='r' c='ngx_http_upstream_free_keepalive_peer'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2614' u='r' c='ngx_http_finalize_connection'/>
+<def f='nginx/src/os/unix/ngx_process_cycle.c' l='42' type='ngx_uint_t'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='741' u='r' c='ngx_worker_process_cycle'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='763' u='r' c='ngx_worker_process_cycle'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='764' u='w' c='ngx_worker_process_cycle'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='989' u='r' c='ngx_worker_process_exit'/>

@@ -1,0 +1,15 @@
+<dec f='nginx/src/event/ngx_event.h' l='361'/>
+<use f='nginx/src/core/ngx_connection.c' l='1145' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4619' u='c'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='601' u='c'/>
+<use f='nginx/src/event/ngx_event.c' l='349' u='c'/>
+<use f='nginx/src/event/ngx_event.c' l='364' u='c'/>
+<use f='nginx/src/event/ngx_event.c' l='374' u='c'/>
+<use f='nginx/src/event/ngx_event.c' l='388' u='c'/>
+<use f='nginx/src/event/ngx_event.c' l='396' u='c'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='296' u='c'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3068' u='c'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3268' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='531' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1322' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1449' u='c'/>

@@ -1,0 +1,15 @@
+<dec f='nginx/src/core/ngx_connection.h' l='144' type='socklen_t'/>
+<offset>896</offset>
+<use f='nginx/src/core/ngx_proxy_protocol.c' l='201' u='r' c='ngx_proxy_protocol_write'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='218' u='w' c='ngx_event_accept'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='275' u='r' c='ngx_event_accept'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='445' u='w' c='ngx_event_recvmsg'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='447' u='r' c='ngx_event_recvmsg'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='448' u='w' c='ngx_event_recvmsg'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='461' u='r' c='ngx_event_recvmsg'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='467' u='r' c='ngx_event_recvmsg'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='602' u='r' c='ngx_event_recvmsg'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='345' u='r' c='ngx_http_geo_real_addr'/>
+<use f='nginx/src/os/unix/ngx_udp_send.c' l='23' u='r' c='ngx_udp_unix_send'/>
+<use f='nginx/src/os/unix/ngx_udp_sendmsg_chain.c' l='222' u='r' c='ngx_sendmsg'/>
+<use f='nginx/src/os/unix/ngx_udp_sendmsg_chain.c' l='224' u='r' c='ngx_sendmsg'/>

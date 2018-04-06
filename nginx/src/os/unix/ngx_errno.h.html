@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ngx_errno.h source code [nginx/src/os/unix/ngx_errno.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../../../../data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../../../data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../../../data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../../data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'nginx/src/os/unix/ngx_errno.h'; var root_path = '../../../..'; var data_path = '../../../../../data';</script>
+<script src='../../../../../data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../../..'>nginx</a>/<a href='../..'>src</a>/<a href='..'>os</a>/<a href='./'>unix</a>/<a href='ngx_errno.h.html'>ngx_errno.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td></td></tr>
+<tr><th id="2">2</th><td><i>/*</i></td></tr>
+<tr><th id="3">3</th><td><i> * Copyright (C) Igor Sysoev</i></td></tr>
+<tr><th id="4">4</th><td><i> * Copyright (C) Nginx, Inc.</i></td></tr>
+<tr><th id="5">5</th><td><i> */</i></td></tr>
+<tr><th id="6">6</th><td></td></tr>
+<tr><th id="7">7</th><td></td></tr>
+<tr><th id="8">8</th><td><u>#<span data-ppcond="8">ifndef</span> <span class="macro" data-ref="_M/_NGX_ERRNO_H_INCLUDED_">_NGX_ERRNO_H_INCLUDED_</span></u></td></tr>
+<tr><th id="9">9</th><td><u>#define <dfn class="macro" id="_M/_NGX_ERRNO_H_INCLUDED_" data-ref="_M/_NGX_ERRNO_H_INCLUDED_">_NGX_ERRNO_H_INCLUDED_</dfn></u></td></tr>
+<tr><th id="10">10</th><td></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td><u>#include <a href="../../core/ngx_config.h.html">&lt;ngx_config.h&gt;</a></u></td></tr>
+<tr><th id="13">13</th><td><u>#include <a href="../../core/ngx_core.h.html">&lt;ngx_core.h&gt;</a></u></td></tr>
+<tr><th id="14">14</th><td></td></tr>
+<tr><th id="15">15</th><td></td></tr>
+<tr><th id="16">16</th><td><b>typedef</b> <em>int</em>               <dfn class="typedef" id="ngx_err_t" title='ngx_err_t' data-type='int' data-ref="ngx_err_t">ngx_err_t</dfn>;</td></tr>
+<tr><th id="17">17</th><td></td></tr>
+<tr><th id="18">18</th><td><u>#define <dfn class="macro" id="_M/NGX_EPERM" data-ref="_M/NGX_EPERM">NGX_EPERM</dfn>         EPERM</u></td></tr>
+<tr><th id="19">19</th><td><u>#define <dfn class="macro" id="_M/NGX_ENOENT" data-ref="_M/NGX_ENOENT">NGX_ENOENT</dfn>        ENOENT</u></td></tr>
+<tr><th id="20">20</th><td><u>#define <dfn class="macro" id="_M/NGX_ENOPATH" data-ref="_M/NGX_ENOPATH">NGX_ENOPATH</dfn>       ENOENT</u></td></tr>
+<tr><th id="21">21</th><td><u>#define <dfn class="macro" id="_M/NGX_ESRCH" data-ref="_M/NGX_ESRCH">NGX_ESRCH</dfn>         ESRCH</u></td></tr>
+<tr><th id="22">22</th><td><u>#define <dfn class="macro" id="_M/NGX_EINTR" data-ref="_M/NGX_EINTR">NGX_EINTR</dfn>         EINTR</u></td></tr>
+<tr><th id="23">23</th><td><u>#define <dfn class="macro" id="_M/NGX_ECHILD" data-ref="_M/NGX_ECHILD">NGX_ECHILD</dfn>        ECHILD</u></td></tr>
+<tr><th id="24">24</th><td><u>#define <dfn class="macro" id="_M/NGX_ENOMEM" data-ref="_M/NGX_ENOMEM">NGX_ENOMEM</dfn>        ENOMEM</u></td></tr>
+<tr><th id="25">25</th><td><u>#define <dfn class="macro" id="_M/NGX_EACCES" data-ref="_M/NGX_EACCES">NGX_EACCES</dfn>        EACCES</u></td></tr>
+<tr><th id="26">26</th><td><u>#define <dfn class="macro" id="_M/NGX_EBUSY" data-ref="_M/NGX_EBUSY">NGX_EBUSY</dfn>         EBUSY</u></td></tr>
+<tr><th id="27">27</th><td><u>#define <dfn class="macro" id="_M/NGX_EEXIST" data-ref="_M/NGX_EEXIST">NGX_EEXIST</dfn>        EEXIST</u></td></tr>
+<tr><th id="28">28</th><td><u>#define <dfn class="macro" id="_M/NGX_EEXIST_FILE" data-ref="_M/NGX_EEXIST_FILE">NGX_EEXIST_FILE</dfn>   EEXIST</u></td></tr>
+<tr><th id="29">29</th><td><u>#define <dfn class="macro" id="_M/NGX_EXDEV" data-ref="_M/NGX_EXDEV">NGX_EXDEV</dfn>         EXDEV</u></td></tr>
+<tr><th id="30">30</th><td><u>#define <dfn class="macro" id="_M/NGX_ENOTDIR" data-ref="_M/NGX_ENOTDIR">NGX_ENOTDIR</dfn>       ENOTDIR</u></td></tr>
+<tr><th id="31">31</th><td><u>#define <dfn class="macro" id="_M/NGX_EISDIR" data-ref="_M/NGX_EISDIR">NGX_EISDIR</dfn>        EISDIR</u></td></tr>
+<tr><th id="32">32</th><td><u>#define <dfn class="macro" id="_M/NGX_EINVAL" data-ref="_M/NGX_EINVAL">NGX_EINVAL</dfn>        EINVAL</u></td></tr>
+<tr><th id="33">33</th><td><u>#define <dfn class="macro" id="_M/NGX_ENFILE" data-ref="_M/NGX_ENFILE">NGX_ENFILE</dfn>        ENFILE</u></td></tr>
+<tr><th id="34">34</th><td><u>#define <dfn class="macro" id="_M/NGX_EMFILE" data-ref="_M/NGX_EMFILE">NGX_EMFILE</dfn>        EMFILE</u></td></tr>
+<tr><th id="35">35</th><td><u>#define <dfn class="macro" id="_M/NGX_ENOSPC" data-ref="_M/NGX_ENOSPC">NGX_ENOSPC</dfn>        ENOSPC</u></td></tr>
+<tr><th id="36">36</th><td><u>#define <dfn class="macro" id="_M/NGX_EPIPE" data-ref="_M/NGX_EPIPE">NGX_EPIPE</dfn>         EPIPE</u></td></tr>
+<tr><th id="37">37</th><td><u>#define <dfn class="macro" id="_M/NGX_EINPROGRESS" data-ref="_M/NGX_EINPROGRESS">NGX_EINPROGRESS</dfn>   EINPROGRESS</u></td></tr>
+<tr><th id="38">38</th><td><u>#define <dfn class="macro" id="_M/NGX_ENOPROTOOPT" data-ref="_M/NGX_ENOPROTOOPT">NGX_ENOPROTOOPT</dfn>   ENOPROTOOPT</u></td></tr>
+<tr><th id="39">39</th><td><u>#define <dfn class="macro" id="_M/NGX_EOPNOTSUPP" data-ref="_M/NGX_EOPNOTSUPP">NGX_EOPNOTSUPP</dfn>    EOPNOTSUPP</u></td></tr>
+<tr><th id="40">40</th><td><u>#define <dfn class="macro" id="_M/NGX_EADDRINUSE" data-ref="_M/NGX_EADDRINUSE">NGX_EADDRINUSE</dfn>    EADDRINUSE</u></td></tr>
+<tr><th id="41">41</th><td><u>#define <dfn class="macro" id="_M/NGX_ECONNABORTED" data-ref="_M/NGX_ECONNABORTED">NGX_ECONNABORTED</dfn>  ECONNABORTED</u></td></tr>
+<tr><th id="42">42</th><td><u>#define <dfn class="macro" id="_M/NGX_ECONNRESET" data-ref="_M/NGX_ECONNRESET">NGX_ECONNRESET</dfn>    ECONNRESET</u></td></tr>
+<tr><th id="43">43</th><td><u>#define <dfn class="macro" id="_M/NGX_ENOTCONN" data-ref="_M/NGX_ENOTCONN">NGX_ENOTCONN</dfn>      ENOTCONN</u></td></tr>
+<tr><th id="44">44</th><td><u>#define <dfn class="macro" id="_M/NGX_ETIMEDOUT" data-ref="_M/NGX_ETIMEDOUT">NGX_ETIMEDOUT</dfn>     ETIMEDOUT</u></td></tr>
+<tr><th id="45">45</th><td><u>#define <dfn class="macro" id="_M/NGX_ECONNREFUSED" data-ref="_M/NGX_ECONNREFUSED">NGX_ECONNREFUSED</dfn>  ECONNREFUSED</u></td></tr>
+<tr><th id="46">46</th><td><u>#define <dfn class="macro" id="_M/NGX_ENAMETOOLONG" data-ref="_M/NGX_ENAMETOOLONG">NGX_ENAMETOOLONG</dfn>  ENAMETOOLONG</u></td></tr>
+<tr><th id="47">47</th><td><u>#define <dfn class="macro" id="_M/NGX_ENETDOWN" data-ref="_M/NGX_ENETDOWN">NGX_ENETDOWN</dfn>      ENETDOWN</u></td></tr>
+<tr><th id="48">48</th><td><u>#define <dfn class="macro" id="_M/NGX_ENETUNREACH" data-ref="_M/NGX_ENETUNREACH">NGX_ENETUNREACH</dfn>   ENETUNREACH</u></td></tr>
+<tr><th id="49">49</th><td><u>#define <dfn class="macro" id="_M/NGX_EHOSTDOWN" data-ref="_M/NGX_EHOSTDOWN">NGX_EHOSTDOWN</dfn>     EHOSTDOWN</u></td></tr>
+<tr><th id="50">50</th><td><u>#define <dfn class="macro" id="_M/NGX_EHOSTUNREACH" data-ref="_M/NGX_EHOSTUNREACH">NGX_EHOSTUNREACH</dfn>  EHOSTUNREACH</u></td></tr>
+<tr><th id="51">51</th><td><u>#define <dfn class="macro" id="_M/NGX_ENOSYS" data-ref="_M/NGX_ENOSYS">NGX_ENOSYS</dfn>        ENOSYS</u></td></tr>
+<tr><th id="52">52</th><td><u>#define <dfn class="macro" id="_M/NGX_ECANCELED" data-ref="_M/NGX_ECANCELED">NGX_ECANCELED</dfn>     ECANCELED</u></td></tr>
+<tr><th id="53">53</th><td><u>#define <dfn class="macro" id="_M/NGX_EILSEQ" data-ref="_M/NGX_EILSEQ">NGX_EILSEQ</dfn>        EILSEQ</u></td></tr>
+<tr><th id="54">54</th><td><u>#define <dfn class="macro" id="_M/NGX_ENOMOREFILES" data-ref="_M/NGX_ENOMOREFILES">NGX_ENOMOREFILES</dfn>  0</u></td></tr>
+<tr><th id="55">55</th><td><u>#define <dfn class="macro" id="_M/NGX_ELOOP" data-ref="_M/NGX_ELOOP">NGX_ELOOP</dfn>         ELOOP</u></td></tr>
+<tr><th id="56">56</th><td><u>#define <dfn class="macro" id="_M/NGX_EBADF" data-ref="_M/NGX_EBADF">NGX_EBADF</dfn>         EBADF</u></td></tr>
+<tr><th id="57">57</th><td></td></tr>
+<tr><th id="58">58</th><td><u>#<span data-ppcond="58">if</span> (<a class="macro" href="../../../objs/ngx_auto_config.h.html#342" title="1" data-ref="_M/NGX_HAVE_OPENAT">NGX_HAVE_OPENAT</a>)</u></td></tr>
+<tr><th id="59">59</th><td><u>#define <dfn class="macro" id="_M/NGX_EMLINK" data-ref="_M/NGX_EMLINK">NGX_EMLINK</dfn>        EMLINK</u></td></tr>
+<tr><th id="60">60</th><td><u>#<span data-ppcond="58">endif</span></u></td></tr>
+<tr><th id="61">61</th><td></td></tr>
+<tr><th id="62">62</th><td><u>#<span data-ppcond="62">if</span> (__hpux__)</u></td></tr>
+<tr><th id="63">63</th><td><u>#define NGX_EAGAIN        EWOULDBLOCK</u></td></tr>
+<tr><th id="64">64</th><td><u>#<span data-ppcond="62">else</span></u></td></tr>
+<tr><th id="65">65</th><td><u>#define <dfn class="macro" id="_M/NGX_EAGAIN" data-ref="_M/NGX_EAGAIN">NGX_EAGAIN</dfn>        EAGAIN</u></td></tr>
+<tr><th id="66">66</th><td><u>#<span data-ppcond="62">endif</span></u></td></tr>
+<tr><th id="67">67</th><td></td></tr>
+<tr><th id="68">68</th><td></td></tr>
+<tr><th id="69">69</th><td><u>#define <dfn class="macro" id="_M/ngx_errno" data-ref="_M/ngx_errno">ngx_errno</dfn>                  errno</u></td></tr>
+<tr><th id="70">70</th><td><u>#define <dfn class="macro" id="_M/ngx_socket_errno" data-ref="_M/ngx_socket_errno">ngx_socket_errno</dfn>           errno</u></td></tr>
+<tr><th id="71">71</th><td><u>#define <dfn class="macro" id="_M/ngx_set_errno" data-ref="_M/ngx_set_errno">ngx_set_errno</dfn>(err)         errno = err</u></td></tr>
+<tr><th id="72">72</th><td><u>#define <dfn class="macro" id="_M/ngx_set_socket_errno" data-ref="_M/ngx_set_socket_errno">ngx_set_socket_errno</dfn>(err)  errno = err</u></td></tr>
+<tr><th id="73">73</th><td></td></tr>
+<tr><th id="74">74</th><td></td></tr>
+<tr><th id="75">75</th><td><a class="typedef" href="../../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a> *<dfn class="decl fn" id="ngx_strerror" title='ngx_strerror' data-ref="ngx_strerror">ngx_strerror</dfn>(<a class="typedef" href="#ngx_err_t" title='ngx_err_t' data-type='int' data-ref="ngx_err_t">ngx_err_t</a> <dfn class="local col6 decl" id="2126err" title='err' data-type='ngx_err_t' data-ref="2126err">err</dfn>, <a class="typedef" href="../../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a> *<dfn class="local col7 decl" id="2127errstr" title='errstr' data-type='u_char *' data-ref="2127errstr">errstr</dfn>, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span> <dfn class="local col8 decl" id="2128size" title='size' data-type='size_t' data-ref="2128size">size</dfn>);</td></tr>
+<tr><th id="76">76</th><td><a class="typedef" href="../../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a> <dfn class="decl fn" id="ngx_strerror_init" title='ngx_strerror_init' data-ref="ngx_strerror_init">ngx_strerror_init</dfn>(<em>void</em>);</td></tr>
+<tr><th id="77">77</th><td></td></tr>
+<tr><th id="78">78</th><td></td></tr>
+<tr><th id="79">79</th><td><u>#<span data-ppcond="8">endif</span> /* _NGX_ERRNO_H_INCLUDED_ */</u></td></tr>
+<tr><th id="80">80</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../../../objs/ngx_modules.c.html'>nginx/objs/ngx_modules.c</a><br/>Generated on <em>2018-Apr-06</em> from project nginx<br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

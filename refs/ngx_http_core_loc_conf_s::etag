@@ -1,0 +1,9 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='395' type='ngx_flag_t'/>
+<offset>4224</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='395'>/* etag */</doc>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1589' u='r' c='ngx_http_set_etag'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3410' u='w' c='ngx_http_core_create_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3680' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3680' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3680' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3680' u='r' c='ngx_http_core_merge_loc_conf'/>

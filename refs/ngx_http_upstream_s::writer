@@ -1,0 +1,11 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='328' type='ngx_chain_writer_ctx_t'/>
+<offset>1984</offset>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='1603' u='a' c='ngx_http_fastcgi_body_output_filter'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1699' u='a' c='ngx_http_proxy_body_output_filter'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='639' u='a' c='ngx_http_upstream_init_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='642' u='m' c='ngx_http_upstream_init_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1578' u='m' c='ngx_http_upstream_connect'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1579' u='m' c='ngx_http_upstream_connect'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1579' u='m' c='ngx_http_upstream_connect'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1580' u='m' c='ngx_http_upstream_connect'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1581' u='m' c='ngx_http_upstream_connect'/>

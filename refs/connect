@@ -1,0 +1,12 @@
+<dec f='include/x86_64-linux-gnu/sys/socket.h' l='137' type='int connect(int __fd, __CONST_SOCKADDR_ARG __addr, socklen_t __len)'/>
+<doc f='include/x86_64-linux-gnu/sys/socket.h' l='130'>/* Open a connection on socket FD to peer at ADDR (which LEN bytes long).
+   For connectionless socket types, just set the default address to send to
+   and the only address from which to accept transmissions.
+   Return 0 on success, -1 for errors.
+
+   This function is a cancellation point and therefore not marked with
+   __THROW.  */</doc>
+<use f='nginx/src/core/ngx_resolver.c' l='4424' u='c' c='ngx_udp_connect'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4516' u='c' c='ngx_tcp_connect'/>
+<use f='nginx/src/core/ngx_syslog.c' l='334' u='c' c='ngx_syslog_init_peer'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='193' u='c' c='ngx_event_connect_peer'/>

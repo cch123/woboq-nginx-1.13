@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_script.h' l='175' type='7'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='852' u='r' c='ngx_http_rewrite_if_condition'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1541' c='ngx_http_script_file_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1591' c='ngx_http_script_file_code'/>

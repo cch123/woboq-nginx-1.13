@@ -1,0 +1,4 @@
+<dec f='nginx/src/os/unix/ngx_files.h' l='328' type='ngx_int_t ngx_directio_on(ngx_fd_t fd)'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='923' u='c' c='ngx_open_and_stat_file'/>
+<use f='nginx/src/core/ngx_output_chain.c' l='606' u='c' c='ngx_output_chain_copy_buf'/>
+<def f='nginx/src/os/unix/ngx_files.c' l='831' ll='843' type='ngx_int_t ngx_directio_on(ngx_fd_t fd)'/>

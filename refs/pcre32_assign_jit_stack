@@ -1,0 +1,1 @@
+<dec f='include/pcre.h' l='667' type='void pcre32_assign_jit_stack(pcre32_extra * , pcre32_jit_callback , void * )'/>

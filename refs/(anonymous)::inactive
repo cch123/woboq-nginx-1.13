@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_open_file_cache.h' l='98' type='time_t'/>
+<offset>768</offset>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='74' u='w' c='ngx_open_file_cache_init'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1120' u='r' c='ngx_expire_old_cached_files'/>

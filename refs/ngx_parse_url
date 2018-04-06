@@ -1,0 +1,11 @@
+<dec f='nginx/src/core/ngx_inet.h' l='122' type='ngx_int_t ngx_parse_url(ngx_pool_t * pool, ngx_url_t * u)'/>
+<def f='nginx/src/core/ngx_inet.c' l='681' ll='699' type='ngx_int_t ngx_parse_url(ngx_pool_t * pool, ngx_url_t * u)'/>
+<use f='nginx/src/core/ngx_resolver.c' l='254' u='c' c='ngx_resolver_create'/>
+<use f='nginx/src/core/ngx_syslog.c' l='112' u='c' c='ngx_syslog_parse_args'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='768' u='c' c='ngx_http_fastcgi_eval'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='994' u='c' c='ngx_http_proxy_eval'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='564' u='c' c='ngx_http_scgi_eval'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='769' u='c' c='ngx_http_uwsgi_eval'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3758' u='c' c='ngx_http_core_listen'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5866' u='c' c='ngx_http_upstream_server'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5912' u='c' c='ngx_http_upstream_add'/>

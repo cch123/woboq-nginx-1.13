@@ -1,0 +1,8 @@
+<dec f='nginx/src/core/ngx_connection.h' l='215' type='ngx_int_t ngx_connection_local_sockaddr(ngx_connection_t * c, ngx_str_t * s, ngx_uint_t port)'/>
+<def f='nginx/src/core/ngx_connection.c' l='1280' ll='1349' type='ngx_int_t ngx_connection_local_sockaddr(ngx_connection_t * c, ngx_str_t * s, ngx_uint_t port)'/>
+<use f='nginx/src/core/ngx_proxy_protocol.c' l='180' u='c' c='ngx_proxy_protocol_write'/>
+<use f='nginx/src/http/modules/ngx_http_userid_filter_module.c' l='529' u='c' c='ngx_http_userid_create_uid'/>
+<use f='nginx/src/http/ngx_http_header_filter_module.c' l='341' u='c' c='ngx_http_header_filter'/>
+<use f='nginx/src/http/ngx_http_request.c' l='240' u='c' c='ngx_http_init_connection'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1368' u='c' c='ngx_http_variable_server_addr'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1400' u='c' c='ngx_http_variable_server_port'/>

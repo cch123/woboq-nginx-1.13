@@ -1,0 +1,11 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='44' type='ngx_connection_t *'/>
+<offset>0</offset>
+<use f='nginx/src/core/ngx_resolver.c' l='317' u='r' c='ngx_resolver_cleanup'/>
+<use f='nginx/src/core/ngx_resolver.c' l='318' u='r' c='ngx_resolver_cleanup'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1290' u='r' c='ngx_resolver_send_udp_query'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1295' u='r' c='ngx_resolver_send_udp_query'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1296' u='r' c='ngx_resolver_send_udp_query'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1297' u='r' c='ngx_resolver_send_udp_query'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1300' u='r' c='ngx_resolver_send_udp_query'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4417' u='w' c='ngx_udp_connect'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4452' u='w' c='ngx_udp_connect'/>

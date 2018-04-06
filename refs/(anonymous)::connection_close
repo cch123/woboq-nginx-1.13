@@ -1,0 +1,12 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='292' type='unsigned int'/>
+<offset>3008</offset>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1752' u='w' c='ngx_http_proxy_process_status_line'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1778' u='w' c='ngx_http_proxy_process_status_line'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1913' u='r' c='ngx_http_proxy_process_header'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1971' u='r' c='ngx_http_proxy_input_filter_init'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1987' u='r' c='ngx_http_proxy_input_filter_init'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='2043' u='r' c='ngx_http_proxy_copy_filter'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='2141' u='r' c='ngx_http_proxy_chunked_filter'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='2226' u='r' c='ngx_http_proxy_non_buffered_copy_filter'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='2306' u='r' c='ngx_http_proxy_non_buffered_chunked_filter'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4814' u='w' c='ngx_http_upstream_process_connection'/>

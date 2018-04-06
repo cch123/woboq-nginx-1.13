@@ -1,0 +1,3 @@
+<dec f='nginx/src/core/ngx_crc32.h' l='76' type='ngx_int_t ngx_crc32_table_init()'/>
+<use f='nginx/src/core/nginx.c' l='273' u='c' c='main'/>
+<def f='nginx/src/core/ngx_crc32.c' l='105' ll='129' type='ngx_int_t ngx_crc32_table_init()'/>

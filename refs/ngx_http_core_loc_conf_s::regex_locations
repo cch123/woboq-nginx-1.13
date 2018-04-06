@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='320' type='ngx_http_core_loc_conf_t **'/>
+<offset>320</offset>
+<use f='nginx/src/http/ngx_http.c' l='774' u='w' c='ngx_http_init_locations'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1340' u='r' c='ngx_http_core_find_location'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1342' u='r' c='ngx_http_core_find_location'/>

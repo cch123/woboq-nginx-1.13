@@ -1,0 +1,34 @@
+<dec f='nginx/src/core/ngx_file.h' l='61' type='ngx_uint_t'/>
+<dec f='nginx/src/core/ngx_conf_file.h' l='102' type='ngx_uint_t'/>
+<offset>1728</offset>
+<use f='nginx/src/core/ngx_conf_file.c' l='88' u='w' c='ngx_conf_param'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='215' u='w' c='ngx_conf_parse'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='527' u='r' c='ngx_conf_read_token'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='558' u='w' c='ngx_conf_read_token'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='616' u='w' c='ngx_conf_read_token'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='664' u='r' c='ngx_conf_read_token'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1020' u='r' c='ngx_conf_log_error'/>
+<use f='nginx/src/core/ngx_file.c' l='394' u='w' c='ngx_conf_set_path_slot'/>
+<use f='nginx/src/core/ngx_file.c' l='394' u='r' c='ngx_conf_set_path_slot'/>
+<use f='nginx/src/core/ngx_file.c' l='542' u='r' c='ngx_add_path'/>
+<use f='nginx/src/core/ngx_file.c' l='564' u='r' c='ngx_add_path'/>
+<use f='nginx/src/core/ngx_file.c' l='571' u='r' c='ngx_add_path'/>
+<dec f='nginx/src/http/ngx_http_script.h' l='23' type='ngx_str_t'/>
+<dec f='nginx/src/http/ngx_http_core_module.h' l='447' type='ngx_uint_t'/>
+<offset>384</offset>
+<use f='nginx/src/http/ngx_http.c' l='879' u='w' c='ngx_http_add_location'/>
+<use f='nginx/src/http/ngx_http.c' l='879' u='r' c='ngx_http_add_location'/>
+<use f='nginx/src/http/ngx_http.c' l='984' u='r' c='ngx_http_join_exact_locations'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2570' u='w' c='ngx_http_file_cache_set_slot'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2570' u='r' c='ngx_http_file_cache_set_slot'/>
+<use f='nginx/src/http/ngx_http_script.c' l='927' u='w' c='ngx_http_script_regex_start_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='930' u='m' c='ngx_http_script_regex_start_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='931' u='m' c='ngx_http_script_regex_start_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='934' u='a' c='ngx_http_script_regex_start_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='940' u='a' c='ngx_http_script_regex_start_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='973' u='a' c='ngx_http_script_regex_start_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1032' u='w' c='ngx_http_script_regex_start_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1032' u='r' c='ngx_http_script_regex_start_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1631' u='w' c='ngx_http_script_complex_value_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1631' u='r' c='ngx_http_script_complex_value_code'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5980' u='r' c='ngx_http_upstream_add'/>

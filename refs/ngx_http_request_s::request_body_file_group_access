@@ -1,0 +1,3 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='484' type='unsigned int'/>
+<offset>9846</offset>
+<use f='nginx/src/http/ngx_http_request_body.c' l='459' u='r' c='ngx_http_write_request_body'/>

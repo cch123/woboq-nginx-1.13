@@ -1,0 +1,8 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='395' type='unsigned int'/>
+<offset>8460</offset>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1619' u='w' c='ngx_http_upstream_connect'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1998' u='r' c='ngx_http_upstream_send_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2080' u='w' c='ngx_http_upstream_send_request_body'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2083' u='w' c='ngx_http_upstream_send_request_body'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2128' u='w' c='ngx_http_upstream_send_request_body'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2131' u='w' c='ngx_http_upstream_send_request_body'/>

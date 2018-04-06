@@ -1,0 +1,10 @@
+<dec f='nginx/src/http/ngx_http_script.h' l='211' type='char * ngx_http_set_complex_value_slot(ngx_conf_t * cf, ngx_command_t * cmd, void * conf)'/>
+<use f='nginx/src/http/modules/ngx_http_auth_basic_module.c' l='42' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_auth_basic_module.c' l='42' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_auth_basic_module.c' l='42' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_auth_basic_module.c' l='42' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='385'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='385'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='385'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='385'/>
+<def f='nginx/src/http/ngx_http_script.c' l='211' ll='244' type='char * ngx_http_set_complex_value_slot(ngx_conf_t * cf, ngx_command_t * cmd, void * conf)'/>

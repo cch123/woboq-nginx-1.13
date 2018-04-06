@@ -1,0 +1,6 @@
+<dec f='nginx/src/http/ngx_http.h' l='121' type='ngx_int_t ngx_http_post_request(ngx_http_request_t * r, ngx_http_posted_request_t * pr)'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2391' u='c' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_postpone_filter_module.c' l='116' u='c' c='ngx_http_postpone_filter'/>
+<def f='nginx/src/http/ngx_http_request.c' l='2288' ll='2308' type='ngx_int_t ngx_http_post_request(ngx_http_request_t * r, ngx_http_posted_request_t * pr)'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2454' u='c' c='ngx_http_finalize_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2556' u='c' c='ngx_http_terminate_request'/>

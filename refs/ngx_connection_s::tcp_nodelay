@@ -1,0 +1,10 @@
+<dec f='nginx/src/core/ngx_connection.h' l='180' type='unsigned int'/>
+<offset>1748</offset>
+<doc f='nginx/src/core/ngx_connection.h' l='180'>/* ngx_connection_tcp_nodelay_e */</doc>
+<use f='nginx/src/core/ngx_connection.c' l='1357' u='r' c='ngx_tcp_nodelay'/>
+<use f='nginx/src/core/ngx_connection.c' l='1389' u='w' c='ngx_tcp_nodelay'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='226' u='w' c='ngx_event_accept'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='158' u='w' c='ngx_event_connect_peer'/>
+<use f='nginx/src/os/unix/ngx_linux_sendfile_chain.c' l='101' u='r' c='ngx_linux_sendfile_chain'/>
+<use f='nginx/src/os/unix/ngx_linux_sendfile_chain.c' l='124' u='w' c='ngx_linux_sendfile_chain'/>
+<use f='nginx/src/os/unix/ngx_linux_sendfile_chain.c' l='131' u='r' c='ngx_linux_sendfile_chain'/>

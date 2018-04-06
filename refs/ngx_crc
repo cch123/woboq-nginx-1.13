@@ -1,0 +1,2 @@
+<def f='nginx/src/core/ngx_crc.h' l='18' ll='36' type='uint32_t ngx_crc(u_char * data, size_t len)'/>
+<doc f='nginx/src/core/ngx_crc.h' l='16'>/* 32-bit crc16 */</doc>

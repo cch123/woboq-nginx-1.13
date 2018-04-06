@@ -1,0 +1,4 @@
+<dec f='nginx/src/os/unix/ngx_process_cycle.h' l='42' type='ngx_uint_t'/>
+<use f='nginx/src/event/ngx_event.c' l='737' u='r' c='ngx_event_process_init'/>
+<def f='nginx/src/os/unix/ngx_process_cycle.c' l='32' type='ngx_uint_t'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='733' u='w' c='ngx_worker_process_cycle'/>

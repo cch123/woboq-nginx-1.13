@@ -1,0 +1,8 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='126' type='10'/>
+<use f='nginx/src/http/ngx_http_core_module.h' l='176' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='1901' u='m' c='ngx_http_log_init'/>
+<use f='nginx/src/http/ngx_http.c' l='399' u='m' c='ngx_http_init_phases'/>
+<use f='nginx/src/http/ngx_http.c' l='471' u='r' c='ngx_http_init_phase_handlers'/>
+<use f='nginx/src/http/ngx_http.c' l='484' u='r' c='ngx_http_init_phase_handlers'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3562' u='m' c='ngx_http_log_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3563' u='m' c='ngx_http_log_request'/>

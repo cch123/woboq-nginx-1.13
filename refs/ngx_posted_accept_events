@@ -1,0 +1,8 @@
+<dec f='nginx/src/event/ngx_event_posted.h' l='44' type='ngx_queue_t'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='896' u='a' c='ngx_epoll_process_events'/>
+<use f='nginx/src/event/ngx_event.c' l='249' u='a' c='ngx_process_events_and_timers'/>
+<use f='nginx/src/event/ngx_event.c' l='601' u='a' c='ngx_event_process_init'/>
+<use f='nginx/src/event/ngx_event.c' l='601' u='a' c='ngx_event_process_init'/>
+<use f='nginx/src/event/ngx_event.c' l='601' u='a' c='ngx_event_process_init'/>
+<use f='nginx/src/event/ngx_event.c' l='601' u='a' c='ngx_event_process_init'/>
+<def f='nginx/src/event/ngx_event_posted.c' l='13' type='ngx_queue_t'/>

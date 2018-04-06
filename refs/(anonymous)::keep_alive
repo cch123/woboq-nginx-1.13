@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='211' type='ngx_table_elt_t *'/>
+<offset>1728</offset>
+<use f='nginx/src/http/ngx_http_request.c' l='1865' u='r' c='ngx_http_process_request_header'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1867' u='r' c='ngx_http_process_request_header'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1868' u='r' c='ngx_http_process_request_header'/>

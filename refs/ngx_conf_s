@@ -1,0 +1,14 @@
+<def f='nginx/src/core/ngx_conf_file.h' l='116' ll='132'/>
+<size>96</size>
+<mbr r='ngx_conf_s::name' o='0' t='char *'/>
+<mbr r='ngx_conf_s::args' o='64' t='ngx_array_t *'/>
+<mbr r='ngx_conf_s::cycle' o='128' t='ngx_cycle_t *'/>
+<mbr r='ngx_conf_s::pool' o='192' t='ngx_pool_t *'/>
+<mbr r='ngx_conf_s::temp_pool' o='256' t='ngx_pool_t *'/>
+<mbr r='ngx_conf_s::conf_file' o='320' t='ngx_conf_file_t *'/>
+<mbr r='ngx_conf_s::log' o='384' t='ngx_log_t *'/>
+<mbr r='ngx_conf_s::ctx' o='448' t='void *'/>
+<mbr r='ngx_conf_s::module_type' o='512' t='ngx_uint_t'/>
+<mbr r='ngx_conf_s::cmd_type' o='576' t='ngx_uint_t'/>
+<mbr r='ngx_conf_s::handler' o='640' t='ngx_conf_handler_pt'/>
+<mbr r='ngx_conf_s::handler_conf' o='704' t='void *'/>

@@ -1,0 +1,9 @@
+<dec f='nginx/objs/ngx_auto_config.h' l='307'/>
+<use f='nginx/src/os/unix/ngx_linux_config.h' l='64' u='c'/>
+<use f='nginx/src/core/ngx_shmtx.h' l='18' u='c'/>
+<use f='nginx/src/core/ngx_shmtx.h' l='27' u='c'/>
+<use f='nginx/src/core/ngx_module.h' l='124' u='c'/>
+<use f='nginx/src/core/ngx_shmtx.c' l='29' u='c'/>
+<use f='nginx/src/core/ngx_shmtx.c' l='49' u='c'/>
+<use f='nginx/src/core/ngx_shmtx.c' l='98' u='c'/>
+<use f='nginx/src/core/ngx_shmtx.c' l='167' u='c'/>

@@ -1,0 +1,6 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='418' type='ngx_http_request_t *'/>
+<offset>8512</offset>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2217' u='r' c='ngx_http_ssi_stub_output'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2218' u='r' c='ngx_http_ssi_stub_output'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2325' u='w' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2414' u='r' c='ngx_http_finalize_request'/>

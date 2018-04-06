@@ -1,0 +1,24 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='574' type='u_char *'/>
+<offset>10752</offset>
+<use f='nginx/src/http/ngx_http_parse.c' l='556' u='w' c='ngx_http_parse_request_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='560' u='w' c='ngx_http_parse_request_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1201' u='w' c='ngx_http_parse_uri'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1205' u='w' c='ngx_http_parse_uri'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1278' u='w' c='ngx_http_parse_complex_uri'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1337' u='w' c='ngx_http_parse_complex_uri'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1351' u='w' c='ngx_http_parse_complex_uri'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1563' u='r' c='ngx_http_parse_complex_uri'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1564' u='r' c='ngx_http_parse_complex_uri'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1565' u='r' c='ngx_http_parse_complex_uri'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1568' u='w' c='ngx_http_parse_complex_uri'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1588' u='r' c='ngx_http_parse_complex_uri'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1589' u='r' c='ngx_http_parse_complex_uri'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1590' u='r' c='ngx_http_parse_complex_uri'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1593' u='w' c='ngx_http_parse_complex_uri'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1138' u='r' c='ngx_http_process_request_uri'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1140' u='r' c='ngx_http_process_request_uri'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1142' u='r' c='ngx_http_process_request_uri'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1145' u='r' c='ngx_http_process_request_uri'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1583' u='r' c='ngx_http_alloc_large_header_buffer'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1584' u='w' c='ngx_http_alloc_large_header_buffer'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1584' u='r' c='ngx_http_alloc_large_header_buffer'/>

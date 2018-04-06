@@ -1,0 +1,3 @@
+<dec f='nginx/src/core/ngx_rbtree.h' l='55' type='void ngx_rbtree_insert_timer_value(ngx_rbtree_node_t * root, ngx_rbtree_node_t * node, ngx_rbtree_node_t * sentinel)'/>
+<def f='nginx/src/core/ngx_rbtree.c' l='121' ll='153' type='void ngx_rbtree_insert_timer_value(ngx_rbtree_node_t * temp, ngx_rbtree_node_t * node, ngx_rbtree_node_t * sentinel)'/>
+<use f='nginx/src/event/ngx_event_timer.c' l='26' u='r' c='ngx_event_timer_init'/>

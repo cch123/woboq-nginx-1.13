@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_file.h' l='142' type='void ngx_create_hashed_filename(ngx_path_t * path, u_char * file, size_t len)'/>
+<use f='nginx/src/core/ngx_file.c' l='196' u='c' c='ngx_create_temp_file'/>
+<def f='nginx/src/core/ngx_file.c' l='240' ll='262' type='void ngx_create_hashed_filename(ngx_path_t * path, u_char * file, size_t len)'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='958' u='c' c='ngx_http_file_cache_name'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1933' u='c' c='ngx_http_file_cache_delete'/>

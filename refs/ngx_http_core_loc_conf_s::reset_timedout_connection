@@ -1,0 +1,9 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='384' type='ngx_flag_t'/>
+<offset>3520</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='384'>/* reset_timedout_connection */</doc>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3400' u='w' c='ngx_http_core_create_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3665' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3665' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3666' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3666' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3520' u='r' c='ngx_http_free_request'/>

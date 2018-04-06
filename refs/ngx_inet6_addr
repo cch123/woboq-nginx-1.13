@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_inet.h' l='110' type='ngx_int_t ngx_inet6_addr(u_char * p, size_t len, u_char * addr)'/>
+<def f='nginx/src/core/ngx_inet.c' l='62' ll='175' type='ngx_int_t ngx_inet6_addr(u_char * p, size_t len, u_char * addr)'/>
+<use f='nginx/src/core/ngx_inet.c' l='400' u='c' c='ngx_ptocidr'/>
+<use f='nginx/src/core/ngx_inet.c' l='583' u='c' c='ngx_parse_addr'/>
+<use f='nginx/src/core/ngx_inet.c' l='1054' u='c' c='ngx_parse_inet6_url'/>

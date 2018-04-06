@@ -1,0 +1,20 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='150' type='ngx_event_t *'/>
+<offset>0</offset>
+<doc f='nginx/src/core/ngx_resolver.h' l='149'>/* has to be pointer because of &quot;incomplete type&quot; */</doc>
+<use f='nginx/src/core/ngx_resolver.c' l='158' u='w' c='ngx_resolver_create'/>
+<use f='nginx/src/core/ngx_resolver.c' l='159' u='r' c='ngx_resolver_create'/>
+<use f='nginx/src/core/ngx_resolver.c' l='191' u='r' c='ngx_resolver_create'/>
+<use f='nginx/src/core/ngx_resolver.c' l='192' u='r' c='ngx_resolver_create'/>
+<use f='nginx/src/core/ngx_resolver.c' l='193' u='r' c='ngx_resolver_create'/>
+<use f='nginx/src/core/ngx_resolver.c' l='194' u='r' c='ngx_resolver_create'/>
+<use f='nginx/src/core/ngx_resolver.c' l='305' u='r' c='ngx_resolver_cleanup'/>
+<use f='nginx/src/core/ngx_resolver.c' l='306' u='r' c='ngx_resolver_cleanup'/>
+<use f='nginx/src/core/ngx_resolver.c' l='307' u='r' c='ngx_resolver_cleanup'/>
+<use f='nginx/src/core/ngx_resolver.c' l='310' u='r' c='ngx_resolver_cleanup'/>
+<use f='nginx/src/core/ngx_resolver.c' l='580' u='r' c='ngx_resolve_name_done'/>
+<use f='nginx/src/core/ngx_resolver.c' l='581' u='r' c='ngx_resolve_name_done'/>
+<use f='nginx/src/core/ngx_resolver.c' l='864' u='r' c='ngx_resolve_name_locked'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1068' u='r' c='ngx_resolve_addr'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1198' u='r' c='ngx_resolve_addr_done'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1199' u='r' c='ngx_resolve_addr_done'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1467' u='r' c='ngx_resolver_resend_handler'/>

@@ -1,0 +1,16 @@
+<dec f='nginx/src/http/modules/ngx_http_ssi_filter_module.h' l='77' type='unsigned int'/>
+<offset>3333</offset>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='356' u='w' c='ngx_http_ssi_header_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='487' u='r' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='638' u='r' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='648' u='r' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2484' u='w' c='ngx_http_ssi_if'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2535' u='w' c='ngx_http_ssi_if'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2539' u='w' c='ngx_http_ssi_if'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2620' u='w' c='ngx_http_ssi_if'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2624' u='w' c='ngx_http_ssi_if'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2648' u='w' c='ngx_http_ssi_else'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2650' u='w' c='ngx_http_ssi_else'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2666' u='w' c='ngx_http_ssi_endif'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2703' u='w' c='ngx_http_ssi_block'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2717' u='w' c='ngx_http_ssi_endblock'/>

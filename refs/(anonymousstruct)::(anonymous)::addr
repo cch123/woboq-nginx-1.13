@@ -1,0 +1,6 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='113' type='in_addr_t'/>
+<offset>0</offset>
+<use f='nginx/src/core/ngx_resolver.c' l='667' u='r' c='ngx_resolve_name_locked'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2244' u='a' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2399' u='r' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4180' u='a' c='ngx_resolver_export'/>

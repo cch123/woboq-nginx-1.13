@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/modules/ngx_http_ssi_filter_module.h' l='30'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='355' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2309' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2338' u='c'/>

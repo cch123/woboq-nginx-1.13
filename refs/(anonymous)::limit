@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_buf.h' l='121' type='off_t'/>
+<offset>256</offset>
+<use f='nginx/src/core/ngx_output_chain.c' l='741' u='r' c='ngx_chain_writer'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1581' u='w' c='ngx_http_upstream_connect'/>

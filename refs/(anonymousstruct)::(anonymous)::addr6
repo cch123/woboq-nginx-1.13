@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='126' type='struct in6_addr'/>
+<offset>0</offset>
+<use f='nginx/src/core/ngx_resolver.c' l='2221' u='a' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4203' u='a' c='ngx_resolver_export'/>

@@ -1,0 +1,4 @@
+<dec f='nginx/src/event/ngx_event.h' l='46' type='unsigned int'/>
+<use f='nginx/src/core/ngx_connection.c' l='1140' u='r' c='ngx_close_connection'/>
+<use f='nginx/src/core/ngx_connection.c' l='1144' u='r' c='ngx_close_connection'/>
+<offset>68</offset>

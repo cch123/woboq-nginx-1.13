@@ -1,0 +1,8 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='337' type='ngx_array_t *'/>
+<offset>1024</offset>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1823' u='r' c='ngx_http_map_uri_to_path'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3469' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3469' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4295' u='a' c='ngx_http_core_root'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1518' u='r' c='ngx_http_variable_document_root'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1560' u='r' c='ngx_http_variable_realpath_root'/>

@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_inet.h' l='16'/>
+<use f='nginx/src/core/ngx_connection.c' l='61' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='189' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='190' u='c'/>
+<use f='nginx/src/core/ngx_inet.c' l='1190' u='c'/>

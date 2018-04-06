@@ -1,0 +1,6 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='274' type='ngx_str_t *'/>
+<offset>1856</offset>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='329' u='r' c='ngx_http_destination_charset'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='330' u='r' c='ngx_http_destination_charset'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='332' u='r' c='ngx_http_destination_charset'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4798' u='w' c='ngx_http_upstream_process_charset'/>

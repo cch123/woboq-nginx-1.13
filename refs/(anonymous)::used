@@ -1,0 +1,9 @@
+<dec f='nginx/src/core/ngx_slab.h' l='27' type='ngx_uint_t'/>
+<offset>64</offset>
+<use f='nginx/src/core/ngx_slab.c' l='249' u='w' c='ngx_slab_alloc_locked'/>
+<use f='nginx/src/core/ngx_slab.c' l='291' u='w' c='ngx_slab_alloc_locked'/>
+<use f='nginx/src/core/ngx_slab.c' l='322' u='w' c='ngx_slab_alloc_locked'/>
+<use f='nginx/src/core/ngx_slab.c' l='369' u='w' c='ngx_slab_alloc_locked'/>
+<use f='nginx/src/core/ngx_slab.c' l='385' u='w' c='ngx_slab_alloc_locked'/>
+<use f='nginx/src/core/ngx_slab.c' l='401' u='w' c='ngx_slab_alloc_locked'/>
+<use f='nginx/src/core/ngx_slab.c' l='654' u='w' c='ngx_slab_free_locked'/>

@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_upstream_round_robin.h' l='144' type='void ngx_http_upstream_free_round_robin_peer(ngx_peer_connection_t * pc, void * data, ngx_uint_t state)'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='285' u='r' c='ngx_http_upstream_init_round_robin_peer'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='405' u='r' c='ngx_http_upstream_create_round_robin_peer'/>
+<def f='nginx/src/http/ngx_http_upstream_round_robin.c' l='585' ll='656' type='void ngx_http_upstream_free_round_robin_peer(ngx_peer_connection_t * pc, void * data, ngx_uint_t state)'/>

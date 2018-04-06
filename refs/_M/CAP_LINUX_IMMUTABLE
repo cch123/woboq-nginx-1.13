@@ -1,0 +1,2 @@
+<dec f='include/linux/capability.h' l='161'/>
+<doc f='include/linux/capability.h' l='159'>/* Allow modification of S_IMMUTABLE and S_APPEND file attributes */</doc>

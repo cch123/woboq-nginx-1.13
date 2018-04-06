@@ -1,0 +1,5 @@
+<dec f='nginx/src/event/ngx_event.h' l='474' type='ngx_msec_t'/>
+<def f='nginx/src/event/ngx_event.c' l='56' type='ngx_msec_t'/>
+<use f='nginx/src/event/ngx_event.c' l='232' u='r' c='ngx_process_events_and_timers'/>
+<use f='nginx/src/event/ngx_event.c' l='234' u='r' c='ngx_process_events_and_timers'/>
+<use f='nginx/src/event/ngx_event.c' l='584' u='w' c='ngx_event_process_init'/>

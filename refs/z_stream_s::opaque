@@ -1,0 +1,5 @@
+<dec f='include/zlib.h' l='99' type='voidpf'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='643' u='w' c='ngx_http_gzip_filter_deflate_start'/>
+<offset>640</offset>
+<doc f='include/zlib.h' l='99'>/* private data object passed to zalloc and zfree */</doc>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='625' u='w' c='ngx_http_log_gzip'/>

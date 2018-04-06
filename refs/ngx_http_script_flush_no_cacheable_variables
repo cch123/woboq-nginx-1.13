@@ -1,0 +1,8 @@
+<dec f='nginx/src/http/ngx_http_script.h' l='224' type='void ngx_http_script_flush_no_cacheable_variables(ngx_http_request_t * r, ngx_array_t * indices)'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='861' u='c' c='ngx_http_fastcgi_create_request'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='299' u='c' c='ngx_http_log_handler'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1230' u='c' c='ngx_http_proxy_create_request'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1231' u='c' c='ngx_http_proxy_create_request'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='666' u='c' c='ngx_http_scgi_create_request'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='854' u='c' c='ngx_http_uwsgi_create_request'/>
+<def f='nginx/src/http/ngx_http_script.c' l='536' ll='551' type='void ngx_http_script_flush_no_cacheable_variables(ngx_http_request_t * r, ngx_array_t * indices)'/>

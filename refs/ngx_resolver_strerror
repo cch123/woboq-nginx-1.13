@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='237' type='char * ngx_resolver_strerror(ngx_int_t err)'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1851' u='c' c='ngx_resolver_process_response'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1859' u='c' c='ngx_resolver_process_response'/>
+<def f='nginx/src/core/ngx_resolver.c' l='4328' ll='4348' type='char * ngx_resolver_strerror(ngx_int_t err)'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1199' u='c' c='ngx_http_upstream_resolve_handler'/>

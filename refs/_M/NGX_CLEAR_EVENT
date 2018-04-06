@@ -1,0 +1,8 @@
+<dec f='nginx/src/event/ngx_event.h' l='364'/>
+<use f='nginx/src/event/ngx_event.h' l='406' u='a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4439' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4602' u='c'/>
+<use f='nginx/src/event/ngx_event.c' l='271' u='c'/>
+<use f='nginx/src/event/ngx_event.c' l='350' u='c'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='279' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='531' u='c'/>

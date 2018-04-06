@@ -1,0 +1,4 @@
+<dec f='nginx/src/event/ngx_event.h' l='417'/>
+<use f='nginx/src/core/ngx_connection.c' l='1136' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='1137' u='c'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='1063' u='c'/>

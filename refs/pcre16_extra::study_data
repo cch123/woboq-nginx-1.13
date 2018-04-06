@@ -1,0 +1,3 @@
+<dec f='include/pcre.h' l='391' type='void *'/>
+<offset>64</offset>
+<doc f='include/pcre.h' l='391'>/* Opaque data from pcre_study() */</doc>

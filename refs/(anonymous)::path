@@ -1,0 +1,13 @@
+<dec f='nginx/src/os/unix/ngx_process.h' l='40' type='char *'/>
+<dec f='nginx/src/core/ngx_file.h' l='74' type='ngx_path_t *'/>
+<offset>1664</offset>
+<use f='nginx/src/core/nginx.c' l='653' u='w' c='ngx_exec_new_binary'/>
+<use f='nginx/src/core/ngx_file.c' l='114' u='r' c='ngx_write_chain_to_temp_file'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='452' u='w' c='ngx_http_write_request_body'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='468' u='r' c='ngx_http_write_request_body'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3087' u='w' c='ngx_http_upstream_send_response'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3095' u='w' c='ngx_http_upstream_send_response'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4009' u='w' c='ngx_http_upstream_store'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4013' u='r' c='ngx_http_upstream_store'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='274' u='r' c='ngx_execute_proc'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='277' u='r' c='ngx_execute_proc'/>

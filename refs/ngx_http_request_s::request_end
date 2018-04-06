@@ -1,0 +1,10 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='577' type='u_char *'/>
+<offset>10944</offset>
+<use f='nginx/src/http/ngx_http_parse.c' l='806' u='w' c='ngx_http_parse_request_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='825' u='r' c='ngx_http_parse_request_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='826' u='w' c='ngx_http_parse_request_line'/>
+<use f='nginx/src/http/ngx_http_request.c' l='983' u='r' c='ngx_http_process_request_line'/>
+<use f='nginx/src/http/ngx_http_request.c' l='994' u='r' c='ngx_http_process_request_line'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1557' u='r' c='ngx_http_alloc_large_header_buffer'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1558' u='w' c='ngx_http_alloc_large_header_buffer'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1558' u='r' c='ngx_http_alloc_large_header_buffer'/>

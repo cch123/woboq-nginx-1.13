@@ -1,0 +1,24 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='423' type='ngx_int_t'/>
+<offset>8768</offset>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='150' u='r' c='ngx_http_rewrite_handler'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='826' u='w' c='ngx_http_handler'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='830' u='w' c='ngx_http_handler'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='856' u='r' c='ngx_http_core_run_phases'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='858' u='r' c='ngx_http_core_run_phases'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='858' u='r' c='ngx_http_core_run_phases'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='883' u='w' c='ngx_http_core_generic_phase'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='888' u='w' c='ngx_http_core_generic_phase'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='915' u='w' c='ngx_http_core_rewrite_phase'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1020' u='w' c='ngx_http_core_find_config_phase'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1035' u='w' c='ngx_http_core_post_rewrite_phase'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1060' u='w' c='ngx_http_core_post_rewrite_phase'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1076' u='w' c='ngx_http_core_access_phase'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1086' u='w' c='ngx_http_core_access_phase'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1099' u='w' c='ngx_http_core_access_phase'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1111' u='w' c='ngx_http_core_access_phase'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1120' u='w' c='ngx_http_core_access_phase'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1154' u='w' c='ngx_http_core_post_access_phase'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1188' u='w' c='ngx_http_core_content_phase'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2385' u='w' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2385' u='r' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2508' u='w' c='ngx_http_named_location'/>

@@ -1,0 +1,6 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='603'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='470' u='c'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2227' u='c'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2278' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1190' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1266' u='c'/>

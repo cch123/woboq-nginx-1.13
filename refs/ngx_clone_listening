@@ -1,0 +1,3 @@
+<dec f='nginx/src/core/ngx_connection.h' l='208' type='ngx_int_t ngx_clone_listening(ngx_conf_t * cf, ngx_listening_t * ls)'/>
+<def f='nginx/src/core/ngx_connection.c' l='94' ll='128' type='ngx_int_t ngx_clone_listening(ngx_conf_t * cf, ngx_listening_t * ls)'/>
+<use f='nginx/src/http/ngx_http.c' l='1688' u='c' c='ngx_http_init_listening'/>

@@ -1,0 +1,10 @@
+<dec f='include/x86_64-linux-gnu/bits/resource.h' l='142' type='rlim_t'/>
+<offset>0</offset>
+<doc f='include/x86_64-linux-gnu/bits/resource.h' l='141'>/* The current (soft) limit.  */</doc>
+<use f='nginx/src/event/ngx_event.c' l='456' u='r' c='ngx_event_module_init'/>
+<use f='nginx/src/event/ngx_event.c' l='461' u='r' c='ngx_event_module_init'/>
+<use f='nginx/src/event/ngx_event.c' l='663' u='r' c='ngx_event_process_init'/>
+<use f='nginx/src/os/unix/ngx_posix_init.c' l='83' u='r' c='ngx_os_init'/>
+<use f='nginx/src/os/unix/ngx_posix_init.c' l='113' u='r' c='ngx_os_status'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='807' u='w' c='ngx_worker_process_init'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='818' u='w' c='ngx_worker_process_init'/>

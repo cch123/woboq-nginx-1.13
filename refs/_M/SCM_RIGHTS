@@ -1,0 +1,3 @@
+<dec f='include/x86_64-linux-gnu/bits/socket.h' l='306'/>
+<use f='nginx/src/os/unix/ngx_channel.c' l='41' u='c'/>
+<use f='nginx/src/os/unix/ngx_channel.c' l='161' u='c'/>

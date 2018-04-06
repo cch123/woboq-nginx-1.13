@@ -1,0 +1,22 @@
+<dec f='nginx/src/http/ngx_http_script.h' l='26' type='u_char *'/>
+<dec f='nginx/src/http/ngx_http_script.h' l='62' type='unsigned int'/>
+<dec f='nginx/src/http/ngx_http_script.h' l='127' type='unsigned int'/>
+<dec f='nginx/src/http/ngx_http_script.h' l='143' type='unsigned int'/>
+<dec f='nginx/src/http/ngx_http_core_module.h' l='294' type='ngx_str_t'/>
+<offset>448</offset>
+<doc f='nginx/src/http/ngx_http_script.h' l='25'>/* the start of the rewritten arguments */</doc>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='409' u='w' c='ngx_http_rewrite'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='409' u='r' c='ngx_http_rewrite'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='424' u='w' c='ngx_http_rewrite'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='424' u='r' c='ngx_http_rewrite'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4675' u='w' c='ngx_http_core_error_page'/>
+<use f='nginx/src/http/ngx_http_script.c' l='435' u='w' c='ngx_http_script_compile'/>
+<use f='nginx/src/http/ngx_http_script.c' l='457' u='w' c='ngx_http_script_compile'/>
+<use f='nginx/src/http/ngx_http_script.c' l='901' u='w' c='ngx_http_script_start_args_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1096' u='r' c='ngx_http_script_regex_end_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1124' u='r' c='ngx_http_script_regex_end_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1125' u='r' c='ngx_http_script_regex_end_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1132' u='r' c='ngx_http_script_regex_end_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1133' u='r' c='ngx_http_script_regex_end_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1135' u='w' c='ngx_http_script_regex_end_code'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='611' u='r' c='ngx_http_send_error_page'/>

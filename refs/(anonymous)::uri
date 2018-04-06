@@ -1,0 +1,26 @@
+<dec f='nginx/src/core/ngx_inet.h' l='85' type='ngx_str_t'/>
+<offset>384</offset>
+<use f='nginx/src/core/ngx_inet.c' l='724' u='m' c='ngx_parse_unix_domain_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='725' u='m' c='ngx_parse_unix_domain_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='819' u='m' c='ngx_parse_inet_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='820' u='m' c='ngx_parse_inet_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='1009' u='m' c='ngx_parse_inet6_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='1010' u='m' c='ngx_parse_inet6_url'/>
+<dec f='nginx/src/http/ngx_http_script.h' l='126' type='unsigned int'/>
+<dec f='nginx/src/http/ngx_http_script.h' l='142' type='unsigned int'/>
+<offset>64</offset>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1003' u='m' c='ngx_http_proxy_eval'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1004' u='m' c='ngx_http_proxy_eval'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1005' u='m' c='ngx_http_proxy_eval'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1011' u='m' c='ngx_http_proxy_eval'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1011' u='m' c='ngx_http_proxy_eval'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1013' u='m' c='ngx_http_proxy_eval'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1014' u='m' c='ngx_http_proxy_eval'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='4346' u='r' c='ngx_http_proxy_set_vars'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='343' u='w' c='ngx_http_rewrite'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='423' u='w' c='ngx_http_rewrite'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='423' u='r' c='ngx_http_rewrite'/>
+<use f='nginx/src/http/ngx_http_script.c' l='926' u='r' c='ngx_http_script_regex_start_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1001' u='r' c='ngx_http_script_regex_start_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1017' u='r' c='ngx_http_script_regex_start_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1151' u='r' c='ngx_http_script_regex_end_code'/>

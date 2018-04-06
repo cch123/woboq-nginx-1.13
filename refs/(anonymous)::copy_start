@@ -1,0 +1,20 @@
+<dec f='nginx/src/http/modules/ngx_http_ssi_filter_module.h' l='43' type='u_char *'/>
+<offset>128</offset>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='464' u='w' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='485' u='r' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='545' u='r' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='569' u='r' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='572' u='r' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='583' u='r' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='584' u='r' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='584' u='r' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='614' u='w' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='618' u='w' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1031' u='r' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1032' u='w' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1477' u='r' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1478' u='w' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1526' u='r' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1527' u='w' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1547' u='r' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1548' u='w' c='ngx_http_ssi_parse'/>

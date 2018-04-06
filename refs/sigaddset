@@ -1,0 +1,12 @@
+<dec f='include/signal.h' l='219' type='int sigaddset(sigset_t * __set, int __signo)'/>
+<doc f='include/signal.h' l='218'>/* Add SIGNO to SET.  */</doc>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='89' u='c' c='ngx_master_process_cycle'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='90' u='c' c='ngx_master_process_cycle'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='91' u='c' c='ngx_master_process_cycle'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='92' u='c' c='ngx_master_process_cycle'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='93' u='c' c='ngx_master_process_cycle'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='94' u='c' c='ngx_master_process_cycle'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='95' u='c' c='ngx_master_process_cycle'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='96' u='c' c='ngx_master_process_cycle'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='97' u='c' c='ngx_master_process_cycle'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='98' u='c' c='ngx_master_process_cycle'/>

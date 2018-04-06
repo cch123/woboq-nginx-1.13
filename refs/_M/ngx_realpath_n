@@ -1,0 +1,2 @@
+<dec f='nginx/src/os/unix/ngx_files.h' l='198'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1585' u='c'/>

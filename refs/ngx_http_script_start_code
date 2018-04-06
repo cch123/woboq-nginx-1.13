@@ -1,0 +1,14 @@
+<dec f='nginx/src/http/ngx_http_script.h' l='227' type='void * ngx_http_script_start_code(ngx_pool_t * pool, ngx_array_t ** codes, size_t size)'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='319' u='c' c='ngx_http_rewrite'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='454' u='c' c='ngx_http_rewrite_return'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='522' u='c' c='ngx_http_rewrite_break'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='724' u='c' c='ngx_http_rewrite_if_condition'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='741' u='c' c='ngx_http_rewrite_if_condition'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='756' u='c' c='ngx_http_rewrite_if_condition'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='807' u='c' c='ngx_http_rewrite_if_condition'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='885' u='c' c='ngx_http_rewrite_variable'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='941' u='c' c='ngx_http_rewrite_set'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='954' u='c' c='ngx_http_rewrite_set'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='979' u='c' c='ngx_http_rewrite_value'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='999' u='c' c='ngx_http_rewrite_value'/>
+<def f='nginx/src/http/ngx_http_script.c' l='643' ll='654' type='void * ngx_http_script_start_code(ngx_pool_t * pool, ngx_array_t ** codes, size_t size)'/>

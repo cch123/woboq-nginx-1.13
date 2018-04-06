@@ -1,0 +1,3 @@
+<dec f='nginx/src/core/ngx_cycle.h' l='21'/>
+<use f='nginx/src/core/nginx.c' l='35' u='c'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='621' u='c'/>

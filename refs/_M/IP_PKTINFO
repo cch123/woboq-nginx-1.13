@@ -1,0 +1,4 @@
+<dec f='include/x86_64-linux-gnu/bits/in.h' l='73'/>
+<use f='nginx/src/core/ngx_connection.c' l='922' u='c'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='526' u='c'/>
+<use f='nginx/src/os/unix/ngx_udp_sendmsg_chain.c' l='267' u='c'/>

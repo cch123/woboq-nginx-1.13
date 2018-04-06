@@ -1,0 +1,11 @@
+<dec f='nginx/src/os/unix/ngx_files.h' l='32' type='struct dirent *'/>
+<offset>64</offset>
+<use f='nginx/src/core/ngx_file.c' l='1001' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_file.c' l='1002' macro='1' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='317' macro='1' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='319' macro='1' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='340' macro='1' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='377' macro='1' u='r'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='689' u='w' c='ngx_read_dir'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='691' u='r' c='ngx_read_dir'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='693' u='r' c='ngx_read_dir'/>

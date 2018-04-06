@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='60'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='124' u='c'/>
+<use f='nginx/src/http/ngx_http_header_filter_module.c' l='286' u='c'/>
+<use f='nginx/src/http/ngx_http_header_filter_module.c' l='456' u='c'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='676' u='c'/>

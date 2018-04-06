@@ -1,0 +1,8 @@
+<dec f='nginx/src/http/ngx_http_cache.h' l='61' type='ngx_msec_t'/>
+<offset>896</offset>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='418' u='r' c='ngx_http_file_cache_lock'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='422' u='w' c='ngx_http_file_cache_lock'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='424' u='r' c='ngx_http_file_cache_lock'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='504' u='r' c='ngx_http_file_cache_lock_wait'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='649' u='r' c='ngx_http_file_cache_read'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1635' u='r' c='ngx_http_file_cache_free'/>

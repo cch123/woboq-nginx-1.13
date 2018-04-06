@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='364' type='ngx_int_t (*)(ngx_http_request_t *, ngx_table_elt_t *)'/>
+<offset>7808</offset>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='903' u='w' c='ngx_http_proxy_handler'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5104' u='r' c='ngx_http_upstream_rewrite_set_cookie'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5105' u='r' c='ngx_http_upstream_rewrite_set_cookie'/>

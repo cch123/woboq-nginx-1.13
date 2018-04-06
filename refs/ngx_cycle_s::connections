@@ -1,0 +1,9 @@
+<dec f='nginx/src/core/ngx_cycle.h' l='72' type='ngx_connection_t *'/>
+<offset>3968</offset>
+<use f='nginx/src/core/ngx_connection.c' l='1266' u='r' c='ngx_close_idle_connections'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1311' u='r' c='ngx_clean_old_cycles'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1371' u='r' c='ngx_shutdown_timer_handler'/>
+<use f='nginx/src/event/ngx_event.c' l='683' u='w' c='ngx_event_process_init'/>
+<use f='nginx/src/event/ngx_event.c' l='685' u='r' c='ngx_event_process_init'/>
+<use f='nginx/src/event/ngx_event.c' l='689' u='r' c='ngx_event_process_init'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='990' u='r' c='ngx_worker_process_exit'/>

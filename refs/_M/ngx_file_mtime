@@ -1,0 +1,5 @@
+<dec f='nginx/src/os/unix/ngx_files.h' l='189'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='170' u='c'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='936' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1446' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1459' u='c'/>

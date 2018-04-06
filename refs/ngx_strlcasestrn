@@ -1,0 +1,17 @@
+<dec f='nginx/src/core/ngx_string.h' l='166' type='u_char * ngx_strlcasestrn(u_char * s1, u_char * last, u_char * s2, size_t n)'/>
+<def f='nginx/src/core/ngx_string.c' l='736' ll='760' type='u_char * ngx_strlcasestrn(u_char * s1, u_char * last, u_char * s2, size_t n)'/>
+<doc f='nginx/src/core/ngx_string.c' l='730'>/*
+ * ngx_strlcasestrn() is intended to search for static substring
+ * with known length in string until the argument last. The argument n
+ * must be length of the second substring - 1.
+ */</doc>
+<use f='nginx/src/http/ngx_http_parse.c' l='2079' u='c' c='ngx_http_arg'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4537' u='c' c='ngx_http_upstream_process_cache_control'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4538' u='c' c='ngx_http_upstream_process_cache_control'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4539' u='c' c='ngx_http_upstream_process_cache_control'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4545' u='c' c='ngx_http_upstream_process_cache_control'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4549' u='c' c='ngx_http_upstream_process_cache_control'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4578' u='c' c='ngx_http_upstream_process_cache_control'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4602' u='c' c='ngx_http_upstream_process_cache_control'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4810' u='c' c='ngx_http_upstream_process_connection'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4827' u='c' c='ngx_http_upstream_process_transfer_encoding'/>

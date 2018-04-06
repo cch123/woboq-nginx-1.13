@@ -1,0 +1,11 @@
+<dec f='nginx/src/core/ngx_palloc.h' l='83' type='ngx_int_t ngx_pfree(ngx_pool_t * pool, void * p)'/>
+<def f='nginx/src/core/ngx_palloc.c' l='277' ll='294' type='ngx_int_t ngx_pfree(ngx_pool_t * pool, void * p)'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='475' u='c' c='ngx_event_pipe_read_upstream'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='484' u='c' c='ngx_http_gzip_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='951' u='c' c='ngx_http_gzip_filter_deflate_end'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='1085' u='c' c='ngx_http_gzip_filter_free_copy_buf'/>
+<use f='nginx/src/http/ngx_http_request.c' l='457' u='c' c='ngx_http_wait_request_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3016' u='c' c='ngx_http_set_keepalive'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3037' u='c' c='ngx_http_set_keepalive'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3051' u='c' c='ngx_http_set_keepalive'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3192' u='c' c='ngx_http_keepalive_handler'/>

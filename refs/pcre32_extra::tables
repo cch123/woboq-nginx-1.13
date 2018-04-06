@@ -1,0 +1,3 @@
+<dec f='include/pcre.h' l='407' type='const unsigned char *'/>
+<offset>256</offset>
+<doc f='include/pcre.h' l='407'>/* Pointer to character tables */</doc>

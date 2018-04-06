@@ -1,0 +1,8 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='309' type='unsigned int'/>
+<offset>195</offset>
+<use f='nginx/src/http/ngx_http.c' l='863' u='r' c='ngx_http_add_location'/>
+<use f='nginx/src/http/ngx_http.c' l='953' u='r' c='ngx_http_cmp_locations'/>
+<use f='nginx/src/http/ngx_http.c' l='953' u='r' c='ngx_http_cmp_locations'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2888' u='w' c='ngx_http_core_location'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2921' u='w' c='ngx_http_core_location'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2969' u='r' c='ngx_http_core_location'/>

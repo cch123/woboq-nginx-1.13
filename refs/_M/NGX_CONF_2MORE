@@ -1,0 +1,9 @@
+<dec f='nginx/src/core/ngx_conf_file.h' l='47'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='429' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='390' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='168' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='463' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='240' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_try_files_module.c' l='37' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='301' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='651' u='c'/>

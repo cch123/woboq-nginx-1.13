@@ -1,0 +1,5 @@
+<dec f='include/x86_64-linux-gnu/bits/sigaction.h' l='35' type='union (anonymous union at /usr/include/x86_64-linux-gnu/bits/sigaction.h:28:5)'/>
+<offset>0</offset>
+<use f='nginx/src/event/ngx_event.c' l='634' macro='1' u='m'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='294' macro='1' u='m'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='298' macro='1' u='m'/>

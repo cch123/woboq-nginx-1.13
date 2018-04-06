@@ -1,0 +1,14 @@
+<dec f='nginx/src/os/unix/ngx_errno.h' l='44'/>
+<use f='nginx/src/core/ngx_connection.c' l='1425' u='c'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='505' u='c'/>
+<use f='nginx/src/http/ngx_http_request.c' l='400' u='c'/>
+<use f='nginx/src/http/ngx_http_request.c' l='959' u='c'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1237' u='c'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2686' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3299' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3305' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3473' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3496' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3806' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3852' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4102' u='c'/>

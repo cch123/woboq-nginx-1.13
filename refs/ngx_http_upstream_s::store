@@ -1,0 +1,12 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='381' type='unsigned int'/>
+<offset>8448</offset>
+<use f='nginx/src/http/ngx_http_upstream.c' l='609' u='w' c='ngx_http_upstream_init_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='611' u='r' c='ngx_http_upstream_init_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2163' u='r' c='ngx_http_upstream_send_request_body'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2889' u='r' c='ngx_http_upstream_send_response'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3056' u='r' c='ngx_http_upstream_send_response'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3077' u='r' c='ngx_http_upstream_send_response'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3910' u='r' c='ngx_http_upstream_process_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3980' u='r' c='ngx_http_upstream_process_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4064' u='w' c='ngx_http_upstream_store'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4319' u='r' c='ngx_http_upstream_finalize_request'/>

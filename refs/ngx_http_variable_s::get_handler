@@ -1,0 +1,36 @@
+<dec f='nginx/src/http/ngx_http_variables.h' l='40' type='ngx_http_get_variable_pt'/>
+<offset>192</offset>
+<use f='nginx/src/http/modules/ngx_http_browser_module.c' l='409' u='w' c='ngx_http_browser_add_variables'/>
+<use f='nginx/src/http/modules/ngx_http_browser_module.c' l='409' u='r' c='ngx_http_browser_add_variables'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2657' u='w' c='ngx_http_fastcgi_add_variables'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2657' u='r' c='ngx_http_fastcgi_add_variables'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='513' u='w' c='ngx_http_geo_block'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='537' u='w' c='ngx_http_geo_block'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='1102' u='w' c='ngx_http_gzip_add_variables'/>
+<use f='nginx/src/http/modules/ngx_http_map_module.c' l='235' u='w' c='ngx_http_map_block'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='2748' u='w' c='ngx_http_proxy_add_variables'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='2748' u='r' c='ngx_http_proxy_add_variables'/>
+<use f='nginx/src/http/modules/ngx_http_referer_module.c' l='281' u='w' c='ngx_http_referer_add_variables'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='931' u='r' c='ngx_http_rewrite_set'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='932' u='w' c='ngx_http_rewrite_set'/>
+<use f='nginx/src/http/modules/ngx_http_split_clients_module.c' l='156' u='w' c='ngx_conf_split_clients_block'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2794' u='w' c='ngx_http_ssi_preconfiguration'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2794' u='r' c='ngx_http_ssi_preconfiguration'/>
+<use f='nginx/src/http/modules/ngx_http_userid_filter_module.c' l='613' u='w' c='ngx_http_userid_add_variables'/>
+<use f='nginx/src/http/modules/ngx_http_userid_filter_module.c' l='620' u='w' c='ngx_http_userid_add_variables'/>
+<use f='nginx/src/http/modules/ngx_http_userid_filter_module.c' l='628' u='w' c='ngx_http_userid_add_variables'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5197' u='w' c='ngx_http_upstream_add_variables'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5197' u='r' c='ngx_http_upstream_add_variables'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='453' u='w' c='ngx_http_add_variable'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='520' u='w' c='ngx_http_add_prefix_variable'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='580' u='w' c='ngx_http_get_variable_index'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='618' u='r' c='ngx_http_get_indexed_variable'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='687' u='r' c='ngx_http_get_variable'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='716' u='r' c='ngx_http_get_variable'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2485' u='w' c='ngx_http_regex_compile'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2635' u='w' c='ngx_http_variables_init_vars'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2635' u='r' c='ngx_http_variables_init_vars'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2643' u='r' c='ngx_http_variables_init_vars'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2667' u='w' c='ngx_http_variables_init_vars'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2667' u='r' c='ngx_http_variables_init_vars'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2674' u='r' c='ngx_http_variables_init_vars'/>

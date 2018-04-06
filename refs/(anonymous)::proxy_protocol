@@ -1,0 +1,12 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='326' type='unsigned int'/>
+<dec f='nginx/src/http/ngx_http_core_module.h' l='83' type='unsigned int'/>
+<offset>939</offset>
+<use f='nginx/src/http/ngx_http.c' l='1229' u='r' c='ngx_http_add_addresses'/>
+<use f='nginx/src/http/ngx_http.c' l='1229' u='r' c='ngx_http_add_addresses'/>
+<use f='nginx/src/http/ngx_http.c' l='1264' u='w' c='ngx_http_add_addresses'/>
+<use f='nginx/src/http/ngx_http.c' l='1807' u='r' c='ngx_http_add_addrs'/>
+<use f='nginx/src/http/ngx_http.c' l='1872' u='r' c='ngx_http_add_addrs6'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4088' u='w' c='ngx_http_core_listen'/>
+<use f='nginx/src/http/ngx_http_request.c' l='358' u='w' c='ngx_http_init_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='478' u='r' c='ngx_http_wait_request_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='479' u='w' c='ngx_http_wait_request_handler'/>

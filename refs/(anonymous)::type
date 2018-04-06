@@ -1,0 +1,12 @@
+<dec f='nginx/src/os/unix/ngx_files.h' l='35' type='unsigned int'/>
+<use f='nginx/src/os/unix/ngx_files.h' l='252' u='w' c='ngx_de_info'/>
+<offset>1280</offset>
+<use f='nginx/src/core/ngx_file.c' l='1048' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_file.c' l='1048' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_file.c' l='1062' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_file.c' l='1062' macro='1' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='379' macro='1' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='379' macro='1' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='380' macro='1' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='380' macro='1' u='r'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='693' u='w' c='ngx_read_dir'/>

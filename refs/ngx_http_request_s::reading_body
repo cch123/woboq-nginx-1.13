@@ -1,0 +1,10 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='524' type='unsigned int'/>
+<offset>9869</offset>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1247' u='r' c='ngx_http_proxy_create_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2608' u='r' c='ngx_http_finalize_connection'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='197' u='w' c='ngx_http_read_client_request_body'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='237' u='w' c='ngx_http_read_unbuffered_request_body'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2134' u='r' c='ngx_http_upstream_send_request_body'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2139' u='r' c='ngx_http_upstream_send_request_body'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2162' u='r' c='ngx_http_upstream_send_request_body'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1177' u='r' c='ngx_http_variable_content_length'/>

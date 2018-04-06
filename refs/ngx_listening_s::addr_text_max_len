@@ -1,0 +1,13 @@
+<dec f='nginx/src/core/ngx_connection.h' l='23' type='size_t'/>
+<offset>192</offset>
+<use f='nginx/src/core/ngx_connection.c' l='51' u='w' c='ngx_create_listening'/>
+<use f='nginx/src/core/ngx_connection.c' l='56' u='w' c='ngx_create_listening'/>
+<use f='nginx/src/core/ngx_connection.c' l='61' u='w' c='ngx_create_listening'/>
+<use f='nginx/src/core/ngx_connection.c' l='64' u='w' c='ngx_create_listening'/>
+<use f='nginx/src/core/ngx_connection.c' l='176' u='w' c='ngx_set_inherited_sockets'/>
+<use f='nginx/src/core/ngx_connection.c' l='183' u='w' c='ngx_set_inherited_sockets'/>
+<use f='nginx/src/core/ngx_connection.c' l='189' u='w' c='ngx_set_inherited_sockets'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='269' u='r' c='ngx_event_accept'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='277' u='r' c='ngx_event_accept'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='596' u='r' c='ngx_event_recvmsg'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='604' u='r' c='ngx_event_recvmsg'/>

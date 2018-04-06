@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http.h' l='143' type='ngx_int_t ngx_http_filter_finalize_request(ngx_http_request_t * r, ngx_module_t * m, ngx_int_t error)'/>
+<use f='nginx/src/http/modules/ngx_http_not_modified_filter_module.c' l='67' u='c' c='ngx_http_not_modified_header_filter'/>
+<use f='nginx/src/http/modules/ngx_http_not_modified_filter_module.c' l='74' u='c' c='ngx_http_not_modified_header_filter'/>
+<def f='nginx/src/http/ngx_http_special_response.c' l='527' ll='564' type='ngx_int_t ngx_http_filter_finalize_request(ngx_http_request_t * r, ngx_module_t * m, ngx_int_t error)'/>

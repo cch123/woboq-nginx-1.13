@@ -1,0 +1,12 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='415' type='ngx_http_complex_value_t *'/>
+<offset>4608</offset>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2570' u='r' c='ngx_http_set_disable_symlinks'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2574' u='r' c='ngx_http_set_disable_symlinks'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3435' u='w' c='ngx_http_core_create_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3730' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3730' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3731' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3731' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4993' u='w' c='ngx_http_disable_symlinks'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='5012' u='w' c='ngx_http_disable_symlinks'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='5016' u='r' c='ngx_http_disable_symlinks'/>

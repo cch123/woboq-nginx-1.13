@@ -1,0 +1,12 @@
+<dec f='include/stdlib.h' l='764' type='void qsort(void * __base, size_t __nmemb, size_t __size, __compar_fn_t __compar)'/>
+<doc f='include/stdlib.h' l='762'>/* Sort NMEMB elements of BASE, of SIZE bytes each,
+   using COMPAR to perform the comparisons.  */</doc>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='391' macro='1' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_browser_module.c' l='488' macro='1' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_map_module.c' l='315' macro='1' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_map_module.c' l='335' macro='1' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_referer_module.c' l='413' macro='1' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_referer_module.c' l='433' macro='1' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_hash_module.c' l='385' macro='1' u='c'/>
+<use f='nginx/src/http/ngx_http.c' l='1504' macro='1' u='c'/>
+<use f='nginx/src/http/ngx_http.c' l='1522' macro='1' u='c'/>

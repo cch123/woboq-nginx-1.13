@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='488' type='ngx_int_t ngx_http_send_response(ngx_http_request_t * r, ngx_uint_t status, ngx_str_t * ct, ngx_http_complex_value_t * cv)'/>
+<use f='nginx/src/http/modules/ngx_http_empty_gif_module.c' l='127' u='c' c='ngx_http_empty_gif_handler'/>
+<def f='nginx/src/http/ngx_http_core_module.c' l='1658' ll='1734' type='ngx_int_t ngx_http_send_response(ngx_http_request_t * r, ngx_uint_t status, ngx_str_t * ct, ngx_http_complex_value_t * cv)'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1368' u='c' c='ngx_http_script_return_code'/>

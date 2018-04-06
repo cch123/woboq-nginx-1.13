@@ -1,0 +1,4 @@
+<def f='nginx/src/http/ngx_http_request.h' l='361' ll='364'/>
+<size>16</size>
+<mbr r='ngx_http_posted_request_s::request' o='0' t='ngx_http_request_t *'/>
+<mbr r='ngx_http_posted_request_s::next' o='64' t='ngx_http_posted_request_t *'/>

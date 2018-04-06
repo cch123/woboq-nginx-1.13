@@ -1,0 +1,9 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='362' type='ngx_msec_t'/>
+<offset>2432</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='362'>/* resolver_timeout */</doc>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3399' u='w' c='ngx_http_core_create_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3636' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3636' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3637' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3637' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='757' u='r' c='ngx_http_upstream_init_request'/>

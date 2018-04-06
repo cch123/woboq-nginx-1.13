@@ -1,0 +1,244 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ngx_connection.h source code [nginx/src/core/ngx_connection.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="ngx_connection_s,ngx_listening_s "/>
+<link rel="stylesheet" href="../../../../data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../../data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../../data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'nginx/src/core/ngx_connection.h'; var root_path = '../../..'; var data_path = '../../../../data';</script>
+<script src='../../../../data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../..'>nginx</a>/<a href='..'>src</a>/<a href='./'>core</a>/<a href='ngx_connection.h.html'>ngx_connection.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td></td></tr>
+<tr><th id="2">2</th><td><i>/*</i></td></tr>
+<tr><th id="3">3</th><td><i> * Copyright (C) Igor Sysoev</i></td></tr>
+<tr><th id="4">4</th><td><i> * Copyright (C) Nginx, Inc.</i></td></tr>
+<tr><th id="5">5</th><td><i> */</i></td></tr>
+<tr><th id="6">6</th><td></td></tr>
+<tr><th id="7">7</th><td></td></tr>
+<tr><th id="8">8</th><td><u>#<span data-ppcond="8">ifndef</span> <span class="macro" data-ref="_M/_NGX_CONNECTION_H_INCLUDED_">_NGX_CONNECTION_H_INCLUDED_</span></u></td></tr>
+<tr><th id="9">9</th><td><u>#define <dfn class="macro" id="_M/_NGX_CONNECTION_H_INCLUDED_" data-ref="_M/_NGX_CONNECTION_H_INCLUDED_">_NGX_CONNECTION_H_INCLUDED_</dfn></u></td></tr>
+<tr><th id="10">10</th><td></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td><u>#include <a href="ngx_config.h.html">&lt;ngx_config.h&gt;</a></u></td></tr>
+<tr><th id="13">13</th><td><u>#include <a href="ngx_core.h.html">&lt;ngx_core.h&gt;</a></u></td></tr>
+<tr><th id="14">14</th><td></td></tr>
+<tr><th id="15">15</th><td></td></tr>
+<tr><th id="16">16</th><td><b>typedef</b> <b>struct</b> <a class="type" href="#ngx_listening_s" title='ngx_listening_s' data-ref="ngx_listening_s">ngx_listening_s</a>  <dfn class="typedef" id="ngx_listening_t" title='ngx_listening_t' data-type='struct ngx_listening_s' data-ref="ngx_listening_t">ngx_listening_t</dfn>;</td></tr>
+<tr><th id="17">17</th><td></td></tr>
+<tr><th id="18">18</th><td><b>struct</b> <dfn class="type def" id="ngx_listening_s" title='ngx_listening_s' data-ref="ngx_listening_s">ngx_listening_s</dfn> {</td></tr>
+<tr><th id="19">19</th><td>    <a class="typedef" href="../os/unix/ngx_socket.h.html#ngx_socket_t" title='ngx_socket_t' data-type='int' data-ref="ngx_socket_t">ngx_socket_t</a>        <dfn class="decl field" id="ngx_listening_s::fd" title='ngx_listening_s::fd' data-ref="ngx_listening_s::fd">fd</dfn>;</td></tr>
+<tr><th id="20">20</th><td></td></tr>
+<tr><th id="21">21</th><td>    <b>struct</b> <a class="type" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#sockaddr" title='sockaddr' data-ref="sockaddr">sockaddr</a>    *<dfn class="decl field" id="ngx_listening_s::sockaddr" title='ngx_listening_s::sockaddr' data-ref="ngx_listening_s::sockaddr">sockaddr</dfn>;</td></tr>
+<tr><th id="22">22</th><td>    <a class="typedef" href="../../../include/unistd.h.html#socklen_t" title='socklen_t' data-type='__socklen_t' data-ref="socklen_t">socklen_t</a>           <dfn class="decl field" id="ngx_listening_s::socklen" title='ngx_listening_s::socklen' data-ref="ngx_listening_s::socklen">socklen</dfn>;    <i>/* size of sockaddr */</i></td></tr>
+<tr><th id="23">23</th><td>    <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span>              <dfn class="decl field" id="ngx_listening_s::addr_text_max_len" title='ngx_listening_s::addr_text_max_len' data-ref="ngx_listening_s::addr_text_max_len">addr_text_max_len</dfn>;</td></tr>
+<tr><th id="24">24</th><td>    <a class="typedef" href="ngx_string.h.html#ngx_str_t" title='ngx_str_t' data-type='struct ngx_str_t' data-ref="ngx_str_t">ngx_str_t</a>           <dfn class="decl field" id="ngx_listening_s::addr_text" title='ngx_listening_s::addr_text' data-ref="ngx_listening_s::addr_text">addr_text</dfn>;</td></tr>
+<tr><th id="25">25</th><td></td></tr>
+<tr><th id="26">26</th><td>    <em>int</em>                 <dfn class="decl field" id="ngx_listening_s::type" title='ngx_listening_s::type' data-ref="ngx_listening_s::type">type</dfn>;</td></tr>
+<tr><th id="27">27</th><td></td></tr>
+<tr><th id="28">28</th><td>    <em>int</em>                 <dfn class="decl field" id="ngx_listening_s::backlog" title='ngx_listening_s::backlog' data-ref="ngx_listening_s::backlog">backlog</dfn>;</td></tr>
+<tr><th id="29">29</th><td>    <em>int</em>                 <dfn class="decl field" id="ngx_listening_s::rcvbuf" title='ngx_listening_s::rcvbuf' data-ref="ngx_listening_s::rcvbuf">rcvbuf</dfn>;</td></tr>
+<tr><th id="30">30</th><td>    <em>int</em>                 <dfn class="decl field" id="ngx_listening_s::sndbuf" title='ngx_listening_s::sndbuf' data-ref="ngx_listening_s::sndbuf">sndbuf</dfn>;</td></tr>
+<tr><th id="31">31</th><td><u>#<span data-ppcond="31">if</span> (<a class="macro" href="../../objs/ngx_auto_config.h.html#162" title="1" data-ref="_M/NGX_HAVE_KEEPALIVE_TUNABLE">NGX_HAVE_KEEPALIVE_TUNABLE</a>)</u></td></tr>
+<tr><th id="32">32</th><td>    <em>int</em>                 <dfn class="decl field" id="ngx_listening_s::keepidle" title='ngx_listening_s::keepidle' data-ref="ngx_listening_s::keepidle">keepidle</dfn>;</td></tr>
+<tr><th id="33">33</th><td>    <em>int</em>                 <dfn class="decl field" id="ngx_listening_s::keepintvl" title='ngx_listening_s::keepintvl' data-ref="ngx_listening_s::keepintvl">keepintvl</dfn>;</td></tr>
+<tr><th id="34">34</th><td>    <em>int</em>                 <dfn class="decl field" id="ngx_listening_s::keepcnt" title='ngx_listening_s::keepcnt' data-ref="ngx_listening_s::keepcnt">keepcnt</dfn>;</td></tr>
+<tr><th id="35">35</th><td><u>#<span data-ppcond="31">endif</span></u></td></tr>
+<tr><th id="36">36</th><td></td></tr>
+<tr><th id="37">37</th><td>    <i>/* handler of accepted connection */</i></td></tr>
+<tr><th id="38">38</th><td>    <a class="typedef" href="ngx_core.h.html#ngx_connection_handler_pt" title='ngx_connection_handler_pt' data-type='void (*)(ngx_connection_t *)' data-ref="ngx_connection_handler_pt">ngx_connection_handler_pt</a>   <dfn class="decl field" id="ngx_listening_s::handler" title='ngx_listening_s::handler' data-ref="ngx_listening_s::handler">handler</dfn>;</td></tr>
+<tr><th id="39">39</th><td></td></tr>
+<tr><th id="40">40</th><td>    <em>void</em>               *<dfn class="decl field" id="ngx_listening_s::servers" title='ngx_listening_s::servers' data-ref="ngx_listening_s::servers">servers</dfn>;  <i>/* array of ngx_http_in_addr_t, for example */</i></td></tr>
+<tr><th id="41">41</th><td></td></tr>
+<tr><th id="42">42</th><td>    <a class="typedef" href="ngx_core.h.html#ngx_log_t" title='ngx_log_t' data-type='struct ngx_log_s' data-ref="ngx_log_t">ngx_log_t</a>           <dfn class="decl field" id="ngx_listening_s::log" title='ngx_listening_s::log' data-ref="ngx_listening_s::log">log</dfn>;</td></tr>
+<tr><th id="43">43</th><td>    <a class="typedef" href="ngx_core.h.html#ngx_log_t" title='ngx_log_t' data-type='struct ngx_log_s' data-ref="ngx_log_t">ngx_log_t</a>          *<dfn class="decl field" id="ngx_listening_s::logp" title='ngx_listening_s::logp' data-ref="ngx_listening_s::logp">logp</dfn>;</td></tr>
+<tr><th id="44">44</th><td></td></tr>
+<tr><th id="45">45</th><td>    <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span>              <dfn class="decl field" id="ngx_listening_s::pool_size" title='ngx_listening_s::pool_size' data-ref="ngx_listening_s::pool_size">pool_size</dfn>;</td></tr>
+<tr><th id="46">46</th><td>    <i>/* should be here because of the AcceptEx() preread */</i></td></tr>
+<tr><th id="47">47</th><td>    <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span>              <dfn class="decl field" id="ngx_listening_s::post_accept_buffer_size" title='ngx_listening_s::post_accept_buffer_size' data-ref="ngx_listening_s::post_accept_buffer_size">post_accept_buffer_size</dfn>;</td></tr>
+<tr><th id="48">48</th><td>    <i>/* should be here because of the deferred accept */</i></td></tr>
+<tr><th id="49">49</th><td>    <a class="typedef" href="../os/unix/ngx_time.h.html#ngx_msec_t" title='ngx_msec_t' data-type='ngx_rbtree_key_t' data-ref="ngx_msec_t">ngx_msec_t</a>          <dfn class="decl field" id="ngx_listening_s::post_accept_timeout" title='ngx_listening_s::post_accept_timeout' data-ref="ngx_listening_s::post_accept_timeout">post_accept_timeout</dfn>;</td></tr>
+<tr><th id="50">50</th><td></td></tr>
+<tr><th id="51">51</th><td>    <a class="typedef" href="#ngx_listening_t" title='ngx_listening_t' data-type='struct ngx_listening_s' data-ref="ngx_listening_t">ngx_listening_t</a>    *<dfn class="decl field" id="ngx_listening_s::previous" title='ngx_listening_s::previous' data-ref="ngx_listening_s::previous">previous</dfn>;</td></tr>
+<tr><th id="52">52</th><td>    <a class="typedef" href="ngx_core.h.html#ngx_connection_t" title='ngx_connection_t' data-type='struct ngx_connection_s' data-ref="ngx_connection_t">ngx_connection_t</a>   *<dfn class="decl field" id="ngx_listening_s::connection" title='ngx_listening_s::connection' data-ref="ngx_listening_s::connection">connection</dfn>;</td></tr>
+<tr><th id="53">53</th><td></td></tr>
+<tr><th id="54">54</th><td>    <a class="typedef" href="ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>          <dfn class="decl field" id="ngx_listening_s::worker" title='ngx_listening_s::worker' data-ref="ngx_listening_s::worker">worker</dfn>;</td></tr>
+<tr><th id="55">55</th><td></td></tr>
+<tr><th id="56">56</th><td>    <em>unsigned</em>            <dfn class="decl field" id="ngx_listening_s::open" title='ngx_listening_s::open' data-ref="ngx_listening_s::open">open</dfn>:<var>1</var>;</td></tr>
+<tr><th id="57">57</th><td>    <em>unsigned</em>            <dfn class="decl field" id="ngx_listening_s::remain" title='ngx_listening_s::remain' data-ref="ngx_listening_s::remain">remain</dfn>:<var>1</var>;</td></tr>
+<tr><th id="58">58</th><td>    <em>unsigned</em>            <dfn class="decl field" id="ngx_listening_s::ignore" title='ngx_listening_s::ignore' data-ref="ngx_listening_s::ignore">ignore</dfn>:<var>1</var>;</td></tr>
+<tr><th id="59">59</th><td></td></tr>
+<tr><th id="60">60</th><td>    <em>unsigned</em>            <dfn class="decl field" id="ngx_listening_s::bound" title='ngx_listening_s::bound' data-ref="ngx_listening_s::bound">bound</dfn>:<var>1</var>;       <i>/* already bound */</i></td></tr>
+<tr><th id="61">61</th><td>    <em>unsigned</em>            <dfn class="decl field" id="ngx_listening_s::inherited" title='ngx_listening_s::inherited' data-ref="ngx_listening_s::inherited">inherited</dfn>:<var>1</var>;   <i>/* inherited from previous process */</i></td></tr>
+<tr><th id="62">62</th><td>    <em>unsigned</em>            <dfn class="decl field" id="ngx_listening_s::nonblocking_accept" title='ngx_listening_s::nonblocking_accept' data-ref="ngx_listening_s::nonblocking_accept">nonblocking_accept</dfn>:<var>1</var>;</td></tr>
+<tr><th id="63">63</th><td>    <em>unsigned</em>            <dfn class="decl field" id="ngx_listening_s::listen" title='ngx_listening_s::listen' data-ref="ngx_listening_s::listen">listen</dfn>:<var>1</var>;</td></tr>
+<tr><th id="64">64</th><td>    <em>unsigned</em>            <dfn class="decl field" id="ngx_listening_s::nonblocking" title='ngx_listening_s::nonblocking' data-ref="ngx_listening_s::nonblocking">nonblocking</dfn>:<var>1</var>;</td></tr>
+<tr><th id="65">65</th><td>    <em>unsigned</em>            <dfn class="decl field" id="ngx_listening_s::shared" title='ngx_listening_s::shared' data-ref="ngx_listening_s::shared">shared</dfn>:<var>1</var>;    <i>/* shared between threads or processes */</i></td></tr>
+<tr><th id="66">66</th><td>    <em>unsigned</em>            <dfn class="decl field" id="ngx_listening_s::addr_ntop" title='ngx_listening_s::addr_ntop' data-ref="ngx_listening_s::addr_ntop">addr_ntop</dfn>:<var>1</var>;</td></tr>
+<tr><th id="67">67</th><td>    <em>unsigned</em>            <dfn class="decl field" id="ngx_listening_s::wildcard" title='ngx_listening_s::wildcard' data-ref="ngx_listening_s::wildcard">wildcard</dfn>:<var>1</var>;</td></tr>
+<tr><th id="68">68</th><td></td></tr>
+<tr><th id="69">69</th><td><u>#<span data-ppcond="69">if</span> (<a class="macro" href="../../objs/ngx_auto_config.h.html#247" title="1" data-ref="_M/NGX_HAVE_INET6">NGX_HAVE_INET6</a>)</u></td></tr>
+<tr><th id="70">70</th><td>    <em>unsigned</em>            <dfn class="decl field" id="ngx_listening_s::ipv6only" title='ngx_listening_s::ipv6only' data-ref="ngx_listening_s::ipv6only">ipv6only</dfn>:<var>1</var>;</td></tr>
+<tr><th id="71">71</th><td><u>#<span data-ppcond="69">endif</span></u></td></tr>
+<tr><th id="72">72</th><td>    <em>unsigned</em>            <dfn class="decl field" id="ngx_listening_s::reuseport" title='ngx_listening_s::reuseport' data-ref="ngx_listening_s::reuseport">reuseport</dfn>:<var>1</var>;</td></tr>
+<tr><th id="73">73</th><td>    <em>unsigned</em>            <dfn class="decl field" id="ngx_listening_s::add_reuseport" title='ngx_listening_s::add_reuseport' data-ref="ngx_listening_s::add_reuseport">add_reuseport</dfn>:<var>1</var>;</td></tr>
+<tr><th id="74">74</th><td>    <em>unsigned</em>            <dfn class="decl field" id="ngx_listening_s::keepalive" title='ngx_listening_s::keepalive' data-ref="ngx_listening_s::keepalive">keepalive</dfn>:<var>2</var>;</td></tr>
+<tr><th id="75">75</th><td></td></tr>
+<tr><th id="76">76</th><td>    <em>unsigned</em>            <dfn class="decl field" id="ngx_listening_s::deferred_accept" title='ngx_listening_s::deferred_accept' data-ref="ngx_listening_s::deferred_accept">deferred_accept</dfn>:<var>1</var>;</td></tr>
+<tr><th id="77">77</th><td>    <em>unsigned</em>            <dfn class="decl field" id="ngx_listening_s::delete_deferred" title='ngx_listening_s::delete_deferred' data-ref="ngx_listening_s::delete_deferred">delete_deferred</dfn>:<var>1</var>;</td></tr>
+<tr><th id="78">78</th><td>    <em>unsigned</em>            <dfn class="decl field" id="ngx_listening_s::add_deferred" title='ngx_listening_s::add_deferred' data-ref="ngx_listening_s::add_deferred">add_deferred</dfn>:<var>1</var>;</td></tr>
+<tr><th id="79">79</th><td><u>#<span data-ppcond="79">if</span> (<a class="macro" href="../../objs/ngx_auto_config.h.html#157" title="1" data-ref="_M/NGX_HAVE_DEFERRED_ACCEPT">NGX_HAVE_DEFERRED_ACCEPT</a> &amp;&amp; defined <span class="macro" data-ref="_M/SO_ACCEPTFILTER">SO_ACCEPTFILTER</span>)</u></td></tr>
+<tr><th id="80">80</th><td>    <em>char</em>               *accept_filter;</td></tr>
+<tr><th id="81">81</th><td><u>#<span data-ppcond="79">endif</span></u></td></tr>
+<tr><th id="82">82</th><td><u>#<span data-ppcond="82">if</span> (NGX_HAVE_SETFIB)</u></td></tr>
+<tr><th id="83">83</th><td>    <em>int</em>                 setfib;</td></tr>
+<tr><th id="84">84</th><td><u>#<span data-ppcond="82">endif</span></u></td></tr>
+<tr><th id="85">85</th><td></td></tr>
+<tr><th id="86">86</th><td><u>#<span data-ppcond="86">if</span> (<a class="macro" href="../../objs/ngx_auto_config.h.html#167" title="1" data-ref="_M/NGX_HAVE_TCP_FASTOPEN">NGX_HAVE_TCP_FASTOPEN</a>)</u></td></tr>
+<tr><th id="87">87</th><td>    <em>int</em>                 <dfn class="decl field" id="ngx_listening_s::fastopen" title='ngx_listening_s::fastopen' data-ref="ngx_listening_s::fastopen">fastopen</dfn>;</td></tr>
+<tr><th id="88">88</th><td><u>#<span data-ppcond="86">endif</span></u></td></tr>
+<tr><th id="89">89</th><td></td></tr>
+<tr><th id="90">90</th><td>};</td></tr>
+<tr><th id="91">91</th><td></td></tr>
+<tr><th id="92">92</th><td></td></tr>
+<tr><th id="93">93</th><td><b>typedef</b> <b>enum</b> {</td></tr>
+<tr><th id="94">94</th><td>    <dfn class="enum" id="NGX_ERROR_ALERT" title='NGX_ERROR_ALERT' data-ref="NGX_ERROR_ALERT">NGX_ERROR_ALERT</dfn> = <var>0</var>,</td></tr>
+<tr><th id="95">95</th><td>    <dfn class="enum" id="NGX_ERROR_ERR" title='NGX_ERROR_ERR' data-ref="NGX_ERROR_ERR">NGX_ERROR_ERR</dfn>,</td></tr>
+<tr><th id="96">96</th><td>    <dfn class="enum" id="NGX_ERROR_INFO" title='NGX_ERROR_INFO' data-ref="NGX_ERROR_INFO">NGX_ERROR_INFO</dfn>,</td></tr>
+<tr><th id="97">97</th><td>    <dfn class="enum" id="NGX_ERROR_IGNORE_ECONNRESET" title='NGX_ERROR_IGNORE_ECONNRESET' data-ref="NGX_ERROR_IGNORE_ECONNRESET">NGX_ERROR_IGNORE_ECONNRESET</dfn>,</td></tr>
+<tr><th id="98">98</th><td>    <dfn class="enum" id="NGX_ERROR_IGNORE_EINVAL" title='NGX_ERROR_IGNORE_EINVAL' data-ref="NGX_ERROR_IGNORE_EINVAL">NGX_ERROR_IGNORE_EINVAL</dfn></td></tr>
+<tr><th id="99">99</th><td>} <dfn class="typedef" id="ngx_connection_log_error_e" title='ngx_connection_log_error_e' data-type='enum ngx_connection_log_error_e' data-ref="ngx_connection_log_error_e">ngx_connection_log_error_e</dfn>;</td></tr>
+<tr><th id="100">100</th><td></td></tr>
+<tr><th id="101">101</th><td></td></tr>
+<tr><th id="102">102</th><td><b>typedef</b> <b>enum</b> {</td></tr>
+<tr><th id="103">103</th><td>    <dfn class="enum" id="NGX_TCP_NODELAY_UNSET" title='NGX_TCP_NODELAY_UNSET' data-ref="NGX_TCP_NODELAY_UNSET">NGX_TCP_NODELAY_UNSET</dfn> = <var>0</var>,</td></tr>
+<tr><th id="104">104</th><td>    <dfn class="enum" id="NGX_TCP_NODELAY_SET" title='NGX_TCP_NODELAY_SET' data-ref="NGX_TCP_NODELAY_SET">NGX_TCP_NODELAY_SET</dfn>,</td></tr>
+<tr><th id="105">105</th><td>    <dfn class="enum" id="NGX_TCP_NODELAY_DISABLED" title='NGX_TCP_NODELAY_DISABLED' data-ref="NGX_TCP_NODELAY_DISABLED">NGX_TCP_NODELAY_DISABLED</dfn></td></tr>
+<tr><th id="106">106</th><td>} <dfn class="typedef" id="ngx_connection_tcp_nodelay_e" title='ngx_connection_tcp_nodelay_e' data-type='enum ngx_connection_tcp_nodelay_e' data-ref="ngx_connection_tcp_nodelay_e">ngx_connection_tcp_nodelay_e</dfn>;</td></tr>
+<tr><th id="107">107</th><td></td></tr>
+<tr><th id="108">108</th><td></td></tr>
+<tr><th id="109">109</th><td><b>typedef</b> <b>enum</b> {</td></tr>
+<tr><th id="110">110</th><td>    <dfn class="enum" id="NGX_TCP_NOPUSH_UNSET" title='NGX_TCP_NOPUSH_UNSET' data-ref="NGX_TCP_NOPUSH_UNSET">NGX_TCP_NOPUSH_UNSET</dfn> = <var>0</var>,</td></tr>
+<tr><th id="111">111</th><td>    <dfn class="enum" id="NGX_TCP_NOPUSH_SET" title='NGX_TCP_NOPUSH_SET' data-ref="NGX_TCP_NOPUSH_SET">NGX_TCP_NOPUSH_SET</dfn>,</td></tr>
+<tr><th id="112">112</th><td>    <dfn class="enum" id="NGX_TCP_NOPUSH_DISABLED" title='NGX_TCP_NOPUSH_DISABLED' data-ref="NGX_TCP_NOPUSH_DISABLED">NGX_TCP_NOPUSH_DISABLED</dfn></td></tr>
+<tr><th id="113">113</th><td>} <dfn class="typedef" id="ngx_connection_tcp_nopush_e" title='ngx_connection_tcp_nopush_e' data-type='enum ngx_connection_tcp_nopush_e' data-ref="ngx_connection_tcp_nopush_e">ngx_connection_tcp_nopush_e</dfn>;</td></tr>
+<tr><th id="114">114</th><td></td></tr>
+<tr><th id="115">115</th><td></td></tr>
+<tr><th id="116">116</th><td><u>#define <dfn class="macro" id="_M/NGX_LOWLEVEL_BUFFERED" data-ref="_M/NGX_LOWLEVEL_BUFFERED">NGX_LOWLEVEL_BUFFERED</dfn>  0x0f</u></td></tr>
+<tr><th id="117">117</th><td><u>#define <dfn class="macro" id="_M/NGX_SSL_BUFFERED" data-ref="_M/NGX_SSL_BUFFERED">NGX_SSL_BUFFERED</dfn>       0x01</u></td></tr>
+<tr><th id="118">118</th><td><u>#define <dfn class="macro" id="_M/NGX_HTTP_V2_BUFFERED" data-ref="_M/NGX_HTTP_V2_BUFFERED">NGX_HTTP_V2_BUFFERED</dfn>   0x02</u></td></tr>
+<tr><th id="119">119</th><td></td></tr>
+<tr><th id="120">120</th><td></td></tr>
+<tr><th id="121">121</th><td><b>struct</b> <dfn class="type def" id="ngx_connection_s" title='ngx_connection_s' data-ref="ngx_connection_s">ngx_connection_s</dfn> {</td></tr>
+<tr><th id="122">122</th><td>    <em>void</em>               *<dfn class="decl field" id="ngx_connection_s::data" title='ngx_connection_s::data' data-ref="ngx_connection_s::data">data</dfn>;</td></tr>
+<tr><th id="123">123</th><td>    <a class="typedef" href="ngx_core.h.html#ngx_event_t" title='ngx_event_t' data-type='struct ngx_event_s' data-ref="ngx_event_t">ngx_event_t</a>        *<dfn class="decl field" id="ngx_connection_s::read" title='ngx_connection_s::read' data-ref="ngx_connection_s::read">read</dfn>;</td></tr>
+<tr><th id="124">124</th><td>    <a class="typedef" href="ngx_core.h.html#ngx_event_t" title='ngx_event_t' data-type='struct ngx_event_s' data-ref="ngx_event_t">ngx_event_t</a>        *<dfn class="decl field" id="ngx_connection_s::write" title='ngx_connection_s::write' data-ref="ngx_connection_s::write">write</dfn>;</td></tr>
+<tr><th id="125">125</th><td></td></tr>
+<tr><th id="126">126</th><td>    <a class="typedef" href="../os/unix/ngx_socket.h.html#ngx_socket_t" title='ngx_socket_t' data-type='int' data-ref="ngx_socket_t">ngx_socket_t</a>        <dfn class="decl field" id="ngx_connection_s::fd" title='ngx_connection_s::fd' data-ref="ngx_connection_s::fd">fd</dfn>;</td></tr>
+<tr><th id="127">127</th><td></td></tr>
+<tr><th id="128">128</th><td>    <a class="typedef" href="../os/unix/ngx_os.h.html#ngx_recv_pt" title='ngx_recv_pt' data-type='ssize_t (*)(ngx_connection_t *, u_char *, size_t)' data-ref="ngx_recv_pt">ngx_recv_pt</a>         <dfn class="decl field" id="ngx_connection_s::recv" title='ngx_connection_s::recv' data-ref="ngx_connection_s::recv">recv</dfn>;</td></tr>
+<tr><th id="129">129</th><td>    <a class="typedef" href="../os/unix/ngx_os.h.html#ngx_send_pt" title='ngx_send_pt' data-type='ssize_t (*)(ngx_connection_t *, u_char *, size_t)' data-ref="ngx_send_pt">ngx_send_pt</a>         <dfn class="decl field" id="ngx_connection_s::send" title='ngx_connection_s::send' data-ref="ngx_connection_s::send">send</dfn>;</td></tr>
+<tr><th id="130">130</th><td>    <a class="typedef" href="../os/unix/ngx_os.h.html#ngx_recv_chain_pt" title='ngx_recv_chain_pt' data-type='ssize_t (*)(ngx_connection_t *, ngx_chain_t *, off_t)' data-ref="ngx_recv_chain_pt">ngx_recv_chain_pt</a>   <dfn class="decl field" id="ngx_connection_s::recv_chain" title='ngx_connection_s::recv_chain' data-ref="ngx_connection_s::recv_chain">recv_chain</dfn>;</td></tr>
+<tr><th id="131">131</th><td>    <a class="typedef" href="../os/unix/ngx_os.h.html#ngx_send_chain_pt" title='ngx_send_chain_pt' data-type='ngx_chain_t *(*)(ngx_connection_t *, ngx_chain_t *, off_t)' data-ref="ngx_send_chain_pt">ngx_send_chain_pt</a>   <dfn class="decl field" id="ngx_connection_s::send_chain" title='ngx_connection_s::send_chain' data-ref="ngx_connection_s::send_chain">send_chain</dfn>;</td></tr>
+<tr><th id="132">132</th><td></td></tr>
+<tr><th id="133">133</th><td>    <a class="typedef" href="#ngx_listening_t" title='ngx_listening_t' data-type='struct ngx_listening_s' data-ref="ngx_listening_t">ngx_listening_t</a>    *<dfn class="decl field" id="ngx_connection_s::listening" title='ngx_connection_s::listening' data-ref="ngx_connection_s::listening">listening</dfn>;</td></tr>
+<tr><th id="134">134</th><td></td></tr>
+<tr><th id="135">135</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#off_t" title='off_t' data-type='__off64_t' data-ref="off_t">off_t</a>               <dfn class="decl field" id="ngx_connection_s::sent" title='ngx_connection_s::sent' data-ref="ngx_connection_s::sent">sent</dfn>;</td></tr>
+<tr><th id="136">136</th><td></td></tr>
+<tr><th id="137">137</th><td>    <a class="typedef" href="ngx_core.h.html#ngx_log_t" title='ngx_log_t' data-type='struct ngx_log_s' data-ref="ngx_log_t">ngx_log_t</a>          *<dfn class="decl field" id="ngx_connection_s::log" title='ngx_connection_s::log' data-ref="ngx_connection_s::log">log</dfn>;</td></tr>
+<tr><th id="138">138</th><td></td></tr>
+<tr><th id="139">139</th><td>    <a class="typedef" href="ngx_core.h.html#ngx_pool_t" title='ngx_pool_t' data-type='struct ngx_pool_s' data-ref="ngx_pool_t">ngx_pool_t</a>         *<dfn class="decl field" id="ngx_connection_s::pool" title='ngx_connection_s::pool' data-ref="ngx_connection_s::pool">pool</dfn>;</td></tr>
+<tr><th id="140">140</th><td></td></tr>
+<tr><th id="141">141</th><td>    <em>int</em>                 <dfn class="decl field" id="ngx_connection_s::type" title='ngx_connection_s::type' data-ref="ngx_connection_s::type">type</dfn>;</td></tr>
+<tr><th id="142">142</th><td></td></tr>
+<tr><th id="143">143</th><td>    <b>struct</b> <a class="type" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#sockaddr" title='sockaddr' data-ref="sockaddr">sockaddr</a>    *<dfn class="decl field" id="ngx_connection_s::sockaddr" title='ngx_connection_s::sockaddr' data-ref="ngx_connection_s::sockaddr">sockaddr</dfn>;</td></tr>
+<tr><th id="144">144</th><td>    <a class="typedef" href="../../../include/unistd.h.html#socklen_t" title='socklen_t' data-type='__socklen_t' data-ref="socklen_t">socklen_t</a>           <dfn class="decl field" id="ngx_connection_s::socklen" title='ngx_connection_s::socklen' data-ref="ngx_connection_s::socklen">socklen</dfn>;</td></tr>
+<tr><th id="145">145</th><td>    <a class="typedef" href="ngx_string.h.html#ngx_str_t" title='ngx_str_t' data-type='struct ngx_str_t' data-ref="ngx_str_t">ngx_str_t</a>           <dfn class="decl field" id="ngx_connection_s::addr_text" title='ngx_connection_s::addr_text' data-ref="ngx_connection_s::addr_text">addr_text</dfn>;</td></tr>
+<tr><th id="146">146</th><td></td></tr>
+<tr><th id="147">147</th><td>    <a class="typedef" href="ngx_string.h.html#ngx_str_t" title='ngx_str_t' data-type='struct ngx_str_t' data-ref="ngx_str_t">ngx_str_t</a>           <dfn class="decl field" id="ngx_connection_s::proxy_protocol_addr" title='ngx_connection_s::proxy_protocol_addr' data-ref="ngx_connection_s::proxy_protocol_addr">proxy_protocol_addr</dfn>;</td></tr>
+<tr><th id="148">148</th><td>    <a class="typedef" href="../../../include/netinet/in.h.html#in_port_t" title='in_port_t' data-type='uint16_t' data-ref="in_port_t">in_port_t</a>           <dfn class="decl field" id="ngx_connection_s::proxy_protocol_port" title='ngx_connection_s::proxy_protocol_port' data-ref="ngx_connection_s::proxy_protocol_port">proxy_protocol_port</dfn>;</td></tr>
+<tr><th id="149">149</th><td></td></tr>
+<tr><th id="150">150</th><td><u>#<span data-ppcond="150">if</span> (NGX_SSL || NGX_COMPAT)</u></td></tr>
+<tr><th id="151">151</th><td>    ngx_ssl_connection_t  *ssl;</td></tr>
+<tr><th id="152">152</th><td><u>#<span data-ppcond="150">endif</span></u></td></tr>
+<tr><th id="153">153</th><td></td></tr>
+<tr><th id="154">154</th><td>    <b>struct</b> <a class="type" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#sockaddr" title='sockaddr' data-ref="sockaddr">sockaddr</a>    *<dfn class="decl field" id="ngx_connection_s::local_sockaddr" title='ngx_connection_s::local_sockaddr' data-ref="ngx_connection_s::local_sockaddr">local_sockaddr</dfn>;</td></tr>
+<tr><th id="155">155</th><td>    <a class="typedef" href="../../../include/unistd.h.html#socklen_t" title='socklen_t' data-type='__socklen_t' data-ref="socklen_t">socklen_t</a>           <dfn class="decl field" id="ngx_connection_s::local_socklen" title='ngx_connection_s::local_socklen' data-ref="ngx_connection_s::local_socklen">local_socklen</dfn>;</td></tr>
+<tr><th id="156">156</th><td></td></tr>
+<tr><th id="157">157</th><td>    <a class="typedef" href="ngx_buf.h.html#ngx_buf_t" title='ngx_buf_t' data-type='struct ngx_buf_s' data-ref="ngx_buf_t">ngx_buf_t</a>          *<dfn class="decl field" id="ngx_connection_s::buffer" title='ngx_connection_s::buffer' data-ref="ngx_connection_s::buffer">buffer</dfn>;</td></tr>
+<tr><th id="158">158</th><td></td></tr>
+<tr><th id="159">159</th><td>    <a class="typedef" href="ngx_queue.h.html#ngx_queue_t" title='ngx_queue_t' data-type='struct ngx_queue_s' data-ref="ngx_queue_t">ngx_queue_t</a>         <dfn class="decl field" id="ngx_connection_s::queue" title='ngx_connection_s::queue' data-ref="ngx_connection_s::queue">queue</dfn>;</td></tr>
+<tr><th id="160">160</th><td></td></tr>
+<tr><th id="161">161</th><td>    <a class="typedef" href="../os/unix/ngx_atomic.h.html#ngx_atomic_uint_t" title='ngx_atomic_uint_t' data-type='unsigned long' data-ref="ngx_atomic_uint_t">ngx_atomic_uint_t</a>   <dfn class="decl field" id="ngx_connection_s::number" title='ngx_connection_s::number' data-ref="ngx_connection_s::number">number</dfn>;</td></tr>
+<tr><th id="162">162</th><td></td></tr>
+<tr><th id="163">163</th><td>    <a class="typedef" href="ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>          <dfn class="decl field" id="ngx_connection_s::requests" title='ngx_connection_s::requests' data-ref="ngx_connection_s::requests">requests</dfn>;</td></tr>
+<tr><th id="164">164</th><td></td></tr>
+<tr><th id="165">165</th><td>    <em>unsigned</em>            <dfn class="decl field" id="ngx_connection_s::buffered" title='ngx_connection_s::buffered' data-ref="ngx_connection_s::buffered">buffered</dfn>:<var>8</var>;</td></tr>
+<tr><th id="166">166</th><td></td></tr>
+<tr><th id="167">167</th><td>    <em>unsigned</em>            <dfn class="decl field" id="ngx_connection_s::log_error" title='ngx_connection_s::log_error' data-ref="ngx_connection_s::log_error">log_error</dfn>:<var>3</var>;     <i>/* ngx_connection_log_error_e */</i></td></tr>
+<tr><th id="168">168</th><td></td></tr>
+<tr><th id="169">169</th><td>    <em>unsigned</em>            <dfn class="decl field" id="ngx_connection_s::timedout" title='ngx_connection_s::timedout' data-ref="ngx_connection_s::timedout">timedout</dfn>:<var>1</var>;</td></tr>
+<tr><th id="170">170</th><td>    <em>unsigned</em>            <dfn class="decl field" id="ngx_connection_s::error" title='ngx_connection_s::error' data-ref="ngx_connection_s::error">error</dfn>:<var>1</var>;</td></tr>
+<tr><th id="171">171</th><td>    <em>unsigned</em>            <dfn class="decl field" id="ngx_connection_s::destroyed" title='ngx_connection_s::destroyed' data-ref="ngx_connection_s::destroyed">destroyed</dfn>:<var>1</var>;</td></tr>
+<tr><th id="172">172</th><td></td></tr>
+<tr><th id="173">173</th><td>    <em>unsigned</em>            <dfn class="decl field" id="ngx_connection_s::idle" title='ngx_connection_s::idle' data-ref="ngx_connection_s::idle">idle</dfn>:<var>1</var>;</td></tr>
+<tr><th id="174">174</th><td>    <em>unsigned</em>            <dfn class="decl field" id="ngx_connection_s::reusable" title='ngx_connection_s::reusable' data-ref="ngx_connection_s::reusable">reusable</dfn>:<var>1</var>;</td></tr>
+<tr><th id="175">175</th><td>    <em>unsigned</em>            <dfn class="decl field" id="ngx_connection_s::close" title='ngx_connection_s::close' data-ref="ngx_connection_s::close">close</dfn>:<var>1</var>;</td></tr>
+<tr><th id="176">176</th><td>    <em>unsigned</em>            <dfn class="decl field" id="ngx_connection_s::shared" title='ngx_connection_s::shared' data-ref="ngx_connection_s::shared">shared</dfn>:<var>1</var>;</td></tr>
+<tr><th id="177">177</th><td></td></tr>
+<tr><th id="178">178</th><td>    <em>unsigned</em>            <dfn class="decl field" id="ngx_connection_s::sendfile" title='ngx_connection_s::sendfile' data-ref="ngx_connection_s::sendfile">sendfile</dfn>:<var>1</var>;</td></tr>
+<tr><th id="179">179</th><td>    <em>unsigned</em>            <dfn class="decl field" id="ngx_connection_s::sndlowat" title='ngx_connection_s::sndlowat' data-ref="ngx_connection_s::sndlowat">sndlowat</dfn>:<var>1</var>;</td></tr>
+<tr><th id="180">180</th><td>    <em>unsigned</em>            <dfn class="decl field" id="ngx_connection_s::tcp_nodelay" title='ngx_connection_s::tcp_nodelay' data-ref="ngx_connection_s::tcp_nodelay">tcp_nodelay</dfn>:<var>2</var>;   <i>/* ngx_connection_tcp_nodelay_e */</i></td></tr>
+<tr><th id="181">181</th><td>    <em>unsigned</em>            <dfn class="decl field" id="ngx_connection_s::tcp_nopush" title='ngx_connection_s::tcp_nopush' data-ref="ngx_connection_s::tcp_nopush">tcp_nopush</dfn>:<var>2</var>;    <i>/* ngx_connection_tcp_nopush_e */</i></td></tr>
+<tr><th id="182">182</th><td></td></tr>
+<tr><th id="183">183</th><td>    <em>unsigned</em>            <dfn class="decl field" id="ngx_connection_s::need_last_buf" title='ngx_connection_s::need_last_buf' data-ref="ngx_connection_s::need_last_buf">need_last_buf</dfn>:<var>1</var>;</td></tr>
+<tr><th id="184">184</th><td></td></tr>
+<tr><th id="185">185</th><td><u>#<span data-ppcond="185">if</span> (NGX_HAVE_AIO_SENDFILE || NGX_COMPAT)</u></td></tr>
+<tr><th id="186">186</th><td>    <em>unsigned</em>            busy_count:<var>2</var>;</td></tr>
+<tr><th id="187">187</th><td><u>#<span data-ppcond="185">endif</span></u></td></tr>
+<tr><th id="188">188</th><td></td></tr>
+<tr><th id="189">189</th><td><u>#<span data-ppcond="189">if</span> (NGX_THREADS || NGX_COMPAT)</u></td></tr>
+<tr><th id="190">190</th><td>    ngx_thread_task_t  *sendfile_task;</td></tr>
+<tr><th id="191">191</th><td><u>#<span data-ppcond="189">endif</span></u></td></tr>
+<tr><th id="192">192</th><td>};</td></tr>
+<tr><th id="193">193</th><td></td></tr>
+<tr><th id="194">194</th><td></td></tr>
+<tr><th id="195">195</th><td><u>#define <dfn class="macro" id="_M/ngx_set_connection_log" data-ref="_M/ngx_set_connection_log">ngx_set_connection_log</dfn>(c, l)                                         \</u></td></tr>
+<tr><th id="196">196</th><td><u>                                                                             \</u></td></tr>
+<tr><th id="197">197</th><td><u>    c-&gt;log-&gt;file = l-&gt;file;                                                  \</u></td></tr>
+<tr><th id="198">198</th><td><u>    c-&gt;log-&gt;next = l-&gt;next;                                                  \</u></td></tr>
+<tr><th id="199">199</th><td><u>    c-&gt;log-&gt;writer = l-&gt;writer;                                              \</u></td></tr>
+<tr><th id="200">200</th><td><u>    c-&gt;log-&gt;wdata = l-&gt;wdata;                                                \</u></td></tr>
+<tr><th id="201">201</th><td><u>    if (!(c-&gt;log-&gt;log_level &amp; NGX_LOG_DEBUG_CONNECTION)) {                   \</u></td></tr>
+<tr><th id="202">202</th><td><u>        c-&gt;log-&gt;log_level = l-&gt;log_level;                                    \</u></td></tr>
+<tr><th id="203">203</th><td><u>    }</u></td></tr>
+<tr><th id="204">204</th><td></td></tr>
+<tr><th id="205">205</th><td></td></tr>
+<tr><th id="206">206</th><td><a class="typedef" href="#ngx_listening_t" title='ngx_listening_t' data-type='struct ngx_listening_s' data-ref="ngx_listening_t">ngx_listening_t</a> *<dfn class="decl fn" id="ngx_create_listening" title='ngx_create_listening' data-ref="ngx_create_listening">ngx_create_listening</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_conf_t" title='ngx_conf_t' data-type='struct ngx_conf_s' data-ref="ngx_conf_t">ngx_conf_t</a> *<dfn class="local col6 decl" id="2816cf" title='cf' data-type='ngx_conf_t *' data-ref="2816cf">cf</dfn>, <b>struct</b> <a class="type" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#sockaddr" title='sockaddr' data-ref="sockaddr">sockaddr</a> *<dfn class="local col7 decl" id="2817sockaddr" title='sockaddr' data-type='struct sockaddr *' data-ref="2817sockaddr">sockaddr</dfn>,</td></tr>
+<tr><th id="207">207</th><td>    <a class="typedef" href="../../../include/unistd.h.html#socklen_t" title='socklen_t' data-type='__socklen_t' data-ref="socklen_t">socklen_t</a> <dfn class="local col8 decl" id="2818socklen" title='socklen' data-type='socklen_t' data-ref="2818socklen">socklen</dfn>);</td></tr>
+<tr><th id="208">208</th><td><a class="typedef" href="ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a> <dfn class="decl fn" id="ngx_clone_listening" title='ngx_clone_listening' data-ref="ngx_clone_listening">ngx_clone_listening</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_conf_t" title='ngx_conf_t' data-type='struct ngx_conf_s' data-ref="ngx_conf_t">ngx_conf_t</a> *<dfn class="local col9 decl" id="2819cf" title='cf' data-type='ngx_conf_t *' data-ref="2819cf">cf</dfn>, <a class="typedef" href="#ngx_listening_t" title='ngx_listening_t' data-type='struct ngx_listening_s' data-ref="ngx_listening_t">ngx_listening_t</a> *<dfn class="local col0 decl" id="2820ls" title='ls' data-type='ngx_listening_t *' data-ref="2820ls">ls</dfn>);</td></tr>
+<tr><th id="209">209</th><td><a class="typedef" href="ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a> <dfn class="decl fn" id="ngx_set_inherited_sockets" title='ngx_set_inherited_sockets' data-ref="ngx_set_inherited_sockets">ngx_set_inherited_sockets</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_cycle_t" title='ngx_cycle_t' data-type='struct ngx_cycle_s' data-ref="ngx_cycle_t">ngx_cycle_t</a> *<dfn class="local col1 decl" id="2821cycle" title='cycle' data-type='ngx_cycle_t *' data-ref="2821cycle">cycle</dfn>);</td></tr>
+<tr><th id="210">210</th><td><a class="typedef" href="ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a> <dfn class="decl fn" id="ngx_open_listening_sockets" title='ngx_open_listening_sockets' data-ref="ngx_open_listening_sockets">ngx_open_listening_sockets</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_cycle_t" title='ngx_cycle_t' data-type='struct ngx_cycle_s' data-ref="ngx_cycle_t">ngx_cycle_t</a> *<dfn class="local col2 decl" id="2822cycle" title='cycle' data-type='ngx_cycle_t *' data-ref="2822cycle">cycle</dfn>);</td></tr>
+<tr><th id="211">211</th><td><em>void</em> <dfn class="decl fn" id="ngx_configure_listening_sockets" title='ngx_configure_listening_sockets' data-ref="ngx_configure_listening_sockets">ngx_configure_listening_sockets</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_cycle_t" title='ngx_cycle_t' data-type='struct ngx_cycle_s' data-ref="ngx_cycle_t">ngx_cycle_t</a> *<dfn class="local col3 decl" id="2823cycle" title='cycle' data-type='ngx_cycle_t *' data-ref="2823cycle">cycle</dfn>);</td></tr>
+<tr><th id="212">212</th><td><em>void</em> <dfn class="decl fn" id="ngx_close_listening_sockets" title='ngx_close_listening_sockets' data-ref="ngx_close_listening_sockets">ngx_close_listening_sockets</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_cycle_t" title='ngx_cycle_t' data-type='struct ngx_cycle_s' data-ref="ngx_cycle_t">ngx_cycle_t</a> *<dfn class="local col4 decl" id="2824cycle" title='cycle' data-type='ngx_cycle_t *' data-ref="2824cycle">cycle</dfn>);</td></tr>
+<tr><th id="213">213</th><td><em>void</em> <dfn class="decl fn" id="ngx_close_connection" title='ngx_close_connection' data-ref="ngx_close_connection">ngx_close_connection</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_connection_t" title='ngx_connection_t' data-type='struct ngx_connection_s' data-ref="ngx_connection_t">ngx_connection_t</a> *<dfn class="local col5 decl" id="2825c" title='c' data-type='ngx_connection_t *' data-ref="2825c">c</dfn>);</td></tr>
+<tr><th id="214">214</th><td><em>void</em> <dfn class="decl fn" id="ngx_close_idle_connections" title='ngx_close_idle_connections' data-ref="ngx_close_idle_connections">ngx_close_idle_connections</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_cycle_t" title='ngx_cycle_t' data-type='struct ngx_cycle_s' data-ref="ngx_cycle_t">ngx_cycle_t</a> *<dfn class="local col6 decl" id="2826cycle" title='cycle' data-type='ngx_cycle_t *' data-ref="2826cycle">cycle</dfn>);</td></tr>
+<tr><th id="215">215</th><td><a class="typedef" href="ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a> <dfn class="decl fn" id="ngx_connection_local_sockaddr" title='ngx_connection_local_sockaddr' data-ref="ngx_connection_local_sockaddr">ngx_connection_local_sockaddr</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_connection_t" title='ngx_connection_t' data-type='struct ngx_connection_s' data-ref="ngx_connection_t">ngx_connection_t</a> *<dfn class="local col7 decl" id="2827c" title='c' data-type='ngx_connection_t *' data-ref="2827c">c</dfn>, <a class="typedef" href="ngx_string.h.html#ngx_str_t" title='ngx_str_t' data-type='struct ngx_str_t' data-ref="ngx_str_t">ngx_str_t</a> *<dfn class="local col8 decl" id="2828s" title='s' data-type='ngx_str_t *' data-ref="2828s">s</dfn>,</td></tr>
+<tr><th id="216">216</th><td>    <a class="typedef" href="ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a> <dfn class="local col9 decl" id="2829port" title='port' data-type='ngx_uint_t' data-ref="2829port">port</dfn>);</td></tr>
+<tr><th id="217">217</th><td><a class="typedef" href="ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a> <dfn class="decl fn" id="ngx_tcp_nodelay" title='ngx_tcp_nodelay' data-ref="ngx_tcp_nodelay">ngx_tcp_nodelay</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_connection_t" title='ngx_connection_t' data-type='struct ngx_connection_s' data-ref="ngx_connection_t">ngx_connection_t</a> *<dfn class="local col0 decl" id="2830c" title='c' data-type='ngx_connection_t *' data-ref="2830c">c</dfn>);</td></tr>
+<tr><th id="218">218</th><td><a class="typedef" href="ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a> <dfn class="decl fn" id="ngx_connection_error" title='ngx_connection_error' data-ref="ngx_connection_error">ngx_connection_error</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_connection_t" title='ngx_connection_t' data-type='struct ngx_connection_s' data-ref="ngx_connection_t">ngx_connection_t</a> *<dfn class="local col1 decl" id="2831c" title='c' data-type='ngx_connection_t *' data-ref="2831c">c</dfn>, <a class="typedef" href="../os/unix/ngx_errno.h.html#ngx_err_t" title='ngx_err_t' data-type='int' data-ref="ngx_err_t">ngx_err_t</a> <dfn class="local col2 decl" id="2832err" title='err' data-type='ngx_err_t' data-ref="2832err">err</dfn>, <em>char</em> *<dfn class="local col3 decl" id="2833text" title='text' data-type='char *' data-ref="2833text">text</dfn>);</td></tr>
+<tr><th id="219">219</th><td></td></tr>
+<tr><th id="220">220</th><td><a class="typedef" href="ngx_core.h.html#ngx_connection_t" title='ngx_connection_t' data-type='struct ngx_connection_s' data-ref="ngx_connection_t">ngx_connection_t</a> *<dfn class="decl fn" id="ngx_get_connection" title='ngx_get_connection' data-ref="ngx_get_connection">ngx_get_connection</dfn>(<a class="typedef" href="../os/unix/ngx_socket.h.html#ngx_socket_t" title='ngx_socket_t' data-type='int' data-ref="ngx_socket_t">ngx_socket_t</a> <dfn class="local col4 decl" id="2834s" title='s' data-type='ngx_socket_t' data-ref="2834s">s</dfn>, <a class="typedef" href="ngx_core.h.html#ngx_log_t" title='ngx_log_t' data-type='struct ngx_log_s' data-ref="ngx_log_t">ngx_log_t</a> *<dfn class="local col5 decl" id="2835log" title='log' data-type='ngx_log_t *' data-ref="2835log">log</dfn>);</td></tr>
+<tr><th id="221">221</th><td><em>void</em> <dfn class="decl fn" id="ngx_free_connection" title='ngx_free_connection' data-ref="ngx_free_connection">ngx_free_connection</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_connection_t" title='ngx_connection_t' data-type='struct ngx_connection_s' data-ref="ngx_connection_t">ngx_connection_t</a> *<dfn class="local col6 decl" id="2836c" title='c' data-type='ngx_connection_t *' data-ref="2836c">c</dfn>);</td></tr>
+<tr><th id="222">222</th><td></td></tr>
+<tr><th id="223">223</th><td><em>void</em> <dfn class="decl fn" id="ngx_reusable_connection" title='ngx_reusable_connection' data-ref="ngx_reusable_connection">ngx_reusable_connection</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_connection_t" title='ngx_connection_t' data-type='struct ngx_connection_s' data-ref="ngx_connection_t">ngx_connection_t</a> *<dfn class="local col7 decl" id="2837c" title='c' data-type='ngx_connection_t *' data-ref="2837c">c</dfn>, <a class="typedef" href="ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a> <dfn class="local col8 decl" id="2838reusable" title='reusable' data-type='ngx_uint_t' data-ref="2838reusable">reusable</dfn>);</td></tr>
+<tr><th id="224">224</th><td></td></tr>
+<tr><th id="225">225</th><td><u>#<span data-ppcond="8">endif</span> /* _NGX_CONNECTION_H_INCLUDED_ */</u></td></tr>
+<tr><th id="226">226</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../../objs/ngx_modules.c.html'>nginx/objs/ngx_modules.c</a><br/>Generated on <em>2018-Apr-06</em> from project nginx<br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

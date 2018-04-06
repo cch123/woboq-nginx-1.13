@@ -1,0 +1,9 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='441' type='off_t'/>
+<offset>9408</offset>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='911' u='r' c='ngx_http_log_request_length'/>
+<use f='nginx/src/http/ngx_http_request.c' l='985' u='w' c='ngx_http_process_request_line'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1304' u='w' c='ngx_http_process_request_headers'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1369' u='w' c='ngx_http_process_request_headers'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='106' u='w' c='ngx_http_read_client_request_body'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='356' u='w' c='ngx_http_do_read_client_request_body'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2108' u='r' c='ngx_http_variable_request_length'/>

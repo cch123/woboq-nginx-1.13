@@ -1,0 +1,2 @@
+<dec f='include/pcre.h' l='257'/>
+<doc f='include/pcre.h' l='255'>/* Request types for pcre_fullinfo() */</doc>

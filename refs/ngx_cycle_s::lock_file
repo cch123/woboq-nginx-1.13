@@ -1,0 +1,12 @@
+<dec f='nginx/src/core/ngx_cycle.h' l='82' type='ngx_str_t'/>
+<offset>4736</offset>
+<use f='nginx/src/core/nginx.c' l='1140' u='r' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1153' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1156' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1157' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1162' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1163' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1165' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1169' u='m' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/ngx_cycle.c' l='340' u='m' c='ngx_init_cycle'/>
+<use f='nginx/src/event/ngx_event.c' l='516' u='m' c='ngx_event_module_init'/>

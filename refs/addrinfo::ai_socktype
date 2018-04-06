@@ -1,0 +1,4 @@
+<dec f='include/netdb.h' l='571' type='int'/>
+<offset>64</offset>
+<doc f='include/netdb.h' l='571'>/* Socket type.  */</doc>
+<use f='nginx/src/core/ngx_inet.c' l='1126' u='w' c='ngx_inet_resolve_host'/>

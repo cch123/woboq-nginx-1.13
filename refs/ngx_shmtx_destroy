@@ -1,0 +1,2 @@
+<dec f='nginx/src/core/ngx_shmtx.h' l='42' type='void ngx_shmtx_destroy(ngx_shmtx_t * mtx)'/>
+<def f='nginx/src/core/ngx_shmtx.c' l='46' ll='59' type='void ngx_shmtx_destroy(ngx_shmtx_t * mtx)'/>

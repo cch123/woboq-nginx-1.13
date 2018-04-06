@@ -1,0 +1,6 @@
+<dec f='nginx/src/event/ngx_event_connect.h' l='44' type='ngx_msec_t'/>
+<offset>320</offset>
+<use f='nginx/src/http/ngx_http_upstream.c' l='793' u='w' c='ngx_http_upstream_init_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1235' u='w' c='ngx_http_upstream_resolve_handler'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2418' u='r' c='ngx_http_upstream_test_next'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4166' u='r' c='ngx_http_upstream_next'/>

@@ -1,0 +1,2 @@
+<dec f='include/linux/capability.h' l='274'/>
+<doc f='include/linux/capability.h' l='272'>/* Allow setting cpu affinity on other processes */</doc>

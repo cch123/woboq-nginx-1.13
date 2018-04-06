@@ -1,0 +1,10 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='371' type='ngx_uint_t'/>
+<offset>2816</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='371'>/* lingering_close */</doc>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3396' u='w' c='ngx_http_core_create_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3630' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3630' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3631' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3631' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2622' u='r' c='ngx_http_finalize_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2623' u='r' c='ngx_http_finalize_connection'/>

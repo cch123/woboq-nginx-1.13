@@ -1,0 +1,11 @@
+<dec f='nginx/src/http/ngx_http_script.h' l='222' type='u_char * ngx_http_script_run(ngx_http_request_t * r, ngx_str_t * value, void * code_lengths, size_t reserved, void * code_values)'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='759' u='c' c='ngx_http_fastcgi_eval'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='533' u='c' c='ngx_http_log_script_write'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='951' u='c' c='ngx_http_proxy_eval'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='555' u='c' c='ngx_http_scgi_eval'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='725' u='c' c='ngx_http_uwsgi_eval'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1822' u='c' c='ngx_http_map_uri_to_path'/>
+<def f='nginx/src/http/ngx_http_script.c' l='487' ll='533' type='u_char * ngx_http_script_run(ngx_http_request_t * r, ngx_str_t * value, void * code_lengths, size_t len, void * code_values)'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4048' u='c' c='ngx_http_upstream_store'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1517' u='c' c='ngx_http_variable_document_root'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1559' u='c' c='ngx_http_variable_realpath_root'/>

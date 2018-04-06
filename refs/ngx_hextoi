@@ -1,0 +1,8 @@
+<dec f='nginx/src/core/ngx_string.h' l='179' type='ngx_int_t ngx_hextoi(u_char * line, size_t n)'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3105' u='c' c='ngx_resolver_process_ptr'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3116' u='c' c='ngx_resolver_process_ptr'/>
+<def f='nginx/src/core/ngx_string.c' l='1085' ll='1120' type='ngx_int_t ngx_hextoi(u_char * line, size_t n)'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='1324' u='c' c='ngx_http_charset_map'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='1340' u='c' c='ngx_http_charset_map'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='1381' u='c' c='ngx_http_charset_map'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2181' u='c' c='ngx_http_file_cache_add_file'/>

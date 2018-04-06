@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_buf.h' l='87' type='unsigned int'/>
+<offset>259</offset>
+<use f='nginx/src/core/ngx_output_chain.c' l='272' u='r' c='ngx_output_chain_as_is'/>
+<use f='nginx/src/http/ngx_http_copy_filter_module.c' l='114' u='w' c='ngx_http_copy_filter'/>

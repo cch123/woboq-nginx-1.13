@@ -1,0 +1,6 @@
+<dec f='nginx/src/core/ngx_file.h' l='82' type='unsigned int'/>
+<offset>1929</offset>
+<use f='nginx/src/core/ngx_file.c' l='115' u='r' c='ngx_write_chain_to_temp_file'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='457' u='w' c='ngx_http_write_request_body'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='469' u='r' c='ngx_http_write_request_body'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4014' u='r' c='ngx_http_upstream_store'/>

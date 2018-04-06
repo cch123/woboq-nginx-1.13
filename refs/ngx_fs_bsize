@@ -1,0 +1,4 @@
+<dec f='nginx/src/os/unix/ngx_files.h' l='351' type='size_t ngx_fs_bsize(u_char * name)'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='131' u='c' c='ngx_http_file_cache_init'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='155' u='c' c='ngx_http_file_cache_init'/>
+<def f='nginx/src/os/unix/ngx_files.c' l='865' ll='879' type='size_t ngx_fs_bsize(u_char * name)'/>

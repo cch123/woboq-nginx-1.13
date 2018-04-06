@@ -1,0 +1,3 @@
+<dec f='nginx/src/http/ngx_http_variables.h' l='109' type='ngx_int_t ngx_http_variables_init_vars(ngx_conf_t * cf)'/>
+<use f='nginx/src/http/ngx_http.c' l='314' u='c' c='ngx_http_block'/>
+<def f='nginx/src/http/ngx_http_variables.c' l='2607' ll='2713' type='ngx_int_t ngx_http_variables_init_vars(ngx_conf_t * cf)'/>

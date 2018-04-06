@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='517' type='unsigned int'/>
+<offset>9862</offset>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='802' u='r' c='ngx_http_log_pipe'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2991' u='w' c='ngx_http_set_keepalive'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1754' u='r' c='ngx_http_variable_pipe'/>

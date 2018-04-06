@@ -1,0 +1,314 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ngx_conf_file.h source code [nginx/src/core/ngx_conf_file.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="ngx_command_s,ngx_conf_s,ngx_open_file_s "/>
+<link rel="stylesheet" href="../../../../data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../../data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../../data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'nginx/src/core/ngx_conf_file.h'; var root_path = '../../..'; var data_path = '../../../../data';</script>
+<script src='../../../../data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../..'>nginx</a>/<a href='..'>src</a>/<a href='./'>core</a>/<a href='ngx_conf_file.h.html'>ngx_conf_file.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td></td></tr>
+<tr><th id="2">2</th><td><i>/*</i></td></tr>
+<tr><th id="3">3</th><td><i> * Copyright (C) Igor Sysoev</i></td></tr>
+<tr><th id="4">4</th><td><i> * Copyright (C) Nginx, Inc.</i></td></tr>
+<tr><th id="5">5</th><td><i> */</i></td></tr>
+<tr><th id="6">6</th><td></td></tr>
+<tr><th id="7">7</th><td></td></tr>
+<tr><th id="8">8</th><td><u>#<span data-ppcond="8">ifndef</span> <span class="macro" data-ref="_M/_NGX_CONF_FILE_H_INCLUDED_">_NGX_CONF_FILE_H_INCLUDED_</span></u></td></tr>
+<tr><th id="9">9</th><td><u>#define <dfn class="macro" id="_M/_NGX_CONF_FILE_H_INCLUDED_" data-ref="_M/_NGX_CONF_FILE_H_INCLUDED_">_NGX_CONF_FILE_H_INCLUDED_</dfn></u></td></tr>
+<tr><th id="10">10</th><td></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td><u>#include <a href="ngx_config.h.html">&lt;ngx_config.h&gt;</a></u></td></tr>
+<tr><th id="13">13</th><td><u>#include <a href="ngx_core.h.html">&lt;ngx_core.h&gt;</a></u></td></tr>
+<tr><th id="14">14</th><td></td></tr>
+<tr><th id="15">15</th><td></td></tr>
+<tr><th id="16">16</th><td><i>/*</i></td></tr>
+<tr><th id="17">17</th><td><i> *        AAAA  number of arguments</i></td></tr>
+<tr><th id="18">18</th><td><i> *      FF      command flags</i></td></tr>
+<tr><th id="19">19</th><td><i> *    TT        command type, i.e. HTTP "location" or "server" command</i></td></tr>
+<tr><th id="20">20</th><td><i> */</i></td></tr>
+<tr><th id="21">21</th><td></td></tr>
+<tr><th id="22">22</th><td><u>#define <dfn class="macro" id="_M/NGX_CONF_NOARGS" data-ref="_M/NGX_CONF_NOARGS">NGX_CONF_NOARGS</dfn>      0x00000001</u></td></tr>
+<tr><th id="23">23</th><td><u>#define <dfn class="macro" id="_M/NGX_CONF_TAKE1" data-ref="_M/NGX_CONF_TAKE1">NGX_CONF_TAKE1</dfn>       0x00000002</u></td></tr>
+<tr><th id="24">24</th><td><u>#define <dfn class="macro" id="_M/NGX_CONF_TAKE2" data-ref="_M/NGX_CONF_TAKE2">NGX_CONF_TAKE2</dfn>       0x00000004</u></td></tr>
+<tr><th id="25">25</th><td><u>#define <dfn class="macro" id="_M/NGX_CONF_TAKE3" data-ref="_M/NGX_CONF_TAKE3">NGX_CONF_TAKE3</dfn>       0x00000008</u></td></tr>
+<tr><th id="26">26</th><td><u>#define <dfn class="macro" id="_M/NGX_CONF_TAKE4" data-ref="_M/NGX_CONF_TAKE4">NGX_CONF_TAKE4</dfn>       0x00000010</u></td></tr>
+<tr><th id="27">27</th><td><u>#define <dfn class="macro" id="_M/NGX_CONF_TAKE5" data-ref="_M/NGX_CONF_TAKE5">NGX_CONF_TAKE5</dfn>       0x00000020</u></td></tr>
+<tr><th id="28">28</th><td><u>#define <dfn class="macro" id="_M/NGX_CONF_TAKE6" data-ref="_M/NGX_CONF_TAKE6">NGX_CONF_TAKE6</dfn>       0x00000040</u></td></tr>
+<tr><th id="29">29</th><td><u>#define <dfn class="macro" id="_M/NGX_CONF_TAKE7" data-ref="_M/NGX_CONF_TAKE7">NGX_CONF_TAKE7</dfn>       0x00000080</u></td></tr>
+<tr><th id="30">30</th><td></td></tr>
+<tr><th id="31">31</th><td><u>#define <dfn class="macro" id="_M/NGX_CONF_MAX_ARGS" data-ref="_M/NGX_CONF_MAX_ARGS">NGX_CONF_MAX_ARGS</dfn>    8</u></td></tr>
+<tr><th id="32">32</th><td></td></tr>
+<tr><th id="33">33</th><td><u>#define <dfn class="macro" id="_M/NGX_CONF_TAKE12" data-ref="_M/NGX_CONF_TAKE12">NGX_CONF_TAKE12</dfn>      (NGX_CONF_TAKE1|NGX_CONF_TAKE2)</u></td></tr>
+<tr><th id="34">34</th><td><u>#define <dfn class="macro" id="_M/NGX_CONF_TAKE13" data-ref="_M/NGX_CONF_TAKE13">NGX_CONF_TAKE13</dfn>      (NGX_CONF_TAKE1|NGX_CONF_TAKE3)</u></td></tr>
+<tr><th id="35">35</th><td></td></tr>
+<tr><th id="36">36</th><td><u>#define <dfn class="macro" id="_M/NGX_CONF_TAKE23" data-ref="_M/NGX_CONF_TAKE23">NGX_CONF_TAKE23</dfn>      (NGX_CONF_TAKE2|NGX_CONF_TAKE3)</u></td></tr>
+<tr><th id="37">37</th><td></td></tr>
+<tr><th id="38">38</th><td><u>#define <dfn class="macro" id="_M/NGX_CONF_TAKE123" data-ref="_M/NGX_CONF_TAKE123">NGX_CONF_TAKE123</dfn>     (NGX_CONF_TAKE1|NGX_CONF_TAKE2|NGX_CONF_TAKE3)</u></td></tr>
+<tr><th id="39">39</th><td><u>#define <dfn class="macro" id="_M/NGX_CONF_TAKE1234" data-ref="_M/NGX_CONF_TAKE1234">NGX_CONF_TAKE1234</dfn>    (NGX_CONF_TAKE1|NGX_CONF_TAKE2|NGX_CONF_TAKE3   \</u></td></tr>
+<tr><th id="40">40</th><td><u>                              |NGX_CONF_TAKE4)</u></td></tr>
+<tr><th id="41">41</th><td></td></tr>
+<tr><th id="42">42</th><td><u>#define <dfn class="macro" id="_M/NGX_CONF_ARGS_NUMBER" data-ref="_M/NGX_CONF_ARGS_NUMBER">NGX_CONF_ARGS_NUMBER</dfn> 0x000000ff</u></td></tr>
+<tr><th id="43">43</th><td><u>#define <dfn class="macro" id="_M/NGX_CONF_BLOCK" data-ref="_M/NGX_CONF_BLOCK">NGX_CONF_BLOCK</dfn>       0x00000100</u></td></tr>
+<tr><th id="44">44</th><td><u>#define <dfn class="macro" id="_M/NGX_CONF_FLAG" data-ref="_M/NGX_CONF_FLAG">NGX_CONF_FLAG</dfn>        0x00000200</u></td></tr>
+<tr><th id="45">45</th><td><u>#define <dfn class="macro" id="_M/NGX_CONF_ANY" data-ref="_M/NGX_CONF_ANY">NGX_CONF_ANY</dfn>         0x00000400</u></td></tr>
+<tr><th id="46">46</th><td><u>#define <dfn class="macro" id="_M/NGX_CONF_1MORE" data-ref="_M/NGX_CONF_1MORE">NGX_CONF_1MORE</dfn>       0x00000800</u></td></tr>
+<tr><th id="47">47</th><td><u>#define <dfn class="macro" id="_M/NGX_CONF_2MORE" data-ref="_M/NGX_CONF_2MORE">NGX_CONF_2MORE</dfn>       0x00001000</u></td></tr>
+<tr><th id="48">48</th><td></td></tr>
+<tr><th id="49">49</th><td><u>#define <dfn class="macro" id="_M/NGX_DIRECT_CONF" data-ref="_M/NGX_DIRECT_CONF">NGX_DIRECT_CONF</dfn>      0x00010000</u></td></tr>
+<tr><th id="50">50</th><td></td></tr>
+<tr><th id="51">51</th><td><u>#define <dfn class="macro" id="_M/NGX_MAIN_CONF" data-ref="_M/NGX_MAIN_CONF">NGX_MAIN_CONF</dfn>        0x01000000</u></td></tr>
+<tr><th id="52">52</th><td><u>#define <dfn class="macro" id="_M/NGX_ANY_CONF" data-ref="_M/NGX_ANY_CONF">NGX_ANY_CONF</dfn>         0x1F000000</u></td></tr>
+<tr><th id="53">53</th><td></td></tr>
+<tr><th id="54">54</th><td></td></tr>
+<tr><th id="55">55</th><td></td></tr>
+<tr><th id="56">56</th><td><u>#define <dfn class="macro" id="_M/NGX_CONF_UNSET" data-ref="_M/NGX_CONF_UNSET">NGX_CONF_UNSET</dfn>       -1</u></td></tr>
+<tr><th id="57">57</th><td><u>#define <dfn class="macro" id="_M/NGX_CONF_UNSET_UINT" data-ref="_M/NGX_CONF_UNSET_UINT">NGX_CONF_UNSET_UINT</dfn>  (ngx_uint_t) -1</u></td></tr>
+<tr><th id="58">58</th><td><u>#define <dfn class="macro" id="_M/NGX_CONF_UNSET_PTR" data-ref="_M/NGX_CONF_UNSET_PTR">NGX_CONF_UNSET_PTR</dfn>   (void *) -1</u></td></tr>
+<tr><th id="59">59</th><td><u>#define <dfn class="macro" id="_M/NGX_CONF_UNSET_SIZE" data-ref="_M/NGX_CONF_UNSET_SIZE">NGX_CONF_UNSET_SIZE</dfn>  (size_t) -1</u></td></tr>
+<tr><th id="60">60</th><td><u>#define <dfn class="macro" id="_M/NGX_CONF_UNSET_MSEC" data-ref="_M/NGX_CONF_UNSET_MSEC">NGX_CONF_UNSET_MSEC</dfn>  (ngx_msec_t) -1</u></td></tr>
+<tr><th id="61">61</th><td></td></tr>
+<tr><th id="62">62</th><td></td></tr>
+<tr><th id="63">63</th><td><u>#define <dfn class="macro" id="_M/NGX_CONF_OK" data-ref="_M/NGX_CONF_OK">NGX_CONF_OK</dfn>          NULL</u></td></tr>
+<tr><th id="64">64</th><td><u>#define <dfn class="macro" id="_M/NGX_CONF_ERROR" data-ref="_M/NGX_CONF_ERROR">NGX_CONF_ERROR</dfn>       (void *) -1</u></td></tr>
+<tr><th id="65">65</th><td></td></tr>
+<tr><th id="66">66</th><td><u>#define <dfn class="macro" id="_M/NGX_CONF_BLOCK_START" data-ref="_M/NGX_CONF_BLOCK_START">NGX_CONF_BLOCK_START</dfn> 1</u></td></tr>
+<tr><th id="67">67</th><td><u>#define <dfn class="macro" id="_M/NGX_CONF_BLOCK_DONE" data-ref="_M/NGX_CONF_BLOCK_DONE">NGX_CONF_BLOCK_DONE</dfn>  2</u></td></tr>
+<tr><th id="68">68</th><td><u>#define <dfn class="macro" id="_M/NGX_CONF_FILE_DONE" data-ref="_M/NGX_CONF_FILE_DONE">NGX_CONF_FILE_DONE</dfn>   3</u></td></tr>
+<tr><th id="69">69</th><td></td></tr>
+<tr><th id="70">70</th><td><u>#define <dfn class="macro" id="_M/NGX_CORE_MODULE" data-ref="_M/NGX_CORE_MODULE">NGX_CORE_MODULE</dfn>      0x45524F43  /* "CORE" */</u></td></tr>
+<tr><th id="71">71</th><td><u>#define <dfn class="macro" id="_M/NGX_CONF_MODULE" data-ref="_M/NGX_CONF_MODULE">NGX_CONF_MODULE</dfn>      0x464E4F43  /* "CONF" */</u></td></tr>
+<tr><th id="72">72</th><td></td></tr>
+<tr><th id="73">73</th><td></td></tr>
+<tr><th id="74">74</th><td><u>#define <dfn class="macro" id="_M/NGX_MAX_CONF_ERRSTR" data-ref="_M/NGX_MAX_CONF_ERRSTR">NGX_MAX_CONF_ERRSTR</dfn>  1024</u></td></tr>
+<tr><th id="75">75</th><td></td></tr>
+<tr><th id="76">76</th><td></td></tr>
+<tr><th id="77">77</th><td><b>struct</b> <dfn class="type def" id="ngx_command_s" title='ngx_command_s' data-ref="ngx_command_s">ngx_command_s</dfn> {</td></tr>
+<tr><th id="78">78</th><td>    <a class="typedef" href="ngx_string.h.html#ngx_str_t" title='ngx_str_t' data-type='struct ngx_str_t' data-ref="ngx_str_t">ngx_str_t</a>             <dfn class="decl field" id="ngx_command_s::name" title='ngx_command_s::name' data-ref="ngx_command_s::name">name</dfn>;</td></tr>
+<tr><th id="79">79</th><td>    <a class="typedef" href="ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>            <dfn class="decl field" id="ngx_command_s::type" title='ngx_command_s::type' data-ref="ngx_command_s::type">type</dfn>;</td></tr>
+<tr><th id="80">80</th><td>    <em>char</em>               *(*<dfn class="decl field" id="ngx_command_s::set" title='ngx_command_s::set' data-ref="ngx_command_s::set">set</dfn>)(<a class="typedef" href="ngx_core.h.html#ngx_conf_t" title='ngx_conf_t' data-type='struct ngx_conf_s' data-ref="ngx_conf_t">ngx_conf_t</a> *<dfn class="local col3 decl" id="2673cf" title='cf' data-type='ngx_conf_t *' data-ref="2673cf">cf</dfn>, <a class="typedef" href="ngx_core.h.html#ngx_command_t" title='ngx_command_t' data-type='struct ngx_command_s' data-ref="ngx_command_t">ngx_command_t</a> *<dfn class="local col4 decl" id="2674cmd" title='cmd' data-type='ngx_command_t *' data-ref="2674cmd">cmd</dfn>, <em>void</em> *<dfn class="local col5 decl" id="2675conf" title='conf' data-type='void *' data-ref="2675conf">conf</dfn>);</td></tr>
+<tr><th id="81">81</th><td>    <a class="typedef" href="ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>            <dfn class="decl field" id="ngx_command_s::conf" title='ngx_command_s::conf' data-ref="ngx_command_s::conf">conf</dfn>;</td></tr>
+<tr><th id="82">82</th><td>    <a class="typedef" href="ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>            <dfn class="decl field" id="ngx_command_s::offset" title='ngx_command_s::offset' data-ref="ngx_command_s::offset">offset</dfn>;</td></tr>
+<tr><th id="83">83</th><td>    <em>void</em>                 *<dfn class="decl field" id="ngx_command_s::post" title='ngx_command_s::post' data-ref="ngx_command_s::post">post</dfn>;</td></tr>
+<tr><th id="84">84</th><td>};</td></tr>
+<tr><th id="85">85</th><td></td></tr>
+<tr><th id="86">86</th><td><u>#define <dfn class="macro" id="_M/ngx_null_command" data-ref="_M/ngx_null_command">ngx_null_command</dfn>  { ngx_null_string, 0, NULL, 0, 0, NULL }</u></td></tr>
+<tr><th id="87">87</th><td></td></tr>
+<tr><th id="88">88</th><td></td></tr>
+<tr><th id="89">89</th><td><b>struct</b> <dfn class="type def" id="ngx_open_file_s" title='ngx_open_file_s' data-ref="ngx_open_file_s">ngx_open_file_s</dfn> {</td></tr>
+<tr><th id="90">90</th><td>    <a class="typedef" href="../os/unix/ngx_files.h.html#ngx_fd_t" title='ngx_fd_t' data-type='int' data-ref="ngx_fd_t">ngx_fd_t</a>              <dfn class="decl field" id="ngx_open_file_s::fd" title='ngx_open_file_s::fd' data-ref="ngx_open_file_s::fd">fd</dfn>;</td></tr>
+<tr><th id="91">91</th><td>    <a class="typedef" href="ngx_string.h.html#ngx_str_t" title='ngx_str_t' data-type='struct ngx_str_t' data-ref="ngx_str_t">ngx_str_t</a>             <dfn class="decl field" id="ngx_open_file_s::name" title='ngx_open_file_s::name' data-ref="ngx_open_file_s::name">name</dfn>;</td></tr>
+<tr><th id="92">92</th><td></td></tr>
+<tr><th id="93">93</th><td>    <em>void</em>                (*<dfn class="decl field" id="ngx_open_file_s::flush" title='ngx_open_file_s::flush' data-ref="ngx_open_file_s::flush">flush</dfn>)(<a class="typedef" href="ngx_core.h.html#ngx_open_file_t" title='ngx_open_file_t' data-type='struct ngx_open_file_s' data-ref="ngx_open_file_t">ngx_open_file_t</a> *<dfn class="local col6 decl" id="2676file" title='file' data-type='ngx_open_file_t *' data-ref="2676file">file</dfn>, <a class="typedef" href="ngx_core.h.html#ngx_log_t" title='ngx_log_t' data-type='struct ngx_log_s' data-ref="ngx_log_t">ngx_log_t</a> *<dfn class="local col7 decl" id="2677log" title='log' data-type='ngx_log_t *' data-ref="2677log">log</dfn>);</td></tr>
+<tr><th id="94">94</th><td>    <em>void</em>                 *<dfn class="decl field" id="ngx_open_file_s::data" title='ngx_open_file_s::data' data-ref="ngx_open_file_s::data">data</dfn>;</td></tr>
+<tr><th id="95">95</th><td>};</td></tr>
+<tr><th id="96">96</th><td></td></tr>
+<tr><th id="97">97</th><td></td></tr>
+<tr><th id="98">98</th><td><b>typedef</b> <b>struct</b> {</td></tr>
+<tr><th id="99">99</th><td>    <a class="typedef" href="ngx_core.h.html#ngx_file_t" title='ngx_file_t' data-type='struct ngx_file_s' data-ref="ngx_file_t">ngx_file_t</a>            <dfn class="decl field" id="(anonymous)::file" title='(anonymous struct)::file' data-ref="(anonymous)::file">file</dfn>;</td></tr>
+<tr><th id="100">100</th><td>    <a class="typedef" href="ngx_buf.h.html#ngx_buf_t" title='ngx_buf_t' data-type='struct ngx_buf_s' data-ref="ngx_buf_t">ngx_buf_t</a>            *<dfn class="decl field" id="(anonymous)::buffer" title='(anonymous struct)::buffer' data-ref="(anonymous)::buffer">buffer</dfn>;</td></tr>
+<tr><th id="101">101</th><td>    <a class="typedef" href="ngx_buf.h.html#ngx_buf_t" title='ngx_buf_t' data-type='struct ngx_buf_s' data-ref="ngx_buf_t">ngx_buf_t</a>            *<dfn class="decl field" id="(anonymous)::dump" title='(anonymous struct)::dump' data-ref="(anonymous)::dump">dump</dfn>;</td></tr>
+<tr><th id="102">102</th><td>    <a class="typedef" href="ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>            <dfn class="decl field" id="(anonymous)::line" title='(anonymous struct)::line' data-ref="(anonymous)::line">line</dfn>;</td></tr>
+<tr><th id="103">103</th><td>} <dfn class="typedef" id="ngx_conf_file_t" title='ngx_conf_file_t' data-type='struct ngx_conf_file_t' data-ref="ngx_conf_file_t">ngx_conf_file_t</dfn>;</td></tr>
+<tr><th id="104">104</th><td></td></tr>
+<tr><th id="105">105</th><td></td></tr>
+<tr><th id="106">106</th><td><b>typedef</b> <b>struct</b> {</td></tr>
+<tr><th id="107">107</th><td>    <a class="typedef" href="ngx_string.h.html#ngx_str_t" title='ngx_str_t' data-type='struct ngx_str_t' data-ref="ngx_str_t">ngx_str_t</a>             <dfn class="decl field" id="(anonymous)::name" title='(anonymous struct)::name' data-ref="(anonymous)::name">name</dfn>;</td></tr>
+<tr><th id="108">108</th><td>    <a class="typedef" href="ngx_buf.h.html#ngx_buf_t" title='ngx_buf_t' data-type='struct ngx_buf_s' data-ref="ngx_buf_t">ngx_buf_t</a>            *<dfn class="decl field" id="(anonymous)::buffer" title='(anonymous struct)::buffer' data-ref="(anonymous)::buffer">buffer</dfn>;</td></tr>
+<tr><th id="109">109</th><td>} <dfn class="typedef" id="ngx_conf_dump_t" title='ngx_conf_dump_t' data-type='struct ngx_conf_dump_t' data-ref="ngx_conf_dump_t">ngx_conf_dump_t</dfn>;</td></tr>
+<tr><th id="110">110</th><td></td></tr>
+<tr><th id="111">111</th><td></td></tr>
+<tr><th id="112">112</th><td><b>typedef</b> <em>char</em> *(*<dfn class="typedef" id="ngx_conf_handler_pt" title='ngx_conf_handler_pt' data-type='char *(*)(ngx_conf_t *, ngx_command_t *, void *)' data-ref="ngx_conf_handler_pt">ngx_conf_handler_pt</dfn>)(<a class="typedef" href="ngx_core.h.html#ngx_conf_t" title='ngx_conf_t' data-type='struct ngx_conf_s' data-ref="ngx_conf_t">ngx_conf_t</a> *<dfn class="local col8 decl" id="2678cf" title='cf' data-type='ngx_conf_t *' data-ref="2678cf">cf</dfn>,</td></tr>
+<tr><th id="113">113</th><td>    <a class="typedef" href="ngx_core.h.html#ngx_command_t" title='ngx_command_t' data-type='struct ngx_command_s' data-ref="ngx_command_t">ngx_command_t</a> *<dfn class="local col9 decl" id="2679dummy" title='dummy' data-type='ngx_command_t *' data-ref="2679dummy">dummy</dfn>, <em>void</em> *<dfn class="local col0 decl" id="2680conf" title='conf' data-type='void *' data-ref="2680conf">conf</dfn>);</td></tr>
+<tr><th id="114">114</th><td></td></tr>
+<tr><th id="115">115</th><td></td></tr>
+<tr><th id="116">116</th><td><b>struct</b> <dfn class="type def" id="ngx_conf_s" title='ngx_conf_s' data-ref="ngx_conf_s">ngx_conf_s</dfn> {</td></tr>
+<tr><th id="117">117</th><td>    <em>char</em>                 *<dfn class="decl field" id="ngx_conf_s::name" title='ngx_conf_s::name' data-ref="ngx_conf_s::name">name</dfn>;</td></tr>
+<tr><th id="118">118</th><td>    <a class="typedef" href="ngx_array.h.html#ngx_array_t" title='ngx_array_t' data-type='struct ngx_array_t' data-ref="ngx_array_t">ngx_array_t</a>          *<dfn class="decl field" id="ngx_conf_s::args" title='ngx_conf_s::args' data-ref="ngx_conf_s::args">args</dfn>;</td></tr>
+<tr><th id="119">119</th><td></td></tr>
+<tr><th id="120">120</th><td>    <a class="typedef" href="ngx_core.h.html#ngx_cycle_t" title='ngx_cycle_t' data-type='struct ngx_cycle_s' data-ref="ngx_cycle_t">ngx_cycle_t</a>          *<dfn class="decl field" id="ngx_conf_s::cycle" title='ngx_conf_s::cycle' data-ref="ngx_conf_s::cycle">cycle</dfn>;</td></tr>
+<tr><th id="121">121</th><td>    <a class="typedef" href="ngx_core.h.html#ngx_pool_t" title='ngx_pool_t' data-type='struct ngx_pool_s' data-ref="ngx_pool_t">ngx_pool_t</a>           *<dfn class="decl field" id="ngx_conf_s::pool" title='ngx_conf_s::pool' data-ref="ngx_conf_s::pool">pool</dfn>;</td></tr>
+<tr><th id="122">122</th><td>    <a class="typedef" href="ngx_core.h.html#ngx_pool_t" title='ngx_pool_t' data-type='struct ngx_pool_s' data-ref="ngx_pool_t">ngx_pool_t</a>           *<dfn class="decl field" id="ngx_conf_s::temp_pool" title='ngx_conf_s::temp_pool' data-ref="ngx_conf_s::temp_pool">temp_pool</dfn>;</td></tr>
+<tr><th id="123">123</th><td>    <a class="typedef" href="#ngx_conf_file_t" title='ngx_conf_file_t' data-type='struct ngx_conf_file_t' data-ref="ngx_conf_file_t">ngx_conf_file_t</a>      *<dfn class="decl field" id="ngx_conf_s::conf_file" title='ngx_conf_s::conf_file' data-ref="ngx_conf_s::conf_file">conf_file</dfn>;</td></tr>
+<tr><th id="124">124</th><td>    <a class="typedef" href="ngx_core.h.html#ngx_log_t" title='ngx_log_t' data-type='struct ngx_log_s' data-ref="ngx_log_t">ngx_log_t</a>            *<dfn class="decl field" id="ngx_conf_s::log" title='ngx_conf_s::log' data-ref="ngx_conf_s::log">log</dfn>;</td></tr>
+<tr><th id="125">125</th><td></td></tr>
+<tr><th id="126">126</th><td>    <em>void</em>                 *<dfn class="decl field" id="ngx_conf_s::ctx" title='ngx_conf_s::ctx' data-ref="ngx_conf_s::ctx">ctx</dfn>;</td></tr>
+<tr><th id="127">127</th><td>    <a class="typedef" href="ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>            <dfn class="decl field" id="ngx_conf_s::module_type" title='ngx_conf_s::module_type' data-ref="ngx_conf_s::module_type">module_type</dfn>;</td></tr>
+<tr><th id="128">128</th><td>    <a class="typedef" href="ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>            <dfn class="decl field" id="ngx_conf_s::cmd_type" title='ngx_conf_s::cmd_type' data-ref="ngx_conf_s::cmd_type">cmd_type</dfn>;</td></tr>
+<tr><th id="129">129</th><td></td></tr>
+<tr><th id="130">130</th><td>    <a class="typedef" href="#ngx_conf_handler_pt" title='ngx_conf_handler_pt' data-type='char *(*)(ngx_conf_t *, ngx_command_t *, void *)' data-ref="ngx_conf_handler_pt">ngx_conf_handler_pt</a>   <dfn class="decl field" id="ngx_conf_s::handler" title='ngx_conf_s::handler' data-ref="ngx_conf_s::handler">handler</dfn>;</td></tr>
+<tr><th id="131">131</th><td>    <em>void</em>                 *<dfn class="decl field" id="ngx_conf_s::handler_conf" title='ngx_conf_s::handler_conf' data-ref="ngx_conf_s::handler_conf">handler_conf</dfn>;</td></tr>
+<tr><th id="132">132</th><td>};</td></tr>
+<tr><th id="133">133</th><td></td></tr>
+<tr><th id="134">134</th><td></td></tr>
+<tr><th id="135">135</th><td><b>typedef</b> <em>char</em> *(*<dfn class="typedef" id="ngx_conf_post_handler_pt" title='ngx_conf_post_handler_pt' data-type='char *(*)(ngx_conf_t *, void *, void *)' data-ref="ngx_conf_post_handler_pt">ngx_conf_post_handler_pt</dfn>) (<a class="typedef" href="ngx_core.h.html#ngx_conf_t" title='ngx_conf_t' data-type='struct ngx_conf_s' data-ref="ngx_conf_t">ngx_conf_t</a> *<dfn class="local col1 decl" id="2681cf" title='cf' data-type='ngx_conf_t *' data-ref="2681cf">cf</dfn>,</td></tr>
+<tr><th id="136">136</th><td>    <em>void</em> *<dfn class="local col2 decl" id="2682data" title='data' data-type='void *' data-ref="2682data">data</dfn>, <em>void</em> *<dfn class="local col3 decl" id="2683conf" title='conf' data-type='void *' data-ref="2683conf">conf</dfn>);</td></tr>
+<tr><th id="137">137</th><td></td></tr>
+<tr><th id="138">138</th><td><b>typedef</b> <b>struct</b> {</td></tr>
+<tr><th id="139">139</th><td>    <a class="typedef" href="#ngx_conf_post_handler_pt" title='ngx_conf_post_handler_pt' data-type='char *(*)(ngx_conf_t *, void *, void *)' data-ref="ngx_conf_post_handler_pt">ngx_conf_post_handler_pt</a>  <dfn class="decl field" id="(anonymous)::post_handler" title='(anonymous struct)::post_handler' data-ref="(anonymous)::post_handler">post_handler</dfn>;</td></tr>
+<tr><th id="140">140</th><td>} <dfn class="typedef" id="ngx_conf_post_t" title='ngx_conf_post_t' data-type='struct ngx_conf_post_t' data-ref="ngx_conf_post_t">ngx_conf_post_t</dfn>;</td></tr>
+<tr><th id="141">141</th><td></td></tr>
+<tr><th id="142">142</th><td></td></tr>
+<tr><th id="143">143</th><td><b>typedef</b> <b>struct</b> {</td></tr>
+<tr><th id="144">144</th><td>    <a class="typedef" href="#ngx_conf_post_handler_pt" title='ngx_conf_post_handler_pt' data-type='char *(*)(ngx_conf_t *, void *, void *)' data-ref="ngx_conf_post_handler_pt">ngx_conf_post_handler_pt</a>  <dfn class="decl field" id="(anonymous)::post_handler" title='(anonymous struct)::post_handler' data-ref="(anonymous)::post_handler">post_handler</dfn>;</td></tr>
+<tr><th id="145">145</th><td>    <em>char</em>                     *<dfn class="decl field" id="(anonymous)::old_name" title='(anonymous struct)::old_name' data-ref="(anonymous)::old_name">old_name</dfn>;</td></tr>
+<tr><th id="146">146</th><td>    <em>char</em>                     *<dfn class="decl field" id="(anonymous)::new_name" title='(anonymous struct)::new_name' data-ref="(anonymous)::new_name">new_name</dfn>;</td></tr>
+<tr><th id="147">147</th><td>} <dfn class="typedef" id="ngx_conf_deprecated_t" title='ngx_conf_deprecated_t' data-type='struct ngx_conf_deprecated_t' data-ref="ngx_conf_deprecated_t">ngx_conf_deprecated_t</dfn>;</td></tr>
+<tr><th id="148">148</th><td></td></tr>
+<tr><th id="149">149</th><td></td></tr>
+<tr><th id="150">150</th><td><b>typedef</b> <b>struct</b> {</td></tr>
+<tr><th id="151">151</th><td>    <a class="typedef" href="#ngx_conf_post_handler_pt" title='ngx_conf_post_handler_pt' data-type='char *(*)(ngx_conf_t *, void *, void *)' data-ref="ngx_conf_post_handler_pt">ngx_conf_post_handler_pt</a>  <dfn class="decl field" id="(anonymous)::post_handler" title='(anonymous struct)::post_handler' data-ref="(anonymous)::post_handler">post_handler</dfn>;</td></tr>
+<tr><th id="152">152</th><td>    <a class="typedef" href="ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a>                 <dfn class="decl field" id="(anonymous)::low" title='(anonymous struct)::low' data-ref="(anonymous)::low">low</dfn>;</td></tr>
+<tr><th id="153">153</th><td>    <a class="typedef" href="ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a>                 <dfn class="decl field" id="(anonymous)::high" title='(anonymous struct)::high' data-ref="(anonymous)::high">high</dfn>;</td></tr>
+<tr><th id="154">154</th><td>} <dfn class="typedef" id="ngx_conf_num_bounds_t" title='ngx_conf_num_bounds_t' data-type='struct ngx_conf_num_bounds_t' data-ref="ngx_conf_num_bounds_t">ngx_conf_num_bounds_t</dfn>;</td></tr>
+<tr><th id="155">155</th><td></td></tr>
+<tr><th id="156">156</th><td></td></tr>
+<tr><th id="157">157</th><td><b>typedef</b> <b>struct</b> {</td></tr>
+<tr><th id="158">158</th><td>    <a class="typedef" href="ngx_string.h.html#ngx_str_t" title='ngx_str_t' data-type='struct ngx_str_t' data-ref="ngx_str_t">ngx_str_t</a>                 <dfn class="decl field" id="(anonymous)::name" title='(anonymous struct)::name' data-ref="(anonymous)::name">name</dfn>;</td></tr>
+<tr><th id="159">159</th><td>    <a class="typedef" href="ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>                <dfn class="decl field" id="(anonymous)::value" title='(anonymous struct)::value' data-ref="(anonymous)::value">value</dfn>;</td></tr>
+<tr><th id="160">160</th><td>} <dfn class="typedef" id="ngx_conf_enum_t" title='ngx_conf_enum_t' data-type='struct ngx_conf_enum_t' data-ref="ngx_conf_enum_t">ngx_conf_enum_t</dfn>;</td></tr>
+<tr><th id="161">161</th><td></td></tr>
+<tr><th id="162">162</th><td></td></tr>
+<tr><th id="163">163</th><td><u>#define <dfn class="macro" id="_M/NGX_CONF_BITMASK_SET" data-ref="_M/NGX_CONF_BITMASK_SET">NGX_CONF_BITMASK_SET</dfn>  1</u></td></tr>
+<tr><th id="164">164</th><td></td></tr>
+<tr><th id="165">165</th><td><b>typedef</b> <b>struct</b> {</td></tr>
+<tr><th id="166">166</th><td>    <a class="typedef" href="ngx_string.h.html#ngx_str_t" title='ngx_str_t' data-type='struct ngx_str_t' data-ref="ngx_str_t">ngx_str_t</a>                 <dfn class="decl field" id="(anonymous)::name" title='(anonymous struct)::name' data-ref="(anonymous)::name">name</dfn>;</td></tr>
+<tr><th id="167">167</th><td>    <a class="typedef" href="ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>                <dfn class="decl field" id="(anonymous)::mask" title='(anonymous struct)::mask' data-ref="(anonymous)::mask">mask</dfn>;</td></tr>
+<tr><th id="168">168</th><td>} <dfn class="typedef" id="ngx_conf_bitmask_t" title='ngx_conf_bitmask_t' data-type='struct ngx_conf_bitmask_t' data-ref="ngx_conf_bitmask_t">ngx_conf_bitmask_t</dfn>;</td></tr>
+<tr><th id="169">169</th><td></td></tr>
+<tr><th id="170">170</th><td></td></tr>
+<tr><th id="171">171</th><td></td></tr>
+<tr><th id="172">172</th><td><em>char</em> * <dfn class="decl fn" id="ngx_conf_deprecated" title='ngx_conf_deprecated' data-ref="ngx_conf_deprecated">ngx_conf_deprecated</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_conf_t" title='ngx_conf_t' data-type='struct ngx_conf_s' data-ref="ngx_conf_t">ngx_conf_t</a> *<dfn class="local col4 decl" id="2684cf" title='cf' data-type='ngx_conf_t *' data-ref="2684cf">cf</dfn>, <em>void</em> *<dfn class="local col5 decl" id="2685post" title='post' data-type='void *' data-ref="2685post">post</dfn>, <em>void</em> *<dfn class="local col6 decl" id="2686data" title='data' data-type='void *' data-ref="2686data">data</dfn>);</td></tr>
+<tr><th id="173">173</th><td><em>char</em> *<dfn class="decl fn" id="ngx_conf_check_num_bounds" title='ngx_conf_check_num_bounds' data-ref="ngx_conf_check_num_bounds">ngx_conf_check_num_bounds</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_conf_t" title='ngx_conf_t' data-type='struct ngx_conf_s' data-ref="ngx_conf_t">ngx_conf_t</a> *<dfn class="local col7 decl" id="2687cf" title='cf' data-type='ngx_conf_t *' data-ref="2687cf">cf</dfn>, <em>void</em> *<dfn class="local col8 decl" id="2688post" title='post' data-type='void *' data-ref="2688post">post</dfn>, <em>void</em> *<dfn class="local col9 decl" id="2689data" title='data' data-type='void *' data-ref="2689data">data</dfn>);</td></tr>
+<tr><th id="174">174</th><td></td></tr>
+<tr><th id="175">175</th><td></td></tr>
+<tr><th id="176">176</th><td><u>#define <dfn class="macro" id="_M/ngx_get_conf" data-ref="_M/ngx_get_conf">ngx_get_conf</dfn>(conf_ctx, module)  conf_ctx[module.index]</u></td></tr>
+<tr><th id="177">177</th><td></td></tr>
+<tr><th id="178">178</th><td></td></tr>
+<tr><th id="179">179</th><td></td></tr>
+<tr><th id="180">180</th><td><u>#define <dfn class="macro" id="_M/ngx_conf_init_value" data-ref="_M/ngx_conf_init_value">ngx_conf_init_value</dfn>(conf, default)                                   \</u></td></tr>
+<tr><th id="181">181</th><td><u>    if (conf == NGX_CONF_UNSET) {                                            \</u></td></tr>
+<tr><th id="182">182</th><td><u>        conf = default;                                                      \</u></td></tr>
+<tr><th id="183">183</th><td><u>    }</u></td></tr>
+<tr><th id="184">184</th><td></td></tr>
+<tr><th id="185">185</th><td><u>#define <dfn class="macro" id="_M/ngx_conf_init_ptr_value" data-ref="_M/ngx_conf_init_ptr_value">ngx_conf_init_ptr_value</dfn>(conf, default)                               \</u></td></tr>
+<tr><th id="186">186</th><td><u>    if (conf == NGX_CONF_UNSET_PTR) {                                        \</u></td></tr>
+<tr><th id="187">187</th><td><u>        conf = default;                                                      \</u></td></tr>
+<tr><th id="188">188</th><td><u>    }</u></td></tr>
+<tr><th id="189">189</th><td></td></tr>
+<tr><th id="190">190</th><td><u>#define <dfn class="macro" id="_M/ngx_conf_init_uint_value" data-ref="_M/ngx_conf_init_uint_value">ngx_conf_init_uint_value</dfn>(conf, default)                              \</u></td></tr>
+<tr><th id="191">191</th><td><u>    if (conf == NGX_CONF_UNSET_UINT) {                                       \</u></td></tr>
+<tr><th id="192">192</th><td><u>        conf = default;                                                      \</u></td></tr>
+<tr><th id="193">193</th><td><u>    }</u></td></tr>
+<tr><th id="194">194</th><td></td></tr>
+<tr><th id="195">195</th><td><u>#define <dfn class="macro" id="_M/ngx_conf_init_size_value" data-ref="_M/ngx_conf_init_size_value">ngx_conf_init_size_value</dfn>(conf, default)                              \</u></td></tr>
+<tr><th id="196">196</th><td><u>    if (conf == NGX_CONF_UNSET_SIZE) {                                       \</u></td></tr>
+<tr><th id="197">197</th><td><u>        conf = default;                                                      \</u></td></tr>
+<tr><th id="198">198</th><td><u>    }</u></td></tr>
+<tr><th id="199">199</th><td></td></tr>
+<tr><th id="200">200</th><td><u>#define <dfn class="macro" id="_M/ngx_conf_init_msec_value" data-ref="_M/ngx_conf_init_msec_value">ngx_conf_init_msec_value</dfn>(conf, default)                              \</u></td></tr>
+<tr><th id="201">201</th><td><u>    if (conf == NGX_CONF_UNSET_MSEC) {                                       \</u></td></tr>
+<tr><th id="202">202</th><td><u>        conf = default;                                                      \</u></td></tr>
+<tr><th id="203">203</th><td><u>    }</u></td></tr>
+<tr><th id="204">204</th><td></td></tr>
+<tr><th id="205">205</th><td><u>#define <dfn class="macro" id="_M/ngx_conf_merge_value" data-ref="_M/ngx_conf_merge_value">ngx_conf_merge_value</dfn>(conf, prev, default)                            \</u></td></tr>
+<tr><th id="206">206</th><td><u>    if (conf == NGX_CONF_UNSET) {                                            \</u></td></tr>
+<tr><th id="207">207</th><td><u>        conf = (prev == NGX_CONF_UNSET) ? default : prev;                    \</u></td></tr>
+<tr><th id="208">208</th><td><u>    }</u></td></tr>
+<tr><th id="209">209</th><td></td></tr>
+<tr><th id="210">210</th><td><u>#define <dfn class="macro" id="_M/ngx_conf_merge_ptr_value" data-ref="_M/ngx_conf_merge_ptr_value">ngx_conf_merge_ptr_value</dfn>(conf, prev, default)                        \</u></td></tr>
+<tr><th id="211">211</th><td><u>    if (conf == NGX_CONF_UNSET_PTR) {                                        \</u></td></tr>
+<tr><th id="212">212</th><td><u>        conf = (prev == NGX_CONF_UNSET_PTR) ? default : prev;                \</u></td></tr>
+<tr><th id="213">213</th><td><u>    }</u></td></tr>
+<tr><th id="214">214</th><td></td></tr>
+<tr><th id="215">215</th><td><u>#define <dfn class="macro" id="_M/ngx_conf_merge_uint_value" data-ref="_M/ngx_conf_merge_uint_value">ngx_conf_merge_uint_value</dfn>(conf, prev, default)                       \</u></td></tr>
+<tr><th id="216">216</th><td><u>    if (conf == NGX_CONF_UNSET_UINT) {                                       \</u></td></tr>
+<tr><th id="217">217</th><td><u>        conf = (prev == NGX_CONF_UNSET_UINT) ? default : prev;               \</u></td></tr>
+<tr><th id="218">218</th><td><u>    }</u></td></tr>
+<tr><th id="219">219</th><td></td></tr>
+<tr><th id="220">220</th><td><u>#define <dfn class="macro" id="_M/ngx_conf_merge_msec_value" data-ref="_M/ngx_conf_merge_msec_value">ngx_conf_merge_msec_value</dfn>(conf, prev, default)                       \</u></td></tr>
+<tr><th id="221">221</th><td><u>    if (conf == NGX_CONF_UNSET_MSEC) {                                       \</u></td></tr>
+<tr><th id="222">222</th><td><u>        conf = (prev == NGX_CONF_UNSET_MSEC) ? default : prev;               \</u></td></tr>
+<tr><th id="223">223</th><td><u>    }</u></td></tr>
+<tr><th id="224">224</th><td></td></tr>
+<tr><th id="225">225</th><td><u>#define <dfn class="macro" id="_M/ngx_conf_merge_sec_value" data-ref="_M/ngx_conf_merge_sec_value">ngx_conf_merge_sec_value</dfn>(conf, prev, default)                        \</u></td></tr>
+<tr><th id="226">226</th><td><u>    if (conf == NGX_CONF_UNSET) {                                            \</u></td></tr>
+<tr><th id="227">227</th><td><u>        conf = (prev == NGX_CONF_UNSET) ? default : prev;                    \</u></td></tr>
+<tr><th id="228">228</th><td><u>    }</u></td></tr>
+<tr><th id="229">229</th><td></td></tr>
+<tr><th id="230">230</th><td><u>#define <dfn class="macro" id="_M/ngx_conf_merge_size_value" data-ref="_M/ngx_conf_merge_size_value">ngx_conf_merge_size_value</dfn>(conf, prev, default)                       \</u></td></tr>
+<tr><th id="231">231</th><td><u>    if (conf == NGX_CONF_UNSET_SIZE) {                                       \</u></td></tr>
+<tr><th id="232">232</th><td><u>        conf = (prev == NGX_CONF_UNSET_SIZE) ? default : prev;               \</u></td></tr>
+<tr><th id="233">233</th><td><u>    }</u></td></tr>
+<tr><th id="234">234</th><td></td></tr>
+<tr><th id="235">235</th><td><u>#define <dfn class="macro" id="_M/ngx_conf_merge_off_value" data-ref="_M/ngx_conf_merge_off_value">ngx_conf_merge_off_value</dfn>(conf, prev, default)                        \</u></td></tr>
+<tr><th id="236">236</th><td><u>    if (conf == NGX_CONF_UNSET) {                                            \</u></td></tr>
+<tr><th id="237">237</th><td><u>        conf = (prev == NGX_CONF_UNSET) ? default : prev;                    \</u></td></tr>
+<tr><th id="238">238</th><td><u>    }</u></td></tr>
+<tr><th id="239">239</th><td></td></tr>
+<tr><th id="240">240</th><td><u>#define <dfn class="macro" id="_M/ngx_conf_merge_str_value" data-ref="_M/ngx_conf_merge_str_value">ngx_conf_merge_str_value</dfn>(conf, prev, default)                        \</u></td></tr>
+<tr><th id="241">241</th><td><u>    if (conf.data == NULL) {                                                 \</u></td></tr>
+<tr><th id="242">242</th><td><u>        if (prev.data) {                                                     \</u></td></tr>
+<tr><th id="243">243</th><td><u>            conf.len = prev.len;                                             \</u></td></tr>
+<tr><th id="244">244</th><td><u>            conf.data = prev.data;                                           \</u></td></tr>
+<tr><th id="245">245</th><td><u>        } else {                                                             \</u></td></tr>
+<tr><th id="246">246</th><td><u>            conf.len = sizeof(default) - 1;                                  \</u></td></tr>
+<tr><th id="247">247</th><td><u>            conf.data = (u_char *) default;                                  \</u></td></tr>
+<tr><th id="248">248</th><td><u>        }                                                                    \</u></td></tr>
+<tr><th id="249">249</th><td><u>    }</u></td></tr>
+<tr><th id="250">250</th><td></td></tr>
+<tr><th id="251">251</th><td><u>#define <dfn class="macro" id="_M/ngx_conf_merge_bufs_value" data-ref="_M/ngx_conf_merge_bufs_value">ngx_conf_merge_bufs_value</dfn>(conf, prev, default_num, default_size)     \</u></td></tr>
+<tr><th id="252">252</th><td><u>    if (conf.num == 0) {                                                     \</u></td></tr>
+<tr><th id="253">253</th><td><u>        if (prev.num) {                                                      \</u></td></tr>
+<tr><th id="254">254</th><td><u>            conf.num = prev.num;                                             \</u></td></tr>
+<tr><th id="255">255</th><td><u>            conf.size = prev.size;                                           \</u></td></tr>
+<tr><th id="256">256</th><td><u>        } else {                                                             \</u></td></tr>
+<tr><th id="257">257</th><td><u>            conf.num = default_num;                                          \</u></td></tr>
+<tr><th id="258">258</th><td><u>            conf.size = default_size;                                        \</u></td></tr>
+<tr><th id="259">259</th><td><u>        }                                                                    \</u></td></tr>
+<tr><th id="260">260</th><td><u>    }</u></td></tr>
+<tr><th id="261">261</th><td></td></tr>
+<tr><th id="262">262</th><td><u>#define <dfn class="macro" id="_M/ngx_conf_merge_bitmask_value" data-ref="_M/ngx_conf_merge_bitmask_value">ngx_conf_merge_bitmask_value</dfn>(conf, prev, default)                    \</u></td></tr>
+<tr><th id="263">263</th><td><u>    if (conf == 0) {                                                         \</u></td></tr>
+<tr><th id="264">264</th><td><u>        conf = (prev == 0) ? default : prev;                                 \</u></td></tr>
+<tr><th id="265">265</th><td><u>    }</u></td></tr>
+<tr><th id="266">266</th><td></td></tr>
+<tr><th id="267">267</th><td></td></tr>
+<tr><th id="268">268</th><td><em>char</em> *<dfn class="decl fn" id="ngx_conf_param" title='ngx_conf_param' data-ref="ngx_conf_param">ngx_conf_param</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_conf_t" title='ngx_conf_t' data-type='struct ngx_conf_s' data-ref="ngx_conf_t">ngx_conf_t</a> *<dfn class="local col0 decl" id="2690cf" title='cf' data-type='ngx_conf_t *' data-ref="2690cf">cf</dfn>);</td></tr>
+<tr><th id="269">269</th><td><em>char</em> *<dfn class="decl fn" id="ngx_conf_parse" title='ngx_conf_parse' data-ref="ngx_conf_parse">ngx_conf_parse</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_conf_t" title='ngx_conf_t' data-type='struct ngx_conf_s' data-ref="ngx_conf_t">ngx_conf_t</a> *<dfn class="local col1 decl" id="2691cf" title='cf' data-type='ngx_conf_t *' data-ref="2691cf">cf</dfn>, <a class="typedef" href="ngx_string.h.html#ngx_str_t" title='ngx_str_t' data-type='struct ngx_str_t' data-ref="ngx_str_t">ngx_str_t</a> *<dfn class="local col2 decl" id="2692filename" title='filename' data-type='ngx_str_t *' data-ref="2692filename">filename</dfn>);</td></tr>
+<tr><th id="270">270</th><td><em>char</em> *<dfn class="decl fn" id="ngx_conf_include" title='ngx_conf_include' data-ref="ngx_conf_include">ngx_conf_include</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_conf_t" title='ngx_conf_t' data-type='struct ngx_conf_s' data-ref="ngx_conf_t">ngx_conf_t</a> *<dfn class="local col3 decl" id="2693cf" title='cf' data-type='ngx_conf_t *' data-ref="2693cf">cf</dfn>, <a class="typedef" href="ngx_core.h.html#ngx_command_t" title='ngx_command_t' data-type='struct ngx_command_s' data-ref="ngx_command_t">ngx_command_t</a> *<dfn class="local col4 decl" id="2694cmd" title='cmd' data-type='ngx_command_t *' data-ref="2694cmd">cmd</dfn>, <em>void</em> *<dfn class="local col5 decl" id="2695conf" title='conf' data-type='void *' data-ref="2695conf">conf</dfn>);</td></tr>
+<tr><th id="271">271</th><td></td></tr>
+<tr><th id="272">272</th><td></td></tr>
+<tr><th id="273">273</th><td><a class="typedef" href="ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a> <dfn class="decl fn" id="ngx_conf_full_name" title='ngx_conf_full_name' data-ref="ngx_conf_full_name">ngx_conf_full_name</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_cycle_t" title='ngx_cycle_t' data-type='struct ngx_cycle_s' data-ref="ngx_cycle_t">ngx_cycle_t</a> *<dfn class="local col6 decl" id="2696cycle" title='cycle' data-type='ngx_cycle_t *' data-ref="2696cycle">cycle</dfn>, <a class="typedef" href="ngx_string.h.html#ngx_str_t" title='ngx_str_t' data-type='struct ngx_str_t' data-ref="ngx_str_t">ngx_str_t</a> *<dfn class="local col7 decl" id="2697name" title='name' data-type='ngx_str_t *' data-ref="2697name">name</dfn>,</td></tr>
+<tr><th id="274">274</th><td>    <a class="typedef" href="ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a> <dfn class="local col8 decl" id="2698conf_prefix" title='conf_prefix' data-type='ngx_uint_t' data-ref="2698conf_prefix">conf_prefix</dfn>);</td></tr>
+<tr><th id="275">275</th><td><a class="typedef" href="ngx_core.h.html#ngx_open_file_t" title='ngx_open_file_t' data-type='struct ngx_open_file_s' data-ref="ngx_open_file_t">ngx_open_file_t</a> *<dfn class="decl fn" id="ngx_conf_open_file" title='ngx_conf_open_file' data-ref="ngx_conf_open_file">ngx_conf_open_file</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_cycle_t" title='ngx_cycle_t' data-type='struct ngx_cycle_s' data-ref="ngx_cycle_t">ngx_cycle_t</a> *<dfn class="local col9 decl" id="2699cycle" title='cycle' data-type='ngx_cycle_t *' data-ref="2699cycle">cycle</dfn>, <a class="typedef" href="ngx_string.h.html#ngx_str_t" title='ngx_str_t' data-type='struct ngx_str_t' data-ref="ngx_str_t">ngx_str_t</a> *<dfn class="local col0 decl" id="2700name" title='name' data-type='ngx_str_t *' data-ref="2700name">name</dfn>);</td></tr>
+<tr><th id="276">276</th><td><em>void</em> <a class="macro" href="ngx_config.h.html#73" title="" data-ref="_M/ngx_cdecl">ngx_cdecl</a> <dfn class="decl fn" id="ngx_conf_log_error" title='ngx_conf_log_error' data-ref="ngx_conf_log_error">ngx_conf_log_error</dfn>(<a class="typedef" href="ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a> <dfn class="local col1 decl" id="2701level" title='level' data-type='ngx_uint_t' data-ref="2701level">level</dfn>, <a class="typedef" href="ngx_core.h.html#ngx_conf_t" title='ngx_conf_t' data-type='struct ngx_conf_s' data-ref="ngx_conf_t">ngx_conf_t</a> *<dfn class="local col2 decl" id="2702cf" title='cf' data-type='ngx_conf_t *' data-ref="2702cf">cf</dfn>,</td></tr>
+<tr><th id="277">277</th><td>    <a class="typedef" href="../os/unix/ngx_errno.h.html#ngx_err_t" title='ngx_err_t' data-type='int' data-ref="ngx_err_t">ngx_err_t</a> <dfn class="local col3 decl" id="2703err" title='err' data-type='ngx_err_t' data-ref="2703err">err</dfn>, <em>const</em> <em>char</em> *<dfn class="local col4 decl" id="2704fmt" title='fmt' data-type='const char *' data-ref="2704fmt">fmt</dfn>, ...);</td></tr>
+<tr><th id="278">278</th><td></td></tr>
+<tr><th id="279">279</th><td></td></tr>
+<tr><th id="280">280</th><td><em>char</em> *<dfn class="decl fn" id="ngx_conf_set_flag_slot" title='ngx_conf_set_flag_slot' data-ref="ngx_conf_set_flag_slot">ngx_conf_set_flag_slot</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_conf_t" title='ngx_conf_t' data-type='struct ngx_conf_s' data-ref="ngx_conf_t">ngx_conf_t</a> *<dfn class="local col5 decl" id="2705cf" title='cf' data-type='ngx_conf_t *' data-ref="2705cf">cf</dfn>, <a class="typedef" href="ngx_core.h.html#ngx_command_t" title='ngx_command_t' data-type='struct ngx_command_s' data-ref="ngx_command_t">ngx_command_t</a> *<dfn class="local col6 decl" id="2706cmd" title='cmd' data-type='ngx_command_t *' data-ref="2706cmd">cmd</dfn>, <em>void</em> *<dfn class="local col7 decl" id="2707conf" title='conf' data-type='void *' data-ref="2707conf">conf</dfn>);</td></tr>
+<tr><th id="281">281</th><td><em>char</em> *<dfn class="decl fn" id="ngx_conf_set_str_slot" title='ngx_conf_set_str_slot' data-ref="ngx_conf_set_str_slot">ngx_conf_set_str_slot</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_conf_t" title='ngx_conf_t' data-type='struct ngx_conf_s' data-ref="ngx_conf_t">ngx_conf_t</a> *<dfn class="local col8 decl" id="2708cf" title='cf' data-type='ngx_conf_t *' data-ref="2708cf">cf</dfn>, <a class="typedef" href="ngx_core.h.html#ngx_command_t" title='ngx_command_t' data-type='struct ngx_command_s' data-ref="ngx_command_t">ngx_command_t</a> *<dfn class="local col9 decl" id="2709cmd" title='cmd' data-type='ngx_command_t *' data-ref="2709cmd">cmd</dfn>, <em>void</em> *<dfn class="local col0 decl" id="2710conf" title='conf' data-type='void *' data-ref="2710conf">conf</dfn>);</td></tr>
+<tr><th id="282">282</th><td><em>char</em> *<dfn class="decl fn" id="ngx_conf_set_str_array_slot" title='ngx_conf_set_str_array_slot' data-ref="ngx_conf_set_str_array_slot">ngx_conf_set_str_array_slot</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_conf_t" title='ngx_conf_t' data-type='struct ngx_conf_s' data-ref="ngx_conf_t">ngx_conf_t</a> *<dfn class="local col1 decl" id="2711cf" title='cf' data-type='ngx_conf_t *' data-ref="2711cf">cf</dfn>, <a class="typedef" href="ngx_core.h.html#ngx_command_t" title='ngx_command_t' data-type='struct ngx_command_s' data-ref="ngx_command_t">ngx_command_t</a> *<dfn class="local col2 decl" id="2712cmd" title='cmd' data-type='ngx_command_t *' data-ref="2712cmd">cmd</dfn>,</td></tr>
+<tr><th id="283">283</th><td>    <em>void</em> *<dfn class="local col3 decl" id="2713conf" title='conf' data-type='void *' data-ref="2713conf">conf</dfn>);</td></tr>
+<tr><th id="284">284</th><td><em>char</em> *<dfn class="decl fn" id="ngx_conf_set_keyval_slot" title='ngx_conf_set_keyval_slot' data-ref="ngx_conf_set_keyval_slot">ngx_conf_set_keyval_slot</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_conf_t" title='ngx_conf_t' data-type='struct ngx_conf_s' data-ref="ngx_conf_t">ngx_conf_t</a> *<dfn class="local col4 decl" id="2714cf" title='cf' data-type='ngx_conf_t *' data-ref="2714cf">cf</dfn>, <a class="typedef" href="ngx_core.h.html#ngx_command_t" title='ngx_command_t' data-type='struct ngx_command_s' data-ref="ngx_command_t">ngx_command_t</a> *<dfn class="local col5 decl" id="2715cmd" title='cmd' data-type='ngx_command_t *' data-ref="2715cmd">cmd</dfn>, <em>void</em> *<dfn class="local col6 decl" id="2716conf" title='conf' data-type='void *' data-ref="2716conf">conf</dfn>);</td></tr>
+<tr><th id="285">285</th><td><em>char</em> *<dfn class="decl fn" id="ngx_conf_set_num_slot" title='ngx_conf_set_num_slot' data-ref="ngx_conf_set_num_slot">ngx_conf_set_num_slot</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_conf_t" title='ngx_conf_t' data-type='struct ngx_conf_s' data-ref="ngx_conf_t">ngx_conf_t</a> *<dfn class="local col7 decl" id="2717cf" title='cf' data-type='ngx_conf_t *' data-ref="2717cf">cf</dfn>, <a class="typedef" href="ngx_core.h.html#ngx_command_t" title='ngx_command_t' data-type='struct ngx_command_s' data-ref="ngx_command_t">ngx_command_t</a> *<dfn class="local col8 decl" id="2718cmd" title='cmd' data-type='ngx_command_t *' data-ref="2718cmd">cmd</dfn>, <em>void</em> *<dfn class="local col9 decl" id="2719conf" title='conf' data-type='void *' data-ref="2719conf">conf</dfn>);</td></tr>
+<tr><th id="286">286</th><td><em>char</em> *<dfn class="decl fn" id="ngx_conf_set_size_slot" title='ngx_conf_set_size_slot' data-ref="ngx_conf_set_size_slot">ngx_conf_set_size_slot</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_conf_t" title='ngx_conf_t' data-type='struct ngx_conf_s' data-ref="ngx_conf_t">ngx_conf_t</a> *<dfn class="local col0 decl" id="2720cf" title='cf' data-type='ngx_conf_t *' data-ref="2720cf">cf</dfn>, <a class="typedef" href="ngx_core.h.html#ngx_command_t" title='ngx_command_t' data-type='struct ngx_command_s' data-ref="ngx_command_t">ngx_command_t</a> *<dfn class="local col1 decl" id="2721cmd" title='cmd' data-type='ngx_command_t *' data-ref="2721cmd">cmd</dfn>, <em>void</em> *<dfn class="local col2 decl" id="2722conf" title='conf' data-type='void *' data-ref="2722conf">conf</dfn>);</td></tr>
+<tr><th id="287">287</th><td><em>char</em> *<dfn class="decl fn" id="ngx_conf_set_off_slot" title='ngx_conf_set_off_slot' data-ref="ngx_conf_set_off_slot">ngx_conf_set_off_slot</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_conf_t" title='ngx_conf_t' data-type='struct ngx_conf_s' data-ref="ngx_conf_t">ngx_conf_t</a> *<dfn class="local col3 decl" id="2723cf" title='cf' data-type='ngx_conf_t *' data-ref="2723cf">cf</dfn>, <a class="typedef" href="ngx_core.h.html#ngx_command_t" title='ngx_command_t' data-type='struct ngx_command_s' data-ref="ngx_command_t">ngx_command_t</a> *<dfn class="local col4 decl" id="2724cmd" title='cmd' data-type='ngx_command_t *' data-ref="2724cmd">cmd</dfn>, <em>void</em> *<dfn class="local col5 decl" id="2725conf" title='conf' data-type='void *' data-ref="2725conf">conf</dfn>);</td></tr>
+<tr><th id="288">288</th><td><em>char</em> *<dfn class="decl fn" id="ngx_conf_set_msec_slot" title='ngx_conf_set_msec_slot' data-ref="ngx_conf_set_msec_slot">ngx_conf_set_msec_slot</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_conf_t" title='ngx_conf_t' data-type='struct ngx_conf_s' data-ref="ngx_conf_t">ngx_conf_t</a> *<dfn class="local col6 decl" id="2726cf" title='cf' data-type='ngx_conf_t *' data-ref="2726cf">cf</dfn>, <a class="typedef" href="ngx_core.h.html#ngx_command_t" title='ngx_command_t' data-type='struct ngx_command_s' data-ref="ngx_command_t">ngx_command_t</a> *<dfn class="local col7 decl" id="2727cmd" title='cmd' data-type='ngx_command_t *' data-ref="2727cmd">cmd</dfn>, <em>void</em> *<dfn class="local col8 decl" id="2728conf" title='conf' data-type='void *' data-ref="2728conf">conf</dfn>);</td></tr>
+<tr><th id="289">289</th><td><em>char</em> *<dfn class="decl fn" id="ngx_conf_set_sec_slot" title='ngx_conf_set_sec_slot' data-ref="ngx_conf_set_sec_slot">ngx_conf_set_sec_slot</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_conf_t" title='ngx_conf_t' data-type='struct ngx_conf_s' data-ref="ngx_conf_t">ngx_conf_t</a> *<dfn class="local col9 decl" id="2729cf" title='cf' data-type='ngx_conf_t *' data-ref="2729cf">cf</dfn>, <a class="typedef" href="ngx_core.h.html#ngx_command_t" title='ngx_command_t' data-type='struct ngx_command_s' data-ref="ngx_command_t">ngx_command_t</a> *<dfn class="local col0 decl" id="2730cmd" title='cmd' data-type='ngx_command_t *' data-ref="2730cmd">cmd</dfn>, <em>void</em> *<dfn class="local col1 decl" id="2731conf" title='conf' data-type='void *' data-ref="2731conf">conf</dfn>);</td></tr>
+<tr><th id="290">290</th><td><em>char</em> *<dfn class="decl fn" id="ngx_conf_set_bufs_slot" title='ngx_conf_set_bufs_slot' data-ref="ngx_conf_set_bufs_slot">ngx_conf_set_bufs_slot</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_conf_t" title='ngx_conf_t' data-type='struct ngx_conf_s' data-ref="ngx_conf_t">ngx_conf_t</a> *<dfn class="local col2 decl" id="2732cf" title='cf' data-type='ngx_conf_t *' data-ref="2732cf">cf</dfn>, <a class="typedef" href="ngx_core.h.html#ngx_command_t" title='ngx_command_t' data-type='struct ngx_command_s' data-ref="ngx_command_t">ngx_command_t</a> *<dfn class="local col3 decl" id="2733cmd" title='cmd' data-type='ngx_command_t *' data-ref="2733cmd">cmd</dfn>, <em>void</em> *<dfn class="local col4 decl" id="2734conf" title='conf' data-type='void *' data-ref="2734conf">conf</dfn>);</td></tr>
+<tr><th id="291">291</th><td><em>char</em> *<dfn class="decl fn" id="ngx_conf_set_enum_slot" title='ngx_conf_set_enum_slot' data-ref="ngx_conf_set_enum_slot">ngx_conf_set_enum_slot</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_conf_t" title='ngx_conf_t' data-type='struct ngx_conf_s' data-ref="ngx_conf_t">ngx_conf_t</a> *<dfn class="local col5 decl" id="2735cf" title='cf' data-type='ngx_conf_t *' data-ref="2735cf">cf</dfn>, <a class="typedef" href="ngx_core.h.html#ngx_command_t" title='ngx_command_t' data-type='struct ngx_command_s' data-ref="ngx_command_t">ngx_command_t</a> *<dfn class="local col6 decl" id="2736cmd" title='cmd' data-type='ngx_command_t *' data-ref="2736cmd">cmd</dfn>, <em>void</em> *<dfn class="local col7 decl" id="2737conf" title='conf' data-type='void *' data-ref="2737conf">conf</dfn>);</td></tr>
+<tr><th id="292">292</th><td><em>char</em> *<dfn class="decl fn" id="ngx_conf_set_bitmask_slot" title='ngx_conf_set_bitmask_slot' data-ref="ngx_conf_set_bitmask_slot">ngx_conf_set_bitmask_slot</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_conf_t" title='ngx_conf_t' data-type='struct ngx_conf_s' data-ref="ngx_conf_t">ngx_conf_t</a> *<dfn class="local col8 decl" id="2738cf" title='cf' data-type='ngx_conf_t *' data-ref="2738cf">cf</dfn>, <a class="typedef" href="ngx_core.h.html#ngx_command_t" title='ngx_command_t' data-type='struct ngx_command_s' data-ref="ngx_command_t">ngx_command_t</a> *<dfn class="local col9 decl" id="2739cmd" title='cmd' data-type='ngx_command_t *' data-ref="2739cmd">cmd</dfn>, <em>void</em> *<dfn class="local col0 decl" id="2740conf" title='conf' data-type='void *' data-ref="2740conf">conf</dfn>);</td></tr>
+<tr><th id="293">293</th><td></td></tr>
+<tr><th id="294">294</th><td></td></tr>
+<tr><th id="295">295</th><td><u>#<span data-ppcond="8">endif</span> /* _NGX_CONF_FILE_H_INCLUDED_ */</u></td></tr>
+<tr><th id="296">296</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../../objs/ngx_modules.c.html'>nginx/objs/ngx_modules.c</a><br/>Generated on <em>2018-Apr-06</em> from project nginx<br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ngx_crc32.h source code [nginx/src/core/ngx_crc32.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../../../data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../../data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../../data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'nginx/src/core/ngx_crc32.h'; var root_path = '../../..'; var data_path = '../../../../data';</script>
+<script src='../../../../data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../..'>nginx</a>/<a href='..'>src</a>/<a href='./'>core</a>/<a href='ngx_crc32.h.html'>ngx_crc32.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td></td></tr>
+<tr><th id="2">2</th><td><i>/*</i></td></tr>
+<tr><th id="3">3</th><td><i> * Copyright (C) Igor Sysoev</i></td></tr>
+<tr><th id="4">4</th><td><i> * Copyright (C) Nginx, Inc.</i></td></tr>
+<tr><th id="5">5</th><td><i> */</i></td></tr>
+<tr><th id="6">6</th><td></td></tr>
+<tr><th id="7">7</th><td></td></tr>
+<tr><th id="8">8</th><td><u>#<span data-ppcond="8">ifndef</span> <span class="macro" data-ref="_M/_NGX_CRC32_H_INCLUDED_">_NGX_CRC32_H_INCLUDED_</span></u></td></tr>
+<tr><th id="9">9</th><td><u>#define <dfn class="macro" id="_M/_NGX_CRC32_H_INCLUDED_" data-ref="_M/_NGX_CRC32_H_INCLUDED_">_NGX_CRC32_H_INCLUDED_</dfn></u></td></tr>
+<tr><th id="10">10</th><td></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td><u>#include <a href="ngx_config.h.html">&lt;ngx_config.h&gt;</a></u></td></tr>
+<tr><th id="13">13</th><td><u>#include <a href="ngx_core.h.html">&lt;ngx_core.h&gt;</a></u></td></tr>
+<tr><th id="14">14</th><td></td></tr>
+<tr><th id="15">15</th><td></td></tr>
+<tr><th id="16">16</th><td><b>extern</b> <a class="typedef" href="../../../include/stdint.h.html#uint32_t" title='uint32_t' data-type='unsigned int' data-ref="uint32_t">uint32_t</a>  *<dfn class="decl" id="ngx_crc32_table_short" title='ngx_crc32_table_short' data-ref="ngx_crc32_table_short">ngx_crc32_table_short</dfn>;</td></tr>
+<tr><th id="17">17</th><td><b>extern</b> <a class="typedef" href="../../../include/stdint.h.html#uint32_t" title='uint32_t' data-type='unsigned int' data-ref="uint32_t">uint32_t</a>   <dfn class="decl" id="ngx_crc32_table256" title='ngx_crc32_table256' data-ref="ngx_crc32_table256">ngx_crc32_table256</dfn>[];</td></tr>
+<tr><th id="18">18</th><td></td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td><em>static</em> <a class="macro" href="ngx_config.h.html#114" title="inline" data-ref="_M/ngx_inline">ngx_inline</a> <a class="typedef" href="../../../include/stdint.h.html#uint32_t" title='uint32_t' data-type='unsigned int' data-ref="uint32_t">uint32_t</a></td></tr>
+<tr><th id="21">21</th><td><dfn class="decl def fn" id="ngx_crc32_short" title='ngx_crc32_short' data-ref="ngx_crc32_short">ngx_crc32_short</dfn>(<a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a> *<dfn class="local col9 decl" id="2529p" title='p' data-type='u_char *' data-ref="2529p">p</dfn>, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span> <dfn class="local col0 decl" id="2530len" title='len' data-type='size_t' data-ref="2530len">len</dfn>)</td></tr>
+<tr><th id="22">22</th><td>{</td></tr>
+<tr><th id="23">23</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a>    <dfn class="local col1 decl" id="2531c" title='c' data-type='u_char' data-ref="2531c">c</dfn>;</td></tr>
+<tr><th id="24">24</th><td>    <a class="typedef" href="../../../include/stdint.h.html#uint32_t" title='uint32_t' data-type='unsigned int' data-ref="uint32_t">uint32_t</a>  <dfn class="local col2 decl" id="2532crc" title='crc' data-type='uint32_t' data-ref="2532crc">crc</dfn>;</td></tr>
+<tr><th id="25">25</th><td></td></tr>
+<tr><th id="26">26</th><td>    <a class="local col2 ref" href="#2532crc" title='crc' data-ref="2532crc">crc</a> = <var>0xffffffff</var>;</td></tr>
+<tr><th id="27">27</th><td></td></tr>
+<tr><th id="28">28</th><td>    <b>while</b> (<a class="local col0 ref" href="#2530len" title='len' data-ref="2530len">len</a>--) {</td></tr>
+<tr><th id="29">29</th><td>        <a class="local col1 ref" href="#2531c" title='c' data-ref="2531c">c</a> = *<a class="local col9 ref" href="#2529p" title='p' data-ref="2529p">p</a>++;</td></tr>
+<tr><th id="30">30</th><td>        <a class="local col2 ref" href="#2532crc" title='crc' data-ref="2532crc">crc</a> = <a class="ref" href="#ngx_crc32_table_short" title='ngx_crc32_table_short' data-ref="ngx_crc32_table_short">ngx_crc32_table_short</a>[(<a class="local col2 ref" href="#2532crc" title='crc' data-ref="2532crc">crc</a> ^ (<a class="local col1 ref" href="#2531c" title='c' data-ref="2531c">c</a> &amp; <var>0xf</var>)) &amp; <var>0xf</var>] ^ (<a class="local col2 ref" href="#2532crc" title='crc' data-ref="2532crc">crc</a> &gt;&gt; <var>4</var>);</td></tr>
+<tr><th id="31">31</th><td>        <a class="local col2 ref" href="#2532crc" title='crc' data-ref="2532crc">crc</a> = <a class="ref" href="#ngx_crc32_table_short" title='ngx_crc32_table_short' data-ref="ngx_crc32_table_short">ngx_crc32_table_short</a>[(<a class="local col2 ref" href="#2532crc" title='crc' data-ref="2532crc">crc</a> ^ (<a class="local col1 ref" href="#2531c" title='c' data-ref="2531c">c</a> &gt;&gt; <var>4</var>)) &amp; <var>0xf</var>] ^ (<a class="local col2 ref" href="#2532crc" title='crc' data-ref="2532crc">crc</a> &gt;&gt; <var>4</var>);</td></tr>
+<tr><th id="32">32</th><td>    }</td></tr>
+<tr><th id="33">33</th><td></td></tr>
+<tr><th id="34">34</th><td>    <b>return</b> <a class="local col2 ref" href="#2532crc" title='crc' data-ref="2532crc">crc</a> ^ <var>0xffffffff</var>;</td></tr>
+<tr><th id="35">35</th><td>}</td></tr>
+<tr><th id="36">36</th><td></td></tr>
+<tr><th id="37">37</th><td></td></tr>
+<tr><th id="38">38</th><td><em>static</em> <a class="macro" href="ngx_config.h.html#114" title="inline" data-ref="_M/ngx_inline">ngx_inline</a> <a class="typedef" href="../../../include/stdint.h.html#uint32_t" title='uint32_t' data-type='unsigned int' data-ref="uint32_t">uint32_t</a></td></tr>
+<tr><th id="39">39</th><td><dfn class="decl def fn" id="ngx_crc32_long" title='ngx_crc32_long' data-ref="ngx_crc32_long">ngx_crc32_long</dfn>(<a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a> *<dfn class="local col3 decl" id="2533p" title='p' data-type='u_char *' data-ref="2533p">p</dfn>, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span> <dfn class="local col4 decl" id="2534len" title='len' data-type='size_t' data-ref="2534len">len</dfn>)</td></tr>
+<tr><th id="40">40</th><td>{</td></tr>
+<tr><th id="41">41</th><td>    <a class="typedef" href="../../../include/stdint.h.html#uint32_t" title='uint32_t' data-type='unsigned int' data-ref="uint32_t">uint32_t</a>  <dfn class="local col5 decl" id="2535crc" title='crc' data-type='uint32_t' data-ref="2535crc">crc</dfn>;</td></tr>
+<tr><th id="42">42</th><td></td></tr>
+<tr><th id="43">43</th><td>    <a class="local col5 ref" href="#2535crc" title='crc' data-ref="2535crc">crc</a> = <var>0xffffffff</var>;</td></tr>
+<tr><th id="44">44</th><td></td></tr>
+<tr><th id="45">45</th><td>    <b>while</b> (<a class="local col4 ref" href="#2534len" title='len' data-ref="2534len">len</a>--) {</td></tr>
+<tr><th id="46">46</th><td>        <a class="local col5 ref" href="#2535crc" title='crc' data-ref="2535crc">crc</a> = <a class="ref" href="#ngx_crc32_table256" title='ngx_crc32_table256' data-ref="ngx_crc32_table256">ngx_crc32_table256</a>[(<a class="local col5 ref" href="#2535crc" title='crc' data-ref="2535crc">crc</a> ^ *<a class="local col3 ref" href="#2533p" title='p' data-ref="2533p">p</a>++) &amp; <var>0xff</var>] ^ (<a class="local col5 ref" href="#2535crc" title='crc' data-ref="2535crc">crc</a> &gt;&gt; <var>8</var>);</td></tr>
+<tr><th id="47">47</th><td>    }</td></tr>
+<tr><th id="48">48</th><td></td></tr>
+<tr><th id="49">49</th><td>    <b>return</b> <a class="local col5 ref" href="#2535crc" title='crc' data-ref="2535crc">crc</a> ^ <var>0xffffffff</var>;</td></tr>
+<tr><th id="50">50</th><td>}</td></tr>
+<tr><th id="51">51</th><td></td></tr>
+<tr><th id="52">52</th><td></td></tr>
+<tr><th id="53">53</th><td><u>#define <dfn class="macro" id="_M/ngx_crc32_init" data-ref="_M/ngx_crc32_init">ngx_crc32_init</dfn>(crc)                                                   \</u></td></tr>
+<tr><th id="54">54</th><td><u>    crc = 0xffffffff</u></td></tr>
+<tr><th id="55">55</th><td></td></tr>
+<tr><th id="56">56</th><td></td></tr>
+<tr><th id="57">57</th><td><em>static</em> <a class="macro" href="ngx_config.h.html#114" title="inline" data-ref="_M/ngx_inline">ngx_inline</a> <em>void</em></td></tr>
+<tr><th id="58">58</th><td><dfn class="decl def fn" id="ngx_crc32_update" title='ngx_crc32_update' data-ref="ngx_crc32_update">ngx_crc32_update</dfn>(<a class="typedef" href="../../../include/stdint.h.html#uint32_t" title='uint32_t' data-type='unsigned int' data-ref="uint32_t">uint32_t</a> *<dfn class="local col6 decl" id="2536crc" title='crc' data-type='uint32_t *' data-ref="2536crc">crc</dfn>, <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a> *<dfn class="local col7 decl" id="2537p" title='p' data-type='u_char *' data-ref="2537p">p</dfn>, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span> <dfn class="local col8 decl" id="2538len" title='len' data-type='size_t' data-ref="2538len">len</dfn>)</td></tr>
+<tr><th id="59">59</th><td>{</td></tr>
+<tr><th id="60">60</th><td>    <a class="typedef" href="../../../include/stdint.h.html#uint32_t" title='uint32_t' data-type='unsigned int' data-ref="uint32_t">uint32_t</a>  <dfn class="local col9 decl" id="2539c" title='c' data-type='uint32_t' data-ref="2539c">c</dfn>;</td></tr>
+<tr><th id="61">61</th><td></td></tr>
+<tr><th id="62">62</th><td>    <a class="local col9 ref" href="#2539c" title='c' data-ref="2539c">c</a> = *<a class="local col6 ref" href="#2536crc" title='crc' data-ref="2536crc">crc</a>;</td></tr>
+<tr><th id="63">63</th><td></td></tr>
+<tr><th id="64">64</th><td>    <b>while</b> (<a class="local col8 ref" href="#2538len" title='len' data-ref="2538len">len</a>--) {</td></tr>
+<tr><th id="65">65</th><td>        <a class="local col9 ref" href="#2539c" title='c' data-ref="2539c">c</a> = <a class="ref" href="#ngx_crc32_table256" title='ngx_crc32_table256' data-ref="ngx_crc32_table256">ngx_crc32_table256</a>[(<a class="local col9 ref" href="#2539c" title='c' data-ref="2539c">c</a> ^ *<a class="local col7 ref" href="#2537p" title='p' data-ref="2537p">p</a>++) &amp; <var>0xff</var>] ^ (<a class="local col9 ref" href="#2539c" title='c' data-ref="2539c">c</a> &gt;&gt; <var>8</var>);</td></tr>
+<tr><th id="66">66</th><td>    }</td></tr>
+<tr><th id="67">67</th><td></td></tr>
+<tr><th id="68">68</th><td>    *<a class="local col6 ref" href="#2536crc" title='crc' data-ref="2536crc">crc</a> = <a class="local col9 ref" href="#2539c" title='c' data-ref="2539c">c</a>;</td></tr>
+<tr><th id="69">69</th><td>}</td></tr>
+<tr><th id="70">70</th><td></td></tr>
+<tr><th id="71">71</th><td></td></tr>
+<tr><th id="72">72</th><td><u>#define <dfn class="macro" id="_M/ngx_crc32_final" data-ref="_M/ngx_crc32_final">ngx_crc32_final</dfn>(crc)                                                  \</u></td></tr>
+<tr><th id="73">73</th><td><u>    crc ^= 0xffffffff</u></td></tr>
+<tr><th id="74">74</th><td></td></tr>
+<tr><th id="75">75</th><td></td></tr>
+<tr><th id="76">76</th><td><a class="typedef" href="ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a> <dfn class="decl fn" id="ngx_crc32_table_init" title='ngx_crc32_table_init' data-ref="ngx_crc32_table_init">ngx_crc32_table_init</dfn>(<em>void</em>);</td></tr>
+<tr><th id="77">77</th><td></td></tr>
+<tr><th id="78">78</th><td></td></tr>
+<tr><th id="79">79</th><td><u>#<span data-ppcond="8">endif</span> /* _NGX_CRC32_H_INCLUDED_ */</u></td></tr>
+<tr><th id="80">80</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../../objs/ngx_modules.c.html'>nginx/objs/ngx_modules.c</a><br/>Generated on <em>2018-Apr-06</em> from project nginx<br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

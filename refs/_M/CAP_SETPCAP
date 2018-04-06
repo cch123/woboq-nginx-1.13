@@ -1,0 +1,10 @@
+<dec f='include/linux/capability.h' l='157'/>
+<doc f='include/linux/capability.h' l='147'>/* Without VFS support for capabilities:
+ *   Transfer any capability in your permitted set to any pid,
+ *   remove any capability in your permitted set from any pid
+ * With VFS support for capabilities (neither of above, but)
+ *   Add any capability from current&apos;s capability bounding set
+ *       to the current process&apos; inheritable set
+ *   Allow taking bits out of capability bounding set
+ *   Allow modification of the securebits for a process
+ */</doc>

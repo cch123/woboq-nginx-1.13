@@ -1,0 +1,2 @@
+<dec f='include/linux/capability.h' l='338'/>
+<doc f='include/linux/capability.h' l='336'>/* Allow configuring the kernel&apos;s syslog (printk behaviour) */</doc>

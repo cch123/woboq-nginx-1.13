@@ -1,0 +1,3 @@
+<dec f='include/unistd.h' l='1022' type='int ftruncate(int __fd, __off64_t __length)'/>
+<dec f='include/unistd.h' l='1029' type='int ftruncate64(int __fd, __off64_t __length)'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='630' u='c' c='ngx_create_file_mapping'/>

@@ -1,0 +1,4 @@
+getc_unlocked|getc_unlocked
+getchar|getchar
+getchar_unlocked|getchar_unlocked
+getline|getline

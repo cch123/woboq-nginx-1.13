@@ -1,0 +1,13 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='364' type='ngx_resolver_t *'/>
+<offset>2496</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='364'>/* resolver */</doc>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3639' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3641' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3648' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3649' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3654' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3654' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4824' u='r' c='ngx_http_core_resolver'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4830' u='w' c='ngx_http_core_resolver'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4831' u='r' c='ngx_http_core_resolver'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='739' u='r' c='ngx_http_upstream_init_request'/>

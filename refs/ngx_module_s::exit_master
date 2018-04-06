@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_module.h' l='247' type='void (*)(ngx_cycle_t *)'/>
+<offset>1024</offset>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='694' u='r' c='ngx_master_process_exit'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='695' u='r' c='ngx_master_process_exit'/>

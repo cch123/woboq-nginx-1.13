@@ -1,0 +1,10 @@
+<dec f='include/dirent.h' l='149' type='int closedir(DIR * __dirp)'/>
+<doc f='include/dirent.h' l='144'>/* Close the directory stream DIRP.
+   Return 0 if successful, -1 if not.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */</doc>
+<use f='nginx/src/core/ngx_file.c' l='1119' macro='1' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='288' macro='1' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='385' macro='1' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='996' macro='1' u='c'/>

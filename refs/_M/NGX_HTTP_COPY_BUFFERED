@@ -1,0 +1,3 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='150'/>
+<use f='nginx/src/http/ngx_http_copy_filter_module.c' l='155' u='c'/>
+<use f='nginx/src/http/ngx_http_copy_filter_module.c' l='158' u='c'/>

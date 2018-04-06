@@ -1,0 +1,13 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='523' type='unsigned int'/>
+<offset>9868</offset>
+<use f='nginx/src/http/ngx_http_core_module.c' l='969' u='r' c='ngx_http_core_find_config_phase'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2363' u='w' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2363' u='r' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2592' u='r' c='ngx_http_finalize_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2644' u='r' c='ngx_http_set_write_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2907' u='r' c='ngx_http_set_keepalive'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='43' u='r' c='ngx_http_read_client_request_body'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='517' u='r' c='ngx_http_discard_request_body'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='578' u='w' c='ngx_http_discard_request_body'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='607' u='w' c='ngx_http_discarded_request_body_handler'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='620' u='w' c='ngx_http_discarded_request_body_handler'/>

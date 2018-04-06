@@ -1,0 +1,9 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='244' type='unsigned int'/>
+<offset>2947</offset>
+<use f='nginx/src/http/modules/ngx_http_browser_module.c' l='387' u='r' c='ngx_http_msie_variable'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1724' u='w' c='ngx_http_process_user_agent'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1751' u='w' c='ngx_http_process_user_agent'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1755' u='r' c='ngx_http_process_user_agent'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='478' u='r' c='ngx_http_special_response_handler'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='651' u='r' c='ngx_http_send_error_page'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='690' u='r' c='ngx_http_send_special_response'/>

@@ -1,0 +1,11 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='435' type='size_t'/>
+<offset>9216</offset>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1284' u='r' c='ngx_http_update_location_config'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1285' u='w' c='ngx_http_update_location_config'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2926' u='w' c='ngx_http_upstream_send_response'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4745' u='w' c='ngx_http_upstream_process_limit_rate'/>
+<use f='nginx/src/http/ngx_http_write_filter_module.c' l='221' u='r' c='ngx_http_write_filter'/>
+<use f='nginx/src/http/ngx_http_write_filter_module.c' l='226' u='r' c='ngx_http_write_filter'/>
+<use f='nginx/src/http/ngx_http_write_filter_module.c' l='231' u='r' c='ngx_http_write_filter'/>
+<use f='nginx/src/http/ngx_http_write_filter_module.c' l='264' u='r' c='ngx_http_write_filter'/>
+<use f='nginx/src/http/ngx_http_write_filter_module.c' l='281' u='r' c='ngx_http_write_filter'/>

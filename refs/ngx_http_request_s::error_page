@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='526' type='unsigned int'/>
+<offset>9871</offset>
+<use f='nginx/src/http/modules/ngx_http_static_module.c' l='143' u='r' c='ngx_http_static_handler'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='456' u='r' c='ngx_http_special_response_handler'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='459' u='w' c='ngx_http_special_response_handler'/>

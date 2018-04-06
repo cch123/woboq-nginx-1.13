@@ -1,0 +1,6 @@
+<dec f='nginx/src/core/ngx_connection.h' l='38' type='ngx_connection_handler_pt'/>
+<offset>640</offset>
+<doc f='nginx/src/core/ngx_connection.h' l='37'>/* handler of accepted connection */</doc>
+<use f='nginx/src/event/ngx_event_accept.c' l='313' u='r' c='ngx_event_accept'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='634' u='r' c='ngx_event_recvmsg'/>
+<use f='nginx/src/http/ngx_http.c' l='1715' u='w' c='ngx_http_add_listening'/>

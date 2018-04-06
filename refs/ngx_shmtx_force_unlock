@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_shmtx.h' l='46' type='ngx_uint_t ngx_shmtx_force_unlock(ngx_shmtx_t * mtx, ngx_pid_t pid)'/>
+<def f='nginx/src/core/ngx_shmtx.c' l='149' ll='161' type='ngx_uint_t ngx_shmtx_force_unlock(ngx_shmtx_t * mtx, ngx_pid_t pid)'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='578' u='c' c='ngx_unlock_mutexes'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='602' u='c' c='ngx_unlock_mutexes'/>

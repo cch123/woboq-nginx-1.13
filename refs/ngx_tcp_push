@@ -1,0 +1,4 @@
+<dec f='nginx/src/os/unix/ngx_socket.h' l='42' type='int ngx_tcp_push(ngx_socket_t s)'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3077' u='c' c='ngx_http_set_keepalive'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2023' u='c' c='ngx_http_upstream_send_request'/>
+<def f='nginx/src/os/unix/ngx_socket.c' l='90' ll='99' type='int ngx_tcp_push(ngx_socket_t s)'/>

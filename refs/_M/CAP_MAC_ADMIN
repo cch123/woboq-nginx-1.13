@@ -1,0 +1,7 @@
+<dec f='include/linux/capability.h' l='334'/>
+<doc f='include/linux/capability.h' l='327'>/* Allow MAC configuration or state changes.
+   The base kernel requires no MAC configuration.
+   An LSM may enforce a MAC policy, and if it does and it chooses
+   to implement capability based checks on modifications to that
+   policy or the data required to maintain it, this is the
+   capability it should use to do so. */</doc>

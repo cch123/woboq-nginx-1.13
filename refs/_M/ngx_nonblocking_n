@@ -1,0 +1,9 @@
+<dec f='nginx/src/os/unix/ngx_socket.h' l='28'/>
+<use f='nginx/src/core/ngx_connection.c' l='526' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4406' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4492' u='c'/>
+<use f='nginx/src/core/ngx_syslog.c' l='330' u='c'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='201' u='c'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='78' u='c'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='131' u='c'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='139' u='c'/>

@@ -1,0 +1,22 @@
+<dec f='include/x86_64-linux-gnu/bits/stat.h' l='74' type='__off_t'/>
+<offset>384</offset>
+<doc f='include/x86_64-linux-gnu/bits/stat.h' l='74'>/* Size of file, in bytes.  */</doc>
+<use f='nginx/src/core/ngx_conf_file.c' l='130' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='529' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_file.c' l='828' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_file.c' l='1053' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_file.c' l='1054' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_file.c' l='1054' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='171' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='172' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='172' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='915' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='922' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='937' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='938' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='938' macro='1' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='382' macro='1' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1445' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1406' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1406' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1480' macro='1' u='r'/>

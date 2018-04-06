@@ -1,0 +1,2 @@
+<dec f='nginx/src/event/ngx_event.h' l='181' type='ngx_int_t (*)(ngx_event_t *, ngx_int_t, ngx_uint_t)'/>
+<offset>128</offset>

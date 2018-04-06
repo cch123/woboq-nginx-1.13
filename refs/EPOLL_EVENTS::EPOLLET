@@ -1,0 +1,10 @@
+<dec f='include/x86_64-linux-gnu/sys/epoll.h' l='68' type='2147483648'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4439' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4602' macro='1' u='r'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='412' macro='1' u='r'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='476' macro='1' u='r'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='705' macro='1' u='r'/>
+<use f='nginx/src/event/ngx_event.c' l='271' macro='1' c='ngx_handle_read_event'/>
+<use f='nginx/src/event/ngx_event.c' l='350' macro='1' u='r'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='279' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='531' macro='1' c='ngx_http_upstream_init'/>

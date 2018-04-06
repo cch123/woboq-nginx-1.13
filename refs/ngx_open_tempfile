@@ -1,0 +1,3 @@
+<dec f='nginx/src/os/unix/ngx_files.h' l='117' type='ngx_fd_t ngx_open_tempfile(u_char * name, ngx_uint_t persistent, ngx_uint_t access)'/>
+<use f='nginx/src/core/ngx_file.c' l='202' u='c' c='ngx_create_temp_file'/>
+<def f='nginx/src/os/unix/ngx_files.c' l='276' ll='289' type='ngx_fd_t ngx_open_tempfile(u_char * name, ngx_uint_t persistent, ngx_uint_t access)'/>

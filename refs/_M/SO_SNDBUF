@@ -1,0 +1,3 @@
+<dec f='include/asm-generic/socket.h' l='15'/>
+<use f='nginx/src/core/ngx_connection.c' l='243' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='681' u='c'/>

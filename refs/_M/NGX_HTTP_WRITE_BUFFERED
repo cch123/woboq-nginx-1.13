@@ -1,0 +1,6 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='146'/>
+<use f='nginx/src/http/ngx_http_write_filter_module.c' l='192' u='c'/>
+<use f='nginx/src/http/ngx_http_write_filter_module.c' l='208' u='c'/>
+<use f='nginx/src/http/ngx_http_write_filter_module.c' l='234' u='c'/>
+<use f='nginx/src/http/ngx_http_write_filter_module.c' l='307' u='c'/>
+<use f='nginx/src/http/ngx_http_write_filter_module.c' l='311' u='c'/>

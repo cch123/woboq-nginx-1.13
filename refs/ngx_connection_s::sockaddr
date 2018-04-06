@@ -1,0 +1,27 @@
+<dec f='nginx/src/core/ngx_connection.h' l='143' type='struct sockaddr *'/>
+<offset>832</offset>
+<use f='nginx/src/core/ngx_proxy_protocol.c' l='184' u='r' c='ngx_proxy_protocol_write'/>
+<use f='nginx/src/core/ngx_proxy_protocol.c' l='201' u='r' c='ngx_proxy_protocol_write'/>
+<use f='nginx/src/core/ngx_proxy_protocol.c' l='208' u='r' c='ngx_proxy_protocol_write'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='171' u='w' c='ngx_event_accept'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='172' u='r' c='ngx_event_accept'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='177' u='r' c='ngx_event_accept'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='224' u='r' c='ngx_event_accept'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='275' u='r' c='ngx_event_accept'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='461' u='w' c='ngx_event_recvmsg'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='462' u='r' c='ngx_event_recvmsg'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='467' u='r' c='ngx_event_recvmsg'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='602' u='r' c='ngx_event_recvmsg'/>
+<use f='nginx/src/http/modules/ngx_http_access_module.c' l='135' u='r' c='ngx_http_access_handler'/>
+<use f='nginx/src/http/modules/ngx_http_access_module.c' l='139' u='r' c='ngx_http_access_handler'/>
+<use f='nginx/src/http/modules/ngx_http_access_module.c' l='147' u='r' c='ngx_http_access_handler'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='344' u='r' c='ngx_http_geo_real_addr'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_ip_hash_module.c' l='119' u='r' c='ngx_http_upstream_init_ip_hash_peer'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_ip_hash_module.c' l='122' u='r' c='ngx_http_upstream_init_ip_hash_peer'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_ip_hash_module.c' l='129' u='r' c='ngx_http_upstream_init_ip_hash_peer'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1235' u='r' c='ngx_http_variable_binary_remote_addr'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1239' u='r' c='ngx_http_variable_binary_remote_addr'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1263' u='r' c='ngx_http_variable_binary_remote_addr'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1308' u='r' c='ngx_http_variable_remote_port'/>
+<use f='nginx/src/os/unix/ngx_udp_send.c' l='23' u='r' c='ngx_udp_unix_send'/>
+<use f='nginx/src/os/unix/ngx_udp_sendmsg_chain.c' l='223' u='r' c='ngx_sendmsg'/>

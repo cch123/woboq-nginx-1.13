@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='139'/>
+<use f='nginx/src/http/modules/ngx_http_limit_conn_module.c' l='486' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_limit_req_module.c' l='715' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4123' u='c'/>

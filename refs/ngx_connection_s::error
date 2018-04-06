@@ -1,0 +1,24 @@
+<dec f='nginx/src/core/ngx_connection.h' l='170' type='unsigned int'/>
+<offset>1740</offset>
+<use f='nginx/src/core/ngx_cycle.c' l='1388' u='w' c='ngx_shutdown_timer_handler'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2206' u='r' c='ngx_http_ssi_stub_output'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1774' u='w' c='ngx_http_output_filter'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1446' u='w' c='ngx_http_read_request_header'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2330' u='w' c='ngx_http_finalize_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2347' u='r' c='ngx_http_finalize_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2548' u='w' c='ngx_http_terminate_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2824' u='w' c='ngx_http_test_reading'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2849' u='w' c='ngx_http_test_reading'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2859' u='w' c='ngx_http_test_reading'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='351' u='w' c='ngx_http_do_read_client_request_body'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='598' u='w' c='ngx_http_discarded_request_body_handler'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='627' u='w' c='ngx_http_discarded_request_body_handler'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='635' u='w' c='ngx_http_discarded_request_body_handler'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='687' u='w' c='ngx_http_read_discarded_request_body'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='842' u='w' c='ngx_http_test_expect'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1319' u='r' c='ngx_http_upstream_check_broken_connection'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1393' u='w' c='ngx_http_upstream_check_broken_connection'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1474' u='w' c='ngx_http_upstream_check_broken_connection'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4147' u='r' c='ngx_http_upstream_next'/>
+<use f='nginx/src/http/ngx_http_write_filter_module.c' l='59' u='r' c='ngx_http_write_filter'/>
+<use f='nginx/src/http/ngx_http_write_filter_module.c' l='260' u='w' c='ngx_http_write_filter'/>

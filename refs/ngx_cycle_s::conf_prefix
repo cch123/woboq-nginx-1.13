@@ -1,0 +1,16 @@
+<dec f='nginx/src/core/ngx_cycle.h' l='80' type='ngx_str_t'/>
+<offset>4480</offset>
+<use f='nginx/src/core/nginx.c' l='931' u='m' c='ngx_process_options'/>
+<use f='nginx/src/core/nginx.c' l='932' u='m' c='ngx_process_options'/>
+<use f='nginx/src/core/nginx.c' l='962' u='a' c='ngx_process_options'/>
+<use f='nginx/src/core/nginx.c' l='962' u='a' c='ngx_process_options'/>
+<use f='nginx/src/core/nginx.c' l='988' u='m' c='ngx_process_options'/>
+<use f='nginx/src/core/nginx.c' l='989' u='m' c='ngx_process_options'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='890' u='a' c='ngx_conf_full_name'/>
+<use f='nginx/src/core/ngx_cycle.c' l='85' u='m' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='85' u='m' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='86' u='m' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='86' u='a' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='87' u='m' c='ngx_init_cycle'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1322' u='m' c='ngx_http_script_full_name_len_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1339' u='a' c='ngx_http_script_full_name_code'/>

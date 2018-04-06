@@ -1,0 +1,8 @@
+<dec f='nginx/src/core/ngx_cycle.h' l='57' type='ngx_uint_t'/>
+<offset>1408</offset>
+<use f='nginx/src/core/ngx_connection.c' l='1211' u='w' c='ngx_reusable_connection'/>
+<use f='nginx/src/core/ngx_connection.c' l='1225' u='w' c='ngx_reusable_connection'/>
+<use f='nginx/src/core/ngx_connection.c' l='1241' u='r' c='ngx_drain_connections'/>
+<use f='nginx/src/core/ngx_connection.c' l='1241' u='r' c='ngx_drain_connections'/>
+<use f='nginx/src/core/ngx_connection.c' l='1241' u='r' c='ngx_drain_connections'/>
+<use f='nginx/src/core/ngx_connection.c' l='1241' u='r' c='ngx_drain_connections'/>

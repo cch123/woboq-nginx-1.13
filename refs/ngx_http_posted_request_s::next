@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='363' type='ngx_http_posted_request_t *'/>
+<offset>64</offset>
+<use f='nginx/src/http/ngx_http_request.c' l='2274' u='r' c='ngx_http_run_posted_requests'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2301' u='w' c='ngx_http_post_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2303' u='a' c='ngx_http_post_request'/>

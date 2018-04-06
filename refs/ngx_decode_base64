@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_string.h' l='189' type='ngx_int_t ngx_decode_base64(ngx_str_t * dst, ngx_str_t * src)'/>
+<use f='nginx/src/core/ngx_crypt.c' l='209' u='c' c='ngx_crypt_ssha'/>
+<def f='nginx/src/core/ngx_string.c' l='1201' ll='1225' type='ngx_int_t ngx_decode_base64(ngx_str_t * dst, ngx_str_t * src)'/>
+<use f='nginx/src/http/modules/ngx_http_userid_filter_module.c' l='342' u='c' c='ngx_http_userid_get_uid'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1899' u='c' c='ngx_http_auth_basic_user'/>

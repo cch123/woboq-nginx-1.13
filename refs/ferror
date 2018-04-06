@@ -1,0 +1,2 @@
+<dec f='include/stdio.h' l='830' type='int ferror(FILE * __stream)'/>
+<doc f='include/stdio.h' l='829'>/* Return the error indicator for STREAM.  */</doc>

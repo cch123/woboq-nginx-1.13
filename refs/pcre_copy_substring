@@ -1,0 +1,1 @@
+<dec f='include/pcre.h' l='561' type='int pcre_copy_substring(const char * , int * , int , int , char * , int )'/>

@@ -1,0 +1,14 @@
+<dec f='nginx/src/http/ngx_http_cache.h' l='95' type='ngx_http_file_cache_t *'/>
+<offset>3584</offset>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='205' u='r' c='ngx_http_file_cache_create'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='285' u='r' c='ngx_http_file_cache_open'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='414' u='r' c='ngx_http_file_cache_lock'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='499' u='r' c='ngx_http_file_cache_lock_wait'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='616' u='r' c='ngx_http_file_cache_read'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1222' u='r' c='ngx_http_file_cache_reopen'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1326' u='r' c='ngx_http_file_cache_update_variant'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1375' u='r' c='ngx_http_file_cache_update'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1625' u='r' c='ngx_http_file_cache_free'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='861' u='w' c='ngx_http_upstream_cache'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3094' u='r' c='ngx_http_upstream_send_response'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3095' u='r' c='ngx_http_upstream_send_response'/>

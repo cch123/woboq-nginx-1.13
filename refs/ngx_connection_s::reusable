@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_connection.h' l='174' type='unsigned int'/>
+<offset>1743</offset>
+<use f='nginx/src/core/ngx_connection.c' l='1209' u='r' c='ngx_reusable_connection'/>
+<use f='nginx/src/core/ngx_connection.c' l='1218' u='w' c='ngx_reusable_connection'/>

@@ -1,0 +1,5 @@
+<dec f='include/x86_64-linux-gnu/sys/stat.h' l='266' type='int lstat(const char *restrict __file, struct stat *restrict __buf)'/>
+<dec f='include/x86_64-linux-gnu/sys/stat.h' l='275' type='int lstat64(const char *restrict __file, struct stat64 *restrict __buf)'/>
+<def f='include/x86_64-linux-gnu/sys/stat.h' l='458' ll='462' macro='1' type='int lstat(const char * __path, struct stat * __statbuf)'/>
+<def f='include/x86_64-linux-gnu/sys/stat.h' l='507' ll='511' macro='1' type='int lstat64(const char * __path, struct stat64 * __statbuf)'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='356' macro='1' u='c'/>

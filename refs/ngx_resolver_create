@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='229' type='ngx_resolver_t * ngx_resolver_create(ngx_conf_t * cf, ngx_str_t * names, ngx_uint_t n)'/>
+<def f='nginx/src/core/ngx_resolver.c' l='134' ll='280' type='ngx_resolver_t * ngx_resolver_create(ngx_conf_t * cf, ngx_str_t * names, ngx_uint_t n)'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3648' u='c' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4830' u='c' c='ngx_http_core_resolver'/>

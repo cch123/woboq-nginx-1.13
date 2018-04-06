@@ -1,0 +1,4 @@
+<dec f='include/x86_64-linux-gnu/bits/socket.h' l='305' type='1'/>
+<doc f='include/x86_64-linux-gnu/bits/socket.h' l='305'>/* Transfer file descriptors.  */</doc>
+<use f='nginx/src/os/unix/ngx_channel.c' l='41' macro='1' u='r'/>
+<use f='nginx/src/os/unix/ngx_channel.c' l='161' macro='1' u='r'/>

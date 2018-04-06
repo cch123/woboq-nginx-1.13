@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_string.h' l='221' type='void ngx_str_rbtree_insert_value(ngx_rbtree_node_t * temp, ngx_rbtree_node_t * node, ngx_rbtree_node_t * sentinel)'/>
+<use f='nginx/src/core/ngx_cycle.c' l='136' u='r' c='ngx_init_cycle'/>
+<def f='nginx/src/core/ngx_string.c' l='1900' ll='1937' type='void ngx_str_rbtree_insert_value(ngx_rbtree_node_t * temp, ngx_rbtree_node_t * node, ngx_rbtree_node_t * sentinel)'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='446' u='r' c='ngx_http_geo_block'/>

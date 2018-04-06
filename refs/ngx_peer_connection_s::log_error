@@ -1,0 +1,5 @@
+<dec f='nginx/src/event/ngx_event_connect.h' l='67' type='unsigned int'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='172' u='r' c='ngx_event_connect_peer'/>
+<offset>834</offset>
+<doc f='nginx/src/event/ngx_event_connect.h' l='66'>/* ngx_connection_log_error_e */</doc>
+<use f='nginx/src/http/ngx_http_upstream.c' l='494' u='w' c='ngx_http_upstream_create'/>

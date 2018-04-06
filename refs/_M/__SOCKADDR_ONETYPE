@@ -1,0 +1,4 @@
+<dec f='include/x86_64-linux-gnu/sys/socket.h' l='89'/>
+<use f='include/x86_64-linux-gnu/sys/socket.h' l='92' u='w'/>
+<dec f='include/x86_64-linux-gnu/sys/socket.h' l='93'/>
+<use f='include/x86_64-linux-gnu/sys/socket.h' l='96' u='w'/>

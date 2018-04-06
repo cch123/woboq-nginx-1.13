@@ -1,0 +1,17 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='444' type='ngx_http_core_loc_conf_t *'/>
+<offset>192</offset>
+<use f='nginx/src/http/ngx_http.c' l='645' u='r' c='ngx_http_merge_locations'/>
+<use f='nginx/src/http/ngx_http.c' l='702' u='r' c='ngx_http_init_locations'/>
+<use f='nginx/src/http/ngx_http.c' l='820' u='r' c='ngx_http_init_static_location_trees'/>
+<use f='nginx/src/http/ngx_http.c' l='870' u='w' c='ngx_http_add_location'/>
+<use f='nginx/src/http/ngx_http.c' l='874' u='w' c='ngx_http_add_location'/>
+<use f='nginx/src/http/ngx_http.c' l='899' u='r' c='ngx_http_cmp_locations'/>
+<use f='nginx/src/http/ngx_http.c' l='900' u='r' c='ngx_http_cmp_locations'/>
+<use f='nginx/src/http/ngx_http.c' l='981' u='r' c='ngx_http_join_exact_locations'/>
+<use f='nginx/src/http/ngx_http.c' l='981' u='r' c='ngx_http_join_exact_locations'/>
+<use f='nginx/src/http/ngx_http.c' l='989' u='w' c='ngx_http_join_exact_locations'/>
+<use f='nginx/src/http/ngx_http.c' l='989' u='r' c='ngx_http_join_exact_locations'/>
+<use f='nginx/src/http/ngx_http.c' l='1017' u='r' c='ngx_http_create_locations_list'/>
+<use f='nginx/src/http/ngx_http.c' l='1091' u='r' c='ngx_http_create_locations_tree'/>
+<use f='nginx/src/http/ngx_http.c' l='1094' u='r' c='ngx_http_create_locations_tree'/>
+<use f='nginx/src/http/ngx_http.c' l='1094' u='r' c='ngx_http_create_locations_tree'/>

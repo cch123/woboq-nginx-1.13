@@ -1,0 +1,16 @@
+<dec f='nginx/src/core/ngx_string.h' l='192' type='uint32_t ngx_utf8_decode(u_char ** p, size_t n)'/>
+<def f='nginx/src/core/ngx_string.c' l='1310' ll='1364' type='uint32_t ngx_utf8_decode(u_char ** p, size_t n)'/>
+<use f='nginx/src/core/ngx_string.c' l='1384' u='c' c='ngx_utf8_length'/>
+<use f='nginx/src/core/ngx_string.c' l='1423' u='c' c='ngx_utf8_cpystrn'/>
+<doc f='nginx/src/core/ngx_string.c' l='1301'>/*
+ * ngx_utf8_decode() decodes two and more bytes UTF sequences only
+ * the return values:
+ *    0x80 - 0x10ffff         valid character
+ *    0x110000 - 0xfffffffd   invalid sequence
+ *    0xfffffffe              incomplete sequence
+ *    0xffffffff              error
+ */</doc>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='729' u='c' c='ngx_http_charset_recode_from_utf8'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='797' u='c' c='ngx_http_charset_recode_from_utf8'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='905' u='c' c='ngx_http_charset_recode_from_utf8'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='1357' u='c' c='ngx_http_charset_map'/>

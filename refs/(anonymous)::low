@@ -1,0 +1,6 @@
+<dec f='nginx/src/core/ngx_conf_file.h' l='152' type='ngx_int_t'/>
+<offset>64</offset>
+<use f='nginx/src/core/ngx_conf_file.c' l='1465' u='r' c='ngx_conf_check_num_bounds'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1471' u='r' c='ngx_conf_check_num_bounds'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1476' u='r' c='ngx_conf_check_num_bounds'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1482' u='r' c='ngx_conf_check_num_bounds'/>

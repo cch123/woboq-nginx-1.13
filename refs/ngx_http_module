@@ -1,0 +1,5 @@
+<dec f='nginx/objs/ngx_modules.c' l='14' type='ngx_module_t'/>
+<use f='nginx/objs/ngx_modules.c' l='66' u='a'/>
+<use f='nginx/objs/ngx_modules.c' l='66' u='a'/>
+<dec f='nginx/src/http/ngx_http.h' l='166' type='ngx_module_t'/>
+<def f='nginx/src/http/ngx_http.c' l='103' ll='116' type='ngx_module_t'/>

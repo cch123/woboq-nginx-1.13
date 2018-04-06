@@ -1,0 +1,21 @@
+<def f='nginx/src/http/ngx_http_upstream_round_robin.h' l='19' ll='56'/>
+<size>168</size>
+<mbr r='ngx_http_upstream_rr_peer_s::sockaddr' o='0' t='struct sockaddr *'/>
+<mbr r='ngx_http_upstream_rr_peer_s::socklen' o='64' t='socklen_t'/>
+<mbr r='ngx_http_upstream_rr_peer_s::name' o='128' t='ngx_str_t'/>
+<mbr r='ngx_http_upstream_rr_peer_s::server' o='256' t='ngx_str_t'/>
+<mbr r='ngx_http_upstream_rr_peer_s::current_weight' o='384' t='ngx_int_t'/>
+<mbr r='ngx_http_upstream_rr_peer_s::effective_weight' o='448' t='ngx_int_t'/>
+<mbr r='ngx_http_upstream_rr_peer_s::weight' o='512' t='ngx_int_t'/>
+<mbr r='ngx_http_upstream_rr_peer_s::conns' o='576' t='ngx_uint_t'/>
+<mbr r='ngx_http_upstream_rr_peer_s::max_conns' o='640' t='ngx_uint_t'/>
+<mbr r='ngx_http_upstream_rr_peer_s::fails' o='704' t='ngx_uint_t'/>
+<mbr r='ngx_http_upstream_rr_peer_s::accessed' o='768' t='time_t'/>
+<mbr r='ngx_http_upstream_rr_peer_s::checked' o='832' t='time_t'/>
+<mbr r='ngx_http_upstream_rr_peer_s::max_fails' o='896' t='ngx_uint_t'/>
+<mbr r='ngx_http_upstream_rr_peer_s::fail_timeout' o='960' t='time_t'/>
+<mbr r='ngx_http_upstream_rr_peer_s::slow_start' o='1024' t='ngx_msec_t'/>
+<mbr r='ngx_http_upstream_rr_peer_s::start_time' o='1088' t='ngx_msec_t'/>
+<mbr r='ngx_http_upstream_rr_peer_s::down' o='1152' t='ngx_uint_t'/>
+<mbr r='ngx_http_upstream_rr_peer_s::lock' o='1216' t='ngx_atomic_t'/>
+<mbr r='ngx_http_upstream_rr_peer_s::next' o='1280' t='ngx_http_upstream_rr_peer_t *'/>

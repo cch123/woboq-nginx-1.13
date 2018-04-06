@@ -1,0 +1,23 @@
+<dec f='nginx/src/event/ngx_event.h' l='425' type='ngx_os_io_t'/>
+<def f='nginx/src/core/ngx_connection.c' l='13' type='ngx_os_io_t'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1300' macro='1' u='m'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1546' macro='1' u='m'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1580' macro='1' u='m'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1633' macro='1' u='m'/>
+<use f='nginx/src/core/ngx_syslog.c' l='284' macro='1' u='m'/>
+<use f='nginx/src/core/ngx_syslog.c' l='285' macro='1' u='m'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='367' u='w' c='ngx_epoll_init'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='210' macro='1' u='m'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='211' macro='1' u='m'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='212' macro='1' u='m'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='213' macro='1' u='m'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='477' macro='1' u='m'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='478' macro='1' u='m'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='149' macro='1' u='m'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='150' macro='1' u='m'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='151' macro='1' u='m'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='152' macro='1' u='m'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='167' macro='1' u='m'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='168' macro='1' u='m'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='169' macro='1' u='m'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1228' u='m' c='ngx_http_update_location_config'/>

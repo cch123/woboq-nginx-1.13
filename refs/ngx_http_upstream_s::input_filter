@@ -1,0 +1,11 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='350' type='ngx_int_t (*)(void *, ssize_t)'/>
+<offset>7232</offset>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='732' u='w' c='ngx_http_fastcgi_handler'/>
+<use f='nginx/src/http/modules/ngx_http_memcached_module.c' l='219' u='w' c='ngx_http_memcached_handler'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='917' u='w' c='ngx_http_proxy_handler'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1534' u='w' c='ngx_http_proxy_reinit_request'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1979' u='w' c='ngx_http_proxy_input_filter_init'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2916' u='r' c='ngx_http_upstream_send_response'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2918' u='w' c='ngx_http_upstream_send_response'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2945' u='r' c='ngx_http_upstream_send_response'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3584' u='r' c='ngx_http_upstream_process_non_buffered_request'/>

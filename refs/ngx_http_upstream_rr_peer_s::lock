@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http_upstream_round_robin.h' l='49' type='ngx_atomic_t'/>
+<offset>1216</offset>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='602' macro='1' u='a'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='608' macro='1' u='a'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='650' macro='1' u='a'/>

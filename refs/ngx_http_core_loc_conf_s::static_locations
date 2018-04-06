@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='318' type='ngx_http_location_tree_node_t *'/>
+<offset>256</offset>
+<use f='nginx/src/http/ngx_http.c' l='833' u='w' c='ngx_http_init_static_location_trees'/>
+<use f='nginx/src/http/ngx_http.c' l='834' u='r' c='ngx_http_init_static_location_trees'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1317' u='r' c='ngx_http_core_find_location'/>

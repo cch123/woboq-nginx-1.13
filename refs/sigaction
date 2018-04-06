@@ -1,0 +1,11 @@
+<def f='include/x86_64-linux-gnu/bits/sigaction.h' l='24' ll='50'/>
+<dec f='include/signal.h' l='257' type='int sigaction(int __sig, const struct sigaction *restrict __act, struct sigaction *restrict __oact)'/>
+<size>152</size>
+<doc f='include/signal.h' l='256'>/* Get and/or set the action for signal SIG.  */</doc>
+<doc f='include/x86_64-linux-gnu/bits/sigaction.h' l='23'>/* Structure describing the action to be taken when a signal arrives.  */</doc>
+<mbr r='sigaction::__sigaction_handler' o='0' t='union (anonymous union at /usr/include/x86_64-linux-gnu/bits/sigaction.h:28:5)'/>
+<mbr r='sigaction::sa_mask' o='64' t='__sigset_t'/>
+<mbr r='sigaction::sa_flags' o='1088' t='int'/>
+<mbr r='sigaction::sa_restorer' o='1152' t='void (*)(void)'/>
+<use f='nginx/src/event/ngx_event.c' l='637' u='c' c='ngx_event_process_init'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='302' u='c' c='ngx_init_signals'/>

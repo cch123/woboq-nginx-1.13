@@ -1,0 +1,2 @@
+<dec f='nginx/src/os/unix/ngx_errno.h' l='56'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='590' u='c'/>

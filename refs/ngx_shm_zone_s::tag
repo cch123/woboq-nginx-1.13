@@ -1,0 +1,8 @@
+<dec f='nginx/src/core/ngx_cycle.h' l='33' type='void *'/>
+<offset>512</offset>
+<use f='nginx/src/core/ngx_cycle.c' l='455' u='r' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='455' u='r' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='675' u='r' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='675' u='r' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1245' u='r' c='ngx_shared_memory_add'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1280' u='w' c='ngx_shared_memory_add'/>

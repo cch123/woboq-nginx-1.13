@@ -1,0 +1,2 @@
+<dec f='include/x86_64-linux-gnu/bits/fcntl-linux.h' l='350'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='517' u='c'/>

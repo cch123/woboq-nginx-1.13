@@ -1,0 +1,4 @@
+<dec f='include/unistd.h' l='476' type='int chown(const char * __file, __uid_t __owner, __gid_t __group)'/>
+<doc f='include/unistd.h' l='475'>/* Change the owner and group of FILE.  */</doc>
+<use f='nginx/src/core/ngx_cycle.c' l='1152' u='c' c='ngx_reopen_files'/>
+<use f='nginx/src/core/ngx_file.c' l='632' u='c' c='ngx_create_paths'/>

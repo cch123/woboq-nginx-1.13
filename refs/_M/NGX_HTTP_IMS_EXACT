@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='49'/>
+<use f='nginx/src/http/modules/ngx_http_not_modified_filter_module.c' l='161' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='131' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3587' u='c'/>

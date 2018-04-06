@@ -1,0 +1,14 @@
+<dec f='nginx/src/core/ngx_slab.h' l='64' type='void * ngx_slab_alloc(ngx_slab_pool_t * pool, size_t size)'/>
+<def f='nginx/src/core/ngx_slab.c' l='168' ll='180' type='void * ngx_slab_alloc(ngx_slab_pool_t * pool, size_t size)'/>
+<use f='nginx/src/http/modules/ngx_http_limit_conn_module.c' l='422' u='c' c='ngx_http_limit_conn_init_zone'/>
+<use f='nginx/src/http/modules/ngx_http_limit_conn_module.c' l='429' u='c' c='ngx_http_limit_conn_init_zone'/>
+<use f='nginx/src/http/modules/ngx_http_limit_conn_module.c' l='439' u='c' c='ngx_http_limit_conn_init_zone'/>
+<use f='nginx/src/http/modules/ngx_http_limit_req_module.c' l='647' u='c' c='ngx_http_limit_req_init_zone'/>
+<use f='nginx/src/http/modules/ngx_http_limit_req_module.c' l='661' u='c' c='ngx_http_limit_req_init_zone'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_zone_module.c' l='153' u='c' c='ngx_http_upstream_init_zone'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_zone_module.c' l='194' u='c' c='ngx_http_upstream_zone_copy_peers'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_zone_module.c' l='201' u='c' c='ngx_http_upstream_zone_copy_peers'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_zone_module.c' l='206' u='c' c='ngx_http_upstream_zone_copy_peers'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_zone_module.c' l='232' u='c' c='ngx_http_upstream_zone_copy_peers'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='137' u='c' c='ngx_http_file_cache_init'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='161' u='c' c='ngx_http_file_cache_init'/>

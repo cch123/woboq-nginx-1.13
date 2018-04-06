@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='529' type='unsigned int'/>
+<offset>9874</offset>
+<use f='nginx/src/http/ngx_http_request.c' l='2489' u='w' c='ngx_http_finalize_request'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2000' u='r' c='ngx_http_variable_request_completion'/>

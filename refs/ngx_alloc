@@ -1,0 +1,29 @@
+<dec f='nginx/src/os/unix/ngx_alloc.h' l='16' type='void * ngx_alloc(size_t size, ngx_log_t * log)'/>
+<use f='nginx/src/core/nginx.c' l='568' u='c' c='ngx_set_environment'/>
+<use f='nginx/src/core/nginx.c' l='581' u='c' c='ngx_set_environment'/>
+<use f='nginx/src/core/nginx.c' l='663' u='c' c='ngx_exec_new_binary'/>
+<use f='nginx/src/core/nginx.c' l='885' u='c' c='ngx_save_argv'/>
+<use f='nginx/src/core/nginx.c' l='893' u='c' c='ngx_save_argv'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='200' u='c' c='ngx_conf_parse'/>
+<use f='nginx/src/core/ngx_crc32.c' l='117' u='c' c='ngx_crc32_table_init'/>
+<use f='nginx/src/core/ngx_file.c' l='736' u='c' c='ngx_ext_rename_file'/>
+<use f='nginx/src/core/ngx_file.c' l='837' u='c' c='ngx_copy_file'/>
+<use f='nginx/src/core/ngx_file.c' l='967' u='c' c='ngx_walk_tree'/>
+<use f='nginx/src/core/ngx_file.c' l='1025' u='c' c='ngx_walk_tree'/>
+<use f='nginx/src/core/ngx_hash.c' l='279' u='c' c='ngx_hash_init'/>
+<use f='nginx/src/core/ngx_inet.c' l='1117' u='c' c='ngx_inet_resolve_host'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='366' u='c' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='372' u='c' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='975' u='c' c='ngx_open_file_add_event'/>
+<use f='nginx/src/core/ngx_palloc.c' l='220' u='c' c='ngx_palloc_large'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4086' u='c' c='ngx_resolver_alloc'/>
+<use f='nginx/src/core/ngx_string.c' l='1991' u='c' c='ngx_sort'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='358' u='c' c='ngx_epoll_init'/>
+<use f='nginx/src/event/ngx_event.c' l='684' u='c' c='ngx_event_process_init'/>
+<use f='nginx/src/event/ngx_event.c' l='691' u='c' c='ngx_event_process_init'/>
+<use f='nginx/src/event/ngx_event.c' l='703' u='c' c='ngx_event_process_init'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1719' u='c' c='ngx_http_file_cache_forced_expire'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1813' u='c' c='ngx_http_file_cache_expire'/>
+<def f='nginx/src/os/unix/ngx_alloc.c' l='17' ll='31' type='void * ngx_alloc(size_t size, ngx_log_t * log)'/>
+<use f='nginx/src/os/unix/ngx_alloc.c' l='39' u='c' c='ngx_calloc'/>
+<use f='nginx/src/os/unix/ngx_setproctitle.c' l='47' u='c' c='ngx_init_setproctitle'/>

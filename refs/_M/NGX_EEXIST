@@ -1,0 +1,4 @@
+<dec f='nginx/src/os/unix/ngx_errno.h' l='27'/>
+<use f='nginx/src/core/ngx_file.c' l='288' u='c'/>
+<use f='nginx/src/core/ngx_file.c' l='330' u='c'/>
+<use f='nginx/src/core/ngx_file.c' l='609' u='c'/>

@@ -1,0 +1,6 @@
+<dec f='nginx/src/os/unix/ngx_os.h' l='53' type='ngx_chain_t * ngx_udp_unix_sendmsg_chain(ngx_connection_t * c, ngx_chain_t * in, off_t limit)'/>
+<use f='nginx/src/os/unix/ngx_linux_init.c' l='22' u='r'/>
+<use f='nginx/src/os/unix/ngx_linux_init.c' l='22' u='r'/>
+<use f='nginx/src/os/unix/ngx_posix_init.c' l='28' u='r'/>
+<use f='nginx/src/os/unix/ngx_posix_init.c' l='28' u='r'/>
+<def f='nginx/src/os/unix/ngx_udp_sendmsg_chain.c' l='18' ll='110' type='ngx_chain_t * ngx_udp_unix_sendmsg_chain(ngx_connection_t * c, ngx_chain_t * in, off_t limit)'/>

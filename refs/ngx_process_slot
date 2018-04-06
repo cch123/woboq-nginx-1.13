@@ -1,0 +1,18 @@
+<dec f='nginx/src/os/unix/ngx_process.h' l='85' type='ngx_int_t'/>
+<def f='nginx/src/os/unix/ngx_process.c' l='33' type='ngx_int_t'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='183' u='w' c='ngx_spawn_process'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='362' u='r' c='ngx_start_worker_processes'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='363' u='r' c='ngx_start_worker_processes'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='364' u='r' c='ngx_start_worker_processes'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='404' u='r' c='ngx_start_cache_manager_processes'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='405' u='r' c='ngx_start_cache_manager_processes'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='406' u='r' c='ngx_start_cache_manager_processes'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='419' u='r' c='ngx_start_cache_manager_processes'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='420' u='r' c='ngx_start_cache_manager_processes'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='421' u='r' c='ngx_start_cache_manager_processes'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='434' u='r' c='ngx_pass_open_channel'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='635' u='r' c='ngx_reap_children'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='636' u='r' c='ngx_reap_children'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='637' u='r' c='ngx_reap_children'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='944' u='r' c='ngx_worker_process_init'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='958' u='r' c='ngx_worker_process_init'/>

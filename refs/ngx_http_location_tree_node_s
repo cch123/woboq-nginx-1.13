@@ -1,0 +1,10 @@
+<def f='nginx/src/http/ngx_http_core_module.h' l='452' ll='463'/>
+<size>48</size>
+<mbr r='ngx_http_location_tree_node_s::left' o='0' t='ngx_http_location_tree_node_t *'/>
+<mbr r='ngx_http_location_tree_node_s::right' o='64' t='ngx_http_location_tree_node_t *'/>
+<mbr r='ngx_http_location_tree_node_s::tree' o='128' t='ngx_http_location_tree_node_t *'/>
+<mbr r='ngx_http_location_tree_node_s::exact' o='192' t='ngx_http_core_loc_conf_t *'/>
+<mbr r='ngx_http_location_tree_node_s::inclusive' o='256' t='ngx_http_core_loc_conf_t *'/>
+<mbr r='ngx_http_location_tree_node_s::auto_redirect' o='320' t='u_char'/>
+<mbr r='ngx_http_location_tree_node_s::len' o='328' t='u_char'/>
+<mbr r='ngx_http_location_tree_node_s::name' o='336' t='u_char [1]'/>

@@ -1,0 +1,6 @@
+<dec f='include/x86_64-linux-gnu/bits/socket.h' l='242' type='int'/>
+<offset>384</offset>
+<doc f='include/x86_64-linux-gnu/bits/socket.h' l='242'>/* Flags on received message.  */</doc>
+<use f='nginx/src/event/ngx_event_accept.c' l='428' u='r' c='ngx_event_recvmsg'/>
+<use f='nginx/src/os/unix/ngx_channel.c' l='56' u='w' c='ngx_write_channel'/>
+<use f='nginx/src/os/unix/ngx_channel.c' l='175' u='r' c='ngx_read_channel'/>

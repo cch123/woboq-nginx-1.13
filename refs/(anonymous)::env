@@ -1,0 +1,10 @@
+<dec f='nginx/src/core/ngx_cycle.h' l='116' type='ngx_array_t'/>
+<offset>1408</offset>
+<use f='nginx/src/core/nginx.c' l='525' u='m' c='ngx_set_environment'/>
+<use f='nginx/src/core/nginx.c' l='527' u='m' c='ngx_set_environment'/>
+<use f='nginx/src/core/nginx.c' l='535' u='a' c='ngx_set_environment'/>
+<use f='nginx/src/core/nginx.c' l='543' u='m' c='ngx_set_environment'/>
+<use f='nginx/src/core/nginx.c' l='549' u='m' c='ngx_set_environment'/>
+<use f='nginx/src/core/nginx.c' l='592' u='m' c='ngx_set_environment'/>
+<use f='nginx/src/core/nginx.c' l='1042' u='a' c='ngx_core_module_create_conf'/>
+<use f='nginx/src/core/nginx.c' l='1252' u='a' c='ngx_set_env'/>

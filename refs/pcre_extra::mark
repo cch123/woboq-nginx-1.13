@@ -1,0 +1,3 @@
+<dec f='include/pcre.h' l='383' type='unsigned char **'/>
+<offset>384</offset>
+<doc f='include/pcre.h' l='383'>/* For passing back a mark pointer */</doc>

@@ -1,0 +1,9 @@
+<dec f='nginx/src/core/ngx_slab.h' l='67' type='void * ngx_slab_calloc_locked(ngx_slab_pool_t * pool, size_t size)'/>
+<use f='nginx/src/core/ngx_slab.c' l='427' u='c' c='ngx_slab_calloc'/>
+<def f='nginx/src/core/ngx_slab.c' l='435' ll='446' type='void * ngx_slab_calloc_locked(ngx_slab_pool_t * pool, size_t size)'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_zone_module.c' l='272' u='c' c='ngx_http_upstream_zone_copy_peer'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_zone_module.c' l='284' u='c' c='ngx_http_upstream_zone_copy_peer'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_zone_module.c' l='289' u='c' c='ngx_http_upstream_zone_copy_peer'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='869' u='c' c='ngx_http_file_cache_exists'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='880' u='c' c='ngx_http_file_cache_exists'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2207' u='c' c='ngx_http_file_cache_add'/>

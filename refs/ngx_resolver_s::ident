@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='155' type='ngx_int_t'/>
+<offset>192</offset>
+<doc f='nginx/src/core/ngx_resolver.h' l='154'>/* event ident must be after 3 pointers as in ngx_connection_t */</doc>
+<use f='nginx/src/core/ngx_resolver.c' l='195' u='w' c='ngx_resolver_create'/>

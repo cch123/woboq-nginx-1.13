@@ -1,0 +1,1 @@
+<dec f='include/pcre.h' l='571' type='int pcre32_dfa_exec(const pcre32 * , const pcre32_extra * , const unsigned int * , int , int , int , int * , int , int * , int )'/>

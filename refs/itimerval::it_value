@@ -1,0 +1,7 @@
+<dec f='include/x86_64-linux-gnu/sys/time.h' l='112' type='struct timeval'/>
+<offset>128</offset>
+<doc f='include/x86_64-linux-gnu/sys/time.h' l='111'>/* Time to the next timer expiration.  */</doc>
+<use f='nginx/src/event/ngx_event.c' l='645' u='m' c='ngx_event_process_init'/>
+<use f='nginx/src/event/ngx_event.c' l='646' u='m' c='ngx_event_process_init'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='153' u='m' c='ngx_master_process_cycle'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='154' u='m' c='ngx_master_process_cycle'/>

@@ -1,0 +1,3 @@
+<dec f='nginx/src/http/ngx_http_variables.h' l='108' type='ngx_int_t ngx_http_variables_add_core_vars(ngx_conf_t * cf)'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3161' u='c' c='ngx_http_core_preconfiguration'/>
+<def f='nginx/src/http/ngx_http_variables.c' l='2564' ll='2604' type='ngx_int_t ngx_http_variables_add_core_vars(ngx_conf_t * cf)'/>

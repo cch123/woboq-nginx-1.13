@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_variables.h' l='57' type='ngx_http_variable_value_t * ngx_http_get_variable(ngx_http_request_t * r, ngx_str_t * name, ngx_uint_t key)'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1764' u='c' c='ngx_http_ssi_evaluate_string'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2267' u='c' c='ngx_http_ssi_echo'/>
+<def f='nginx/src/http/ngx_http_variables.c' l='659' ll='726' type='ngx_http_variable_value_t * ngx_http_get_variable(ngx_http_request_t * r, ngx_str_t * name, ngx_uint_t key)'/>

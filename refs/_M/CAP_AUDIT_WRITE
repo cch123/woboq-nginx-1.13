@@ -1,0 +1,2 @@
+<dec f='include/linux/capability.h' l='311'/>
+<doc f='include/linux/capability.h' l='309'>/* Allow writing the audit log via unicast netlink socket */</doc>

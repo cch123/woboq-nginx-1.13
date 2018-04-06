@@ -1,0 +1,3 @@
+<dec f='include/x86_64-linux-gnu/bits/dirent.h' l='32' type='unsigned char'/>
+<offset>144</offset>
+<use f='nginx/src/os/unix/ngx_files.c' l='693' u='r' c='ngx_read_dir'/>

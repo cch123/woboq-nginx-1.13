@@ -1,0 +1,4 @@
+<dec f='include/zlib.h' l='353' type='int deflateEnd(z_streamp strm)'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='482' u='c' c='ngx_http_gzip_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='943' u='c' c='ngx_http_gzip_filter_deflate_end'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='666' u='c' c='ngx_http_log_gzip'/>

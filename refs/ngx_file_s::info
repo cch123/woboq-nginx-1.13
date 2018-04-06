@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_file.h' l='19' type='ngx_file_info_t'/>
+<offset>192</offset>
+<use f='nginx/src/core/ngx_conf_file.c' l='130' u='a' c='ngx_conf_add_dump'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='193' u='a' c='ngx_conf_parse'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='529' u='a' c='ngx_conf_read_token'/>

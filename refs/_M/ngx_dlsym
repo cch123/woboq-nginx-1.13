@@ -1,0 +1,4 @@
+<dec f='nginx/src/os/unix/ngx_dlopen.h' l='19'/>
+<use f='nginx/src/core/nginx.c' l='1534' u='c'/>
+<use f='nginx/src/core/nginx.c' l='1542' u='c'/>
+<use f='nginx/src/core/nginx.c' l='1550' u='c'/>

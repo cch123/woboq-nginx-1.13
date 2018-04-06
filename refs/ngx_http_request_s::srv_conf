@@ -1,0 +1,18 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='378' type='void **'/>
+<offset>256</offset>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='147' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1062' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2282' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2284' u='w' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2430' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2477' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_header_filter_module.c' l='331' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_request.c' l='550' u='w' c='ngx_http_create_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1118' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1297' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1428' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1484' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2121' u='w' c='ngx_http_set_virtual_server'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3645' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1212' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1643' macro='1' u='r'/>

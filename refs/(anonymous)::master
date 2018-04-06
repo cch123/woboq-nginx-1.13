@@ -1,0 +1,8 @@
+<dec f='nginx/src/core/ngx_cycle.h' l='89' type='ngx_flag_t'/>
+<offset>64</offset>
+<use f='nginx/src/core/nginx.c' l='337' u='r' c='main'/>
+<use f='nginx/src/core/nginx.c' l='1029' u='w' c='ngx_core_module_create_conf'/>
+<use f='nginx/src/core/nginx.c' l='1058' u='r' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1058' u='w' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/event/ngx_event.c' l='473' u='r' c='ngx_event_module_init'/>
+<use f='nginx/src/event/ngx_event.c' l='581' u='r' c='ngx_event_process_init'/>

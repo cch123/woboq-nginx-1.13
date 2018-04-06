@@ -1,0 +1,9 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='388' type='ngx_flag_t'/>
+<offset>3776</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='388'>/* msie_padding */</doc>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3404' u='w' c='ngx_http_core_create_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3672' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3672' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3672' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3672' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='689' u='r' c='ngx_http_send_special_response'/>

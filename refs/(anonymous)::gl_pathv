@@ -1,0 +1,6 @@
+<dec f='include/glob.h' l='85' type='char **'/>
+<dec f='include/glob.h' l='114' type='char **'/>
+<offset>64</offset>
+<doc f='include/glob.h' l='85'>/* List of matched pathnames.  */</doc>
+<use f='nginx/src/os/unix/ngx_files.c' l='740' u='r' c='ngx_read_glob'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='741' u='r' c='ngx_read_glob'/>

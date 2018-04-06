@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http.h' l='130'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3373' u='c'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='723' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4391' u='c'/>

@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http.h' l='117' type='void ngx_http_process_request(ngx_http_request_t * r)'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1036' u='c' c='ngx_http_process_request_line'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1379' u='c' c='ngx_http_process_request_headers'/>
+<def f='nginx/src/http/ngx_http_request.c' l='1876' ll='1955' type='void ngx_http_process_request(ngx_http_request_t * r)'/>

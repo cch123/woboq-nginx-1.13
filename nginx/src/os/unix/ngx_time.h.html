@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ngx_time.h source code [nginx/src/os/unix/ngx_time.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../../../../data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../../../data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../../../data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../../data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'nginx/src/os/unix/ngx_time.h'; var root_path = '../../../..'; var data_path = '../../../../../data';</script>
+<script src='../../../../../data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../../..'>nginx</a>/<a href='../..'>src</a>/<a href='..'>os</a>/<a href='./'>unix</a>/<a href='ngx_time.h.html'>ngx_time.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td></td></tr>
+<tr><th id="2">2</th><td><i>/*</i></td></tr>
+<tr><th id="3">3</th><td><i> * Copyright (C) Igor Sysoev</i></td></tr>
+<tr><th id="4">4</th><td><i> * Copyright (C) Nginx, Inc.</i></td></tr>
+<tr><th id="5">5</th><td><i> */</i></td></tr>
+<tr><th id="6">6</th><td></td></tr>
+<tr><th id="7">7</th><td></td></tr>
+<tr><th id="8">8</th><td><u>#<span data-ppcond="8">ifndef</span> <span class="macro" data-ref="_M/_NGX_TIME_H_INCLUDED_">_NGX_TIME_H_INCLUDED_</span></u></td></tr>
+<tr><th id="9">9</th><td><u>#define <dfn class="macro" id="_M/_NGX_TIME_H_INCLUDED_" data-ref="_M/_NGX_TIME_H_INCLUDED_">_NGX_TIME_H_INCLUDED_</dfn></u></td></tr>
+<tr><th id="10">10</th><td></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td><u>#include <a href="../../core/ngx_config.h.html">&lt;ngx_config.h&gt;</a></u></td></tr>
+<tr><th id="13">13</th><td><u>#include <a href="../../core/ngx_core.h.html">&lt;ngx_core.h&gt;</a></u></td></tr>
+<tr><th id="14">14</th><td></td></tr>
+<tr><th id="15">15</th><td></td></tr>
+<tr><th id="16">16</th><td><b>typedef</b> <a class="typedef" href="../../core/ngx_rbtree.h.html#ngx_rbtree_key_t" title='ngx_rbtree_key_t' data-type='ngx_uint_t' data-ref="ngx_rbtree_key_t">ngx_rbtree_key_t</a>      <dfn class="typedef" id="ngx_msec_t" title='ngx_msec_t' data-type='ngx_rbtree_key_t' data-ref="ngx_msec_t">ngx_msec_t</dfn>;</td></tr>
+<tr><th id="17">17</th><td><b>typedef</b> <a class="typedef" href="../../core/ngx_rbtree.h.html#ngx_rbtree_key_int_t" title='ngx_rbtree_key_int_t' data-type='ngx_int_t' data-ref="ngx_rbtree_key_int_t">ngx_rbtree_key_int_t</a>  <dfn class="typedef" id="ngx_msec_int_t" title='ngx_msec_int_t' data-type='ngx_rbtree_key_int_t' data-ref="ngx_msec_int_t">ngx_msec_int_t</dfn>;</td></tr>
+<tr><th id="18">18</th><td></td></tr>
+<tr><th id="19">19</th><td><b>typedef</b> <b>struct</b> <a class="type" href="../../../../include/time.h.html#tm" title='tm' data-ref="tm">tm</a>             <dfn class="typedef" id="ngx_tm_t" title='ngx_tm_t' data-type='struct tm' data-ref="ngx_tm_t">ngx_tm_t</dfn>;</td></tr>
+<tr><th id="20">20</th><td></td></tr>
+<tr><th id="21">21</th><td><u>#define <dfn class="macro" id="_M/ngx_tm_sec" data-ref="_M/ngx_tm_sec">ngx_tm_sec</dfn>            tm_sec</u></td></tr>
+<tr><th id="22">22</th><td><u>#define <dfn class="macro" id="_M/ngx_tm_min" data-ref="_M/ngx_tm_min">ngx_tm_min</dfn>            tm_min</u></td></tr>
+<tr><th id="23">23</th><td><u>#define <dfn class="macro" id="_M/ngx_tm_hour" data-ref="_M/ngx_tm_hour">ngx_tm_hour</dfn>           tm_hour</u></td></tr>
+<tr><th id="24">24</th><td><u>#define <dfn class="macro" id="_M/ngx_tm_mday" data-ref="_M/ngx_tm_mday">ngx_tm_mday</dfn>           tm_mday</u></td></tr>
+<tr><th id="25">25</th><td><u>#define <dfn class="macro" id="_M/ngx_tm_mon" data-ref="_M/ngx_tm_mon">ngx_tm_mon</dfn>            tm_mon</u></td></tr>
+<tr><th id="26">26</th><td><u>#define <dfn class="macro" id="_M/ngx_tm_year" data-ref="_M/ngx_tm_year">ngx_tm_year</dfn>           tm_year</u></td></tr>
+<tr><th id="27">27</th><td><u>#define <dfn class="macro" id="_M/ngx_tm_wday" data-ref="_M/ngx_tm_wday">ngx_tm_wday</dfn>           tm_wday</u></td></tr>
+<tr><th id="28">28</th><td><u>#define <dfn class="macro" id="_M/ngx_tm_isdst" data-ref="_M/ngx_tm_isdst">ngx_tm_isdst</dfn>          tm_isdst</u></td></tr>
+<tr><th id="29">29</th><td></td></tr>
+<tr><th id="30">30</th><td><u>#define <dfn class="macro" id="_M/ngx_tm_sec_t" data-ref="_M/ngx_tm_sec_t">ngx_tm_sec_t</dfn>          int</u></td></tr>
+<tr><th id="31">31</th><td><u>#define <dfn class="macro" id="_M/ngx_tm_min_t" data-ref="_M/ngx_tm_min_t">ngx_tm_min_t</dfn>          int</u></td></tr>
+<tr><th id="32">32</th><td><u>#define <dfn class="macro" id="_M/ngx_tm_hour_t" data-ref="_M/ngx_tm_hour_t">ngx_tm_hour_t</dfn>         int</u></td></tr>
+<tr><th id="33">33</th><td><u>#define <dfn class="macro" id="_M/ngx_tm_mday_t" data-ref="_M/ngx_tm_mday_t">ngx_tm_mday_t</dfn>         int</u></td></tr>
+<tr><th id="34">34</th><td><u>#define <dfn class="macro" id="_M/ngx_tm_mon_t" data-ref="_M/ngx_tm_mon_t">ngx_tm_mon_t</dfn>          int</u></td></tr>
+<tr><th id="35">35</th><td><u>#define <dfn class="macro" id="_M/ngx_tm_year_t" data-ref="_M/ngx_tm_year_t">ngx_tm_year_t</dfn>         int</u></td></tr>
+<tr><th id="36">36</th><td><u>#define <dfn class="macro" id="_M/ngx_tm_wday_t" data-ref="_M/ngx_tm_wday_t">ngx_tm_wday_t</dfn>         int</u></td></tr>
+<tr><th id="37">37</th><td></td></tr>
+<tr><th id="38">38</th><td></td></tr>
+<tr><th id="39">39</th><td><u>#<span data-ppcond="39">if</span> (<a class="macro" href="../../../objs/ngx_auto_config.h.html#322" title="1" data-ref="_M/NGX_HAVE_GMTOFF">NGX_HAVE_GMTOFF</a>)</u></td></tr>
+<tr><th id="40">40</th><td><u>#define <dfn class="macro" id="_M/ngx_tm_gmtoff" data-ref="_M/ngx_tm_gmtoff">ngx_tm_gmtoff</dfn>         tm_gmtoff</u></td></tr>
+<tr><th id="41">41</th><td><u>#define <dfn class="macro" id="_M/ngx_tm_zone" data-ref="_M/ngx_tm_zone">ngx_tm_zone</dfn>           tm_zone</u></td></tr>
+<tr><th id="42">42</th><td><u>#<span data-ppcond="39">endif</span></u></td></tr>
+<tr><th id="43">43</th><td></td></tr>
+<tr><th id="44">44</th><td></td></tr>
+<tr><th id="45">45</th><td><u>#<span data-ppcond="45">if</span> (NGX_SOLARIS)</u></td></tr>
+<tr><th id="46">46</th><td></td></tr>
+<tr><th id="47">47</th><td><u>#define ngx_timezone(isdst) (- (isdst ? altzone : timezone) / 60)</u></td></tr>
+<tr><th id="48">48</th><td></td></tr>
+<tr><th id="49">49</th><td><u>#<span data-ppcond="45">else</span></u></td></tr>
+<tr><th id="50">50</th><td></td></tr>
+<tr><th id="51">51</th><td><u>#define <dfn class="macro" id="_M/ngx_timezone" data-ref="_M/ngx_timezone">ngx_timezone</dfn>(isdst) (- (isdst ? timezone + 3600 : timezone) / 60)</u></td></tr>
+<tr><th id="52">52</th><td></td></tr>
+<tr><th id="53">53</th><td><u>#<span data-ppcond="45">endif</span></u></td></tr>
+<tr><th id="54">54</th><td></td></tr>
+<tr><th id="55">55</th><td></td></tr>
+<tr><th id="56">56</th><td><em>void</em> <dfn class="decl fn" id="ngx_timezone_update" title='ngx_timezone_update' data-ref="ngx_timezone_update">ngx_timezone_update</dfn>(<em>void</em>);</td></tr>
+<tr><th id="57">57</th><td><em>void</em> <dfn class="decl fn" id="ngx_localtime" title='ngx_localtime' data-ref="ngx_localtime">ngx_localtime</dfn>(<a class="typedef" href="../../../../include/time.h.html#time_t" title='time_t' data-type='__time_t' data-ref="time_t">time_t</a> <dfn class="local col9 decl" id="2149s" title='s' data-type='time_t' data-ref="2149s">s</dfn>, <a class="typedef" href="#ngx_tm_t" title='ngx_tm_t' data-type='struct tm' data-ref="ngx_tm_t">ngx_tm_t</a> *<dfn class="local col0 decl" id="2150tm" title='tm' data-type='ngx_tm_t *' data-ref="2150tm">tm</dfn>);</td></tr>
+<tr><th id="58">58</th><td><em>void</em> <dfn class="decl fn" id="ngx_libc_localtime" title='ngx_libc_localtime' data-ref="ngx_libc_localtime">ngx_libc_localtime</dfn>(<a class="typedef" href="../../../../include/time.h.html#time_t" title='time_t' data-type='__time_t' data-ref="time_t">time_t</a> <dfn class="local col1 decl" id="2151s" title='s' data-type='time_t' data-ref="2151s">s</dfn>, <b>struct</b> <a class="type" href="../../../../include/time.h.html#tm" title='tm' data-ref="tm">tm</a> *<dfn class="local col2 decl" id="2152tm" title='tm' data-type='struct tm *' data-ref="2152tm">tm</dfn>);</td></tr>
+<tr><th id="59">59</th><td><em>void</em> <dfn class="decl fn" id="ngx_libc_gmtime" title='ngx_libc_gmtime' data-ref="ngx_libc_gmtime">ngx_libc_gmtime</dfn>(<a class="typedef" href="../../../../include/time.h.html#time_t" title='time_t' data-type='__time_t' data-ref="time_t">time_t</a> <dfn class="local col3 decl" id="2153s" title='s' data-type='time_t' data-ref="2153s">s</dfn>, <b>struct</b> <a class="type" href="../../../../include/time.h.html#tm" title='tm' data-ref="tm">tm</a> *<dfn class="local col4 decl" id="2154tm" title='tm' data-type='struct tm *' data-ref="2154tm">tm</dfn>);</td></tr>
+<tr><th id="60">60</th><td></td></tr>
+<tr><th id="61">61</th><td><u>#define <dfn class="macro" id="_M/ngx_gettimeofday" data-ref="_M/ngx_gettimeofday">ngx_gettimeofday</dfn>(tp)  (void) gettimeofday(tp, NULL);</u></td></tr>
+<tr><th id="62">62</th><td><u>#define <dfn class="macro" id="_M/ngx_msleep" data-ref="_M/ngx_msleep">ngx_msleep</dfn>(ms)        (void) usleep(ms * 1000)</u></td></tr>
+<tr><th id="63">63</th><td><u>#define <dfn class="macro" id="_M/ngx_sleep" data-ref="_M/ngx_sleep">ngx_sleep</dfn>(s)          (void) sleep(s)</u></td></tr>
+<tr><th id="64">64</th><td></td></tr>
+<tr><th id="65">65</th><td></td></tr>
+<tr><th id="66">66</th><td><u>#<span data-ppcond="8">endif</span> /* _NGX_TIME_H_INCLUDED_ */</u></td></tr>
+<tr><th id="67">67</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../../../objs/ngx_modules.c.html'>nginx/objs/ngx_modules.c</a><br/>Generated on <em>2018-Apr-06</em> from project nginx<br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

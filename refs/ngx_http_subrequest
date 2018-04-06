@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='498' type='ngx_int_t ngx_http_subrequest(ngx_http_request_t * r, ngx_str_t * uri, ngx_str_t * args, ngx_http_request_t ** sr, ngx_http_post_subrequest_t * psr, ngx_uint_t flags)'/>
+<use f='nginx/src/http/modules/ngx_http_mirror_module.c' l='162' u='c' c='ngx_http_mirror_handler_internal'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2179' u='c' c='ngx_http_ssi_include'/>
+<def f='nginx/src/http/ngx_http_core_module.c' l='2220' ll='2392' type='ngx_int_t ngx_http_subrequest(ngx_http_request_t * r, ngx_str_t * uri, ngx_str_t * args, ngx_http_request_t ** psr, ngx_http_post_subrequest_t * ps, ngx_uint_t flags)'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1108' u='c' c='ngx_http_upstream_cache_background_update'/>

@@ -1,0 +1,10 @@
+<dec f='nginx/src/http/ngx_http_cache.h' l='195' type='void ngx_http_file_cache_free(ngx_http_cache_t * c, ngx_temp_file_t * tf)'/>
+<def f='nginx/src/http/ngx_http_file_cache.c' l='1615' ll='1677' type='void ngx_http_file_cache_free(ngx_http_cache_t * c, ngx_temp_file_t * tf)'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1697' u='c' c='ngx_http_file_cache_cleanup'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2596' u='c' c='ngx_http_upstream_intercept_errors'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2871' u='c' c='ngx_http_upstream_send_response'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2911' u='c' c='ngx_http_upstream_send_response'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3053' u='c' c='ngx_http_upstream_send_response'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3945' u='c' c='ngx_http_upstream_process_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3949' u='c' c='ngx_http_upstream_process_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4349' u='c' c='ngx_http_upstream_finalize_request'/>

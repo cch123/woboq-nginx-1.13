@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='221' type='unsigned int'/>
+<offset>1600</offset>
+<use f='nginx/src/core/ngx_resolver.c' l='393' u='w' c='ngx_resolve_start'/>
+<use f='nginx/src/core/ngx_resolver.c' l='430' u='r' c='ngx_resolve_name'/>
+<use f='nginx/src/core/ngx_resolver.c' l='508' u='r' c='ngx_resolve_name_done'/>

@@ -1,0 +1,3 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='525' type='ngx_int_t ngx_http_get_forwarded_addr(ngx_http_request_t * r, ngx_addr_t * addr, ngx_array_t * headers, ngx_str_t * value, ngx_array_t * proxies, int recursive)'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='326' u='c' c='ngx_http_geo_addr'/>
+<def f='nginx/src/http/ngx_http_core_module.c' l='2610' ll='2654' type='ngx_int_t ngx_http_get_forwarded_addr(ngx_http_request_t * r, ngx_addr_t * addr, ngx_array_t * headers, ngx_str_t * value, ngx_array_t * proxies, int recursive)'/>

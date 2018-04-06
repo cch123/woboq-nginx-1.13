@@ -1,0 +1,9 @@
+<dec f='include/zlib.h' l='86' type='Bytef *'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='733' u='w' c='ngx_http_gzip_filter_add_data'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='750' u='r' c='ngx_http_gzip_filter_add_data'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='836' u='r' c='ngx_http_gzip_filter_deflate'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='837' u='r' c='ngx_http_gzip_filter_deflate'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='840' u='w' c='ngx_http_gzip_filter_deflate'/>
+<offset>0</offset>
+<doc f='include/zlib.h' l='86'>/* next input byte */</doc>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='632' u='w' c='ngx_http_log_gzip'/>

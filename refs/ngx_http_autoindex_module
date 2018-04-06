@@ -1,0 +1,6 @@
+<dec f='nginx/objs/ngx_modules.c' l='19' type='ngx_module_t'/>
+<use f='nginx/objs/ngx_modules.c' l='71' u='a'/>
+<use f='nginx/objs/ngx_modules.c' l='71' u='a'/>
+<def f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='136' ll='149' type='ngx_module_t'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='177' u='m' c='ngx_http_autoindex_handler'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='540' u='m' c='ngx_http_autoindex_html'/>

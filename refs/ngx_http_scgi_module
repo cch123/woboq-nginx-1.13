@@ -1,0 +1,18 @@
+<dec f='nginx/objs/ngx_modules.c' l='35' type='ngx_module_t'/>
+<use f='nginx/objs/ngx_modules.c' l='87' u='a'/>
+<use f='nginx/objs/ngx_modules.c' l='87' u='a'/>
+<def f='nginx/src/http/modules/ngx_http_scgi_module.c' l='92' type='ngx_module_t'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='244' u='a'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='244' u='a'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='244' u='a'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='244' u='a'/>
+<def f='nginx/src/http/modules/ngx_http_scgi_module.c' l='421' ll='434' type='ngx_module_t'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='489' u='m' c='ngx_http_scgi_handler'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='491' u='m' c='ngx_http_scgi_handler'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='502' u='a' c='ngx_http_scgi_handler'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='507' u='m' c='ngx_http_scgi_handler'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='608' u='m' c='ngx_http_scgi_create_key'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='655' u='m' c='ngx_http_scgi_create_request'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='938' u='m' c='ngx_http_scgi_reinit_request'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='964' u='m' c='ngx_http_scgi_process_status_line'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='1970' u='a' c='ngx_http_scgi_cache'/>

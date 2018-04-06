@@ -1,0 +1,8 @@
+<dec f='nginx/src/event/ngx_event.h' l='274'/>
+<doc f='nginx/src/event/ngx_event.h' l='270'>/*
+ * All event filters on file descriptor are deleted after a notification:
+ * Solaris 10&apos;s event ports.
+ */</doc>
+<use f='nginx/src/event/ngx_event.c' l='304' u='c'/>
+<use f='nginx/src/event/ngx_event.c' l='383' u='c'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='1070' u='c'/>

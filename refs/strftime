@@ -1,0 +1,3 @@
+<dec f='include/time.h' l='205' type='size_t strftime(char *restrict __s, size_t __maxsize, const char *restrict __format, const struct tm *restrict __tp)'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2763' u='c' c='ngx_http_ssi_date_gmt_local_variable'/>
+<use f='nginx/src/os/unix/ngx_time.c' l='50' u='c' c='ngx_timezone_update'/>

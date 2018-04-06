@@ -1,0 +1,8 @@
+<dec f='nginx/src/http/modules/ngx_http_ssi_filter_module.h' l='61' type='size_t'/>
+<offset>2880</offset>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='903' u='r' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='998' u='r' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1028' u='w' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1474' u='w' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1523' u='w' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1543' u='w' c='ngx_http_ssi_parse'/>

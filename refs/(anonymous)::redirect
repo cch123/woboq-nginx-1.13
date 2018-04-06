@@ -1,0 +1,16 @@
+<dec f='nginx/src/http/ngx_http_script.h' l='132' type='unsigned int'/>
+<dec f='nginx/src/http/ngx_http_script.h' l='148' type='unsigned int'/>
+<dec f='nginx/src/http/ngx_http_upstream.h' l='250' type='ngx_uint_t'/>
+<offset>384</offset>
+<doc f='nginx/src/http/ngx_http_upstream.h' l='250'>/* unsigned   redirect:1; */</doc>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='362' u='w' c='ngx_http_rewrite'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='376' u='w' c='ngx_http_rewrite'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='381' u='w' c='ngx_http_rewrite'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='400' u='r' c='ngx_http_rewrite'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='426' u='w' c='ngx_http_rewrite'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='426' u='r' c='ngx_http_rewrite'/>
+<use f='nginx/src/http/ngx_http_script.c' l='995' u='r' c='ngx_http_script_regex_start_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1034' u='r' c='ngx_http_script_regex_start_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1057' u='r' c='ngx_http_script_regex_start_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1081' u='r' c='ngx_http_script_regex_end_code'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2695' u='r' c='ngx_http_upstream_process_headers'/>

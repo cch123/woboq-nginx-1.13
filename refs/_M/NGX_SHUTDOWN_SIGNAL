@@ -1,0 +1,12 @@
+<dec f='nginx/src/core/ngx_config.h' l='60'/>
+<doc f='nginx/src/core/ngx_config.h' l='59'>/* TODO: #ifndef */</doc>
+<use f='nginx/src/os/unix/ngx_process.c' l='60' u='c'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='61' u='c'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='346' u='c'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='418' u='c'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='97' u='c'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='206' u='c'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='253' u='c'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='282' u='c'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='472' u='c'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='515' u='c'/>

@@ -1,0 +1,8 @@
+<dec f='nginx/src/event/ngx_event_pipe.h' l='93' type='size_t'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='197' u='r' c='ngx_event_pipe_read_upstream'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='202' u='r' c='ngx_event_pipe_read_upstream'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='207' u='r' c='ngx_event_pipe_read_upstream'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='335' u='r' c='ngx_event_pipe_read_upstream'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='335' u='r' c='ngx_event_pipe_read_upstream'/>
+<offset>1984</offset>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3074' u='w' c='ngx_http_upstream_send_response'/>

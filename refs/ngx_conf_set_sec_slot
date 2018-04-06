@@ -1,0 +1,6 @@
+<dec f='nginx/src/core/ngx_conf_file.h' l='289' type='char * ngx_conf_set_sec_slot(ngx_conf_t * cf, ngx_command_t * cmd, void * conf)'/>
+<def f='nginx/src/core/ngx_conf_file.c' l='1289' ll='1317' type='char * ngx_conf_set_sec_slot(ngx_conf_t * cf, ngx_command_t * cmd, void * conf)'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='681'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='681'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='681'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='681'/>

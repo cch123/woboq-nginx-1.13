@@ -1,0 +1,9 @@
+<dec f='nginx/src/core/ngx_hash.h' l='108' type='ngx_int_t ngx_hash_wildcard_init(ngx_hash_init_t * hinit, ngx_hash_key_t * names, ngx_uint_t nelts)'/>
+<def f='nginx/src/core/ngx_hash.c' l='464' ll='606' type='ngx_int_t ngx_hash_wildcard_init(ngx_hash_init_t * hinit, ngx_hash_key_t * names, ngx_uint_t nelts)'/>
+<use f='nginx/src/core/ngx_hash.c' l='578' u='c' c='ngx_hash_wildcard_init'/>
+<use f='nginx/src/http/modules/ngx_http_map_module.c' l='322' u='c' c='ngx_http_map_block'/>
+<use f='nginx/src/http/modules/ngx_http_map_module.c' l='342' u='c' c='ngx_http_map_block'/>
+<use f='nginx/src/http/modules/ngx_http_referer_module.c' l='421' u='c' c='ngx_http_referer_merge_conf'/>
+<use f='nginx/src/http/modules/ngx_http_referer_module.c' l='441' u='c' c='ngx_http_referer_merge_conf'/>
+<use f='nginx/src/http/ngx_http.c' l='1510' u='c' c='ngx_http_server_names'/>
+<use f='nginx/src/http/ngx_http.c' l='1528' u='c' c='ngx_http_server_names'/>

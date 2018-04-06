@@ -1,0 +1,11 @@
+<dec f='nginx/src/os/unix/ngx_process.h' l='80' type='char **'/>
+<use f='nginx/src/core/nginx.c' l='882' u='w' c='ngx_save_argv'/>
+<def f='nginx/src/os/unix/ngx_process.c' l='31' type='char **'/>
+<use f='nginx/src/os/unix/ngx_setproctitle.c' l='52' u='r' c='ngx_init_setproctitle'/>
+<use f='nginx/src/os/unix/ngx_setproctitle.c' l='54' u='r' c='ngx_init_setproctitle'/>
+<use f='nginx/src/os/unix/ngx_setproctitle.c' l='55' u='r' c='ngx_init_setproctitle'/>
+<use f='nginx/src/os/unix/ngx_setproctitle.c' l='56' u='r' c='ngx_init_setproctitle'/>
+<use f='nginx/src/os/unix/ngx_setproctitle.c' l='56' u='r' c='ngx_init_setproctitle'/>
+<use f='nginx/src/os/unix/ngx_setproctitle.c' l='90' u='r' c='ngx_setproctitle'/>
+<use f='nginx/src/os/unix/ngx_setproctitle.c' l='92' u='r' c='ngx_setproctitle'/>
+<use f='nginx/src/os/unix/ngx_setproctitle.c' l='93' u='r' c='ngx_setproctitle'/>

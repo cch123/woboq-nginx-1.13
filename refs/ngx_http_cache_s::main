@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http_cache.h' l='70' type='u_char [16]'/>
+<offset>2080</offset>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='260' u='r' c='ngx_http_file_cache_create_key'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1068' u='r' c='ngx_http_file_cache_vary'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1341' u='r' c='ngx_http_file_cache_update_variant'/>

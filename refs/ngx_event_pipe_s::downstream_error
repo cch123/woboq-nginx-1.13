@@ -1,0 +1,10 @@
+<dec f='nginx/src/event/ngx_event_pipe.h' l='66' type='unsigned int'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='527' u='r' c='ngx_event_pipe_write_to_downstream'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='550' u='w' c='ngx_event_pipe_write_to_downstream'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='572' u='w' c='ngx_event_pipe_write_to_downstream'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='695' u='w' c='ngx_event_pipe_write_to_downstream'/>
+<offset>841</offset>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2894' u='w' c='ngx_http_upstream_send_response'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3804' u='w' c='ngx_http_upstream_process_downstream'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3976' u='r' c='ngx_http_upstream_process_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4378' u='r' c='ngx_http_upstream_finalize_request'/>

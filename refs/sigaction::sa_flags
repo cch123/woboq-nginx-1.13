@@ -1,0 +1,4 @@
+<dec f='include/x86_64-linux-gnu/bits/sigaction.h' l='46' type='int'/>
+<offset>1088</offset>
+<doc f='include/x86_64-linux-gnu/bits/sigaction.h' l='45'>/* Special flags.  */</doc>
+<use f='nginx/src/os/unix/ngx_process.c' l='295' u='w' c='ngx_init_signals'/>

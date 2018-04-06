@@ -1,0 +1,9 @@
+<dec f='nginx/src/core/ngx_cycle.h' l='103' type='ngx_uint_t'/>
+<offset>640</offset>
+<use f='nginx/src/core/nginx.c' l='1068' u='r' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1069' u='r' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1070' u='r' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1334' u='w' c='ngx_set_cpu_affinity'/>
+<use f='nginx/src/core/nginx.c' l='1430' u='r' c='ngx_get_cpu_affinity'/>
+<use f='nginx/src/core/nginx.c' l='1452' u='r' c='ngx_get_cpu_affinity'/>
+<use f='nginx/src/core/nginx.c' l='1456' u='r' c='ngx_get_cpu_affinity'/>

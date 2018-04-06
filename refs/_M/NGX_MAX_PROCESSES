@@ -1,0 +1,5 @@
+<dec f='nginx/src/os/unix/ngx_process.h' l='47'/>
+<use f='nginx/src/os/unix/ngx_process.h' l='87' u='c'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='36' u='c'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='104' u='c'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='107' u='c'/>

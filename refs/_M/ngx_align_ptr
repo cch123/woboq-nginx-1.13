@@ -1,0 +1,8 @@
+<dec f='nginx/src/core/ngx_config.h' l='101'/>
+<use f='nginx/src/core/ngx_crc32.c' l='122' u='c'/>
+<use f='nginx/src/core/ngx_hash.c' l='43' u='c'/>
+<use f='nginx/src/core/ngx_hash.c' l='384' u='c'/>
+<use f='nginx/src/core/ngx_palloc.c' l='160' u='c'/>
+<use f='nginx/src/core/ngx_palloc.c' l='198' u='c'/>
+<use f='nginx/src/core/ngx_slab.c' l='150' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1663' u='c'/>

@@ -1,0 +1,8 @@
+<def f='nginx/src/core/ngx_crc32.h' l='20' ll='35' type='uint32_t ngx_crc32_short(u_char * p, size_t len)'/>
+<use f='nginx/src/core/ngx_resolver.c' l='602' u='c' c='ngx_resolve_name_locked'/>
+<use f='nginx/src/core/ngx_resolver.c' l='933' u='c' c='ngx_resolve_addr'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1895' u='c' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2546' u='c' c='ngx_resolver_process_srv'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3129' u='c' c='ngx_resolver_process_ptr'/>
+<use f='nginx/src/http/modules/ngx_http_limit_conn_module.c' l='184' u='c' c='ngx_http_limit_conn_handler'/>
+<use f='nginx/src/http/modules/ngx_http_limit_req_module.c' l='205' u='c' c='ngx_http_limit_req_handler'/>

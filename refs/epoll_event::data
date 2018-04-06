@@ -1,0 +1,10 @@
+<dec f='include/x86_64-linux-gnu/sys/epoll.h' l='90' type='epoll_data_t'/>
+<offset>32</offset>
+<doc f='include/x86_64-linux-gnu/sys/epoll.h' l='90'>/* User data variable */</doc>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='413' u='m' c='ngx_epoll_notify_init'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='621' u='m' c='ngx_epoll_add_event'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='676' u='m' c='ngx_epoll_del_event'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='681' u='m' c='ngx_epoll_del_event'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='706' u='m' c='ngx_epoll_add_connection'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='747' u='m' c='ngx_epoll_del_connection'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='837' u='m' c='ngx_epoll_process_events'/>

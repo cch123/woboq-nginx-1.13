@@ -1,0 +1,4 @@
+<dec f='nginx/objs/ngx_modules.c' l='29' type='ngx_module_t'/>
+<use f='nginx/objs/ngx_modules.c' l='81' u='a'/>
+<use f='nginx/objs/ngx_modules.c' l='81' u='a'/>
+<def f='nginx/src/http/modules/ngx_http_split_clients_module.c' l='58' ll='71' type='ngx_module_t'/>

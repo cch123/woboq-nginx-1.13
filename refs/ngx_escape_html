@@ -1,0 +1,12 @@
+<dec f='nginx/src/core/ngx_string.h' l='211' type='uintptr_t ngx_escape_html(u_char * dst, u_char * src, size_t size)'/>
+<def f='nginx/src/core/ngx_string.c' l='1739' ll='1808' type='uintptr_t ngx_escape_html(u_char * dst, u_char * src, size_t size)'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='477' u='c' c='ngx_http_autoindex_html'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='494' u='c' c='ngx_http_autoindex_html'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='525' u='c' c='ngx_http_autoindex_html'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='527' u='c' c='ngx_http_autoindex_html'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='579' u='c' c='ngx_http_autoindex_html'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='594' u='c' c='ngx_http_autoindex_html'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='861' u='c' c='ngx_http_autoindex_xml'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='913' u='c' c='ngx_http_autoindex_xml'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2339' u='c' c='ngx_http_ssi_echo'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2347' u='c' c='ngx_http_ssi_echo'/>

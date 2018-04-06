@@ -1,0 +1,14 @@
+<dec f='include/x86_64-linux-gnu/sys/socket.h' l='219' type='int getsockopt(int __fd, int __level, int __optname, void *restrict __optval, socklen_t *restrict __optlen)'/>
+<doc f='include/x86_64-linux-gnu/sys/socket.h' l='216'>/* Put the current value for socket FD&apos;s option OPTNAME at protocol level LEVEL
+   into OPTVAL (which is *OPTLEN bytes long), and set *OPTLEN to the value&apos;s
+   actual length.  Returns 0 on success, -1 for errors.  */</doc>
+<use f='nginx/src/core/ngx_connection.c' l='218' u='c' c='ngx_set_inherited_sockets'/>
+<use f='nginx/src/core/ngx_connection.c' l='230' u='c' c='ngx_set_inherited_sockets'/>
+<use f='nginx/src/core/ngx_connection.c' l='243' u='c' c='ngx_set_inherited_sockets'/>
+<use f='nginx/src/core/ngx_connection.c' l='280' u='c' c='ngx_set_inherited_sockets'/>
+<use f='nginx/src/core/ngx_connection.c' l='302' u='c' c='ngx_set_inherited_sockets'/>
+<use f='nginx/src/core/ngx_connection.c' l='357' u='c' c='ngx_set_inherited_sockets'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2834' u='c' c='ngx_http_test_reading'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1403' u='c' c='ngx_http_upstream_check_broken_connection'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2643' u='c' c='ngx_http_upstream_test_connect'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1120' u='c' c='ngx_http_variable_tcpinfo'/>

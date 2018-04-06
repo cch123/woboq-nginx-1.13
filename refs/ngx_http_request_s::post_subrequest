@@ -1,0 +1,6 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='420' type='ngx_http_post_subrequest_t *'/>
+<offset>8640</offset>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2326' u='w' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2340' u='r' c='ngx_http_finalize_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2341' u='r' c='ngx_http_finalize_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2341' u='r' c='ngx_http_finalize_request'/>

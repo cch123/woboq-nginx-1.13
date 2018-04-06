@@ -1,0 +1,24 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='428' type='ngx_log_t *'/>
+<offset>5120</offset>
+<use f='nginx/src/http/ngx_http.c' l='1723' u='r' c='ngx_http_add_listening'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1225' u='r' c='ngx_http_update_location_config'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1225' u='r' c='ngx_http_update_location_config'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1225' u='r' c='ngx_http_update_location_config'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1225' u='r' c='ngx_http_update_location_config'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1225' u='r' c='ngx_http_update_location_config'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3557' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3558' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3559' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3559' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3561' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4765' u='a' c='ngx_http_core_error_log'/>
+<use f='nginx/src/http/ngx_http_request.c' l='557' u='r' c='ngx_http_create_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='557' u='r' c='ngx_http_create_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='557' u='r' c='ngx_http_create_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='557' u='r' c='ngx_http_create_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='557' u='r' c='ngx_http_create_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2126' u='r' c='ngx_http_set_virtual_server'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2126' u='r' c='ngx_http_set_virtual_server'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2126' u='r' c='ngx_http_set_virtual_server'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2126' u='r' c='ngx_http_set_virtual_server'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2126' u='r' c='ngx_http_set_virtual_server'/>

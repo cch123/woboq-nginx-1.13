@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='234' type='ngx_str_t'/>
+<offset>2240</offset>
+<use f='nginx/src/http/modules/ngx_http_auth_basic_module.c' l='283' u='m' c='ngx_http_auth_basic_crypt_handler'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1919' u='m' c='ngx_http_auth_basic_user'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1920' u='m' c='ngx_http_auth_basic_user'/>

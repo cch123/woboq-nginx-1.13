@@ -1,0 +1,12 @@
+<dec f='nginx/src/core/ngx_cycle.h' l='56' type='ngx_queue_t'/>
+<offset>1280</offset>
+<use f='nginx/src/core/ngx_connection.c' l='1224' u='a' c='ngx_reusable_connection'/>
+<use f='nginx/src/core/ngx_connection.c' l='1224' u='a' c='ngx_reusable_connection'/>
+<use f='nginx/src/core/ngx_connection.c' l='1224' u='a' c='ngx_reusable_connection'/>
+<use f='nginx/src/core/ngx_connection.c' l='1244' u='a' c='ngx_drain_connections'/>
+<use f='nginx/src/core/ngx_connection.c' l='1244' u='a' c='ngx_drain_connections'/>
+<use f='nginx/src/core/ngx_connection.c' l='1248' u='a' c='ngx_drain_connections'/>
+<use f='nginx/src/core/ngx_cycle.c' l='186' u='a' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='186' u='a' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='186' u='a' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='186' u='a' c='ngx_init_cycle'/>

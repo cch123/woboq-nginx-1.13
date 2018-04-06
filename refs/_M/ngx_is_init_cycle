@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_cycle.h' l='123'/>
+<use f='nginx/src/core/ngx_cycle.c' l='317' u='c'/>
+<use f='nginx/src/core/ngx_cycle.c' l='759' u='c'/>
+<use f='nginx/src/core/ngx_cycle.c' l='811' u='c'/>

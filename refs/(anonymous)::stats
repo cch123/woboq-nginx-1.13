@@ -1,0 +1,19 @@
+<dec f='nginx/src/core/ngx_slab.h' l='44' type='ngx_slab_stat_t *'/>
+<offset>576</offset>
+<use f='nginx/src/core/ngx_slab.c' l='127' u='w' c='ngx_slab_init'/>
+<use f='nginx/src/core/ngx_slab.c' l='128' u='r' c='ngx_slab_init'/>
+<use f='nginx/src/core/ngx_slab.c' l='218' u='r' c='ngx_slab_alloc_locked'/>
+<use f='nginx/src/core/ngx_slab.c' l='249' u='r' c='ngx_slab_alloc_locked'/>
+<use f='nginx/src/core/ngx_slab.c' l='291' u='r' c='ngx_slab_alloc_locked'/>
+<use f='nginx/src/core/ngx_slab.c' l='322' u='r' c='ngx_slab_alloc_locked'/>
+<use f='nginx/src/core/ngx_slab.c' l='365' u='r' c='ngx_slab_alloc_locked'/>
+<use f='nginx/src/core/ngx_slab.c' l='369' u='r' c='ngx_slab_alloc_locked'/>
+<use f='nginx/src/core/ngx_slab.c' l='381' u='r' c='ngx_slab_alloc_locked'/>
+<use f='nginx/src/core/ngx_slab.c' l='385' u='r' c='ngx_slab_alloc_locked'/>
+<use f='nginx/src/core/ngx_slab.c' l='397' u='r' c='ngx_slab_alloc_locked'/>
+<use f='nginx/src/core/ngx_slab.c' l='401' u='r' c='ngx_slab_alloc_locked'/>
+<use f='nginx/src/core/ngx_slab.c' l='409' u='r' c='ngx_slab_alloc_locked'/>
+<use f='nginx/src/core/ngx_slab.c' l='535' u='r' c='ngx_slab_free_locked'/>
+<use f='nginx/src/core/ngx_slab.c' l='573' u='r' c='ngx_slab_free_locked'/>
+<use f='nginx/src/core/ngx_slab.c' l='613' u='r' c='ngx_slab_free_locked'/>
+<use f='nginx/src/core/ngx_slab.c' l='654' u='r' c='ngx_slab_free_locked'/>

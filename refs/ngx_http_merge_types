@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http.h' l='155' type='char * ngx_http_merge_types(ngx_conf_t * cf, ngx_array_t ** keys, ngx_hash_t * types_hash, ngx_array_t ** prev_keys, ngx_hash_t * prev_types_hash, ngx_str_t * default_types)'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='1558' u='c' c='ngx_http_charset_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='1203' u='c' c='ngx_http_gzip_merge_conf'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2911' u='c' c='ngx_http_ssi_merge_loc_conf'/>
+<def f='nginx/src/http/ngx_http.c' l='1986' ll='2048' type='char * ngx_http_merge_types(ngx_conf_t * cf, ngx_array_t ** keys, ngx_hash_t * types_hash, ngx_array_t ** prev_keys, ngx_hash_t * prev_types_hash, ngx_str_t * default_types)'/>

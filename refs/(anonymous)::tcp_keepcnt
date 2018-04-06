@@ -1,0 +1,6 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='97' type='int'/>
+<offset>1152</offset>
+<use f='nginx/src/http/ngx_http.c' l='1748' u='r' c='ngx_http_add_listening'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4048' u='w' c='ngx_http_core_listen'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4049' u='r' c='ngx_http_core_listen'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4055' u='r' c='ngx_http_core_listen'/>

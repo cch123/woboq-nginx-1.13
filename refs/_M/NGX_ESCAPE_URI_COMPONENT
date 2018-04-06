@@ -1,0 +1,3 @@
+<dec f='nginx/src/core/ngx_string.h' l='199'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='492' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='548' u='c'/>

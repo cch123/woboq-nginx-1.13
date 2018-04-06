@@ -1,0 +1,13 @@
+<dec f='nginx/src/core/ngx_config.h' l='57'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3629' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3700' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3743' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3847' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4175' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4178' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4201' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4286' u='c'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2181' u='c'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2181' u='c'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2182' u='c'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2182' u='c'/>

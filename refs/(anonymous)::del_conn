@@ -1,0 +1,5 @@
+<dec f='nginx/src/event/ngx_event.h' l='185' type='ngx_int_t (*)(ngx_connection_t *, ngx_uint_t)'/>
+<use f='nginx/src/core/ngx_connection.c' l='1136' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_connection.c' l='1137' macro='1' u='r'/>
+<offset>320</offset>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='1063' macro='1' u='r'/>

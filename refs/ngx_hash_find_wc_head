@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_hash.h' l='101' type='void * ngx_hash_find_wc_head(ngx_hash_wildcard_t * hwc, u_char * name, size_t len)'/>
+<def f='nginx/src/core/ngx_hash.c' l='52' ll='143' type='void * ngx_hash_find_wc_head(ngx_hash_wildcard_t * hwc, u_char * name, size_t len)'/>
+<use f='nginx/src/core/ngx_hash.c' l='118' u='c' c='ngx_hash_find_wc_head'/>
+<use f='nginx/src/core/ngx_hash.c' l='229' u='c' c='ngx_hash_find_combined'/>

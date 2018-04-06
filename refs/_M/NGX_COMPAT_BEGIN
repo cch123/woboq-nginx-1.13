@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_config.h' l='139'/>
+<use f='nginx/src/event/ngx_event_connect.h' l='69' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.h' l='106' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.h' l='239' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.h' l='54' u='c'/>

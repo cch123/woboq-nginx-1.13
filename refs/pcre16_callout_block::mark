@@ -1,0 +1,4 @@
+<dec f='include/pcre.h' l='456' type='const unsigned short *'/>
+<offset>512</offset>
+<doc f='include/pcre.h' l='455'>/* ------------------- Added for Version 2 -------------------------- */</doc>
+<doc f='include/pcre.h' l='456'>/* Pointer to current mark or NULL    */</doc>

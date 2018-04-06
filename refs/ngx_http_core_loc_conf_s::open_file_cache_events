@@ -1,0 +1,13 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='426' type='ngx_flag_t'/>
+<offset>5056</offset>
+<use f='nginx/src/http/modules/ngx_http_index_module.c' l='211' u='r' c='ngx_http_index_handler'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='502' u='r' c='ngx_http_log_script_write'/>
+<use f='nginx/src/http/modules/ngx_http_static_module.c' l='96' u='r' c='ngx_http_static_handler'/>
+<use f='nginx/src/http/modules/ngx_http_try_files_module.c' l='224' u='r' c='ngx_http_try_files_handler'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3419' u='w' c='ngx_http_core_create_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3697' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3697' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3698' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3698' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='353' u='r' c='ngx_http_file_cache_open'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1505' u='r' c='ngx_http_script_file_code'/>

@@ -1,0 +1,6 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='52' type='ngx_resolver_t *'/>
+<offset>1152</offset>
+<use f='nginx/src/core/ngx_resolver.c' l='275' u='w' c='ngx_resolver_create'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1552' u='r' c='ngx_resolver_udp_read'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1571' u='r' c='ngx_resolver_tcp_write'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1630' u='r' c='ngx_resolver_tcp_read'/>

@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_cycle.h' l='46' type='ngx_uint_t'/>
+<offset>832</offset>
+<doc f='nginx/src/core/ngx_cycle.h' l='46'>/* unsigned  log_use_stderr:1; */</doc>
+<use f='nginx/src/core/ngx_log.c' l='446' u='r' c='ngx_log_redirect_stderr'/>
+<use f='nginx/src/core/ngx_log.c' l='581' u='w' c='ngx_log_set_log'/>

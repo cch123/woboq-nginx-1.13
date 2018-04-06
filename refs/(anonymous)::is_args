@@ -1,0 +1,6 @@
+<dec f='nginx/src/http/ngx_http_script.h' l='31' type='unsigned int'/>
+<offset>515</offset>
+<use f='nginx/src/http/ngx_http_script.c' l='887' u='w' c='ngx_http_script_mark_args_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='900' u='w' c='ngx_http_script_start_args_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1225' u='r' c='ngx_http_script_copy_capture_len_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1266' u='r' c='ngx_http_script_copy_capture_code'/>

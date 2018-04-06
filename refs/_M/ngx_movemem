@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_string.h' l='142'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1594' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1666' u='c'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1090' u='c'/>

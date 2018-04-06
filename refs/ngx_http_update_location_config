@@ -1,0 +1,7 @@
+<dec f='nginx/src/http/ngx_http.h' l='118' type='void ngx_http_update_location_config(ngx_http_request_t * r)'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='962' u='c' c='ngx_http_core_find_config_phase'/>
+<def f='nginx/src/http/ngx_http_core_module.c' l='1212' ll='1291' type='void ngx_http_update_location_config(ngx_http_request_t * r)'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2388' u='c' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2433' u='c' c='ngx_http_internal_redirect'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2504' u='c' c='ngx_http_named_location'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1402' u='c' c='ngx_http_script_if_code'/>

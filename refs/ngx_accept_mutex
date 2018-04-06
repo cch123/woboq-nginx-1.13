@@ -1,0 +1,9 @@
+<dec f='nginx/src/event/ngx_event.h' l='470' type='ngx_shmtx_t'/>
+<def f='nginx/src/event/ngx_event.c' l='52' type='ngx_shmtx_t'/>
+<use f='nginx/src/event/ngx_event.c' l='252' u='a' c='ngx_process_events_and_timers'/>
+<use f='nginx/src/event/ngx_event.c' l='513' u='m' c='ngx_event_module_init'/>
+<use f='nginx/src/event/ngx_event.c' l='515' u='a' c='ngx_event_module_init'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='123' u='a' c='ngx_event_accept'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='649' u='a' c='ngx_trylock_accept_mutex'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='659' u='a' c='ngx_trylock_accept_mutex'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='578' u='a' c='ngx_unlock_mutexes'/>

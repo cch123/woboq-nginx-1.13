@@ -1,0 +1,2 @@
+<dec f='include/linux/capability.h' l='307'/>
+<doc f='include/linux/capability.h' l='305'>/* Allow taking of leases on files */</doc>

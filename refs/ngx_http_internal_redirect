@@ -1,0 +1,9 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='501' type='ngx_int_t ngx_http_internal_redirect(ngx_http_request_t * r, ngx_str_t * uri, ngx_str_t * args)'/>
+<use f='nginx/src/http/modules/ngx_http_index_module.c' l='136' u='c' c='ngx_http_index_handler'/>
+<use f='nginx/src/http/modules/ngx_http_index_module.c' l='192' u='c' c='ngx_http_index_handler'/>
+<use f='nginx/src/http/modules/ngx_http_index_module.c' l='277' u='c' c='ngx_http_index_handler'/>
+<use f='nginx/src/http/modules/ngx_http_try_files_module.c' l='209' u='c' c='ngx_http_try_files_handler'/>
+<def f='nginx/src/http/ngx_http_core_module.c' l='2395' ll='2447' type='ngx_int_t ngx_http_internal_redirect(ngx_http_request_t * r, ngx_str_t * uri, ngx_str_t * args)'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3422' u='c' c='ngx_http_post_action'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='619' u='c' c='ngx_http_send_error_page'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2723' u='c' c='ngx_http_upstream_process_headers'/>

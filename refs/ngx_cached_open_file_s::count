@@ -1,0 +1,12 @@
+<dec f='nginx/src/core/ngx_open_file_cache.h' l='77' type='unsigned int'/>
+<offset>1026</offset>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='120' u='w' c='ngx_open_file_cache_cleanup'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='254' u='w' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='331' u='r' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='389' u='w' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='420' u='w' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='460' u='r' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1022' u='w' c='ngx_open_file_cleanup'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1047' u='r' c='ngx_close_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1054' u='r' c='ngx_close_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1085' u='r' c='ngx_open_file_del_event'/>

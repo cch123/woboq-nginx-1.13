@@ -1,0 +1,2 @@
+<dec f='include/stdio.h' l='198' type='FILE * tmpfile()'/>
+<dec f='include/stdio.h' l='205' type='FILE * tmpfile64()'/>

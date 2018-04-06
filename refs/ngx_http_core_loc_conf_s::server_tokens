@@ -1,0 +1,14 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='393' type='ngx_uint_t'/>
+<offset>4096</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='393'>/* server_tokens */</doc>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3411' u='w' c='ngx_http_core_create_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3682' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3682' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3682' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3682' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_header_filter_module.c' l='283' u='r' c='ngx_http_header_filter'/>
+<use f='nginx/src/http/ngx_http_header_filter_module.c' l='286' u='r' c='ngx_http_header_filter'/>
+<use f='nginx/src/http/ngx_http_header_filter_module.c' l='452' u='r' c='ngx_http_header_filter'/>
+<use f='nginx/src/http/ngx_http_header_filter_module.c' l='456' u='r' c='ngx_http_header_filter'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='672' u='r' c='ngx_http_send_special_response'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='676' u='r' c='ngx_http_send_special_response'/>

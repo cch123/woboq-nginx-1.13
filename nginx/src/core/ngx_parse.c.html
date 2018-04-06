@@ -1,0 +1,301 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ngx_parse.c source code [nginx/src/core/ngx_parse.c] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../../../data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../../data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../../data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'nginx/src/core/ngx_parse.c'; var root_path = '../../..'; var data_path = '../../../../data';</script>
+<script src='../../../../data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../..'>nginx</a>/<a href='..'>src</a>/<a href='./'>core</a>/<a href='ngx_parse.c.html'>ngx_parse.c</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td></td></tr>
+<tr><th id="2">2</th><td><i>/*</i></td></tr>
+<tr><th id="3">3</th><td><i> * Copyright (C) Igor Sysoev</i></td></tr>
+<tr><th id="4">4</th><td><i> * Copyright (C) Nginx, Inc.</i></td></tr>
+<tr><th id="5">5</th><td><i> */</i></td></tr>
+<tr><th id="6">6</th><td></td></tr>
+<tr><th id="7">7</th><td></td></tr>
+<tr><th id="8">8</th><td><u>#include <a href="ngx_config.h.html">&lt;ngx_config.h&gt;</a></u></td></tr>
+<tr><th id="9">9</th><td><u>#include <a href="ngx_core.h.html">&lt;ngx_core.h&gt;</a></u></td></tr>
+<tr><th id="10">10</th><td></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td><a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#ssize_t" title='ssize_t' data-type='__ssize_t' data-ref="ssize_t">ssize_t</a></td></tr>
+<tr><th id="13">13</th><td><dfn class="decl def fn" id="ngx_parse_size" title='ngx_parse_size' data-ref="ngx_parse_size">ngx_parse_size</dfn>(<a class="typedef" href="ngx_string.h.html#ngx_str_t" title='ngx_str_t' data-type='struct ngx_str_t' data-ref="ngx_str_t">ngx_str_t</a> *<dfn class="local col1 decl" id="1line" title='line' data-type='ngx_str_t *' data-ref="1line">line</dfn>)</td></tr>
+<tr><th id="14">14</th><td>{</td></tr>
+<tr><th id="15">15</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a>   <dfn class="local col2 decl" id="2unit" title='unit' data-type='u_char' data-ref="2unit">unit</dfn>;</td></tr>
+<tr><th id="16">16</th><td>    <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span>   <dfn class="local col3 decl" id="3len" title='len' data-type='size_t' data-ref="3len">len</dfn>;</td></tr>
+<tr><th id="17">17</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#ssize_t" title='ssize_t' data-type='__ssize_t' data-ref="ssize_t">ssize_t</a>  <dfn class="local col4 decl" id="4size" title='size' data-type='ssize_t' data-ref="4size">size</dfn>, <dfn class="local col5 decl" id="5scale" title='scale' data-type='ssize_t' data-ref="5scale">scale</dfn>, <dfn class="local col6 decl" id="6max" title='max' data-type='ssize_t' data-ref="6max">max</dfn>;</td></tr>
+<tr><th id="18">18</th><td></td></tr>
+<tr><th id="19">19</th><td>    <a class="local col3 ref" href="#3len" title='len' data-ref="3len">len</a> = <a class="local col1 ref" href="#1line" title='line' data-ref="1line">line</a>-&gt;<a class="ref field" href="ngx_string.h.html#(anonymous)::len" title='(anonymous struct)::len' data-ref="(anonymous)::len">len</a>;</td></tr>
+<tr><th id="20">20</th><td></td></tr>
+<tr><th id="21">21</th><td>    <b>if</b> (<a class="local col3 ref" href="#3len" title='len' data-ref="3len">len</a> == <var>0</var>) {</td></tr>
+<tr><th id="22">22</th><td>        <b>return</b> <a class="macro" href="ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>;</td></tr>
+<tr><th id="23">23</th><td>    }</td></tr>
+<tr><th id="24">24</th><td></td></tr>
+<tr><th id="25">25</th><td>    <a class="local col2 ref" href="#2unit" title='unit' data-ref="2unit">unit</a> = <a class="local col1 ref" href="#1line" title='line' data-ref="1line">line</a>-&gt;<a class="ref field" href="ngx_string.h.html#(anonymous)::data" title='(anonymous struct)::data' data-ref="(anonymous)::data">data</a>[<a class="local col3 ref" href="#3len" title='len' data-ref="3len">len</a> - <var>1</var>];</td></tr>
+<tr><th id="26">26</th><td></td></tr>
+<tr><th id="27">27</th><td>    <b>switch</b> (<a class="local col2 ref" href="#2unit" title='unit' data-ref="2unit">unit</a>) {</td></tr>
+<tr><th id="28">28</th><td>    <b>case</b> <kbd>'K'</kbd>:</td></tr>
+<tr><th id="29">29</th><td>    <b>case</b> <kbd>'k'</kbd>:</td></tr>
+<tr><th id="30">30</th><td>        <a class="local col3 ref" href="#3len" title='len' data-ref="3len">len</a>--;</td></tr>
+<tr><th id="31">31</th><td>        <a class="local col6 ref" href="#6max" title='max' data-ref="6max">max</a> = <a class="macro" href="../../objs/ngx_auto_config.h.html#212" title="9223372036854775807LL" data-ref="_M/NGX_MAX_SIZE_T_VALUE">NGX_MAX_SIZE_T_VALUE</a> / <var>1024</var>;</td></tr>
+<tr><th id="32">32</th><td>        <a class="local col5 ref" href="#5scale" title='scale' data-ref="5scale">scale</a> = <var>1024</var>;</td></tr>
+<tr><th id="33">33</th><td>        <b>break</b>;</td></tr>
+<tr><th id="34">34</th><td></td></tr>
+<tr><th id="35">35</th><td>    <b>case</b> <kbd>'M'</kbd>:</td></tr>
+<tr><th id="36">36</th><td>    <b>case</b> <kbd>'m'</kbd>:</td></tr>
+<tr><th id="37">37</th><td>        <a class="local col3 ref" href="#3len" title='len' data-ref="3len">len</a>--;</td></tr>
+<tr><th id="38">38</th><td>        <a class="local col6 ref" href="#6max" title='max' data-ref="6max">max</a> = <a class="macro" href="../../objs/ngx_auto_config.h.html#212" title="9223372036854775807LL" data-ref="_M/NGX_MAX_SIZE_T_VALUE">NGX_MAX_SIZE_T_VALUE</a> / (<var>1024</var> * <var>1024</var>);</td></tr>
+<tr><th id="39">39</th><td>        <a class="local col5 ref" href="#5scale" title='scale' data-ref="5scale">scale</a> = <var>1024</var> * <var>1024</var>;</td></tr>
+<tr><th id="40">40</th><td>        <b>break</b>;</td></tr>
+<tr><th id="41">41</th><td></td></tr>
+<tr><th id="42">42</th><td>    <b>default</b>:</td></tr>
+<tr><th id="43">43</th><td>        <a class="local col6 ref" href="#6max" title='max' data-ref="6max">max</a> = <a class="macro" href="../../objs/ngx_auto_config.h.html#212" title="9223372036854775807LL" data-ref="_M/NGX_MAX_SIZE_T_VALUE">NGX_MAX_SIZE_T_VALUE</a>;</td></tr>
+<tr><th id="44">44</th><td>        <a class="local col5 ref" href="#5scale" title='scale' data-ref="5scale">scale</a> = <var>1</var>;</td></tr>
+<tr><th id="45">45</th><td>    }</td></tr>
+<tr><th id="46">46</th><td></td></tr>
+<tr><th id="47">47</th><td>    <a class="local col4 ref" href="#4size" title='size' data-ref="4size">size</a> = <a class="ref fn" href="ngx_string.h.html#ngx_atosz" title='ngx_atosz' data-ref="ngx_atosz">ngx_atosz</a>(<a class="local col1 ref" href="#1line" title='line' data-ref="1line">line</a>-&gt;<a class="ref field" href="ngx_string.h.html#(anonymous)::data" title='(anonymous struct)::data' data-ref="(anonymous)::data">data</a>, <a class="local col3 ref" href="#3len" title='len' data-ref="3len">len</a>);</td></tr>
+<tr><th id="48">48</th><td>    <b>if</b> (<a class="local col4 ref" href="#4size" title='size' data-ref="4size">size</a> == <a class="macro" href="ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a> || <a class="local col4 ref" href="#4size" title='size' data-ref="4size">size</a> &gt; <a class="local col6 ref" href="#6max" title='max' data-ref="6max">max</a>) {</td></tr>
+<tr><th id="49">49</th><td>        <b>return</b> <a class="macro" href="ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>;</td></tr>
+<tr><th id="50">50</th><td>    }</td></tr>
+<tr><th id="51">51</th><td></td></tr>
+<tr><th id="52">52</th><td>    <a class="local col4 ref" href="#4size" title='size' data-ref="4size">size</a> *= <a class="local col5 ref" href="#5scale" title='scale' data-ref="5scale">scale</a>;</td></tr>
+<tr><th id="53">53</th><td></td></tr>
+<tr><th id="54">54</th><td>    <b>return</b> <a class="local col4 ref" href="#4size" title='size' data-ref="4size">size</a>;</td></tr>
+<tr><th id="55">55</th><td>}</td></tr>
+<tr><th id="56">56</th><td></td></tr>
+<tr><th id="57">57</th><td></td></tr>
+<tr><th id="58">58</th><td><a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#off_t" title='off_t' data-type='__off64_t' data-ref="off_t">off_t</a></td></tr>
+<tr><th id="59">59</th><td><dfn class="decl def fn" id="ngx_parse_offset" title='ngx_parse_offset' data-ref="ngx_parse_offset">ngx_parse_offset</dfn>(<a class="typedef" href="ngx_string.h.html#ngx_str_t" title='ngx_str_t' data-type='struct ngx_str_t' data-ref="ngx_str_t">ngx_str_t</a> *<dfn class="local col7 decl" id="7line" title='line' data-type='ngx_str_t *' data-ref="7line">line</dfn>)</td></tr>
+<tr><th id="60">60</th><td>{</td></tr>
+<tr><th id="61">61</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a>  <dfn class="local col8 decl" id="8unit" title='unit' data-type='u_char' data-ref="8unit">unit</dfn>;</td></tr>
+<tr><th id="62">62</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#off_t" title='off_t' data-type='__off64_t' data-ref="off_t">off_t</a>   <dfn class="local col9 decl" id="9offset" title='offset' data-type='off_t' data-ref="9offset">offset</dfn>, <dfn class="local col0 decl" id="10scale" title='scale' data-type='off_t' data-ref="10scale">scale</dfn>, <dfn class="local col1 decl" id="11max" title='max' data-type='off_t' data-ref="11max">max</dfn>;</td></tr>
+<tr><th id="63">63</th><td>    <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span>  <dfn class="local col2 decl" id="12len" title='len' data-type='size_t' data-ref="12len">len</dfn>;</td></tr>
+<tr><th id="64">64</th><td></td></tr>
+<tr><th id="65">65</th><td>    <a class="local col2 ref" href="#12len" title='len' data-ref="12len">len</a> = <a class="local col7 ref" href="#7line" title='line' data-ref="7line">line</a>-&gt;<a class="ref field" href="ngx_string.h.html#(anonymous)::len" title='(anonymous struct)::len' data-ref="(anonymous)::len">len</a>;</td></tr>
+<tr><th id="66">66</th><td></td></tr>
+<tr><th id="67">67</th><td>    <b>if</b> (<a class="local col2 ref" href="#12len" title='len' data-ref="12len">len</a> == <var>0</var>) {</td></tr>
+<tr><th id="68">68</th><td>        <b>return</b> <a class="macro" href="ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>;</td></tr>
+<tr><th id="69">69</th><td>    }</td></tr>
+<tr><th id="70">70</th><td></td></tr>
+<tr><th id="71">71</th><td>    <a class="local col8 ref" href="#8unit" title='unit' data-ref="8unit">unit</a> = <a class="local col7 ref" href="#7line" title='line' data-ref="7line">line</a>-&gt;<a class="ref field" href="ngx_string.h.html#(anonymous)::data" title='(anonymous struct)::data' data-ref="(anonymous)::data">data</a>[<a class="local col2 ref" href="#12len" title='len' data-ref="12len">len</a> - <var>1</var>];</td></tr>
+<tr><th id="72">72</th><td></td></tr>
+<tr><th id="73">73</th><td>    <b>switch</b> (<a class="local col8 ref" href="#8unit" title='unit' data-ref="8unit">unit</a>) {</td></tr>
+<tr><th id="74">74</th><td>    <b>case</b> <kbd>'K'</kbd>:</td></tr>
+<tr><th id="75">75</th><td>    <b>case</b> <kbd>'k'</kbd>:</td></tr>
+<tr><th id="76">76</th><td>        <a class="local col2 ref" href="#12len" title='len' data-ref="12len">len</a>--;</td></tr>
+<tr><th id="77">77</th><td>        <a class="local col1 ref" href="#11max" title='max' data-ref="11max">max</a> = <a class="macro" href="../../objs/ngx_auto_config.h.html#222" title="9223372036854775807LL" data-ref="_M/NGX_MAX_OFF_T_VALUE">NGX_MAX_OFF_T_VALUE</a> / <var>1024</var>;</td></tr>
+<tr><th id="78">78</th><td>        <a class="local col0 ref" href="#10scale" title='scale' data-ref="10scale">scale</a> = <var>1024</var>;</td></tr>
+<tr><th id="79">79</th><td>        <b>break</b>;</td></tr>
+<tr><th id="80">80</th><td></td></tr>
+<tr><th id="81">81</th><td>    <b>case</b> <kbd>'M'</kbd>:</td></tr>
+<tr><th id="82">82</th><td>    <b>case</b> <kbd>'m'</kbd>:</td></tr>
+<tr><th id="83">83</th><td>        <a class="local col2 ref" href="#12len" title='len' data-ref="12len">len</a>--;</td></tr>
+<tr><th id="84">84</th><td>        <a class="local col1 ref" href="#11max" title='max' data-ref="11max">max</a> = <a class="macro" href="../../objs/ngx_auto_config.h.html#222" title="9223372036854775807LL" data-ref="_M/NGX_MAX_OFF_T_VALUE">NGX_MAX_OFF_T_VALUE</a> / (<var>1024</var> * <var>1024</var>);</td></tr>
+<tr><th id="85">85</th><td>        <a class="local col0 ref" href="#10scale" title='scale' data-ref="10scale">scale</a> = <var>1024</var> * <var>1024</var>;</td></tr>
+<tr><th id="86">86</th><td>        <b>break</b>;</td></tr>
+<tr><th id="87">87</th><td></td></tr>
+<tr><th id="88">88</th><td>    <b>case</b> <kbd>'G'</kbd>:</td></tr>
+<tr><th id="89">89</th><td>    <b>case</b> <kbd>'g'</kbd>:</td></tr>
+<tr><th id="90">90</th><td>        <a class="local col2 ref" href="#12len" title='len' data-ref="12len">len</a>--;</td></tr>
+<tr><th id="91">91</th><td>        <a class="local col1 ref" href="#11max" title='max' data-ref="11max">max</a> = <a class="macro" href="../../objs/ngx_auto_config.h.html#222" title="9223372036854775807LL" data-ref="_M/NGX_MAX_OFF_T_VALUE">NGX_MAX_OFF_T_VALUE</a> / (<var>1024</var> * <var>1024</var> * <var>1024</var>);</td></tr>
+<tr><th id="92">92</th><td>        <a class="local col0 ref" href="#10scale" title='scale' data-ref="10scale">scale</a> = <var>1024</var> * <var>1024</var> * <var>1024</var>;</td></tr>
+<tr><th id="93">93</th><td>        <b>break</b>;</td></tr>
+<tr><th id="94">94</th><td></td></tr>
+<tr><th id="95">95</th><td>    <b>default</b>:</td></tr>
+<tr><th id="96">96</th><td>        <a class="local col1 ref" href="#11max" title='max' data-ref="11max">max</a> = <a class="macro" href="../../objs/ngx_auto_config.h.html#222" title="9223372036854775807LL" data-ref="_M/NGX_MAX_OFF_T_VALUE">NGX_MAX_OFF_T_VALUE</a>;</td></tr>
+<tr><th id="97">97</th><td>        <a class="local col0 ref" href="#10scale" title='scale' data-ref="10scale">scale</a> = <var>1</var>;</td></tr>
+<tr><th id="98">98</th><td>    }</td></tr>
+<tr><th id="99">99</th><td></td></tr>
+<tr><th id="100">100</th><td>    <a class="local col9 ref" href="#9offset" title='offset' data-ref="9offset">offset</a> = <a class="ref fn" href="ngx_string.h.html#ngx_atoof" title='ngx_atoof' data-ref="ngx_atoof">ngx_atoof</a>(<a class="local col7 ref" href="#7line" title='line' data-ref="7line">line</a>-&gt;<a class="ref field" href="ngx_string.h.html#(anonymous)::data" title='(anonymous struct)::data' data-ref="(anonymous)::data">data</a>, <a class="local col2 ref" href="#12len" title='len' data-ref="12len">len</a>);</td></tr>
+<tr><th id="101">101</th><td>    <b>if</b> (<a class="local col9 ref" href="#9offset" title='offset' data-ref="9offset">offset</a> == <a class="macro" href="ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a> || <a class="local col9 ref" href="#9offset" title='offset' data-ref="9offset">offset</a> &gt; <a class="local col1 ref" href="#11max" title='max' data-ref="11max">max</a>) {</td></tr>
+<tr><th id="102">102</th><td>        <b>return</b> <a class="macro" href="ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>;</td></tr>
+<tr><th id="103">103</th><td>    }</td></tr>
+<tr><th id="104">104</th><td></td></tr>
+<tr><th id="105">105</th><td>    <a class="local col9 ref" href="#9offset" title='offset' data-ref="9offset">offset</a> *= <a class="local col0 ref" href="#10scale" title='scale' data-ref="10scale">scale</a>;</td></tr>
+<tr><th id="106">106</th><td></td></tr>
+<tr><th id="107">107</th><td>    <b>return</b> <a class="local col9 ref" href="#9offset" title='offset' data-ref="9offset">offset</a>;</td></tr>
+<tr><th id="108">108</th><td>}</td></tr>
+<tr><th id="109">109</th><td></td></tr>
+<tr><th id="110">110</th><td></td></tr>
+<tr><th id="111">111</th><td><a class="typedef" href="ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a></td></tr>
+<tr><th id="112">112</th><td><dfn class="decl def fn" id="ngx_parse_time" title='ngx_parse_time' data-ref="ngx_parse_time">ngx_parse_time</dfn>(<a class="typedef" href="ngx_string.h.html#ngx_str_t" title='ngx_str_t' data-type='struct ngx_str_t' data-ref="ngx_str_t">ngx_str_t</a> *<dfn class="local col3 decl" id="13line" title='line' data-type='ngx_str_t *' data-ref="13line">line</dfn>, <a class="typedef" href="ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a> <dfn class="local col4 decl" id="14is_sec" title='is_sec' data-type='ngx_uint_t' data-ref="14is_sec">is_sec</dfn>)</td></tr>
+<tr><th id="113">113</th><td>{</td></tr>
+<tr><th id="114">114</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a>      *<dfn class="local col5 decl" id="15p" title='p' data-type='u_char *' data-ref="15p">p</dfn>, *<dfn class="local col6 decl" id="16last" title='last' data-type='u_char *' data-ref="16last">last</dfn>;</td></tr>
+<tr><th id="115">115</th><td>    <a class="typedef" href="ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a>    <dfn class="local col7 decl" id="17value" title='value' data-type='ngx_int_t' data-ref="17value">value</dfn>, <dfn class="local col8 decl" id="18total" title='total' data-type='ngx_int_t' data-ref="18total">total</dfn>, <dfn class="local col9 decl" id="19scale" title='scale' data-type='ngx_int_t' data-ref="19scale">scale</dfn>;</td></tr>
+<tr><th id="116">116</th><td>    <a class="typedef" href="ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a>    <dfn class="local col0 decl" id="20max" title='max' data-type='ngx_int_t' data-ref="20max">max</dfn>, <dfn class="local col1 decl" id="21cutoff" title='cutoff' data-type='ngx_int_t' data-ref="21cutoff">cutoff</dfn>, <dfn class="local col2 decl" id="22cutlim" title='cutlim' data-type='ngx_int_t' data-ref="22cutlim">cutlim</dfn>;</td></tr>
+<tr><th id="117">117</th><td>    <a class="typedef" href="ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>   <dfn class="local col3 decl" id="23valid" title='valid' data-type='ngx_uint_t' data-ref="23valid">valid</dfn>;</td></tr>
+<tr><th id="118">118</th><td>    <b>enum</b> {</td></tr>
+<tr><th id="119">119</th><td>        <dfn class="local col4 enum" id="24st_start" title='st_start' data-type='0' data-ref="24st_start">st_start</dfn> = <var>0</var>,</td></tr>
+<tr><th id="120">120</th><td>        <dfn class="local col5 enum" id="25st_year" title='st_year' data-type='1' data-ref="25st_year">st_year</dfn>,</td></tr>
+<tr><th id="121">121</th><td>        <dfn class="local col6 enum" id="26st_month" title='st_month' data-type='2' data-ref="26st_month">st_month</dfn>,</td></tr>
+<tr><th id="122">122</th><td>        <dfn class="local col7 enum" id="27st_week" title='st_week' data-type='3' data-ref="27st_week">st_week</dfn>,</td></tr>
+<tr><th id="123">123</th><td>        <dfn class="local col8 enum" id="28st_day" title='st_day' data-type='4' data-ref="28st_day">st_day</dfn>,</td></tr>
+<tr><th id="124">124</th><td>        <dfn class="local col9 enum" id="29st_hour" title='st_hour' data-type='5' data-ref="29st_hour">st_hour</dfn>,</td></tr>
+<tr><th id="125">125</th><td>        <dfn class="local col0 enum" id="30st_min" title='st_min' data-type='6' data-ref="30st_min">st_min</dfn>,</td></tr>
+<tr><th id="126">126</th><td>        <dfn class="local col1 enum" id="31st_sec" title='st_sec' data-type='7' data-ref="31st_sec">st_sec</dfn>,</td></tr>
+<tr><th id="127">127</th><td>        <dfn class="local col2 enum" id="32st_msec" title='st_msec' data-type='8' data-ref="32st_msec">st_msec</dfn>,</td></tr>
+<tr><th id="128">128</th><td>        <dfn class="local col3 enum" id="33st_last" title='st_last' data-type='9' data-ref="33st_last">st_last</dfn></td></tr>
+<tr><th id="129">129</th><td>    } <dfn class="local col4 decl" id="34step" title='step' data-type='enum (anonymous enum at /vagrant/data/nginx-1.13.11/src/core/ngx_parse.c:118:5)' data-ref="34step">step</dfn>;</td></tr>
+<tr><th id="130">130</th><td></td></tr>
+<tr><th id="131">131</th><td>    <a class="local col3 ref" href="#23valid" title='valid' data-ref="23valid">valid</a> = <var>0</var>;</td></tr>
+<tr><th id="132">132</th><td>    <a class="local col7 ref" href="#17value" title='value' data-ref="17value">value</a> = <var>0</var>;</td></tr>
+<tr><th id="133">133</th><td>    <a class="local col8 ref" href="#18total" title='total' data-ref="18total">total</a> = <var>0</var>;</td></tr>
+<tr><th id="134">134</th><td>    <a class="local col1 ref" href="#21cutoff" title='cutoff' data-ref="21cutoff">cutoff</a> = <a class="macro" href="ngx_config.h.html#92" title="9223372036854775807" data-ref="_M/NGX_MAX_INT_T_VALUE">NGX_MAX_INT_T_VALUE</a> / <var>10</var>;</td></tr>
+<tr><th id="135">135</th><td>    <a class="local col2 ref" href="#22cutlim" title='cutlim' data-ref="22cutlim">cutlim</a> = <a class="macro" href="ngx_config.h.html#92" title="9223372036854775807" data-ref="_M/NGX_MAX_INT_T_VALUE">NGX_MAX_INT_T_VALUE</a> % <var>10</var>;</td></tr>
+<tr><th id="136">136</th><td>    <a class="local col4 ref" href="#34step" title='step' data-ref="34step">step</a> = <a class="local col4 ref" href="#14is_sec" title='is_sec' data-ref="14is_sec">is_sec</a> ? <a class="local col4 enum" href="#24st_start" title='st_start' data-ref="24st_start">st_start</a> : <a class="local col6 enum" href="#26st_month" title='st_month' data-ref="26st_month">st_month</a>;</td></tr>
+<tr><th id="137">137</th><td></td></tr>
+<tr><th id="138">138</th><td>    <a class="local col5 ref" href="#15p" title='p' data-ref="15p">p</a> = <a class="local col3 ref" href="#13line" title='line' data-ref="13line">line</a>-&gt;<a class="ref field" href="ngx_string.h.html#(anonymous)::data" title='(anonymous struct)::data' data-ref="(anonymous)::data">data</a>;</td></tr>
+<tr><th id="139">139</th><td>    <a class="local col6 ref" href="#16last" title='last' data-ref="16last">last</a> = <a class="local col5 ref" href="#15p" title='p' data-ref="15p">p</a> + <a class="local col3 ref" href="#13line" title='line' data-ref="13line">line</a>-&gt;<a class="ref field" href="ngx_string.h.html#(anonymous)::len" title='(anonymous struct)::len' data-ref="(anonymous)::len">len</a>;</td></tr>
+<tr><th id="140">140</th><td></td></tr>
+<tr><th id="141">141</th><td>    <b>while</b> (<a class="local col5 ref" href="#15p" title='p' data-ref="15p">p</a> &lt; <a class="local col6 ref" href="#16last" title='last' data-ref="16last">last</a>) {</td></tr>
+<tr><th id="142">142</th><td></td></tr>
+<tr><th id="143">143</th><td>        <b>if</b> (*<a class="local col5 ref" href="#15p" title='p' data-ref="15p">p</a> &gt;= <kbd>'0'</kbd> &amp;&amp; *<a class="local col5 ref" href="#15p" title='p' data-ref="15p">p</a> &lt;= <kbd>'9'</kbd>) {</td></tr>
+<tr><th id="144">144</th><td>            <b>if</b> (<a class="local col7 ref" href="#17value" title='value' data-ref="17value">value</a> &gt;= <a class="local col1 ref" href="#21cutoff" title='cutoff' data-ref="21cutoff">cutoff</a> &amp;&amp; (<a class="local col7 ref" href="#17value" title='value' data-ref="17value">value</a> &gt; <a class="local col1 ref" href="#21cutoff" title='cutoff' data-ref="21cutoff">cutoff</a> || *<a class="local col5 ref" href="#15p" title='p' data-ref="15p">p</a> - <kbd>'0'</kbd> &gt; <a class="local col2 ref" href="#22cutlim" title='cutlim' data-ref="22cutlim">cutlim</a>)) {</td></tr>
+<tr><th id="145">145</th><td>                <b>return</b> <a class="macro" href="ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>;</td></tr>
+<tr><th id="146">146</th><td>            }</td></tr>
+<tr><th id="147">147</th><td></td></tr>
+<tr><th id="148">148</th><td>            <a class="local col7 ref" href="#17value" title='value' data-ref="17value">value</a> = <a class="local col7 ref" href="#17value" title='value' data-ref="17value">value</a> * <var>10</var> + (*<a class="local col5 ref" href="#15p" title='p' data-ref="15p">p</a>++ - <kbd>'0'</kbd>);</td></tr>
+<tr><th id="149">149</th><td>            <a class="local col3 ref" href="#23valid" title='valid' data-ref="23valid">valid</a> = <var>1</var>;</td></tr>
+<tr><th id="150">150</th><td>            <b>continue</b>;</td></tr>
+<tr><th id="151">151</th><td>        }</td></tr>
+<tr><th id="152">152</th><td></td></tr>
+<tr><th id="153">153</th><td>        <b>switch</b> (*<a class="local col5 ref" href="#15p" title='p' data-ref="15p">p</a>++) {</td></tr>
+<tr><th id="154">154</th><td></td></tr>
+<tr><th id="155">155</th><td>        <b>case</b> <kbd>'y'</kbd>:</td></tr>
+<tr><th id="156">156</th><td>            <b>if</b> (<a class="local col4 ref" href="#34step" title='step' data-ref="34step">step</a> &gt; <a class="local col4 enum" href="#24st_start" title='st_start' data-ref="24st_start">st_start</a>) {</td></tr>
+<tr><th id="157">157</th><td>                <b>return</b> <a class="macro" href="ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>;</td></tr>
+<tr><th id="158">158</th><td>            }</td></tr>
+<tr><th id="159">159</th><td>            <a class="local col4 ref" href="#34step" title='step' data-ref="34step">step</a> = <a class="local col5 enum" href="#25st_year" title='st_year' data-ref="25st_year">st_year</a>;</td></tr>
+<tr><th id="160">160</th><td>            <a class="local col0 ref" href="#20max" title='max' data-ref="20max">max</a> = <a class="macro" href="ngx_config.h.html#92" title="9223372036854775807" data-ref="_M/NGX_MAX_INT_T_VALUE">NGX_MAX_INT_T_VALUE</a> / (<var>60</var> * <var>60</var> * <var>24</var> * <var>365</var>);</td></tr>
+<tr><th id="161">161</th><td>            <a class="local col9 ref" href="#19scale" title='scale' data-ref="19scale">scale</a> = <var>60</var> * <var>60</var> * <var>24</var> * <var>365</var>;</td></tr>
+<tr><th id="162">162</th><td>            <b>break</b>;</td></tr>
+<tr><th id="163">163</th><td></td></tr>
+<tr><th id="164">164</th><td>        <b>case</b> <kbd>'M'</kbd>:</td></tr>
+<tr><th id="165">165</th><td>            <b>if</b> (<a class="local col4 ref" href="#34step" title='step' data-ref="34step">step</a> &gt;= <a class="local col6 enum" href="#26st_month" title='st_month' data-ref="26st_month">st_month</a>) {</td></tr>
+<tr><th id="166">166</th><td>                <b>return</b> <a class="macro" href="ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>;</td></tr>
+<tr><th id="167">167</th><td>            }</td></tr>
+<tr><th id="168">168</th><td>            <a class="local col4 ref" href="#34step" title='step' data-ref="34step">step</a> = <a class="local col6 enum" href="#26st_month" title='st_month' data-ref="26st_month">st_month</a>;</td></tr>
+<tr><th id="169">169</th><td>            <a class="local col0 ref" href="#20max" title='max' data-ref="20max">max</a> = <a class="macro" href="ngx_config.h.html#92" title="9223372036854775807" data-ref="_M/NGX_MAX_INT_T_VALUE">NGX_MAX_INT_T_VALUE</a> / (<var>60</var> * <var>60</var> * <var>24</var> * <var>30</var>);</td></tr>
+<tr><th id="170">170</th><td>            <a class="local col9 ref" href="#19scale" title='scale' data-ref="19scale">scale</a> = <var>60</var> * <var>60</var> * <var>24</var> * <var>30</var>;</td></tr>
+<tr><th id="171">171</th><td>            <b>break</b>;</td></tr>
+<tr><th id="172">172</th><td></td></tr>
+<tr><th id="173">173</th><td>        <b>case</b> <kbd>'w'</kbd>:</td></tr>
+<tr><th id="174">174</th><td>            <b>if</b> (<a class="local col4 ref" href="#34step" title='step' data-ref="34step">step</a> &gt;= <a class="local col7 enum" href="#27st_week" title='st_week' data-ref="27st_week">st_week</a>) {</td></tr>
+<tr><th id="175">175</th><td>                <b>return</b> <a class="macro" href="ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>;</td></tr>
+<tr><th id="176">176</th><td>            }</td></tr>
+<tr><th id="177">177</th><td>            <a class="local col4 ref" href="#34step" title='step' data-ref="34step">step</a> = <a class="local col7 enum" href="#27st_week" title='st_week' data-ref="27st_week">st_week</a>;</td></tr>
+<tr><th id="178">178</th><td>            <a class="local col0 ref" href="#20max" title='max' data-ref="20max">max</a> = <a class="macro" href="ngx_config.h.html#92" title="9223372036854775807" data-ref="_M/NGX_MAX_INT_T_VALUE">NGX_MAX_INT_T_VALUE</a> / (<var>60</var> * <var>60</var> * <var>24</var> * <var>7</var>);</td></tr>
+<tr><th id="179">179</th><td>            <a class="local col9 ref" href="#19scale" title='scale' data-ref="19scale">scale</a> = <var>60</var> * <var>60</var> * <var>24</var> * <var>7</var>;</td></tr>
+<tr><th id="180">180</th><td>            <b>break</b>;</td></tr>
+<tr><th id="181">181</th><td></td></tr>
+<tr><th id="182">182</th><td>        <b>case</b> <kbd>'d'</kbd>:</td></tr>
+<tr><th id="183">183</th><td>            <b>if</b> (<a class="local col4 ref" href="#34step" title='step' data-ref="34step">step</a> &gt;= <a class="local col8 enum" href="#28st_day" title='st_day' data-ref="28st_day">st_day</a>) {</td></tr>
+<tr><th id="184">184</th><td>                <b>return</b> <a class="macro" href="ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>;</td></tr>
+<tr><th id="185">185</th><td>            }</td></tr>
+<tr><th id="186">186</th><td>            <a class="local col4 ref" href="#34step" title='step' data-ref="34step">step</a> = <a class="local col8 enum" href="#28st_day" title='st_day' data-ref="28st_day">st_day</a>;</td></tr>
+<tr><th id="187">187</th><td>            <a class="local col0 ref" href="#20max" title='max' data-ref="20max">max</a> = <a class="macro" href="ngx_config.h.html#92" title="9223372036854775807" data-ref="_M/NGX_MAX_INT_T_VALUE">NGX_MAX_INT_T_VALUE</a> / (<var>60</var> * <var>60</var> * <var>24</var>);</td></tr>
+<tr><th id="188">188</th><td>            <a class="local col9 ref" href="#19scale" title='scale' data-ref="19scale">scale</a> = <var>60</var> * <var>60</var> * <var>24</var>;</td></tr>
+<tr><th id="189">189</th><td>            <b>break</b>;</td></tr>
+<tr><th id="190">190</th><td></td></tr>
+<tr><th id="191">191</th><td>        <b>case</b> <kbd>'h'</kbd>:</td></tr>
+<tr><th id="192">192</th><td>            <b>if</b> (<a class="local col4 ref" href="#34step" title='step' data-ref="34step">step</a> &gt;= <a class="local col9 enum" href="#29st_hour" title='st_hour' data-ref="29st_hour">st_hour</a>) {</td></tr>
+<tr><th id="193">193</th><td>                <b>return</b> <a class="macro" href="ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>;</td></tr>
+<tr><th id="194">194</th><td>            }</td></tr>
+<tr><th id="195">195</th><td>            <a class="local col4 ref" href="#34step" title='step' data-ref="34step">step</a> = <a class="local col9 enum" href="#29st_hour" title='st_hour' data-ref="29st_hour">st_hour</a>;</td></tr>
+<tr><th id="196">196</th><td>            <a class="local col0 ref" href="#20max" title='max' data-ref="20max">max</a> = <a class="macro" href="ngx_config.h.html#92" title="9223372036854775807" data-ref="_M/NGX_MAX_INT_T_VALUE">NGX_MAX_INT_T_VALUE</a> / (<var>60</var> * <var>60</var>);</td></tr>
+<tr><th id="197">197</th><td>            <a class="local col9 ref" href="#19scale" title='scale' data-ref="19scale">scale</a> = <var>60</var> * <var>60</var>;</td></tr>
+<tr><th id="198">198</th><td>            <b>break</b>;</td></tr>
+<tr><th id="199">199</th><td></td></tr>
+<tr><th id="200">200</th><td>        <b>case</b> <kbd>'m'</kbd>:</td></tr>
+<tr><th id="201">201</th><td>            <b>if</b> (<a class="local col5 ref" href="#15p" title='p' data-ref="15p">p</a> &lt; <a class="local col6 ref" href="#16last" title='last' data-ref="16last">last</a> &amp;&amp; *<a class="local col5 ref" href="#15p" title='p' data-ref="15p">p</a> == <kbd>'s'</kbd>) {</td></tr>
+<tr><th id="202">202</th><td>                <b>if</b> (<a class="local col4 ref" href="#14is_sec" title='is_sec' data-ref="14is_sec">is_sec</a> || <a class="local col4 ref" href="#34step" title='step' data-ref="34step">step</a> &gt;= <a class="local col2 enum" href="#32st_msec" title='st_msec' data-ref="32st_msec">st_msec</a>) {</td></tr>
+<tr><th id="203">203</th><td>                    <b>return</b> <a class="macro" href="ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>;</td></tr>
+<tr><th id="204">204</th><td>                }</td></tr>
+<tr><th id="205">205</th><td>                <a class="local col5 ref" href="#15p" title='p' data-ref="15p">p</a>++;</td></tr>
+<tr><th id="206">206</th><td>                <a class="local col4 ref" href="#34step" title='step' data-ref="34step">step</a> = <a class="local col2 enum" href="#32st_msec" title='st_msec' data-ref="32st_msec">st_msec</a>;</td></tr>
+<tr><th id="207">207</th><td>                <a class="local col0 ref" href="#20max" title='max' data-ref="20max">max</a> = <a class="macro" href="ngx_config.h.html#92" title="9223372036854775807" data-ref="_M/NGX_MAX_INT_T_VALUE">NGX_MAX_INT_T_VALUE</a>;</td></tr>
+<tr><th id="208">208</th><td>                <a class="local col9 ref" href="#19scale" title='scale' data-ref="19scale">scale</a> = <var>1</var>;</td></tr>
+<tr><th id="209">209</th><td>                <b>break</b>;</td></tr>
+<tr><th id="210">210</th><td>            }</td></tr>
+<tr><th id="211">211</th><td></td></tr>
+<tr><th id="212">212</th><td>            <b>if</b> (<a class="local col4 ref" href="#34step" title='step' data-ref="34step">step</a> &gt;= <a class="local col0 enum" href="#30st_min" title='st_min' data-ref="30st_min">st_min</a>) {</td></tr>
+<tr><th id="213">213</th><td>                <b>return</b> <a class="macro" href="ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>;</td></tr>
+<tr><th id="214">214</th><td>            }</td></tr>
+<tr><th id="215">215</th><td>            <a class="local col4 ref" href="#34step" title='step' data-ref="34step">step</a> = <a class="local col0 enum" href="#30st_min" title='st_min' data-ref="30st_min">st_min</a>;</td></tr>
+<tr><th id="216">216</th><td>            <a class="local col0 ref" href="#20max" title='max' data-ref="20max">max</a> = <a class="macro" href="ngx_config.h.html#92" title="9223372036854775807" data-ref="_M/NGX_MAX_INT_T_VALUE">NGX_MAX_INT_T_VALUE</a> / <var>60</var>;</td></tr>
+<tr><th id="217">217</th><td>            <a class="local col9 ref" href="#19scale" title='scale' data-ref="19scale">scale</a> = <var>60</var>;</td></tr>
+<tr><th id="218">218</th><td>            <b>break</b>;</td></tr>
+<tr><th id="219">219</th><td></td></tr>
+<tr><th id="220">220</th><td>        <b>case</b> <kbd>'s'</kbd>:</td></tr>
+<tr><th id="221">221</th><td>            <b>if</b> (<a class="local col4 ref" href="#34step" title='step' data-ref="34step">step</a> &gt;= <a class="local col1 enum" href="#31st_sec" title='st_sec' data-ref="31st_sec">st_sec</a>) {</td></tr>
+<tr><th id="222">222</th><td>                <b>return</b> <a class="macro" href="ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>;</td></tr>
+<tr><th id="223">223</th><td>            }</td></tr>
+<tr><th id="224">224</th><td>            <a class="local col4 ref" href="#34step" title='step' data-ref="34step">step</a> = <a class="local col1 enum" href="#31st_sec" title='st_sec' data-ref="31st_sec">st_sec</a>;</td></tr>
+<tr><th id="225">225</th><td>            <a class="local col0 ref" href="#20max" title='max' data-ref="20max">max</a> = <a class="macro" href="ngx_config.h.html#92" title="9223372036854775807" data-ref="_M/NGX_MAX_INT_T_VALUE">NGX_MAX_INT_T_VALUE</a>;</td></tr>
+<tr><th id="226">226</th><td>            <a class="local col9 ref" href="#19scale" title='scale' data-ref="19scale">scale</a> = <var>1</var>;</td></tr>
+<tr><th id="227">227</th><td>            <b>break</b>;</td></tr>
+<tr><th id="228">228</th><td></td></tr>
+<tr><th id="229">229</th><td>        <b>case</b> <kbd>' '</kbd>:</td></tr>
+<tr><th id="230">230</th><td>            <b>if</b> (<a class="local col4 ref" href="#34step" title='step' data-ref="34step">step</a> &gt;= <a class="local col1 enum" href="#31st_sec" title='st_sec' data-ref="31st_sec">st_sec</a>) {</td></tr>
+<tr><th id="231">231</th><td>                <b>return</b> <a class="macro" href="ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>;</td></tr>
+<tr><th id="232">232</th><td>            }</td></tr>
+<tr><th id="233">233</th><td>            <a class="local col4 ref" href="#34step" title='step' data-ref="34step">step</a> = <a class="local col3 enum" href="#33st_last" title='st_last' data-ref="33st_last">st_last</a>;</td></tr>
+<tr><th id="234">234</th><td>            <a class="local col0 ref" href="#20max" title='max' data-ref="20max">max</a> = <a class="macro" href="ngx_config.h.html#92" title="9223372036854775807" data-ref="_M/NGX_MAX_INT_T_VALUE">NGX_MAX_INT_T_VALUE</a>;</td></tr>
+<tr><th id="235">235</th><td>            <a class="local col9 ref" href="#19scale" title='scale' data-ref="19scale">scale</a> = <var>1</var>;</td></tr>
+<tr><th id="236">236</th><td>            <b>break</b>;</td></tr>
+<tr><th id="237">237</th><td></td></tr>
+<tr><th id="238">238</th><td>        <b>default</b>:</td></tr>
+<tr><th id="239">239</th><td>            <b>return</b> <a class="macro" href="ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>;</td></tr>
+<tr><th id="240">240</th><td>        }</td></tr>
+<tr><th id="241">241</th><td></td></tr>
+<tr><th id="242">242</th><td>        <b>if</b> (<a class="local col4 ref" href="#34step" title='step' data-ref="34step">step</a> != <a class="local col2 enum" href="#32st_msec" title='st_msec' data-ref="32st_msec">st_msec</a> &amp;&amp; !<a class="local col4 ref" href="#14is_sec" title='is_sec' data-ref="14is_sec">is_sec</a>) {</td></tr>
+<tr><th id="243">243</th><td>            <a class="local col9 ref" href="#19scale" title='scale' data-ref="19scale">scale</a> *= <var>1000</var>;</td></tr>
+<tr><th id="244">244</th><td>            <a class="local col0 ref" href="#20max" title='max' data-ref="20max">max</a> /= <var>1000</var>;</td></tr>
+<tr><th id="245">245</th><td>        }</td></tr>
+<tr><th id="246">246</th><td></td></tr>
+<tr><th id="247">247</th><td>        <b>if</b> (<a class="local col7 ref" href="#17value" title='value' data-ref="17value">value</a> &gt; <a class="local col0 ref" href="#20max" title='max' data-ref="20max">max</a>) {</td></tr>
+<tr><th id="248">248</th><td>            <b>return</b> <a class="macro" href="ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>;</td></tr>
+<tr><th id="249">249</th><td>        }</td></tr>
+<tr><th id="250">250</th><td></td></tr>
+<tr><th id="251">251</th><td>        <a class="local col7 ref" href="#17value" title='value' data-ref="17value">value</a> *= <a class="local col9 ref" href="#19scale" title='scale' data-ref="19scale">scale</a>;</td></tr>
+<tr><th id="252">252</th><td></td></tr>
+<tr><th id="253">253</th><td>        <b>if</b> (<a class="local col8 ref" href="#18total" title='total' data-ref="18total">total</a> &gt; <a class="macro" href="ngx_config.h.html#92" title="9223372036854775807" data-ref="_M/NGX_MAX_INT_T_VALUE">NGX_MAX_INT_T_VALUE</a> - <a class="local col7 ref" href="#17value" title='value' data-ref="17value">value</a>) {</td></tr>
+<tr><th id="254">254</th><td>            <b>return</b> <a class="macro" href="ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>;</td></tr>
+<tr><th id="255">255</th><td>        }</td></tr>
+<tr><th id="256">256</th><td></td></tr>
+<tr><th id="257">257</th><td>        <a class="local col8 ref" href="#18total" title='total' data-ref="18total">total</a> += <a class="local col7 ref" href="#17value" title='value' data-ref="17value">value</a>;</td></tr>
+<tr><th id="258">258</th><td></td></tr>
+<tr><th id="259">259</th><td>        <a class="local col7 ref" href="#17value" title='value' data-ref="17value">value</a> = <var>0</var>;</td></tr>
+<tr><th id="260">260</th><td></td></tr>
+<tr><th id="261">261</th><td>        <b>while</b> (<a class="local col5 ref" href="#15p" title='p' data-ref="15p">p</a> &lt; <a class="local col6 ref" href="#16last" title='last' data-ref="16last">last</a> &amp;&amp; *<a class="local col5 ref" href="#15p" title='p' data-ref="15p">p</a> == <kbd>' '</kbd>) {</td></tr>
+<tr><th id="262">262</th><td>            <a class="local col5 ref" href="#15p" title='p' data-ref="15p">p</a>++;</td></tr>
+<tr><th id="263">263</th><td>        }</td></tr>
+<tr><th id="264">264</th><td>    }</td></tr>
+<tr><th id="265">265</th><td></td></tr>
+<tr><th id="266">266</th><td>    <b>if</b> (!<a class="local col3 ref" href="#23valid" title='valid' data-ref="23valid">valid</a>) {</td></tr>
+<tr><th id="267">267</th><td>        <b>return</b> <a class="macro" href="ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>;</td></tr>
+<tr><th id="268">268</th><td>    }</td></tr>
+<tr><th id="269">269</th><td></td></tr>
+<tr><th id="270">270</th><td>    <b>if</b> (!<a class="local col4 ref" href="#14is_sec" title='is_sec' data-ref="14is_sec">is_sec</a>) {</td></tr>
+<tr><th id="271">271</th><td>        <b>if</b> (<a class="local col7 ref" href="#17value" title='value' data-ref="17value">value</a> &gt; <a class="macro" href="ngx_config.h.html#92" title="9223372036854775807" data-ref="_M/NGX_MAX_INT_T_VALUE">NGX_MAX_INT_T_VALUE</a> / <var>1000</var>) {</td></tr>
+<tr><th id="272">272</th><td>            <b>return</b> <a class="macro" href="ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>;</td></tr>
+<tr><th id="273">273</th><td>        }</td></tr>
+<tr><th id="274">274</th><td></td></tr>
+<tr><th id="275">275</th><td>        <a class="local col7 ref" href="#17value" title='value' data-ref="17value">value</a> *= <var>1000</var>;</td></tr>
+<tr><th id="276">276</th><td>    }</td></tr>
+<tr><th id="277">277</th><td></td></tr>
+<tr><th id="278">278</th><td>    <b>if</b> (<a class="local col8 ref" href="#18total" title='total' data-ref="18total">total</a> &gt; <a class="macro" href="ngx_config.h.html#92" title="9223372036854775807" data-ref="_M/NGX_MAX_INT_T_VALUE">NGX_MAX_INT_T_VALUE</a> - <a class="local col7 ref" href="#17value" title='value' data-ref="17value">value</a>) {</td></tr>
+<tr><th id="279">279</th><td>        <b>return</b> <a class="macro" href="ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>;</td></tr>
+<tr><th id="280">280</th><td>    }</td></tr>
+<tr><th id="281">281</th><td></td></tr>
+<tr><th id="282">282</th><td>    <b>return</b> <a class="local col8 ref" href="#18total" title='total' data-ref="18total">total</a> + <a class="local col7 ref" href="#17value" title='value' data-ref="17value">value</a>;</td></tr>
+<tr><th id="283">283</th><td>}</td></tr>
+<tr><th id="284">284</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated on <em>2018-Apr-06</em> from project nginx<br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

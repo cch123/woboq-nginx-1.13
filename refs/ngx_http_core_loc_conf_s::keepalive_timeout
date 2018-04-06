@@ -1,0 +1,14 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='359' type='ngx_msec_t'/>
+<offset>2240</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='359'>/* keepalive_timeout */</doc>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1249' u='r' c='ngx_http_update_location_config'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3393' u='w' c='ngx_http_core_create_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3624' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3624' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3625' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3625' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4776' u='r' c='ngx_http_core_keepalive'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4782' u='w' c='ngx_http_core_keepalive'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4784' u='r' c='ngx_http_core_keepalive'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2616' u='r' c='ngx_http_finalize_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3103' u='r' c='ngx_http_set_keepalive'/>

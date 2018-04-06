@@ -1,0 +1,15 @@
+<def f='nginx/src/core/ngx_list.h' l='36' ll='52' type='ngx_int_t ngx_list_init(ngx_list_t * list, ngx_pool_t * pool, ngx_uint_t n, size_t size)'/>
+<use f='nginx/src/core/ngx_cycle.c' l='148' u='c' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='167' u='c' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_list.c' l='22' u='c' c='ngx_list_create'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2268' u='c' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2275' u='c' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_request.c' l='561' u='c' c='ngx_http_create_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='569' u='c' c='ngx_http_create_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1041' u='c' c='ngx_http_process_request_line'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1049' u='c' c='ngx_http_upstream_cache_send'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1056' u='c' c='ngx_http_upstream_cache_send'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1894' u='c' c='ngx_http_upstream_reinit'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1901' u='c' c='ngx_http_upstream_reinit'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2271' u='c' c='ngx_http_upstream_process_header'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2280' u='c' c='ngx_http_upstream_process_header'/>

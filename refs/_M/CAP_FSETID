@@ -1,0 +1,7 @@
+<dec f='include/linux/capability.h' l='123'/>
+<doc f='include/linux/capability.h' l='116'>/* Overrides the following restrictions that the effective user ID
+   shall match the file owner ID when setting the S_ISUID and S_ISGID
+   bits on that file; that the effective group ID (or one of the
+   supplementary group IDs) shall match the file owner ID when setting
+   the S_ISGID bit on that file; that the S_ISUID and S_ISGID bits are
+   cleared on successful return from chown(2) (not implemented). */</doc>

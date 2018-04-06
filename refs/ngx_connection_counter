@@ -1,0 +1,9 @@
+<dec f='nginx/src/event/ngx_event.h' l='467' type='ngx_atomic_t *'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4419' u='r' c='ngx_udp_connect'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4505' u='r' c='ngx_tcp_connect'/>
+<def f='nginx/src/event/ngx_event.c' l='48' type='ngx_atomic_t *'/>
+<use f='nginx/src/event/ngx_event.c' l='522' u='w' c='ngx_event_module_init'/>
+<use f='nginx/src/event/ngx_event.c' l='524' u='r' c='ngx_event_module_init'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='262' u='r' c='ngx_event_accept'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='589' u='r' c='ngx_event_recvmsg'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='182' u='r' c='ngx_event_connect_peer'/>

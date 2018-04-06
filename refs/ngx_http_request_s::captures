@@ -1,0 +1,13 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='431' type='int *'/>
+<offset>9088</offset>
+<use f='nginx/src/http/ngx_http_script.c' l='1025' u='r' c='ngx_http_script_regex_start_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1025' u='r' c='ngx_http_script_regex_start_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1223' u='r' c='ngx_http_script_copy_capture_len_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1263' u='r' c='ngx_http_script_copy_capture_code'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2507' u='r' c='ngx_http_regex_exec'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2508' u='w' c='ngx_http_regex_exec'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2509' u='r' c='ngx_http_regex_exec'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2518' u='r' c='ngx_http_regex_exec'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2537' u='r' c='ngx_http_regex_exec'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2537' u='r' c='ngx_http_regex_exec'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2541' u='r' c='ngx_http_regex_exec'/>

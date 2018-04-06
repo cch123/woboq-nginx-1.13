@@ -1,0 +1,4 @@
+<dec f='include/x86_64-linux-gnu/bits/statfs.h' l='27' type='__fsword_t'/>
+<offset>64</offset>
+<use f='nginx/src/os/unix/ngx_files.c' l='874' u='r' c='ngx_fs_bsize'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='878' u='r' c='ngx_fs_bsize'/>

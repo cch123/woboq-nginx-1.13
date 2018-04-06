@@ -1,0 +1,9 @@
+<dec f='include/x86_64-linux-gnu/sys/socket.h' l='113' type='int socket(int __domain, int __type, int __protocol)'/>
+<doc f='include/x86_64-linux-gnu/sys/socket.h' l='110'>/* Create a new socket of type TYPE in domain DOMAIN, using
+   protocol PROTOCOL.  If PROTOCOL is zero, one is chosen automatically.
+   Returns a file descriptor for the new socket, or -1 for errors.  */</doc>
+<use f='nginx/src/core/ngx_connection.c' l='453' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4383' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4469' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_syslog.c' l='321' macro='1' u='c'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='41' macro='1' u='c'/>

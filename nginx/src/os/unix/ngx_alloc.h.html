@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ngx_alloc.h source code [nginx/src/os/unix/ngx_alloc.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../../../../data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../../../data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../../../data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../../data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'nginx/src/os/unix/ngx_alloc.h'; var root_path = '../../../..'; var data_path = '../../../../../data';</script>
+<script src='../../../../../data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../../..'>nginx</a>/<a href='../..'>src</a>/<a href='..'>os</a>/<a href='./'>unix</a>/<a href='ngx_alloc.h.html'>ngx_alloc.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td></td></tr>
+<tr><th id="2">2</th><td><i>/*</i></td></tr>
+<tr><th id="3">3</th><td><i> * Copyright (C) Igor Sysoev</i></td></tr>
+<tr><th id="4">4</th><td><i> * Copyright (C) Nginx, Inc.</i></td></tr>
+<tr><th id="5">5</th><td><i> */</i></td></tr>
+<tr><th id="6">6</th><td></td></tr>
+<tr><th id="7">7</th><td></td></tr>
+<tr><th id="8">8</th><td><u>#<span data-ppcond="8">ifndef</span> <span class="macro" data-ref="_M/_NGX_ALLOC_H_INCLUDED_">_NGX_ALLOC_H_INCLUDED_</span></u></td></tr>
+<tr><th id="9">9</th><td><u>#define <dfn class="macro" id="_M/_NGX_ALLOC_H_INCLUDED_" data-ref="_M/_NGX_ALLOC_H_INCLUDED_">_NGX_ALLOC_H_INCLUDED_</dfn></u></td></tr>
+<tr><th id="10">10</th><td></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td><u>#include <a href="../../core/ngx_config.h.html">&lt;ngx_config.h&gt;</a></u></td></tr>
+<tr><th id="13">13</th><td><u>#include <a href="../../core/ngx_core.h.html">&lt;ngx_core.h&gt;</a></u></td></tr>
+<tr><th id="14">14</th><td></td></tr>
+<tr><th id="15">15</th><td></td></tr>
+<tr><th id="16">16</th><td><em>void</em> *<dfn class="decl fn" id="ngx_alloc" title='ngx_alloc' data-ref="ngx_alloc">ngx_alloc</dfn>(<span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span> <dfn class="local col5 decl" id="2365size" title='size' data-type='size_t' data-ref="2365size">size</dfn>, <a class="typedef" href="../../core/ngx_core.h.html#ngx_log_t" title='ngx_log_t' data-type='struct ngx_log_s' data-ref="ngx_log_t">ngx_log_t</a> *<dfn class="local col6 decl" id="2366log" title='log' data-type='ngx_log_t *' data-ref="2366log">log</dfn>);</td></tr>
+<tr><th id="17">17</th><td><em>void</em> *<dfn class="decl fn" id="ngx_calloc" title='ngx_calloc' data-ref="ngx_calloc">ngx_calloc</dfn>(<span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span> <dfn class="local col7 decl" id="2367size" title='size' data-type='size_t' data-ref="2367size">size</dfn>, <a class="typedef" href="../../core/ngx_core.h.html#ngx_log_t" title='ngx_log_t' data-type='struct ngx_log_s' data-ref="ngx_log_t">ngx_log_t</a> *<dfn class="local col8 decl" id="2368log" title='log' data-type='ngx_log_t *' data-ref="2368log">log</dfn>);</td></tr>
+<tr><th id="18">18</th><td></td></tr>
+<tr><th id="19">19</th><td><u>#define <dfn class="macro" id="_M/ngx_free" data-ref="_M/ngx_free">ngx_free</dfn>          free</u></td></tr>
+<tr><th id="20">20</th><td></td></tr>
+<tr><th id="21">21</th><td></td></tr>
+<tr><th id="22">22</th><td><i>/*</i></td></tr>
+<tr><th id="23">23</th><td><i> * Linux has memalign() or posix_memalign()</i></td></tr>
+<tr><th id="24">24</th><td><i> * Solaris has memalign()</i></td></tr>
+<tr><th id="25">25</th><td><i> * FreeBSD 7.0 has posix_memalign(), besides, early version's malloc()</i></td></tr>
+<tr><th id="26">26</th><td><i> * aligns allocations bigger than page size at the page boundary</i></td></tr>
+<tr><th id="27">27</th><td><i> */</i></td></tr>
+<tr><th id="28">28</th><td></td></tr>
+<tr><th id="29">29</th><td><u>#<span data-ppcond="29">if</span> (<a class="macro" href="../../../objs/ngx_auto_config.h.html#282" title="1" data-ref="_M/NGX_HAVE_POSIX_MEMALIGN">NGX_HAVE_POSIX_MEMALIGN</a> || <a class="macro" href="../../../objs/ngx_auto_config.h.html#287" title="1" data-ref="_M/NGX_HAVE_MEMALIGN">NGX_HAVE_MEMALIGN</a>)</u></td></tr>
+<tr><th id="30">30</th><td></td></tr>
+<tr><th id="31">31</th><td><em>void</em> *<dfn class="decl fn" id="ngx_memalign" title='ngx_memalign' data-ref="ngx_memalign">ngx_memalign</dfn>(<span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span> <dfn class="local col9 decl" id="2369alignment" title='alignment' data-type='size_t' data-ref="2369alignment">alignment</dfn>, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span> <dfn class="local col0 decl" id="2370size" title='size' data-type='size_t' data-ref="2370size">size</dfn>, <a class="typedef" href="../../core/ngx_core.h.html#ngx_log_t" title='ngx_log_t' data-type='struct ngx_log_s' data-ref="ngx_log_t">ngx_log_t</a> *<dfn class="local col1 decl" id="2371log" title='log' data-type='ngx_log_t *' data-ref="2371log">log</dfn>);</td></tr>
+<tr><th id="32">32</th><td></td></tr>
+<tr><th id="33">33</th><td><u>#<span data-ppcond="29">else</span></u></td></tr>
+<tr><th id="34">34</th><td></td></tr>
+<tr><th id="35">35</th><td><u>#define ngx_memalign(alignment, size, log)  ngx_alloc(size, log)</u></td></tr>
+<tr><th id="36">36</th><td></td></tr>
+<tr><th id="37">37</th><td><u>#<span data-ppcond="29">endif</span></u></td></tr>
+<tr><th id="38">38</th><td></td></tr>
+<tr><th id="39">39</th><td></td></tr>
+<tr><th id="40">40</th><td><b>extern</b> <a class="typedef" href="../../core/ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>  <dfn class="decl" id="ngx_pagesize" title='ngx_pagesize' data-ref="ngx_pagesize">ngx_pagesize</dfn>;</td></tr>
+<tr><th id="41">41</th><td><b>extern</b> <a class="typedef" href="../../core/ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>  <dfn class="decl" id="ngx_pagesize_shift" title='ngx_pagesize_shift' data-ref="ngx_pagesize_shift">ngx_pagesize_shift</dfn>;</td></tr>
+<tr><th id="42">42</th><td><b>extern</b> <a class="typedef" href="../../core/ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>  <dfn class="decl" id="ngx_cacheline_size" title='ngx_cacheline_size' data-ref="ngx_cacheline_size">ngx_cacheline_size</dfn>;</td></tr>
+<tr><th id="43">43</th><td></td></tr>
+<tr><th id="44">44</th><td></td></tr>
+<tr><th id="45">45</th><td><u>#<span data-ppcond="8">endif</span> /* _NGX_ALLOC_H_INCLUDED_ */</u></td></tr>
+<tr><th id="46">46</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../../../objs/ngx_modules.c.html'>nginx/objs/ngx_modules.c</a><br/>Generated on <em>2018-Apr-06</em> from project nginx<br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

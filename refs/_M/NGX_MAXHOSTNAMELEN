@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_config.h' l='124'/>
+<use f='nginx/src/core/ngx_cycle.c' l='55' u='c'/>
+<use f='nginx/src/core/ngx_cycle.c' l='196' u='c'/>
+<use f='nginx/src/core/ngx_cycle.c' l='204' u='c'/>

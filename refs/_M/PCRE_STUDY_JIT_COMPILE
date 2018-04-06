@@ -1,0 +1,5 @@
+<dec f='include/pcre.h' l='306'/>
+<doc f='include/pcre.h' l='303'>/* Request types for pcre_study(). Do not re-arrange, in order to remain
+compatible. */</doc>
+<use f='nginx/src/core/ngx_regex.c' l='305' u='c'/>
+<use f='nginx/src/core/ngx_regex.c' l='350' u='c'/>

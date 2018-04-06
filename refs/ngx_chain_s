@@ -1,0 +1,4 @@
+<def f='nginx/src/core/ngx_buf.h' l='59' ll='62'/>
+<size>16</size>
+<mbr r='ngx_chain_s::buf' o='0' t='ngx_buf_t *'/>
+<mbr r='ngx_chain_s::next' o='64' t='ngx_chain_t *'/>

@@ -1,0 +1,6 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='143' type='ngx_uint_t'/>
+<offset>64</offset>
+<use f='nginx/src/http/ngx_http.c' l='461' u='w' c='ngx_http_init_phase_handlers'/>
+<use f='nginx/src/http/ngx_http.c' l='490' u='r' c='ngx_http_init_phase_handlers'/>
+<use f='nginx/src/http/ngx_http.c' l='491' u='w' c='ngx_http_init_phase_handlers'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='830' u='r' c='ngx_http_handler'/>

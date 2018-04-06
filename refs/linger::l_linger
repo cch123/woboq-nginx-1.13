@@ -1,0 +1,4 @@
+<dec f='include/x86_64-linux-gnu/bits/socket.h' l='386' type='int'/>
+<offset>32</offset>
+<doc f='include/x86_64-linux-gnu/bits/socket.h' l='386'>/* Time to linger.  */</doc>
+<use f='nginx/src/http/ngx_http_request.c' l='3522' u='w' c='ngx_http_free_request'/>

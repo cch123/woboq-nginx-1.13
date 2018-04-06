@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ngx_http_empty_gif_module.c source code [nginx/src/http/modules/ngx_http_empty_gif_module.c] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../../../../data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../../../data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../../../data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../../data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'nginx/src/http/modules/ngx_http_empty_gif_module.c'; var root_path = '../../../..'; var data_path = '../../../../../data';</script>
+<script src='../../../../../data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../../..'>nginx</a>/<a href='../..'>src</a>/<a href='..'>http</a>/<a href='./'>modules</a>/<a href='ngx_http_empty_gif_module.c.html'>ngx_http_empty_gif_module.c</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td></td></tr>
+<tr><th id="2">2</th><td><i>/*</i></td></tr>
+<tr><th id="3">3</th><td><i> * Copyright (C) Igor Sysoev</i></td></tr>
+<tr><th id="4">4</th><td><i> * Copyright (C) Nginx, Inc.</i></td></tr>
+<tr><th id="5">5</th><td><i> */</i></td></tr>
+<tr><th id="6">6</th><td></td></tr>
+<tr><th id="7">7</th><td><u>#include <a href="../../core/ngx_config.h.html">&lt;ngx_config.h&gt;</a></u></td></tr>
+<tr><th id="8">8</th><td><u>#include <a href="../../core/ngx_core.h.html">&lt;ngx_core.h&gt;</a></u></td></tr>
+<tr><th id="9">9</th><td><u>#include <a href="../ngx_http.h.html">&lt;ngx_http.h&gt;</a></u></td></tr>
+<tr><th id="10">10</th><td></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td><em>static</em> <em>char</em> *<a class="tu decl fn" href="#ngx_http_empty_gif" title='ngx_http_empty_gif' data-type='char * ngx_http_empty_gif(ngx_conf_t * cf, ngx_command_t * cmd, void * conf)' data-ref="ngx_http_empty_gif">ngx_http_empty_gif</a>(<a class="typedef" href="../../core/ngx_core.h.html#ngx_conf_t" title='ngx_conf_t' data-type='struct ngx_conf_s' data-ref="ngx_conf_t">ngx_conf_t</a> *<dfn class="local col1 decl" id="1cf" title='cf' data-type='ngx_conf_t *' data-ref="1cf">cf</dfn>, <a class="typedef" href="../../core/ngx_core.h.html#ngx_command_t" title='ngx_command_t' data-type='struct ngx_command_s' data-ref="ngx_command_t">ngx_command_t</a> *<dfn class="local col2 decl" id="2cmd" title='cmd' data-type='ngx_command_t *' data-ref="2cmd">cmd</dfn>,</td></tr>
+<tr><th id="13">13</th><td>    <em>void</em> *<dfn class="local col3 decl" id="3conf" title='conf' data-type='void *' data-ref="3conf">conf</dfn>);</td></tr>
+<tr><th id="14">14</th><td></td></tr>
+<tr><th id="15">15</th><td><em>static</em> <a class="typedef" href="../../core/ngx_core.h.html#ngx_command_t" title='ngx_command_t' data-type='struct ngx_command_s' data-ref="ngx_command_t">ngx_command_t</a>  <dfn class="tu decl def" id="ngx_http_empty_gif_commands" title='ngx_http_empty_gif_commands' data-type='ngx_command_t [2]' data-ref="ngx_http_empty_gif_commands">ngx_http_empty_gif_commands</dfn>[] = {</td></tr>
+<tr><th id="16">16</th><td></td></tr>
+<tr><th id="17">17</th><td>    { <a class="macro" href="../../core/ngx_string.h.html#40" title="{ sizeof(&quot;empty_gif&quot;) - 1, (u_char *) &quot;empty_gif&quot; }" data-ref="_M/ngx_string">ngx_string</a>(<q>"empty_gif"</q>),</td></tr>
+<tr><th id="18">18</th><td>      <a class="macro" href="../ngx_http_config.h.html#43" title="0x08000000" data-ref="_M/NGX_HTTP_LOC_CONF">NGX_HTTP_LOC_CONF</a>|<a class="macro" href="../../core/ngx_conf_file.h.html#22" title="0x00000001" data-ref="_M/NGX_CONF_NOARGS">NGX_CONF_NOARGS</a>,</td></tr>
+<tr><th id="19">19</th><td>      <a class="tu ref fn" href="#ngx_http_empty_gif" title='ngx_http_empty_gif' data-use='r' data-ref="ngx_http_empty_gif">ngx_http_empty_gif</a>,</td></tr>
+<tr><th id="20">20</th><td>      <var>0</var>,</td></tr>
+<tr><th id="21">21</th><td>      <var>0</var>,</td></tr>
+<tr><th id="22">22</th><td>      <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span> },</td></tr>
+<tr><th id="23">23</th><td></td></tr>
+<tr><th id="24">24</th><td>      <a class="macro" href="../../core/ngx_conf_file.h.html#86" title="{ { 0, ((void*)0) }, 0, ((void*)0), 0, 0, ((void*)0) }" data-ref="_M/ngx_null_command">ngx_null_command</a></td></tr>
+<tr><th id="25">25</th><td>};</td></tr>
+<tr><th id="26">26</th><td></td></tr>
+<tr><th id="27">27</th><td></td></tr>
+<tr><th id="28">28</th><td><i  data-doc="ngx_empty_gif">/* the minimal single pixel transparent GIF, 43 bytes */</i></td></tr>
+<tr><th id="29">29</th><td></td></tr>
+<tr><th id="30">30</th><td><em>static</em> <a class="typedef" href="../../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a>  <dfn class="tu decl def" id="ngx_empty_gif" title='ngx_empty_gif' data-type='u_char [43]' data-ref="ngx_empty_gif">ngx_empty_gif</dfn>[] = {</td></tr>
+<tr><th id="31">31</th><td></td></tr>
+<tr><th id="32">32</th><td>    <kbd>'G'</kbd>, <kbd>'I'</kbd>, <kbd>'F'</kbd>, <kbd>'8'</kbd>, <kbd>'9'</kbd>, <kbd>'a'</kbd>,  <i>/* header                                 */</i></td></tr>
+<tr><th id="33">33</th><td></td></tr>
+<tr><th id="34">34</th><td>                                   <i>/* logical screen descriptor              */</i></td></tr>
+<tr><th id="35">35</th><td>    <var>0x01</var>, <var>0x00</var>,                    <i>/* logical screen width                   */</i></td></tr>
+<tr><th id="36">36</th><td>    <var>0x01</var>, <var>0x00</var>,                    <i>/* logical screen height                  */</i></td></tr>
+<tr><th id="37">37</th><td>    <var>0x80</var>,                          <i>/* global 1-bit color table               */</i></td></tr>
+<tr><th id="38">38</th><td>    <var>0x01</var>,                          <i>/* background color #1                    */</i></td></tr>
+<tr><th id="39">39</th><td>    <var>0x00</var>,                          <i>/* no aspect ratio                        */</i></td></tr>
+<tr><th id="40">40</th><td></td></tr>
+<tr><th id="41">41</th><td>                                   <i>/* global color table                     */</i></td></tr>
+<tr><th id="42">42</th><td>    <var>0x00</var>, <var>0x00</var>, <var>0x00</var>,              <i>/* #0: black                              */</i></td></tr>
+<tr><th id="43">43</th><td>    <var>0xff</var>, <var>0xff</var>, <var>0xff</var>,              <i>/* #1: white                              */</i></td></tr>
+<tr><th id="44">44</th><td></td></tr>
+<tr><th id="45">45</th><td>                                   <i>/* graphic control extension              */</i></td></tr>
+<tr><th id="46">46</th><td>    <var>0x21</var>,                          <i>/* extension introducer                   */</i></td></tr>
+<tr><th id="47">47</th><td>    <var>0xf9</var>,                          <i>/* graphic control label                  */</i></td></tr>
+<tr><th id="48">48</th><td>    <var>0x04</var>,                          <i>/* block size                             */</i></td></tr>
+<tr><th id="49">49</th><td>    <var>0x01</var>,                          <i>/* transparent color is given,            */</i></td></tr>
+<tr><th id="50">50</th><td>                                   <i>/*     no disposal specified,             */</i></td></tr>
+<tr><th id="51">51</th><td>                                   <i>/*     user input is not expected         */</i></td></tr>
+<tr><th id="52">52</th><td>    <var>0x00</var>, <var>0x00</var>,                    <i>/* delay time                             */</i></td></tr>
+<tr><th id="53">53</th><td>    <var>0x01</var>,                          <i>/* transparent color #1                   */</i></td></tr>
+<tr><th id="54">54</th><td>    <var>0x00</var>,                          <i>/* block terminator                       */</i></td></tr>
+<tr><th id="55">55</th><td></td></tr>
+<tr><th id="56">56</th><td>                                   <i>/* image descriptor                       */</i></td></tr>
+<tr><th id="57">57</th><td>    <var>0x2c</var>,                          <i>/* image separator                        */</i></td></tr>
+<tr><th id="58">58</th><td>    <var>0x00</var>, <var>0x00</var>,                    <i>/* image left position                    */</i></td></tr>
+<tr><th id="59">59</th><td>    <var>0x00</var>, <var>0x00</var>,                    <i>/* image top position                     */</i></td></tr>
+<tr><th id="60">60</th><td>    <var>0x01</var>, <var>0x00</var>,                    <i>/* image width                            */</i></td></tr>
+<tr><th id="61">61</th><td>    <var>0x01</var>, <var>0x00</var>,                    <i>/* image height                           */</i></td></tr>
+<tr><th id="62">62</th><td>    <var>0x00</var>,                          <i>/* no local color table, no interlaced    */</i></td></tr>
+<tr><th id="63">63</th><td></td></tr>
+<tr><th id="64">64</th><td>                                   <i>/* table based image data                 */</i></td></tr>
+<tr><th id="65">65</th><td>    <var>0x02</var>,                          <i>/* LZW minimum code size,                 */</i></td></tr>
+<tr><th id="66">66</th><td>                                   <i>/*     must be at least 2-bit             */</i></td></tr>
+<tr><th id="67">67</th><td>    <var>0x02</var>,                          <i>/* block size                             */</i></td></tr>
+<tr><th id="68">68</th><td>    <var>0x4c</var>, <var>0x01</var>,                    <i>/* compressed bytes 01_001_100, 0000000_1 */</i></td></tr>
+<tr><th id="69">69</th><td>                                   <i>/* 100: clear code                        */</i></td></tr>
+<tr><th id="70">70</th><td>                                   <i>/* 001: 1                                 */</i></td></tr>
+<tr><th id="71">71</th><td>                                   <i>/* 101: end of information code           */</i></td></tr>
+<tr><th id="72">72</th><td>    <var>0x00</var>,                          <i>/* block terminator                       */</i></td></tr>
+<tr><th id="73">73</th><td></td></tr>
+<tr><th id="74">74</th><td>    <var>0x3B</var>                           <i>/* trailer                                */</i></td></tr>
+<tr><th id="75">75</th><td>};</td></tr>
+<tr><th id="76">76</th><td></td></tr>
+<tr><th id="77">77</th><td></td></tr>
+<tr><th id="78">78</th><td><em>static</em> <a class="typedef" href="../ngx_http_config.h.html#ngx_http_module_t" title='ngx_http_module_t' data-type='struct ngx_http_module_t' data-ref="ngx_http_module_t">ngx_http_module_t</a>  <dfn class="tu decl def" id="ngx_http_empty_gif_module_ctx" title='ngx_http_empty_gif_module_ctx' data-type='ngx_http_module_t' data-ref="ngx_http_empty_gif_module_ctx">ngx_http_empty_gif_module_ctx</dfn> = {</td></tr>
+<tr><th id="79">79</th><td>    <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>,                          <i>/* preconfiguration */</i></td></tr>
+<tr><th id="80">80</th><td>    <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>,                          <i>/* postconfiguration */</i></td></tr>
+<tr><th id="81">81</th><td></td></tr>
+<tr><th id="82">82</th><td>    <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>,                          <i>/* create main configuration */</i></td></tr>
+<tr><th id="83">83</th><td>    <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>,                          <i>/* init main configuration */</i></td></tr>
+<tr><th id="84">84</th><td></td></tr>
+<tr><th id="85">85</th><td>    <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>,                          <i>/* create server configuration */</i></td></tr>
+<tr><th id="86">86</th><td>    <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>,                          <i>/* merge server configuration */</i></td></tr>
+<tr><th id="87">87</th><td></td></tr>
+<tr><th id="88">88</th><td>    <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>,                          <i>/* create location configuration */</i></td></tr>
+<tr><th id="89">89</th><td>    <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>                           <i>/* merge location configuration */</i></td></tr>
+<tr><th id="90">90</th><td>};</td></tr>
+<tr><th id="91">91</th><td></td></tr>
+<tr><th id="92">92</th><td></td></tr>
+<tr><th id="93">93</th><td><a class="typedef" href="../../core/ngx_core.h.html#ngx_module_t" title='ngx_module_t' data-type='struct ngx_module_s' data-ref="ngx_module_t">ngx_module_t</a>  <dfn class="decl def" id="ngx_http_empty_gif_module" title='ngx_http_empty_gif_module' data-ref="ngx_http_empty_gif_module">ngx_http_empty_gif_module</dfn> = {</td></tr>
+<tr><th id="94">94</th><td>    <a class="macro" href="../../core/ngx_module.h.html#215" title="(ngx_uint_t) -1, (ngx_uint_t) -1, ((void*)0), 0, 0, 1013011, &quot;8&quot; &quot;,&quot; &quot;4&quot; &quot;,&quot; &quot;8&quot; &quot;,&quot; &quot;0&quot; &quot;0&quot; &quot;0&quot; &quot;0&quot; &quot;1&quot; &quot;1&quot; &quot;1&quot; &quot;1&quot; &quot;1&quot; &quot;1&quot; &quot;0&quot; &quot;1&quot; &quot;0&quot; &quot;1&quot; &quot;1&quot; &quot;1&quot; &quot;0&quot; &quot;0&quot; &quot;1&quot; &quot;1&quot; &quot;1&quot; &quot;0&quot; &quot;1&quot; &quot;0&quot; &quot;1&quot; &quot;1&quot; &quot;1&quot; &quot;1&quot; &quot;0&quot; &quot;0&quot; &quot;0&quot; &quot;1&quot; &quot;1&quot; &quot;0&quot;" data-ref="_M/NGX_MODULE_V1">NGX_MODULE_V1</a>,</td></tr>
+<tr><th id="95">95</th><td>    &amp;<a class="tu ref" href="#ngx_http_empty_gif_module_ctx" title='ngx_http_empty_gif_module_ctx' data-use='a' data-ref="ngx_http_empty_gif_module_ctx">ngx_http_empty_gif_module_ctx</a>, <i>/* module context */</i></td></tr>
+<tr><th id="96">96</th><td>    <a class="tu ref" href="#ngx_http_empty_gif_commands" title='ngx_http_empty_gif_commands' data-ref="ngx_http_empty_gif_commands">ngx_http_empty_gif_commands</a>,   <i>/* module directives */</i></td></tr>
+<tr><th id="97">97</th><td>    <a class="macro" href="../ngx_http_config.h.html#39" title="0x50545448" data-ref="_M/NGX_HTTP_MODULE">NGX_HTTP_MODULE</a>,               <i>/* module type */</i></td></tr>
+<tr><th id="98">98</th><td>    <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>,                          <i>/* init master */</i></td></tr>
+<tr><th id="99">99</th><td>    <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>,                          <i>/* init module */</i></td></tr>
+<tr><th id="100">100</th><td>    <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>,                          <i>/* init process */</i></td></tr>
+<tr><th id="101">101</th><td>    <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>,                          <i>/* init thread */</i></td></tr>
+<tr><th id="102">102</th><td>    <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>,                          <i>/* exit thread */</i></td></tr>
+<tr><th id="103">103</th><td>    <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>,                          <i>/* exit process */</i></td></tr>
+<tr><th id="104">104</th><td>    <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>,                          <i>/* exit master */</i></td></tr>
+<tr><th id="105">105</th><td>    <a class="macro" href="../../core/ngx_module.h.html#219" title="0, 0, 0, 0, 0, 0, 0, 0" data-ref="_M/NGX_MODULE_V1_PADDING">NGX_MODULE_V1_PADDING</a></td></tr>
+<tr><th id="106">106</th><td>};</td></tr>
+<tr><th id="107">107</th><td></td></tr>
+<tr><th id="108">108</th><td></td></tr>
+<tr><th id="109">109</th><td><em>static</em> <a class="typedef" href="../../core/ngx_string.h.html#ngx_str_t" title='ngx_str_t' data-type='struct ngx_str_t' data-ref="ngx_str_t">ngx_str_t</a>  <dfn class="tu decl def" id="ngx_http_gif_type" title='ngx_http_gif_type' data-type='ngx_str_t' data-ref="ngx_http_gif_type">ngx_http_gif_type</dfn> = <a class="macro" href="../../core/ngx_string.h.html#40" title="{ sizeof(&quot;image/gif&quot;) - 1, (u_char *) &quot;image/gif&quot; }" data-ref="_M/ngx_string">ngx_string</a>(<q>"image/gif"</q>);</td></tr>
+<tr><th id="110">110</th><td></td></tr>
+<tr><th id="111">111</th><td></td></tr>
+<tr><th id="112">112</th><td><em>static</em> <a class="typedef" href="../../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a></td></tr>
+<tr><th id="113">113</th><td><dfn class="tu decl def fn" id="ngx_http_empty_gif_handler" title='ngx_http_empty_gif_handler' data-type='ngx_int_t ngx_http_empty_gif_handler(ngx_http_request_t * r)' data-ref="ngx_http_empty_gif_handler">ngx_http_empty_gif_handler</dfn>(<a class="typedef" href="../ngx_http.h.html#ngx_http_request_t" title='ngx_http_request_t' data-type='struct ngx_http_request_s' data-ref="ngx_http_request_t">ngx_http_request_t</a> *<dfn class="local col4 decl" id="4r" title='r' data-type='ngx_http_request_t *' data-ref="4r">r</dfn>)</td></tr>
+<tr><th id="114">114</th><td>{</td></tr>
+<tr><th id="115">115</th><td>    <a class="typedef" href="../ngx_http_script.h.html#ngx_http_complex_value_t" title='ngx_http_complex_value_t' data-type='struct ngx_http_complex_value_t' data-ref="ngx_http_complex_value_t">ngx_http_complex_value_t</a>  <dfn class="local col5 decl" id="5cv" title='cv' data-type='ngx_http_complex_value_t' data-ref="5cv">cv</dfn>;</td></tr>
+<tr><th id="116">116</th><td></td></tr>
+<tr><th id="117">117</th><td>    <b>if</b> (!(<a class="local col4 ref" href="#4r" title='r' data-ref="4r">r</a>-&gt;<a class="ref field" href="../ngx_http_request.h.html#ngx_http_request_s::method" title='ngx_http_request_s::method' data-ref="ngx_http_request_s::method">method</a> &amp; (<a class="macro" href="../ngx_http_request.h.html#29" title="0x0002" data-ref="_M/NGX_HTTP_GET">NGX_HTTP_GET</a>|<a class="macro" href="../ngx_http_request.h.html#30" title="0x0004" data-ref="_M/NGX_HTTP_HEAD">NGX_HTTP_HEAD</a>))) {</td></tr>
+<tr><th id="118">118</th><td>        <b>return</b> <a class="macro" href="../ngx_http_request.h.html#94" title="405" data-ref="_M/NGX_HTTP_NOT_ALLOWED">NGX_HTTP_NOT_ALLOWED</a>;</td></tr>
+<tr><th id="119">119</th><td>    }</td></tr>
+<tr><th id="120">120</th><td></td></tr>
+<tr><th id="121">121</th><td>    <a class="macro" href="../../core/ngx_string.h.html#88" title="(void) memset(&amp;cv, 0, sizeof(ngx_http_complex_value_t))" data-ref="_M/ngx_memzero">ngx_memzero</a>(&amp;<a class="local col5 ref" href="#5cv" title='cv' data-ref="5cv">cv</a>, <b>sizeof</b>(<a class="typedef" href="../ngx_http_script.h.html#ngx_http_complex_value_t" title='ngx_http_complex_value_t' data-type='struct ngx_http_complex_value_t' data-ref="ngx_http_complex_value_t">ngx_http_complex_value_t</a>));</td></tr>
+<tr><th id="122">122</th><td></td></tr>
+<tr><th id="123">123</th><td>    <a class="local col5 ref" href="#5cv" title='cv' data-ref="5cv">cv</a>.<a class="ref field" href="../ngx_http_script.h.html#(anonymous)::value" title='(anonymous struct)::value' data-ref="(anonymous)::value">value</a>.<a class="ref field" href="../../core/ngx_string.h.html#(anonymous)::len" title='(anonymous struct)::len' data-ref="(anonymous)::len">len</a> = <b>sizeof</b>(<a class="tu ref" href="#ngx_empty_gif" title='ngx_empty_gif' data-use='r' data-ref="ngx_empty_gif">ngx_empty_gif</a>);</td></tr>
+<tr><th id="124">124</th><td>    <a class="local col5 ref" href="#5cv" title='cv' data-ref="5cv">cv</a>.<a class="ref field" href="../ngx_http_script.h.html#(anonymous)::value" title='(anonymous struct)::value' data-ref="(anonymous)::value">value</a>.<a class="ref field" href="../../core/ngx_string.h.html#(anonymous)::data" title='(anonymous struct)::data' data-ref="(anonymous)::data">data</a> = <a class="tu ref" href="#ngx_empty_gif" title='ngx_empty_gif' data-use='r' data-ref="ngx_empty_gif">ngx_empty_gif</a>;</td></tr>
+<tr><th id="125">125</th><td>    <a class="local col4 ref" href="#4r" title='r' data-ref="4r">r</a>-&gt;<a class="ref field" href="../ngx_http_request.h.html#ngx_http_request_s::headers_out" title='ngx_http_request_s::headers_out' data-ref="ngx_http_request_s::headers_out">headers_out</a>.<a class="ref field" href="../ngx_http_request.h.html#(anonymous)::last_modified_time" title='(anonymous struct)::last_modified_time' data-ref="(anonymous)::last_modified_time">last_modified_time</a> = <var>23349600</var>;</td></tr>
+<tr><th id="126">126</th><td></td></tr>
+<tr><th id="127">127</th><td>    <b>return</b> <a class="ref fn" href="../ngx_http_core_module.h.html#ngx_http_send_response" title='ngx_http_send_response' data-ref="ngx_http_send_response">ngx_http_send_response</a>(<a class="local col4 ref" href="#4r" title='r' data-ref="4r">r</a>, <a class="macro" href="../ngx_http_request.h.html#76" title="200" data-ref="_M/NGX_HTTP_OK">NGX_HTTP_OK</a>, &amp;<a class="tu ref" href="#ngx_http_gif_type" title='ngx_http_gif_type' data-use='a' data-ref="ngx_http_gif_type">ngx_http_gif_type</a>, &amp;<a class="local col5 ref" href="#5cv" title='cv' data-ref="5cv">cv</a>);</td></tr>
+<tr><th id="128">128</th><td>}</td></tr>
+<tr><th id="129">129</th><td></td></tr>
+<tr><th id="130">130</th><td></td></tr>
+<tr><th id="131">131</th><td><em>static</em> <em>char</em> *</td></tr>
+<tr><th id="132">132</th><td><dfn class="tu decl def fn" id="ngx_http_empty_gif" title='ngx_http_empty_gif' data-type='char * ngx_http_empty_gif(ngx_conf_t * cf, ngx_command_t * cmd, void * conf)' data-ref="ngx_http_empty_gif">ngx_http_empty_gif</dfn>(<a class="typedef" href="../../core/ngx_core.h.html#ngx_conf_t" title='ngx_conf_t' data-type='struct ngx_conf_s' data-ref="ngx_conf_t">ngx_conf_t</a> *<dfn class="local col6 decl" id="6cf" title='cf' data-type='ngx_conf_t *' data-ref="6cf">cf</dfn>, <a class="typedef" href="../../core/ngx_core.h.html#ngx_command_t" title='ngx_command_t' data-type='struct ngx_command_s' data-ref="ngx_command_t">ngx_command_t</a> *<dfn class="local col7 decl" id="7cmd" title='cmd' data-type='ngx_command_t *' data-ref="7cmd">cmd</dfn>, <em>void</em> *<dfn class="local col8 decl" id="8conf" title='conf' data-type='void *' data-ref="8conf">conf</dfn>)</td></tr>
+<tr><th id="133">133</th><td>{</td></tr>
+<tr><th id="134">134</th><td>    <a class="typedef" href="../ngx_http_core_module.h.html#ngx_http_core_loc_conf_t" title='ngx_http_core_loc_conf_t' data-type='struct ngx_http_core_loc_conf_s' data-ref="ngx_http_core_loc_conf_t">ngx_http_core_loc_conf_t</a>  *<dfn class="local col9 decl" id="9clcf" title='clcf' data-type='ngx_http_core_loc_conf_t *' data-ref="9clcf">clcf</dfn>;</td></tr>
+<tr><th id="135">135</th><td></td></tr>
+<tr><th id="136">136</th><td>    <a class="local col9 ref" href="#9clcf" title='clcf' data-ref="9clcf">clcf</a> = <a class="macro" href="../ngx_http_config.h.html#65" title="((ngx_http_conf_ctx_t *) cf-&gt;ctx)-&gt;loc_conf[ngx_http_core_module.ctx_index]" data-ref="_M/ngx_http_conf_get_module_loc_conf">ngx_http_conf_get_module_loc_conf</a>(<a class="local col6 ref" href="#6cf" title='cf' data-ref="6cf">cf</a>, <a class="ref" href="../ngx_http_core_module.h.html#ngx_http_core_module" title='ngx_http_core_module' data-ref="ngx_http_core_module">ngx_http_core_module</a>);</td></tr>
+<tr><th id="137">137</th><td>    <a class="local col9 ref" href="#9clcf" title='clcf' data-ref="9clcf">clcf</a>-&gt;<a class="ref field" href="../ngx_http_core_module.h.html#ngx_http_core_loc_conf_s::handler" title='ngx_http_core_loc_conf_s::handler' data-ref="ngx_http_core_loc_conf_s::handler">handler</a> = <a class="tu ref fn" href="#ngx_http_empty_gif_handler" title='ngx_http_empty_gif_handler' data-use='r' data-ref="ngx_http_empty_gif_handler">ngx_http_empty_gif_handler</a>;</td></tr>
+<tr><th id="138">138</th><td></td></tr>
+<tr><th id="139">139</th><td>    <b>return</b> <a class="macro" href="../../core/ngx_conf_file.h.html#63" title="((void*)0)" data-ref="_M/NGX_CONF_OK">NGX_CONF_OK</a>;</td></tr>
+<tr><th id="140">140</th><td>}</td></tr>
+<tr><th id="141">141</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated on <em>2018-Apr-06</em> from project nginx<br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

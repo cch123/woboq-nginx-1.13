@@ -1,0 +1,9 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='394' type='ngx_flag_t'/>
+<offset>4160</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='394'>/* chunked_transfer_encoding */</doc>
+<use f='nginx/src/http/modules/ngx_http_chunked_filter_module.c' l='80' u='r' c='ngx_http_chunked_header_filter'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3409' u='w' c='ngx_http_core_create_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3678' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3678' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3679' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3679' u='r' c='ngx_http_core_merge_loc_conf'/>

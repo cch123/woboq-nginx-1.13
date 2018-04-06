@@ -1,0 +1,5 @@
+<dec f='nginx/src/event/ngx_event.h' l='231'/>
+<doc f='nginx/src/event/ngx_event.h' l='227'>/*
+ * The event filter supports low water mark: kqueue&apos;s NOTE_LOWAT.
+ * kqueue in FreeBSD 4.1-4.2 has no NOTE_LOWAT so we need a separate flag.
+ */</doc>

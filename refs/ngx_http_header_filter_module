@@ -1,0 +1,4 @@
+<dec f='nginx/objs/ngx_modules.c' l='45' type='ngx_module_t'/>
+<use f='nginx/objs/ngx_modules.c' l='97' u='a'/>
+<use f='nginx/objs/ngx_modules.c' l='97' u='a'/>
+<def f='nginx/src/http/ngx_http_header_filter_module.c' l='33' ll='46' type='ngx_module_t'/>

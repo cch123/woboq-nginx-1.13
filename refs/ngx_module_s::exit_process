@@ -1,0 +1,6 @@
+<dec f='nginx/src/core/ngx_module.h' l='245' type='void (*)(ngx_cycle_t *)'/>
+<offset>960</offset>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='315' u='r' c='ngx_single_process_cycle'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='316' u='r' c='ngx_single_process_cycle'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='984' u='r' c='ngx_worker_process_exit'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='985' u='r' c='ngx_worker_process_exit'/>

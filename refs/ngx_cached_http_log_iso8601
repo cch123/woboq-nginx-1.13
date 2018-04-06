@@ -1,0 +1,11 @@
+<dec f='nginx/src/core/ngx_times.h' l='42' type='volatile ngx_str_t'/>
+<def f='nginx/src/core/ngx_times.c' l='34' type='volatile ngx_str_t'/>
+<use f='nginx/src/core/ngx_times.c' l='71' u='m' c='ngx_time_init'/>
+<use f='nginx/src/core/ngx_times.c' l='188' u='m' c='ngx_time_update'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='822' u='m' c='ngx_http_log_iso8601'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='823' u='m' c='ngx_http_log_iso8601'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='823' u='m' c='ngx_http_log_iso8601'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2309' u='m' c='ngx_http_variable_time_iso8601'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2314' u='m' c='ngx_http_variable_time_iso8601'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2315' u='m' c='ngx_http_variable_time_iso8601'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2317' u='m' c='ngx_http_variable_time_iso8601'/>

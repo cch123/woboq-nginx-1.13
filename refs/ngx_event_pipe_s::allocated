@@ -1,0 +1,4 @@
+<dec f='nginx/src/event/ngx_event_pipe.h' l='70' type='ngx_int_t'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='228' u='r' c='ngx_event_pipe_read_upstream'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='237' u='w' c='ngx_event_pipe_read_upstream'/>
+<offset>896</offset>

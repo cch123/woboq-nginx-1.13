@@ -1,0 +1,5 @@
+<dec f='include/stdio.h' l='689' type='int fputs(const char *restrict __s, FILE *restrict __stream)'/>
+<doc f='include/stdio.h' l='685'>/* Write a string to STREAM.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */</doc>

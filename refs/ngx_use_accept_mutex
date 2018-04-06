@@ -1,0 +1,10 @@
+<dec f='nginx/src/event/ngx_event.h' l='471' type='ngx_uint_t'/>
+<use f='nginx/src/core/ngx_connection.c' l='973' u='w' c='ngx_close_listening_sockets'/>
+<def f='nginx/src/event/ngx_event.c' l='53' type='ngx_uint_t'/>
+<use f='nginx/src/event/ngx_event.c' l='218' u='r' c='ngx_process_events_and_timers'/>
+<use f='nginx/src/event/ngx_event.c' l='582' u='w' c='ngx_event_process_init'/>
+<use f='nginx/src/event/ngx_event.c' l='587' u='w' c='ngx_event_process_init'/>
+<use f='nginx/src/event/ngx_event.c' l='836' u='r' c='ngx_event_process_init'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='121' u='r' c='ngx_event_accept'/>
+<use f='nginx/src/http/ngx_http_request.c' l='365' u='r' c='ngx_http_init_connection'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='1153' u='w' c='ngx_cache_manager_process_cycle'/>

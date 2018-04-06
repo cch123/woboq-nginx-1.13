@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='26'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='220' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='444' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4114' u='c'/>

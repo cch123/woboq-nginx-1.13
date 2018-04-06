@@ -1,0 +1,23 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='381' type='ngx_http_event_handler_pt'/>
+<offset>384</offset>
+<use f='nginx/src/http/modules/ngx_http_limit_req_module.c' l='277' u='w' c='ngx_http_limit_req_handler'/>
+<use f='nginx/src/http/modules/ngx_http_limit_req_module.c' l='311' u='w' c='ngx_http_limit_req_delay'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2327' u='w' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_request.c' l='553' u='w' c='ngx_http_create_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1950' u='w' c='ngx_http_process_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2248' u='r' c='ngx_http_request_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2485' u='w' c='ngx_http_finalize_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2593' u='w' c='ngx_http_finalize_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2644' u='w' c='ngx_http_set_write_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3419' u='w' c='ngx_http_post_action'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='128' u='w' c='ngx_http_read_client_request_body'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='182' u='w' c='ngx_http_read_client_request_body'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='200' u='w' c='ngx_http_read_client_request_body'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='420' u='w' c='ngx_http_do_read_client_request_body'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='571' u='w' c='ngx_http_discard_request_body'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='673' u='w' c='ngx_http_read_discarded_request_body'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='612' u='w' c='ngx_http_upstream_init_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2106' u='w' c='ngx_http_upstream_send_request_body'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2164' u='w' c='ngx_http_upstream_send_request_body'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3214' u='w' c='ngx_http_upstream_upgrade'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4354' u='w' c='ngx_http_upstream_finalize_request'/>

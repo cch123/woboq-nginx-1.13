@@ -1,0 +1,13 @@
+<dec f='nginx/src/event/ngx_event_connect.h' l='41' type='ngx_str_t *'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='227' u='r' c='ngx_event_connect_peer'/>
+<offset>192</offset>
+<use f='nginx/src/http/modules/ngx_http_upstream_hash_module.c' l='263' u='w' c='ngx_http_upstream_get_hash_peer'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_hash_module.c' l='597' u='w' c='ngx_http_upstream_get_chash_peer'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_ip_hash_module.c' l='233' u='w' c='ngx_http_upstream_get_ip_hash_peer'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_least_conn_module.c' l='242' u='w' c='ngx_http_upstream_get_least_conn_peer'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_least_conn_module.c' l='285' u='w' c='ngx_http_upstream_get_least_conn_peer'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3676' u='r' c='ngx_http_log_error_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3687' u='r' c='ngx_http_log_error_handler'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1531' u='r' c='ngx_http_upstream_connect'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='465' u='w' c='ngx_http_upstream_get_round_robin_peer'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='501' u='w' c='ngx_http_upstream_get_round_robin_peer'/>

@@ -1,0 +1,6 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='439' type='size_t'/>
+<offset>9344</offset>
+<doc f='nginx/src/http/ngx_http_request.h' l='438'>/* used to learn the Apache compatible response length without a header */</doc>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='895' u='r' c='ngx_http_log_body_bytes_sent'/>
+<use f='nginx/src/http/ngx_http_header_filter_module.c' l='611' u='w' c='ngx_http_header_filter'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1729' u='r' c='ngx_http_variable_body_bytes_sent'/>

@@ -1,0 +1,8 @@
+<dec f='nginx/src/os/unix/ngx_errno.h' l='25'/>
+<use f='nginx/src/core/ngx_file.c' l='332' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='229' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='349' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_index_module.c' l='237' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_index_module.c' l='334' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_index_module.c' l='371' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_static_module.c' l='118' u='c'/>

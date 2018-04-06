@@ -1,0 +1,16 @@
+<dec f='nginx/src/event/ngx_event.h' l='107' type='unsigned int'/>
+<offset>84</offset>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='890' u='w' c='ngx_epoll_process_events'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='50' u='w' c='ngx_event_accept'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='106' u='w' c='ngx_event_accept'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='109' u='r' c='ngx_event_accept'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='246' u='w' c='ngx_event_accept'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='316' u='w' c='ngx_event_accept'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='319' u='r' c='ngx_event_accept'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='365' u='w' c='ngx_event_recvmsg'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='637' u='w' c='ngx_event_recvmsg'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='640' u='r' c='ngx_event_recvmsg'/>
+<use f='nginx/src/os/unix/ngx_readv_chain.c' l='63' u='r' c='ngx_readv_chain'/>
+<use f='nginx/src/os/unix/ngx_readv_chain.c' l='178' u='w' c='ngx_readv_chain'/>
+<use f='nginx/src/os/unix/ngx_recv.c' l='60' u='r' c='ngx_unix_recv'/>
+<use f='nginx/src/os/unix/ngx_recv.c' l='129' u='w' c='ngx_unix_recv'/>

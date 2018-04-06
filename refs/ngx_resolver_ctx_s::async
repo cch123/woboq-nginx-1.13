@@ -1,0 +1,9 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='222' type='unsigned int'/>
+<offset>1601</offset>
+<use f='nginx/src/core/ngx_resolver.c' l='741' u='w' c='ngx_resolve_name_locked'/>
+<use f='nginx/src/core/ngx_resolver.c' l='878' u='w' c='ngx_resolve_name_locked'/>
+<use f='nginx/src/core/ngx_resolver.c' l='999' u='w' c='ngx_resolve_addr'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1086' u='w' c='ngx_resolve_addr'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2987' u='w' c='ngx_resolver_srv_names_handler'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2987' u='r' c='ngx_resolver_srv_names_handler'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1182' u='r' c='ngx_http_upstream_resolve_handler'/>

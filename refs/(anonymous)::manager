@@ -1,0 +1,6 @@
+<dec f='nginx/src/core/ngx_file.h' l='55' type='ngx_path_manager_pt'/>
+<offset>384</offset>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2566' u='w' c='ngx_http_file_cache_set_slot'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='384' u='r' c='ngx_start_cache_manager_processes'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='1189' u='r' c='ngx_cache_manager_process_handler'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='1190' u='r' c='ngx_cache_manager_process_handler'/>

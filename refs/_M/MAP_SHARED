@@ -1,0 +1,4 @@
+<dec f='include/x86_64-linux-gnu/bits/mman-linux.h' l='45'/>
+<doc f='include/x86_64-linux-gnu/bits/mman-linux.h' l='44'>/* Sharing types (must choose one and only one of these).  */</doc>
+<use f='nginx/src/os/unix/ngx_files.c' l='636' u='c'/>
+<use f='nginx/src/os/unix/ngx_shmem.c' l='19' u='c'/>

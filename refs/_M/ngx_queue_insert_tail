@@ -1,0 +1,2 @@
+<dec f='nginx/src/core/ngx_queue.h' l='43'/>
+<use f='nginx/src/http/ngx_http.c' l='883' u='c'/>

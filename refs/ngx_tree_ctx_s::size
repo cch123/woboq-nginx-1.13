@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_file.h' l='117' type='off_t'/>
+<offset>0</offset>
+<use f='nginx/src/core/ngx_file.c' l='1053' u='w' c='ngx_walk_tree'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2166' u='r' c='ngx_http_file_cache_add_file'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2175' u='r' c='ngx_http_file_cache_add_file'/>

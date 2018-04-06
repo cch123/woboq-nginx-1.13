@@ -1,0 +1,9 @@
+<dec f='include/x86_64-linux-gnu/bits/dirent.h' l='33' type='char [256]'/>
+<offset>152</offset>
+<doc f='include/x86_64-linux-gnu/bits/dirent.h' l='33'>/* We must not include limits.h! */</doc>
+<use f='nginx/src/core/ngx_file.c' l='1001' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_file.c' l='1002' macro='1' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='317' macro='1' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='319' macro='1' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='340' macro='1' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='377' macro='1' u='r'/>

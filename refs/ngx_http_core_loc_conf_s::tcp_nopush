@@ -1,0 +1,9 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='382' type='ngx_flag_t'/>
+<offset>3392</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='382'>/* tcp_nopush */</doc>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1279' u='r' c='ngx_http_update_location_config'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3386' u='w' c='ngx_http_core_create_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3614' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3614' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3614' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3614' u='r' c='ngx_http_core_merge_loc_conf'/>

@@ -1,0 +1,21 @@
+<dec f='nginx/src/os/unix/ngx_files.h' l='33' type='struct stat'/>
+<use f='nginx/src/os/unix/ngx_files.h' l='253' u='a' c='ngx_de_info'/>
+<offset>128</offset>
+<use f='nginx/src/core/ngx_file.c' l='1048' macro='1' u='m'/>
+<use f='nginx/src/core/ngx_file.c' l='1053' macro='1' u='m'/>
+<use f='nginx/src/core/ngx_file.c' l='1054' macro='1' u='m'/>
+<use f='nginx/src/core/ngx_file.c' l='1054' macro='1' u='m'/>
+<use f='nginx/src/core/ngx_file.c' l='1054' macro='1' u='m'/>
+<use f='nginx/src/core/ngx_file.c' l='1054' macro='1' u='m'/>
+<use f='nginx/src/core/ngx_file.c' l='1055' macro='1' u='m'/>
+<use f='nginx/src/core/ngx_file.c' l='1056' macro='1' u='m'/>
+<use f='nginx/src/core/ngx_file.c' l='1062' macro='1' u='m'/>
+<use f='nginx/src/core/ngx_file.c' l='1067' macro='1' u='m'/>
+<use f='nginx/src/core/ngx_file.c' l='1068' macro='1' u='m'/>
+<use f='nginx/src/core/ngx_file.c' l='1086' macro='1' u='m'/>
+<use f='nginx/src/core/ngx_file.c' l='1087' macro='1' u='m'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='356' macro='1' u='a'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='379' macro='1' u='m'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='380' macro='1' u='m'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='381' macro='1' u='m'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='382' macro='1' u='m'/>

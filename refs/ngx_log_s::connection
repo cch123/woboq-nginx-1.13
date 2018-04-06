@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_log.h' l='54' type='ngx_atomic_uint_t'/>
+<offset>128</offset>
+<use f='nginx/src/core/ngx_log.c' l='126' u='r' c='ngx_log_error_core'/>
+<use f='nginx/src/core/ngx_log.c' l='127' u='r' c='ngx_log_error_core'/>
+<use f='nginx/src/http/ngx_http_request.c' l='315' u='w' c='ngx_http_init_connection'/>

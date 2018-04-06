@@ -1,0 +1,2 @@
+<dec f='nginx/src/http/ngx_http_cache.h' l='22'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2481' u='c'/>

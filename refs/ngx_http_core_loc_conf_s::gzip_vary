@@ -1,0 +1,9 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='398' type='ngx_flag_t'/>
+<offset>4288</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='398'>/* gzip_vary */</doc>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3422' u='w' c='ngx_http_core_create_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3701' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3701' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3701' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3701' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_header_filter_module.c' l='402' u='r' c='ngx_http_header_filter'/>

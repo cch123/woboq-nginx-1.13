@@ -1,0 +1,2 @@
+<dec f='nginx/src/os/unix/ngx_files.h' l='297' type='ngx_err_t ngx_unlock_fd(ngx_fd_t fd)'/>
+<def f='nginx/src/os/unix/ngx_files.c' l='792' ll='806' type='ngx_err_t ngx_unlock_fd(ngx_fd_t fd)'/>

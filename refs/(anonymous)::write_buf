@@ -1,0 +1,9 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='51' type='ngx_buf_t *'/>
+<offset>1088</offset>
+<use f='nginx/src/core/ngx_resolver.c' l='330' u='r' c='ngx_resolver_cleanup'/>
+<use f='nginx/src/core/ngx_resolver.c' l='331' u='r' c='ngx_resolver_cleanup'/>
+<use f='nginx/src/core/ngx_resolver.c' l='332' u='r' c='ngx_resolver_cleanup'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1347' u='r' c='ngx_resolver_send_tcp_query'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1363' u='w' c='ngx_resolver_send_tcp_query'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1382' u='r' c='ngx_resolver_send_tcp_query'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1570' u='r' c='ngx_resolver_tcp_write'/>

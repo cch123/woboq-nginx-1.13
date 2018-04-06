@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http.h' l='141' type='ngx_int_t ngx_http_special_response_handler(ngx_http_request_t * r, ngx_int_t error)'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2379' u='c' c='ngx_http_finalize_request'/>
+<def f='nginx/src/http/ngx_http_special_response.c' l='415' ll='524' type='ngx_int_t ngx_http_special_response_handler(ngx_http_request_t * r, ngx_int_t error)'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='551' u='c' c='ngx_http_filter_finalize_request'/>

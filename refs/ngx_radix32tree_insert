@@ -1,0 +1,6 @@
+<dec f='nginx/src/core/ngx_radix_tree.h' l='40' type='ngx_int_t ngx_radix32tree_insert(ngx_radix_tree_t * tree, uint32_t key, uint32_t mask, uintptr_t value)'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='91' u='c' c='ngx_radix_tree_create'/>
+<def f='nginx/src/core/ngx_radix_tree.c' l='108' ll='170' type='ngx_int_t ngx_radix32tree_insert(ngx_radix_tree_t * tree, uint32_t key, uint32_t mask, uintptr_t value)'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='540' u='c' c='ngx_http_geo_block'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1190' u='c' c='ngx_http_geo_cidr_add'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1218' u='c' c='ngx_http_geo_cidr_add'/>

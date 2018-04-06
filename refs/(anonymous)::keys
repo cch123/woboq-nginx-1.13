@@ -1,0 +1,23 @@
+<dec f='nginx/src/core/ngx_hash.h' l='81' type='ngx_array_t'/>
+<offset>192</offset>
+<use f='nginx/src/core/ngx_hash.c' l='671' u='a' c='ngx_hash_keys_array_init'/>
+<use f='nginx/src/core/ngx_hash.c' l='819' u='a' c='ngx_hash_add_key'/>
+<use f='nginx/src/http/modules/ngx_http_map_module.c' l='301' u='m' c='ngx_http_map_block'/>
+<use f='nginx/src/http/modules/ngx_http_map_module.c' l='305' u='m' c='ngx_http_map_block'/>
+<use f='nginx/src/http/modules/ngx_http_map_module.c' l='305' u='m' c='ngx_http_map_block'/>
+<use f='nginx/src/http/modules/ngx_http_referer_module.c' l='376' u='m' c='ngx_http_referer_merge_conf'/>
+<use f='nginx/src/http/modules/ngx_http_referer_module.c' l='400' u='m' c='ngx_http_referer_merge_conf'/>
+<use f='nginx/src/http/modules/ngx_http_referer_module.c' l='404' u='m' c='ngx_http_referer_merge_conf'/>
+<use f='nginx/src/http/modules/ngx_http_referer_module.c' l='404' u='m' c='ngx_http_referer_merge_conf'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2856' u='m' c='ngx_http_ssi_init_main_conf'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2857' u='m' c='ngx_http_ssi_init_main_conf'/>
+<use f='nginx/src/http/ngx_http.c' l='1493' u='m' c='ngx_http_server_names'/>
+<use f='nginx/src/http/ngx_http.c' l='1497' u='m' c='ngx_http_server_names'/>
+<use f='nginx/src/http/ngx_http.c' l='1497' u='m' c='ngx_http_server_names'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='416' u='m' c='ngx_http_add_variable'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='417' u='m' c='ngx_http_add_variable'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2623' u='m' c='ngx_http_variables_init_vars'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2627' u='m' c='ngx_http_variables_init_vars'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2686' u='m' c='ngx_http_variables_init_vars'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2703' u='m' c='ngx_http_variables_init_vars'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2704' u='m' c='ngx_http_variables_init_vars'/>

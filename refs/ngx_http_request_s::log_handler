@@ -1,0 +1,6 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='448' type='ngx_http_log_handler_pt'/>
+<offset>9664</offset>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2332' u='w' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2332' u='r' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_request.c' l='621' u='w' c='ngx_http_create_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3625' u='r' c='ngx_http_log_error'/>

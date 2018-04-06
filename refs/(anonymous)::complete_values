@@ -1,0 +1,17 @@
+<dec f='nginx/src/http/ngx_http_script.h' l='56' type='unsigned int'/>
+<offset>642</offset>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='3522' u='w' c='ngx_http_fastcgi_pass'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='3633' u='w' c='ngx_http_fastcgi_store'/>
+<use f='nginx/src/http/modules/ngx_http_index_module.c' l='532' u='w' c='ngx_http_index_set_index'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='1327' u='w' c='ngx_http_log_set_log'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='3344' u='w' c='ngx_http_proxy_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='3602' u='w' c='ngx_http_proxy_pass'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='4082' u='w' c='ngx_http_proxy_store'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='1839' u='w' c='ngx_http_scgi_pass'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='1908' u='w' c='ngx_http_scgi_store'/>
+<use f='nginx/src/http/modules/ngx_http_try_files_module.c' l='338' u='w' c='ngx_http_try_files'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='2103' u='w' c='ngx_http_uwsgi_pass'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='2197' u='w' c='ngx_http_uwsgi_store'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4297' u='w' c='ngx_http_core_root'/>
+<use f='nginx/src/http/ngx_http_script.c' l='190' u='w' c='ngx_http_compile_complex_value'/>
+<use f='nginx/src/http/ngx_http_script.c' l='629' u='r' c='ngx_http_script_done'/>

@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ngx_event_pipe.h source code [nginx/src/event/ngx_event_pipe.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="ngx_event_pipe_s "/>
+<link rel="stylesheet" href="../../../../data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../../data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../../data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'nginx/src/event/ngx_event_pipe.h'; var root_path = '../../..'; var data_path = '../../../../data';</script>
+<script src='../../../../data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../..'>nginx</a>/<a href='..'>src</a>/<a href='./'>event</a>/<a href='ngx_event_pipe.h.html'>ngx_event_pipe.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td></td></tr>
+<tr><th id="2">2</th><td><i>/*</i></td></tr>
+<tr><th id="3">3</th><td><i> * Copyright (C) Igor Sysoev</i></td></tr>
+<tr><th id="4">4</th><td><i> * Copyright (C) Nginx, Inc.</i></td></tr>
+<tr><th id="5">5</th><td><i> */</i></td></tr>
+<tr><th id="6">6</th><td></td></tr>
+<tr><th id="7">7</th><td></td></tr>
+<tr><th id="8">8</th><td><u>#<span data-ppcond="8">ifndef</span> <span class="macro" data-ref="_M/_NGX_EVENT_PIPE_H_INCLUDED_">_NGX_EVENT_PIPE_H_INCLUDED_</span></u></td></tr>
+<tr><th id="9">9</th><td><u>#define <dfn class="macro" id="_M/_NGX_EVENT_PIPE_H_INCLUDED_" data-ref="_M/_NGX_EVENT_PIPE_H_INCLUDED_">_NGX_EVENT_PIPE_H_INCLUDED_</dfn></u></td></tr>
+<tr><th id="10">10</th><td></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td><u>#include <a href="../core/ngx_config.h.html">&lt;ngx_config.h&gt;</a></u></td></tr>
+<tr><th id="13">13</th><td><u>#include <a href="../core/ngx_core.h.html">&lt;ngx_core.h&gt;</a></u></td></tr>
+<tr><th id="14">14</th><td><u>#include <a href="ngx_event.h.html">&lt;ngx_event.h&gt;</a></u></td></tr>
+<tr><th id="15">15</th><td></td></tr>
+<tr><th id="16">16</th><td></td></tr>
+<tr><th id="17">17</th><td><b>typedef</b> <b>struct</b> <a class="type" href="#ngx_event_pipe_s" title='ngx_event_pipe_s' data-ref="ngx_event_pipe_s">ngx_event_pipe_s</a>  <dfn class="typedef" id="ngx_event_pipe_t" title='ngx_event_pipe_t' data-type='struct ngx_event_pipe_s' data-ref="ngx_event_pipe_t">ngx_event_pipe_t</dfn>;</td></tr>
+<tr><th id="18">18</th><td></td></tr>
+<tr><th id="19">19</th><td><b>typedef</b> <a class="typedef" href="../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a> (*<dfn class="typedef" id="ngx_event_pipe_input_filter_pt" title='ngx_event_pipe_input_filter_pt' data-type='ngx_int_t (*)(ngx_event_pipe_t *, ngx_buf_t *)' data-ref="ngx_event_pipe_input_filter_pt">ngx_event_pipe_input_filter_pt</dfn>)(<a class="typedef" href="#ngx_event_pipe_t" title='ngx_event_pipe_t' data-type='struct ngx_event_pipe_s' data-ref="ngx_event_pipe_t">ngx_event_pipe_t</a> *<dfn class="local col1 decl" id="1p" title='p' data-type='ngx_event_pipe_t *' data-ref="1p">p</dfn>,</td></tr>
+<tr><th id="20">20</th><td>                                                    <a class="typedef" href="../core/ngx_buf.h.html#ngx_buf_t" title='ngx_buf_t' data-type='struct ngx_buf_s' data-ref="ngx_buf_t">ngx_buf_t</a> *<dfn class="local col2 decl" id="2buf" title='buf' data-type='ngx_buf_t *' data-ref="2buf">buf</dfn>);</td></tr>
+<tr><th id="21">21</th><td><b>typedef</b> <a class="typedef" href="../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a> (*<dfn class="typedef" id="ngx_event_pipe_output_filter_pt" title='ngx_event_pipe_output_filter_pt' data-type='ngx_int_t (*)(void *, ngx_chain_t *)' data-ref="ngx_event_pipe_output_filter_pt">ngx_event_pipe_output_filter_pt</dfn>)(<em>void</em> *<dfn class="local col3 decl" id="3data" title='data' data-type='void *' data-ref="3data">data</dfn>,</td></tr>
+<tr><th id="22">22</th><td>                                                     <a class="typedef" href="../core/ngx_core.h.html#ngx_chain_t" title='ngx_chain_t' data-type='struct ngx_chain_s' data-ref="ngx_chain_t">ngx_chain_t</a> *<dfn class="local col4 decl" id="4chain" title='chain' data-type='ngx_chain_t *' data-ref="4chain">chain</dfn>);</td></tr>
+<tr><th id="23">23</th><td></td></tr>
+<tr><th id="24">24</th><td></td></tr>
+<tr><th id="25">25</th><td><b>struct</b> <dfn class="type def" id="ngx_event_pipe_s" title='ngx_event_pipe_s' data-ref="ngx_event_pipe_s">ngx_event_pipe_s</dfn> {</td></tr>
+<tr><th id="26">26</th><td>    <a class="typedef" href="../core/ngx_core.h.html#ngx_connection_t" title='ngx_connection_t' data-type='struct ngx_connection_s' data-ref="ngx_connection_t">ngx_connection_t</a>  *<dfn class="decl field" id="ngx_event_pipe_s::upstream" title='ngx_event_pipe_s::upstream' data-ref="ngx_event_pipe_s::upstream">upstream</dfn>;</td></tr>
+<tr><th id="27">27</th><td>    <a class="typedef" href="../core/ngx_core.h.html#ngx_connection_t" title='ngx_connection_t' data-type='struct ngx_connection_s' data-ref="ngx_connection_t">ngx_connection_t</a>  *<dfn class="decl field" id="ngx_event_pipe_s::downstream" title='ngx_event_pipe_s::downstream' data-ref="ngx_event_pipe_s::downstream">downstream</dfn>;</td></tr>
+<tr><th id="28">28</th><td></td></tr>
+<tr><th id="29">29</th><td>    <a class="typedef" href="../core/ngx_core.h.html#ngx_chain_t" title='ngx_chain_t' data-type='struct ngx_chain_s' data-ref="ngx_chain_t">ngx_chain_t</a>       *<dfn class="decl field" id="ngx_event_pipe_s::free_raw_bufs" title='ngx_event_pipe_s::free_raw_bufs' data-ref="ngx_event_pipe_s::free_raw_bufs">free_raw_bufs</dfn>;</td></tr>
+<tr><th id="30">30</th><td>    <a class="typedef" href="../core/ngx_core.h.html#ngx_chain_t" title='ngx_chain_t' data-type='struct ngx_chain_s' data-ref="ngx_chain_t">ngx_chain_t</a>       *<dfn class="decl field" id="ngx_event_pipe_s::in" title='ngx_event_pipe_s::in' data-ref="ngx_event_pipe_s::in">in</dfn>;</td></tr>
+<tr><th id="31">31</th><td>    <a class="typedef" href="../core/ngx_core.h.html#ngx_chain_t" title='ngx_chain_t' data-type='struct ngx_chain_s' data-ref="ngx_chain_t">ngx_chain_t</a>      **<dfn class="decl field" id="ngx_event_pipe_s::last_in" title='ngx_event_pipe_s::last_in' data-ref="ngx_event_pipe_s::last_in">last_in</dfn>;</td></tr>
+<tr><th id="32">32</th><td></td></tr>
+<tr><th id="33">33</th><td>    <a class="typedef" href="../core/ngx_core.h.html#ngx_chain_t" title='ngx_chain_t' data-type='struct ngx_chain_s' data-ref="ngx_chain_t">ngx_chain_t</a>       *<dfn class="decl field" id="ngx_event_pipe_s::writing" title='ngx_event_pipe_s::writing' data-ref="ngx_event_pipe_s::writing">writing</dfn>;</td></tr>
+<tr><th id="34">34</th><td></td></tr>
+<tr><th id="35">35</th><td>    <a class="typedef" href="../core/ngx_core.h.html#ngx_chain_t" title='ngx_chain_t' data-type='struct ngx_chain_s' data-ref="ngx_chain_t">ngx_chain_t</a>       *<dfn class="decl field" id="ngx_event_pipe_s::out" title='ngx_event_pipe_s::out' data-ref="ngx_event_pipe_s::out">out</dfn>;</td></tr>
+<tr><th id="36">36</th><td>    <a class="typedef" href="../core/ngx_core.h.html#ngx_chain_t" title='ngx_chain_t' data-type='struct ngx_chain_s' data-ref="ngx_chain_t">ngx_chain_t</a>       *<dfn class="decl field" id="ngx_event_pipe_s::free" title='ngx_event_pipe_s::free' data-ref="ngx_event_pipe_s::free">free</dfn>;</td></tr>
+<tr><th id="37">37</th><td>    <a class="typedef" href="../core/ngx_core.h.html#ngx_chain_t" title='ngx_chain_t' data-type='struct ngx_chain_s' data-ref="ngx_chain_t">ngx_chain_t</a>       *<dfn class="decl field" id="ngx_event_pipe_s::busy" title='ngx_event_pipe_s::busy' data-ref="ngx_event_pipe_s::busy">busy</dfn>;</td></tr>
+<tr><th id="38">38</th><td></td></tr>
+<tr><th id="39">39</th><td>    <i>/*</i></td></tr>
+<tr><th id="40">40</th><td><i>     * the input filter i.e. that moves HTTP/1.1 chunks</i></td></tr>
+<tr><th id="41">41</th><td><i>     * from the raw bufs to an incoming chain</i></td></tr>
+<tr><th id="42">42</th><td><i>     */</i></td></tr>
+<tr><th id="43">43</th><td></td></tr>
+<tr><th id="44">44</th><td>    <a class="typedef" href="#ngx_event_pipe_input_filter_pt" title='ngx_event_pipe_input_filter_pt' data-type='ngx_int_t (*)(ngx_event_pipe_t *, ngx_buf_t *)' data-ref="ngx_event_pipe_input_filter_pt">ngx_event_pipe_input_filter_pt</a>    <dfn class="decl field" id="ngx_event_pipe_s::input_filter" title='ngx_event_pipe_s::input_filter' data-ref="ngx_event_pipe_s::input_filter">input_filter</dfn>;</td></tr>
+<tr><th id="45">45</th><td>    <em>void</em>                             *<dfn class="decl field" id="ngx_event_pipe_s::input_ctx" title='ngx_event_pipe_s::input_ctx' data-ref="ngx_event_pipe_s::input_ctx">input_ctx</dfn>;</td></tr>
+<tr><th id="46">46</th><td></td></tr>
+<tr><th id="47">47</th><td>    <a class="typedef" href="#ngx_event_pipe_output_filter_pt" title='ngx_event_pipe_output_filter_pt' data-type='ngx_int_t (*)(void *, ngx_chain_t *)' data-ref="ngx_event_pipe_output_filter_pt">ngx_event_pipe_output_filter_pt</a>   <dfn class="decl field" id="ngx_event_pipe_s::output_filter" title='ngx_event_pipe_s::output_filter' data-ref="ngx_event_pipe_s::output_filter">output_filter</dfn>;</td></tr>
+<tr><th id="48">48</th><td>    <em>void</em>                             *<dfn class="decl field" id="ngx_event_pipe_s::output_ctx" title='ngx_event_pipe_s::output_ctx' data-ref="ngx_event_pipe_s::output_ctx">output_ctx</dfn>;</td></tr>
+<tr><th id="49">49</th><td></td></tr>
+<tr><th id="50">50</th><td><u>#<span data-ppcond="50">if</span> (NGX_THREADS || NGX_COMPAT)</u></td></tr>
+<tr><th id="51">51</th><td>    ngx_int_t                       (*thread_handler)(ngx_thread_task_t *task,</td></tr>
+<tr><th id="52">52</th><td>                                                      ngx_file_t *file);</td></tr>
+<tr><th id="53">53</th><td>    <em>void</em>                             *thread_ctx;</td></tr>
+<tr><th id="54">54</th><td>    ngx_thread_task_t                *thread_task;</td></tr>
+<tr><th id="55">55</th><td><u>#<span data-ppcond="50">endif</span></u></td></tr>
+<tr><th id="56">56</th><td></td></tr>
+<tr><th id="57">57</th><td>    <em>unsigned</em>           <dfn class="decl field" id="ngx_event_pipe_s::read" title='ngx_event_pipe_s::read' data-ref="ngx_event_pipe_s::read">read</dfn>:<var>1</var>;</td></tr>
+<tr><th id="58">58</th><td>    <em>unsigned</em>           <dfn class="decl field" id="ngx_event_pipe_s::cacheable" title='ngx_event_pipe_s::cacheable' data-ref="ngx_event_pipe_s::cacheable">cacheable</dfn>:<var>1</var>;</td></tr>
+<tr><th id="59">59</th><td>    <em>unsigned</em>           <dfn class="decl field" id="ngx_event_pipe_s::single_buf" title='ngx_event_pipe_s::single_buf' data-ref="ngx_event_pipe_s::single_buf">single_buf</dfn>:<var>1</var>;</td></tr>
+<tr><th id="60">60</th><td>    <em>unsigned</em>           <dfn class="decl field" id="ngx_event_pipe_s::free_bufs" title='ngx_event_pipe_s::free_bufs' data-ref="ngx_event_pipe_s::free_bufs">free_bufs</dfn>:<var>1</var>;</td></tr>
+<tr><th id="61">61</th><td>    <em>unsigned</em>           <dfn class="decl field" id="ngx_event_pipe_s::upstream_done" title='ngx_event_pipe_s::upstream_done' data-ref="ngx_event_pipe_s::upstream_done">upstream_done</dfn>:<var>1</var>;</td></tr>
+<tr><th id="62">62</th><td>    <em>unsigned</em>           <dfn class="decl field" id="ngx_event_pipe_s::upstream_error" title='ngx_event_pipe_s::upstream_error' data-ref="ngx_event_pipe_s::upstream_error">upstream_error</dfn>:<var>1</var>;</td></tr>
+<tr><th id="63">63</th><td>    <em>unsigned</em>           <dfn class="decl field" id="ngx_event_pipe_s::upstream_eof" title='ngx_event_pipe_s::upstream_eof' data-ref="ngx_event_pipe_s::upstream_eof">upstream_eof</dfn>:<var>1</var>;</td></tr>
+<tr><th id="64">64</th><td>    <em>unsigned</em>           <dfn class="decl field" id="ngx_event_pipe_s::upstream_blocked" title='ngx_event_pipe_s::upstream_blocked' data-ref="ngx_event_pipe_s::upstream_blocked">upstream_blocked</dfn>:<var>1</var>;</td></tr>
+<tr><th id="65">65</th><td>    <em>unsigned</em>           <dfn class="decl field" id="ngx_event_pipe_s::downstream_done" title='ngx_event_pipe_s::downstream_done' data-ref="ngx_event_pipe_s::downstream_done">downstream_done</dfn>:<var>1</var>;</td></tr>
+<tr><th id="66">66</th><td>    <em>unsigned</em>           <dfn class="decl field" id="ngx_event_pipe_s::downstream_error" title='ngx_event_pipe_s::downstream_error' data-ref="ngx_event_pipe_s::downstream_error">downstream_error</dfn>:<var>1</var>;</td></tr>
+<tr><th id="67">67</th><td>    <em>unsigned</em>           <dfn class="decl field" id="ngx_event_pipe_s::cyclic_temp_file" title='ngx_event_pipe_s::cyclic_temp_file' data-ref="ngx_event_pipe_s::cyclic_temp_file">cyclic_temp_file</dfn>:<var>1</var>;</td></tr>
+<tr><th id="68">68</th><td>    <em>unsigned</em>           <dfn class="decl field" id="ngx_event_pipe_s::aio" title='ngx_event_pipe_s::aio' data-ref="ngx_event_pipe_s::aio">aio</dfn>:<var>1</var>;</td></tr>
+<tr><th id="69">69</th><td></td></tr>
+<tr><th id="70">70</th><td>    <a class="typedef" href="../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a>          <dfn class="decl field" id="ngx_event_pipe_s::allocated" title='ngx_event_pipe_s::allocated' data-ref="ngx_event_pipe_s::allocated">allocated</dfn>;</td></tr>
+<tr><th id="71">71</th><td>    <a class="typedef" href="../core/ngx_buf.h.html#ngx_bufs_t" title='ngx_bufs_t' data-type='struct ngx_bufs_t' data-ref="ngx_bufs_t">ngx_bufs_t</a>         <dfn class="decl field" id="ngx_event_pipe_s::bufs" title='ngx_event_pipe_s::bufs' data-ref="ngx_event_pipe_s::bufs">bufs</dfn>;</td></tr>
+<tr><th id="72">72</th><td>    <a class="typedef" href="../core/ngx_buf.h.html#ngx_buf_tag_t" title='ngx_buf_tag_t' data-type='void *' data-ref="ngx_buf_tag_t">ngx_buf_tag_t</a>      <dfn class="decl field" id="ngx_event_pipe_s::tag" title='ngx_event_pipe_s::tag' data-ref="ngx_event_pipe_s::tag">tag</dfn>;</td></tr>
+<tr><th id="73">73</th><td></td></tr>
+<tr><th id="74">74</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#ssize_t" title='ssize_t' data-type='__ssize_t' data-ref="ssize_t">ssize_t</a>            <dfn class="decl field" id="ngx_event_pipe_s::busy_size" title='ngx_event_pipe_s::busy_size' data-ref="ngx_event_pipe_s::busy_size">busy_size</dfn>;</td></tr>
+<tr><th id="75">75</th><td></td></tr>
+<tr><th id="76">76</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#off_t" title='off_t' data-type='__off64_t' data-ref="off_t">off_t</a>              <dfn class="decl field" id="ngx_event_pipe_s::read_length" title='ngx_event_pipe_s::read_length' data-ref="ngx_event_pipe_s::read_length">read_length</dfn>;</td></tr>
+<tr><th id="77">77</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#off_t" title='off_t' data-type='__off64_t' data-ref="off_t">off_t</a>              <dfn class="decl field" id="ngx_event_pipe_s::length" title='ngx_event_pipe_s::length' data-ref="ngx_event_pipe_s::length">length</dfn>;</td></tr>
+<tr><th id="78">78</th><td></td></tr>
+<tr><th id="79">79</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#off_t" title='off_t' data-type='__off64_t' data-ref="off_t">off_t</a>              <dfn class="decl field" id="ngx_event_pipe_s::max_temp_file_size" title='ngx_event_pipe_s::max_temp_file_size' data-ref="ngx_event_pipe_s::max_temp_file_size">max_temp_file_size</dfn>;</td></tr>
+<tr><th id="80">80</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#ssize_t" title='ssize_t' data-type='__ssize_t' data-ref="ssize_t">ssize_t</a>            <dfn class="decl field" id="ngx_event_pipe_s::temp_file_write_size" title='ngx_event_pipe_s::temp_file_write_size' data-ref="ngx_event_pipe_s::temp_file_write_size">temp_file_write_size</dfn>;</td></tr>
+<tr><th id="81">81</th><td></td></tr>
+<tr><th id="82">82</th><td>    <a class="typedef" href="../os/unix/ngx_time.h.html#ngx_msec_t" title='ngx_msec_t' data-type='ngx_rbtree_key_t' data-ref="ngx_msec_t">ngx_msec_t</a>         <dfn class="decl field" id="ngx_event_pipe_s::read_timeout" title='ngx_event_pipe_s::read_timeout' data-ref="ngx_event_pipe_s::read_timeout">read_timeout</dfn>;</td></tr>
+<tr><th id="83">83</th><td>    <a class="typedef" href="../os/unix/ngx_time.h.html#ngx_msec_t" title='ngx_msec_t' data-type='ngx_rbtree_key_t' data-ref="ngx_msec_t">ngx_msec_t</a>         <dfn class="decl field" id="ngx_event_pipe_s::send_timeout" title='ngx_event_pipe_s::send_timeout' data-ref="ngx_event_pipe_s::send_timeout">send_timeout</dfn>;</td></tr>
+<tr><th id="84">84</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#ssize_t" title='ssize_t' data-type='__ssize_t' data-ref="ssize_t">ssize_t</a>            <dfn class="decl field" id="ngx_event_pipe_s::send_lowat" title='ngx_event_pipe_s::send_lowat' data-ref="ngx_event_pipe_s::send_lowat">send_lowat</dfn>;</td></tr>
+<tr><th id="85">85</th><td></td></tr>
+<tr><th id="86">86</th><td>    <a class="typedef" href="../core/ngx_core.h.html#ngx_pool_t" title='ngx_pool_t' data-type='struct ngx_pool_s' data-ref="ngx_pool_t">ngx_pool_t</a>        *<dfn class="decl field" id="ngx_event_pipe_s::pool" title='ngx_event_pipe_s::pool' data-ref="ngx_event_pipe_s::pool">pool</dfn>;</td></tr>
+<tr><th id="87">87</th><td>    <a class="typedef" href="../core/ngx_core.h.html#ngx_log_t" title='ngx_log_t' data-type='struct ngx_log_s' data-ref="ngx_log_t">ngx_log_t</a>         *<dfn class="decl field" id="ngx_event_pipe_s::log" title='ngx_event_pipe_s::log' data-ref="ngx_event_pipe_s::log">log</dfn>;</td></tr>
+<tr><th id="88">88</th><td></td></tr>
+<tr><th id="89">89</th><td>    <a class="typedef" href="../core/ngx_core.h.html#ngx_chain_t" title='ngx_chain_t' data-type='struct ngx_chain_s' data-ref="ngx_chain_t">ngx_chain_t</a>       *<dfn class="decl field" id="ngx_event_pipe_s::preread_bufs" title='ngx_event_pipe_s::preread_bufs' data-ref="ngx_event_pipe_s::preread_bufs">preread_bufs</dfn>;</td></tr>
+<tr><th id="90">90</th><td>    <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span>             <dfn class="decl field" id="ngx_event_pipe_s::preread_size" title='ngx_event_pipe_s::preread_size' data-ref="ngx_event_pipe_s::preread_size">preread_size</dfn>;</td></tr>
+<tr><th id="91">91</th><td>    <a class="typedef" href="../core/ngx_buf.h.html#ngx_buf_t" title='ngx_buf_t' data-type='struct ngx_buf_s' data-ref="ngx_buf_t">ngx_buf_t</a>         *<dfn class="decl field" id="ngx_event_pipe_s::buf_to_file" title='ngx_event_pipe_s::buf_to_file' data-ref="ngx_event_pipe_s::buf_to_file">buf_to_file</dfn>;</td></tr>
+<tr><th id="92">92</th><td></td></tr>
+<tr><th id="93">93</th><td>    <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span>             <dfn class="decl field" id="ngx_event_pipe_s::limit_rate" title='ngx_event_pipe_s::limit_rate' data-ref="ngx_event_pipe_s::limit_rate">limit_rate</dfn>;</td></tr>
+<tr><th id="94">94</th><td>    <a class="typedef" href="../../../include/time.h.html#time_t" title='time_t' data-type='__time_t' data-ref="time_t">time_t</a>             <dfn class="decl field" id="ngx_event_pipe_s::start_sec" title='ngx_event_pipe_s::start_sec' data-ref="ngx_event_pipe_s::start_sec">start_sec</dfn>;</td></tr>
+<tr><th id="95">95</th><td></td></tr>
+<tr><th id="96">96</th><td>    <a class="typedef" href="../core/ngx_file.h.html#ngx_temp_file_t" title='ngx_temp_file_t' data-type='struct ngx_temp_file_t' data-ref="ngx_temp_file_t">ngx_temp_file_t</a>   *<dfn class="decl field" id="ngx_event_pipe_s::temp_file" title='ngx_event_pipe_s::temp_file' data-ref="ngx_event_pipe_s::temp_file">temp_file</dfn>;</td></tr>
+<tr><th id="97">97</th><td></td></tr>
+<tr><th id="98">98</th><td>    <i>/* STUB */</i> <em>int</em>     <dfn class="decl field" id="ngx_event_pipe_s::num" title='ngx_event_pipe_s::num' data-ref="ngx_event_pipe_s::num">num</dfn>;</td></tr>
+<tr><th id="99">99</th><td>};</td></tr>
+<tr><th id="100">100</th><td></td></tr>
+<tr><th id="101">101</th><td></td></tr>
+<tr><th id="102">102</th><td><a class="typedef" href="../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a> <a class="decl fn" href="ngx_event_pipe.c.html#ngx_event_pipe" title='ngx_event_pipe' data-ref="ngx_event_pipe" id="ngx_event_pipe">ngx_event_pipe</a>(<a class="typedef" href="#ngx_event_pipe_t" title='ngx_event_pipe_t' data-type='struct ngx_event_pipe_s' data-ref="ngx_event_pipe_t">ngx_event_pipe_t</a> *<dfn class="local col5 decl" id="5p" title='p' data-type='ngx_event_pipe_t *' data-ref="5p">p</dfn>, <a class="typedef" href="../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a> <dfn class="local col6 decl" id="6do_write" title='do_write' data-type='ngx_int_t' data-ref="6do_write">do_write</dfn>);</td></tr>
+<tr><th id="103">103</th><td><a class="typedef" href="../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a> <a class="decl fn" href="ngx_event_pipe.c.html#ngx_event_pipe_copy_input_filter" title='ngx_event_pipe_copy_input_filter' data-ref="ngx_event_pipe_copy_input_filter" id="ngx_event_pipe_copy_input_filter">ngx_event_pipe_copy_input_filter</a>(<a class="typedef" href="#ngx_event_pipe_t" title='ngx_event_pipe_t' data-type='struct ngx_event_pipe_s' data-ref="ngx_event_pipe_t">ngx_event_pipe_t</a> *<dfn class="local col7 decl" id="7p" title='p' data-type='ngx_event_pipe_t *' data-ref="7p">p</dfn>, <a class="typedef" href="../core/ngx_buf.h.html#ngx_buf_t" title='ngx_buf_t' data-type='struct ngx_buf_s' data-ref="ngx_buf_t">ngx_buf_t</a> *<dfn class="local col8 decl" id="8buf" title='buf' data-type='ngx_buf_t *' data-ref="8buf">buf</dfn>);</td></tr>
+<tr><th id="104">104</th><td><a class="typedef" href="../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a> <a class="decl fn" href="ngx_event_pipe.c.html#ngx_event_pipe_add_free_buf" title='ngx_event_pipe_add_free_buf' data-ref="ngx_event_pipe_add_free_buf" id="ngx_event_pipe_add_free_buf">ngx_event_pipe_add_free_buf</a>(<a class="typedef" href="#ngx_event_pipe_t" title='ngx_event_pipe_t' data-type='struct ngx_event_pipe_s' data-ref="ngx_event_pipe_t">ngx_event_pipe_t</a> *<dfn class="local col9 decl" id="9p" title='p' data-type='ngx_event_pipe_t *' data-ref="9p">p</dfn>, <a class="typedef" href="../core/ngx_buf.h.html#ngx_buf_t" title='ngx_buf_t' data-type='struct ngx_buf_s' data-ref="ngx_buf_t">ngx_buf_t</a> *<dfn class="local col0 decl" id="10b" title='b' data-type='ngx_buf_t *' data-ref="10b">b</dfn>);</td></tr>
+<tr><th id="105">105</th><td></td></tr>
+<tr><th id="106">106</th><td></td></tr>
+<tr><th id="107">107</th><td><u>#<span data-ppcond="8">endif</span> /* _NGX_EVENT_PIPE_H_INCLUDED_ */</u></td></tr>
+<tr><th id="108">108</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='ngx_event_pipe.c.html'>nginx/src/event/ngx_event_pipe.c</a><br/>Generated on <em>2018-Apr-06</em> from project nginx<br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

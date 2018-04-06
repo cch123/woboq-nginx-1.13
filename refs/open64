@@ -1,0 +1,19 @@
+<dec f='include/fcntl.h' l='159' type='int open(const char * __file, int __oflag)'/>
+<dec f='include/fcntl.h' l='166' type='int open64(const char * __file, int __oflag)'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='180' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_cycle.c' l='374' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_cycle.c' l='962' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1023' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1120' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_file.c' l='809' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_file.c' l='842' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_log.c' l='378' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='638' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='660' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='676' macro='1' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_auth_basic_module.c' l='141' macro='1' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1412' macro='1' u='c'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1449' macro='1' u='c'/>
+<use f='nginx/src/os/unix/ngx_daemon.c' l='39' u='c' c='ngx_daemon'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='281' u='c' c='ngx_open_tempfile'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='621' macro='1' u='c'/>

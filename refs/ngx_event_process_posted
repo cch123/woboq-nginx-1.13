@@ -1,0 +1,4 @@
+<dec f='nginx/src/event/ngx_event_posted.h' l='41' type='void ngx_event_process_posted(ngx_cycle_t * cycle, ngx_queue_t * posted)'/>
+<use f='nginx/src/event/ngx_event.c' l='249' u='c' c='ngx_process_events_and_timers'/>
+<use f='nginx/src/event/ngx_event.c' l='259' u='c' c='ngx_process_events_and_timers'/>
+<def f='nginx/src/event/ngx_event_posted.c' l='17' ll='35' type='void ngx_event_process_posted(ngx_cycle_t * cycle, ngx_queue_t * posted)'/>

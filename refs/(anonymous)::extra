@@ -1,0 +1,10 @@
+<dec f='nginx/src/core/ngx_regex.h' l='25' type='pcre_extra *'/>
+<offset>64</offset>
+<use f='nginx/src/core/ngx_regex.c' l='208' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_regex.c' l='277' u='r' c='ngx_pcre_free_studies'/>
+<use f='nginx/src/core/ngx_regex.c' l='278' u='r' c='ngx_pcre_free_studies'/>
+<use f='nginx/src/core/ngx_regex.c' l='341' u='w' c='ngx_regex_module_init'/>
+<use f='nginx/src/core/ngx_regex.c' l='354' u='r' c='ngx_regex_module_init'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='3440' macro='1' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1910' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2518' macro='1' u='r'/>

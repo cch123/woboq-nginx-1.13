@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http.h' l='108' type='void ngx_http_split_args(ngx_http_request_t * r, ngx_str_t * uri, ngx_str_t * args)'/>
+<use f='nginx/src/http/modules/ngx_http_try_files_module.c' l='207' u='c' c='ngx_http_try_files_handler'/>
+<def f='nginx/src/http/ngx_http_parse.c' l='2105' ll='2123' type='void ngx_http_split_args(ngx_http_request_t * r, ngx_str_t * uri, ngx_str_t * args)'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='608' u='c' c='ngx_http_send_error_page'/>

@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='481' type='unsigned int'/>
+<offset>9843</offset>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1236' u='w' c='ngx_http_update_location_config'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='1143' u='r' c='ngx_http_request_body_save_filter'/>

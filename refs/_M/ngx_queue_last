@@ -1,0 +1,16 @@
+<dec f='nginx/src/core/ngx_queue.h' l='54'/>
+<use f='nginx/src/core/ngx_connection.c' l='1248' u='c'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='105' u='c'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1116' u='c'/>
+<use f='nginx/src/core/ngx_queue.c' l='24' u='c'/>
+<use f='nginx/src/core/ngx_queue.c' l='35' u='c'/>
+<use f='nginx/src/core/ngx_queue.c' l='41' u='c'/>
+<use f='nginx/src/core/ngx_queue.c' l='58' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1221' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1486' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_limit_req_module.c' l='567' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_keepalive_module.c' l='322' u='c'/>
+<use f='nginx/src/http/ngx_http.c' l='970' u='c'/>
+<use f='nginx/src/http/ngx_http.c' l='1011' u='c'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1737' u='c'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1836' u='c'/>

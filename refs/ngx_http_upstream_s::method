@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='371' type='ngx_str_t'/>
+<offset>8000</offset>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1172' u='m' c='ngx_http_proxy_create_request'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1174' u='r' c='ngx_http_proxy_create_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='829' u='w' c='ngx_http_upstream_cache'/>

@@ -1,0 +1,13 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='92'/>
+<use f='nginx/src/http/modules/ngx_http_access_module.c' l='288' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_auth_basic_module.c' l='148' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='231' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='251' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_index_module.c' l='231' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_index_module.c' l='325' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_index_module.c' l='375' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_static_module.c' l='125' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1115' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1144' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1201' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4127' u='c'/>

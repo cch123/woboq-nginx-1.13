@@ -1,0 +1,6 @@
+<dec f='nginx/objs/ngx_auto_config.h' l='79'/>
+<use f='nginx/src/core/ngx_md5.c' l='145' u='c'/>
+<use f='nginx/src/core/ngx_md5.c' l='175' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='71' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='989' u='c'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='36' u='c'/>

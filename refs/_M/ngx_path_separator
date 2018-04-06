@@ -1,0 +1,11 @@
+<dec f='nginx/src/os/unix/ngx_files.h' l='201'/>
+<use f='nginx/src/core/nginx.c' l='921' u='c'/>
+<use f='nginx/src/core/nginx.c' l='987' u='c'/>
+<use f='nginx/src/core/ngx_log.c' l='368' u='c'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1834' u='c'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1864' u='c'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1869' u='c'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1900' u='c'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1913' u='c'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1918' u='c'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2014' u='c'/>

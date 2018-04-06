@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='206' type='ngx_http_core_loc_conf_t **'/>
+<offset>1152</offset>
+<use f='nginx/src/http/ngx_http.c' l='748' u='w' c='ngx_http_init_locations'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2479' u='r' c='ngx_http_named_location'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2481' u='r' c='ngx_http_named_location'/>

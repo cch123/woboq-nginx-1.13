@@ -1,0 +1,18 @@
+<dec f='nginx/objs/ngx_modules.c' l='48' type='ngx_module_t'/>
+<use f='nginx/objs/ngx_modules.c' l='100' u='a'/>
+<use f='nginx/objs/ngx_modules.c' l='100' u='a'/>
+<def f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='216' ll='229' type='ngx_module_t'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='247' u='m' c='ngx_http_gzip_header_filter'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='291' u='m' c='ngx_http_gzip_header_filter'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='326' u='m' c='ngx_http_gzip_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='390' u='a' c='ngx_http_gzip_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='464' u='a' c='ngx_http_gzip_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='499' u='m' c='ngx_http_gzip_filter_memory'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='578' u='m' c='ngx_http_gzip_filter_buffer'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='606' u='a' c='ngx_http_gzip_filter_buffer'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='632' u='m' c='ngx_http_gzip_filter_deflate_start'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='726' u='a' c='ngx_http_gzip_filter_add_data'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='771' u='m' c='ngx_http_gzip_filter_get_buf'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='788' u='a' c='ngx_http_gzip_filter_get_buf'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='910' u='m' c='ngx_http_gzip_filter_deflate'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='1115' u='m' c='ngx_http_gzip_ratio_variable'/>

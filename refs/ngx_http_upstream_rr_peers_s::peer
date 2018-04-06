@@ -1,0 +1,16 @@
+<dec f='nginx/src/http/ngx_http_upstream_round_robin.h' l='79' type='ngx_http_upstream_rr_peer_t *'/>
+<offset>512</offset>
+<use f='nginx/src/http/modules/ngx_http_upstream_hash_module.c' l='215' u='r' c='ngx_http_upstream_get_hash_peer'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_hash_module.c' l='315' u='r' c='ngx_http_upstream_init_chash'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_hash_module.c' l='531' u='r' c='ngx_http_upstream_get_chash_peer'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_ip_hash_module.c' l='185' u='r' c='ngx_http_upstream_get_ip_hash_peer'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_least_conn_module.c' l='135' u='r' c='ngx_http_upstream_get_least_conn_peer'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_zone_module.c' l='218' u='a' c='ngx_http_upstream_zone_copy_peers'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_zone_module.c' l='243' u='a' c='ngx_http_upstream_zone_copy_peers'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='81' u='a' c='ngx_http_upstream_init_round_robin'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='145' u='a' c='ngx_http_upstream_init_round_robin'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='219' u='a' c='ngx_http_upstream_init_round_robin'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='347' u='w' c='ngx_http_upstream_create_round_robin_peer'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='350' u='a' c='ngx_http_upstream_create_round_robin_peer'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='436' u='r' c='ngx_http_upstream_get_round_robin_peer'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='525' u='r' c='ngx_http_upstream_get_peer'/>

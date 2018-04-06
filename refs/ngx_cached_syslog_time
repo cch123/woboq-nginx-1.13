@@ -1,0 +1,7 @@
+<dec f='nginx/src/core/ngx_times.h' l='43' type='volatile ngx_str_t'/>
+<use f='nginx/src/core/ngx_syslog.c' l='227' u='a' c='ngx_syslog_add_header'/>
+<use f='nginx/src/core/ngx_syslog.c' l='231' u='a' c='ngx_syslog_add_header'/>
+<def f='nginx/src/core/ngx_times.c' l='35' type='volatile ngx_str_t'/>
+<use f='nginx/src/core/ngx_times.c' l='72' u='m' c='ngx_time_init'/>
+<use f='nginx/src/core/ngx_times.c' l='189' u='m' c='ngx_time_update'/>
+<use f='nginx/src/core/ngx_times.c' l='274' u='m' c='ngx_time_sigsafe_update'/>

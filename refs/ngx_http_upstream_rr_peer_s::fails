@@ -1,0 +1,11 @@
+<dec f='nginx/src/http/ngx_http_upstream_round_robin.h' l='32' type='ngx_uint_t'/>
+<offset>704</offset>
+<use f='nginx/src/http/modules/ngx_http_upstream_hash_module.c' l='239' u='r' c='ngx_http_upstream_get_hash_peer'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_hash_module.c' l='547' u='r' c='ngx_http_upstream_get_chash_peer'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_ip_hash_module.c' l='209' u='r' c='ngx_http_upstream_get_ip_hash_peer'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_least_conn_module.c' l='151' u='r' c='ngx_http_upstream_get_least_conn_peer'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_least_conn_module.c' l='210' u='r' c='ngx_http_upstream_get_least_conn_peer'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='541' u='r' c='ngx_http_upstream_get_peer'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='618' u='w' c='ngx_http_upstream_free_round_robin_peer'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='625' u='r' c='ngx_http_upstream_free_round_robin_peer'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='644' u='w' c='ngx_http_upstream_free_round_robin_peer'/>

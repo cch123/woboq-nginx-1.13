@@ -1,0 +1,10 @@
+<dec f='nginx/src/http/ngx_http_script.h' l='52' type='void *'/>
+<offset>576</offset>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='398' u='w' c='ngx_http_rewrite'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='406' u='r' c='ngx_http_rewrite'/>
+<use f='nginx/src/http/ngx_http_script.c' l='631' u='a' c='ngx_http_script_done'/>
+<use f='nginx/src/http/ngx_http_script.c' l='704' u='a' c='ngx_http_script_add_copy_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='792' u='a' c='ngx_http_script_add_var_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='873' u='a' c='ngx_http_script_add_args_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1188' u='a' c='ngx_http_script_add_capture_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1301' u='a' c='ngx_http_script_add_full_name_code'/>

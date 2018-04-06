@@ -1,0 +1,12 @@
+<dec f='nginx/src/core/ngx_file.h' l='90' type='time_t'/>
+<dec f='nginx/src/core/ngx_file.h' l='105' type='time_t'/>
+<offset>192</offset>
+<use f='nginx/src/core/ngx_file.c' l='679' u='r' c='ngx_ext_rename_file'/>
+<use f='nginx/src/core/ngx_file.c' l='680' u='r' c='ngx_ext_rename_file'/>
+<use f='nginx/src/core/ngx_file.c' l='733' u='w' c='ngx_ext_rename_file'/>
+<use f='nginx/src/core/ngx_file.c' l='733' u='r' c='ngx_ext_rename_file'/>
+<use f='nginx/src/core/ngx_file.c' l='890' u='r' c='ngx_copy_file'/>
+<use f='nginx/src/core/ngx_file.c' l='891' u='r' c='ngx_copy_file'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1389' u='w' c='ngx_http_file_cache_update'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4025' u='w' c='ngx_http_upstream_store'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4036' u='w' c='ngx_http_upstream_store'/>

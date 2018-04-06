@@ -1,0 +1,23 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='66' type='u_short'/>
+<dec f='nginx/src/core/ngx_resolver.h' l='73' type='u_short'/>
+<dec f='nginx/src/core/ngx_resolver.h' l='81' type='u_short'/>
+<offset>144</offset>
+<use f='nginx/src/core/ngx_resolver.c' l='2769' u='w' c='ngx_resolver_process_srv'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2771' u='r' c='ngx_resolver_process_srv'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2772' u='w' c='ngx_resolver_process_srv'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2951' u='w' c='ngx_resolver_resolve_srv_names'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2951' u='r' c='ngx_resolver_resolve_srv_names'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4279' u='r' c='ngx_resolver_report_srv'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4289' u='r' c='ngx_resolver_report_srv'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4293' u='r' c='ngx_resolver_report_srv'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4303' u='w' c='ngx_resolver_report_srv'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4303' u='r' c='ngx_resolver_report_srv'/>
+<dec f='nginx/src/http/ngx_http_upstream.h' l='97' type='ngx_uint_t'/>
+<offset>256</offset>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5878' u='w' c='ngx_http_upstream_server'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='54' u='r' c='ngx_http_upstream_init_round_robin'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='92' u='r' c='ngx_http_upstream_init_round_robin'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='93' u='r' c='ngx_http_upstream_init_round_robin'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='120' u='r' c='ngx_http_upstream_init_round_robin'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='156' u='r' c='ngx_http_upstream_init_round_robin'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='157' u='r' c='ngx_http_upstream_init_round_robin'/>

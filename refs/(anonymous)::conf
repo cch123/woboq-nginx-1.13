@@ -1,0 +1,16 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='249' type='ngx_uint_t'/>
+<dec f='nginx/src/http/ngx_http_core_module.h' l='244' type='ngx_http_addr_conf_t'/>
+<dec f='nginx/src/http/ngx_http_core_module.h' l='252' type='ngx_http_addr_conf_t'/>
+<offset>128</offset>
+<use f='nginx/src/http/ngx_http.c' l='1800' u='m' c='ngx_http_add_addrs'/>
+<use f='nginx/src/http/ngx_http.c' l='1807' u='m' c='ngx_http_add_addrs'/>
+<use f='nginx/src/http/ngx_http.c' l='1827' u='m' c='ngx_http_add_addrs'/>
+<use f='nginx/src/http/ngx_http.c' l='1865' u='m' c='ngx_http_add_addrs6'/>
+<use f='nginx/src/http/ngx_http.c' l='1872' u='m' c='ngx_http_add_addrs6'/>
+<use f='nginx/src/http/ngx_http.c' l='1892' u='m' c='ngx_http_add_addrs6'/>
+<use f='nginx/src/http/ngx_http_request.c' l='261' u='a' c='ngx_http_init_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='279' u='a' c='ngx_http_init_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='291' u='a' c='ngx_http_init_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='297' u='a' c='ngx_http_init_connection'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2696' u='r' c='ngx_http_upstream_process_headers'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2755' u='r' c='ngx_http_upstream_process_headers'/>

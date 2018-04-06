@@ -1,0 +1,6 @@
+<dec f='nginx/src/event/ngx_event.h' l='501'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='327' u='c'/>
+<use f='nginx/src/event/ngx_event.c' l='579' u='c'/>
+<use f='nginx/src/event/ngx_event.c' l='1024' u='c'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='47' u='c'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='362' u='c'/>

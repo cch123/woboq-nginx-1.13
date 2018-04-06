@@ -1,0 +1,16 @@
+<dec f='include/netinet/in.h' l='194'/>
+<use f='nginx/src/core/ngx_config.h' l='117' u='a'/>
+<doc f='include/netinet/in.h' l='193'>/* Address indicating an error return.  */</doc>
+<use f='nginx/src/core/ngx_inet.c' l='35' u='c'/>
+<use f='nginx/src/core/ngx_inet.c' l='48' u='c'/>
+<use f='nginx/src/core/ngx_inet.c' l='56' u='c'/>
+<use f='nginx/src/core/ngx_inet.c' l='119' u='c'/>
+<use f='nginx/src/core/ngx_inet.c' l='391' u='c'/>
+<use f='nginx/src/core/ngx_inet.c' l='578' u='c'/>
+<use f='nginx/src/core/ngx_inet.c' l='901' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='383' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='190' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='274' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='287' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='721' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='731' u='c'/>

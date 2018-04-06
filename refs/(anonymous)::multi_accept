@@ -1,0 +1,7 @@
+<dec f='nginx/src/event/ngx_event.h' l='444' type='ngx_flag_t'/>
+<offset>128</offset>
+<use f='nginx/src/event/ngx_event.c' l='1186' u='w' c='ngx_event_core_create_conf'/>
+<use f='nginx/src/event/ngx_event.c' l='1285' u='r' c='ngx_event_core_init_conf'/>
+<use f='nginx/src/event/ngx_event.c' l='1285' u='w' c='ngx_event_core_init_conf'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='50' u='r' c='ngx_event_accept'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='365' u='r' c='ngx_event_recvmsg'/>

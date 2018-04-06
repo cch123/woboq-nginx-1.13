@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_string.h' l='175' type='ngx_int_t ngx_atofp(u_char * line, size_t n, size_t point)'/>
+<def f='nginx/src/core/ngx_string.c' l='947' ll='998' type='ngx_int_t ngx_atofp(u_char * line, size_t n, size_t point)'/>
+<doc f='nginx/src/core/ngx_string.c' l='945'>/* parse a fixed point number, e.g., ngx_atofp(&quot;10.5&quot;, 4, 2) returns 1050 */</doc>
+<use f='nginx/src/http/modules/ngx_http_split_clients_module.c' l='225' u='c' c='ngx_http_split_clients'/>

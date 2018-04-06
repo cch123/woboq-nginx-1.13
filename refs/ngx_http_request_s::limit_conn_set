@@ -1,0 +1,9 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='510' type='unsigned int'/>
+<offset>9860</offset>
+<doc f='nginx/src/http/ngx_http_request.h' l='505'>/*
+     * instead of using the request context data in
+     * ngx_http_limit_conn_module and ngx_http_limit_req_module
+     * we use the single bits in the request structure
+     */</doc>
+<use f='nginx/src/http/modules/ngx_http_limit_conn_module.c' l='156' u='r' c='ngx_http_limit_conn_handler'/>
+<use f='nginx/src/http/modules/ngx_http_limit_conn_module.c' l='182' u='w' c='ngx_http_limit_conn_handler'/>

@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_connection.h' l='70' type='unsigned int'/>
+<offset>1867</offset>
+<use f='nginx/src/core/ngx_connection.c' l='509' u='r' c='ngx_open_listening_sockets'/>
+<use f='nginx/src/http/ngx_http.c' l='1760' u='w' c='ngx_http_add_listening'/>

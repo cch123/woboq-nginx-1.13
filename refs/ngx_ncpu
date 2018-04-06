@@ -1,0 +1,13 @@
+<dec f='nginx/src/os/unix/ngx_os.h' l='79' type='ngx_int_t'/>
+<use f='nginx/src/core/nginx.c' l='1351' u='r' c='ngx_set_cpu_affinity'/>
+<use f='nginx/src/core/nginx.c' l='1351' u='r' c='ngx_set_cpu_affinity'/>
+<use f='nginx/src/core/nginx.c' l='1481' u='r' c='ngx_set_worker_processes'/>
+<use f='nginx/src/core/ngx_rwlock.c' l='30' u='r' c='ngx_rwlock_wlock'/>
+<use f='nginx/src/core/ngx_rwlock.c' l='66' u='r' c='ngx_rwlock_rlock'/>
+<use f='nginx/src/core/ngx_shmtx.c' l='82' u='r' c='ngx_shmtx_lock'/>
+<use f='nginx/src/core/ngx_spinlock.c' l='26' u='r' c='ngx_spinlock'/>
+<def f='nginx/src/os/unix/ngx_posix_init.c' l='13' type='ngx_int_t'/>
+<use f='nginx/src/os/unix/ngx_posix_init.c' l='59' u='r' c='ngx_os_init'/>
+<use f='nginx/src/os/unix/ngx_posix_init.c' l='60' u='w' c='ngx_os_init'/>
+<use f='nginx/src/os/unix/ngx_posix_init.c' l='64' u='r' c='ngx_os_init'/>
+<use f='nginx/src/os/unix/ngx_posix_init.c' l='65' u='w' c='ngx_os_init'/>

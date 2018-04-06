@@ -1,0 +1,6 @@
+<dec f='include/zlib.h' l='164'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='656' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='699' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='753' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='869' u='c'/>
+<doc f='include/zlib.h' l='162'>/* constants */</doc>

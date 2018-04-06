@@ -1,0 +1,17 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='73' type='unsigned int'/>
+<offset>930</offset>
+<use f='nginx/src/http/ngx_http.c' l='1595' u='r' c='ngx_http_cmp_conf_addrs'/>
+<use f='nginx/src/http/ngx_http.c' l='1595' u='r' c='ngx_http_cmp_conf_addrs'/>
+<use f='nginx/src/http/ngx_http.c' l='1600' u='r' c='ngx_http_cmp_conf_addrs'/>
+<use f='nginx/src/http/ngx_http.c' l='1600' u='r' c='ngx_http_cmp_conf_addrs'/>
+<use f='nginx/src/http/ngx_http.c' l='1642' u='w' c='ngx_http_init_listening'/>
+<use f='nginx/src/http/ngx_http.c' l='1653' u='r' c='ngx_http_init_listening'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3801' u='w' c='ngx_http_core_listen'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3825' u='w' c='ngx_http_core_listen'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3840' u='w' c='ngx_http_core_listen'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3857' u='w' c='ngx_http_core_listen'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3874' u='w' c='ngx_http_core_listen'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3903' u='w' c='ngx_http_core_listen'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3934' u='w' c='ngx_http_core_listen'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3955' u='w' c='ngx_http_core_listen'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4073' u='w' c='ngx_http_core_listen'/>

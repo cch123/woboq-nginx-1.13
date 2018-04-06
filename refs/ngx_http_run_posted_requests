@@ -1,0 +1,8 @@
+<dec f='nginx/src/http/ngx_http.h' l='120' type='void ngx_http_run_posted_requests(ngx_connection_t * c)'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='477' u='c' c='ngx_http_file_cache_lock_wait_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1954' u='c' c='ngx_http_process_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2235' u='c' c='ngx_http_request_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2251' u='c' c='ngx_http_request_handler'/>
+<def f='nginx/src/http/ngx_http_request.c' l='2255' ll='2285' type='void ngx_http_run_posted_requests(ngx_connection_t * c)'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1248' u='c' c='ngx_http_upstream_resolve_handler'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1283' u='c' c='ngx_http_upstream_handler'/>

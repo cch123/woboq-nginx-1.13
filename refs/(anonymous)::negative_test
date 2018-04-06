@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http_script.h' l='125' type='unsigned int'/>
+<offset>385</offset>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='780' u='w' c='ngx_http_rewrite_if_condition'/>
+<use f='nginx/src/http/ngx_http_script.c' l='946' u='r' c='ngx_http_script_regex_start_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='977' u='r' c='ngx_http_script_regex_start_code'/>

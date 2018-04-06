@@ -1,0 +1,12 @@
+<dec f='nginx/src/core/ngx_buf.h' l='163' type='void ngx_chain_update_chains(ngx_pool_t * p, ngx_chain_t ** free, ngx_chain_t ** busy, ngx_chain_t ** out, ngx_buf_tag_t tag)'/>
+<def f='nginx/src/core/ngx_buf.c' l='183' ll='222' type='void ngx_chain_update_chains(ngx_pool_t * p, ngx_chain_t ** free, ngx_chain_t ** busy, ngx_chain_t ** out, ngx_buf_tag_t tag)'/>
+<use f='nginx/src/core/ngx_output_chain.c' l='220' u='c' c='ngx_output_chain'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='692' u='c' c='ngx_event_pipe_write_to_downstream'/>
+<use f='nginx/src/http/modules/ngx_http_chunked_filter_module.c' l='221' u='c' c='ngx_http_chunked_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='1605' u='c' c='ngx_http_fastcgi_body_output_filter'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='389' u='c' c='ngx_http_gzip_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='463' u='c' c='ngx_http_gzip_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1701' u='c' c='ngx_http_proxy_body_output_filter'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='923' u='c' c='ngx_http_request_body_length_filter'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='1076' u='c' c='ngx_http_request_body_chunked_filter'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3537' u='c' c='ngx_http_upstream_process_non_buffered_request'/>

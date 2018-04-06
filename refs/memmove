@@ -1,0 +1,17 @@
+<dec f='include/string.h' l='46' type='void * memmove(void * __dest, const void * __src, size_t __n)'/>
+<doc f='include/string.h' l='44'>/* Copy N bytes of SRC to DEST, guaranteeing
+   correct behavior for overlapping strings.  */</doc>
+<use f='nginx/src/core/ngx_conf_file.c' l='580' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_module.c' l='246' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1594' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1666' macro='1' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_auth_basic_module.c' l='244' macro='1' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='830' macro='1' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='869' macro='1' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='897' macro='1' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='921' macro='1' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='954' macro='1' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1013' macro='1' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='2727' macro='1' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_try_files_module.c' l='181' macro='1' u='c'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1090' macro='1' u='c'/>

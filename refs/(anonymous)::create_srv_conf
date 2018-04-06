@@ -1,0 +1,8 @@
+<dec f='nginx/src/http/ngx_http_config.h' l='31' type='void *(*)(ngx_conf_t *)'/>
+<offset>256</offset>
+<use f='nginx/src/http/ngx_http.c' l='201' u='r' c='ngx_http_block'/>
+<use f='nginx/src/http/ngx_http.c' l='202' u='r' c='ngx_http_block'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2747' u='r' c='ngx_http_core_server'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2748' u='r' c='ngx_http_core_server'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5695' u='r' c='ngx_http_upstream'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5696' u='r' c='ngx_http_upstream'/>

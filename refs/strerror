@@ -1,0 +1,4 @@
+<dec f='include/string.h' l='408' type='char * strerror(int __errnum)'/>
+<doc f='include/string.h' l='407'>/* Return a string describing the meaning of the `errno&apos; code in ERRNUM.  */</doc>
+<use f='nginx/src/os/unix/ngx_errno.c' l='66' u='c' c='ngx_strerror_init'/>
+<use f='nginx/src/os/unix/ngx_errno.c' l='84' u='c' c='ngx_strerror_init'/>

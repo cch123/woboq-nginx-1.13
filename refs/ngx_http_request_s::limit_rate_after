@@ -1,0 +1,8 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='436' type='size_t'/>
+<offset>9280</offset>
+<use f='nginx/src/http/ngx_http_write_filter_module.c' l='222' u='r' c='ngx_http_write_filter'/>
+<use f='nginx/src/http/ngx_http_write_filter_module.c' l='223' u='w' c='ngx_http_write_filter'/>
+<use f='nginx/src/http/ngx_http_write_filter_module.c' l='227' u='r' c='ngx_http_write_filter'/>
+<use f='nginx/src/http/ngx_http_write_filter_module.c' l='268' u='r' c='ngx_http_write_filter'/>
+<use f='nginx/src/http/ngx_http_write_filter_module.c' l='270' u='r' c='ngx_http_write_filter'/>
+<use f='nginx/src/http/ngx_http_write_filter_module.c' l='275' u='r' c='ngx_http_write_filter'/>

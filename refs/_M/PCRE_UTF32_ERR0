@@ -1,0 +1,2 @@
+<dec f='include/pcre.h' l='250'/>
+<doc f='include/pcre.h' l='248'>/* Specific error codes for UTF-32 validity checks */</doc>

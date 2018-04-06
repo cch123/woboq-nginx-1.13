@@ -1,0 +1,17 @@
+<dec f='nginx/src/core/ngx_conf_file.h' l='139' type='ngx_conf_post_handler_pt'/>
+<dec f='nginx/src/core/ngx_conf_file.h' l='144' type='ngx_conf_post_handler_pt'/>
+<dec f='nginx/src/core/ngx_conf_file.h' l='151' type='ngx_conf_post_handler_pt'/>
+<offset>0</offset>
+<use f='nginx/src/core/ngx_conf_file.c' l='1057' u='r' c='ngx_conf_set_flag_slot'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1084' u='r' c='ngx_conf_set_str_slot'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1120' u='r' c='ngx_conf_set_str_array_slot'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1158' u='r' c='ngx_conf_set_keyval_slot'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1189' u='r' c='ngx_conf_set_num_slot'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1220' u='r' c='ngx_conf_set_size_slot'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1251' u='r' c='ngx_conf_set_off_slot'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1282' u='r' c='ngx_conf_set_msec_slot'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1313' u='r' c='ngx_conf_set_sec_slot'/>
+<dec f='nginx/src/http/ngx_http_request.h' l='303' type='ngx_http_client_body_handler_pt'/>
+<offset>512</offset>
+<use f='nginx/src/http/ngx_http_request_body.c' l='71' u='w' c='ngx_http_read_client_request_body'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='421' u='r' c='ngx_http_do_read_client_request_body'/>

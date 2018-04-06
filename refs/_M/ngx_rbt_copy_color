@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_rbtree.h' l='65'/>
+<use f='nginx/src/core/ngx_rbtree.c' l='223' u='c'/>
+<use f='nginx/src/core/ngx_rbtree.c' l='281' u='c'/>
+<use f='nginx/src/core/ngx_rbtree.c' l='310' u='c'/>

@@ -1,0 +1,1 @@
+<dec f='include/pcre.h' l='652' type='int pcre32_utf32_to_host_byte_order(unsigned int * , const unsigned int * , int , int * , int )'/>

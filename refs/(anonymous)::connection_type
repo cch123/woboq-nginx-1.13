@@ -1,0 +1,6 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='242' type='unsigned int'/>
+<offset>2944</offset>
+<use f='nginx/src/http/ngx_http_core_module.c' l='810' u='r' c='ngx_http_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1694' u='w' c='ngx_http_process_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1697' u='w' c='ngx_http_process_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1864' u='r' c='ngx_http_process_request_header'/>

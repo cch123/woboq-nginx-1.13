@@ -1,0 +1,16 @@
+<dec f='nginx/src/core/ngx_config.h' l='100'/>
+<use f='nginx/src/core/ngx_hash.c' l='354' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='3066' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1278' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1498' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_map_module.c' l='198' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='3290' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_referer_module.c' l='391' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='1533' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='1788' u='c'/>
+<use f='nginx/src/http/ngx_http.c' l='438' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3211' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3218' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3490' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='849' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='6402' u='c'/>

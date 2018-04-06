@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/nginx.h' l='23'/>
+<use f='nginx/src/core/nginx.c' l='1089' u='c'/>
+<use f='nginx/src/core/nginx.c' l='1097' u='c'/>
+<use f='nginx/src/core/nginx.c' l='1097' u='c'/>

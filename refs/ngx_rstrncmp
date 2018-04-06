@@ -1,0 +1,3 @@
+<dec f='nginx/src/core/ngx_string.h' l='168' type='ngx_int_t ngx_rstrncmp(u_char * s1, u_char * s2, size_t n)'/>
+<def f='nginx/src/core/ngx_string.c' l='763' ll='783' type='ngx_int_t ngx_rstrncmp(u_char * s1, u_char * s2, size_t n)'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='2624' u='c' c='ngx_http_proxy_rewrite_complex_handler'/>

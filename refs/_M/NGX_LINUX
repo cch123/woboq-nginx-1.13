@@ -1,0 +1,12 @@
+<dec f='nginx/objs/ngx_auto_headers.h' l='39'/>
+<use f='nginx/src/core/ngx_config.h' l='25' u='c'/>
+<use f='nginx/src/os/unix/ngx_socket.h' l='44' u='c'/>
+<use f='nginx/src/os/unix/ngx_setproctitle.h' l='32' u='c'/>
+<use f='nginx/src/os/unix/ngx_os.h' l='89' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4530' u='c'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='24' u='c'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='93' u='c'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='123' u='c'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='207' u='c'/>
+<use f='nginx/src/os/unix/ngx_socket.c' l='75' u='c'/>
+<use f='nginx/src/os/unix/ngx_time.c' l='41' u='c'/>

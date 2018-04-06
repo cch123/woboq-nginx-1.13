@@ -1,0 +1,4 @@
+<dec f='include/dlfcn.h' l='56' type='void * dlopen(const char * __file, int __mode)'/>
+<doc f='include/dlfcn.h' l='54'>/* Open the shared object FILE and map it in; return a handle that can be
+   passed to `dlsym&apos; to get symbol values from it.  */</doc>
+<use f='nginx/src/core/nginx.c' l='1523' macro='1' u='c'/>

@@ -1,0 +1,15 @@
+<dec f='nginx/src/core/ngx_cycle.h' l='48' type='ngx_connection_t **'/>
+<offset>896</offset>
+<use f='nginx/src/core/ngx_connection.c' l='1042' u='r' c='ngx_get_connection'/>
+<use f='nginx/src/core/ngx_connection.c' l='1068' u='r' c='ngx_get_connection'/>
+<use f='nginx/src/core/ngx_connection.c' l='1068' u='r' c='ngx_get_connection'/>
+<use f='nginx/src/core/ngx_connection.c' l='1069' u='r' c='ngx_get_connection'/>
+<use f='nginx/src/core/ngx_connection.c' l='1109' u='r' c='ngx_free_connection'/>
+<use f='nginx/src/core/ngx_connection.c' l='1109' u='r' c='ngx_free_connection'/>
+<use f='nginx/src/core/ngx_connection.c' l='1110' u='r' c='ngx_free_connection'/>
+<use f='nginx/src/event/ngx_event.c' l='665' u='w' c='ngx_event_process_init'/>
+<use f='nginx/src/event/ngx_event.c' l='667' u='r' c='ngx_event_process_init'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='717' u='w' c='ngx_master_process_exit'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='717' u='r' c='ngx_master_process_exit'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='1026' u='w' c='ngx_worker_process_exit'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='1026' u='r' c='ngx_worker_process_exit'/>

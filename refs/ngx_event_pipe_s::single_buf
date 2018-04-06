@@ -1,0 +1,6 @@
+<dec f='nginx/src/event/ngx_event_pipe.h' l='59' type='unsigned int'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='221' u='r' c='ngx_event_pipe_read_upstream'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='287' u='r' c='ngx_event_pipe_read_upstream'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='320' u='r' c='ngx_event_pipe_read_upstream'/>
+<offset>834</offset>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3144' u='w' c='ngx_http_upstream_send_response'/>

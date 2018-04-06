@@ -1,0 +1,5 @@
+<dec f='include/grp.h' l='46' type='__gid_t'/>
+<offset>128</offset>
+<doc f='include/grp.h' l='46'>/* Group ID.	*/</doc>
+<use f='nginx/src/core/nginx.c' l='1125' u='r' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1236' u='r' c='ngx_set_user'/>

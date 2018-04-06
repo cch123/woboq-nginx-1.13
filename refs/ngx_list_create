@@ -1,0 +1,6 @@
+<dec f='nginx/src/core/ngx_list.h' l='34' type='ngx_list_t * ngx_list_create(ngx_pool_t * pool, ngx_uint_t n, size_t size)'/>
+<def f='nginx/src/core/ngx_list.c' l='12' ll='27' type='ngx_list_t * ngx_list_create(ngx_pool_t * pool, ngx_uint_t n, size_t size)'/>
+<use f='nginx/src/core/ngx_regex.c' l='386' u='c' c='ngx_regex_create_conf'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1932' u='c' c='ngx_http_ssi_regex_match'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2158' u='c' c='ngx_http_ssi_include'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2422' u='c' c='ngx_http_ssi_set'/>

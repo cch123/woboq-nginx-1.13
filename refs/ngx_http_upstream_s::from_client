@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='340' type='ngx_buf_t'/>
+<offset>5632</offset>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3318' u='a' c='ngx_http_upstream_process_upgraded'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3397' u='m' c='ngx_http_upstream_process_upgraded'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3397' u='m' c='ngx_http_upstream_process_upgraded'/>

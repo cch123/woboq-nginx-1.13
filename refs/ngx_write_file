@@ -1,0 +1,6 @@
+<dec f='nginx/src/os/unix/ngx_files.h' l='129' type='ssize_t ngx_write_file(ngx_file_t * file, u_char * buf, size_t size, off_t offset)'/>
+<use f='nginx/src/core/ngx_cycle.c' l='974' u='c' c='ngx_create_pidfile'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1550' u='c' c='ngx_http_file_cache_update_header'/>
+<def f='nginx/src/os/unix/ngx_files.c' l='192' ll='273' type='ssize_t ngx_write_file(ngx_file_t * file, u_char * buf, size_t size, off_t offset)'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='303' u='c' c='ngx_write_chain_to_file'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='320' u='c' c='ngx_write_chain_to_file'/>

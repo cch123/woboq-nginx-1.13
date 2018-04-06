@@ -1,0 +1,141 @@
+<dec f='nginx/src/os/unix/ngx_files.h' l='23' type='size_t'/>
+<dec f='nginx/src/os/unix/ngx_shmem.h' l='18' type='size_t'/>
+<dec f='nginx/src/core/ngx_buf.h' l='67' type='size_t'/>
+<dec f='nginx/src/core/ngx_array.h' l='19' type='size_t'/>
+<use f='nginx/src/core/ngx_array.h' l='40' u='w' c='ngx_array_init'/>
+<dec f='nginx/src/core/ngx_list.h' l='28' type='size_t'/>
+<use f='nginx/src/core/ngx_list.h' l='47' u='w' c='ngx_list_init'/>
+<dec f='nginx/src/core/ngx_hash.h' l='25' type='ngx_uint_t'/>
+<dec f='nginx/src/core/ngx_file.h' l='101' type='off_t'/>
+<dec f='nginx/src/core/ngx_radix_tree.h' l='33' type='size_t'/>
+<dec f='nginx/src/core/ngx_open_file_cache.h' l='23' type='off_t'/>
+<dec f='nginx/src/os/unix/ngx_os.h' l='67' type='size_t'/>
+<offset>128</offset>
+<use f='nginx/src/core/ngx_array.c' l='37' u='r' c='ngx_array_destroy'/>
+<use f='nginx/src/core/ngx_array.c' l='38' u='r' c='ngx_array_destroy'/>
+<use f='nginx/src/core/ngx_array.c' l='58' u='r' c='ngx_array_push'/>
+<use f='nginx/src/core/ngx_array.c' l='63' u='r' c='ngx_array_push'/>
+<use f='nginx/src/core/ngx_array.c' l='70' u='r' c='ngx_array_push'/>
+<use f='nginx/src/core/ngx_array.c' l='87' u='r' c='ngx_array_push'/>
+<use f='nginx/src/core/ngx_array.c' l='102' u='r' c='ngx_array_push_n'/>
+<use f='nginx/src/core/ngx_array.c' l='110' u='r' c='ngx_array_push_n'/>
+<use f='nginx/src/core/ngx_array.c' l='126' u='r' c='ngx_array_push_n'/>
+<use f='nginx/src/core/ngx_array.c' l='131' u='r' c='ngx_array_push_n'/>
+<use f='nginx/src/core/ngx_array.c' l='137' u='r' c='ngx_array_push_n'/>
+<use f='nginx/src/core/ngx_buf.c' l='76' u='r' c='ngx_create_chain_of_bufs'/>
+<use f='nginx/src/core/ngx_buf.c' l='107' u='r' c='ngx_create_chain_of_bufs'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1341' u='w' c='ngx_conf_set_bufs_slot'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1342' u='r' c='ngx_conf_set_bufs_slot'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1342' u='r' c='ngx_conf_set_bufs_slot'/>
+<use f='nginx/src/core/ngx_cycle.c' l='420' u='r' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='456' u='r' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='456' u='r' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='676' u='r' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='676' u='r' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='914' u='r' c='ngx_init_zone_pool'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1253' u='r' c='ngx_shared_memory_add'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1254' u='w' c='ngx_shared_memory_add'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1257' u='r' c='ngx_shared_memory_add'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1261' u='r' c='ngx_shared_memory_add'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1276' u='w' c='ngx_shared_memory_add'/>
+<use f='nginx/src/core/ngx_file.c' l='730' u='w' c='ngx_ext_rename_file'/>
+<use f='nginx/src/core/ngx_file.c' l='817' u='r' c='ngx_copy_file'/>
+<use f='nginx/src/core/ngx_file.c' l='818' u='r' c='ngx_copy_file'/>
+<use f='nginx/src/core/ngx_hash.c' l='22' u='r' c='ngx_hash_find'/>
+<use f='nginx/src/core/ngx_hash.c' l='428' u='w' c='ngx_hash_init'/>
+<use f='nginx/src/core/ngx_list.c' l='47' u='r' c='ngx_list_push'/>
+<use f='nginx/src/core/ngx_list.c' l='59' u='r' c='ngx_list_push'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='171' u='w' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='245' u='w' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='409' u='r' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='937' u='w' c='ngx_open_and_stat_file'/>
+<use f='nginx/src/core/ngx_output_chain.c' l='393' u='r' c='ngx_output_chain_align_file_buf'/>
+<use f='nginx/src/core/ngx_output_chain.c' l='433' u='r' c='ngx_output_chain_get_buf'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='29' u='w' c='ngx_radix_tree_create'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='474' u='r' c='ngx_radix_alloc'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='480' u='w' c='ngx_radix_alloc'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='485' u='w' c='ngx_radix_alloc'/>
+<use f='nginx/src/event/ngx_event.c' l='502' u='w' c='ngx_event_module_init'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='232' u='r' c='ngx_event_pipe_read_upstream'/>
+<dec f='nginx/src/http/ngx_http_script.h' l='50' type='ngx_uint_t'/>
+<dec f='nginx/src/http/ngx_http_script.h' l='120' type='uintptr_t'/>
+<dec f='nginx/src/http/ngx_http_cache.h' l='151' type='off_t'/>
+<offset>768</offset>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2850' macro='1' u='w'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2850' macro='1' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2850' macro='1' u='w'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2861' u='r' c='ngx_http_fastcgi_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2862' u='r' c='ngx_http_fastcgi_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2887' u='r' c='ngx_http_fastcgi_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1583' u='w' c='ngx_http_geo_create_binary_base'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1636' u='r' c='ngx_http_geo_create_binary_base'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='783' u='r' c='ngx_http_gzip_filter_get_buf'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='798' u='r' c='ngx_http_gzip_filter_get_buf'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='1192' macro='1' u='w'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='1192' macro='1' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='1192' macro='1' u='w'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='2978' macro='1' u='w'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='2978' macro='1' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='2978' macro='1' u='w'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='2989' u='r' c='ngx_http_proxy_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='2990' u='r' c='ngx_http_proxy_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='3015' u='r' c='ngx_http_proxy_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='408' u='w' c='ngx_http_rewrite'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='408' u='r' c='ngx_http_rewrite'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='1324' macro='1' u='w'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='1324' macro='1' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='1324' macro='1' u='w'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='1335' u='r' c='ngx_http_scgi_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='1336' u='r' c='ngx_http_scgi_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='1361' u='r' c='ngx_http_scgi_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='359' u='w' c='ngx_http_ssi_header_filter'/>
+<use f='nginx/src/http/modules/ngx_http_static_module.c' l='218' u='r' c='ngx_http_static_handler'/>
+<use f='nginx/src/http/modules/ngx_http_static_module.c' l='229' u='r' c='ngx_http_static_handler'/>
+<use f='nginx/src/http/modules/ngx_http_static_module.c' l='254' u='r' c='ngx_http_static_handler'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='1539' macro='1' u='w'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='1539' macro='1' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='1539' macro='1' u='w'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='1550' u='r' c='ngx_http_uwsgi_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='1551' u='r' c='ngx_http_uwsgi_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='1576' u='r' c='ngx_http_uwsgi_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http.c' l='1321' u='w' c='ngx_http_add_address'/>
+<use f='nginx/src/http/ngx_http_copy_filter_module.c' l='366' macro='1' u='w'/>
+<use f='nginx/src/http/ngx_http_copy_filter_module.c' l='366' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_copy_filter_module.c' l='366' macro='1' u='w'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1466' u='r' c='ngx_http_test_content_type'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3282' macro='1' u='w'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3282' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3282' macro='1' u='w'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3286' u='r' c='ngx_http_core_merge_srv_conf'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='151' u='w' c='ngx_http_file_cache_init'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='382' u='r' c='ngx_http_file_cache_open'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='629' u='w' c='ngx_http_file_cache_read'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1417' u='w' c='ngx_http_file_cache_update'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1918' u='w' c='ngx_http_file_cache_delete'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1980' u='r' c='ngx_http_file_cache_manager'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2073' u='r' c='ngx_http_file_cache_loader'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2235' u='w' c='ngx_http_file_cache_add'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1488' u='r' c='ngx_http_alloc_large_header_buffer'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1508' u='r' c='ngx_http_alloc_large_header_buffer'/>
+<use f='nginx/src/http/ngx_http_script.c' l='468' u='w' c='ngx_http_script_compile'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1015' u='r' c='ngx_http_script_regex_start_code'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='635' u='w' c='ngx_http_upstream_init_request'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='385' u='w' c='ngx_chain_to_iovec'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='420' u='r' c='ngx_writev_file'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='423' u='r' c='ngx_writev_file'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='630' u='r' c='ngx_create_file_mapping'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='636' u='r' c='ngx_create_file_mapping'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='643' u='r' c='ngx_create_file_mapping'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='659' u='r' c='ngx_close_file_mapping'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='661' u='r' c='ngx_close_file_mapping'/>
+<use f='nginx/src/os/unix/ngx_linux_sendfile_chain.c' l='90' u='r' c='ngx_linux_sendfile_chain'/>
+<use f='nginx/src/os/unix/ngx_readv_chain.c' l='76' u='w' c='ngx_readv_chain'/>
+<use f='nginx/src/os/unix/ngx_shmem.c' l='17' u='r' c='ngx_shm_alloc'/>
+<use f='nginx/src/os/unix/ngx_shmem.c' l='23' u='r' c='ngx_shm_alloc'/>
+<use f='nginx/src/os/unix/ngx_shmem.c' l='34' u='r' c='ngx_shm_free'/>
+<use f='nginx/src/os/unix/ngx_shmem.c' l='36' u='r' c='ngx_shm_free'/>
+<use f='nginx/src/os/unix/ngx_udp_sendmsg_chain.c' l='89' u='r' c='ngx_udp_unix_sendmsg_chain'/>
+<use f='nginx/src/os/unix/ngx_udp_sendmsg_chain.c' l='186' u='w' c='ngx_udp_output_chain_to_iovec'/>
+<use f='nginx/src/os/unix/ngx_udp_sendmsg_chain.c' l='193' u='w' c='ngx_udp_output_chain_to_iovec'/>
+<use f='nginx/src/os/unix/ngx_writev_chain.c' l='81' u='r' c='ngx_writev_chain'/>
+<use f='nginx/src/os/unix/ngx_writev_chain.c' l='175' u='w' c='ngx_output_chain_to_iovec'/>

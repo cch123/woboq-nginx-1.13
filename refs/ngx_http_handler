@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http.h' l='119' type='void ngx_http_handler(ngx_http_request_t * r)'/>
+<def f='nginx/src/http/ngx_http_core_module.c' l='802' ll='842' type='void ngx_http_handler(ngx_http_request_t * r)'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2328' u='r' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2444' u='c' c='ngx_http_internal_redirect'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1952' u='c' c='ngx_http_process_request'/>

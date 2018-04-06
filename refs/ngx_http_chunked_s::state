@@ -1,0 +1,6 @@
+<dec f='nginx/src/http/ngx_http.h' l='60' type='ngx_uint_t'/>
+<offset>0</offset>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1530' u='w' c='ngx_http_proxy_reinit_request'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='2148' u='r' c='ngx_http_parse_chunked'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='2333' u='w' c='ngx_http_parse_chunked'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='2380' u='w' c='ngx_http_parse_chunked'/>

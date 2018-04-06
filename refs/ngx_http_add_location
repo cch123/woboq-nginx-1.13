@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http.h' l='79' type='ngx_int_t ngx_http_add_location(ngx_conf_t * cf, ngx_queue_t ** locations, ngx_http_core_loc_conf_t * clcf)'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='588' u='c' c='ngx_http_rewrite_if'/>
+<def f='nginx/src/http/ngx_http.c' l='842' ll='886' type='ngx_int_t ngx_http_add_location(ngx_conf_t * cf, ngx_queue_t ** locations, ngx_http_core_loc_conf_t * clcf)'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3009' u='c' c='ngx_http_core_location'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4411' u='c' c='ngx_http_core_limit_except'/>

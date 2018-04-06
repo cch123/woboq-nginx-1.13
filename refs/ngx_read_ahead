@@ -1,0 +1,3 @@
+<dec f='nginx/src/os/unix/ngx_files.h' l='315' type='ngx_int_t ngx_read_ahead(ngx_fd_t fd, size_t n)'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='916' u='c' c='ngx_open_and_stat_file'/>
+<def f='nginx/src/os/unix/ngx_files.c' l='811' ll='824' type='ngx_int_t ngx_read_ahead(ngx_fd_t fd, size_t n)'/>

@@ -1,0 +1,14 @@
+<dec f='nginx/src/core/ngx_buf.h' l='81' type='ngx_chain_t *'/>
+<offset>128</offset>
+<use f='nginx/src/core/ngx_output_chain.c' l='153' u='r' c='ngx_output_chain'/>
+<use f='nginx/src/core/ngx_output_chain.c' l='157' u='r' c='ngx_output_chain'/>
+<use f='nginx/src/core/ngx_output_chain.c' l='159' u='w' c='ngx_output_chain'/>
+<use f='nginx/src/core/ngx_output_chain.c' l='220' u='a' c='ngx_output_chain'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1601' u='w' c='ngx_http_upstream_connect'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1602' u='r' c='ngx_http_upstream_connect'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1608' u='r' c='ngx_http_upstream_connect'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1609' u='r' c='ngx_http_upstream_connect'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1928' u='w' c='ngx_http_upstream_reinit'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1929' u='r' c='ngx_http_upstream_reinit'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1933' u='r' c='ngx_http_upstream_reinit'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1934' u='r' c='ngx_http_upstream_reinit'/>

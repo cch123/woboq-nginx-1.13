@@ -1,0 +1,6 @@
+<dec f='nginx/src/http/modules/ngx_http_ssi_filter_module.h' l='81' type='void *'/>
+<offset>3456</offset>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1224' u='r' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1232' u='r' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1422' u='w' c='ngx_http_ssi_parse'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1426' u='w' c='ngx_http_ssi_parse'/>

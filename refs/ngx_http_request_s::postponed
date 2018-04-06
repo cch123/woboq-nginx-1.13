@@ -1,0 +1,22 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='419' type='ngx_http_postponed_request_t *'/>
+<offset>8576</offset>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2339' u='r' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2352' u='r' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2353' u='r' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2357' u='w' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_postpone_filter_module.c' l='88' u='r' c='ngx_http_postpone_filter'/>
+<use f='nginx/src/http/ngx_http_postpone_filter_module.c' l='104' u='r' c='ngx_http_postpone_filter'/>
+<use f='nginx/src/http/ngx_http_postpone_filter_module.c' l='112' u='w' c='ngx_http_postpone_filter'/>
+<use f='nginx/src/http/ngx_http_postpone_filter_module.c' l='133' u='w' c='ngx_http_postpone_filter'/>
+<use f='nginx/src/http/ngx_http_postpone_filter_module.c' l='135' u='r' c='ngx_http_postpone_filter'/>
+<use f='nginx/src/http/ngx_http_postpone_filter_module.c' l='146' u='r' c='ngx_http_postpone_filter_add'/>
+<use f='nginx/src/http/ngx_http_postpone_filter_module.c' l='147' u='r' c='ngx_http_postpone_filter_add'/>
+<use f='nginx/src/http/ngx_http_postpone_filter_module.c' l='156' u='a' c='ngx_http_postpone_filter_add'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2405' u='r' c='ngx_http_finalize_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2435' u='r' c='ngx_http_finalize_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2435' u='r' c='ngx_http_finalize_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2436' u='w' c='ngx_http_finalize_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2436' u='r' c='ngx_http_finalize_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2467' u='r' c='ngx_http_finalize_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2720' u='r' c='ngx_http_writer'/>
+<use f='nginx/src/http/ngx_http_write_filter_module.c' l='313' u='r' c='ngx_http_write_filter'/>

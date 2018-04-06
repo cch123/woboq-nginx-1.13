@@ -1,0 +1,10 @@
+<dec f='nginx/src/event/ngx_event.h' l='67' type='unsigned int'/>
+<offset>78</offset>
+<doc f='nginx/src/event/ngx_event.h' l='66'>/* the pending eof reported by kqueue, epoll or in aio chain operation */</doc>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='887' u='w' c='ngx_epoll_process_events'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2819' u='r' c='ngx_http_test_reading'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1388' u='r' c='ngx_http_upstream_check_broken_connection'/>
+<use f='nginx/src/os/unix/ngx_readv_chain.c' l='63' u='r' c='ngx_readv_chain'/>
+<use f='nginx/src/os/unix/ngx_readv_chain.c' l='174' u='r' c='ngx_readv_chain'/>
+<use f='nginx/src/os/unix/ngx_recv.c' l='60' u='r' c='ngx_unix_recv'/>
+<use f='nginx/src/os/unix/ngx_recv.c' l='125' u='r' c='ngx_unix_recv'/>

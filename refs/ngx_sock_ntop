@@ -1,0 +1,16 @@
+<dec f='nginx/src/core/ngx_inet.h' l='113' type='size_t ngx_sock_ntop(struct sockaddr * sa, socklen_t socklen, u_char * text, size_t len, ngx_uint_t port)'/>
+<use f='nginx/src/core/ngx_connection.c' l='45' u='c' c='ngx_create_listening'/>
+<use f='nginx/src/core/ngx_connection.c' l='206' u='c' c='ngx_set_inherited_sockets'/>
+<use f='nginx/src/core/ngx_connection.c' l='1345' u='c' c='ngx_connection_local_sockaddr'/>
+<def f='nginx/src/core/ngx_inet.c' l='180' ll='260' type='size_t ngx_sock_ntop(struct sockaddr * sa, socklen_t socklen, u_char * text, size_t len, ngx_uint_t port)'/>
+<use f='nginx/src/core/ngx_inet.c' l='1197' u='c' c='ngx_inet_resolve_host'/>
+<use f='nginx/src/core/ngx_inet.c' l='1230' u='c' c='ngx_inet_resolve_host'/>
+<use f='nginx/src/core/ngx_proxy_protocol.c' l='201' u='c' c='ngx_proxy_protocol_write'/>
+<use f='nginx/src/core/ngx_proxy_protocol.c' l='205' u='c' c='ngx_proxy_protocol_write'/>
+<use f='nginx/src/core/ngx_proxy_protocol.c' l='329' u='c' c='ngx_proxy_protocol_v2_read'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1174' u='c' c='ngx_resolve_addr_done'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='275' u='c' c='ngx_event_accept'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='602' u='c' c='ngx_event_recvmsg'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2819' u='c' c='ngx_http_core_server'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3787' u='c' c='ngx_http_core_listen'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='369' u='c' c='ngx_http_upstream_create_round_robin_peer'/>

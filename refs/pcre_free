@@ -1,0 +1,2 @@
+<dec f='include/pcre.h' l='490' type='void (*)(void *)'/>
+<use f='nginx/src/core/ngx_regex.c' l='76' u='w' c='ngx_regex_init'/>

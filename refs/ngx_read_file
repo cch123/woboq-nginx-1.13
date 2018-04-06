@@ -1,0 +1,9 @@
+<dec f='nginx/src/os/unix/ngx_files.h' l='122' type='ssize_t ngx_read_file(ngx_file_t * file, u_char * buf, size_t size, off_t offset)'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='589' u='c' c='ngx_conf_read_token'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1032' u='c' c='ngx_signal_process'/>
+<use f='nginx/src/core/ngx_output_chain.c' l='595' u='c' c='ngx_output_chain_copy_buf'/>
+<use f='nginx/src/http/modules/ngx_http_auth_basic_module.c' l='176' u='c' c='ngx_http_auth_basic_handler'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1470' u='c' c='ngx_http_geo_include_binary_base'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='716' u='c' c='ngx_http_file_cache_aio_read'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1488' u='c' c='ngx_http_file_cache_update_header'/>
+<def f='nginx/src/os/unix/ngx_files.c' l='30' ll='75' type='ssize_t ngx_read_file(ngx_file_t * file, u_char * buf, size_t size, off_t offset)'/>

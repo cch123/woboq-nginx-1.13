@@ -1,0 +1,5 @@
+<def f='nginx/src/http/ngx_http_request.h' l='334' ll='338'/>
+<size>24</size>
+<mbr r='ngx_http_cleanup_s::handler' o='0' t='ngx_http_cleanup_pt'/>
+<mbr r='ngx_http_cleanup_s::data' o='64' t='void *'/>
+<mbr r='ngx_http_cleanup_s::next' o='128' t='ngx_http_cleanup_t *'/>

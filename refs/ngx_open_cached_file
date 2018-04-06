@@ -1,0 +1,10 @@
+<dec f='nginx/src/core/ngx_open_file_cache.h' l='125' type='ngx_int_t ngx_open_cached_file(ngx_open_file_cache_t * cache, ngx_str_t * name, ngx_open_file_info_t * of, ngx_pool_t * pool)'/>
+<def f='nginx/src/core/ngx_open_file_cache.c' l='143' ll='486' type='ngx_int_t ngx_open_cached_file(ngx_open_file_cache_t * cache, ngx_str_t * name, ngx_open_file_info_t * of, ngx_pool_t * pool)'/>
+<use f='nginx/src/http/modules/ngx_http_index_module.c' l='217' u='c' c='ngx_http_index_handler'/>
+<use f='nginx/src/http/modules/ngx_http_index_module.c' l='316' u='c' c='ngx_http_index_test_dir'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='509' u='c' c='ngx_http_log_script_write'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='561' u='c' c='ngx_http_log_script_write'/>
+<use f='nginx/src/http/modules/ngx_http_static_module.c' l='102' u='c' c='ngx_http_static_handler'/>
+<use f='nginx/src/http/modules/ngx_http_try_files_module.c' l='230' u='c' c='ngx_http_try_files_handler'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='357' u='c' c='ngx_http_file_cache_open'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1513' u='c' c='ngx_http_script_file_code'/>

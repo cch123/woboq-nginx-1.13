@@ -1,0 +1,17 @@
+<dec f='nginx/src/http/ngx_http_cache.h' l='172' type='ngx_msec_t'/>
+<offset>576</offset>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1890' u='r' c='ngx_http_file_cache_expire'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1890' u='r' c='ngx_http_file_cache_expire'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1890' u='r' c='ngx_http_file_cache_expire'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1967' u='w' c='ngx_http_file_cache_manager'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2012' u='r' c='ngx_http_file_cache_manager'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2012' u='r' c='ngx_http_file_cache_manager'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2012' u='r' c='ngx_http_file_cache_manager'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2022' u='r' c='ngx_http_file_cache_manager'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2022' u='r' c='ngx_http_file_cache_manager'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2022' u='r' c='ngx_http_file_cache_manager'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2059' u='w' c='ngx_http_file_cache_loader'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2103' u='r' c='ngx_http_file_cache_manage_file'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2103' u='r' c='ngx_http_file_cache_manage_file'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2103' u='r' c='ngx_http_file_cache_manage_file'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2137' u='w' c='ngx_http_file_cache_loader_sleep'/>

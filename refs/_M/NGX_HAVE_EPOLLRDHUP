@@ -1,0 +1,16 @@
+<dec f='nginx/objs/ngx_auto_config.h' l='39'/>
+<use f='nginx/src/event/ngx_event.h' l='198' u='c'/>
+<use f='nginx/src/event/ngx_event.h' l='311' u='c'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='109' u='c'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='153' u='c'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='348' u='c'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='462' u='c'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='614' u='c'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='885' u='c'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='245' u='c'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2814' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1383' u='c'/>
+<use f='nginx/src/os/unix/ngx_readv_chain.c' l='56' u='c'/>
+<use f='nginx/src/os/unix/ngx_readv_chain.c' l='168' u='c'/>
+<use f='nginx/src/os/unix/ngx_recv.c' l='53' u='c'/>
+<use f='nginx/src/os/unix/ngx_recv.c' l='119' u='c'/>

@@ -1,0 +1,6 @@
+<dec f='nginx/src/event/ngx_event.h' l='268'/>
+<doc f='nginx/src/event/ngx_event.h' l='264'>/*
+ * The event module handles periodic or absolute timer event by itself:
+ * kqueue in FreeBSD 4.4, NetBSD 2.0, and MacOSX 10.4, Solaris 10&apos;s event ports.
+ */</doc>
+<use f='nginx/src/event/ngx_event.c' l='629' u='c'/>

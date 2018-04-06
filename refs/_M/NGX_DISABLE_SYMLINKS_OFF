@@ -1,0 +1,7 @@
+<dec f='nginx/src/core/ngx_core.h' l='106'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='637' u='c'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='802' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2588' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3729' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4961' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='5023' u='c'/>

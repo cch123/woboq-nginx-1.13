@@ -1,0 +1,10 @@
+<def f='nginx/src/core/ngx_file.h' l='16' ll='39'/>
+<size>200</size>
+<mbr r='ngx_file_s::fd' o='0' t='ngx_fd_t'/>
+<mbr r='ngx_file_s::name' o='64' t='ngx_str_t'/>
+<mbr r='ngx_file_s::info' o='192' t='ngx_file_info_t'/>
+<mbr r='ngx_file_s::offset' o='1344' t='off_t'/>
+<mbr r='ngx_file_s::sys_offset' o='1408' t='off_t'/>
+<mbr r='ngx_file_s::log' o='1472' t='ngx_log_t *'/>
+<mbr r='ngx_file_s::valid_info' o='1536' t='unsigned int'/>
+<mbr r='ngx_file_s::directio' o='1537' t='unsigned int'/>

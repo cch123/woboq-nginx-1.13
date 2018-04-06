@@ -1,0 +1,17 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='418' type='ngx_array_t *'/>
+<offset>4672</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='418'>/* error_page */</doc>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3565' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3565' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3566' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3566' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4577' u='r' c='ngx_http_core_error_page'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4578' u='w' c='ngx_http_core_error_page'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4580' u='r' c='ngx_http_core_error_page'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4643' u='r' c='ngx_http_core_error_page'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='456' u='r' c='ngx_http_special_response_handler'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='462' u='r' c='ngx_http_special_response_handler'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='464' u='r' c='ngx_http_special_response_handler'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2549' u='r' c='ngx_http_upstream_intercept_errors'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2553' u='r' c='ngx_http_upstream_intercept_errors'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2554' u='r' c='ngx_http_upstream_intercept_errors'/>

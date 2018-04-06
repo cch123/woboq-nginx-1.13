@@ -1,0 +1,12 @@
+<dec f='nginx/objs/ngx_auto_config.h' l='132'/>
+<use f='nginx/src/core/ngx_connection.c' l='97' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='147' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='275' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='415' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='478' u='c'/>
+<use f='nginx/src/core/ngx_cycle.c' l='566' u='c'/>
+<use f='nginx/src/event/ngx_event.c' l='736' u='c'/>
+<use f='nginx/src/event/ngx_event.c' l='824' u='c'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='725' u='c'/>
+<use f='nginx/src/http/ngx_http.c' l='1771' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3952' u='c'/>

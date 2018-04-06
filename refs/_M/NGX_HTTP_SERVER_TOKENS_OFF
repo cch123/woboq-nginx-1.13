@@ -1,0 +1,2 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='58'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='122' u='c'/>

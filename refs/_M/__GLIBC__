@@ -1,0 +1,4 @@
+<dec f='include/features.h' l='358'/>
+<doc f='include/features.h' l='356'>/* Major and minor version number of the GNU C library package.  Use
+   these macros to test for features in specific releases.  */</doc>
+<use f='nginx/src/os/unix/ngx_user.c' l='24' u='a'/>

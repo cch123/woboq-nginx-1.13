@@ -1,0 +1,40 @@
+<def f='nginx/src/core/ngx_connection.h' l='121' ll='192'/>
+<size>224</size>
+<mbr r='ngx_connection_s::data' o='0' t='void *'/>
+<mbr r='ngx_connection_s::read' o='64' t='ngx_event_t *'/>
+<mbr r='ngx_connection_s::write' o='128' t='ngx_event_t *'/>
+<mbr r='ngx_connection_s::fd' o='192' t='ngx_socket_t'/>
+<mbr r='ngx_connection_s::recv' o='256' t='ngx_recv_pt'/>
+<mbr r='ngx_connection_s::send' o='320' t='ngx_send_pt'/>
+<mbr r='ngx_connection_s::recv_chain' o='384' t='ngx_recv_chain_pt'/>
+<mbr r='ngx_connection_s::send_chain' o='448' t='ngx_send_chain_pt'/>
+<mbr r='ngx_connection_s::listening' o='512' t='ngx_listening_t *'/>
+<mbr r='ngx_connection_s::sent' o='576' t='off_t'/>
+<mbr r='ngx_connection_s::log' o='640' t='ngx_log_t *'/>
+<mbr r='ngx_connection_s::pool' o='704' t='ngx_pool_t *'/>
+<mbr r='ngx_connection_s::type' o='768' t='int'/>
+<mbr r='ngx_connection_s::sockaddr' o='832' t='struct sockaddr *'/>
+<mbr r='ngx_connection_s::socklen' o='896' t='socklen_t'/>
+<mbr r='ngx_connection_s::addr_text' o='960' t='ngx_str_t'/>
+<mbr r='ngx_connection_s::proxy_protocol_addr' o='1088' t='ngx_str_t'/>
+<mbr r='ngx_connection_s::proxy_protocol_port' o='1216' t='in_port_t'/>
+<mbr r='ngx_connection_s::local_sockaddr' o='1280' t='struct sockaddr *'/>
+<mbr r='ngx_connection_s::local_socklen' o='1344' t='socklen_t'/>
+<mbr r='ngx_connection_s::buffer' o='1408' t='ngx_buf_t *'/>
+<mbr r='ngx_connection_s::queue' o='1472' t='ngx_queue_t'/>
+<mbr r='ngx_connection_s::number' o='1600' t='ngx_atomic_uint_t'/>
+<mbr r='ngx_connection_s::requests' o='1664' t='ngx_uint_t'/>
+<mbr r='ngx_connection_s::buffered' o='1728' t='unsigned int'/>
+<mbr r='ngx_connection_s::log_error' o='1736' t='unsigned int'/>
+<mbr r='ngx_connection_s::timedout' o='1739' t='unsigned int'/>
+<mbr r='ngx_connection_s::error' o='1740' t='unsigned int'/>
+<mbr r='ngx_connection_s::destroyed' o='1741' t='unsigned int'/>
+<mbr r='ngx_connection_s::idle' o='1742' t='unsigned int'/>
+<mbr r='ngx_connection_s::reusable' o='1743' t='unsigned int'/>
+<mbr r='ngx_connection_s::close' o='1744' t='unsigned int'/>
+<mbr r='ngx_connection_s::shared' o='1745' t='unsigned int'/>
+<mbr r='ngx_connection_s::sendfile' o='1746' t='unsigned int'/>
+<mbr r='ngx_connection_s::sndlowat' o='1747' t='unsigned int'/>
+<mbr r='ngx_connection_s::tcp_nodelay' o='1748' t='unsigned int'/>
+<mbr r='ngx_connection_s::tcp_nopush' o='1750' t='unsigned int'/>
+<mbr r='ngx_connection_s::need_last_buf' o='1752' t='unsigned int'/>

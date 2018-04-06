@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='116'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_least_conn_module.c' l='311' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5655' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5838' u='c'/>

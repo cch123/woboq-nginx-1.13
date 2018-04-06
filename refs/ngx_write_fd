@@ -1,0 +1,18 @@
+<def f='nginx/src/os/unix/ngx_files.h' l='144' ll='148' type='ssize_t ngx_write_fd(ngx_fd_t fd, void * buf, size_t n)'/>
+<use f='nginx/src/core/ngx_log.h' l='253' u='c' c='ngx_write_stderr'/>
+<use f='nginx/src/core/ngx_log.h' l='260' u='c' c='ngx_write_stdout'/>
+<doc f='nginx/src/os/unix/ngx_files.h' l='139'>/*
+ * we use inlined function instead of simple #define
+ * because glibc 2.3 sets warn_unused_result attribute for write()
+ * and in this case gcc 4.3 ignores (void) cast
+ */</doc>
+<use f='nginx/src/core/nginx.c' l='313' u='c' c='main'/>
+<use f='nginx/src/core/nginx.c' l='319' u='c' c='main'/>
+<use f='nginx/src/core/ngx_file.c' l='872' u='c' c='ngx_copy_file'/>
+<use f='nginx/src/core/ngx_log.c' l='183' u='c' c='ngx_log_error_core'/>
+<use f='nginx/src/core/ngx_log.c' l='209' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_log.c' l='283' macro='1' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='427' u='c' c='ngx_http_log_write'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='578' u='c' c='ngx_http_log_script_write'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='673' u='c' c='ngx_http_log_gzip'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='737' u='c' c='ngx_http_log_flush'/>

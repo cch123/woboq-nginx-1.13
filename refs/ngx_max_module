@@ -1,0 +1,7 @@
+<dec f='nginx/src/core/ngx_module.h' l='278' type='ngx_uint_t'/>
+<use f='nginx/src/core/ngx_cycle.c' l='189' u='r' c='ngx_init_cycle'/>
+<def f='nginx/src/core/ngx_module.c' l='21' type='ngx_uint_t'/>
+<use f='nginx/src/core/ngx_module.c' l='36' u='w' c='ngx_preinit_modules'/>
+<use f='nginx/src/core/ngx_module.c' l='50' u='r' c='ngx_cycle_modules'/>
+<use f='nginx/src/core/ngx_module.c' l='164' u='r' c='ngx_add_module'/>
+<use f='nginx/src/core/ngx_module.c' l='200' u='r' c='ngx_add_module'/>

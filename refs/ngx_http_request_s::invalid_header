@@ -1,0 +1,8 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='472' type='unsigned int'/>
+<offset>9833</offset>
+<use f='nginx/src/http/ngx_http_parse.c' l='881' u='w' c='ngx_http_parse_header_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='910' u='w' c='ngx_http_parse_header_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='920' u='w' c='ngx_http_parse_header_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='945' u='w' c='ngx_http_parse_header_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='986' u='w' c='ngx_http_parse_header_line'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1306' u='r' c='ngx_http_process_request_headers'/>

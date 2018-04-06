@@ -1,0 +1,5 @@
+<def f='nginx/src/core/ngx_palloc.h' l='34' ll='38'/>
+<size>24</size>
+<mbr r='ngx_pool_cleanup_s::handler' o='0' t='ngx_pool_cleanup_pt'/>
+<mbr r='ngx_pool_cleanup_s::data' o='64' t='void *'/>
+<mbr r='ngx_pool_cleanup_s::next' o='128' t='ngx_pool_cleanup_t *'/>

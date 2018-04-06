@@ -1,0 +1,2 @@
+<dec f='include/linux/capability.h' l='166'/>
+<doc f='include/linux/capability.h' l='164'>/* Allows binding to ATM VCIs below 32 */</doc>

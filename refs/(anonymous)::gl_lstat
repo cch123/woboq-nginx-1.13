@@ -1,0 +1,3 @@
+<dec f='include/glob.h' l='99' type='int (*)(const char *restrict, struct stat *restrict)'/>
+<dec f='include/glob.h' l='128' type='int (*)(const char *restrict, struct stat64 *restrict)'/>
+<offset>448</offset>

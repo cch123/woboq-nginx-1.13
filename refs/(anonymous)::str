@@ -1,0 +1,18 @@
+<dec f='nginx/src/core/ngx_string.h' l='217' type='ngx_str_t'/>
+<offset>320</offset>
+<use f='nginx/src/core/ngx_conf_file.c' l='149' u='w' c='ngx_conf_add_dump'/>
+<use f='nginx/src/core/ngx_string.c' l='1916' u='m' c='ngx_str_rbtree_insert_value'/>
+<use f='nginx/src/core/ngx_string.c' l='1916' u='m' c='ngx_str_rbtree_insert_value'/>
+<use f='nginx/src/core/ngx_string.c' l='1918' u='m' c='ngx_str_rbtree_insert_value'/>
+<use f='nginx/src/core/ngx_string.c' l='1918' u='m' c='ngx_str_rbtree_insert_value'/>
+<use f='nginx/src/core/ngx_string.c' l='1921' u='m' c='ngx_str_rbtree_insert_value'/>
+<use f='nginx/src/core/ngx_string.c' l='1921' u='m' c='ngx_str_rbtree_insert_value'/>
+<use f='nginx/src/core/ngx_string.c' l='1921' u='m' c='ngx_str_rbtree_insert_value'/>
+<use f='nginx/src/core/ngx_string.c' l='1959' u='m' c='ngx_str_rbtree_lookup'/>
+<use f='nginx/src/core/ngx_string.c' l='1960' u='m' c='ngx_str_rbtree_lookup'/>
+<use f='nginx/src/core/ngx_string.c' l='1964' u='m' c='ngx_str_rbtree_lookup'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1271' u='m' c='ngx_http_geo_value'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1272' u='m' c='ngx_http_geo_value'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1661' u='m' c='ngx_http_geo_copy_values'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1661' u='m' c='ngx_http_geo_copy_values'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1661' u='m' c='ngx_http_geo_copy_values'/>

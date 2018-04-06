@@ -1,0 +1,5 @@
+<dec f='nginx/src/os/unix/ngx_files.h' l='78'/>
+<use f='nginx/src/core/ngx_cycle.c' l='375' u='c'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1120' u='c'/>
+<use f='nginx/src/core/ngx_log.c' l='378' u='c'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='880' u='c'/>

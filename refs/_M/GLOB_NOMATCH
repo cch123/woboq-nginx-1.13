@@ -1,0 +1,4 @@
+<dec f='include/glob.h' l='70'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='715' u='a'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='717' u='c'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='732' u='a'/>

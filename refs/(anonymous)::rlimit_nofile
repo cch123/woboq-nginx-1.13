@@ -1,0 +1,11 @@
+<dec f='nginx/src/core/ngx_cycle.h' l='97' type='ngx_int_t'/>
+<offset>384</offset>
+<use f='nginx/src/core/nginx.c' l='1036' u='w' c='ngx_core_module_create_conf'/>
+<use f='nginx/src/event/ngx_event.c' l='457' u='r' c='ngx_event_module_init'/>
+<use f='nginx/src/event/ngx_event.c' l='458' u='r' c='ngx_event_module_init'/>
+<use f='nginx/src/event/ngx_event.c' l='460' u='r' c='ngx_event_module_init'/>
+<use f='nginx/src/event/ngx_event.c' l='461' u='r' c='ngx_event_module_init'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='806' u='r' c='ngx_worker_process_init'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='807' u='r' c='ngx_worker_process_init'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='808' u='r' c='ngx_worker_process_init'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='813' u='r' c='ngx_worker_process_init'/>

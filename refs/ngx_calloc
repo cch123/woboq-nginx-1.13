@@ -1,0 +1,6 @@
+<dec f='nginx/src/os/unix/ngx_alloc.h' l='17' type='void * ngx_calloc(size_t size, ngx_log_t * log)'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='970' u='c' c='ngx_open_file_add_event'/>
+<use f='nginx/src/core/ngx_resolver.c' l='151' u='c' c='ngx_resolver_create'/>
+<use f='nginx/src/core/ngx_resolver.c' l='158' u='c' c='ngx_resolver_create'/>
+<use f='nginx/src/event/ngx_event.c' l='665' u='c' c='ngx_event_process_init'/>
+<def f='nginx/src/os/unix/ngx_alloc.c' l='34' ll='46' type='void * ngx_calloc(size_t size, ngx_log_t * log)'/>

@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_cycle.h' l='144' type='ngx_uint_t'/>
+<use f='nginx/src/core/nginx.c' l='302' u='r' c='main'/>
+<use f='nginx/src/core/nginx.c' l='785' u='w' c='ngx_get_options'/>
+<def f='nginx/src/core/ngx_cycle.c' l='30' type='ngx_uint_t'/>
+<use f='nginx/src/core/ngx_cycle.c' l='281' u='r' c='ngx_init_cycle'/>

@@ -1,0 +1,14 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='348' type='size_t'/>
+<offset>1664</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='348'>/* send_lowat */</doc>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3389' u='w' c='ngx_http_core_create_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3618' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3618' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3618' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3618' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2660' u='r' c='ngx_http_set_write_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2702' u='r' c='ngx_http_writer'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2726' u='r' c='ngx_http_writer'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3173' u='r' c='ngx_http_upstream_send_response'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3434' u='r' c='ngx_http_upstream_process_upgraded'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3601' u='r' c='ngx_http_upstream_process_non_buffered_request'/>

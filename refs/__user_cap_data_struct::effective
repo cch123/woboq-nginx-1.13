@@ -1,0 +1,4 @@
+<dec f='include/linux/capability.h' l='46' type='__u32'/>
+<offset>0</offset>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='869' u='w' c='ngx_worker_process_init'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='870' u='r' c='ngx_worker_process_init'/>

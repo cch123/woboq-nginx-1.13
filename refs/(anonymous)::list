@@ -1,0 +1,22 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='448' type='ngx_queue_t'/>
+<offset>448</offset>
+<use f='nginx/src/http/ngx_http.c' l='881' u='a' c='ngx_http_add_location'/>
+<use f='nginx/src/http/ngx_http.c' l='881' u='a' c='ngx_http_add_location'/>
+<use f='nginx/src/http/ngx_http.c' l='881' u='a' c='ngx_http_add_location'/>
+<use f='nginx/src/http/ngx_http.c' l='881' u='a' c='ngx_http_add_location'/>
+<use f='nginx/src/http/ngx_http.c' l='1046' u='a' c='ngx_http_create_locations_list'/>
+<use f='nginx/src/http/ngx_http.c' l='1046' u='a' c='ngx_http_create_locations_list'/>
+<use f='nginx/src/http/ngx_http.c' l='1046' u='a' c='ngx_http_create_locations_list'/>
+<use f='nginx/src/http/ngx_http.c' l='1046' u='a' c='ngx_http_create_locations_list'/>
+<use f='nginx/src/http/ngx_http.c' l='1046' u='a' c='ngx_http_create_locations_list'/>
+<use f='nginx/src/http/ngx_http.c' l='1049' u='a' c='ngx_http_create_locations_list'/>
+<use f='nginx/src/http/ngx_http.c' l='1049' u='a' c='ngx_http_create_locations_list'/>
+<use f='nginx/src/http/ngx_http.c' l='1053' u='a' c='ngx_http_create_locations_list'/>
+<use f='nginx/src/http/ngx_http.c' l='1053' u='a' c='ngx_http_create_locations_list'/>
+<use f='nginx/src/http/ngx_http.c' l='1053' u='a' c='ngx_http_create_locations_list'/>
+<use f='nginx/src/http/ngx_http.c' l='1053' u='a' c='ngx_http_create_locations_list'/>
+<use f='nginx/src/http/ngx_http.c' l='1056' u='a' c='ngx_http_create_locations_list'/>
+<use f='nginx/src/http/ngx_http.c' l='1056' u='a' c='ngx_http_create_locations_list'/>
+<use f='nginx/src/http/ngx_http.c' l='1127' u='a' c='ngx_http_create_locations_tree'/>
+<use f='nginx/src/http/ngx_http.c' l='1127' u='a' c='ngx_http_create_locations_tree'/>
+<use f='nginx/src/http/ngx_http.c' l='1131' u='a' c='ngx_http_create_locations_tree'/>

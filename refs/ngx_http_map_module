@@ -1,0 +1,4 @@
+<dec f='nginx/objs/ngx_modules.c' l='28' type='ngx_module_t'/>
+<use f='nginx/objs/ngx_modules.c' l='80' u='a'/>
+<use f='nginx/objs/ngx_modules.c' l='80' u='a'/>
+<def f='nginx/src/http/modules/ngx_http_map_module.c' l='91' ll='104' type='ngx_module_t'/>

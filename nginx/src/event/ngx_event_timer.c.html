@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ngx_event_timer.c source code [nginx/src/event/ngx_event_timer.c] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../../../data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../../data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../../data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'nginx/src/event/ngx_event_timer.c'; var root_path = '../../..'; var data_path = '../../../../data';</script>
+<script src='../../../../data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../..'>nginx</a>/<a href='..'>src</a>/<a href='./'>event</a>/<a href='ngx_event_timer.c.html'>ngx_event_timer.c</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td></td></tr>
+<tr><th id="2">2</th><td><i>/*</i></td></tr>
+<tr><th id="3">3</th><td><i> * Copyright (C) Igor Sysoev</i></td></tr>
+<tr><th id="4">4</th><td><i> * Copyright (C) Nginx, Inc.</i></td></tr>
+<tr><th id="5">5</th><td><i> */</i></td></tr>
+<tr><th id="6">6</th><td></td></tr>
+<tr><th id="7">7</th><td></td></tr>
+<tr><th id="8">8</th><td><u>#include <a href="../core/ngx_config.h.html">&lt;ngx_config.h&gt;</a></u></td></tr>
+<tr><th id="9">9</th><td><u>#include <a href="../core/ngx_core.h.html">&lt;ngx_core.h&gt;</a></u></td></tr>
+<tr><th id="10">10</th><td><u>#include <a href="ngx_event.h.html">&lt;ngx_event.h&gt;</a></u></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td></td></tr>
+<tr><th id="13">13</th><td><a class="typedef" href="../core/ngx_rbtree.h.html#ngx_rbtree_t" title='ngx_rbtree_t' data-type='struct ngx_rbtree_s' data-ref="ngx_rbtree_t">ngx_rbtree_t</a>              <dfn class="decl def" id="ngx_event_timer_rbtree" title='ngx_event_timer_rbtree' data-ref="ngx_event_timer_rbtree">ngx_event_timer_rbtree</dfn>;</td></tr>
+<tr><th id="14">14</th><td><em>static</em> <a class="typedef" href="../core/ngx_rbtree.h.html#ngx_rbtree_node_t" title='ngx_rbtree_node_t' data-type='struct ngx_rbtree_node_s' data-ref="ngx_rbtree_node_t">ngx_rbtree_node_t</a>  <dfn class="tu decl def" id="ngx_event_timer_sentinel" title='ngx_event_timer_sentinel' data-type='ngx_rbtree_node_t' data-ref="ngx_event_timer_sentinel">ngx_event_timer_sentinel</dfn>;</td></tr>
+<tr><th id="15">15</th><td></td></tr>
+<tr><th id="16">16</th><td><i>/*</i></td></tr>
+<tr><th id="17">17</th><td><i> * the event timer rbtree may contain the duplicate keys, however,</i></td></tr>
+<tr><th id="18">18</th><td><i> * it should not be a problem, because we use the rbtree to find</i></td></tr>
+<tr><th id="19">19</th><td><i> * a minimum timer value only</i></td></tr>
+<tr><th id="20">20</th><td><i> */</i></td></tr>
+<tr><th id="21">21</th><td></td></tr>
+<tr><th id="22">22</th><td><a class="typedef" href="../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a></td></tr>
+<tr><th id="23">23</th><td><dfn class="decl def fn" id="ngx_event_timer_init" title='ngx_event_timer_init' data-ref="ngx_event_timer_init">ngx_event_timer_init</dfn>(<a class="typedef" href="../core/ngx_core.h.html#ngx_log_t" title='ngx_log_t' data-type='struct ngx_log_s' data-ref="ngx_log_t">ngx_log_t</a> *<dfn class="local col1 decl" id="1log" title='log' data-type='ngx_log_t *' data-ref="1log">log</dfn>)</td></tr>
+<tr><th id="24">24</th><td>{</td></tr>
+<tr><th id="25">25</th><td>    <a class="macro" href="../core/ngx_rbtree.h.html#44" title="((&amp;ngx_event_timer_sentinel)-&gt;color = 0); (&amp;ngx_event_timer_rbtree)-&gt;root = &amp;ngx_event_timer_sentinel; (&amp;ngx_event_timer_rbtree)-&gt;sentinel = &amp;ngx_event_timer_sentinel; (&amp;ngx_event_timer_rbtree)-&gt;insert = ngx_rbtree_insert_timer_value" data-ref="_M/ngx_rbtree_init">ngx_rbtree_init</a>(&amp;<a class="ref" href="ngx_event_timer.h.html#ngx_event_timer_rbtree" title='ngx_event_timer_rbtree' data-ref="ngx_event_timer_rbtree">ngx_event_timer_rbtree</a>, &amp;<a class="tu ref" href="#ngx_event_timer_sentinel" title='ngx_event_timer_sentinel' data-use='a' data-ref="ngx_event_timer_sentinel">ngx_event_timer_sentinel</a>,</td></tr>
+<tr><th id="26">26</th><td>                    <a class="ref fn" href="../core/ngx_rbtree.h.html#ngx_rbtree_insert_timer_value" title='ngx_rbtree_insert_timer_value' data-ref="ngx_rbtree_insert_timer_value">ngx_rbtree_insert_timer_value</a>);</td></tr>
+<tr><th id="27">27</th><td></td></tr>
+<tr><th id="28">28</th><td>    <b>return</b> <a class="macro" href="../core/ngx_core.h.html#35" title="0" data-ref="_M/NGX_OK">NGX_OK</a>;</td></tr>
+<tr><th id="29">29</th><td>}</td></tr>
+<tr><th id="30">30</th><td></td></tr>
+<tr><th id="31">31</th><td></td></tr>
+<tr><th id="32">32</th><td><a class="typedef" href="../os/unix/ngx_time.h.html#ngx_msec_t" title='ngx_msec_t' data-type='ngx_rbtree_key_t' data-ref="ngx_msec_t">ngx_msec_t</a></td></tr>
+<tr><th id="33">33</th><td><dfn class="decl def fn" id="ngx_event_find_timer" title='ngx_event_find_timer' data-ref="ngx_event_find_timer">ngx_event_find_timer</dfn>(<em>void</em>)</td></tr>
+<tr><th id="34">34</th><td>{</td></tr>
+<tr><th id="35">35</th><td>    <a class="typedef" href="../os/unix/ngx_time.h.html#ngx_msec_int_t" title='ngx_msec_int_t' data-type='ngx_rbtree_key_int_t' data-ref="ngx_msec_int_t">ngx_msec_int_t</a>      <dfn class="local col2 decl" id="2timer" title='timer' data-type='ngx_msec_int_t' data-ref="2timer">timer</dfn>;</td></tr>
+<tr><th id="36">36</th><td>    <a class="typedef" href="../core/ngx_rbtree.h.html#ngx_rbtree_node_t" title='ngx_rbtree_node_t' data-type='struct ngx_rbtree_node_s' data-ref="ngx_rbtree_node_t">ngx_rbtree_node_t</a>  *<dfn class="local col3 decl" id="3node" title='node' data-type='ngx_rbtree_node_t *' data-ref="3node">node</dfn>, *<dfn class="local col4 decl" id="4root" title='root' data-type='ngx_rbtree_node_t *' data-ref="4root">root</dfn>, *<dfn class="local col5 decl" id="5sentinel" title='sentinel' data-type='ngx_rbtree_node_t *' data-ref="5sentinel">sentinel</dfn>;</td></tr>
+<tr><th id="37">37</th><td></td></tr>
+<tr><th id="38">38</th><td>    <b>if</b> (<a class="ref" href="ngx_event_timer.h.html#ngx_event_timer_rbtree" title='ngx_event_timer_rbtree' data-ref="ngx_event_timer_rbtree">ngx_event_timer_rbtree</a>.<a class="ref field" href="../core/ngx_rbtree.h.html#ngx_rbtree_s::root" title='ngx_rbtree_s::root' data-ref="ngx_rbtree_s::root">root</a> == &amp;<a class="tu ref" href="#ngx_event_timer_sentinel" title='ngx_event_timer_sentinel' data-use='a' data-ref="ngx_event_timer_sentinel">ngx_event_timer_sentinel</a>) {</td></tr>
+<tr><th id="39">39</th><td>        <b>return</b> <a class="macro" href="ngx_event_timer.h.html#17" title="(ngx_msec_t) -1" data-ref="_M/NGX_TIMER_INFINITE">NGX_TIMER_INFINITE</a>;</td></tr>
+<tr><th id="40">40</th><td>    }</td></tr>
+<tr><th id="41">41</th><td></td></tr>
+<tr><th id="42">42</th><td>    <a class="local col4 ref" href="#4root" title='root' data-ref="4root">root</a> = <a class="ref" href="ngx_event_timer.h.html#ngx_event_timer_rbtree" title='ngx_event_timer_rbtree' data-ref="ngx_event_timer_rbtree">ngx_event_timer_rbtree</a>.<a class="ref field" href="../core/ngx_rbtree.h.html#ngx_rbtree_s::root" title='ngx_rbtree_s::root' data-ref="ngx_rbtree_s::root">root</a>;</td></tr>
+<tr><th id="43">43</th><td>    <a class="local col5 ref" href="#5sentinel" title='sentinel' data-ref="5sentinel">sentinel</a> = <a class="ref" href="ngx_event_timer.h.html#ngx_event_timer_rbtree" title='ngx_event_timer_rbtree' data-ref="ngx_event_timer_rbtree">ngx_event_timer_rbtree</a>.<a class="ref field" href="../core/ngx_rbtree.h.html#ngx_rbtree_s::sentinel" title='ngx_rbtree_s::sentinel' data-ref="ngx_rbtree_s::sentinel">sentinel</a>;</td></tr>
+<tr><th id="44">44</th><td></td></tr>
+<tr><th id="45">45</th><td>    <a class="local col3 ref" href="#3node" title='node' data-ref="3node">node</a> = <a class="ref fn" href="../core/ngx_rbtree.h.html#ngx_rbtree_min" title='ngx_rbtree_min' data-ref="ngx_rbtree_min">ngx_rbtree_min</a>(<a class="local col4 ref" href="#4root" title='root' data-ref="4root">root</a>, <a class="local col5 ref" href="#5sentinel" title='sentinel' data-ref="5sentinel">sentinel</a>);</td></tr>
+<tr><th id="46">46</th><td></td></tr>
+<tr><th id="47">47</th><td>    <a class="local col2 ref" href="#2timer" title='timer' data-ref="2timer">timer</a> = (<a class="typedef" href="../os/unix/ngx_time.h.html#ngx_msec_int_t" title='ngx_msec_int_t' data-type='ngx_rbtree_key_int_t' data-ref="ngx_msec_int_t">ngx_msec_int_t</a>) (<a class="local col3 ref" href="#3node" title='node' data-ref="3node">node</a>-&gt;<a class="ref field" href="../core/ngx_rbtree.h.html#ngx_rbtree_node_s::key" title='ngx_rbtree_node_s::key' data-ref="ngx_rbtree_node_s::key">key</a> - <a class="ref" href="../core/ngx_times.h.html#ngx_current_msec" title='ngx_current_msec' data-ref="ngx_current_msec">ngx_current_msec</a>);</td></tr>
+<tr><th id="48">48</th><td></td></tr>
+<tr><th id="49">49</th><td>    <b>return</b> (<a class="typedef" href="../os/unix/ngx_time.h.html#ngx_msec_t" title='ngx_msec_t' data-type='ngx_rbtree_key_t' data-ref="ngx_msec_t">ngx_msec_t</a>) (<a class="local col2 ref" href="#2timer" title='timer' data-ref="2timer">timer</a> &gt; <var>0</var> ? <a class="local col2 ref" href="#2timer" title='timer' data-ref="2timer">timer</a> : <var>0</var>);</td></tr>
+<tr><th id="50">50</th><td>}</td></tr>
+<tr><th id="51">51</th><td></td></tr>
+<tr><th id="52">52</th><td></td></tr>
+<tr><th id="53">53</th><td><em>void</em></td></tr>
+<tr><th id="54">54</th><td><dfn class="decl def fn" id="ngx_event_expire_timers" title='ngx_event_expire_timers' data-ref="ngx_event_expire_timers">ngx_event_expire_timers</dfn>(<em>void</em>)</td></tr>
+<tr><th id="55">55</th><td>{</td></tr>
+<tr><th id="56">56</th><td>    <a class="typedef" href="../core/ngx_core.h.html#ngx_event_t" title='ngx_event_t' data-type='struct ngx_event_s' data-ref="ngx_event_t">ngx_event_t</a>        *<dfn class="local col6 decl" id="6ev" title='ev' data-type='ngx_event_t *' data-ref="6ev">ev</dfn>;</td></tr>
+<tr><th id="57">57</th><td>    <a class="typedef" href="../core/ngx_rbtree.h.html#ngx_rbtree_node_t" title='ngx_rbtree_node_t' data-type='struct ngx_rbtree_node_s' data-ref="ngx_rbtree_node_t">ngx_rbtree_node_t</a>  *<dfn class="local col7 decl" id="7node" title='node' data-type='ngx_rbtree_node_t *' data-ref="7node">node</dfn>, *<dfn class="local col8 decl" id="8root" title='root' data-type='ngx_rbtree_node_t *' data-ref="8root">root</dfn>, *<dfn class="local col9 decl" id="9sentinel" title='sentinel' data-type='ngx_rbtree_node_t *' data-ref="9sentinel">sentinel</dfn>;</td></tr>
+<tr><th id="58">58</th><td></td></tr>
+<tr><th id="59">59</th><td>    <a class="local col9 ref" href="#9sentinel" title='sentinel' data-ref="9sentinel">sentinel</a> = <a class="ref" href="ngx_event_timer.h.html#ngx_event_timer_rbtree" title='ngx_event_timer_rbtree' data-ref="ngx_event_timer_rbtree">ngx_event_timer_rbtree</a>.<a class="ref field" href="../core/ngx_rbtree.h.html#ngx_rbtree_s::sentinel" title='ngx_rbtree_s::sentinel' data-ref="ngx_rbtree_s::sentinel">sentinel</a>;</td></tr>
+<tr><th id="60">60</th><td></td></tr>
+<tr><th id="61">61</th><td>    <b>for</b> ( ;; ) {</td></tr>
+<tr><th id="62">62</th><td>        <a class="local col8 ref" href="#8root" title='root' data-ref="8root">root</a> = <a class="ref" href="ngx_event_timer.h.html#ngx_event_timer_rbtree" title='ngx_event_timer_rbtree' data-ref="ngx_event_timer_rbtree">ngx_event_timer_rbtree</a>.<a class="ref field" href="../core/ngx_rbtree.h.html#ngx_rbtree_s::root" title='ngx_rbtree_s::root' data-ref="ngx_rbtree_s::root">root</a>;</td></tr>
+<tr><th id="63">63</th><td></td></tr>
+<tr><th id="64">64</th><td>        <b>if</b> (<a class="local col8 ref" href="#8root" title='root' data-ref="8root">root</a> == <a class="local col9 ref" href="#9sentinel" title='sentinel' data-ref="9sentinel">sentinel</a>) {</td></tr>
+<tr><th id="65">65</th><td>            <b>return</b>;</td></tr>
+<tr><th id="66">66</th><td>        }</td></tr>
+<tr><th id="67">67</th><td></td></tr>
+<tr><th id="68">68</th><td>        <a class="local col7 ref" href="#7node" title='node' data-ref="7node">node</a> = <a class="ref fn" href="../core/ngx_rbtree.h.html#ngx_rbtree_min" title='ngx_rbtree_min' data-ref="ngx_rbtree_min">ngx_rbtree_min</a>(<a class="local col8 ref" href="#8root" title='root' data-ref="8root">root</a>, <a class="local col9 ref" href="#9sentinel" title='sentinel' data-ref="9sentinel">sentinel</a>);</td></tr>
+<tr><th id="69">69</th><td></td></tr>
+<tr><th id="70">70</th><td>        <i>/* node-&gt;key &gt; ngx_current_msec */</i></td></tr>
+<tr><th id="71">71</th><td></td></tr>
+<tr><th id="72">72</th><td>        <b>if</b> ((<a class="typedef" href="../os/unix/ngx_time.h.html#ngx_msec_int_t" title='ngx_msec_int_t' data-type='ngx_rbtree_key_int_t' data-ref="ngx_msec_int_t">ngx_msec_int_t</a>) (<a class="local col7 ref" href="#7node" title='node' data-ref="7node">node</a>-&gt;<a class="ref field" href="../core/ngx_rbtree.h.html#ngx_rbtree_node_s::key" title='ngx_rbtree_node_s::key' data-ref="ngx_rbtree_node_s::key">key</a> - <a class="ref" href="../core/ngx_times.h.html#ngx_current_msec" title='ngx_current_msec' data-ref="ngx_current_msec">ngx_current_msec</a>) &gt; <var>0</var>) {</td></tr>
+<tr><th id="73">73</th><td>            <b>return</b>;</td></tr>
+<tr><th id="74">74</th><td>        }</td></tr>
+<tr><th id="75">75</th><td></td></tr>
+<tr><th id="76">76</th><td>        <a class="local col6 ref" href="#6ev" title='ev' data-ref="6ev">ev</a> = (<a class="typedef" href="../core/ngx_core.h.html#ngx_event_t" title='ngx_event_t' data-type='struct ngx_event_s' data-ref="ngx_event_t">ngx_event_t</a> *) ((<em>char</em> *) <a class="local col7 ref" href="#7node" title='node' data-ref="7node">node</a> - <span class="macro" title="__builtin_offsetof(ngx_event_t, timer)" data-ref="_M/offsetof">offsetof</span>(<a class="typedef" href="../core/ngx_core.h.html#ngx_event_t" title='ngx_event_t' data-type='struct ngx_event_s' data-ref="ngx_event_t">ngx_event_t</a>, timer));</td></tr>
+<tr><th id="77">77</th><td></td></tr>
+<tr><th id="78">78</th><td>        <a class="macro" href="../core/ngx_log.h.html#217" title="" data-ref="_M/ngx_log_debug2">ngx_log_debug2</a>(NGX_LOG_DEBUG_EVENT, ev-&gt;log, <var>0</var>,</td></tr>
+<tr><th id="79">79</th><td>                       <q>"event timer del: %d: %M"</q>,</td></tr>
+<tr><th id="80">80</th><td>                       ngx_event_ident(ev-&gt;data), ev-&gt;timer.key);</td></tr>
+<tr><th id="81">81</th><td></td></tr>
+<tr><th id="82">82</th><td>        <a class="ref fn" href="../core/ngx_rbtree.h.html#ngx_rbtree_delete" title='ngx_rbtree_delete' data-ref="ngx_rbtree_delete">ngx_rbtree_delete</a>(&amp;<a class="ref" href="ngx_event_timer.h.html#ngx_event_timer_rbtree" title='ngx_event_timer_rbtree' data-ref="ngx_event_timer_rbtree">ngx_event_timer_rbtree</a>, &amp;<a class="local col6 ref" href="#6ev" title='ev' data-ref="6ev">ev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::timer" title='ngx_event_s::timer' data-ref="ngx_event_s::timer">timer</a>);</td></tr>
+<tr><th id="83">83</th><td></td></tr>
+<tr><th id="84">84</th><td><u>#<span data-ppcond="84">if</span> (NGX_DEBUG)</u></td></tr>
+<tr><th id="85">85</th><td>        ev-&gt;timer.left = NULL;</td></tr>
+<tr><th id="86">86</th><td>        ev-&gt;timer.right = NULL;</td></tr>
+<tr><th id="87">87</th><td>        ev-&gt;timer.parent = NULL;</td></tr>
+<tr><th id="88">88</th><td><u>#<span data-ppcond="84">endif</span></u></td></tr>
+<tr><th id="89">89</th><td></td></tr>
+<tr><th id="90">90</th><td>        <a class="local col6 ref" href="#6ev" title='ev' data-ref="6ev">ev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::timer_set" title='ngx_event_s::timer_set' data-ref="ngx_event_s::timer_set">timer_set</a> = <var>0</var>;</td></tr>
+<tr><th id="91">91</th><td></td></tr>
+<tr><th id="92">92</th><td>        <a class="local col6 ref" href="#6ev" title='ev' data-ref="6ev">ev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::timedout" title='ngx_event_s::timedout' data-ref="ngx_event_s::timedout">timedout</a> = <var>1</var>;</td></tr>
+<tr><th id="93">93</th><td></td></tr>
+<tr><th id="94">94</th><td>        <a class="local col6 ref" href="#6ev" title='ev' data-ref="6ev">ev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::handler" title='ngx_event_s::handler' data-ref="ngx_event_s::handler">handler</a>(<a class="local col6 ref" href="#6ev" title='ev' data-ref="6ev">ev</a>);</td></tr>
+<tr><th id="95">95</th><td>    }</td></tr>
+<tr><th id="96">96</th><td>}</td></tr>
+<tr><th id="97">97</th><td></td></tr>
+<tr><th id="98">98</th><td></td></tr>
+<tr><th id="99">99</th><td><a class="typedef" href="../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a></td></tr>
+<tr><th id="100">100</th><td><dfn class="decl def fn" id="ngx_event_no_timers_left" title='ngx_event_no_timers_left' data-ref="ngx_event_no_timers_left">ngx_event_no_timers_left</dfn>(<em>void</em>)</td></tr>
+<tr><th id="101">101</th><td>{</td></tr>
+<tr><th id="102">102</th><td>    <a class="typedef" href="../core/ngx_core.h.html#ngx_event_t" title='ngx_event_t' data-type='struct ngx_event_s' data-ref="ngx_event_t">ngx_event_t</a>        *<dfn class="local col0 decl" id="10ev" title='ev' data-type='ngx_event_t *' data-ref="10ev">ev</dfn>;</td></tr>
+<tr><th id="103">103</th><td>    <a class="typedef" href="../core/ngx_rbtree.h.html#ngx_rbtree_node_t" title='ngx_rbtree_node_t' data-type='struct ngx_rbtree_node_s' data-ref="ngx_rbtree_node_t">ngx_rbtree_node_t</a>  *<dfn class="local col1 decl" id="11node" title='node' data-type='ngx_rbtree_node_t *' data-ref="11node">node</dfn>, *<dfn class="local col2 decl" id="12root" title='root' data-type='ngx_rbtree_node_t *' data-ref="12root">root</dfn>, *<dfn class="local col3 decl" id="13sentinel" title='sentinel' data-type='ngx_rbtree_node_t *' data-ref="13sentinel">sentinel</dfn>;</td></tr>
+<tr><th id="104">104</th><td></td></tr>
+<tr><th id="105">105</th><td>    <a class="local col3 ref" href="#13sentinel" title='sentinel' data-ref="13sentinel">sentinel</a> = <a class="ref" href="ngx_event_timer.h.html#ngx_event_timer_rbtree" title='ngx_event_timer_rbtree' data-ref="ngx_event_timer_rbtree">ngx_event_timer_rbtree</a>.<a class="ref field" href="../core/ngx_rbtree.h.html#ngx_rbtree_s::sentinel" title='ngx_rbtree_s::sentinel' data-ref="ngx_rbtree_s::sentinel">sentinel</a>;</td></tr>
+<tr><th id="106">106</th><td>    <a class="local col2 ref" href="#12root" title='root' data-ref="12root">root</a> = <a class="ref" href="ngx_event_timer.h.html#ngx_event_timer_rbtree" title='ngx_event_timer_rbtree' data-ref="ngx_event_timer_rbtree">ngx_event_timer_rbtree</a>.<a class="ref field" href="../core/ngx_rbtree.h.html#ngx_rbtree_s::root" title='ngx_rbtree_s::root' data-ref="ngx_rbtree_s::root">root</a>;</td></tr>
+<tr><th id="107">107</th><td></td></tr>
+<tr><th id="108">108</th><td>    <b>if</b> (<a class="local col2 ref" href="#12root" title='root' data-ref="12root">root</a> == <a class="local col3 ref" href="#13sentinel" title='sentinel' data-ref="13sentinel">sentinel</a>) {</td></tr>
+<tr><th id="109">109</th><td>        <b>return</b> <a class="macro" href="../core/ngx_core.h.html#35" title="0" data-ref="_M/NGX_OK">NGX_OK</a>;</td></tr>
+<tr><th id="110">110</th><td>    }</td></tr>
+<tr><th id="111">111</th><td></td></tr>
+<tr><th id="112">112</th><td>    <b>for</b> (<a class="local col1 ref" href="#11node" title='node' data-ref="11node">node</a> = <a class="ref fn" href="../core/ngx_rbtree.h.html#ngx_rbtree_min" title='ngx_rbtree_min' data-ref="ngx_rbtree_min">ngx_rbtree_min</a>(<a class="local col2 ref" href="#12root" title='root' data-ref="12root">root</a>, <a class="local col3 ref" href="#13sentinel" title='sentinel' data-ref="13sentinel">sentinel</a>);</td></tr>
+<tr><th id="113">113</th><td>         <a class="local col1 ref" href="#11node" title='node' data-ref="11node">node</a>;</td></tr>
+<tr><th id="114">114</th><td>         <a class="local col1 ref" href="#11node" title='node' data-ref="11node">node</a> = <a class="ref fn" href="../core/ngx_rbtree.h.html#ngx_rbtree_next" title='ngx_rbtree_next' data-ref="ngx_rbtree_next">ngx_rbtree_next</a>(&amp;<a class="ref" href="ngx_event_timer.h.html#ngx_event_timer_rbtree" title='ngx_event_timer_rbtree' data-ref="ngx_event_timer_rbtree">ngx_event_timer_rbtree</a>, <a class="local col1 ref" href="#11node" title='node' data-ref="11node">node</a>))</td></tr>
+<tr><th id="115">115</th><td>    {</td></tr>
+<tr><th id="116">116</th><td>        <a class="local col0 ref" href="#10ev" title='ev' data-ref="10ev">ev</a> = (<a class="typedef" href="../core/ngx_core.h.html#ngx_event_t" title='ngx_event_t' data-type='struct ngx_event_s' data-ref="ngx_event_t">ngx_event_t</a> *) ((<em>char</em> *) <a class="local col1 ref" href="#11node" title='node' data-ref="11node">node</a> - <span class="macro" title="__builtin_offsetof(ngx_event_t, timer)" data-ref="_M/offsetof">offsetof</span>(<a class="typedef" href="../core/ngx_core.h.html#ngx_event_t" title='ngx_event_t' data-type='struct ngx_event_s' data-ref="ngx_event_t">ngx_event_t</a>, timer));</td></tr>
+<tr><th id="117">117</th><td></td></tr>
+<tr><th id="118">118</th><td>        <b>if</b> (!<a class="local col0 ref" href="#10ev" title='ev' data-ref="10ev">ev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::cancelable" title='ngx_event_s::cancelable' data-ref="ngx_event_s::cancelable">cancelable</a>) {</td></tr>
+<tr><th id="119">119</th><td>            <b>return</b> <a class="macro" href="../core/ngx_core.h.html#37" title="-2" data-ref="_M/NGX_AGAIN">NGX_AGAIN</a>;</td></tr>
+<tr><th id="120">120</th><td>        }</td></tr>
+<tr><th id="121">121</th><td>    }</td></tr>
+<tr><th id="122">122</th><td></td></tr>
+<tr><th id="123">123</th><td>    <i>/* only cancelable timers left */</i></td></tr>
+<tr><th id="124">124</th><td></td></tr>
+<tr><th id="125">125</th><td>    <b>return</b> <a class="macro" href="../core/ngx_core.h.html#35" title="0" data-ref="_M/NGX_OK">NGX_OK</a>;</td></tr>
+<tr><th id="126">126</th><td>}</td></tr>
+<tr><th id="127">127</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated on <em>2018-Apr-06</em> from project nginx<br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

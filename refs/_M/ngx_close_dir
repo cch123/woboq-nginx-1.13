@@ -1,0 +1,5 @@
+<dec f='nginx/src/os/unix/ngx_files.h' l='223'/>
+<use f='nginx/src/core/ngx_file.c' l='1119' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='288' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='385' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='996' u='c'/>

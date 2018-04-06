@@ -1,0 +1,6 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='453' type='unsigned int'/>
+<offset>9808</offset>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2231' u='r' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2368' u='w' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2368' u='r' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_request.c' l='614' u='w' c='ngx_http_create_request'/>

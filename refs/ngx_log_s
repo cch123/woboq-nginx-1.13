@@ -1,0 +1,12 @@
+<def f='nginx/src/core/ngx_log.h' l='50' ll='73'/>
+<size>80</size>
+<mbr r='ngx_log_s::log_level' o='0' t='ngx_uint_t'/>
+<mbr r='ngx_log_s::file' o='64' t='ngx_open_file_t *'/>
+<mbr r='ngx_log_s::connection' o='128' t='ngx_atomic_uint_t'/>
+<mbr r='ngx_log_s::disk_full_time' o='192' t='time_t'/>
+<mbr r='ngx_log_s::handler' o='256' t='ngx_log_handler_pt'/>
+<mbr r='ngx_log_s::data' o='320' t='void *'/>
+<mbr r='ngx_log_s::writer' o='384' t='ngx_log_writer_pt'/>
+<mbr r='ngx_log_s::wdata' o='448' t='void *'/>
+<mbr r='ngx_log_s::action' o='512' t='char *'/>
+<mbr r='ngx_log_s::next' o='576' t='ngx_log_t *'/>

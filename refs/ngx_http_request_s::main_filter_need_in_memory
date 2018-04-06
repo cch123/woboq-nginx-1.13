@@ -1,0 +1,6 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='539' type='unsigned int'/>
+<offset>9885</offset>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='308' u='w' c='ngx_http_gzip_header_filter'/>
+<use f='nginx/src/http/ngx_http_copy_filter_module.c' l='114' u='r' c='ngx_http_copy_filter'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2365' u='w' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2365' u='r' c='ngx_http_subrequest'/>

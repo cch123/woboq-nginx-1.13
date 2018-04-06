@@ -1,0 +1,18 @@
+<dec f='nginx/src/http/ngx_http_upstream_round_robin.h' l='37' type='time_t'/>
+<offset>960</offset>
+<use f='nginx/src/http/modules/ngx_http_upstream_hash_module.c' l='240' u='r' c='ngx_http_upstream_get_hash_peer'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_hash_module.c' l='267' u='r' c='ngx_http_upstream_get_hash_peer'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_hash_module.c' l='548' u='r' c='ngx_http_upstream_get_chash_peer'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_hash_module.c' l='601' u='r' c='ngx_http_upstream_get_chash_peer'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_ip_hash_module.c' l='210' u='r' c='ngx_http_upstream_get_ip_hash_peer'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_ip_hash_module.c' l='237' u='r' c='ngx_http_upstream_get_ip_hash_peer'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_least_conn_module.c' l='152' u='r' c='ngx_http_upstream_get_least_conn_peer'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_least_conn_module.c' l='211' u='r' c='ngx_http_upstream_get_least_conn_peer'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_least_conn_module.c' l='236' u='r' c='ngx_http_upstream_get_least_conn_peer'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='97' u='w' c='ngx_http_upstream_init_round_robin'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='161' u='w' c='ngx_http_upstream_init_round_robin'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='230' u='w' c='ngx_http_upstream_init_round_robin'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='346' u='w' c='ngx_http_upstream_create_round_robin_peer'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='380' u='w' c='ngx_http_upstream_create_round_robin_peer'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='542' u='r' c='ngx_http_upstream_get_peer'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='577' u='r' c='ngx_http_upstream_get_peer'/>

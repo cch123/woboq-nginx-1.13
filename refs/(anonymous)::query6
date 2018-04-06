@@ -1,0 +1,21 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='109' type='u_char *'/>
+<offset>768</offset>
+<use f='nginx/src/core/ngx_resolver.c' l='759' u='w' c='ngx_resolve_name_locked'/>
+<use f='nginx/src/core/ngx_resolver.c' l='806' u='w' c='ngx_resolve_name_locked'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1012' u='w' c='ngx_resolve_addr'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1036' u='w' c='ngx_resolve_addr'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1268' u='r' c='ngx_resolver_send_query'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1270' u='r' c='ngx_resolver_send_query'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1271' u='r' c='ngx_resolver_send_query'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1743' u='r' c='ngx_resolver_process_response'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1744' u='r' c='ngx_resolver_process_response'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1744' u='r' c='ngx_resolver_process_response'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1913' u='r' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1925' u='r' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1925' u='r' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1977' u='r' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2418' u='w' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2457' u='w' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2842' u='w' c='ngx_resolver_process_srv'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3623' u='w' c='ngx_resolver_create_name_query'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3694' u='r' c='ngx_resolver_create_name_query'/>

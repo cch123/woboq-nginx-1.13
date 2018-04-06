@@ -1,0 +1,13 @@
+<dec f='nginx/src/os/unix/ngx_files.h' l='76'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='180' u='c'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1024' u='c'/>
+<use f='nginx/src/core/ngx_file.c' l='809' u='c'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='661' u='c'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='678' u='c'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='709' u='c'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='714' u='c'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='816' u='c'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='877' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_auth_basic_module.c' l='141' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1412' u='c'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1449' u='c'/>

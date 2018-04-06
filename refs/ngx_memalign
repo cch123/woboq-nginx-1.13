@@ -1,0 +1,5 @@
+<dec f='nginx/src/os/unix/ngx_alloc.h' l='31' type='void * ngx_memalign(size_t alignment, size_t size, ngx_log_t * log)'/>
+<use f='nginx/src/core/ngx_palloc.c' l='23' u='c' c='ngx_create_pool'/>
+<use f='nginx/src/core/ngx_palloc.c' l='186' u='c' c='ngx_palloc_block'/>
+<use f='nginx/src/core/ngx_palloc.c' l='258' u='c' c='ngx_pmemalign'/>
+<def f='nginx/src/os/unix/ngx_alloc.c' l='51' ll='69' type='void * ngx_memalign(size_t alignment, size_t size, ngx_log_t * log)'/>

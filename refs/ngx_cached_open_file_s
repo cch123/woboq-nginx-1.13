@@ -1,0 +1,24 @@
+<def f='nginx/src/core/ngx_open_file_cache.h' l='56' ll='88'/>
+<size>144</size>
+<mbr r='ngx_cached_open_file_s::node' o='0' t='ngx_rbtree_node_t'/>
+<mbr r='ngx_cached_open_file_s::queue' o='320' t='ngx_queue_t'/>
+<mbr r='ngx_cached_open_file_s::name' o='448' t='u_char *'/>
+<mbr r='ngx_cached_open_file_s::created' o='512' t='time_t'/>
+<mbr r='ngx_cached_open_file_s::accessed' o='576' t='time_t'/>
+<mbr r='ngx_cached_open_file_s::fd' o='640' t='ngx_fd_t'/>
+<mbr r='ngx_cached_open_file_s::uniq' o='704' t='ngx_file_uniq_t'/>
+<mbr r='ngx_cached_open_file_s::mtime' o='768' t='time_t'/>
+<mbr r='ngx_cached_open_file_s::size' o='832' t='off_t'/>
+<mbr r='ngx_cached_open_file_s::err' o='896' t='ngx_err_t'/>
+<mbr r='ngx_cached_open_file_s::uses' o='928' t='uint32_t'/>
+<mbr r='ngx_cached_open_file_s::disable_symlinks_from' o='960' t='size_t'/>
+<mbr r='ngx_cached_open_file_s::disable_symlinks' o='1024' t='unsigned int'/>
+<mbr r='ngx_cached_open_file_s::count' o='1026' t='unsigned int'/>
+<mbr r='ngx_cached_open_file_s::close' o='1050' t='unsigned int'/>
+<mbr r='ngx_cached_open_file_s::use_event' o='1051' t='unsigned int'/>
+<mbr r='ngx_cached_open_file_s::is_dir' o='1052' t='unsigned int'/>
+<mbr r='ngx_cached_open_file_s::is_file' o='1053' t='unsigned int'/>
+<mbr r='ngx_cached_open_file_s::is_link' o='1054' t='unsigned int'/>
+<mbr r='ngx_cached_open_file_s::is_exec' o='1055' t='unsigned int'/>
+<mbr r='ngx_cached_open_file_s::is_directio' o='1056' t='unsigned int'/>
+<mbr r='ngx_cached_open_file_s::event' o='1088' t='ngx_event_t *'/>

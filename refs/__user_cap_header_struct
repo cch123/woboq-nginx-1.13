@@ -1,0 +1,4 @@
+<def f='include/linux/capability.h' l='40' ll='43'/>
+<size>8</size>
+<mbr r='__user_cap_header_struct::version' o='0' t='__u32'/>
+<mbr r='__user_cap_header_struct::pid' o='32' t='int'/>

@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='231' type='ngx_resolver_ctx_t * ngx_resolve_start(ngx_resolver_t * r, ngx_resolver_ctx_t * temp)'/>
+<def f='nginx/src/core/ngx_resolver.c' l='374' ll='410' type='ngx_resolver_ctx_t * ngx_resolve_start(ngx_resolver_t * r, ngx_resolver_ctx_t * temp)'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2939' u='c' c='ngx_resolver_resolve_srv_names'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='739' u='c' c='ngx_http_upstream_init_request'/>

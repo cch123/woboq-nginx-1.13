@@ -1,0 +1,88 @@
+<def f='nginx/src/http/ngx_http_core_module.h' l='298' ll='438'/>
+<size>672</size>
+<mbr r='ngx_http_core_loc_conf_s::name' o='0' t='ngx_str_t'/>
+<mbr r='ngx_http_core_loc_conf_s::regex' o='128' t='ngx_http_regex_t *'/>
+<mbr r='ngx_http_core_loc_conf_s::noname' o='192' t='unsigned int'/>
+<mbr r='ngx_http_core_loc_conf_s::lmt_excpt' o='193' t='unsigned int'/>
+<mbr r='ngx_http_core_loc_conf_s::named' o='194' t='unsigned int'/>
+<mbr r='ngx_http_core_loc_conf_s::exact_match' o='195' t='unsigned int'/>
+<mbr r='ngx_http_core_loc_conf_s::noregex' o='196' t='unsigned int'/>
+<mbr r='ngx_http_core_loc_conf_s::auto_redirect' o='197' t='unsigned int'/>
+<mbr r='ngx_http_core_loc_conf_s::gzip_disable_msie6' o='198' t='unsigned int'/>
+<mbr r='ngx_http_core_loc_conf_s::gzip_disable_degradation' o='200' t='unsigned int'/>
+<mbr r='ngx_http_core_loc_conf_s::static_locations' o='256' t='ngx_http_location_tree_node_t *'/>
+<mbr r='ngx_http_core_loc_conf_s::regex_locations' o='320' t='ngx_http_core_loc_conf_t **'/>
+<mbr r='ngx_http_core_loc_conf_s::loc_conf' o='384' t='void **'/>
+<mbr r='ngx_http_core_loc_conf_s::limit_except' o='448' t='uint32_t'/>
+<mbr r='ngx_http_core_loc_conf_s::limit_except_loc_conf' o='512' t='void **'/>
+<mbr r='ngx_http_core_loc_conf_s::handler' o='576' t='ngx_http_handler_pt'/>
+<mbr r='ngx_http_core_loc_conf_s::alias' o='640' t='size_t'/>
+<mbr r='ngx_http_core_loc_conf_s::root' o='704' t='ngx_str_t'/>
+<mbr r='ngx_http_core_loc_conf_s::post_action' o='832' t='ngx_str_t'/>
+<mbr r='ngx_http_core_loc_conf_s::root_lengths' o='960' t='ngx_array_t *'/>
+<mbr r='ngx_http_core_loc_conf_s::root_values' o='1024' t='ngx_array_t *'/>
+<mbr r='ngx_http_core_loc_conf_s::types' o='1088' t='ngx_array_t *'/>
+<mbr r='ngx_http_core_loc_conf_s::types_hash' o='1152' t='ngx_hash_t'/>
+<mbr r='ngx_http_core_loc_conf_s::default_type' o='1280' t='ngx_str_t'/>
+<mbr r='ngx_http_core_loc_conf_s::client_max_body_size' o='1408' t='off_t'/>
+<mbr r='ngx_http_core_loc_conf_s::directio' o='1472' t='off_t'/>
+<mbr r='ngx_http_core_loc_conf_s::directio_alignment' o='1536' t='off_t'/>
+<mbr r='ngx_http_core_loc_conf_s::client_body_buffer_size' o='1600' t='size_t'/>
+<mbr r='ngx_http_core_loc_conf_s::send_lowat' o='1664' t='size_t'/>
+<mbr r='ngx_http_core_loc_conf_s::postpone_output' o='1728' t='size_t'/>
+<mbr r='ngx_http_core_loc_conf_s::limit_rate' o='1792' t='size_t'/>
+<mbr r='ngx_http_core_loc_conf_s::limit_rate_after' o='1856' t='size_t'/>
+<mbr r='ngx_http_core_loc_conf_s::sendfile_max_chunk' o='1920' t='size_t'/>
+<mbr r='ngx_http_core_loc_conf_s::read_ahead' o='1984' t='size_t'/>
+<mbr r='ngx_http_core_loc_conf_s::subrequest_output_buffer_size' o='2048' t='size_t'/>
+<mbr r='ngx_http_core_loc_conf_s::client_body_timeout' o='2112' t='ngx_msec_t'/>
+<mbr r='ngx_http_core_loc_conf_s::send_timeout' o='2176' t='ngx_msec_t'/>
+<mbr r='ngx_http_core_loc_conf_s::keepalive_timeout' o='2240' t='ngx_msec_t'/>
+<mbr r='ngx_http_core_loc_conf_s::lingering_time' o='2304' t='ngx_msec_t'/>
+<mbr r='ngx_http_core_loc_conf_s::lingering_timeout' o='2368' t='ngx_msec_t'/>
+<mbr r='ngx_http_core_loc_conf_s::resolver_timeout' o='2432' t='ngx_msec_t'/>
+<mbr r='ngx_http_core_loc_conf_s::resolver' o='2496' t='ngx_resolver_t *'/>
+<mbr r='ngx_http_core_loc_conf_s::keepalive_header' o='2560' t='time_t'/>
+<mbr r='ngx_http_core_loc_conf_s::keepalive_requests' o='2624' t='ngx_uint_t'/>
+<mbr r='ngx_http_core_loc_conf_s::keepalive_disable' o='2688' t='ngx_uint_t'/>
+<mbr r='ngx_http_core_loc_conf_s::satisfy' o='2752' t='ngx_uint_t'/>
+<mbr r='ngx_http_core_loc_conf_s::lingering_close' o='2816' t='ngx_uint_t'/>
+<mbr r='ngx_http_core_loc_conf_s::if_modified_since' o='2880' t='ngx_uint_t'/>
+<mbr r='ngx_http_core_loc_conf_s::max_ranges' o='2944' t='ngx_uint_t'/>
+<mbr r='ngx_http_core_loc_conf_s::client_body_in_file_only' o='3008' t='ngx_uint_t'/>
+<mbr r='ngx_http_core_loc_conf_s::client_body_in_single_buffer' o='3072' t='ngx_flag_t'/>
+<mbr r='ngx_http_core_loc_conf_s::internal' o='3136' t='ngx_flag_t'/>
+<mbr r='ngx_http_core_loc_conf_s::sendfile' o='3200' t='ngx_flag_t'/>
+<mbr r='ngx_http_core_loc_conf_s::aio' o='3264' t='ngx_flag_t'/>
+<mbr r='ngx_http_core_loc_conf_s::aio_write' o='3328' t='ngx_flag_t'/>
+<mbr r='ngx_http_core_loc_conf_s::tcp_nopush' o='3392' t='ngx_flag_t'/>
+<mbr r='ngx_http_core_loc_conf_s::tcp_nodelay' o='3456' t='ngx_flag_t'/>
+<mbr r='ngx_http_core_loc_conf_s::reset_timedout_connection' o='3520' t='ngx_flag_t'/>
+<mbr r='ngx_http_core_loc_conf_s::absolute_redirect' o='3584' t='ngx_flag_t'/>
+<mbr r='ngx_http_core_loc_conf_s::server_name_in_redirect' o='3648' t='ngx_flag_t'/>
+<mbr r='ngx_http_core_loc_conf_s::port_in_redirect' o='3712' t='ngx_flag_t'/>
+<mbr r='ngx_http_core_loc_conf_s::msie_padding' o='3776' t='ngx_flag_t'/>
+<mbr r='ngx_http_core_loc_conf_s::msie_refresh' o='3840' t='ngx_flag_t'/>
+<mbr r='ngx_http_core_loc_conf_s::log_not_found' o='3904' t='ngx_flag_t'/>
+<mbr r='ngx_http_core_loc_conf_s::log_subrequest' o='3968' t='ngx_flag_t'/>
+<mbr r='ngx_http_core_loc_conf_s::recursive_error_pages' o='4032' t='ngx_flag_t'/>
+<mbr r='ngx_http_core_loc_conf_s::server_tokens' o='4096' t='ngx_uint_t'/>
+<mbr r='ngx_http_core_loc_conf_s::chunked_transfer_encoding' o='4160' t='ngx_flag_t'/>
+<mbr r='ngx_http_core_loc_conf_s::etag' o='4224' t='ngx_flag_t'/>
+<mbr r='ngx_http_core_loc_conf_s::gzip_vary' o='4288' t='ngx_flag_t'/>
+<mbr r='ngx_http_core_loc_conf_s::gzip_http_version' o='4352' t='ngx_uint_t'/>
+<mbr r='ngx_http_core_loc_conf_s::gzip_proxied' o='4416' t='ngx_uint_t'/>
+<mbr r='ngx_http_core_loc_conf_s::gzip_disable' o='4480' t='ngx_array_t *'/>
+<mbr r='ngx_http_core_loc_conf_s::disable_symlinks' o='4544' t='ngx_uint_t'/>
+<mbr r='ngx_http_core_loc_conf_s::disable_symlinks_from' o='4608' t='ngx_http_complex_value_t *'/>
+<mbr r='ngx_http_core_loc_conf_s::error_pages' o='4672' t='ngx_array_t *'/>
+<mbr r='ngx_http_core_loc_conf_s::client_body_temp_path' o='4736' t='ngx_path_t *'/>
+<mbr r='ngx_http_core_loc_conf_s::open_file_cache' o='4800' t='ngx_open_file_cache_t *'/>
+<mbr r='ngx_http_core_loc_conf_s::open_file_cache_valid' o='4864' t='time_t'/>
+<mbr r='ngx_http_core_loc_conf_s::open_file_cache_min_uses' o='4928' t='ngx_uint_t'/>
+<mbr r='ngx_http_core_loc_conf_s::open_file_cache_errors' o='4992' t='ngx_flag_t'/>
+<mbr r='ngx_http_core_loc_conf_s::open_file_cache_events' o='5056' t='ngx_flag_t'/>
+<mbr r='ngx_http_core_loc_conf_s::error_log' o='5120' t='ngx_log_t *'/>
+<mbr r='ngx_http_core_loc_conf_s::types_hash_max_size' o='5184' t='ngx_uint_t'/>
+<mbr r='ngx_http_core_loc_conf_s::types_hash_bucket_size' o='5248' t='ngx_uint_t'/>
+<mbr r='ngx_http_core_loc_conf_s::locations' o='5312' t='ngx_queue_t *'/>

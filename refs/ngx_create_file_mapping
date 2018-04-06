@@ -1,0 +1,3 @@
+<dec f='nginx/src/os/unix/ngx_files.h' l='193' type='ngx_int_t ngx_create_file_mapping(ngx_file_mapping_t * fm)'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1589' u='c' c='ngx_http_geo_create_binary_base'/>
+<def f='nginx/src/os/unix/ngx_files.c' l='618' ll='653' type='ngx_int_t ngx_create_file_mapping(ngx_file_mapping_t * fm)'/>

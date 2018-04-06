@@ -1,0 +1,19 @@
+<dec f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='66' type='9'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='1688' u='r' c='ngx_http_fastcgi_process_header'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='1721' u='r' c='ngx_http_fastcgi_process_header'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='1781' u='r' c='ngx_http_fastcgi_process_header'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2027' u='r' c='ngx_http_fastcgi_process_header'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2122' u='r' c='ngx_http_fastcgi_input_filter'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2149' u='r' c='ngx_http_fastcgi_input_filter'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2203' u='r' c='ngx_http_fastcgi_input_filter'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2221' u='r' c='ngx_http_fastcgi_input_filter'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2230' u='r' c='ngx_http_fastcgi_input_filter'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2281' u='r' c='ngx_http_fastcgi_input_filter'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2303' u='r' c='ngx_http_fastcgi_input_filter'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2374' u='r' c='ngx_http_fastcgi_non_buffered_filter'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2383' u='r' c='ngx_http_fastcgi_non_buffered_filter'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2437' u='r' c='ngx_http_fastcgi_non_buffered_filter'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2455' u='r' c='ngx_http_fastcgi_non_buffered_filter'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2464' u='r' c='ngx_http_fastcgi_non_buffered_filter'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2502' u='r' c='ngx_http_fastcgi_non_buffered_filter'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2614' c='ngx_http_fastcgi_process_record'/>

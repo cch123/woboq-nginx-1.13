@@ -1,0 +1,2 @@
+<dec f='include/linux/capability.h' l='202'/>
+<doc f='include/linux/capability.h' l='200'>/* Override IPC ownership checks */</doc>

@@ -1,0 +1,3 @@
+<dec f='include/unistd.h' l='678' type='__uid_t getuid()'/>
+<doc f='include/unistd.h' l='677'>/* Get the real user ID of the calling process.  */</doc>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2802' u='c' c='ngx_http_core_server'/>

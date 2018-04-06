@@ -1,0 +1,6 @@
+<dec f='include/x86_64-linux-gnu/sys/socket.h' l='251' type='int accept4(int __fd, __SOCKADDR_ARG __addr, socklen_t *restrict __addr_len, int __flags)'/>
+<doc f='include/x86_64-linux-gnu/sys/socket.h' l='247'>/* Similar to &apos;accept&apos; but takes an additional parameter to specify flags.
+
+   This function is a cancellation point and therefore not marked with
+   __THROW.  */</doc>
+<use f='nginx/src/event/ngx_event_accept.c' l='65' u='c' c='ngx_event_accept'/>

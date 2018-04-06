@@ -1,0 +1,26 @@
+<dec f='include/stdlib.h' l='543' type='void exit(int __status)'/>
+<doc f='include/stdlib.h' l='540'>/* Call all functions registered with `atexit&apos; and `on_exit&apos;,
+   in the reverse of the order in which they were registered,
+   perform stdio cleanup, and terminate program execution with STATUS.  */</doc>
+<use f='nginx/src/core/ngx_cycle.c' l='627' u='c' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='773' u='c' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='782' u='c' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='797' u='c' c='ngx_init_cycle'/>
+<use f='nginx/src/event/ngx_event.c' l='621' u='c' c='ngx_event_process_init'/>
+<use f='nginx/src/os/unix/ngx_daemon.c' l='26' u='c' c='ngx_daemon'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='280' u='c' c='ngx_execute_proc'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='117' u='c' c='ngx_master_process_cycle'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='295' u='c' c='ngx_single_process_cycle'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='302' u='c' c='ngx_single_process_cycle'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='723' u='c' c='ngx_master_process_exit'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='794' u='c' c='ngx_worker_process_init'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='833' u='c' c='ngx_worker_process_init'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='848' u='c' c='ngx_worker_process_init'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='857' u='c' c='ngx_worker_process_init'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='876' u='c' c='ngx_worker_process_init'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='906' u='c' c='ngx_worker_process_init'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='933' u='c' c='ngx_worker_process_init'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='972' u='c' c='ngx_worker_process_init'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='1034' u='c' c='ngx_worker_process_exit'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='1163' u='c' c='ngx_cache_manager_process_cycle'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='1228' u='c' c='ngx_cache_loader_process_handler'/>

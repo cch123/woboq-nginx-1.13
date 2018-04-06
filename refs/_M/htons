@@ -1,0 +1,10 @@
+<dec f='include/netinet/in.h' l='405'/>
+<use f='nginx/src/core/ngx_inet.c' l='842' u='c'/>
+<use f='nginx/src/core/ngx_inet.c' l='866' u='c'/>
+<use f='nginx/src/core/ngx_inet.c' l='880' u='c'/>
+<use f='nginx/src/core/ngx_inet.c' l='1033' u='c'/>
+<use f='nginx/src/core/ngx_inet.c' l='1041' u='c'/>
+<use f='nginx/src/core/ngx_inet.c' l='1115' u='c'/>
+<use f='nginx/src/core/ngx_inet.c' l='1483' u='c'/>
+<use f='nginx/src/core/ngx_inet.c' l='1494' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2802' u='c'/>

@@ -1,0 +1,2 @@
+<dec f='nginx/src/core/ngx_rwlock.h' l='19' type='void ngx_rwlock_downgrade(ngx_atomic_t * lock)'/>
+<def f='nginx/src/core/ngx_rwlock.c' l='112' ll='118' type='void ngx_rwlock_downgrade(ngx_atomic_t * lock)'/>

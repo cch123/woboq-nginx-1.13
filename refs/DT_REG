@@ -1,0 +1,3 @@
+<dec f='include/dirent.h' l='109' type='8'/>
+<use f='nginx/src/core/ngx_file.c' l='1048' macro='1' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='380' macro='1' u='r'/>

@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_connection.h' l='61' type='unsigned int'/>
+<offset>1860</offset>
+<doc f='nginx/src/core/ngx_connection.h' l='61'>/* inherited from previous process */</doc>
+<use f='nginx/src/core/ngx_connection.c' l='444' u='r' c='ngx_open_listening_sockets'/>

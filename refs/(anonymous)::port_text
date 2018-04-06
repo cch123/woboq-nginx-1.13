@@ -1,0 +1,10 @@
+<dec f='nginx/src/core/ngx_inet.h' l='84' type='ngx_str_t'/>
+<offset>256</offset>
+<use f='nginx/src/core/ngx_inet.c' l='844' u='m' c='ngx_parse_inet_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='845' u='m' c='ngx_parse_inet_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='868' u='m' c='ngx_parse_inet_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='869' u='m' c='ngx_parse_inet_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='1035' u='m' c='ngx_parse_inet6_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='1036' u='m' c='ngx_parse_inet6_url'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='4333' u='m' c='ngx_http_proxy_set_vars'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='4335' u='r' c='ngx_http_proxy_set_vars'/>

@@ -1,0 +1,17 @@
+<dec f='nginx/src/core/ngx_file.h' l='131' type='ngx_log_t *'/>
+<offset>704</offset>
+<use f='nginx/src/core/ngx_file.c' l='959' u='r' c='ngx_walk_tree'/>
+<use f='nginx/src/core/ngx_file.c' l='959' u='r' c='ngx_walk_tree'/>
+<use f='nginx/src/core/ngx_file.c' l='967' u='r' c='ngx_walk_tree'/>
+<use f='nginx/src/core/ngx_file.c' l='993' u='r' c='ngx_walk_tree'/>
+<use f='nginx/src/core/ngx_file.c' l='993' u='r' c='ngx_walk_tree'/>
+<use f='nginx/src/core/ngx_file.c' l='1025' u='r' c='ngx_walk_tree'/>
+<use f='nginx/src/core/ngx_file.c' l='1042' u='r' c='ngx_walk_tree'/>
+<use f='nginx/src/core/ngx_file.c' l='1042' u='r' c='ngx_walk_tree'/>
+<use f='nginx/src/core/ngx_file.c' l='1120' u='r' c='ngx_walk_tree'/>
+<use f='nginx/src/core/ngx_file.c' l='1120' u='r' c='ngx_walk_tree'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2057' u='w' c='ngx_http_file_cache_loader'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2167' u='r' c='ngx_http_file_cache_add_file'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2167' u='r' c='ngx_http_file_cache_add_file'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2258' u='r' c='ngx_http_file_cache_delete_file'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2258' u='r' c='ngx_http_file_cache_delete_file'/>

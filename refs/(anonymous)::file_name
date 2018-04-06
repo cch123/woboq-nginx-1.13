@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='446' type='u_char *'/>
+<offset>320</offset>
+<use f='nginx/src/http/ngx_http.c' l='878' u='w' c='ngx_http_add_location'/>
+<use f='nginx/src/http/ngx_http.c' l='984' u='r' c='ngx_http_join_exact_locations'/>

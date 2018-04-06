@@ -1,0 +1,6 @@
+<dec f='nginx/src/core/ngx_connection.h' l='49' type='ngx_msec_t'/>
+<offset>1600</offset>
+<doc f='nginx/src/core/ngx_connection.h' l='48'>/* should be here because of the deferred accept */</doc>
+<use f='nginx/src/http/ngx_http.c' l='1719' u='w' c='ngx_http_add_listening'/>
+<use f='nginx/src/http/ngx_http_request.c' l='374' u='r' c='ngx_http_init_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='444' u='r' c='ngx_http_wait_request_handler'/>

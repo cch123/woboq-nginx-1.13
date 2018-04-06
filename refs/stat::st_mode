@@ -1,0 +1,26 @@
+<dec f='include/x86_64-linux-gnu/bits/stat.h' l='62' type='__mode_t'/>
+<offset>192</offset>
+<doc f='include/x86_64-linux-gnu/bits/stat.h' l='62'>/* File mode.  */</doc>
+<use f='nginx/src/core/ngx_cycle.c' l='1167' u='r' c='ngx_reopen_files'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1169' u='w' c='ngx_reopen_files'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1171' u='r' c='ngx_reopen_files'/>
+<use f='nginx/src/core/ngx_file.c' l='640' u='r' c='ngx_create_paths'/>
+<use f='nginx/src/core/ngx_file.c' l='643' u='w' c='ngx_create_paths'/>
+<use f='nginx/src/core/ngx_file.c' l='645' u='r' c='ngx_create_paths'/>
+<use f='nginx/src/core/ngx_file.c' l='1048' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_file.c' l='1055' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_file.c' l='1062' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_file.c' l='1067' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_file.c' l='1086' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='173' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='174' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='175' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='176' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='864' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='904' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='939' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='940' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='941' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='942' macro='1' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='379' macro='1' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='380' macro='1' u='r'/>

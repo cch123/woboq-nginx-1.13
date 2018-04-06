@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='187' type='ngx_table_elt_t *'/>
+<offset>640</offset>
+<use f='nginx/src/http/modules/ngx_http_not_modified_filter_module.c' l='64' u='r' c='ngx_http_not_modified_header_filter'/>
+<use f='nginx/src/http/modules/ngx_http_not_modified_filter_module.c' l='121' u='r' c='ngx_http_test_if_unmodified'/>
+<use f='nginx/src/http/modules/ngx_http_not_modified_filter_module.c' l='122' u='r' c='ngx_http_test_if_unmodified'/>

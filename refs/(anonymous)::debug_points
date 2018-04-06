@@ -1,0 +1,6 @@
+<dec f='nginx/src/core/ngx_cycle.h' l='95' type='ngx_int_t'/>
+<offset>320</offset>
+<use f='nginx/src/core/nginx.c' l='1034' u='w' c='ngx_core_module_create_conf'/>
+<use f='nginx/src/core/nginx.c' l='1063' u='r' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1063' u='w' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='619' u='r' c='ngx_debug_point'/>

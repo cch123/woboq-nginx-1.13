@@ -1,0 +1,16 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='324' type='void **'/>
+<offset>384</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='323'>/* pointer to the modules&apos; loc_conf */</doc>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='584' u='w' c='ngx_http_rewrite_if'/>
+<use f='nginx/src/http/ngx_http.c' l='646' u='r' c='ngx_http_merge_locations'/>
+<use f='nginx/src/http/ngx_http.c' l='649' u='r' c='ngx_http_merge_locations'/>
+<use f='nginx/src/http/ngx_http.c' l='654' u='r' c='ngx_http_merge_locations'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1350' u='r' c='ngx_http_core_find_location'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1416' u='r' c='ngx_http_core_find_static_location'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1436' u='r' c='ngx_http_core_find_static_location'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1440' u='r' c='ngx_http_core_find_static_location'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1449' u='r' c='ngx_http_core_find_static_location'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1450' u='r' c='ngx_http_core_find_static_location'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2499' u='r' c='ngx_http_named_location'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2875' u='w' c='ngx_http_core_location'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4406' u='w' c='ngx_http_core_limit_except'/>

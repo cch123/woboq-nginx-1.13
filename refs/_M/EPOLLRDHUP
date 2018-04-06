@@ -1,0 +1,8 @@
+<dec f='include/x86_64-linux-gnu/sys/epoll.h' l='63'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='476' u='c'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='502' u='c'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='594' u='c'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='600' u='c'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='670' u='c'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='705' u='c'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='886' u='c'/>

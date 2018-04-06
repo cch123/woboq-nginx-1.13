@@ -1,0 +1,4 @@
+<dec f='include/linux/capability.h' l='114'/>
+<doc f='include/linux/capability.h' l='110'>/* Overrides all restrictions about allowed operations on files, where
+   file owner ID must be equal to the user ID, except where CAP_FSETID
+   is applicable. It doesn&apos;t override MAC and DAC restrictions. */</doc>

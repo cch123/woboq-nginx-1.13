@@ -1,0 +1,6 @@
+<dec f='nginx/src/core/ngx_buf.h' l='160' type='ngx_int_t ngx_chain_add_copy(ngx_pool_t * pool, ngx_chain_t ** chain, ngx_chain_t * in)'/>
+<def f='nginx/src/core/ngx_buf.c' l='126' ll='152' type='ngx_int_t ngx_chain_add_copy(ngx_pool_t * pool, ngx_chain_t ** chain, ngx_chain_t * in)'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='372' u='c' c='ngx_http_gzip_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='419' u='c' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/ngx_http_postpone_filter_module.c' l='172' u='c' c='ngx_http_postpone_filter_add'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='1122' u='c' c='ngx_http_request_body_save_filter'/>

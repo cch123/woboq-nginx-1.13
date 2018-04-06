@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ngx_palloc.h source code [nginx/src/core/ngx_palloc.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="ngx_pool_cleanup_s,ngx_pool_large_s,ngx_pool_s "/>
+<link rel="stylesheet" href="../../../../data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../../data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../../data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'nginx/src/core/ngx_palloc.h'; var root_path = '../../..'; var data_path = '../../../../data';</script>
+<script src='../../../../data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../..'>nginx</a>/<a href='..'>src</a>/<a href='./'>core</a>/<a href='ngx_palloc.h.html'>ngx_palloc.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td></td></tr>
+<tr><th id="2">2</th><td><i>/*</i></td></tr>
+<tr><th id="3">3</th><td><i> * Copyright (C) Igor Sysoev</i></td></tr>
+<tr><th id="4">4</th><td><i> * Copyright (C) Nginx, Inc.</i></td></tr>
+<tr><th id="5">5</th><td><i> */</i></td></tr>
+<tr><th id="6">6</th><td></td></tr>
+<tr><th id="7">7</th><td></td></tr>
+<tr><th id="8">8</th><td><u>#<span data-ppcond="8">ifndef</span> <span class="macro" data-ref="_M/_NGX_PALLOC_H_INCLUDED_">_NGX_PALLOC_H_INCLUDED_</span></u></td></tr>
+<tr><th id="9">9</th><td><u>#define <dfn class="macro" id="_M/_NGX_PALLOC_H_INCLUDED_" data-ref="_M/_NGX_PALLOC_H_INCLUDED_">_NGX_PALLOC_H_INCLUDED_</dfn></u></td></tr>
+<tr><th id="10">10</th><td></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td><u>#include <a href="ngx_config.h.html">&lt;ngx_config.h&gt;</a></u></td></tr>
+<tr><th id="13">13</th><td><u>#include <a href="ngx_core.h.html">&lt;ngx_core.h&gt;</a></u></td></tr>
+<tr><th id="14">14</th><td></td></tr>
+<tr><th id="15">15</th><td></td></tr>
+<tr><th id="16">16</th><td><i>/*</i></td></tr>
+<tr><th id="17">17</th><td><i> * NGX_MAX_ALLOC_FROM_POOL should be (ngx_pagesize - 1), i.e. 4095 on x86.</i></td></tr>
+<tr><th id="18">18</th><td><i> * On Windows NT it decreases a number of locked pages in a kernel.</i></td></tr>
+<tr><th id="19">19</th><td><i> */</i></td></tr>
+<tr><th id="20">20</th><td><u>#define <dfn class="macro" id="_M/NGX_MAX_ALLOC_FROM_POOL" data-ref="_M/NGX_MAX_ALLOC_FROM_POOL">NGX_MAX_ALLOC_FROM_POOL</dfn>  (ngx_pagesize - 1)</u></td></tr>
+<tr><th id="21">21</th><td></td></tr>
+<tr><th id="22">22</th><td><u>#define <dfn class="macro" id="_M/NGX_DEFAULT_POOL_SIZE" data-ref="_M/NGX_DEFAULT_POOL_SIZE">NGX_DEFAULT_POOL_SIZE</dfn>    (16 * 1024)</u></td></tr>
+<tr><th id="23">23</th><td></td></tr>
+<tr><th id="24">24</th><td><u>#define <dfn class="macro" id="_M/NGX_POOL_ALIGNMENT" data-ref="_M/NGX_POOL_ALIGNMENT">NGX_POOL_ALIGNMENT</dfn>       16</u></td></tr>
+<tr><th id="25">25</th><td><u>#define <dfn class="macro" id="_M/NGX_MIN_POOL_SIZE" data-ref="_M/NGX_MIN_POOL_SIZE">NGX_MIN_POOL_SIZE</dfn>                                                     \</u></td></tr>
+<tr><th id="26">26</th><td><u>    ngx_align((sizeof(ngx_pool_t) + 2 * sizeof(ngx_pool_large_t)),            \</u></td></tr>
+<tr><th id="27">27</th><td><u>              NGX_POOL_ALIGNMENT)</u></td></tr>
+<tr><th id="28">28</th><td></td></tr>
+<tr><th id="29">29</th><td></td></tr>
+<tr><th id="30">30</th><td><b>typedef</b> <em>void</em> (*<dfn class="typedef" id="ngx_pool_cleanup_pt" title='ngx_pool_cleanup_pt' data-type='void (*)(void *)' data-ref="ngx_pool_cleanup_pt">ngx_pool_cleanup_pt</dfn>)(<em>void</em> *<dfn class="local col2 decl" id="2372data" title='data' data-type='void *' data-ref="2372data">data</dfn>);</td></tr>
+<tr><th id="31">31</th><td></td></tr>
+<tr><th id="32">32</th><td><b>typedef</b> <b>struct</b> <a class="type" href="#ngx_pool_cleanup_s" title='ngx_pool_cleanup_s' data-ref="ngx_pool_cleanup_s">ngx_pool_cleanup_s</a>  <dfn class="typedef" id="ngx_pool_cleanup_t" title='ngx_pool_cleanup_t' data-type='struct ngx_pool_cleanup_s' data-ref="ngx_pool_cleanup_t">ngx_pool_cleanup_t</dfn>;</td></tr>
+<tr><th id="33">33</th><td></td></tr>
+<tr><th id="34">34</th><td><b>struct</b> <dfn class="type def" id="ngx_pool_cleanup_s" title='ngx_pool_cleanup_s' data-ref="ngx_pool_cleanup_s">ngx_pool_cleanup_s</dfn> {</td></tr>
+<tr><th id="35">35</th><td>    <a class="typedef" href="#ngx_pool_cleanup_pt" title='ngx_pool_cleanup_pt' data-type='void (*)(void *)' data-ref="ngx_pool_cleanup_pt">ngx_pool_cleanup_pt</a>   <dfn class="decl field" id="ngx_pool_cleanup_s::handler" title='ngx_pool_cleanup_s::handler' data-ref="ngx_pool_cleanup_s::handler">handler</dfn>;</td></tr>
+<tr><th id="36">36</th><td>    <em>void</em>                 *<dfn class="decl field" id="ngx_pool_cleanup_s::data" title='ngx_pool_cleanup_s::data' data-ref="ngx_pool_cleanup_s::data">data</dfn>;</td></tr>
+<tr><th id="37">37</th><td>    <a class="typedef" href="#ngx_pool_cleanup_t" title='ngx_pool_cleanup_t' data-type='struct ngx_pool_cleanup_s' data-ref="ngx_pool_cleanup_t">ngx_pool_cleanup_t</a>   *<dfn class="decl field" id="ngx_pool_cleanup_s::next" title='ngx_pool_cleanup_s::next' data-ref="ngx_pool_cleanup_s::next">next</dfn>;</td></tr>
+<tr><th id="38">38</th><td>};</td></tr>
+<tr><th id="39">39</th><td></td></tr>
+<tr><th id="40">40</th><td></td></tr>
+<tr><th id="41">41</th><td><b>typedef</b> <b>struct</b> <a class="type" href="#ngx_pool_large_s" title='ngx_pool_large_s' data-ref="ngx_pool_large_s">ngx_pool_large_s</a>  <dfn class="typedef" id="ngx_pool_large_t" title='ngx_pool_large_t' data-type='struct ngx_pool_large_s' data-ref="ngx_pool_large_t">ngx_pool_large_t</dfn>;</td></tr>
+<tr><th id="42">42</th><td></td></tr>
+<tr><th id="43">43</th><td><b>struct</b> <dfn class="type def" id="ngx_pool_large_s" title='ngx_pool_large_s' data-ref="ngx_pool_large_s">ngx_pool_large_s</dfn> {</td></tr>
+<tr><th id="44">44</th><td>    <a class="typedef" href="#ngx_pool_large_t" title='ngx_pool_large_t' data-type='struct ngx_pool_large_s' data-ref="ngx_pool_large_t">ngx_pool_large_t</a>     *<dfn class="decl field" id="ngx_pool_large_s::next" title='ngx_pool_large_s::next' data-ref="ngx_pool_large_s::next">next</dfn>;</td></tr>
+<tr><th id="45">45</th><td>    <em>void</em>                 *<dfn class="decl field" id="ngx_pool_large_s::alloc" title='ngx_pool_large_s::alloc' data-ref="ngx_pool_large_s::alloc">alloc</dfn>;</td></tr>
+<tr><th id="46">46</th><td>};</td></tr>
+<tr><th id="47">47</th><td></td></tr>
+<tr><th id="48">48</th><td></td></tr>
+<tr><th id="49">49</th><td><b>typedef</b> <b>struct</b> {</td></tr>
+<tr><th id="50">50</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a>               *<dfn class="decl field" id="(anonymous)::last" title='(anonymous struct)::last' data-ref="(anonymous)::last">last</dfn>;</td></tr>
+<tr><th id="51">51</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a>               *<dfn class="decl field" id="(anonymous)::end" title='(anonymous struct)::end' data-ref="(anonymous)::end">end</dfn>;</td></tr>
+<tr><th id="52">52</th><td>    <a class="typedef" href="ngx_core.h.html#ngx_pool_t" title='ngx_pool_t' data-type='struct ngx_pool_s' data-ref="ngx_pool_t">ngx_pool_t</a>           *<dfn class="decl field" id="(anonymous)::next" title='(anonymous struct)::next' data-ref="(anonymous)::next">next</dfn>;</td></tr>
+<tr><th id="53">53</th><td>    <a class="typedef" href="ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>            <dfn class="decl field" id="(anonymous)::failed" title='(anonymous struct)::failed' data-ref="(anonymous)::failed">failed</dfn>;</td></tr>
+<tr><th id="54">54</th><td>} <dfn class="typedef" id="ngx_pool_data_t" title='ngx_pool_data_t' data-type='struct ngx_pool_data_t' data-ref="ngx_pool_data_t">ngx_pool_data_t</dfn>;</td></tr>
+<tr><th id="55">55</th><td></td></tr>
+<tr><th id="56">56</th><td></td></tr>
+<tr><th id="57">57</th><td><b>struct</b> <dfn class="type def" id="ngx_pool_s" title='ngx_pool_s' data-ref="ngx_pool_s">ngx_pool_s</dfn> {</td></tr>
+<tr><th id="58">58</th><td>    <a class="typedef" href="#ngx_pool_data_t" title='ngx_pool_data_t' data-type='struct ngx_pool_data_t' data-ref="ngx_pool_data_t">ngx_pool_data_t</a>       <dfn class="decl field" id="ngx_pool_s::d" title='ngx_pool_s::d' data-ref="ngx_pool_s::d">d</dfn>;</td></tr>
+<tr><th id="59">59</th><td>    <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span>                <dfn class="decl field" id="ngx_pool_s::max" title='ngx_pool_s::max' data-ref="ngx_pool_s::max">max</dfn>;</td></tr>
+<tr><th id="60">60</th><td>    <a class="typedef" href="ngx_core.h.html#ngx_pool_t" title='ngx_pool_t' data-type='struct ngx_pool_s' data-ref="ngx_pool_t">ngx_pool_t</a>           *<dfn class="decl field" id="ngx_pool_s::current" title='ngx_pool_s::current' data-ref="ngx_pool_s::current">current</dfn>;</td></tr>
+<tr><th id="61">61</th><td>    <a class="typedef" href="ngx_core.h.html#ngx_chain_t" title='ngx_chain_t' data-type='struct ngx_chain_s' data-ref="ngx_chain_t">ngx_chain_t</a>          *<dfn class="decl field" id="ngx_pool_s::chain" title='ngx_pool_s::chain' data-ref="ngx_pool_s::chain">chain</dfn>;</td></tr>
+<tr><th id="62">62</th><td>    <a class="typedef" href="#ngx_pool_large_t" title='ngx_pool_large_t' data-type='struct ngx_pool_large_s' data-ref="ngx_pool_large_t">ngx_pool_large_t</a>     *<dfn class="decl field" id="ngx_pool_s::large" title='ngx_pool_s::large' data-ref="ngx_pool_s::large">large</dfn>;</td></tr>
+<tr><th id="63">63</th><td>    <a class="typedef" href="#ngx_pool_cleanup_t" title='ngx_pool_cleanup_t' data-type='struct ngx_pool_cleanup_s' data-ref="ngx_pool_cleanup_t">ngx_pool_cleanup_t</a>   *<dfn class="decl field" id="ngx_pool_s::cleanup" title='ngx_pool_s::cleanup' data-ref="ngx_pool_s::cleanup">cleanup</dfn>;</td></tr>
+<tr><th id="64">64</th><td>    <a class="typedef" href="ngx_core.h.html#ngx_log_t" title='ngx_log_t' data-type='struct ngx_log_s' data-ref="ngx_log_t">ngx_log_t</a>            *<dfn class="decl field" id="ngx_pool_s::log" title='ngx_pool_s::log' data-ref="ngx_pool_s::log">log</dfn>;</td></tr>
+<tr><th id="65">65</th><td>};</td></tr>
+<tr><th id="66">66</th><td></td></tr>
+<tr><th id="67">67</th><td></td></tr>
+<tr><th id="68">68</th><td><b>typedef</b> <b>struct</b> {</td></tr>
+<tr><th id="69">69</th><td>    <a class="typedef" href="../os/unix/ngx_files.h.html#ngx_fd_t" title='ngx_fd_t' data-type='int' data-ref="ngx_fd_t">ngx_fd_t</a>              <dfn class="decl field" id="(anonymous)::fd" title='(anonymous struct)::fd' data-ref="(anonymous)::fd">fd</dfn>;</td></tr>
+<tr><th id="70">70</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a>               *<dfn class="decl field" id="(anonymous)::name" title='(anonymous struct)::name' data-ref="(anonymous)::name">name</dfn>;</td></tr>
+<tr><th id="71">71</th><td>    <a class="typedef" href="ngx_core.h.html#ngx_log_t" title='ngx_log_t' data-type='struct ngx_log_s' data-ref="ngx_log_t">ngx_log_t</a>            *<dfn class="decl field" id="(anonymous)::log" title='(anonymous struct)::log' data-ref="(anonymous)::log">log</dfn>;</td></tr>
+<tr><th id="72">72</th><td>} <dfn class="typedef" id="ngx_pool_cleanup_file_t" title='ngx_pool_cleanup_file_t' data-type='struct ngx_pool_cleanup_file_t' data-ref="ngx_pool_cleanup_file_t">ngx_pool_cleanup_file_t</dfn>;</td></tr>
+<tr><th id="73">73</th><td></td></tr>
+<tr><th id="74">74</th><td></td></tr>
+<tr><th id="75">75</th><td><a class="typedef" href="ngx_core.h.html#ngx_pool_t" title='ngx_pool_t' data-type='struct ngx_pool_s' data-ref="ngx_pool_t">ngx_pool_t</a> *<dfn class="decl fn" id="ngx_create_pool" title='ngx_create_pool' data-ref="ngx_create_pool">ngx_create_pool</dfn>(<span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span> <dfn class="local col3 decl" id="2373size" title='size' data-type='size_t' data-ref="2373size">size</dfn>, <a class="typedef" href="ngx_core.h.html#ngx_log_t" title='ngx_log_t' data-type='struct ngx_log_s' data-ref="ngx_log_t">ngx_log_t</a> *<dfn class="local col4 decl" id="2374log" title='log' data-type='ngx_log_t *' data-ref="2374log">log</dfn>);</td></tr>
+<tr><th id="76">76</th><td><em>void</em> <dfn class="decl fn" id="ngx_destroy_pool" title='ngx_destroy_pool' data-ref="ngx_destroy_pool">ngx_destroy_pool</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_pool_t" title='ngx_pool_t' data-type='struct ngx_pool_s' data-ref="ngx_pool_t">ngx_pool_t</a> *<dfn class="local col5 decl" id="2375pool" title='pool' data-type='ngx_pool_t *' data-ref="2375pool">pool</dfn>);</td></tr>
+<tr><th id="77">77</th><td><em>void</em> <dfn class="decl fn" id="ngx_reset_pool" title='ngx_reset_pool' data-ref="ngx_reset_pool">ngx_reset_pool</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_pool_t" title='ngx_pool_t' data-type='struct ngx_pool_s' data-ref="ngx_pool_t">ngx_pool_t</a> *<dfn class="local col6 decl" id="2376pool" title='pool' data-type='ngx_pool_t *' data-ref="2376pool">pool</dfn>);</td></tr>
+<tr><th id="78">78</th><td></td></tr>
+<tr><th id="79">79</th><td><em>void</em> *<dfn class="decl fn" id="ngx_palloc" title='ngx_palloc' data-ref="ngx_palloc">ngx_palloc</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_pool_t" title='ngx_pool_t' data-type='struct ngx_pool_s' data-ref="ngx_pool_t">ngx_pool_t</a> *<dfn class="local col7 decl" id="2377pool" title='pool' data-type='ngx_pool_t *' data-ref="2377pool">pool</dfn>, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span> <dfn class="local col8 decl" id="2378size" title='size' data-type='size_t' data-ref="2378size">size</dfn>);</td></tr>
+<tr><th id="80">80</th><td><em>void</em> *<dfn class="decl fn" id="ngx_pnalloc" title='ngx_pnalloc' data-ref="ngx_pnalloc">ngx_pnalloc</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_pool_t" title='ngx_pool_t' data-type='struct ngx_pool_s' data-ref="ngx_pool_t">ngx_pool_t</a> *<dfn class="local col9 decl" id="2379pool" title='pool' data-type='ngx_pool_t *' data-ref="2379pool">pool</dfn>, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span> <dfn class="local col0 decl" id="2380size" title='size' data-type='size_t' data-ref="2380size">size</dfn>);</td></tr>
+<tr><th id="81">81</th><td><em>void</em> *<dfn class="decl fn" id="ngx_pcalloc" title='ngx_pcalloc' data-ref="ngx_pcalloc">ngx_pcalloc</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_pool_t" title='ngx_pool_t' data-type='struct ngx_pool_s' data-ref="ngx_pool_t">ngx_pool_t</a> *<dfn class="local col1 decl" id="2381pool" title='pool' data-type='ngx_pool_t *' data-ref="2381pool">pool</dfn>, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span> <dfn class="local col2 decl" id="2382size" title='size' data-type='size_t' data-ref="2382size">size</dfn>);</td></tr>
+<tr><th id="82">82</th><td><em>void</em> *<dfn class="decl fn" id="ngx_pmemalign" title='ngx_pmemalign' data-ref="ngx_pmemalign">ngx_pmemalign</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_pool_t" title='ngx_pool_t' data-type='struct ngx_pool_s' data-ref="ngx_pool_t">ngx_pool_t</a> *<dfn class="local col3 decl" id="2383pool" title='pool' data-type='ngx_pool_t *' data-ref="2383pool">pool</dfn>, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span> <dfn class="local col4 decl" id="2384size" title='size' data-type='size_t' data-ref="2384size">size</dfn>, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span> <dfn class="local col5 decl" id="2385alignment" title='alignment' data-type='size_t' data-ref="2385alignment">alignment</dfn>);</td></tr>
+<tr><th id="83">83</th><td><a class="typedef" href="ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a> <dfn class="decl fn" id="ngx_pfree" title='ngx_pfree' data-ref="ngx_pfree">ngx_pfree</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_pool_t" title='ngx_pool_t' data-type='struct ngx_pool_s' data-ref="ngx_pool_t">ngx_pool_t</a> *<dfn class="local col6 decl" id="2386pool" title='pool' data-type='ngx_pool_t *' data-ref="2386pool">pool</dfn>, <em>void</em> *<dfn class="local col7 decl" id="2387p" title='p' data-type='void *' data-ref="2387p">p</dfn>);</td></tr>
+<tr><th id="84">84</th><td></td></tr>
+<tr><th id="85">85</th><td></td></tr>
+<tr><th id="86">86</th><td><a class="typedef" href="#ngx_pool_cleanup_t" title='ngx_pool_cleanup_t' data-type='struct ngx_pool_cleanup_s' data-ref="ngx_pool_cleanup_t">ngx_pool_cleanup_t</a> *<dfn class="decl fn" id="ngx_pool_cleanup_add" title='ngx_pool_cleanup_add' data-ref="ngx_pool_cleanup_add">ngx_pool_cleanup_add</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_pool_t" title='ngx_pool_t' data-type='struct ngx_pool_s' data-ref="ngx_pool_t">ngx_pool_t</a> *<dfn class="local col8 decl" id="2388p" title='p' data-type='ngx_pool_t *' data-ref="2388p">p</dfn>, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span> <dfn class="local col9 decl" id="2389size" title='size' data-type='size_t' data-ref="2389size">size</dfn>);</td></tr>
+<tr><th id="87">87</th><td><em>void</em> <dfn class="decl fn" id="ngx_pool_run_cleanup_file" title='ngx_pool_run_cleanup_file' data-ref="ngx_pool_run_cleanup_file">ngx_pool_run_cleanup_file</dfn>(<a class="typedef" href="ngx_core.h.html#ngx_pool_t" title='ngx_pool_t' data-type='struct ngx_pool_s' data-ref="ngx_pool_t">ngx_pool_t</a> *<dfn class="local col0 decl" id="2390p" title='p' data-type='ngx_pool_t *' data-ref="2390p">p</dfn>, <a class="typedef" href="../os/unix/ngx_files.h.html#ngx_fd_t" title='ngx_fd_t' data-type='int' data-ref="ngx_fd_t">ngx_fd_t</a> <dfn class="local col1 decl" id="2391fd" title='fd' data-type='ngx_fd_t' data-ref="2391fd">fd</dfn>);</td></tr>
+<tr><th id="88">88</th><td><em>void</em> <dfn class="decl fn" id="ngx_pool_cleanup_file" title='ngx_pool_cleanup_file' data-ref="ngx_pool_cleanup_file">ngx_pool_cleanup_file</dfn>(<em>void</em> *<dfn class="local col2 decl" id="2392data" title='data' data-type='void *' data-ref="2392data">data</dfn>);</td></tr>
+<tr><th id="89">89</th><td><em>void</em> <dfn class="decl fn" id="ngx_pool_delete_file" title='ngx_pool_delete_file' data-ref="ngx_pool_delete_file">ngx_pool_delete_file</dfn>(<em>void</em> *<dfn class="local col3 decl" id="2393data" title='data' data-type='void *' data-ref="2393data">data</dfn>);</td></tr>
+<tr><th id="90">90</th><td></td></tr>
+<tr><th id="91">91</th><td></td></tr>
+<tr><th id="92">92</th><td><u>#<span data-ppcond="8">endif</span> /* _NGX_PALLOC_H_INCLUDED_ */</u></td></tr>
+<tr><th id="93">93</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../../objs/ngx_modules.c.html'>nginx/objs/ngx_modules.c</a><br/>Generated on <em>2018-Apr-06</em> from project nginx<br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

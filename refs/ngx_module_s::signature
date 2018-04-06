@@ -1,0 +1,22 @@
+<dec f='nginx/src/core/ngx_module.h' l='232' type='const char *'/>
+<offset>384</offset>
+<use f='nginx/src/core/ngx_module.c' l='177' u='r' c='ngx_add_module'/>
+<use f='nginx/src/core/ngx_module.c' l='177' u='r' c='ngx_add_module'/>
+<use f='nginx/src/core/ngx_module.c' l='177' u='r' c='ngx_add_module'/>
+<use f='nginx/src/core/ngx_module.c' l='177' u='r' c='ngx_add_module'/>
+<use f='nginx/src/core/ngx_module.c' l='177' u='r' c='ngx_add_module'/>
+<use f='nginx/src/core/ngx_module.c' l='177' u='r' c='ngx_add_module'/>
+<use f='nginx/src/core/ngx_module.c' l='177' u='r' c='ngx_add_module'/>
+<use f='nginx/src/core/ngx_module.c' l='177' u='r' c='ngx_add_module'/>
+<use f='nginx/src/core/ngx_module.c' l='177' u='r' c='ngx_add_module'/>
+<use f='nginx/src/core/ngx_module.c' l='177' u='r' c='ngx_add_module'/>
+<use f='nginx/src/core/ngx_module.c' l='177' u='r' c='ngx_add_module'/>
+<use f='nginx/src/core/ngx_module.c' l='177' u='r' c='ngx_add_module'/>
+<use f='nginx/src/core/ngx_module.c' l='177' u='r' c='ngx_add_module'/>
+<use f='nginx/src/core/ngx_module.c' l='177' u='r' c='ngx_add_module'/>
+<use f='nginx/src/core/ngx_module.c' l='177' u='r' c='ngx_add_module'/>
+<use f='nginx/src/core/ngx_module.c' l='177' u='r' c='ngx_add_module'/>
+<use f='nginx/src/core/ngx_module.c' l='177' u='r' c='ngx_add_module'/>
+<use f='nginx/src/core/ngx_module.c' l='177' u='r' c='ngx_add_module'/>
+<use f='nginx/src/core/ngx_module.c' l='177' u='r' c='ngx_add_module'/>
+<use f='nginx/src/core/ngx_module.c' l='177' u='r' c='ngx_add_module'/>

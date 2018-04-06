@@ -1,0 +1,4 @@
+<dec f='include/x86_64-linux-gnu/bits/siginfo.h' l='132' type='union (anonymous union at /usr/include/x86_64-linux-gnu/bits/siginfo.h:69:5)'/>
+<offset>128</offset>
+<use f='nginx/src/os/unix/ngx_process.c' l='444' macro='1' u='m'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='445' macro='1' u='m'/>

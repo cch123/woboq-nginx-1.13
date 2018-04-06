@@ -1,0 +1,23 @@
+<dec f='nginx/src/core/ngx_open_file_cache.h' l='87' type='ngx_event_t *'/>
+<offset>1088</offset>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='231' u='r' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='311' u='r' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='391' u='w' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='961' u='r' c='ngx_open_file_add_event'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='970' u='w' c='ngx_open_file_add_event'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='971' u='r' c='ngx_open_file_add_event'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='977' u='r' c='ngx_open_file_add_event'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='978' u='w' c='ngx_open_file_add_event'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='986' u='r' c='ngx_open_file_add_event'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='987' u='r' c='ngx_open_file_add_event'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='995' u='r' c='ngx_open_file_add_event'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='997' u='r' c='ngx_open_file_add_event'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1000' u='r' c='ngx_open_file_add_event'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1001' u='r' c='ngx_open_file_add_event'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1002' u='w' c='ngx_open_file_add_event'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1080' u='r' c='ngx_open_file_del_event'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1084' u='r' c='ngx_open_file_del_event'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1087' u='r' c='ngx_open_file_del_event'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1088' u='r' c='ngx_open_file_del_event'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1089' u='w' c='ngx_open_file_del_event'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1242' u='w' c='ngx_open_file_cache_remove'/>

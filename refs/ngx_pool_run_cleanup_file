@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_palloc.h' l='87' type='void ngx_pool_run_cleanup_file(ngx_pool_t * p, ngx_fd_t fd)'/>
+<def f='nginx/src/core/ngx_palloc.c' l='342' ll='360' type='void ngx_pool_run_cleanup_file(ngx_pool_t * p, ngx_fd_t fd)'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2900' u='c' c='ngx_http_upstream_send_response'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2974' u='c' c='ngx_http_upstream_send_response'/>

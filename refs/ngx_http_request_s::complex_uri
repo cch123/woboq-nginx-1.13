@@ -1,0 +1,14 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='461' type='unsigned int'/>
+<offset>9829</offset>
+<doc f='nginx/src/http/ngx_http_request.h' l='460'>/* URI with &quot;/.&quot; and on Win32 with &quot;//&quot; */</doc>
+<use f='nginx/src/http/ngx_http_parse.c' l='504' u='w' c='ngx_http_parse_request_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='512' u='w' c='ngx_http_parse_request_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='526' u='w' c='ngx_http_parse_request_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='590' u='w' c='ngx_http_parse_request_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='648' u='w' c='ngx_http_parse_request_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1151' u='w' c='ngx_http_parse_uri'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1159' u='w' c='ngx_http_parse_uri'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1173' u='w' c='ngx_http_parse_uri'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1225' u='w' c='ngx_http_parse_uri'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1246' u='w' c='ngx_http_parse_uri'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1110' u='r' c='ngx_http_process_request_uri'/>

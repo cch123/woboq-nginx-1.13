@@ -1,0 +1,8 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='128' type='union (anonymous union at /vagrant/data/nginx-1.13.11/src/core/ngx_resolver.h:125:5)'/>
+<offset>960</offset>
+<use f='nginx/src/core/ngx_resolver.c' l='773' u='m' c='ngx_resolve_name_locked'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2221' u='m' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2230' u='m' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4059' u='m' c='ngx_resolver_free_node'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4203' u='m' c='ngx_resolver_export'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4203' u='m' c='ngx_resolver_export'/>

@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http.h' l='96' type='ngx_int_t ngx_http_parse_status_line(ngx_http_request_t * r, ngx_buf_t * b, ngx_http_status_t * status)'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1724' u='c' c='ngx_http_proxy_process_status_line'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='972' u='c' c='ngx_http_scgi_process_status_line'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='1176' u='c' c='ngx_http_uwsgi_process_status_line'/>
+<def f='nginx/src/http/ngx_http_parse.c' l='1599' ll='1814' type='ngx_int_t ngx_http_parse_status_line(ngx_http_request_t * r, ngx_buf_t * b, ngx_http_status_t * status)'/>

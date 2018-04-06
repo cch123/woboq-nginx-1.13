@@ -1,0 +1,8 @@
+<dec f='nginx/src/http/ngx_http_variables.h' l='87' type='ngx_http_regex_t * ngx_http_regex_compile(ngx_conf_t * cf, ngx_regex_compile_t * rc)'/>
+<use f='nginx/src/http/modules/ngx_http_map_module.c' l='554' u='c' c='ngx_http_map'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='4021' u='c' c='ngx_http_proxy_rewrite_regex'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='337' u='c' c='ngx_http_rewrite'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='771' u='c' c='ngx_http_rewrite_if_condition'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3045' u='c' c='ngx_http_core_regex_location'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4185' u='c' c='ngx_http_core_server_name'/>
+<def f='nginx/src/http/ngx_http_variables.c' l='2421' ll='2491' type='ngx_http_regex_t * ngx_http_regex_compile(ngx_conf_t * cf, ngx_regex_compile_t * rc)'/>

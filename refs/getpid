@@ -1,0 +1,5 @@
+<dec f='include/unistd.h' l='631' type='__pid_t getpid()'/>
+<doc f='include/unistd.h' l='630'>/* Get the process ID of the calling process.  */</doc>
+<use f='nginx/src/core/nginx.c' l='230' macro='1' u='c'/>
+<use f='nginx/src/os/unix/ngx_daemon.c' l='30' macro='1' u='c'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='198' macro='1' u='c'/>

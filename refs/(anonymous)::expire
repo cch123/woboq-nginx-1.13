@@ -1,0 +1,24 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='133' type='time_t'/>
+<offset>1152</offset>
+<use f='nginx/src/core/ngx_resolver.c' l='630' u='w' c='ngx_resolve_name_locked'/>
+<use f='nginx/src/core/ngx_resolver.c' l='867' u='w' c='ngx_resolve_name_locked'/>
+<use f='nginx/src/core/ngx_resolver.c' l='967' u='w' c='ngx_resolve_addr'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1071' u='w' c='ngx_resolve_addr'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1225' u='r' c='ngx_resolver_expire'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1490' u='r' c='ngx_resolver_resend'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1491' u='r' c='ngx_resolver_resend'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1508' u='w' c='ngx_resolver_resend'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1989' u='w' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2378' u='w' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2450' u='w' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2591' u='w' c='ngx_resolver_process_srv'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2799' u='w' c='ngx_resolver_process_srv'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2835' u='w' c='ngx_resolver_process_srv'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3307' u='w' c='ngx_resolver_process_ptr'/>
+<dec f='nginx/src/http/ngx_http_cache.h' l='57' type='time_t'/>
+<offset>640</offset>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='916' u='w' c='ngx_http_file_cache_exists'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1768' u='w' c='ngx_http_file_cache_forced_expire'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1840' u='r' c='ngx_http_file_cache_expire'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1874' u='w' c='ngx_http_file_cache_expire'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2241' u='w' c='ngx_http_file_cache_add'/>

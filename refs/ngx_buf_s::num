@@ -1,0 +1,10 @@
+<dec f='nginx/src/core/ngx_buf.h' l='55' type='int'/>
+<offset>608</offset>
+<doc f='nginx/src/core/ngx_buf.h' l='55'>/* STUB */</doc>
+<use f='nginx/src/event/ngx_event_pipe.c' l='350' u='w' c='ngx_event_pipe_read_upstream'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='447' u='w' c='ngx_event_pipe_read_upstream'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='464' u='w' c='ngx_event_pipe_read_upstream'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2275' u='w' c='ngx_http_fastcgi_input_filter'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2275' u='r' c='ngx_http_fastcgi_input_filter'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='2115' u='w' c='ngx_http_proxy_chunked_filter'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='2115' u='r' c='ngx_http_proxy_chunked_filter'/>

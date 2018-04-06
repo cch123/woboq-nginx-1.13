@@ -1,0 +1,21 @@
+<dec f='include/asm-generic/socket.h' l='7'/>
+<doc f='include/asm-generic/socket.h' l='6'>/* For setsockopt(2) */</doc>
+<use f='nginx/src/core/ngx_connection.c' l='218' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='230' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='243' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='280' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='427' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='461' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='485' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='670' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='681' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='694' u='c'/>
+<use f='nginx/src/event/ngx_event.c' l='888' u='c'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='67' u='c'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='128' u='c'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2834' u='c'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3524' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1403' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2643' u='c'/>
+<use f='nginx/src/os/unix/ngx_channel.c' l='40' u='c'/>
+<use f='nginx/src/os/unix/ngx_channel.c' l='161' u='c'/>

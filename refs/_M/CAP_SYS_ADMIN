@@ -1,0 +1,2 @@
+<dec f='include/linux/capability.h' l='261'/>
+<doc f='include/linux/capability.h' l='259'>/* Allow setting zone reclaim policy */</doc>

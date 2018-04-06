@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ngx_send.c source code [nginx/src/os/unix/ngx_send.c] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../../../../data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../../../data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../../../data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../../data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'nginx/src/os/unix/ngx_send.c'; var root_path = '../../../..'; var data_path = '../../../../../data';</script>
+<script src='../../../../../data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../../..'>nginx</a>/<a href='../..'>src</a>/<a href='..'>os</a>/<a href='./'>unix</a>/<a href='ngx_send.c.html'>ngx_send.c</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td></td></tr>
+<tr><th id="2">2</th><td><i>/*</i></td></tr>
+<tr><th id="3">3</th><td><i> * Copyright (C) Igor Sysoev</i></td></tr>
+<tr><th id="4">4</th><td><i> * Copyright (C) Nginx, Inc.</i></td></tr>
+<tr><th id="5">5</th><td><i> */</i></td></tr>
+<tr><th id="6">6</th><td></td></tr>
+<tr><th id="7">7</th><td></td></tr>
+<tr><th id="8">8</th><td><u>#include <a href="../../core/ngx_config.h.html">&lt;ngx_config.h&gt;</a></u></td></tr>
+<tr><th id="9">9</th><td><u>#include <a href="../../core/ngx_core.h.html">&lt;ngx_core.h&gt;</a></u></td></tr>
+<tr><th id="10">10</th><td><u>#include <a href="../../event/ngx_event.h.html">&lt;ngx_event.h&gt;</a></u></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td></td></tr>
+<tr><th id="13">13</th><td><a class="typedef" href="../../../../include/x86_64-linux-gnu/sys/types.h.html#ssize_t" title='ssize_t' data-type='__ssize_t' data-ref="ssize_t">ssize_t</a></td></tr>
+<tr><th id="14">14</th><td><dfn class="decl def fn" id="ngx_unix_send" title='ngx_unix_send' data-ref="ngx_unix_send">ngx_unix_send</dfn>(<a class="typedef" href="../../core/ngx_core.h.html#ngx_connection_t" title='ngx_connection_t' data-type='struct ngx_connection_s' data-ref="ngx_connection_t">ngx_connection_t</a> *<dfn class="local col1 decl" id="1c" title='c' data-type='ngx_connection_t *' data-ref="1c">c</dfn>, <a class="typedef" href="../../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a> *<dfn class="local col2 decl" id="2buf" title='buf' data-type='u_char *' data-ref="2buf">buf</dfn>, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span> <dfn class="local col3 decl" id="3size" title='size' data-type='size_t' data-ref="3size">size</dfn>)</td></tr>
+<tr><th id="15">15</th><td>{</td></tr>
+<tr><th id="16">16</th><td>    <a class="typedef" href="../../../../include/x86_64-linux-gnu/sys/types.h.html#ssize_t" title='ssize_t' data-type='__ssize_t' data-ref="ssize_t">ssize_t</a>       <dfn class="local col4 decl" id="4n" title='n' data-type='ssize_t' data-ref="4n">n</dfn>;</td></tr>
+<tr><th id="17">17</th><td>    <a class="typedef" href="ngx_errno.h.html#ngx_err_t" title='ngx_err_t' data-type='int' data-ref="ngx_err_t">ngx_err_t</a>     <dfn class="local col5 decl" id="5err" title='err' data-type='ngx_err_t' data-ref="5err">err</dfn>;</td></tr>
+<tr><th id="18">18</th><td>    <a class="typedef" href="../../core/ngx_core.h.html#ngx_event_t" title='ngx_event_t' data-type='struct ngx_event_s' data-ref="ngx_event_t">ngx_event_t</a>  *<dfn class="local col6 decl" id="6wev" title='wev' data-type='ngx_event_t *' data-ref="6wev">wev</dfn>;</td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td>    <a class="local col6 ref" href="#6wev" title='wev' data-ref="6wev">wev</a> = <a class="local col1 ref" href="#1c" title='c' data-ref="1c">c</a>-&gt;<a class="ref field" href="../../core/ngx_connection.h.html#ngx_connection_s::write" title='ngx_connection_s::write' data-ref="ngx_connection_s::write">write</a>;</td></tr>
+<tr><th id="21">21</th><td></td></tr>
+<tr><th id="22">22</th><td><u>#<span data-ppcond="22">if</span> (NGX_HAVE_KQUEUE)</u></td></tr>
+<tr><th id="23">23</th><td></td></tr>
+<tr><th id="24">24</th><td>    <b>if</b> ((ngx_event_flags &amp; NGX_USE_KQUEUE_EVENT) &amp;&amp; wev-&gt;pending_eof) {</td></tr>
+<tr><th id="25">25</th><td>        (<em>void</em>) ngx_connection_error(c, wev-&gt;kq_errno,</td></tr>
+<tr><th id="26">26</th><td>                               <q>"kevent() reported about an closed connection"</q>);</td></tr>
+<tr><th id="27">27</th><td>        wev-&gt;error = <var>1</var>;</td></tr>
+<tr><th id="28">28</th><td>        <b>return</b> NGX_ERROR;</td></tr>
+<tr><th id="29">29</th><td>    }</td></tr>
+<tr><th id="30">30</th><td></td></tr>
+<tr><th id="31">31</th><td><u>#<span data-ppcond="22">endif</span></u></td></tr>
+<tr><th id="32">32</th><td></td></tr>
+<tr><th id="33">33</th><td>    <b>for</b> ( ;; ) {</td></tr>
+<tr><th id="34">34</th><td>        <a class="local col4 ref" href="#4n" title='n' data-ref="4n">n</a> = <a class="ref fn" href="../../../../include/x86_64-linux-gnu/sys/socket.h.html#send" title='send' data-ref="send">send</a>(<a class="local col1 ref" href="#1c" title='c' data-ref="1c">c</a>-&gt;<a class="ref field" href="../../core/ngx_connection.h.html#ngx_connection_s::fd" title='ngx_connection_s::fd' data-ref="ngx_connection_s::fd">fd</a>, <a class="local col2 ref" href="#2buf" title='buf' data-ref="2buf">buf</a>, <a class="local col3 ref" href="#3size" title='size' data-ref="3size">size</a>, <var>0</var>);</td></tr>
+<tr><th id="35">35</th><td></td></tr>
+<tr><th id="36">36</th><td>        <a class="macro" href="../../core/ngx_log.h.html#218" title="" data-ref="_M/ngx_log_debug3">ngx_log_debug3</a>(NGX_LOG_DEBUG_EVENT, c-&gt;log, <var>0</var>,</td></tr>
+<tr><th id="37">37</th><td>                       <q>"send: fd:%d %z of %uz"</q>, c-&gt;fd, n, size);</td></tr>
+<tr><th id="38">38</th><td></td></tr>
+<tr><th id="39">39</th><td>        <b>if</b> (<a class="local col4 ref" href="#4n" title='n' data-ref="4n">n</a> &gt; <var>0</var>) {</td></tr>
+<tr><th id="40">40</th><td>            <b>if</b> (<a class="local col4 ref" href="#4n" title='n' data-ref="4n">n</a> &lt; (<a class="typedef" href="../../../../include/x86_64-linux-gnu/sys/types.h.html#ssize_t" title='ssize_t' data-type='__ssize_t' data-ref="ssize_t">ssize_t</a>) <a class="local col3 ref" href="#3size" title='size' data-ref="3size">size</a>) {</td></tr>
+<tr><th id="41">41</th><td>                <a class="local col6 ref" href="#6wev" title='wev' data-ref="6wev">wev</a>-&gt;<a class="ref field" href="../../event/ngx_event.h.html#ngx_event_s::ready" title='ngx_event_s::ready' data-ref="ngx_event_s::ready">ready</a> = <var>0</var>;</td></tr>
+<tr><th id="42">42</th><td>            }</td></tr>
+<tr><th id="43">43</th><td></td></tr>
+<tr><th id="44">44</th><td>            <a class="local col1 ref" href="#1c" title='c' data-ref="1c">c</a>-&gt;<a class="ref field" href="../../core/ngx_connection.h.html#ngx_connection_s::sent" title='ngx_connection_s::sent' data-ref="ngx_connection_s::sent">sent</a> += <a class="local col4 ref" href="#4n" title='n' data-ref="4n">n</a>;</td></tr>
+<tr><th id="45">45</th><td></td></tr>
+<tr><th id="46">46</th><td>            <b>return</b> <a class="local col4 ref" href="#4n" title='n' data-ref="4n">n</a>;</td></tr>
+<tr><th id="47">47</th><td>        }</td></tr>
+<tr><th id="48">48</th><td></td></tr>
+<tr><th id="49">49</th><td>        <a class="local col5 ref" href="#5err" title='err' data-ref="5err">err</a> = <a class="macro" href="ngx_errno.h.html#70" title="(*__errno_location ())" data-ref="_M/ngx_socket_errno">ngx_socket_errno</a>;</td></tr>
+<tr><th id="50">50</th><td></td></tr>
+<tr><th id="51">51</th><td>        <b>if</b> (<a class="local col4 ref" href="#4n" title='n' data-ref="4n">n</a> == <var>0</var>) {</td></tr>
+<tr><th id="52">52</th><td>            <a class="macro" href="../../core/ngx_log.h.html#85" title="if ((c-&gt;log)-&gt;log_level &gt;= 2) ngx_log_error_core(2, c-&gt;log, err, &quot;send() returned zero&quot;)" data-ref="_M/ngx_log_error">ngx_log_error</a>(<a class="macro" href="../../core/ngx_log.h.html#18" title="2" data-ref="_M/NGX_LOG_ALERT">NGX_LOG_ALERT</a>, <a class="local col1 ref" href="#1c" title='c' data-ref="1c">c</a>-&gt;<a class="ref field" href="../../core/ngx_connection.h.html#ngx_connection_s::log" title='ngx_connection_s::log' data-ref="ngx_connection_s::log">log</a>, <a class="local col5 ref" href="#5err" title='err' data-ref="5err">err</a>, <q>"send() returned zero"</q>);</td></tr>
+<tr><th id="53">53</th><td>            <a class="local col6 ref" href="#6wev" title='wev' data-ref="6wev">wev</a>-&gt;<a class="ref field" href="../../event/ngx_event.h.html#ngx_event_s::ready" title='ngx_event_s::ready' data-ref="ngx_event_s::ready">ready</a> = <var>0</var>;</td></tr>
+<tr><th id="54">54</th><td>            <b>return</b> <a class="local col4 ref" href="#4n" title='n' data-ref="4n">n</a>;</td></tr>
+<tr><th id="55">55</th><td>        }</td></tr>
+<tr><th id="56">56</th><td></td></tr>
+<tr><th id="57">57</th><td>        <b>if</b> (<a class="local col5 ref" href="#5err" title='err' data-ref="5err">err</a> == <a class="macro" href="ngx_errno.h.html#65" title="11" data-ref="_M/NGX_EAGAIN">NGX_EAGAIN</a> || <a class="local col5 ref" href="#5err" title='err' data-ref="5err">err</a> == <a class="macro" href="ngx_errno.h.html#22" title="4" data-ref="_M/NGX_EINTR">NGX_EINTR</a>) {</td></tr>
+<tr><th id="58">58</th><td>            <a class="local col6 ref" href="#6wev" title='wev' data-ref="6wev">wev</a>-&gt;<a class="ref field" href="../../event/ngx_event.h.html#ngx_event_s::ready" title='ngx_event_s::ready' data-ref="ngx_event_s::ready">ready</a> = <var>0</var>;</td></tr>
+<tr><th id="59">59</th><td></td></tr>
+<tr><th id="60">60</th><td>            <a class="macro" href="../../core/ngx_log.h.html#215" title="" data-ref="_M/ngx_log_debug0">ngx_log_debug0</a>(NGX_LOG_DEBUG_EVENT, c-&gt;log, err,</td></tr>
+<tr><th id="61">61</th><td>                           <q>"send() not ready"</q>);</td></tr>
+<tr><th id="62">62</th><td></td></tr>
+<tr><th id="63">63</th><td>            <b>if</b> (<a class="local col5 ref" href="#5err" title='err' data-ref="5err">err</a> == <a class="macro" href="ngx_errno.h.html#65" title="11" data-ref="_M/NGX_EAGAIN">NGX_EAGAIN</a>) {</td></tr>
+<tr><th id="64">64</th><td>                <b>return</b> <a class="macro" href="../../core/ngx_core.h.html#37" title="-2" data-ref="_M/NGX_AGAIN">NGX_AGAIN</a>;</td></tr>
+<tr><th id="65">65</th><td>            }</td></tr>
+<tr><th id="66">66</th><td></td></tr>
+<tr><th id="67">67</th><td>        } <b>else</b> {</td></tr>
+<tr><th id="68">68</th><td>            <a class="local col6 ref" href="#6wev" title='wev' data-ref="6wev">wev</a>-&gt;<a class="ref field" href="../../event/ngx_event.h.html#ngx_event_s::error" title='ngx_event_s::error' data-ref="ngx_event_s::error">error</a> = <var>1</var>;</td></tr>
+<tr><th id="69">69</th><td>            (<em>void</em>) <a class="ref fn" href="../../core/ngx_connection.h.html#ngx_connection_error" title='ngx_connection_error' data-ref="ngx_connection_error">ngx_connection_error</a>(<a class="local col1 ref" href="#1c" title='c' data-ref="1c">c</a>, <a class="local col5 ref" href="#5err" title='err' data-ref="5err">err</a>, <q>"send() failed"</q>);</td></tr>
+<tr><th id="70">70</th><td>            <b>return</b> <a class="macro" href="../../core/ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>;</td></tr>
+<tr><th id="71">71</th><td>        }</td></tr>
+<tr><th id="72">72</th><td>    }</td></tr>
+<tr><th id="73">73</th><td>}</td></tr>
+<tr><th id="74">74</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated on <em>2018-Apr-06</em> from project nginx<br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

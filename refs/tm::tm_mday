@@ -1,0 +1,15 @@
+<dec f='include/time.h' l='138' type='int'/>
+<offset>96</offset>
+<use f='nginx/src/core/ngx_times.c' l='126' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_times.c' l='154' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_times.c' l='161' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_times.c' l='171' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_times.c' l='179' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_times.c' l='262' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_times.c' l='268' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_times.c' l='291' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_times.c' l='317' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_times.c' l='425' macro='1' u='w'/>
+<use f='nginx/src/core/ngx_times.c' l='457' u='w' c='ngx_next_time'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='627' macro='1' u='r'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='901' macro='1' u='r'/>

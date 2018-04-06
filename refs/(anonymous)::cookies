@@ -1,0 +1,9 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='236' type='ngx_array_t'/>
+<dec f='nginx/src/http/ngx_http_upstream.h' l='287' type='ngx_array_t'/>
+<offset>2560</offset>
+<use f='nginx/src/http/modules/ngx_http_userid_filter_module.c' l='312' u='a' c='ngx_http_userid_get_uid'/>
+<use f='nginx/src/http/modules/ngx_http_userid_filter_module.c' l='322' u='m' c='ngx_http_userid_get_uid'/>
+<use f='nginx/src/http/modules/ngx_http_userid_filter_module.c' l='343' u='m' c='ngx_http_userid_get_uid'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4466' u='a' c='ngx_http_upstream_process_set_cookie'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5531' u='a' c='ngx_http_upstream_cookie_variable'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1064' u='a' c='ngx_http_variable_cookie'/>

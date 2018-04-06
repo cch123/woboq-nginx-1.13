@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http.h' l='92' type='ngx_int_t ngx_http_parse_request_line(ngx_http_request_t * r, ngx_buf_t * b)'/>
+<def f='nginx/src/http/ngx_http_parse.c' l='103' ll='837' type='ngx_int_t ngx_http_parse_request_line(ngx_http_request_t * r, ngx_buf_t * b)'/>
+<doc f='nginx/src/http/ngx_http_parse.c' l='101'>/* gcc, icc, msvc and others compile these switches as an jump table */</doc>
+<use f='nginx/src/http/ngx_http_request.c' l='977' u='c' c='ngx_http_process_request_line'/>

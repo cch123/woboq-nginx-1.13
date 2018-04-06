@@ -1,0 +1,13 @@
+<dec f='nginx/src/os/unix/ngx_process.h' l='86' type='ngx_int_t'/>
+<def f='nginx/src/os/unix/ngx_process.c' l='35' type='ngx_int_t'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='98' u='r' c='ngx_spawn_process'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='253' u='r' c='ngx_spawn_process'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='254' u='w' c='ngx_spawn_process'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='524' u='r' c='ngx_process_get_status'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='432' u='r' c='ngx_pass_open_channel'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='493' u='r' c='ngx_signal_worker_processes'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='571' u='r' c='ngx_reap_children'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='598' u='r' c='ngx_reap_children'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='668' u='r' c='ngx_reap_children'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='669' u='w' c='ngx_reap_children'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='938' u='r' c='ngx_worker_process_init'/>

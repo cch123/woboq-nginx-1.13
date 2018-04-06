@@ -1,0 +1,13 @@
+<dec f='nginx/src/event/ngx_event.h' l='207'/>
+<doc f='nginx/src/event/ngx_event.h' l='203'>/*
+ * The event filter requires to read/write the whole data:
+ * select, poll, /dev/poll, kqueue, epoll.
+ */</doc>
+<use f='nginx/src/event/ngx_event.c' l='280' u='c'/>
+<use f='nginx/src/event/ngx_event.c' l='359' u='c'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2760' u='c'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2867' u='c'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3067' u='c'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3267' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1320' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1447' u='c'/>

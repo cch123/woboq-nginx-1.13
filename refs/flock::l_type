@@ -1,0 +1,6 @@
+<dec f='include/x86_64-linux-gnu/bits/fcntl.h' l='37' type='short'/>
+<offset>0</offset>
+<doc f='include/x86_64-linux-gnu/bits/fcntl.h' l='37'>/* Type of lock: F_RDLCK, F_WRLCK, or F_UNLCK.	*/</doc>
+<use f='nginx/src/os/unix/ngx_files.c' l='764' u='w' c='ngx_trylock_fd'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='781' u='w' c='ngx_lock_fd'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='798' u='w' c='ngx_unlock_fd'/>

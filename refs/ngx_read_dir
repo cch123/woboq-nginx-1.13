@@ -1,0 +1,4 @@
+<dec f='nginx/src/os/unix/ngx_files.h' l='227' type='ngx_int_t ngx_read_dir(ngx_dir_t * dir)'/>
+<use f='nginx/src/core/ngx_file.c' l='986' u='c' c='ngx_walk_tree'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='302' u='c' c='ngx_http_autoindex_handler'/>
+<def f='nginx/src/os/unix/ngx_files.c' l='686' ll='701' type='ngx_int_t ngx_read_dir(ngx_dir_t * dir)'/>

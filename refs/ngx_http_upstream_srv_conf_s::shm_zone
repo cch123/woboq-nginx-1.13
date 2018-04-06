@@ -1,0 +1,9 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='134' type='ngx_shm_zone_t *'/>
+<offset>768</offset>
+<use f='nginx/src/http/modules/ngx_http_upstream_zone_module.c' l='105' u='w' c='ngx_http_upstream_zone'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_zone_module.c' l='107' u='r' c='ngx_http_upstream_zone'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_zone_module.c' l='111' u='r' c='ngx_http_upstream_zone'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_zone_module.c' l='112' u='r' c='ngx_http_upstream_zone'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_zone_module.c' l='114' u='r' c='ngx_http_upstream_zone'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_zone_module.c' l='140' u='r' c='ngx_http_upstream_init_zone'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_zone_module.c' l='169' u='r' c='ngx_http_upstream_init_zone'/>

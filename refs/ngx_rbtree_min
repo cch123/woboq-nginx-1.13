@@ -1,0 +1,7 @@
+<def f='nginx/src/core/ngx_rbtree.h' l='73' ll='81' type='ngx_rbtree_node_t * ngx_rbtree_min(ngx_rbtree_node_t * node, ngx_rbtree_node_t * sentinel)'/>
+<use f='nginx/src/core/ngx_rbtree.c' l='176' u='c' c='ngx_rbtree_delete'/>
+<use f='nginx/src/core/ngx_rbtree.c' l='391' u='c' c='ngx_rbtree_next'/>
+<use f='nginx/src/core/ngx_resolver.c' l='349' u='c' c='ngx_resolver_cleanup_tree'/>
+<use f='nginx/src/event/ngx_event_timer.c' l='45' u='c' c='ngx_event_find_timer'/>
+<use f='nginx/src/event/ngx_event_timer.c' l='68' u='c' c='ngx_event_expire_timers'/>
+<use f='nginx/src/event/ngx_event_timer.c' l='112' u='c' c='ngx_event_no_timers_left'/>

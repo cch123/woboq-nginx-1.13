@@ -1,0 +1,8 @@
+<dec f='nginx/src/core/ngx_cycle.h' l='140' type='ngx_array_t'/>
+<def f='nginx/src/core/ngx_cycle.c' l='22' type='ngx_array_t'/>
+<use f='nginx/src/core/ngx_cycle.c' l='778' u='a' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='785' u='m' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='795' u='a' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1301' u='m' c='ngx_clean_old_cycles'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1302' u='m' c='ngx_clean_old_cycles'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1339' u='m' c='ngx_clean_old_cycles'/>

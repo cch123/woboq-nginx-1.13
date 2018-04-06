@@ -1,0 +1,21 @@
+<dec f='nginx/src/core/ngx_cycle.h' l='142' type='ngx_uint_t'/>
+<use f='nginx/src/core/nginx.c' l='217' u='r' c='main'/>
+<use f='nginx/src/core/nginx.c' l='293' u='r' c='main'/>
+<use f='nginx/src/core/nginx.c' l='301' u='r' c='main'/>
+<use f='nginx/src/core/nginx.c' l='776' u='w' c='ngx_get_options'/>
+<use f='nginx/src/core/nginx.c' l='780' u='w' c='ngx_get_options'/>
+<use f='nginx/src/core/nginx.c' l='999' u='r' c='ngx_process_options'/>
+<use f='nginx/src/core/ngx_connection.c' l='480' u='r' c='ngx_open_listening_sockets'/>
+<use f='nginx/src/core/ngx_connection.c' l='545' u='r' c='ngx_open_listening_sockets'/>
+<use f='nginx/src/core/ngx_connection.c' l='560' u='r' c='ngx_open_listening_sockets'/>
+<use f='nginx/src/core/ngx_connection.c' l='581' u='r' c='ngx_open_listening_sockets'/>
+<use f='nginx/src/core/ngx_connection.c' l='604' u='r' c='ngx_open_listening_sockets'/>
+<use f='nginx/src/core/ngx_connection.c' l='620' u='r' c='ngx_open_listening_sockets'/>
+<def f='nginx/src/core/ngx_cycle.c' l='28' type='ngx_uint_t'/>
+<use f='nginx/src/core/ngx_cycle.c' l='281' u='r' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='311' u='r' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='612' u='r' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='846' u='r' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='960' u='r' c='ngx_create_pidfile'/>
+<use f='nginx/src/core/ngx_cycle.c' l='971' u='r' c='ngx_create_pidfile'/>
+<use f='nginx/src/event/ngx_event.c' l='437' u='r' c='ngx_event_module_init'/>

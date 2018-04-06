@@ -1,0 +1,7 @@
+<dec f='nginx/src/core/ngx_cycle.h' l='50' type='ngx_uint_t'/>
+<offset>1024</offset>
+<use f='nginx/src/core/ngx_connection.c' l='1066' u='w' c='ngx_get_connection'/>
+<use f='nginx/src/core/ngx_connection.c' l='1107' u='w' c='ngx_free_connection'/>
+<use f='nginx/src/event/ngx_event.c' l='729' u='w' c='ngx_event_process_init'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='142' u='r' c='ngx_event_accept'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='436' u='r' c='ngx_event_recvmsg'/>

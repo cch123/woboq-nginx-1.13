@@ -1,0 +1,27 @@
+<def f='include/x86_64-linux-gnu/bits/stat.h' l='119' ll='168'/>
+<dec f='include/x86_64-linux-gnu/sys/stat.h' l='216' type='int stat(const char *restrict __file, struct stat *restrict __buf)'/>
+<dec f='include/x86_64-linux-gnu/sys/stat.h' l='227' type='int stat64(const char *restrict __file, struct stat64 *restrict __buf)'/>
+<def f='include/x86_64-linux-gnu/sys/stat.h' l='451' ll='455' macro='1' type='int stat(const char * __path, struct stat * __statbuf)'/>
+<def f='include/x86_64-linux-gnu/sys/stat.h' l='500' ll='504' macro='1' type='int stat64(const char * __path, struct stat64 * __statbuf)'/>
+<use f='nginx/src/os/unix/ngx_files.h' l='253' u='c' c='ngx_de_info'/>
+<size>144</size>
+<doc f='include/x86_64-linux-gnu/bits/stat.h' l='118'>/* Note stat64 has the same shape as stat for x86-64.  */</doc>
+<mbr r='stat64::st_dev' o='0' t='__dev_t'/>
+<mbr r='stat64::st_ino' o='64' t='__ino64_t'/>
+<mbr r='stat64::st_nlink' o='128' t='__nlink_t'/>
+<mbr r='stat64::st_mode' o='192' t='__mode_t'/>
+<mbr r='stat64::st_uid' o='224' t='__uid_t'/>
+<mbr r='stat64::st_gid' o='256' t='__gid_t'/>
+<mbr r='stat64::__pad0' o='288' t='int'/>
+<mbr r='stat64::st_rdev' o='320' t='__dev_t'/>
+<mbr r='stat64::st_size' o='384' t='__off_t'/>
+<mbr r='stat64::st_blksize' o='448' t='__blksize_t'/>
+<mbr r='stat64::st_blocks' o='512' t='__blkcnt64_t'/>
+<mbr r='stat64::st_atim' o='576' t='struct timespec'/>
+<mbr r='stat64::st_mtim' o='704' t='struct timespec'/>
+<mbr r='stat64::st_ctim' o='832' t='struct timespec'/>
+<mbr r='stat64::__glibc_reserved' o='960' t='__syscall_slong_t [3]'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1137' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_file.c' l='625' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='804' macro='1' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1451' macro='1' u='c'/>

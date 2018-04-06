@@ -1,0 +1,26 @@
+<dec f='nginx/src/core/ngx_md5.h' l='24' type='void ngx_md5_update(ngx_md5_t * ctx, const void * data, size_t size)'/>
+<use f='nginx/src/core/ngx_crypt.c' l='74' u='c' c='ngx_crypt_apr1'/>
+<use f='nginx/src/core/ngx_crypt.c' l='75' u='c' c='ngx_crypt_apr1'/>
+<use f='nginx/src/core/ngx_crypt.c' l='76' u='c' c='ngx_crypt_apr1'/>
+<use f='nginx/src/core/ngx_crypt.c' l='79' u='c' c='ngx_crypt_apr1'/>
+<use f='nginx/src/core/ngx_crypt.c' l='80' u='c' c='ngx_crypt_apr1'/>
+<use f='nginx/src/core/ngx_crypt.c' l='81' u='c' c='ngx_crypt_apr1'/>
+<use f='nginx/src/core/ngx_crypt.c' l='85' u='c' c='ngx_crypt_apr1'/>
+<use f='nginx/src/core/ngx_crypt.c' l='92' u='c' c='ngx_crypt_apr1'/>
+<use f='nginx/src/core/ngx_crypt.c' l='95' u='c' c='ngx_crypt_apr1'/>
+<use f='nginx/src/core/ngx_crypt.c' l='105' u='c' c='ngx_crypt_apr1'/>
+<use f='nginx/src/core/ngx_crypt.c' l='108' u='c' c='ngx_crypt_apr1'/>
+<use f='nginx/src/core/ngx_crypt.c' l='112' u='c' c='ngx_crypt_apr1'/>
+<use f='nginx/src/core/ngx_crypt.c' l='116' u='c' c='ngx_crypt_apr1'/>
+<use f='nginx/src/core/ngx_crypt.c' l='120' u='c' c='ngx_crypt_apr1'/>
+<use f='nginx/src/core/ngx_crypt.c' l='123' u='c' c='ngx_crypt_apr1'/>
+<def f='nginx/src/core/ngx_md5.c' l='30' ll='58' type='void ngx_md5_update(ngx_md5_t * ctx, const void * data, size_t size)'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='251' u='c' c='ngx_http_file_cache_create_key'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1068' u='c' c='ngx_http_file_cache_vary'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1092' u='c' c='ngx_http_file_cache_vary'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1093' u='c' c='ngx_http_file_cache_vary'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1097' u='c' c='ngx_http_file_cache_vary'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1166' u='c' c='ngx_http_file_cache_vary_header'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1169' u='c' c='ngx_http_file_cache_vary_header'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1196' u='c' c='ngx_http_file_cache_vary_header'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1199' u='c' c='ngx_http_file_cache_vary_header'/>

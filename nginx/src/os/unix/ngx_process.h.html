@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ngx_process.h source code [nginx/src/os/unix/ngx_process.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../../../../data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../../../data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../../../data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../../data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'nginx/src/os/unix/ngx_process.h'; var root_path = '../../../..'; var data_path = '../../../../../data';</script>
+<script src='../../../../../data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../../..'>nginx</a>/<a href='../..'>src</a>/<a href='..'>os</a>/<a href='./'>unix</a>/<a href='ngx_process.h.html'>ngx_process.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td></td></tr>
+<tr><th id="2">2</th><td><i>/*</i></td></tr>
+<tr><th id="3">3</th><td><i> * Copyright (C) Igor Sysoev</i></td></tr>
+<tr><th id="4">4</th><td><i> * Copyright (C) Nginx, Inc.</i></td></tr>
+<tr><th id="5">5</th><td><i> */</i></td></tr>
+<tr><th id="6">6</th><td></td></tr>
+<tr><th id="7">7</th><td></td></tr>
+<tr><th id="8">8</th><td><u>#<span data-ppcond="8">ifndef</span> <span class="macro" data-ref="_M/_NGX_PROCESS_H_INCLUDED_">_NGX_PROCESS_H_INCLUDED_</span></u></td></tr>
+<tr><th id="9">9</th><td><u>#define <dfn class="macro" id="_M/_NGX_PROCESS_H_INCLUDED_" data-ref="_M/_NGX_PROCESS_H_INCLUDED_">_NGX_PROCESS_H_INCLUDED_</dfn></u></td></tr>
+<tr><th id="10">10</th><td></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td><u>#include <a href="ngx_setaffinity.h.html">&lt;ngx_setaffinity.h&gt;</a></u></td></tr>
+<tr><th id="13">13</th><td><u>#include <a href="ngx_setproctitle.h.html">&lt;ngx_setproctitle.h&gt;</a></u></td></tr>
+<tr><th id="14">14</th><td></td></tr>
+<tr><th id="15">15</th><td></td></tr>
+<tr><th id="16">16</th><td><b>typedef</b> <a class="typedef" href="../../../../include/x86_64-linux-gnu/sys/types.h.html#pid_t" title='pid_t' data-type='__pid_t' data-ref="pid_t">pid_t</a>       <dfn class="typedef" id="ngx_pid_t" title='ngx_pid_t' data-type='pid_t' data-ref="ngx_pid_t">ngx_pid_t</dfn>;</td></tr>
+<tr><th id="17">17</th><td></td></tr>
+<tr><th id="18">18</th><td><u>#define <dfn class="macro" id="_M/NGX_INVALID_PID" data-ref="_M/NGX_INVALID_PID">NGX_INVALID_PID</dfn>  -1</u></td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td><b>typedef</b> <em>void</em> (*<dfn class="typedef" id="ngx_spawn_proc_pt" title='ngx_spawn_proc_pt' data-type='void (*)(ngx_cycle_t *, void *)' data-ref="ngx_spawn_proc_pt">ngx_spawn_proc_pt</dfn>) (<a class="typedef" href="../../core/ngx_core.h.html#ngx_cycle_t" title='ngx_cycle_t' data-type='struct ngx_cycle_s' data-ref="ngx_cycle_t">ngx_cycle_t</a> *<dfn class="local col9 decl" id="2319cycle" title='cycle' data-type='ngx_cycle_t *' data-ref="2319cycle">cycle</dfn>, <em>void</em> *<dfn class="local col0 decl" id="2320data" title='data' data-type='void *' data-ref="2320data">data</dfn>);</td></tr>
+<tr><th id="21">21</th><td></td></tr>
+<tr><th id="22">22</th><td><b>typedef</b> <b>struct</b> {</td></tr>
+<tr><th id="23">23</th><td>    <a class="typedef" href="#ngx_pid_t" title='ngx_pid_t' data-type='pid_t' data-ref="ngx_pid_t">ngx_pid_t</a>           <dfn class="decl field" id="(anonymous)::pid" title='(anonymous struct)::pid' data-ref="(anonymous)::pid">pid</dfn>;</td></tr>
+<tr><th id="24">24</th><td>    <em>int</em>                 <dfn class="decl field" id="(anonymous)::status" title='(anonymous struct)::status' data-ref="(anonymous)::status">status</dfn>;</td></tr>
+<tr><th id="25">25</th><td>    <a class="typedef" href="ngx_socket.h.html#ngx_socket_t" title='ngx_socket_t' data-type='int' data-ref="ngx_socket_t">ngx_socket_t</a>        <dfn class="decl field" id="(anonymous)::channel" title='(anonymous struct)::channel' data-ref="(anonymous)::channel">channel</dfn>[<var>2</var>];</td></tr>
+<tr><th id="26">26</th><td></td></tr>
+<tr><th id="27">27</th><td>    <a class="typedef" href="#ngx_spawn_proc_pt" title='ngx_spawn_proc_pt' data-type='void (*)(ngx_cycle_t *, void *)' data-ref="ngx_spawn_proc_pt">ngx_spawn_proc_pt</a>   <dfn class="decl field" id="(anonymous)::proc" title='(anonymous struct)::proc' data-ref="(anonymous)::proc">proc</dfn>;</td></tr>
+<tr><th id="28">28</th><td>    <em>void</em>               *<dfn class="decl field" id="(anonymous)::data" title='(anonymous struct)::data' data-ref="(anonymous)::data">data</dfn>;</td></tr>
+<tr><th id="29">29</th><td>    <em>char</em>               *<dfn class="decl field" id="(anonymous)::name" title='(anonymous struct)::name' data-ref="(anonymous)::name">name</dfn>;</td></tr>
+<tr><th id="30">30</th><td></td></tr>
+<tr><th id="31">31</th><td>    <em>unsigned</em>            <dfn class="decl field" id="(anonymous)::respawn" title='(anonymous struct)::respawn' data-ref="(anonymous)::respawn">respawn</dfn>:<var>1</var>;</td></tr>
+<tr><th id="32">32</th><td>    <em>unsigned</em>            <dfn class="decl field" id="(anonymous)::just_spawn" title='(anonymous struct)::just_spawn' data-ref="(anonymous)::just_spawn">just_spawn</dfn>:<var>1</var>;</td></tr>
+<tr><th id="33">33</th><td>    <em>unsigned</em>            <dfn class="decl field" id="(anonymous)::detached" title='(anonymous struct)::detached' data-ref="(anonymous)::detached">detached</dfn>:<var>1</var>;</td></tr>
+<tr><th id="34">34</th><td>    <em>unsigned</em>            <dfn class="decl field" id="(anonymous)::exiting" title='(anonymous struct)::exiting' data-ref="(anonymous)::exiting">exiting</dfn>:<var>1</var>;</td></tr>
+<tr><th id="35">35</th><td>    <em>unsigned</em>            <dfn class="decl field" id="(anonymous)::exited" title='(anonymous struct)::exited' data-ref="(anonymous)::exited">exited</dfn>:<var>1</var>;</td></tr>
+<tr><th id="36">36</th><td>} <dfn class="typedef" id="ngx_process_t" title='ngx_process_t' data-type='struct ngx_process_t' data-ref="ngx_process_t">ngx_process_t</dfn>;</td></tr>
+<tr><th id="37">37</th><td></td></tr>
+<tr><th id="38">38</th><td></td></tr>
+<tr><th id="39">39</th><td><b>typedef</b> <b>struct</b> {</td></tr>
+<tr><th id="40">40</th><td>    <em>char</em>         *<dfn class="decl field" id="(anonymous)::path" title='(anonymous struct)::path' data-ref="(anonymous)::path">path</dfn>;</td></tr>
+<tr><th id="41">41</th><td>    <em>char</em>         *<dfn class="decl field" id="(anonymous)::name" title='(anonymous struct)::name' data-ref="(anonymous)::name">name</dfn>;</td></tr>
+<tr><th id="42">42</th><td>    <em>char</em> *<em>const</em>  *<dfn class="decl field" id="(anonymous)::argv" title='(anonymous struct)::argv' data-ref="(anonymous)::argv">argv</dfn>;</td></tr>
+<tr><th id="43">43</th><td>    <em>char</em> *<em>const</em>  *<dfn class="decl field" id="(anonymous)::envp" title='(anonymous struct)::envp' data-ref="(anonymous)::envp">envp</dfn>;</td></tr>
+<tr><th id="44">44</th><td>} <dfn class="typedef" id="ngx_exec_ctx_t" title='ngx_exec_ctx_t' data-type='struct ngx_exec_ctx_t' data-ref="ngx_exec_ctx_t">ngx_exec_ctx_t</dfn>;</td></tr>
+<tr><th id="45">45</th><td></td></tr>
+<tr><th id="46">46</th><td></td></tr>
+<tr><th id="47">47</th><td><u>#define <dfn class="macro" id="_M/NGX_MAX_PROCESSES" data-ref="_M/NGX_MAX_PROCESSES">NGX_MAX_PROCESSES</dfn>         1024</u></td></tr>
+<tr><th id="48">48</th><td></td></tr>
+<tr><th id="49">49</th><td><u>#define <dfn class="macro" id="_M/NGX_PROCESS_NORESPAWN" data-ref="_M/NGX_PROCESS_NORESPAWN">NGX_PROCESS_NORESPAWN</dfn>     -1</u></td></tr>
+<tr><th id="50">50</th><td><u>#define <dfn class="macro" id="_M/NGX_PROCESS_JUST_SPAWN" data-ref="_M/NGX_PROCESS_JUST_SPAWN">NGX_PROCESS_JUST_SPAWN</dfn>    -2</u></td></tr>
+<tr><th id="51">51</th><td><u>#define <dfn class="macro" id="_M/NGX_PROCESS_RESPAWN" data-ref="_M/NGX_PROCESS_RESPAWN">NGX_PROCESS_RESPAWN</dfn>       -3</u></td></tr>
+<tr><th id="52">52</th><td><u>#define <dfn class="macro" id="_M/NGX_PROCESS_JUST_RESPAWN" data-ref="_M/NGX_PROCESS_JUST_RESPAWN">NGX_PROCESS_JUST_RESPAWN</dfn>  -4</u></td></tr>
+<tr><th id="53">53</th><td><u>#define <dfn class="macro" id="_M/NGX_PROCESS_DETACHED" data-ref="_M/NGX_PROCESS_DETACHED">NGX_PROCESS_DETACHED</dfn>      -5</u></td></tr>
+<tr><th id="54">54</th><td></td></tr>
+<tr><th id="55">55</th><td></td></tr>
+<tr><th id="56">56</th><td><u>#define <dfn class="macro" id="_M/ngx_getpid" data-ref="_M/ngx_getpid">ngx_getpid</dfn>   getpid</u></td></tr>
+<tr><th id="57">57</th><td><u>#define <dfn class="macro" id="_M/ngx_getppid" data-ref="_M/ngx_getppid">ngx_getppid</dfn>  getppid</u></td></tr>
+<tr><th id="58">58</th><td></td></tr>
+<tr><th id="59">59</th><td><u>#<span data-ppcond="59">ifndef</span> <span class="macro" data-ref="_M/ngx_log_pid">ngx_log_pid</span></u></td></tr>
+<tr><th id="60">60</th><td><u>#define <dfn class="macro" id="_M/ngx_log_pid" data-ref="_M/ngx_log_pid">ngx_log_pid</dfn>  ngx_pid</u></td></tr>
+<tr><th id="61">61</th><td><u>#<span data-ppcond="59">endif</span></u></td></tr>
+<tr><th id="62">62</th><td></td></tr>
+<tr><th id="63">63</th><td></td></tr>
+<tr><th id="64">64</th><td><a class="typedef" href="#ngx_pid_t" title='ngx_pid_t' data-type='pid_t' data-ref="ngx_pid_t">ngx_pid_t</a> <dfn class="decl fn" id="ngx_spawn_process" title='ngx_spawn_process' data-ref="ngx_spawn_process">ngx_spawn_process</dfn>(<a class="typedef" href="../../core/ngx_core.h.html#ngx_cycle_t" title='ngx_cycle_t' data-type='struct ngx_cycle_s' data-ref="ngx_cycle_t">ngx_cycle_t</a> *<dfn class="local col1 decl" id="2321cycle" title='cycle' data-type='ngx_cycle_t *' data-ref="2321cycle">cycle</dfn>,</td></tr>
+<tr><th id="65">65</th><td>    <a class="typedef" href="#ngx_spawn_proc_pt" title='ngx_spawn_proc_pt' data-type='void (*)(ngx_cycle_t *, void *)' data-ref="ngx_spawn_proc_pt">ngx_spawn_proc_pt</a> <dfn class="local col2 decl" id="2322proc" title='proc' data-type='ngx_spawn_proc_pt' data-ref="2322proc">proc</dfn>, <em>void</em> *<dfn class="local col3 decl" id="2323data" title='data' data-type='void *' data-ref="2323data">data</dfn>, <em>char</em> *<dfn class="local col4 decl" id="2324name" title='name' data-type='char *' data-ref="2324name">name</dfn>, <a class="typedef" href="../../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a> <dfn class="local col5 decl" id="2325respawn" title='respawn' data-type='ngx_int_t' data-ref="2325respawn">respawn</dfn>);</td></tr>
+<tr><th id="66">66</th><td><a class="typedef" href="#ngx_pid_t" title='ngx_pid_t' data-type='pid_t' data-ref="ngx_pid_t">ngx_pid_t</a> <dfn class="decl fn" id="ngx_execute" title='ngx_execute' data-ref="ngx_execute">ngx_execute</dfn>(<a class="typedef" href="../../core/ngx_core.h.html#ngx_cycle_t" title='ngx_cycle_t' data-type='struct ngx_cycle_s' data-ref="ngx_cycle_t">ngx_cycle_t</a> *<dfn class="local col6 decl" id="2326cycle" title='cycle' data-type='ngx_cycle_t *' data-ref="2326cycle">cycle</dfn>, <a class="typedef" href="#ngx_exec_ctx_t" title='ngx_exec_ctx_t' data-type='struct ngx_exec_ctx_t' data-ref="ngx_exec_ctx_t">ngx_exec_ctx_t</a> *<dfn class="local col7 decl" id="2327ctx" title='ctx' data-type='ngx_exec_ctx_t *' data-ref="2327ctx">ctx</dfn>);</td></tr>
+<tr><th id="67">67</th><td><a class="typedef" href="../../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a> <dfn class="decl fn" id="ngx_init_signals" title='ngx_init_signals' data-ref="ngx_init_signals">ngx_init_signals</dfn>(<a class="typedef" href="../../core/ngx_core.h.html#ngx_log_t" title='ngx_log_t' data-type='struct ngx_log_s' data-ref="ngx_log_t">ngx_log_t</a> *<dfn class="local col8 decl" id="2328log" title='log' data-type='ngx_log_t *' data-ref="2328log">log</dfn>);</td></tr>
+<tr><th id="68">68</th><td><em>void</em> <dfn class="decl fn" id="ngx_debug_point" title='ngx_debug_point' data-ref="ngx_debug_point">ngx_debug_point</dfn>(<em>void</em>);</td></tr>
+<tr><th id="69">69</th><td></td></tr>
+<tr><th id="70">70</th><td></td></tr>
+<tr><th id="71">71</th><td><u>#<span data-ppcond="71">if</span> (<a class="macro" href="../../../objs/ngx_auto_config.h.html#122" title="1" data-ref="_M/NGX_HAVE_SCHED_YIELD">NGX_HAVE_SCHED_YIELD</a>)</u></td></tr>
+<tr><th id="72">72</th><td><u>#define <dfn class="macro" id="_M/ngx_sched_yield" data-ref="_M/ngx_sched_yield">ngx_sched_yield</dfn>()  sched_yield()</u></td></tr>
+<tr><th id="73">73</th><td><u>#<span data-ppcond="71">else</span></u></td></tr>
+<tr><th id="74">74</th><td><u>#define ngx_sched_yield()  usleep(1)</u></td></tr>
+<tr><th id="75">75</th><td><u>#<span data-ppcond="71">endif</span></u></td></tr>
+<tr><th id="76">76</th><td></td></tr>
+<tr><th id="77">77</th><td></td></tr>
+<tr><th id="78">78</th><td><b>extern</b> <em>int</em>            <dfn class="decl" id="ngx_argc" title='ngx_argc' data-ref="ngx_argc">ngx_argc</dfn>;</td></tr>
+<tr><th id="79">79</th><td><b>extern</b> <em>char</em>         **<dfn class="decl" id="ngx_argv" title='ngx_argv' data-ref="ngx_argv">ngx_argv</dfn>;</td></tr>
+<tr><th id="80">80</th><td><b>extern</b> <em>char</em>         **<dfn class="decl" id="ngx_os_argv" title='ngx_os_argv' data-ref="ngx_os_argv">ngx_os_argv</dfn>;</td></tr>
+<tr><th id="81">81</th><td></td></tr>
+<tr><th id="82">82</th><td><b>extern</b> <a class="typedef" href="#ngx_pid_t" title='ngx_pid_t' data-type='pid_t' data-ref="ngx_pid_t">ngx_pid_t</a>      <dfn class="decl" id="ngx_pid" title='ngx_pid' data-ref="ngx_pid">ngx_pid</dfn>;</td></tr>
+<tr><th id="83">83</th><td><b>extern</b> <a class="typedef" href="#ngx_pid_t" title='ngx_pid_t' data-type='pid_t' data-ref="ngx_pid_t">ngx_pid_t</a>      <dfn class="decl" id="ngx_parent" title='ngx_parent' data-ref="ngx_parent">ngx_parent</dfn>;</td></tr>
+<tr><th id="84">84</th><td><b>extern</b> <a class="typedef" href="ngx_socket.h.html#ngx_socket_t" title='ngx_socket_t' data-type='int' data-ref="ngx_socket_t">ngx_socket_t</a>   <dfn class="decl" id="ngx_channel" title='ngx_channel' data-ref="ngx_channel">ngx_channel</dfn>;</td></tr>
+<tr><th id="85">85</th><td><b>extern</b> <a class="typedef" href="../../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a>      <dfn class="decl" id="ngx_process_slot" title='ngx_process_slot' data-ref="ngx_process_slot">ngx_process_slot</dfn>;</td></tr>
+<tr><th id="86">86</th><td><b>extern</b> <a class="typedef" href="../../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a>      <dfn class="decl" id="ngx_last_process" title='ngx_last_process' data-ref="ngx_last_process">ngx_last_process</dfn>;</td></tr>
+<tr><th id="87">87</th><td><b>extern</b> <a class="typedef" href="#ngx_process_t" title='ngx_process_t' data-type='struct ngx_process_t' data-ref="ngx_process_t">ngx_process_t</a>  <dfn class="decl" id="ngx_processes" title='ngx_processes' data-ref="ngx_processes">ngx_processes</dfn>[<a class="macro" href="#47" title="1024" data-ref="_M/NGX_MAX_PROCESSES">NGX_MAX_PROCESSES</a>];</td></tr>
+<tr><th id="88">88</th><td></td></tr>
+<tr><th id="89">89</th><td></td></tr>
+<tr><th id="90">90</th><td><u>#<span data-ppcond="8">endif</span> /* _NGX_PROCESS_H_INCLUDED_ */</u></td></tr>
+<tr><th id="91">91</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../../../objs/ngx_modules.c.html'>nginx/objs/ngx_modules.c</a><br/>Generated on <em>2018-Apr-06</em> from project nginx<br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

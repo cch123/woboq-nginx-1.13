@@ -1,0 +1,3 @@
+<dec f='include/zlib.h' l='1637' type='int deflateInit2_(z_streamp strm, int level, int method, int windowBits, int memLevel, int strategy, const char * version, int stream_size)'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='645' macro='1' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='637' macro='1' u='c'/>

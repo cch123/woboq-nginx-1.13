@@ -1,0 +1,10 @@
+<dec f='nginx/src/core/ngx_connection.h' l='167' type='unsigned int'/>
+<offset>1736</offset>
+<doc f='nginx/src/core/ngx_connection.h' l='167'>/* ngx_connection_log_error_e */</doc>
+<use f='nginx/src/core/ngx_connection.c' l='1163' u='r' c='ngx_close_connection'/>
+<use f='nginx/src/core/ngx_connection.c' l='1406' u='r' c='ngx_connection_error'/>
+<use f='nginx/src/core/ngx_connection.c' l='1432' u='r' c='ngx_connection_error'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='172' u='w' c='ngx_event_connect_peer'/>
+<use f='nginx/src/http/ngx_http_request.c' l='320' u='w' c='ngx_http_init_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3175' u='w' c='ngx_http_keepalive_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3179' u='w' c='ngx_http_keepalive_handler'/>

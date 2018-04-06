@@ -1,0 +1,7 @@
+<dec f='nginx/src/http/ngx_http_variables.h' l='89' type='ngx_int_t ngx_http_regex_exec(ngx_http_request_t * r, ngx_http_regex_t * re, ngx_str_t * s)'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='2649' u='c' c='ngx_http_proxy_rewrite_regex_handler'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1347' u='c' c='ngx_http_core_find_location'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2197' u='c' c='ngx_http_find_virtual_server'/>
+<use f='nginx/src/http/ngx_http_script.c' l='934' u='c' c='ngx_http_script_regex_start_code'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2388' u='c' c='ngx_http_map_find'/>
+<def f='nginx/src/http/ngx_http_variables.c' l='2494' ll='2559' type='ngx_int_t ngx_http_regex_exec(ngx_http_request_t * r, ngx_http_regex_t * re, ngx_str_t * s)'/>

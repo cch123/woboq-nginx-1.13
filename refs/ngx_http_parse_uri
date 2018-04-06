@@ -1,0 +1,2 @@
+<dec f='nginx/src/http/ngx_http.h' l='93' type='ngx_int_t ngx_http_parse_uri(ngx_http_request_t * r)'/>
+<def f='nginx/src/http/ngx_http_parse.c' l='1109' ll='1254' type='ngx_int_t ngx_http_parse_uri(ngx_http_request_t * r)'/>

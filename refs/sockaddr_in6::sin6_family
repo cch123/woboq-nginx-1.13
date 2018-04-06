@@ -1,0 +1,5 @@
+<dec f='include/netinet/in.h' l='256' macro='1' type='sa_family_t'/>
+<offset>0</offset>
+<use f='nginx/src/core/ngx_inet.c' l='986' u='w' c='ngx_parse_inet6_url'/>
+<use f='nginx/src/core/ngx_proxy_protocol.c' l='303' u='w' c='ngx_proxy_protocol_v2_read'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4207' u='w' c='ngx_resolver_export'/>

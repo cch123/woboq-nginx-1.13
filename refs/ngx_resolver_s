@@ -1,0 +1,30 @@
+<def f='nginx/src/core/ngx_resolver.h' l='148' ll='192'/>
+<size>512</size>
+<mbr r='ngx_resolver_s::event' o='0' t='ngx_event_t *'/>
+<mbr r='ngx_resolver_s::dummy' o='64' t='void *'/>
+<mbr r='ngx_resolver_s::log' o='128' t='ngx_log_t *'/>
+<mbr r='ngx_resolver_s::ident' o='192' t='ngx_int_t'/>
+<mbr r='ngx_resolver_s::connections' o='256' t='ngx_array_t'/>
+<mbr r='ngx_resolver_s::last_connection' o='576' t='ngx_uint_t'/>
+<mbr r='ngx_resolver_s::name_rbtree' o='640' t='ngx_rbtree_t'/>
+<mbr r='ngx_resolver_s::name_sentinel' o='832' t='ngx_rbtree_node_t'/>
+<mbr r='ngx_resolver_s::srv_rbtree' o='1152' t='ngx_rbtree_t'/>
+<mbr r='ngx_resolver_s::srv_sentinel' o='1344' t='ngx_rbtree_node_t'/>
+<mbr r='ngx_resolver_s::addr_rbtree' o='1664' t='ngx_rbtree_t'/>
+<mbr r='ngx_resolver_s::addr_sentinel' o='1856' t='ngx_rbtree_node_t'/>
+<mbr r='ngx_resolver_s::name_resend_queue' o='2176' t='ngx_queue_t'/>
+<mbr r='ngx_resolver_s::srv_resend_queue' o='2304' t='ngx_queue_t'/>
+<mbr r='ngx_resolver_s::addr_resend_queue' o='2432' t='ngx_queue_t'/>
+<mbr r='ngx_resolver_s::name_expire_queue' o='2560' t='ngx_queue_t'/>
+<mbr r='ngx_resolver_s::srv_expire_queue' o='2688' t='ngx_queue_t'/>
+<mbr r='ngx_resolver_s::addr_expire_queue' o='2816' t='ngx_queue_t'/>
+<mbr r='ngx_resolver_s::ipv6' o='2944' t='ngx_uint_t'/>
+<mbr r='ngx_resolver_s::addr6_rbtree' o='3008' t='ngx_rbtree_t'/>
+<mbr r='ngx_resolver_s::addr6_sentinel' o='3200' t='ngx_rbtree_node_t'/>
+<mbr r='ngx_resolver_s::addr6_resend_queue' o='3520' t='ngx_queue_t'/>
+<mbr r='ngx_resolver_s::addr6_expire_queue' o='3648' t='ngx_queue_t'/>
+<mbr r='ngx_resolver_s::resend_timeout' o='3776' t='time_t'/>
+<mbr r='ngx_resolver_s::tcp_timeout' o='3840' t='time_t'/>
+<mbr r='ngx_resolver_s::expire' o='3904' t='time_t'/>
+<mbr r='ngx_resolver_s::valid' o='3968' t='time_t'/>
+<mbr r='ngx_resolver_s::log_level' o='4032' t='ngx_uint_t'/>

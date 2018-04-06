@@ -1,0 +1,6 @@
+<dec f='include/x86_64-linux-gnu/bits/resource.h' l='144' type='rlim_t'/>
+<offset>64</offset>
+<doc f='include/x86_64-linux-gnu/bits/resource.h' l='143'>/* The hard limit.  */</doc>
+<use f='nginx/src/os/unix/ngx_posix_init.c' l='113' u='r' c='ngx_os_status'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='808' u='w' c='ngx_worker_process_init'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='819' u='w' c='ngx_worker_process_init'/>

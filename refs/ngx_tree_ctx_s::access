@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_file.h' l='119' type='ngx_uint_t'/>
+<offset>128</offset>
+<use f='nginx/src/core/ngx_file.c' l='1055' u='w' c='ngx_walk_tree'/>
+<use f='nginx/src/core/ngx_file.c' l='1067' u='w' c='ngx_walk_tree'/>
+<use f='nginx/src/core/ngx_file.c' l='1086' u='w' c='ngx_walk_tree'/>

@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_connection.h' l='112' type='2'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='225' u='r' c='ngx_event_accept'/>
+<use f='nginx/src/event/ngx_event_connect.c' l='157' u='r' c='ngx_event_connect_peer'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1281' u='r' c='ngx_http_update_location_config'/>

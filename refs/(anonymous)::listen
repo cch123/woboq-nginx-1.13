@@ -1,0 +1,11 @@
+<dec f='nginx/src/core/ngx_inet.h' l='91' type='unsigned int'/>
+<offset>576</offset>
+<use f='nginx/src/core/ngx_inet.c' l='814' u='r' c='ngx_parse_inet_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='852' u='r' c='ngx_parse_inet_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='893' u='r' c='ngx_parse_inet_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='1004' u='r' c='ngx_parse_inet6_url'/>
+<dec f='nginx/src/http/ngx_http_core_module.h' l='201' type='unsigned int'/>
+<offset>1088</offset>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2793' u='r' c='ngx_http_core_server'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3748' u='w' c='ngx_http_core_listen'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3755' u='w' c='ngx_http_core_listen'/>

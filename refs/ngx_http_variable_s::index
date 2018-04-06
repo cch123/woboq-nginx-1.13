@@ -1,0 +1,8 @@
+<dec f='nginx/src/http/ngx_http_variables.h' l='43' type='ngx_uint_t'/>
+<offset>384</offset>
+<use f='nginx/src/http/ngx_http_variables.c' l='456' u='w' c='ngx_http_add_variable'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='523' u='w' c='ngx_http_add_prefix_variable'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='583' u='w' c='ngx_http_get_variable_index'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='585' u='r' c='ngx_http_get_variable_index'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='674' u='r' c='ngx_http_get_variable'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2641' u='w' c='ngx_http_variables_init_vars'/>

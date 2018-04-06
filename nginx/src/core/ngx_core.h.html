@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ngx_core.h source code [nginx/src/core/ngx_core.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../../../data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../../data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../../data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'nginx/src/core/ngx_core.h'; var root_path = '../../..'; var data_path = '../../../../data';</script>
+<script src='../../../../data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../..'>nginx</a>/<a href='..'>src</a>/<a href='./'>core</a>/<a href='ngx_core.h.html'>ngx_core.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td></td></tr>
+<tr><th id="2">2</th><td><i>/*</i></td></tr>
+<tr><th id="3">3</th><td><i> * Copyright (C) Igor Sysoev</i></td></tr>
+<tr><th id="4">4</th><td><i> * Copyright (C) Nginx, Inc.</i></td></tr>
+<tr><th id="5">5</th><td><i> */</i></td></tr>
+<tr><th id="6">6</th><td></td></tr>
+<tr><th id="7">7</th><td></td></tr>
+<tr><th id="8">8</th><td><u>#<span data-ppcond="8">ifndef</span> <span class="macro" data-ref="_M/_NGX_CORE_H_INCLUDED_">_NGX_CORE_H_INCLUDED_</span></u></td></tr>
+<tr><th id="9">9</th><td><u>#define <dfn class="macro" id="_M/_NGX_CORE_H_INCLUDED_" data-ref="_M/_NGX_CORE_H_INCLUDED_">_NGX_CORE_H_INCLUDED_</dfn></u></td></tr>
+<tr><th id="10">10</th><td></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td><u>#include <a href="ngx_config.h.html">&lt;ngx_config.h&gt;</a></u></td></tr>
+<tr><th id="13">13</th><td></td></tr>
+<tr><th id="14">14</th><td></td></tr>
+<tr><th id="15">15</th><td><b>typedef</b> <b>struct</b> <a class="type" href="ngx_module.h.html#ngx_module_s" title='ngx_module_s' data-ref="ngx_module_s" id="ngx_module_s"><a class="type" href="ngx_module.h.html#ngx_module_s" title='ngx_module_s' data-ref="ngx_module_s">ngx_module_s</a></a>          <dfn class="typedef" id="ngx_module_t" title='ngx_module_t' data-type='struct ngx_module_s' data-ref="ngx_module_t">ngx_module_t</dfn>;</td></tr>
+<tr><th id="16">16</th><td><b>typedef</b> <b>struct</b> <a class="type" href="ngx_conf_file.h.html#ngx_conf_s" title='ngx_conf_s' data-ref="ngx_conf_s" id="ngx_conf_s"><a class="type" href="ngx_conf_file.h.html#ngx_conf_s" title='ngx_conf_s' data-ref="ngx_conf_s">ngx_conf_s</a></a>            <dfn class="typedef" id="ngx_conf_t" title='ngx_conf_t' data-type='struct ngx_conf_s' data-ref="ngx_conf_t">ngx_conf_t</dfn>;</td></tr>
+<tr><th id="17">17</th><td><b>typedef</b> <b>struct</b> <a class="type" href="ngx_cycle.h.html#ngx_cycle_s" title='ngx_cycle_s' data-ref="ngx_cycle_s" id="ngx_cycle_s"><a class="type" href="ngx_cycle.h.html#ngx_cycle_s" title='ngx_cycle_s' data-ref="ngx_cycle_s">ngx_cycle_s</a></a>           <dfn class="typedef" id="ngx_cycle_t" title='ngx_cycle_t' data-type='struct ngx_cycle_s' data-ref="ngx_cycle_t">ngx_cycle_t</dfn>;</td></tr>
+<tr><th id="18">18</th><td><b>typedef</b> <b>struct</b> <a class="type" href="ngx_palloc.h.html#ngx_pool_s" title='ngx_pool_s' data-ref="ngx_pool_s" id="ngx_pool_s"><a class="type" href="ngx_palloc.h.html#ngx_pool_s" title='ngx_pool_s' data-ref="ngx_pool_s">ngx_pool_s</a></a>            <dfn class="typedef" id="ngx_pool_t" title='ngx_pool_t' data-type='struct ngx_pool_s' data-ref="ngx_pool_t">ngx_pool_t</dfn>;</td></tr>
+<tr><th id="19">19</th><td><b>typedef</b> <b>struct</b> <a class="type" href="ngx_buf.h.html#ngx_chain_s" title='ngx_chain_s' data-ref="ngx_chain_s" id="ngx_chain_s"><a class="type" href="ngx_buf.h.html#ngx_chain_s" title='ngx_chain_s' data-ref="ngx_chain_s">ngx_chain_s</a></a>           <dfn class="typedef" id="ngx_chain_t" title='ngx_chain_t' data-type='struct ngx_chain_s' data-ref="ngx_chain_t">ngx_chain_t</dfn>;</td></tr>
+<tr><th id="20">20</th><td><b>typedef</b> <b>struct</b> <a class="type" href="ngx_log.h.html#ngx_log_s" title='ngx_log_s' data-ref="ngx_log_s" id="ngx_log_s"><a class="type" href="ngx_log.h.html#ngx_log_s" title='ngx_log_s' data-ref="ngx_log_s">ngx_log_s</a></a>             <dfn class="typedef" id="ngx_log_t" title='ngx_log_t' data-type='struct ngx_log_s' data-ref="ngx_log_t">ngx_log_t</dfn>;</td></tr>
+<tr><th id="21">21</th><td><b>typedef</b> <b>struct</b> <a class="type" href="ngx_conf_file.h.html#ngx_open_file_s" title='ngx_open_file_s' data-ref="ngx_open_file_s" id="ngx_open_file_s"><a class="type" href="ngx_conf_file.h.html#ngx_open_file_s" title='ngx_open_file_s' data-ref="ngx_open_file_s">ngx_open_file_s</a></a>       <dfn class="typedef" id="ngx_open_file_t" title='ngx_open_file_t' data-type='struct ngx_open_file_s' data-ref="ngx_open_file_t">ngx_open_file_t</dfn>;</td></tr>
+<tr><th id="22">22</th><td><b>typedef</b> <b>struct</b> <a class="type" href="ngx_conf_file.h.html#ngx_command_s" title='ngx_command_s' data-ref="ngx_command_s" id="ngx_command_s"><a class="type" href="ngx_conf_file.h.html#ngx_command_s" title='ngx_command_s' data-ref="ngx_command_s">ngx_command_s</a></a>         <dfn class="typedef" id="ngx_command_t" title='ngx_command_t' data-type='struct ngx_command_s' data-ref="ngx_command_t">ngx_command_t</dfn>;</td></tr>
+<tr><th id="23">23</th><td><b>typedef</b> <b>struct</b> <a class="type" href="ngx_file.h.html#ngx_file_s" title='ngx_file_s' data-ref="ngx_file_s" id="ngx_file_s"><a class="type" href="ngx_file.h.html#ngx_file_s" title='ngx_file_s' data-ref="ngx_file_s">ngx_file_s</a></a>            <dfn class="typedef" id="ngx_file_t" title='ngx_file_t' data-type='struct ngx_file_s' data-ref="ngx_file_t">ngx_file_t</dfn>;</td></tr>
+<tr><th id="24">24</th><td><b>typedef</b> <b>struct</b> <dfn class="type" id="ngx_event_s" title='ngx_event_s' data-ref="ngx_event_s"><a class="type" href="#ngx_event_s" title='ngx_event_s' data-ref="ngx_event_s">ngx_event_s</a></dfn>           <dfn class="typedef" id="ngx_event_t" title='ngx_event_t' data-type='struct ngx_event_s' data-ref="ngx_event_t">ngx_event_t</dfn>;</td></tr>
+<tr><th id="25">25</th><td><b>typedef</b> <b>struct</b> <dfn class="type" id="ngx_event_aio_s" title='ngx_event_aio_s' data-ref="ngx_event_aio_s"><a class="type" href="#ngx_event_aio_s" title='ngx_event_aio_s' data-ref="ngx_event_aio_s">ngx_event_aio_s</a></dfn>       <dfn class="typedef" id="ngx_event_aio_t" title='ngx_event_aio_t' data-type='struct ngx_event_aio_s' data-ref="ngx_event_aio_t">ngx_event_aio_t</dfn>;</td></tr>
+<tr><th id="26">26</th><td><b>typedef</b> <b>struct</b> <a class="type" href="ngx_connection.h.html#ngx_connection_s" title='ngx_connection_s' data-ref="ngx_connection_s" id="ngx_connection_s"><a class="type" href="ngx_connection.h.html#ngx_connection_s" title='ngx_connection_s' data-ref="ngx_connection_s">ngx_connection_s</a></a>      <dfn class="typedef" id="ngx_connection_t" title='ngx_connection_t' data-type='struct ngx_connection_s' data-ref="ngx_connection_t">ngx_connection_t</dfn>;</td></tr>
+<tr><th id="27">27</th><td><b>typedef</b> <b>struct</b> <dfn class="type" id="ngx_thread_task_s" title='ngx_thread_task_s' data-ref="ngx_thread_task_s"><a class="type" href="#ngx_thread_task_s" title='ngx_thread_task_s' data-ref="ngx_thread_task_s">ngx_thread_task_s</a></dfn>     <dfn class="typedef" id="ngx_thread_task_t" title='ngx_thread_task_t' data-type='struct ngx_thread_task_s' data-ref="ngx_thread_task_t">ngx_thread_task_t</dfn>;</td></tr>
+<tr><th id="28">28</th><td><b>typedef</b> <b>struct</b> <dfn class="type" id="ngx_ssl_s" title='ngx_ssl_s' data-ref="ngx_ssl_s"><a class="type" href="#ngx_ssl_s" title='ngx_ssl_s' data-ref="ngx_ssl_s">ngx_ssl_s</a></dfn>             <dfn class="typedef" id="ngx_ssl_t" title='ngx_ssl_t' data-type='struct ngx_ssl_s' data-ref="ngx_ssl_t">ngx_ssl_t</dfn>;</td></tr>
+<tr><th id="29">29</th><td><b>typedef</b> <b>struct</b> <dfn class="type" id="ngx_ssl_connection_s" title='ngx_ssl_connection_s' data-ref="ngx_ssl_connection_s"><a class="type" href="#ngx_ssl_connection_s" title='ngx_ssl_connection_s' data-ref="ngx_ssl_connection_s">ngx_ssl_connection_s</a></dfn>  <dfn class="typedef" id="ngx_ssl_connection_t" title='ngx_ssl_connection_t' data-type='struct ngx_ssl_connection_s' data-ref="ngx_ssl_connection_t">ngx_ssl_connection_t</dfn>;</td></tr>
+<tr><th id="30">30</th><td></td></tr>
+<tr><th id="31">31</th><td><b>typedef</b> <em>void</em> (*<dfn class="typedef" id="ngx_event_handler_pt" title='ngx_event_handler_pt' data-type='void (*)(ngx_event_t *)' data-ref="ngx_event_handler_pt">ngx_event_handler_pt</dfn>)(<a class="typedef" href="#ngx_event_t" title='ngx_event_t' data-type='struct ngx_event_s' data-ref="ngx_event_t">ngx_event_t</a> *<dfn class="local col4 decl" id="2124ev" title='ev' data-type='ngx_event_t *' data-ref="2124ev">ev</dfn>);</td></tr>
+<tr><th id="32">32</th><td><b>typedef</b> <em>void</em> (*<dfn class="typedef" id="ngx_connection_handler_pt" title='ngx_connection_handler_pt' data-type='void (*)(ngx_connection_t *)' data-ref="ngx_connection_handler_pt">ngx_connection_handler_pt</dfn>)(<a class="typedef" href="#ngx_connection_t" title='ngx_connection_t' data-type='struct ngx_connection_s' data-ref="ngx_connection_t">ngx_connection_t</a> *<dfn class="local col5 decl" id="2125c" title='c' data-type='ngx_connection_t *' data-ref="2125c">c</dfn>);</td></tr>
+<tr><th id="33">33</th><td></td></tr>
+<tr><th id="34">34</th><td></td></tr>
+<tr><th id="35">35</th><td><u>#define  <dfn class="macro" id="_M/NGX_OK" data-ref="_M/NGX_OK">NGX_OK</dfn>          0</u></td></tr>
+<tr><th id="36">36</th><td><u>#define  <dfn class="macro" id="_M/NGX_ERROR" data-ref="_M/NGX_ERROR">NGX_ERROR</dfn>      -1</u></td></tr>
+<tr><th id="37">37</th><td><u>#define  <dfn class="macro" id="_M/NGX_AGAIN" data-ref="_M/NGX_AGAIN">NGX_AGAIN</dfn>      -2</u></td></tr>
+<tr><th id="38">38</th><td><u>#define  <dfn class="macro" id="_M/NGX_BUSY" data-ref="_M/NGX_BUSY">NGX_BUSY</dfn>       -3</u></td></tr>
+<tr><th id="39">39</th><td><u>#define  <dfn class="macro" id="_M/NGX_DONE" data-ref="_M/NGX_DONE">NGX_DONE</dfn>       -4</u></td></tr>
+<tr><th id="40">40</th><td><u>#define  <dfn class="macro" id="_M/NGX_DECLINED" data-ref="_M/NGX_DECLINED">NGX_DECLINED</dfn>   -5</u></td></tr>
+<tr><th id="41">41</th><td><u>#define  <dfn class="macro" id="_M/NGX_ABORT" data-ref="_M/NGX_ABORT">NGX_ABORT</dfn>      -6</u></td></tr>
+<tr><th id="42">42</th><td></td></tr>
+<tr><th id="43">43</th><td></td></tr>
+<tr><th id="44">44</th><td><u>#include <a href="../os/unix/ngx_errno.h.html">&lt;ngx_errno.h&gt;</a></u></td></tr>
+<tr><th id="45">45</th><td><u>#include <a href="../os/unix/ngx_atomic.h.html">&lt;ngx_atomic.h&gt;</a></u></td></tr>
+<tr><th id="46">46</th><td><u>#include <a href="../os/unix/ngx_thread.h.html">&lt;ngx_thread.h&gt;</a></u></td></tr>
+<tr><th id="47">47</th><td><u>#include <a href="ngx_rbtree.h.html">&lt;ngx_rbtree.h&gt;</a></u></td></tr>
+<tr><th id="48">48</th><td><u>#include <a href="../os/unix/ngx_time.h.html">&lt;ngx_time.h&gt;</a></u></td></tr>
+<tr><th id="49">49</th><td><u>#include <a href="../os/unix/ngx_socket.h.html">&lt;ngx_socket.h&gt;</a></u></td></tr>
+<tr><th id="50">50</th><td><u>#include <a href="ngx_string.h.html">&lt;ngx_string.h&gt;</a></u></td></tr>
+<tr><th id="51">51</th><td><u>#include <a href="../os/unix/ngx_files.h.html">&lt;ngx_files.h&gt;</a></u></td></tr>
+<tr><th id="52">52</th><td><u>#include <a href="../os/unix/ngx_shmem.h.html">&lt;ngx_shmem.h&gt;</a></u></td></tr>
+<tr><th id="53">53</th><td><u>#include <a href="../os/unix/ngx_process.h.html">&lt;ngx_process.h&gt;</a></u></td></tr>
+<tr><th id="54">54</th><td><u>#include <a href="../os/unix/ngx_user.h.html">&lt;ngx_user.h&gt;</a></u></td></tr>
+<tr><th id="55">55</th><td><u>#include <a href="../os/unix/ngx_dlopen.h.html">&lt;ngx_dlopen.h&gt;</a></u></td></tr>
+<tr><th id="56">56</th><td><u>#include <a href="ngx_parse.h.html">&lt;ngx_parse.h&gt;</a></u></td></tr>
+<tr><th id="57">57</th><td><u>#include <a href="ngx_parse_time.h.html">&lt;ngx_parse_time.h&gt;</a></u></td></tr>
+<tr><th id="58">58</th><td><u>#include <a href="ngx_log.h.html">&lt;ngx_log.h&gt;</a></u></td></tr>
+<tr><th id="59">59</th><td><u>#include <a href="../os/unix/ngx_alloc.h.html">&lt;ngx_alloc.h&gt;</a></u></td></tr>
+<tr><th id="60">60</th><td><u>#include <a href="ngx_palloc.h.html">&lt;ngx_palloc.h&gt;</a></u></td></tr>
+<tr><th id="61">61</th><td><u>#include <a href="ngx_buf.h.html">&lt;ngx_buf.h&gt;</a></u></td></tr>
+<tr><th id="62">62</th><td><u>#include <a href="ngx_queue.h.html">&lt;ngx_queue.h&gt;</a></u></td></tr>
+<tr><th id="63">63</th><td><u>#include <a href="ngx_array.h.html">&lt;ngx_array.h&gt;</a></u></td></tr>
+<tr><th id="64">64</th><td><u>#include <a href="ngx_list.h.html">&lt;ngx_list.h&gt;</a></u></td></tr>
+<tr><th id="65">65</th><td><u>#include <a href="ngx_hash.h.html">&lt;ngx_hash.h&gt;</a></u></td></tr>
+<tr><th id="66">66</th><td><u>#include <a href="ngx_file.h.html">&lt;ngx_file.h&gt;</a></u></td></tr>
+<tr><th id="67">67</th><td><u>#include <a href="ngx_crc.h.html">&lt;ngx_crc.h&gt;</a></u></td></tr>
+<tr><th id="68">68</th><td><u>#include <a href="ngx_crc32.h.html">&lt;ngx_crc32.h&gt;</a></u></td></tr>
+<tr><th id="69">69</th><td><u>#include <a href="ngx_murmurhash.h.html">&lt;ngx_murmurhash.h&gt;</a></u></td></tr>
+<tr><th id="70">70</th><td><u>#<span data-ppcond="70">if</span> (<a class="macro" href="../../objs/ngx_auto_config.h.html#387" title="1" data-ref="_M/NGX_PCRE">NGX_PCRE</a>)</u></td></tr>
+<tr><th id="71">71</th><td><u>#include <a href="ngx_regex.h.html">&lt;ngx_regex.h&gt;</a></u></td></tr>
+<tr><th id="72">72</th><td><u>#<span data-ppcond="70">endif</span></u></td></tr>
+<tr><th id="73">73</th><td><u>#include <a href="ngx_radix_tree.h.html">&lt;ngx_radix_tree.h&gt;</a></u></td></tr>
+<tr><th id="74">74</th><td><u>#include <a href="ngx_times.h.html">&lt;ngx_times.h&gt;</a></u></td></tr>
+<tr><th id="75">75</th><td><u>#include <a href="ngx_rwlock.h.html">&lt;ngx_rwlock.h&gt;</a></u></td></tr>
+<tr><th id="76">76</th><td><u>#include <a href="ngx_shmtx.h.html">&lt;ngx_shmtx.h&gt;</a></u></td></tr>
+<tr><th id="77">77</th><td><u>#include <a href="ngx_slab.h.html">&lt;ngx_slab.h&gt;</a></u></td></tr>
+<tr><th id="78">78</th><td><u>#include <a href="ngx_inet.h.html">&lt;ngx_inet.h&gt;</a></u></td></tr>
+<tr><th id="79">79</th><td><u>#include <a href="ngx_cycle.h.html">&lt;ngx_cycle.h&gt;</a></u></td></tr>
+<tr><th id="80">80</th><td><u>#include <a href="ngx_resolver.h.html">&lt;ngx_resolver.h&gt;</a></u></td></tr>
+<tr><th id="81">81</th><td><u>#<span data-ppcond="81">if</span> (NGX_OPENSSL)</u></td></tr>
+<tr><th id="82">82</th><td><u>#include &lt;ngx_event_openssl.h&gt;</u></td></tr>
+<tr><th id="83">83</th><td><u>#<span data-ppcond="81">endif</span></u></td></tr>
+<tr><th id="84">84</th><td><u>#include <a href="../os/unix/ngx_process_cycle.h.html">&lt;ngx_process_cycle.h&gt;</a></u></td></tr>
+<tr><th id="85">85</th><td><u>#include <a href="ngx_conf_file.h.html">&lt;ngx_conf_file.h&gt;</a></u></td></tr>
+<tr><th id="86">86</th><td><u>#include <a href="ngx_module.h.html">&lt;ngx_module.h&gt;</a></u></td></tr>
+<tr><th id="87">87</th><td><u>#include <a href="ngx_open_file_cache.h.html">&lt;ngx_open_file_cache.h&gt;</a></u></td></tr>
+<tr><th id="88">88</th><td><u>#include <a href="../os/unix/ngx_os.h.html">&lt;ngx_os.h&gt;</a></u></td></tr>
+<tr><th id="89">89</th><td><u>#include <a href="ngx_connection.h.html">&lt;ngx_connection.h&gt;</a></u></td></tr>
+<tr><th id="90">90</th><td><u>#include <a href="ngx_syslog.h.html">&lt;ngx_syslog.h&gt;</a></u></td></tr>
+<tr><th id="91">91</th><td><u>#include <a href="ngx_proxy_protocol.h.html">&lt;ngx_proxy_protocol.h&gt;</a></u></td></tr>
+<tr><th id="92">92</th><td></td></tr>
+<tr><th id="93">93</th><td></td></tr>
+<tr><th id="94">94</th><td><u>#define <dfn class="macro" id="_M/LF" data-ref="_M/LF">LF</dfn>     (u_char) '\n'</u></td></tr>
+<tr><th id="95">95</th><td><u>#define <dfn class="macro" id="_M/CR" data-ref="_M/CR">CR</dfn>     (u_char) '\r'</u></td></tr>
+<tr><th id="96">96</th><td><u>#define <dfn class="macro" id="_M/CRLF" data-ref="_M/CRLF">CRLF</dfn>   "\r\n"</u></td></tr>
+<tr><th id="97">97</th><td></td></tr>
+<tr><th id="98">98</th><td></td></tr>
+<tr><th id="99">99</th><td><u>#define <dfn class="macro" id="_M/ngx_abs" data-ref="_M/ngx_abs">ngx_abs</dfn>(value)       (((value) &gt;= 0) ? (value) : - (value))</u></td></tr>
+<tr><th id="100">100</th><td><u>#define <dfn class="macro" id="_M/ngx_max" data-ref="_M/ngx_max">ngx_max</dfn>(val1, val2)  ((val1 &lt; val2) ? (val2) : (val1))</u></td></tr>
+<tr><th id="101">101</th><td><u>#define <dfn class="macro" id="_M/ngx_min" data-ref="_M/ngx_min">ngx_min</dfn>(val1, val2)  ((val1 &gt; val2) ? (val2) : (val1))</u></td></tr>
+<tr><th id="102">102</th><td></td></tr>
+<tr><th id="103">103</th><td><em>void</em> <dfn class="decl fn" id="ngx_cpuinfo" title='ngx_cpuinfo' data-ref="ngx_cpuinfo">ngx_cpuinfo</dfn>(<em>void</em>);</td></tr>
+<tr><th id="104">104</th><td></td></tr>
+<tr><th id="105">105</th><td><u>#<span data-ppcond="105">if</span> (<a class="macro" href="../../objs/ngx_auto_config.h.html#342" title="1" data-ref="_M/NGX_HAVE_OPENAT">NGX_HAVE_OPENAT</a>)</u></td></tr>
+<tr><th id="106">106</th><td><u>#define <dfn class="macro" id="_M/NGX_DISABLE_SYMLINKS_OFF" data-ref="_M/NGX_DISABLE_SYMLINKS_OFF">NGX_DISABLE_SYMLINKS_OFF</dfn>        0</u></td></tr>
+<tr><th id="107">107</th><td><u>#define <dfn class="macro" id="_M/NGX_DISABLE_SYMLINKS_ON" data-ref="_M/NGX_DISABLE_SYMLINKS_ON">NGX_DISABLE_SYMLINKS_ON</dfn>         1</u></td></tr>
+<tr><th id="108">108</th><td><u>#define <dfn class="macro" id="_M/NGX_DISABLE_SYMLINKS_NOTOWNER" data-ref="_M/NGX_DISABLE_SYMLINKS_NOTOWNER">NGX_DISABLE_SYMLINKS_NOTOWNER</dfn>   2</u></td></tr>
+<tr><th id="109">109</th><td><u>#<span data-ppcond="105">endif</span></u></td></tr>
+<tr><th id="110">110</th><td></td></tr>
+<tr><th id="111">111</th><td><u>#<span data-ppcond="8">endif</span> /* _NGX_CORE_H_INCLUDED_ */</u></td></tr>
+<tr><th id="112">112</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../../objs/ngx_modules.c.html'>nginx/objs/ngx_modules.c</a><br/>Generated on <em>2018-Apr-06</em> from project nginx<br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

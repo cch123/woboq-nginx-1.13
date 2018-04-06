@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='81' type='unsigned int'/>
+<offset>936</offset>
+<use f='nginx/src/http/ngx_http.c' l='1772' u='r' c='ngx_http_add_listening'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3953' u='w' c='ngx_http_core_listen'/>

@@ -1,0 +1,6 @@
+<dec f='nginx/src/core/ngx_conf_file.h' l='284' type='char * ngx_conf_set_keyval_slot(ngx_conf_t * cf, ngx_command_t * cmd, void * conf)'/>
+<def f='nginx/src/core/ngx_conf_file.c' l='1127' ll='1162' type='char * ngx_conf_set_keyval_slot(ngx_conf_t * cf, ngx_command_t * cmd, void * conf)'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='357'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='357'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='357'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='357'/>

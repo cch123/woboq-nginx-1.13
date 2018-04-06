@@ -1,0 +1,7 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='139' type='unsigned int'/>
+<offset>1313</offset>
+<use f='nginx/src/core/ngx_resolver.c' l='851' u='w' c='ngx_resolve_name_locked'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1055' u='w' c='ngx_resolve_addr'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1269' u='r' c='ngx_resolver_send_query'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1920' u='r' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1975' u='w' c='ngx_resolver_process_a'/>

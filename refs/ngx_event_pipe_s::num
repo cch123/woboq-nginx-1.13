@@ -1,0 +1,6 @@
+<dec f='nginx/src/event/ngx_event_pipe.h' l='98' type='int'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='350' u='w' c='ngx_event_pipe_read_upstream'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='447' u='w' c='ngx_event_pipe_read_upstream'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='464' u='w' c='ngx_event_pipe_read_upstream'/>
+<offset>2176</offset>
+<doc f='nginx/src/event/ngx_event_pipe.h' l='98'>/* STUB */</doc>

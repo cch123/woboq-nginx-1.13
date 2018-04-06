@@ -1,0 +1,18 @@
+<dec f='nginx/src/core/ngx_string.h' l='146'/>
+<doc f='nginx/src/core/ngx_string.h' l='145'>/* msvc and icc7 compile memcmp() to the inline loop */</doc>
+<use f='nginx/src/core/ngx_inet.c' l='1391' u='c'/>
+<use f='nginx/src/core/ngx_inet.c' l='1415' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3492' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3574' u='c'/>
+<use f='nginx/src/core/ngx_string.c' l='836' u='c'/>
+<use f='nginx/src/core/ngx_string.c' l='1921' u='c'/>
+<use f='nginx/src/core/ngx_string.c' l='1964' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1487' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1961' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2582' u='c'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='568' u='c'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='595' u='c'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='996' u='c'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1034' u='c'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1316' u='c'/>
+<use f='nginx/src/http/ngx_http_request.c' l='256' u='c'/>

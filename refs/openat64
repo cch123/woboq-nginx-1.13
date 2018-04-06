@@ -1,0 +1,6 @@
+<dec f='include/fcntl.h' l='184' type='int openat(int __fd, const char * __file, int __oflag)'/>
+<dec f='include/fcntl.h' l='191' type='int openat64(int __fd, const char * __file, int __oflag)'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='511' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='712' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='748' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='758' macro='1' u='c'/>

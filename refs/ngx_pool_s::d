@@ -1,0 +1,37 @@
+<dec f='nginx/src/core/ngx_palloc.h' l='58' type='ngx_pool_data_t'/>
+<offset>0</offset>
+<use f='nginx/src/core/ngx_array.c' l='37' u='m' c='ngx_array_destroy'/>
+<use f='nginx/src/core/ngx_array.c' l='38' u='m' c='ngx_array_destroy'/>
+<use f='nginx/src/core/ngx_array.c' l='41' u='m' c='ngx_array_destroy'/>
+<use f='nginx/src/core/ngx_array.c' l='42' u='m' c='ngx_array_destroy'/>
+<use f='nginx/src/core/ngx_array.c' l='62' u='m' c='ngx_array_push'/>
+<use f='nginx/src/core/ngx_array.c' l='63' u='m' c='ngx_array_push'/>
+<use f='nginx/src/core/ngx_array.c' l='63' u='m' c='ngx_array_push'/>
+<use f='nginx/src/core/ngx_array.c' l='70' u='m' c='ngx_array_push'/>
+<use f='nginx/src/core/ngx_array.c' l='110' u='m' c='ngx_array_push_n'/>
+<use f='nginx/src/core/ngx_array.c' l='111' u='m' c='ngx_array_push_n'/>
+<use f='nginx/src/core/ngx_array.c' l='111' u='m' c='ngx_array_push_n'/>
+<use f='nginx/src/core/ngx_array.c' l='118' u='m' c='ngx_array_push_n'/>
+<use f='nginx/src/core/ngx_palloc.c' l='28' u='m' c='ngx_create_pool'/>
+<use f='nginx/src/core/ngx_palloc.c' l='29' u='m' c='ngx_create_pool'/>
+<use f='nginx/src/core/ngx_palloc.c' l='30' u='m' c='ngx_create_pool'/>
+<use f='nginx/src/core/ngx_palloc.c' l='31' u='m' c='ngx_create_pool'/>
+<use f='nginx/src/core/ngx_palloc.c' l='89' u='m' c='ngx_destroy_pool'/>
+<use f='nginx/src/core/ngx_palloc.c' l='89' u='m' c='ngx_destroy_pool'/>
+<use f='nginx/src/core/ngx_palloc.c' l='111' u='m' c='ngx_reset_pool'/>
+<use f='nginx/src/core/ngx_palloc.c' l='112' u='m' c='ngx_reset_pool'/>
+<use f='nginx/src/core/ngx_palloc.c' l='113' u='m' c='ngx_reset_pool'/>
+<use f='nginx/src/core/ngx_palloc.c' l='157' u='m' c='ngx_palloc_small'/>
+<use f='nginx/src/core/ngx_palloc.c' l='163' u='m' c='ngx_palloc_small'/>
+<use f='nginx/src/core/ngx_palloc.c' l='164' u='m' c='ngx_palloc_small'/>
+<use f='nginx/src/core/ngx_palloc.c' l='169' u='m' c='ngx_palloc_small'/>
+<use f='nginx/src/core/ngx_palloc.c' l='184' u='m' c='ngx_palloc_block'/>
+<use f='nginx/src/core/ngx_palloc.c' l='193' u='m' c='ngx_palloc_block'/>
+<use f='nginx/src/core/ngx_palloc.c' l='194' u='m' c='ngx_palloc_block'/>
+<use f='nginx/src/core/ngx_palloc.c' l='195' u='m' c='ngx_palloc_block'/>
+<use f='nginx/src/core/ngx_palloc.c' l='199' u='m' c='ngx_palloc_block'/>
+<use f='nginx/src/core/ngx_palloc.c' l='201' u='m' c='ngx_palloc_block'/>
+<use f='nginx/src/core/ngx_palloc.c' l='201' u='m' c='ngx_palloc_block'/>
+<use f='nginx/src/core/ngx_palloc.c' l='202' u='m' c='ngx_palloc_block'/>
+<use f='nginx/src/core/ngx_palloc.c' l='203' u='m' c='ngx_palloc_block'/>
+<use f='nginx/src/core/ngx_palloc.c' l='207' u='m' c='ngx_palloc_block'/>

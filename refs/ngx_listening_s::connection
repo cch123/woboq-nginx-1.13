@@ -1,0 +1,7 @@
+<dec f='nginx/src/core/ngx_connection.h' l='52' type='ngx_connection_t *'/>
+<offset>1728</offset>
+<use f='nginx/src/core/ngx_connection.c' l='978' u='r' c='ngx_close_listening_sockets'/>
+<use f='nginx/src/event/ngx_event.c' l='752' u='w' c='ngx_event_process_init'/>
+<use f='nginx/src/event/ngx_event.c' l='771' u='r' c='ngx_event_process_init'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='694' u='r' c='ngx_enable_accept_events'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='719' u='r' c='ngx_disable_accept_events'/>

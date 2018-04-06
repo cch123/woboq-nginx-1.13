@@ -1,0 +1,12 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='61' type='ngx_msec_t'/>
+<offset>64</offset>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1503' u='r' c='ngx_http_upstream_connect'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1504' u='w' c='ngx_http_upstream_connect'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1504' u='r' c='ngx_http_upstream_connect'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1516' u='w' c='ngx_http_upstream_connect'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1975' u='r' c='ngx_http_upstream_send_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2368' u='r' c='ngx_http_upstream_process_header'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4263' u='r' c='ngx_http_upstream_finalize_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4264' u='w' c='ngx_http_upstream_finalize_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4264' u='r' c='ngx_http_upstream_finalize_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5382' u='r' c='ngx_http_upstream_response_time_variable'/>

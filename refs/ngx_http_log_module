@@ -1,0 +1,9 @@
+<dec f='nginx/objs/ngx_modules.c' l='16' type='ngx_module_t'/>
+<use f='nginx/objs/ngx_modules.c' l='68' u='a'/>
+<use f='nginx/objs/ngx_modules.c' l='68' u='a'/>
+<def f='nginx/src/http/modules/ngx_http_log_module.c' l='208' ll='221' type='ngx_module_t'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='269' u='m' c='ngx_http_log_handler'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='547' u='m' c='ngx_http_log_script_write'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='1226' u='m' c='ngx_http_log_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='1275' u='m' c='ngx_http_log_set_log'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='1877' u='m' c='ngx_http_log_init'/>

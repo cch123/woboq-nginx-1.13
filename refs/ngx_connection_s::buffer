@@ -1,0 +1,12 @@
+<dec f='nginx/src/core/ngx_connection.h' l='157' type='ngx_buf_t *'/>
+<offset>1408</offset>
+<use f='nginx/src/event/ngx_event_accept.c' l='564' u='w' c='ngx_event_recvmsg'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='565' u='r' c='ngx_event_recvmsg'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='570' u='r' c='ngx_event_recvmsg'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='570' u='r' c='ngx_event_recvmsg'/>
+<use f='nginx/src/http/ngx_http_request.c' l='415' u='r' c='ngx_http_wait_request_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='424' u='w' c='ngx_http_wait_request_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='559' u='r' c='ngx_http_create_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2923' u='r' c='ngx_http_set_keepalive'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3014' u='r' c='ngx_http_set_keepalive'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3148' u='r' c='ngx_http_keepalive_handler'/>

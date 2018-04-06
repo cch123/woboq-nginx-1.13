@@ -1,0 +1,4 @@
+<def f='nginx/src/os/unix/ngx_process.c' l='39' ll='83' type='ngx_signal_t [13]'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='290' u='r' c='ngx_init_signals'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='330' u='r' c='ngx_signal_handler'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='636' u='r' c='ngx_os_signal_process'/>

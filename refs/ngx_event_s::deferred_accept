@@ -1,0 +1,4 @@
+<dec f='nginx/src/event/ngx_event.h' l='64' type='unsigned int'/>
+<offset>77</offset>
+<use f='nginx/src/event/ngx_event.c' l='760' u='w' c='ngx_event_process_init'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='243' u='r' c='ngx_event_accept'/>

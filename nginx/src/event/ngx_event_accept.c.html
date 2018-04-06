@@ -1,0 +1,858 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ngx_event_accept.c source code [nginx/src/event/ngx_event_accept.c] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../../../data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../../data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../../data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'nginx/src/event/ngx_event_accept.c'; var root_path = '../../..'; var data_path = '../../../../data';</script>
+<script src='../../../../data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../..'>nginx</a>/<a href='..'>src</a>/<a href='./'>event</a>/<a href='ngx_event_accept.c.html'>ngx_event_accept.c</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td></td></tr>
+<tr><th id="2">2</th><td><i>/*</i></td></tr>
+<tr><th id="3">3</th><td><i> * Copyright (C) Igor Sysoev</i></td></tr>
+<tr><th id="4">4</th><td><i> * Copyright (C) Nginx, Inc.</i></td></tr>
+<tr><th id="5">5</th><td><i> */</i></td></tr>
+<tr><th id="6">6</th><td></td></tr>
+<tr><th id="7">7</th><td></td></tr>
+<tr><th id="8">8</th><td><u>#include <a href="../core/ngx_config.h.html">&lt;ngx_config.h&gt;</a></u></td></tr>
+<tr><th id="9">9</th><td><u>#include <a href="../core/ngx_core.h.html">&lt;ngx_core.h&gt;</a></u></td></tr>
+<tr><th id="10">10</th><td><u>#include <a href="ngx_event.h.html">&lt;ngx_event.h&gt;</a></u></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td></td></tr>
+<tr><th id="13">13</th><td><em>static</em> <a class="typedef" href="../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a> <a class="tu decl fn" href="#ngx_enable_accept_events" title='ngx_enable_accept_events' data-type='ngx_int_t ngx_enable_accept_events(ngx_cycle_t * cycle)' data-ref="ngx_enable_accept_events">ngx_enable_accept_events</a>(<a class="typedef" href="../core/ngx_core.h.html#ngx_cycle_t" title='ngx_cycle_t' data-type='struct ngx_cycle_s' data-ref="ngx_cycle_t">ngx_cycle_t</a> *<dfn class="local col1 decl" id="1cycle" title='cycle' data-type='ngx_cycle_t *' data-ref="1cycle">cycle</dfn>);</td></tr>
+<tr><th id="14">14</th><td><em>static</em> <a class="typedef" href="../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a> <a class="tu decl fn" href="#ngx_disable_accept_events" title='ngx_disable_accept_events' data-type='ngx_int_t ngx_disable_accept_events(ngx_cycle_t * cycle, ngx_uint_t all)' data-ref="ngx_disable_accept_events">ngx_disable_accept_events</a>(<a class="typedef" href="../core/ngx_core.h.html#ngx_cycle_t" title='ngx_cycle_t' data-type='struct ngx_cycle_s' data-ref="ngx_cycle_t">ngx_cycle_t</a> *<dfn class="local col2 decl" id="2cycle" title='cycle' data-type='ngx_cycle_t *' data-ref="2cycle">cycle</dfn>, <a class="typedef" href="../core/ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a> <dfn class="local col3 decl" id="3all" title='all' data-type='ngx_uint_t' data-ref="3all">all</dfn>);</td></tr>
+<tr><th id="15">15</th><td><em>static</em> <em>void</em> <a class="tu decl fn" href="#ngx_close_accepted_connection" title='ngx_close_accepted_connection' data-type='void ngx_close_accepted_connection(ngx_connection_t * c)' data-ref="ngx_close_accepted_connection">ngx_close_accepted_connection</a>(<a class="typedef" href="../core/ngx_core.h.html#ngx_connection_t" title='ngx_connection_t' data-type='struct ngx_connection_s' data-ref="ngx_connection_t">ngx_connection_t</a> *<dfn class="local col4 decl" id="4c" title='c' data-type='ngx_connection_t *' data-ref="4c">c</dfn>);</td></tr>
+<tr><th id="16">16</th><td><u>#<span data-ppcond="16">if</span> (NGX_DEBUG)</u></td></tr>
+<tr><th id="17">17</th><td><em>static</em> <em>void</em> ngx_debug_accepted_connection(ngx_event_conf_t *ecf,</td></tr>
+<tr><th id="18">18</th><td>    ngx_connection_t *c);</td></tr>
+<tr><th id="19">19</th><td><u>#<span data-ppcond="16">endif</span></u></td></tr>
+<tr><th id="20">20</th><td></td></tr>
+<tr><th id="21">21</th><td></td></tr>
+<tr><th id="22">22</th><td><em>void</em></td></tr>
+<tr><th id="23">23</th><td><dfn class="decl def fn" id="ngx_event_accept" title='ngx_event_accept' data-ref="ngx_event_accept">ngx_event_accept</dfn>(<a class="typedef" href="../core/ngx_core.h.html#ngx_event_t" title='ngx_event_t' data-type='struct ngx_event_s' data-ref="ngx_event_t">ngx_event_t</a> *<dfn class="local col5 decl" id="5ev" title='ev' data-type='ngx_event_t *' data-ref="5ev">ev</dfn>)</td></tr>
+<tr><th id="24">24</th><td>{</td></tr>
+<tr><th id="25">25</th><td>    <a class="typedef" href="../../../include/unistd.h.html#socklen_t" title='socklen_t' data-type='__socklen_t' data-ref="socklen_t">socklen_t</a>          <dfn class="local col6 decl" id="6socklen" title='socklen' data-type='socklen_t' data-ref="6socklen">socklen</dfn>;</td></tr>
+<tr><th id="26">26</th><td>    <a class="typedef" href="../os/unix/ngx_errno.h.html#ngx_err_t" title='ngx_err_t' data-type='int' data-ref="ngx_err_t">ngx_err_t</a>          <dfn class="local col7 decl" id="7err" title='err' data-type='ngx_err_t' data-ref="7err">err</dfn>;</td></tr>
+<tr><th id="27">27</th><td>    <a class="typedef" href="../core/ngx_core.h.html#ngx_log_t" title='ngx_log_t' data-type='struct ngx_log_s' data-ref="ngx_log_t">ngx_log_t</a>         *<dfn class="local col8 decl" id="8log" title='log' data-type='ngx_log_t *' data-ref="8log">log</dfn>;</td></tr>
+<tr><th id="28">28</th><td>    <a class="typedef" href="../core/ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>         <dfn class="local col9 decl" id="9level" title='level' data-type='ngx_uint_t' data-ref="9level">level</dfn>;</td></tr>
+<tr><th id="29">29</th><td>    <a class="typedef" href="../os/unix/ngx_socket.h.html#ngx_socket_t" title='ngx_socket_t' data-type='int' data-ref="ngx_socket_t">ngx_socket_t</a>       <dfn class="local col0 decl" id="10s" title='s' data-type='ngx_socket_t' data-ref="10s">s</dfn>;</td></tr>
+<tr><th id="30">30</th><td>    <a class="typedef" href="../core/ngx_core.h.html#ngx_event_t" title='ngx_event_t' data-type='struct ngx_event_s' data-ref="ngx_event_t">ngx_event_t</a>       *<dfn class="local col1 decl" id="11rev" title='rev' data-type='ngx_event_t *' data-ref="11rev">rev</dfn>, *<dfn class="local col2 decl" id="12wev" title='wev' data-type='ngx_event_t *' data-ref="12wev">wev</dfn>;</td></tr>
+<tr><th id="31">31</th><td>    <a class="typedef" href="../core/ngx_inet.h.html#ngx_sockaddr_t" title='ngx_sockaddr_t' data-type='union ngx_sockaddr_t' data-ref="ngx_sockaddr_t">ngx_sockaddr_t</a>     <dfn class="local col3 decl" id="13sa" title='sa' data-type='ngx_sockaddr_t' data-ref="13sa">sa</dfn>;</td></tr>
+<tr><th id="32">32</th><td>    <a class="typedef" href="../core/ngx_connection.h.html#ngx_listening_t" title='ngx_listening_t' data-type='struct ngx_listening_s' data-ref="ngx_listening_t">ngx_listening_t</a>   *<dfn class="local col4 decl" id="14ls" title='ls' data-type='ngx_listening_t *' data-ref="14ls">ls</dfn>;</td></tr>
+<tr><th id="33">33</th><td>    <a class="typedef" href="../core/ngx_core.h.html#ngx_connection_t" title='ngx_connection_t' data-type='struct ngx_connection_s' data-ref="ngx_connection_t">ngx_connection_t</a>  *<dfn class="local col5 decl" id="15c" title='c' data-type='ngx_connection_t *' data-ref="15c">c</dfn>, *<dfn class="local col6 decl" id="16lc" title='lc' data-type='ngx_connection_t *' data-ref="16lc">lc</dfn>;</td></tr>
+<tr><th id="34">34</th><td>    <a class="typedef" href="ngx_event.h.html#ngx_event_conf_t" title='ngx_event_conf_t' data-type='struct ngx_event_conf_t' data-ref="ngx_event_conf_t">ngx_event_conf_t</a>  *<dfn class="local col7 decl" id="17ecf" title='ecf' data-type='ngx_event_conf_t *' data-ref="17ecf">ecf</dfn>;</td></tr>
+<tr><th id="35">35</th><td><u>#<span data-ppcond="35">if</span> (<a class="macro" href="../../objs/ngx_auto_config.h.html#177" title="1" data-ref="_M/NGX_HAVE_ACCEPT4">NGX_HAVE_ACCEPT4</a>)</u></td></tr>
+<tr><th id="36">36</th><td>    <em>static</em> <a class="typedef" href="../core/ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>  <dfn class="local col8 decl" id="18use_accept4" title='use_accept4' data-type='ngx_uint_t' data-ref="18use_accept4">use_accept4</dfn> = <var>1</var>;</td></tr>
+<tr><th id="37">37</th><td><u>#<span data-ppcond="35">endif</span></u></td></tr>
+<tr><th id="38">38</th><td></td></tr>
+<tr><th id="39">39</th><td>    <b>if</b> (<a class="local col5 ref" href="#5ev" title='ev' data-ref="5ev">ev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::timedout" title='ngx_event_s::timedout' data-ref="ngx_event_s::timedout">timedout</a>) {</td></tr>
+<tr><th id="40">40</th><td>        <b>if</b> (<a class="tu ref fn" href="#ngx_enable_accept_events" title='ngx_enable_accept_events' data-use='c' data-ref="ngx_enable_accept_events">ngx_enable_accept_events</a>((<a class="typedef" href="../core/ngx_core.h.html#ngx_cycle_t" title='ngx_cycle_t' data-type='struct ngx_cycle_s' data-ref="ngx_cycle_t">ngx_cycle_t</a> *) <a class="ref" href="../core/ngx_cycle.h.html#ngx_cycle" title='ngx_cycle' data-ref="ngx_cycle">ngx_cycle</a>) != <a class="macro" href="../core/ngx_core.h.html#35" title="0" data-ref="_M/NGX_OK">NGX_OK</a>) {</td></tr>
+<tr><th id="41">41</th><td>            <b>return</b>;</td></tr>
+<tr><th id="42">42</th><td>        }</td></tr>
+<tr><th id="43">43</th><td></td></tr>
+<tr><th id="44">44</th><td>        <a class="local col5 ref" href="#5ev" title='ev' data-ref="5ev">ev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::timedout" title='ngx_event_s::timedout' data-ref="ngx_event_s::timedout">timedout</a> = <var>0</var>;</td></tr>
+<tr><th id="45">45</th><td>    }</td></tr>
+<tr><th id="46">46</th><td></td></tr>
+<tr><th id="47">47</th><td>    <a class="local col7 ref" href="#17ecf" title='ecf' data-ref="17ecf">ecf</a> = <a class="macro" href="ngx_event.h.html#501" title="(*(ngx_cycle-&gt;conf_ctx[ngx_events_module.index])) [ngx_event_core_module.ctx_index];" data-ref="_M/ngx_event_get_conf">ngx_event_get_conf</a>(<a class="ref" href="../core/ngx_cycle.h.html#ngx_cycle" title='ngx_cycle' data-ref="ngx_cycle">ngx_cycle</a>-&gt;<a class="ref field" href="../core/ngx_cycle.h.html#ngx_cycle_s::conf_ctx" title='ngx_cycle_s::conf_ctx' data-ref="ngx_cycle_s::conf_ctx">conf_ctx</a>, <a class="ref" href="ngx_event.h.html#ngx_event_core_module" title='ngx_event_core_module' data-ref="ngx_event_core_module">ngx_event_core_module</a>);</td></tr>
+<tr><th id="48">48</th><td></td></tr>
+<tr><th id="49">49</th><td>    <b>if</b> (!(<a class="ref" href="ngx_event.h.html#ngx_event_flags" title='ngx_event_flags' data-ref="ngx_event_flags">ngx_event_flags</a> &amp; <a class="macro" href="ngx_event.h.html#225" title="0x00000008" data-ref="_M/NGX_USE_KQUEUE_EVENT">NGX_USE_KQUEUE_EVENT</a>)) {</td></tr>
+<tr><th id="50">50</th><td>        <a class="local col5 ref" href="#5ev" title='ev' data-ref="5ev">ev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::available" title='ngx_event_s::available' data-ref="ngx_event_s::available">available</a> = <a class="local col7 ref" href="#17ecf" title='ecf' data-ref="17ecf">ecf</a>-&gt;<a class="ref field" href="ngx_event.h.html#(anonymous)::multi_accept" title='(anonymous struct)::multi_accept' data-ref="(anonymous)::multi_accept">multi_accept</a>;</td></tr>
+<tr><th id="51">51</th><td>    }</td></tr>
+<tr><th id="52">52</th><td></td></tr>
+<tr><th id="53">53</th><td>    <a class="local col6 ref" href="#16lc" title='lc' data-ref="16lc">lc</a> = <a class="local col5 ref" href="#5ev" title='ev' data-ref="5ev">ev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::data" title='ngx_event_s::data' data-ref="ngx_event_s::data">data</a>;</td></tr>
+<tr><th id="54">54</th><td>    <a class="local col4 ref" href="#14ls" title='ls' data-ref="14ls">ls</a> = <a class="local col6 ref" href="#16lc" title='lc' data-ref="16lc">lc</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::listening" title='ngx_connection_s::listening' data-ref="ngx_connection_s::listening">listening</a>;</td></tr>
+<tr><th id="55">55</th><td>    <a class="local col5 ref" href="#5ev" title='ev' data-ref="5ev">ev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::ready" title='ngx_event_s::ready' data-ref="ngx_event_s::ready">ready</a> = <var>0</var>;</td></tr>
+<tr><th id="56">56</th><td></td></tr>
+<tr><th id="57">57</th><td>    <a class="macro" href="../core/ngx_log.h.html#217" title="" data-ref="_M/ngx_log_debug2">ngx_log_debug2</a>(NGX_LOG_DEBUG_EVENT, ev-&gt;log, <var>0</var>,</td></tr>
+<tr><th id="58">58</th><td>                   <q>"accept on %V, ready: %d"</q>, &amp;ls-&gt;addr_text, ev-&gt;available);</td></tr>
+<tr><th id="59">59</th><td></td></tr>
+<tr><th id="60">60</th><td>    <b>do</b> {</td></tr>
+<tr><th id="61">61</th><td>        <a class="local col6 ref" href="#6socklen" title='socklen' data-ref="6socklen">socklen</a> = <b>sizeof</b>(<a class="typedef" href="../core/ngx_inet.h.html#ngx_sockaddr_t" title='ngx_sockaddr_t' data-type='union ngx_sockaddr_t' data-ref="ngx_sockaddr_t">ngx_sockaddr_t</a>);</td></tr>
+<tr><th id="62">62</th><td></td></tr>
+<tr><th id="63">63</th><td><u>#<span data-ppcond="63">if</span> (<a class="macro" href="../../objs/ngx_auto_config.h.html#177" title="1" data-ref="_M/NGX_HAVE_ACCEPT4">NGX_HAVE_ACCEPT4</a>)</u></td></tr>
+<tr><th id="64">64</th><td>        <b>if</b> (<a class="local col8 ref" href="#18use_accept4" title='use_accept4' data-ref="18use_accept4">use_accept4</a>) {</td></tr>
+<tr><th id="65">65</th><td>            <a class="local col0 ref" href="#10s" title='s' data-ref="10s">s</a> = <a class="ref fn" href="../../../include/x86_64-linux-gnu/sys/socket.h.html#accept4" title='accept4' data-ref="accept4">accept4</a>(<a class="local col6 ref" href="#16lc" title='lc' data-ref="16lc">lc</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::fd" title='ngx_connection_s::fd' data-ref="ngx_connection_s::fd">fd</a>, &amp;<a class="local col3 ref" href="#13sa" title='sa' data-ref="13sa">sa</a>.<a class="ref field" href="../core/ngx_inet.h.html#(anonymous)::sockaddr" title='(anonymous union)::sockaddr' data-ref="(anonymous)::sockaddr">sockaddr</a>, &amp;<a class="local col6 ref" href="#6socklen" title='socklen' data-ref="6socklen">socklen</a>, <a class="macro" href="../../../include/x86_64-linux-gnu/bits/socket_type.h.html#54" title="SOCK_NONBLOCK" data-ref="_M/SOCK_NONBLOCK">SOCK_NONBLOCK</a>);</td></tr>
+<tr><th id="66">66</th><td>        } <b>else</b> {</td></tr>
+<tr><th id="67">67</th><td>            <a class="local col0 ref" href="#10s" title='s' data-ref="10s">s</a> = <a class="ref fn" href="../../../include/x86_64-linux-gnu/sys/socket.h.html#accept" title='accept' data-ref="accept">accept</a>(<a class="local col6 ref" href="#16lc" title='lc' data-ref="16lc">lc</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::fd" title='ngx_connection_s::fd' data-ref="ngx_connection_s::fd">fd</a>, &amp;<a class="local col3 ref" href="#13sa" title='sa' data-ref="13sa">sa</a>.<a class="ref field" href="../core/ngx_inet.h.html#(anonymous)::sockaddr" title='(anonymous union)::sockaddr' data-ref="(anonymous)::sockaddr">sockaddr</a>, &amp;<a class="local col6 ref" href="#6socklen" title='socklen' data-ref="6socklen">socklen</a>);</td></tr>
+<tr><th id="68">68</th><td>        }</td></tr>
+<tr><th id="69">69</th><td><u>#<span data-ppcond="63">else</span></u></td></tr>
+<tr><th id="70">70</th><td>        s = accept(lc-&gt;fd, &amp;sa.sockaddr, &amp;socklen);</td></tr>
+<tr><th id="71">71</th><td><u>#<span data-ppcond="63">endif</span></u></td></tr>
+<tr><th id="72">72</th><td></td></tr>
+<tr><th id="73">73</th><td>        <b>if</b> (<a class="local col0 ref" href="#10s" title='s' data-ref="10s">s</a> == (<a class="typedef" href="../os/unix/ngx_socket.h.html#ngx_socket_t" title='ngx_socket_t' data-type='int' data-ref="ngx_socket_t">ngx_socket_t</a>) -<var>1</var>) {</td></tr>
+<tr><th id="74">74</th><td>            <a class="local col7 ref" href="#7err" title='err' data-ref="7err">err</a> = <a class="macro" href="../os/unix/ngx_errno.h.html#70" title="(*__errno_location ())" data-ref="_M/ngx_socket_errno">ngx_socket_errno</a>;</td></tr>
+<tr><th id="75">75</th><td></td></tr>
+<tr><th id="76">76</th><td>            <b>if</b> (<a class="local col7 ref" href="#7err" title='err' data-ref="7err">err</a> == <a class="macro" href="../os/unix/ngx_errno.h.html#65" title="11" data-ref="_M/NGX_EAGAIN">NGX_EAGAIN</a>) {</td></tr>
+<tr><th id="77">77</th><td>                <a class="macro" href="../core/ngx_log.h.html#215" title="" data-ref="_M/ngx_log_debug0">ngx_log_debug0</a>(NGX_LOG_DEBUG_EVENT, ev-&gt;log, err,</td></tr>
+<tr><th id="78">78</th><td>                               <q>"accept() not ready"</q>);</td></tr>
+<tr><th id="79">79</th><td>                <b>return</b>;</td></tr>
+<tr><th id="80">80</th><td>            }</td></tr>
+<tr><th id="81">81</th><td></td></tr>
+<tr><th id="82">82</th><td>            <a class="local col9 ref" href="#9level" title='level' data-ref="9level">level</a> = <a class="macro" href="../core/ngx_log.h.html#18" title="2" data-ref="_M/NGX_LOG_ALERT">NGX_LOG_ALERT</a>;</td></tr>
+<tr><th id="83">83</th><td></td></tr>
+<tr><th id="84">84</th><td>            <b>if</b> (<a class="local col7 ref" href="#7err" title='err' data-ref="7err">err</a> == <a class="macro" href="../os/unix/ngx_errno.h.html#41" title="103" data-ref="_M/NGX_ECONNABORTED">NGX_ECONNABORTED</a>) {</td></tr>
+<tr><th id="85">85</th><td>                <a class="local col9 ref" href="#9level" title='level' data-ref="9level">level</a> = <a class="macro" href="../core/ngx_log.h.html#20" title="4" data-ref="_M/NGX_LOG_ERR">NGX_LOG_ERR</a>;</td></tr>
+<tr><th id="86">86</th><td></td></tr>
+<tr><th id="87">87</th><td>            } <b>else</b> <b>if</b> (<a class="local col7 ref" href="#7err" title='err' data-ref="7err">err</a> == <a class="macro" href="../os/unix/ngx_errno.h.html#34" title="24" data-ref="_M/NGX_EMFILE">NGX_EMFILE</a> || <a class="local col7 ref" href="#7err" title='err' data-ref="7err">err</a> == <a class="macro" href="../os/unix/ngx_errno.h.html#33" title="23" data-ref="_M/NGX_ENFILE">NGX_ENFILE</a>) {</td></tr>
+<tr><th id="88">88</th><td>                <a class="local col9 ref" href="#9level" title='level' data-ref="9level">level</a> = <a class="macro" href="../core/ngx_log.h.html#19" title="3" data-ref="_M/NGX_LOG_CRIT">NGX_LOG_CRIT</a>;</td></tr>
+<tr><th id="89">89</th><td>            }</td></tr>
+<tr><th id="90">90</th><td></td></tr>
+<tr><th id="91">91</th><td><u>#<span data-ppcond="91">if</span> (<a class="macro" href="../../objs/ngx_auto_config.h.html#177" title="1" data-ref="_M/NGX_HAVE_ACCEPT4">NGX_HAVE_ACCEPT4</a>)</u></td></tr>
+<tr><th id="92">92</th><td>            <a class="macro" href="../core/ngx_log.h.html#85" title="if ((ev-&gt;log)-&gt;log_level &gt;= level) ngx_log_error_core(level, ev-&gt;log, err, use_accept4 ? &quot;accept4() failed&quot; : &quot;accept() failed&quot;)" data-ref="_M/ngx_log_error">ngx_log_error</a>(<a class="local col9 ref" href="#9level" title='level' data-ref="9level">level</a>, <a class="local col5 ref" href="#5ev" title='ev' data-ref="5ev">ev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::log" title='ngx_event_s::log' data-ref="ngx_event_s::log">log</a>, <a class="local col7 ref" href="#7err" title='err' data-ref="7err">err</a>,</td></tr>
+<tr><th id="93">93</th><td>                          <a class="local col8 ref" href="#18use_accept4" title='use_accept4' data-ref="18use_accept4">use_accept4</a> ? <q>"accept4() failed"</q> : <q>"accept() failed"</q>);</td></tr>
+<tr><th id="94">94</th><td></td></tr>
+<tr><th id="95">95</th><td>            <b>if</b> (<a class="local col8 ref" href="#18use_accept4" title='use_accept4' data-ref="18use_accept4">use_accept4</a> &amp;&amp; <a class="local col7 ref" href="#7err" title='err' data-ref="7err">err</a> == <a class="macro" href="../os/unix/ngx_errno.h.html#51" title="38" data-ref="_M/NGX_ENOSYS">NGX_ENOSYS</a>) {</td></tr>
+<tr><th id="96">96</th><td>                <a class="local col8 ref" href="#18use_accept4" title='use_accept4' data-ref="18use_accept4">use_accept4</a> = <var>0</var>;</td></tr>
+<tr><th id="97">97</th><td>                <a class="ref" href="../os/unix/ngx_os.h.html#ngx_inherited_nonblocking" title='ngx_inherited_nonblocking' data-ref="ngx_inherited_nonblocking">ngx_inherited_nonblocking</a> = <var>0</var>;</td></tr>
+<tr><th id="98">98</th><td>                <b>continue</b>;</td></tr>
+<tr><th id="99">99</th><td>            }</td></tr>
+<tr><th id="100">100</th><td><u>#<span data-ppcond="91">else</span></u></td></tr>
+<tr><th id="101">101</th><td>            ngx_log_error(level, ev-&gt;log, err, <q>"accept() failed"</q>);</td></tr>
+<tr><th id="102">102</th><td><u>#<span data-ppcond="91">endif</span></u></td></tr>
+<tr><th id="103">103</th><td></td></tr>
+<tr><th id="104">104</th><td>            <b>if</b> (<a class="local col7 ref" href="#7err" title='err' data-ref="7err">err</a> == <a class="macro" href="../os/unix/ngx_errno.h.html#41" title="103" data-ref="_M/NGX_ECONNABORTED">NGX_ECONNABORTED</a>) {</td></tr>
+<tr><th id="105">105</th><td>                <b>if</b> (<a class="ref" href="ngx_event.h.html#ngx_event_flags" title='ngx_event_flags' data-ref="ngx_event_flags">ngx_event_flags</a> &amp; <a class="macro" href="ngx_event.h.html#225" title="0x00000008" data-ref="_M/NGX_USE_KQUEUE_EVENT">NGX_USE_KQUEUE_EVENT</a>) {</td></tr>
+<tr><th id="106">106</th><td>                    <a class="local col5 ref" href="#5ev" title='ev' data-ref="5ev">ev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::available" title='ngx_event_s::available' data-ref="ngx_event_s::available">available</a>--;</td></tr>
+<tr><th id="107">107</th><td>                }</td></tr>
+<tr><th id="108">108</th><td></td></tr>
+<tr><th id="109">109</th><td>                <b>if</b> (<a class="local col5 ref" href="#5ev" title='ev' data-ref="5ev">ev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::available" title='ngx_event_s::available' data-ref="ngx_event_s::available">available</a>) {</td></tr>
+<tr><th id="110">110</th><td>                    <b>continue</b>;</td></tr>
+<tr><th id="111">111</th><td>                }</td></tr>
+<tr><th id="112">112</th><td>            }</td></tr>
+<tr><th id="113">113</th><td></td></tr>
+<tr><th id="114">114</th><td>            <b>if</b> (<a class="local col7 ref" href="#7err" title='err' data-ref="7err">err</a> == <a class="macro" href="../os/unix/ngx_errno.h.html#34" title="24" data-ref="_M/NGX_EMFILE">NGX_EMFILE</a> || <a class="local col7 ref" href="#7err" title='err' data-ref="7err">err</a> == <a class="macro" href="../os/unix/ngx_errno.h.html#33" title="23" data-ref="_M/NGX_ENFILE">NGX_ENFILE</a>) {</td></tr>
+<tr><th id="115">115</th><td>                <b>if</b> (<a class="tu ref fn" href="#ngx_disable_accept_events" title='ngx_disable_accept_events' data-use='c' data-ref="ngx_disable_accept_events">ngx_disable_accept_events</a>((<a class="typedef" href="../core/ngx_core.h.html#ngx_cycle_t" title='ngx_cycle_t' data-type='struct ngx_cycle_s' data-ref="ngx_cycle_t">ngx_cycle_t</a> *) <a class="ref" href="../core/ngx_cycle.h.html#ngx_cycle" title='ngx_cycle' data-ref="ngx_cycle">ngx_cycle</a>, <var>1</var>)</td></tr>
+<tr><th id="116">116</th><td>                    != <a class="macro" href="../core/ngx_core.h.html#35" title="0" data-ref="_M/NGX_OK">NGX_OK</a>)</td></tr>
+<tr><th id="117">117</th><td>                {</td></tr>
+<tr><th id="118">118</th><td>                    <b>return</b>;</td></tr>
+<tr><th id="119">119</th><td>                }</td></tr>
+<tr><th id="120">120</th><td></td></tr>
+<tr><th id="121">121</th><td>                <b>if</b> (<a class="ref" href="ngx_event.h.html#ngx_use_accept_mutex" title='ngx_use_accept_mutex' data-ref="ngx_use_accept_mutex">ngx_use_accept_mutex</a>) {</td></tr>
+<tr><th id="122">122</th><td>                    <b>if</b> (<a class="ref" href="ngx_event.h.html#ngx_accept_mutex_held" title='ngx_accept_mutex_held' data-ref="ngx_accept_mutex_held">ngx_accept_mutex_held</a>) {</td></tr>
+<tr><th id="123">123</th><td>                        <a class="ref fn" href="../core/ngx_shmtx.h.html#ngx_shmtx_unlock" title='ngx_shmtx_unlock' data-ref="ngx_shmtx_unlock">ngx_shmtx_unlock</a>(&amp;<a class="ref" href="ngx_event.h.html#ngx_accept_mutex" title='ngx_accept_mutex' data-ref="ngx_accept_mutex">ngx_accept_mutex</a>);</td></tr>
+<tr><th id="124">124</th><td>                        <a class="ref" href="ngx_event.h.html#ngx_accept_mutex_held" title='ngx_accept_mutex_held' data-ref="ngx_accept_mutex_held">ngx_accept_mutex_held</a> = <var>0</var>;</td></tr>
+<tr><th id="125">125</th><td>                    }</td></tr>
+<tr><th id="126">126</th><td></td></tr>
+<tr><th id="127">127</th><td>                    <a class="ref" href="ngx_event.h.html#ngx_accept_disabled" title='ngx_accept_disabled' data-ref="ngx_accept_disabled">ngx_accept_disabled</a> = <var>1</var>;</td></tr>
+<tr><th id="128">128</th><td></td></tr>
+<tr><th id="129">129</th><td>                } <b>else</b> {</td></tr>
+<tr><th id="130">130</th><td>                    <a class="macro" href="ngx_event.h.html#421" title="ngx_event_add_timer" data-ref="_M/ngx_add_timer">ngx_add_timer</a>(<a class="local col5 ref" href="#5ev" title='ev' data-ref="5ev">ev</a>, <a class="local col7 ref" href="#17ecf" title='ecf' data-ref="17ecf">ecf</a>-&gt;<a class="ref field" href="ngx_event.h.html#(anonymous)::accept_mutex_delay" title='(anonymous struct)::accept_mutex_delay' data-ref="(anonymous)::accept_mutex_delay">accept_mutex_delay</a>);</td></tr>
+<tr><th id="131">131</th><td>                }</td></tr>
+<tr><th id="132">132</th><td>            }</td></tr>
+<tr><th id="133">133</th><td></td></tr>
+<tr><th id="134">134</th><td>            <b>return</b>;</td></tr>
+<tr><th id="135">135</th><td>        }</td></tr>
+<tr><th id="136">136</th><td></td></tr>
+<tr><th id="137">137</th><td><u>#<span data-ppcond="137">if</span> (NGX_STAT_STUB)</u></td></tr>
+<tr><th id="138">138</th><td>        (<em>void</em>) ngx_atomic_fetch_add(ngx_stat_accepted, <var>1</var>);</td></tr>
+<tr><th id="139">139</th><td><u>#<span data-ppcond="137">endif</span></u></td></tr>
+<tr><th id="140">140</th><td></td></tr>
+<tr><th id="141">141</th><td>        <a class="ref" href="ngx_event.h.html#ngx_accept_disabled" title='ngx_accept_disabled' data-ref="ngx_accept_disabled">ngx_accept_disabled</a> = <a class="ref" href="../core/ngx_cycle.h.html#ngx_cycle" title='ngx_cycle' data-ref="ngx_cycle">ngx_cycle</a>-&gt;<a class="ref field" href="../core/ngx_cycle.h.html#ngx_cycle_s::connection_n" title='ngx_cycle_s::connection_n' data-ref="ngx_cycle_s::connection_n">connection_n</a> / <var>8</var></td></tr>
+<tr><th id="142">142</th><td>                              - <a class="ref" href="../core/ngx_cycle.h.html#ngx_cycle" title='ngx_cycle' data-ref="ngx_cycle">ngx_cycle</a>-&gt;<a class="ref field" href="../core/ngx_cycle.h.html#ngx_cycle_s::free_connection_n" title='ngx_cycle_s::free_connection_n' data-ref="ngx_cycle_s::free_connection_n">free_connection_n</a>;</td></tr>
+<tr><th id="143">143</th><td></td></tr>
+<tr><th id="144">144</th><td>        <a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a> = <a class="ref fn" href="../core/ngx_connection.h.html#ngx_get_connection" title='ngx_get_connection' data-ref="ngx_get_connection">ngx_get_connection</a>(<a class="local col0 ref" href="#10s" title='s' data-ref="10s">s</a>, <a class="local col5 ref" href="#5ev" title='ev' data-ref="5ev">ev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::log" title='ngx_event_s::log' data-ref="ngx_event_s::log">log</a>);</td></tr>
+<tr><th id="145">145</th><td></td></tr>
+<tr><th id="146">146</th><td>        <b>if</b> (<a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a> == <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>) {</td></tr>
+<tr><th id="147">147</th><td>            <b>if</b> (<a class="macro" href="../os/unix/ngx_socket.h.html#60" title="close" data-ref="_M/ngx_close_socket">ngx_close_socket</a>(<a class="local col0 ref" href="#10s" title='s' data-ref="10s">s</a>) == -<var>1</var>) {</td></tr>
+<tr><th id="148">148</th><td>                <a class="macro" href="../core/ngx_log.h.html#85" title="if ((ev-&gt;log)-&gt;log_level &gt;= 2) ngx_log_error_core(2, ev-&gt;log, (*__errno_location ()), &quot;close() socket&quot; &quot; failed&quot;)" data-ref="_M/ngx_log_error">ngx_log_error</a>(<a class="macro" href="../core/ngx_log.h.html#18" title="2" data-ref="_M/NGX_LOG_ALERT">NGX_LOG_ALERT</a>, <a class="local col5 ref" href="#5ev" title='ev' data-ref="5ev">ev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::log" title='ngx_event_s::log' data-ref="ngx_event_s::log">log</a>, <a class="macro" href="../os/unix/ngx_errno.h.html#70" title="(*__errno_location ())" data-ref="_M/ngx_socket_errno">ngx_socket_errno</a>,</td></tr>
+<tr><th id="149">149</th><td>                              <a class="macro" href="../os/unix/ngx_socket.h.html#61" title="&quot;close() socket&quot;" data-ref="_M/ngx_close_socket_n">ngx_close_socket_n</a> <q>" failed"</q>);</td></tr>
+<tr><th id="150">150</th><td>            }</td></tr>
+<tr><th id="151">151</th><td></td></tr>
+<tr><th id="152">152</th><td>            <b>return</b>;</td></tr>
+<tr><th id="153">153</th><td>        }</td></tr>
+<tr><th id="154">154</th><td></td></tr>
+<tr><th id="155">155</th><td>        <a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::type" title='ngx_connection_s::type' data-ref="ngx_connection_s::type">type</a> = <a class="macro" href="../../../include/x86_64-linux-gnu/bits/socket_type.h.html#28" title="SOCK_STREAM" data-ref="_M/SOCK_STREAM">SOCK_STREAM</a>;</td></tr>
+<tr><th id="156">156</th><td></td></tr>
+<tr><th id="157">157</th><td><u>#<span data-ppcond="157">if</span> (NGX_STAT_STUB)</u></td></tr>
+<tr><th id="158">158</th><td>        (<em>void</em>) ngx_atomic_fetch_add(ngx_stat_active, <var>1</var>);</td></tr>
+<tr><th id="159">159</th><td><u>#<span data-ppcond="157">endif</span></u></td></tr>
+<tr><th id="160">160</th><td></td></tr>
+<tr><th id="161">161</th><td>        <a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::pool" title='ngx_connection_s::pool' data-ref="ngx_connection_s::pool">pool</a> = <a class="ref fn" href="../core/ngx_palloc.h.html#ngx_create_pool" title='ngx_create_pool' data-ref="ngx_create_pool">ngx_create_pool</a>(<a class="local col4 ref" href="#14ls" title='ls' data-ref="14ls">ls</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_listening_s::pool_size" title='ngx_listening_s::pool_size' data-ref="ngx_listening_s::pool_size">pool_size</a>, <a class="local col5 ref" href="#5ev" title='ev' data-ref="5ev">ev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::log" title='ngx_event_s::log' data-ref="ngx_event_s::log">log</a>);</td></tr>
+<tr><th id="162">162</th><td>        <b>if</b> (<a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::pool" title='ngx_connection_s::pool' data-ref="ngx_connection_s::pool">pool</a> == <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>) {</td></tr>
+<tr><th id="163">163</th><td>            <a class="tu ref fn" href="#ngx_close_accepted_connection" title='ngx_close_accepted_connection' data-use='c' data-ref="ngx_close_accepted_connection">ngx_close_accepted_connection</a>(<a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>);</td></tr>
+<tr><th id="164">164</th><td>            <b>return</b>;</td></tr>
+<tr><th id="165">165</th><td>        }</td></tr>
+<tr><th id="166">166</th><td></td></tr>
+<tr><th id="167">167</th><td>        <b>if</b> (<a class="local col6 ref" href="#6socklen" title='socklen' data-ref="6socklen">socklen</a> &gt; (<a class="typedef" href="../../../include/unistd.h.html#socklen_t" title='socklen_t' data-type='__socklen_t' data-ref="socklen_t">socklen_t</a>) <b>sizeof</b>(<a class="typedef" href="../core/ngx_inet.h.html#ngx_sockaddr_t" title='ngx_sockaddr_t' data-type='union ngx_sockaddr_t' data-ref="ngx_sockaddr_t">ngx_sockaddr_t</a>)) {</td></tr>
+<tr><th id="168">168</th><td>            <a class="local col6 ref" href="#6socklen" title='socklen' data-ref="6socklen">socklen</a> = <b>sizeof</b>(<a class="typedef" href="../core/ngx_inet.h.html#ngx_sockaddr_t" title='ngx_sockaddr_t' data-type='union ngx_sockaddr_t' data-ref="ngx_sockaddr_t">ngx_sockaddr_t</a>);</td></tr>
+<tr><th id="169">169</th><td>        }</td></tr>
+<tr><th id="170">170</th><td></td></tr>
+<tr><th id="171">171</th><td>        <a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::sockaddr" title='ngx_connection_s::sockaddr' data-ref="ngx_connection_s::sockaddr">sockaddr</a> = <a class="ref fn" href="../core/ngx_palloc.h.html#ngx_palloc" title='ngx_palloc' data-ref="ngx_palloc">ngx_palloc</a>(<a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::pool" title='ngx_connection_s::pool' data-ref="ngx_connection_s::pool">pool</a>, <a class="local col6 ref" href="#6socklen" title='socklen' data-ref="6socklen">socklen</a>);</td></tr>
+<tr><th id="172">172</th><td>        <b>if</b> (<a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::sockaddr" title='ngx_connection_s::sockaddr' data-ref="ngx_connection_s::sockaddr">sockaddr</a> == <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>) {</td></tr>
+<tr><th id="173">173</th><td>            <a class="tu ref fn" href="#ngx_close_accepted_connection" title='ngx_close_accepted_connection' data-use='c' data-ref="ngx_close_accepted_connection">ngx_close_accepted_connection</a>(<a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>);</td></tr>
+<tr><th id="174">174</th><td>            <b>return</b>;</td></tr>
+<tr><th id="175">175</th><td>        }</td></tr>
+<tr><th id="176">176</th><td></td></tr>
+<tr><th id="177">177</th><td>        <a class="macro" href="../core/ngx_string.h.html#104" title="(void) memcpy(c-&gt;sockaddr, &amp;sa, socklen)" data-ref="_M/ngx_memcpy">ngx_memcpy</a>(<a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::sockaddr" title='ngx_connection_s::sockaddr' data-ref="ngx_connection_s::sockaddr">sockaddr</a>, &amp;<a class="local col3 ref" href="#13sa" title='sa' data-ref="13sa">sa</a>, <a class="local col6 ref" href="#6socklen" title='socklen' data-ref="6socklen">socklen</a>);</td></tr>
+<tr><th id="178">178</th><td></td></tr>
+<tr><th id="179">179</th><td>        <a class="local col8 ref" href="#8log" title='log' data-ref="8log">log</a> = <a class="ref fn" href="../core/ngx_palloc.h.html#ngx_palloc" title='ngx_palloc' data-ref="ngx_palloc">ngx_palloc</a>(<a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::pool" title='ngx_connection_s::pool' data-ref="ngx_connection_s::pool">pool</a>, <b>sizeof</b>(<a class="typedef" href="../core/ngx_core.h.html#ngx_log_t" title='ngx_log_t' data-type='struct ngx_log_s' data-ref="ngx_log_t">ngx_log_t</a>));</td></tr>
+<tr><th id="180">180</th><td>        <b>if</b> (<a class="local col8 ref" href="#8log" title='log' data-ref="8log">log</a> == <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>) {</td></tr>
+<tr><th id="181">181</th><td>            <a class="tu ref fn" href="#ngx_close_accepted_connection" title='ngx_close_accepted_connection' data-use='c' data-ref="ngx_close_accepted_connection">ngx_close_accepted_connection</a>(<a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>);</td></tr>
+<tr><th id="182">182</th><td>            <b>return</b>;</td></tr>
+<tr><th id="183">183</th><td>        }</td></tr>
+<tr><th id="184">184</th><td></td></tr>
+<tr><th id="185">185</th><td>        <i>/* set a blocking mode for iocp and non-blocking mode for others */</i></td></tr>
+<tr><th id="186">186</th><td></td></tr>
+<tr><th id="187">187</th><td>        <b>if</b> (<a class="ref" href="../os/unix/ngx_os.h.html#ngx_inherited_nonblocking" title='ngx_inherited_nonblocking' data-ref="ngx_inherited_nonblocking">ngx_inherited_nonblocking</a>) {</td></tr>
+<tr><th id="188">188</th><td>            <b>if</b> (<a class="ref" href="ngx_event.h.html#ngx_event_flags" title='ngx_event_flags' data-ref="ngx_event_flags">ngx_event_flags</a> &amp; <a class="macro" href="ngx_event.h.html#256" title="0x00000200" data-ref="_M/NGX_USE_IOCP_EVENT">NGX_USE_IOCP_EVENT</a>) {</td></tr>
+<tr><th id="189">189</th><td>                <b>if</b> (<a class="ref fn" href="../os/unix/ngx_socket.h.html#ngx_blocking" title='ngx_blocking' data-ref="ngx_blocking">ngx_blocking</a>(<a class="local col0 ref" href="#10s" title='s' data-ref="10s">s</a>) == -<var>1</var>) {</td></tr>
+<tr><th id="190">190</th><td>                    <a class="macro" href="../core/ngx_log.h.html#85" title="if ((ev-&gt;log)-&gt;log_level &gt;= 2) ngx_log_error_core(2, ev-&gt;log, (*__errno_location ()), &quot;ioctl(!FIONBIO)&quot; &quot; failed&quot;)" data-ref="_M/ngx_log_error">ngx_log_error</a>(<a class="macro" href="../core/ngx_log.h.html#18" title="2" data-ref="_M/NGX_LOG_ALERT">NGX_LOG_ALERT</a>, <a class="local col5 ref" href="#5ev" title='ev' data-ref="5ev">ev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::log" title='ngx_event_s::log' data-ref="ngx_event_s::log">log</a>, <a class="macro" href="../os/unix/ngx_errno.h.html#70" title="(*__errno_location ())" data-ref="_M/ngx_socket_errno">ngx_socket_errno</a>,</td></tr>
+<tr><th id="191">191</th><td>                                  <a class="macro" href="../os/unix/ngx_socket.h.html#29" title="&quot;ioctl(!FIONBIO)&quot;" data-ref="_M/ngx_blocking_n">ngx_blocking_n</a> <q>" failed"</q>);</td></tr>
+<tr><th id="192">192</th><td>                    <a class="tu ref fn" href="#ngx_close_accepted_connection" title='ngx_close_accepted_connection' data-use='c' data-ref="ngx_close_accepted_connection">ngx_close_accepted_connection</a>(<a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>);</td></tr>
+<tr><th id="193">193</th><td>                    <b>return</b>;</td></tr>
+<tr><th id="194">194</th><td>                }</td></tr>
+<tr><th id="195">195</th><td>            }</td></tr>
+<tr><th id="196">196</th><td></td></tr>
+<tr><th id="197">197</th><td>        } <b>else</b> {</td></tr>
+<tr><th id="198">198</th><td>            <b>if</b> (!(<a class="ref" href="ngx_event.h.html#ngx_event_flags" title='ngx_event_flags' data-ref="ngx_event_flags">ngx_event_flags</a> &amp; <a class="macro" href="ngx_event.h.html#256" title="0x00000200" data-ref="_M/NGX_USE_IOCP_EVENT">NGX_USE_IOCP_EVENT</a>)) {</td></tr>
+<tr><th id="199">199</th><td>                <b>if</b> (<a class="ref fn" href="../os/unix/ngx_socket.h.html#ngx_nonblocking" title='ngx_nonblocking' data-ref="ngx_nonblocking">ngx_nonblocking</a>(<a class="local col0 ref" href="#10s" title='s' data-ref="10s">s</a>) == -<var>1</var>) {</td></tr>
+<tr><th id="200">200</th><td>                    <a class="macro" href="../core/ngx_log.h.html#85" title="if ((ev-&gt;log)-&gt;log_level &gt;= 2) ngx_log_error_core(2, ev-&gt;log, (*__errno_location ()), &quot;ioctl(FIONBIO)&quot; &quot; failed&quot;)" data-ref="_M/ngx_log_error">ngx_log_error</a>(<a class="macro" href="../core/ngx_log.h.html#18" title="2" data-ref="_M/NGX_LOG_ALERT">NGX_LOG_ALERT</a>, <a class="local col5 ref" href="#5ev" title='ev' data-ref="5ev">ev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::log" title='ngx_event_s::log' data-ref="ngx_event_s::log">log</a>, <a class="macro" href="../os/unix/ngx_errno.h.html#70" title="(*__errno_location ())" data-ref="_M/ngx_socket_errno">ngx_socket_errno</a>,</td></tr>
+<tr><th id="201">201</th><td>                                  <a class="macro" href="../os/unix/ngx_socket.h.html#28" title="&quot;ioctl(FIONBIO)&quot;" data-ref="_M/ngx_nonblocking_n">ngx_nonblocking_n</a> <q>" failed"</q>);</td></tr>
+<tr><th id="202">202</th><td>                    <a class="tu ref fn" href="#ngx_close_accepted_connection" title='ngx_close_accepted_connection' data-use='c' data-ref="ngx_close_accepted_connection">ngx_close_accepted_connection</a>(<a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>);</td></tr>
+<tr><th id="203">203</th><td>                    <b>return</b>;</td></tr>
+<tr><th id="204">204</th><td>                }</td></tr>
+<tr><th id="205">205</th><td>            }</td></tr>
+<tr><th id="206">206</th><td>        }</td></tr>
+<tr><th id="207">207</th><td></td></tr>
+<tr><th id="208">208</th><td>        *<a class="local col8 ref" href="#8log" title='log' data-ref="8log">log</a> = <a class="local col4 ref" href="#14ls" title='ls' data-ref="14ls">ls</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_listening_s::log" title='ngx_listening_s::log' data-ref="ngx_listening_s::log">log</a>;</td></tr>
+<tr><th id="209">209</th><td></td></tr>
+<tr><th id="210">210</th><td>        <a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::recv" title='ngx_connection_s::recv' data-ref="ngx_connection_s::recv">recv</a> = <a class="macro" href="ngx_event.h.html#427" title="ngx_io.recv" data-ref="_M/ngx_recv">ngx_recv</a>;</td></tr>
+<tr><th id="211">211</th><td>        <a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::send" title='ngx_connection_s::send' data-ref="ngx_connection_s::send">send</a> = <a class="macro" href="ngx_event.h.html#430" title="ngx_io.send" data-ref="_M/ngx_send">ngx_send</a>;</td></tr>
+<tr><th id="212">212</th><td>        <a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::recv_chain" title='ngx_connection_s::recv_chain' data-ref="ngx_connection_s::recv_chain">recv_chain</a> = <a class="macro" href="ngx_event.h.html#428" title="ngx_io.recv_chain" data-ref="_M/ngx_recv_chain">ngx_recv_chain</a>;</td></tr>
+<tr><th id="213">213</th><td>        <a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::send_chain" title='ngx_connection_s::send_chain' data-ref="ngx_connection_s::send_chain">send_chain</a> = <a class="macro" href="ngx_event.h.html#431" title="ngx_io.send_chain" data-ref="_M/ngx_send_chain">ngx_send_chain</a>;</td></tr>
+<tr><th id="214">214</th><td></td></tr>
+<tr><th id="215">215</th><td>        <a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::log" title='ngx_connection_s::log' data-ref="ngx_connection_s::log">log</a> = <a class="local col8 ref" href="#8log" title='log' data-ref="8log">log</a>;</td></tr>
+<tr><th id="216">216</th><td>        <a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::pool" title='ngx_connection_s::pool' data-ref="ngx_connection_s::pool">pool</a>-&gt;<a class="ref field" href="../core/ngx_palloc.h.html#ngx_pool_s::log" title='ngx_pool_s::log' data-ref="ngx_pool_s::log">log</a> = <a class="local col8 ref" href="#8log" title='log' data-ref="8log">log</a>;</td></tr>
+<tr><th id="217">217</th><td></td></tr>
+<tr><th id="218">218</th><td>        <a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::socklen" title='ngx_connection_s::socklen' data-ref="ngx_connection_s::socklen">socklen</a> = <a class="local col6 ref" href="#6socklen" title='socklen' data-ref="6socklen">socklen</a>;</td></tr>
+<tr><th id="219">219</th><td>        <a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::listening" title='ngx_connection_s::listening' data-ref="ngx_connection_s::listening">listening</a> = <a class="local col4 ref" href="#14ls" title='ls' data-ref="14ls">ls</a>;</td></tr>
+<tr><th id="220">220</th><td>        <a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::local_sockaddr" title='ngx_connection_s::local_sockaddr' data-ref="ngx_connection_s::local_sockaddr">local_sockaddr</a> = <a class="local col4 ref" href="#14ls" title='ls' data-ref="14ls">ls</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_listening_s::sockaddr" title='ngx_listening_s::sockaddr' data-ref="ngx_listening_s::sockaddr">sockaddr</a>;</td></tr>
+<tr><th id="221">221</th><td>        <a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::local_socklen" title='ngx_connection_s::local_socklen' data-ref="ngx_connection_s::local_socklen">local_socklen</a> = <a class="local col4 ref" href="#14ls" title='ls' data-ref="14ls">ls</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_listening_s::socklen" title='ngx_listening_s::socklen' data-ref="ngx_listening_s::socklen">socklen</a>;</td></tr>
+<tr><th id="222">222</th><td></td></tr>
+<tr><th id="223">223</th><td><u>#<span data-ppcond="223">if</span> (<a class="macro" href="../../objs/ngx_auto_config.h.html#192" title="1" data-ref="_M/NGX_HAVE_UNIX_DOMAIN">NGX_HAVE_UNIX_DOMAIN</a>)</u></td></tr>
+<tr><th id="224">224</th><td>        <b>if</b> (<a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::sockaddr" title='ngx_connection_s::sockaddr' data-ref="ngx_connection_s::sockaddr">sockaddr</a>-&gt;<a class="ref field" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#155" title='sockaddr::sa_family' data-ref="sockaddr::sa_family">sa_family</a> == <a class="macro" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#90" title="1" data-ref="_M/AF_UNIX">AF_UNIX</a>) {</td></tr>
+<tr><th id="225">225</th><td>            <a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::tcp_nopush" title='ngx_connection_s::tcp_nopush' data-ref="ngx_connection_s::tcp_nopush">tcp_nopush</a> = <a class="enum" href="../core/ngx_connection.h.html#NGX_TCP_NOPUSH_DISABLED" title='NGX_TCP_NOPUSH_DISABLED' data-ref="NGX_TCP_NOPUSH_DISABLED">NGX_TCP_NOPUSH_DISABLED</a>;</td></tr>
+<tr><th id="226">226</th><td>            <a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::tcp_nodelay" title='ngx_connection_s::tcp_nodelay' data-ref="ngx_connection_s::tcp_nodelay">tcp_nodelay</a> = <a class="enum" href="../core/ngx_connection.h.html#NGX_TCP_NODELAY_DISABLED" title='NGX_TCP_NODELAY_DISABLED' data-ref="NGX_TCP_NODELAY_DISABLED">NGX_TCP_NODELAY_DISABLED</a>;</td></tr>
+<tr><th id="227">227</th><td><u>#<span data-ppcond="227">if</span> (NGX_SOLARIS)</u></td></tr>
+<tr><th id="228">228</th><td>            <i>/* Solaris's sendfilev() supports AF_NCA, AF_INET, and AF_INET6 */</i></td></tr>
+<tr><th id="229">229</th><td>            c-&gt;sendfile = <var>0</var>;</td></tr>
+<tr><th id="230">230</th><td><u>#<span data-ppcond="227">endif</span></u></td></tr>
+<tr><th id="231">231</th><td>        }</td></tr>
+<tr><th id="232">232</th><td><u>#<span data-ppcond="223">endif</span></u></td></tr>
+<tr><th id="233">233</th><td></td></tr>
+<tr><th id="234">234</th><td>        <a class="local col1 ref" href="#11rev" title='rev' data-ref="11rev">rev</a> = <a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::read" title='ngx_connection_s::read' data-ref="ngx_connection_s::read">read</a>;</td></tr>
+<tr><th id="235">235</th><td>        <a class="local col2 ref" href="#12wev" title='wev' data-ref="12wev">wev</a> = <a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::write" title='ngx_connection_s::write' data-ref="ngx_connection_s::write">write</a>;</td></tr>
+<tr><th id="236">236</th><td></td></tr>
+<tr><th id="237">237</th><td>        <a class="local col2 ref" href="#12wev" title='wev' data-ref="12wev">wev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::ready" title='ngx_event_s::ready' data-ref="ngx_event_s::ready">ready</a> = <var>1</var>;</td></tr>
+<tr><th id="238">238</th><td></td></tr>
+<tr><th id="239">239</th><td>        <b>if</b> (<a class="ref" href="ngx_event.h.html#ngx_event_flags" title='ngx_event_flags' data-ref="ngx_event_flags">ngx_event_flags</a> &amp; <a class="macro" href="ngx_event.h.html#256" title="0x00000200" data-ref="_M/NGX_USE_IOCP_EVENT">NGX_USE_IOCP_EVENT</a>) {</td></tr>
+<tr><th id="240">240</th><td>            <a class="local col1 ref" href="#11rev" title='rev' data-ref="11rev">rev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::ready" title='ngx_event_s::ready' data-ref="ngx_event_s::ready">ready</a> = <var>1</var>;</td></tr>
+<tr><th id="241">241</th><td>        }</td></tr>
+<tr><th id="242">242</th><td></td></tr>
+<tr><th id="243">243</th><td>        <b>if</b> (<a class="local col5 ref" href="#5ev" title='ev' data-ref="5ev">ev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::deferred_accept" title='ngx_event_s::deferred_accept' data-ref="ngx_event_s::deferred_accept">deferred_accept</a>) {</td></tr>
+<tr><th id="244">244</th><td>            <a class="local col1 ref" href="#11rev" title='rev' data-ref="11rev">rev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::ready" title='ngx_event_s::ready' data-ref="ngx_event_s::ready">ready</a> = <var>1</var>;</td></tr>
+<tr><th id="245">245</th><td><u>#<span data-ppcond="245">if</span> (NGX_HAVE_KQUEUE || <a class="macro" href="../../objs/ngx_auto_config.h.html#39" title="1" data-ref="_M/NGX_HAVE_EPOLLRDHUP">NGX_HAVE_EPOLLRDHUP</a>)</u></td></tr>
+<tr><th id="246">246</th><td>            <a class="local col1 ref" href="#11rev" title='rev' data-ref="11rev">rev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::available" title='ngx_event_s::available' data-ref="ngx_event_s::available">available</a> = <var>1</var>;</td></tr>
+<tr><th id="247">247</th><td><u>#<span data-ppcond="245">endif</span></u></td></tr>
+<tr><th id="248">248</th><td>        }</td></tr>
+<tr><th id="249">249</th><td></td></tr>
+<tr><th id="250">250</th><td>        <a class="local col1 ref" href="#11rev" title='rev' data-ref="11rev">rev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::log" title='ngx_event_s::log' data-ref="ngx_event_s::log">log</a> = <a class="local col8 ref" href="#8log" title='log' data-ref="8log">log</a>;</td></tr>
+<tr><th id="251">251</th><td>        <a class="local col2 ref" href="#12wev" title='wev' data-ref="12wev">wev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::log" title='ngx_event_s::log' data-ref="ngx_event_s::log">log</a> = <a class="local col8 ref" href="#8log" title='log' data-ref="8log">log</a>;</td></tr>
+<tr><th id="252">252</th><td></td></tr>
+<tr><th id="253">253</th><td>        <i>/*</i></td></tr>
+<tr><th id="254">254</th><td><i>         * TODO: MT: - ngx_atomic_fetch_add()</i></td></tr>
+<tr><th id="255">255</th><td><i>         *             or protection by critical section or light mutex</i></td></tr>
+<tr><th id="256">256</th><td><i>         *</i></td></tr>
+<tr><th id="257">257</th><td><i>         * TODO: MP: - allocated in a shared memory</i></td></tr>
+<tr><th id="258">258</th><td><i>         *           - ngx_atomic_fetch_add()</i></td></tr>
+<tr><th id="259">259</th><td><i>         *             or protection by critical section or light mutex</i></td></tr>
+<tr><th id="260">260</th><td><i>         */</i></td></tr>
+<tr><th id="261">261</th><td></td></tr>
+<tr><th id="262">262</th><td>        <a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::number" title='ngx_connection_s::number' data-ref="ngx_connection_s::number">number</a> = <a class="macro" href="../os/unix/ngx_atomic.h.html#112" title="__sync_fetch_and_add(ngx_connection_counter, 1)" data-ref="_M/ngx_atomic_fetch_add">ngx_atomic_fetch_add</a>(<a class="ref" href="ngx_event.h.html#ngx_connection_counter" title='ngx_connection_counter' data-ref="ngx_connection_counter">ngx_connection_counter</a>, <var>1</var>);</td></tr>
+<tr><th id="263">263</th><td></td></tr>
+<tr><th id="264">264</th><td><u>#<span data-ppcond="264">if</span> (NGX_STAT_STUB)</u></td></tr>
+<tr><th id="265">265</th><td>        (<em>void</em>) ngx_atomic_fetch_add(ngx_stat_handled, <var>1</var>);</td></tr>
+<tr><th id="266">266</th><td><u>#<span data-ppcond="264">endif</span></u></td></tr>
+<tr><th id="267">267</th><td></td></tr>
+<tr><th id="268">268</th><td>        <b>if</b> (<a class="local col4 ref" href="#14ls" title='ls' data-ref="14ls">ls</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_listening_s::addr_ntop" title='ngx_listening_s::addr_ntop' data-ref="ngx_listening_s::addr_ntop">addr_ntop</a>) {</td></tr>
+<tr><th id="269">269</th><td>            <a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::addr_text" title='ngx_connection_s::addr_text' data-ref="ngx_connection_s::addr_text">addr_text</a>.<a class="ref field" href="../core/ngx_string.h.html#(anonymous)::data" title='(anonymous struct)::data' data-ref="(anonymous)::data">data</a> = <a class="ref fn" href="../core/ngx_palloc.h.html#ngx_pnalloc" title='ngx_pnalloc' data-ref="ngx_pnalloc">ngx_pnalloc</a>(<a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::pool" title='ngx_connection_s::pool' data-ref="ngx_connection_s::pool">pool</a>, <a class="local col4 ref" href="#14ls" title='ls' data-ref="14ls">ls</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_listening_s::addr_text_max_len" title='ngx_listening_s::addr_text_max_len' data-ref="ngx_listening_s::addr_text_max_len">addr_text_max_len</a>);</td></tr>
+<tr><th id="270">270</th><td>            <b>if</b> (<a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::addr_text" title='ngx_connection_s::addr_text' data-ref="ngx_connection_s::addr_text">addr_text</a>.<a class="ref field" href="../core/ngx_string.h.html#(anonymous)::data" title='(anonymous struct)::data' data-ref="(anonymous)::data">data</a> == <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>) {</td></tr>
+<tr><th id="271">271</th><td>                <a class="tu ref fn" href="#ngx_close_accepted_connection" title='ngx_close_accepted_connection' data-use='c' data-ref="ngx_close_accepted_connection">ngx_close_accepted_connection</a>(<a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>);</td></tr>
+<tr><th id="272">272</th><td>                <b>return</b>;</td></tr>
+<tr><th id="273">273</th><td>            }</td></tr>
+<tr><th id="274">274</th><td></td></tr>
+<tr><th id="275">275</th><td>            <a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::addr_text" title='ngx_connection_s::addr_text' data-ref="ngx_connection_s::addr_text">addr_text</a>.<a class="ref field" href="../core/ngx_string.h.html#(anonymous)::len" title='(anonymous struct)::len' data-ref="(anonymous)::len">len</a> = <a class="ref fn" href="../core/ngx_inet.h.html#ngx_sock_ntop" title='ngx_sock_ntop' data-ref="ngx_sock_ntop">ngx_sock_ntop</a>(<a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::sockaddr" title='ngx_connection_s::sockaddr' data-ref="ngx_connection_s::sockaddr">sockaddr</a>, <a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::socklen" title='ngx_connection_s::socklen' data-ref="ngx_connection_s::socklen">socklen</a>,</td></tr>
+<tr><th id="276">276</th><td>                                             <a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::addr_text" title='ngx_connection_s::addr_text' data-ref="ngx_connection_s::addr_text">addr_text</a>.<a class="ref field" href="../core/ngx_string.h.html#(anonymous)::data" title='(anonymous struct)::data' data-ref="(anonymous)::data">data</a>,</td></tr>
+<tr><th id="277">277</th><td>                                             <a class="local col4 ref" href="#14ls" title='ls' data-ref="14ls">ls</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_listening_s::addr_text_max_len" title='ngx_listening_s::addr_text_max_len' data-ref="ngx_listening_s::addr_text_max_len">addr_text_max_len</a>, <var>0</var>);</td></tr>
+<tr><th id="278">278</th><td>            <b>if</b> (<a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::addr_text" title='ngx_connection_s::addr_text' data-ref="ngx_connection_s::addr_text">addr_text</a>.<a class="ref field" href="../core/ngx_string.h.html#(anonymous)::len" title='(anonymous struct)::len' data-ref="(anonymous)::len">len</a> == <var>0</var>) {</td></tr>
+<tr><th id="279">279</th><td>                <a class="tu ref fn" href="#ngx_close_accepted_connection" title='ngx_close_accepted_connection' data-use='c' data-ref="ngx_close_accepted_connection">ngx_close_accepted_connection</a>(<a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>);</td></tr>
+<tr><th id="280">280</th><td>                <b>return</b>;</td></tr>
+<tr><th id="281">281</th><td>            }</td></tr>
+<tr><th id="282">282</th><td>        }</td></tr>
+<tr><th id="283">283</th><td></td></tr>
+<tr><th id="284">284</th><td><u>#<span data-ppcond="284">if</span> (NGX_DEBUG)</u></td></tr>
+<tr><th id="285">285</th><td>        {</td></tr>
+<tr><th id="286">286</th><td>        ngx_str_t  addr;</td></tr>
+<tr><th id="287">287</th><td>        u_char     text[NGX_SOCKADDR_STRLEN];</td></tr>
+<tr><th id="288">288</th><td></td></tr>
+<tr><th id="289">289</th><td>        ngx_debug_accepted_connection(ecf, c);</td></tr>
+<tr><th id="290">290</th><td></td></tr>
+<tr><th id="291">291</th><td>        <b>if</b> (log-&gt;log_level &amp; NGX_LOG_DEBUG_EVENT) {</td></tr>
+<tr><th id="292">292</th><td>            addr.data = text;</td></tr>
+<tr><th id="293">293</th><td>            addr.len = ngx_sock_ntop(c-&gt;sockaddr, c-&gt;socklen, text,</td></tr>
+<tr><th id="294">294</th><td>                                     NGX_SOCKADDR_STRLEN, <var>1</var>);</td></tr>
+<tr><th id="295">295</th><td></td></tr>
+<tr><th id="296">296</th><td>            ngx_log_debug3(NGX_LOG_DEBUG_EVENT, log, <var>0</var>,</td></tr>
+<tr><th id="297">297</th><td>                           <q>"*%uA accept: %V fd:%d"</q>, c-&gt;number, &amp;addr, s);</td></tr>
+<tr><th id="298">298</th><td>        }</td></tr>
+<tr><th id="299">299</th><td></td></tr>
+<tr><th id="300">300</th><td>        }</td></tr>
+<tr><th id="301">301</th><td><u>#<span data-ppcond="284">endif</span></u></td></tr>
+<tr><th id="302">302</th><td></td></tr>
+<tr><th id="303">303</th><td>        <b>if</b> (<a class="macro" href="ngx_event.h.html#416" title="ngx_event_actions.add_conn" data-ref="_M/ngx_add_conn">ngx_add_conn</a> &amp;&amp; (<a class="ref" href="ngx_event.h.html#ngx_event_flags" title='ngx_event_flags' data-ref="ngx_event_flags">ngx_event_flags</a> &amp; <a class="macro" href="ngx_event.h.html#241" title="0x00000040" data-ref="_M/NGX_USE_EPOLL_EVENT">NGX_USE_EPOLL_EVENT</a>) == <var>0</var>) {</td></tr>
+<tr><th id="304">304</th><td>            <b>if</b> (<a class="macro" href="ngx_event.h.html#416" title="ngx_event_actions.add_conn" data-ref="_M/ngx_add_conn">ngx_add_conn</a>(<a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>) == <a class="macro" href="../core/ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>) {</td></tr>
+<tr><th id="305">305</th><td>                <a class="tu ref fn" href="#ngx_close_accepted_connection" title='ngx_close_accepted_connection' data-use='c' data-ref="ngx_close_accepted_connection">ngx_close_accepted_connection</a>(<a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>);</td></tr>
+<tr><th id="306">306</th><td>                <b>return</b>;</td></tr>
+<tr><th id="307">307</th><td>            }</td></tr>
+<tr><th id="308">308</th><td>        }</td></tr>
+<tr><th id="309">309</th><td></td></tr>
+<tr><th id="310">310</th><td>        <a class="local col8 ref" href="#8log" title='log' data-ref="8log">log</a>-&gt;<a class="ref field" href="../core/ngx_log.h.html#ngx_log_s::data" title='ngx_log_s::data' data-ref="ngx_log_s::data">data</a> = <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>;</td></tr>
+<tr><th id="311">311</th><td>        <a class="local col8 ref" href="#8log" title='log' data-ref="8log">log</a>-&gt;<a class="ref field" href="../core/ngx_log.h.html#ngx_log_s::handler" title='ngx_log_s::handler' data-ref="ngx_log_s::handler">handler</a> = <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>;</td></tr>
+<tr><th id="312">312</th><td></td></tr>
+<tr><th id="313">313</th><td>        <a class="local col4 ref" href="#14ls" title='ls' data-ref="14ls">ls</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_listening_s::handler" title='ngx_listening_s::handler' data-ref="ngx_listening_s::handler">handler</a>(<a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>);</td></tr>
+<tr><th id="314">314</th><td></td></tr>
+<tr><th id="315">315</th><td>        <b>if</b> (<a class="ref" href="ngx_event.h.html#ngx_event_flags" title='ngx_event_flags' data-ref="ngx_event_flags">ngx_event_flags</a> &amp; <a class="macro" href="ngx_event.h.html#225" title="0x00000008" data-ref="_M/NGX_USE_KQUEUE_EVENT">NGX_USE_KQUEUE_EVENT</a>) {</td></tr>
+<tr><th id="316">316</th><td>            <a class="local col5 ref" href="#5ev" title='ev' data-ref="5ev">ev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::available" title='ngx_event_s::available' data-ref="ngx_event_s::available">available</a>--;</td></tr>
+<tr><th id="317">317</th><td>        }</td></tr>
+<tr><th id="318">318</th><td></td></tr>
+<tr><th id="319">319</th><td>    } <b>while</b> (<a class="local col5 ref" href="#5ev" title='ev' data-ref="5ev">ev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::available" title='ngx_event_s::available' data-ref="ngx_event_s::available">available</a>);</td></tr>
+<tr><th id="320">320</th><td>}</td></tr>
+<tr><th id="321">321</th><td></td></tr>
+<tr><th id="322">322</th><td></td></tr>
+<tr><th id="323">323</th><td><u>#<span data-ppcond="323">if</span> !(NGX_WIN32)</u></td></tr>
+<tr><th id="324">324</th><td></td></tr>
+<tr><th id="325">325</th><td><em>void</em></td></tr>
+<tr><th id="326">326</th><td><dfn class="decl def fn" id="ngx_event_recvmsg" title='ngx_event_recvmsg' data-ref="ngx_event_recvmsg">ngx_event_recvmsg</dfn>(<a class="typedef" href="../core/ngx_core.h.html#ngx_event_t" title='ngx_event_t' data-type='struct ngx_event_s' data-ref="ngx_event_t">ngx_event_t</a> *<dfn class="local col9 decl" id="19ev" title='ev' data-type='ngx_event_t *' data-ref="19ev">ev</dfn>)</td></tr>
+<tr><th id="327">327</th><td>{</td></tr>
+<tr><th id="328">328</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#ssize_t" title='ssize_t' data-type='__ssize_t' data-ref="ssize_t">ssize_t</a>            <dfn class="local col0 decl" id="20n" title='n' data-type='ssize_t' data-ref="20n">n</dfn>;</td></tr>
+<tr><th id="329">329</th><td>    <a class="typedef" href="../core/ngx_core.h.html#ngx_log_t" title='ngx_log_t' data-type='struct ngx_log_s' data-ref="ngx_log_t">ngx_log_t</a>         *<dfn class="local col1 decl" id="21log" title='log' data-type='ngx_log_t *' data-ref="21log">log</dfn>;</td></tr>
+<tr><th id="330">330</th><td>    <a class="typedef" href="../os/unix/ngx_errno.h.html#ngx_err_t" title='ngx_err_t' data-type='int' data-ref="ngx_err_t">ngx_err_t</a>          <dfn class="local col2 decl" id="22err" title='err' data-type='ngx_err_t' data-ref="22err">err</dfn>;</td></tr>
+<tr><th id="331">331</th><td>    <a class="typedef" href="../core/ngx_core.h.html#ngx_event_t" title='ngx_event_t' data-type='struct ngx_event_s' data-ref="ngx_event_t">ngx_event_t</a>       *<dfn class="local col3 decl" id="23rev" title='rev' data-type='ngx_event_t *' data-ref="23rev">rev</dfn>, *<dfn class="local col4 decl" id="24wev" title='wev' data-type='ngx_event_t *' data-ref="24wev">wev</dfn>;</td></tr>
+<tr><th id="332">332</th><td>    <b>struct</b> <a class="type" href="../../../include/x86_64-linux-gnu/bits/uio.h.html#iovec" title='iovec' data-ref="iovec">iovec</a>       <dfn class="local col5 decl" id="25iov" title='iov' data-type='struct iovec [1]' data-ref="25iov">iov</dfn>[<var>1</var>];</td></tr>
+<tr><th id="333">333</th><td>    <b>struct</b> <a class="type" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#msghdr" title='msghdr' data-ref="msghdr">msghdr</a>      <dfn class="local col6 decl" id="26msg" title='msg' data-type='struct msghdr' data-ref="26msg">msg</dfn>;</td></tr>
+<tr><th id="334">334</th><td>    <a class="typedef" href="../core/ngx_inet.h.html#ngx_sockaddr_t" title='ngx_sockaddr_t' data-type='union ngx_sockaddr_t' data-ref="ngx_sockaddr_t">ngx_sockaddr_t</a>     <dfn class="local col7 decl" id="27sa" title='sa' data-type='ngx_sockaddr_t' data-ref="27sa">sa</dfn>;</td></tr>
+<tr><th id="335">335</th><td>    <a class="typedef" href="../core/ngx_connection.h.html#ngx_listening_t" title='ngx_listening_t' data-type='struct ngx_listening_s' data-ref="ngx_listening_t">ngx_listening_t</a>   *<dfn class="local col8 decl" id="28ls" title='ls' data-type='ngx_listening_t *' data-ref="28ls">ls</dfn>;</td></tr>
+<tr><th id="336">336</th><td>    <a class="typedef" href="ngx_event.h.html#ngx_event_conf_t" title='ngx_event_conf_t' data-type='struct ngx_event_conf_t' data-ref="ngx_event_conf_t">ngx_event_conf_t</a>  *<dfn class="local col9 decl" id="29ecf" title='ecf' data-type='ngx_event_conf_t *' data-ref="29ecf">ecf</dfn>;</td></tr>
+<tr><th id="337">337</th><td>    <a class="typedef" href="../core/ngx_core.h.html#ngx_connection_t" title='ngx_connection_t' data-type='struct ngx_connection_s' data-ref="ngx_connection_t">ngx_connection_t</a>  *<dfn class="local col0 decl" id="30c" title='c' data-type='ngx_connection_t *' data-ref="30c">c</dfn>, *<dfn class="local col1 decl" id="31lc" title='lc' data-type='ngx_connection_t *' data-ref="31lc">lc</dfn>;</td></tr>
+<tr><th id="338">338</th><td>    <em>static</em> <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a>      <dfn class="local col2 decl" id="32buffer" title='buffer' data-type='u_char [65535]' data-ref="32buffer">buffer</dfn>[<var>65535</var>];</td></tr>
+<tr><th id="339">339</th><td></td></tr>
+<tr><th id="340">340</th><td><u>#<span data-ppcond="340">if</span> (<a class="macro" href="../../objs/ngx_auto_config.h.html#312" title="1" data-ref="_M/NGX_HAVE_MSGHDR_MSG_CONTROL">NGX_HAVE_MSGHDR_MSG_CONTROL</a>)</u></td></tr>
+<tr><th id="341">341</th><td></td></tr>
+<tr><th id="342">342</th><td><u>#<span data-ppcond="342">if</span> (NGX_HAVE_IP_RECVDSTADDR)</u></td></tr>
+<tr><th id="343">343</th><td>    u_char             msg_control[CMSG_SPACE(<b>sizeof</b>(<b>struct</b> in_addr))];</td></tr>
+<tr><th id="344">344</th><td><u>#<span data-ppcond="342">elif</span> (<a class="macro" href="../../objs/ngx_auto_config.h.html#147" title="1" data-ref="_M/NGX_HAVE_IP_PKTINFO">NGX_HAVE_IP_PKTINFO</a>)</u></td></tr>
+<tr><th id="345">345</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a>             <dfn class="local col3 decl" id="33msg_control" title='msg_control' data-type='u_char [32]' data-ref="33msg_control">msg_control</dfn>[<a class="macro" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#272" title="((((sizeof(struct in_pktinfo)) + sizeof (size_t) - 1) &amp; (size_t) ~(sizeof (size_t) - 1)) + (((sizeof (struct cmsghdr)) + sizeof (size_t) - 1) &amp; (size_t) ~(sizeof (size_t) - 1)))" data-ref="_M/CMSG_SPACE">CMSG_SPACE</a>(<b>sizeof</b>(<b>struct</b> <a class="type" href="../../../include/x86_64-linux-gnu/bits/in.h.html#in_pktinfo" title='in_pktinfo' data-ref="in_pktinfo">in_pktinfo</a>))];</td></tr>
+<tr><th id="346">346</th><td><u>#<span data-ppcond="342">endif</span></u></td></tr>
+<tr><th id="347">347</th><td></td></tr>
+<tr><th id="348">348</th><td><u>#<span data-ppcond="348">if</span> (<a class="macro" href="../../objs/ngx_auto_config.h.html#247" title="1" data-ref="_M/NGX_HAVE_INET6">NGX_HAVE_INET6</a> &amp;&amp; <a class="macro" href="../../objs/ngx_auto_config.h.html#152" title="1" data-ref="_M/NGX_HAVE_IPV6_RECVPKTINFO">NGX_HAVE_IPV6_RECVPKTINFO</a>)</u></td></tr>
+<tr><th id="349">349</th><td>    <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a>             <dfn class="local col4 decl" id="34msg_control6" title='msg_control6' data-type='u_char [40]' data-ref="34msg_control6">msg_control6</dfn>[<a class="macro" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#272" title="((((sizeof(struct in6_pktinfo)) + sizeof (size_t) - 1) &amp; (size_t) ~(sizeof (size_t) - 1)) + (((sizeof (struct cmsghdr)) + sizeof (size_t) - 1) &amp; (size_t) ~(sizeof (size_t) - 1)))" data-ref="_M/CMSG_SPACE">CMSG_SPACE</a>(<b>sizeof</b>(<b>struct</b> <a class="type" href="../../../include/netinet/in.h.html#in6_pktinfo" title='in6_pktinfo' data-ref="in6_pktinfo">in6_pktinfo</a>))];</td></tr>
+<tr><th id="350">350</th><td><u>#<span data-ppcond="348">endif</span></u></td></tr>
+<tr><th id="351">351</th><td></td></tr>
+<tr><th id="352">352</th><td><u>#<span data-ppcond="340">endif</span></u></td></tr>
+<tr><th id="353">353</th><td></td></tr>
+<tr><th id="354">354</th><td>    <b>if</b> (<a class="local col9 ref" href="#19ev" title='ev' data-ref="19ev">ev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::timedout" title='ngx_event_s::timedout' data-ref="ngx_event_s::timedout">timedout</a>) {</td></tr>
+<tr><th id="355">355</th><td>        <b>if</b> (<a class="tu ref fn" href="#ngx_enable_accept_events" title='ngx_enable_accept_events' data-use='c' data-ref="ngx_enable_accept_events">ngx_enable_accept_events</a>((<a class="typedef" href="../core/ngx_core.h.html#ngx_cycle_t" title='ngx_cycle_t' data-type='struct ngx_cycle_s' data-ref="ngx_cycle_t">ngx_cycle_t</a> *) <a class="ref" href="../core/ngx_cycle.h.html#ngx_cycle" title='ngx_cycle' data-ref="ngx_cycle">ngx_cycle</a>) != <a class="macro" href="../core/ngx_core.h.html#35" title="0" data-ref="_M/NGX_OK">NGX_OK</a>) {</td></tr>
+<tr><th id="356">356</th><td>            <b>return</b>;</td></tr>
+<tr><th id="357">357</th><td>        }</td></tr>
+<tr><th id="358">358</th><td></td></tr>
+<tr><th id="359">359</th><td>        <a class="local col9 ref" href="#19ev" title='ev' data-ref="19ev">ev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::timedout" title='ngx_event_s::timedout' data-ref="ngx_event_s::timedout">timedout</a> = <var>0</var>;</td></tr>
+<tr><th id="360">360</th><td>    }</td></tr>
+<tr><th id="361">361</th><td></td></tr>
+<tr><th id="362">362</th><td>    <a class="local col9 ref" href="#29ecf" title='ecf' data-ref="29ecf">ecf</a> = <a class="macro" href="ngx_event.h.html#501" title="(*(ngx_cycle-&gt;conf_ctx[ngx_events_module.index])) [ngx_event_core_module.ctx_index];" data-ref="_M/ngx_event_get_conf">ngx_event_get_conf</a>(<a class="ref" href="../core/ngx_cycle.h.html#ngx_cycle" title='ngx_cycle' data-ref="ngx_cycle">ngx_cycle</a>-&gt;<a class="ref field" href="../core/ngx_cycle.h.html#ngx_cycle_s::conf_ctx" title='ngx_cycle_s::conf_ctx' data-ref="ngx_cycle_s::conf_ctx">conf_ctx</a>, <a class="ref" href="ngx_event.h.html#ngx_event_core_module" title='ngx_event_core_module' data-ref="ngx_event_core_module">ngx_event_core_module</a>);</td></tr>
+<tr><th id="363">363</th><td></td></tr>
+<tr><th id="364">364</th><td>    <b>if</b> (!(<a class="ref" href="ngx_event.h.html#ngx_event_flags" title='ngx_event_flags' data-ref="ngx_event_flags">ngx_event_flags</a> &amp; <a class="macro" href="ngx_event.h.html#225" title="0x00000008" data-ref="_M/NGX_USE_KQUEUE_EVENT">NGX_USE_KQUEUE_EVENT</a>)) {</td></tr>
+<tr><th id="365">365</th><td>        <a class="local col9 ref" href="#19ev" title='ev' data-ref="19ev">ev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::available" title='ngx_event_s::available' data-ref="ngx_event_s::available">available</a> = <a class="local col9 ref" href="#29ecf" title='ecf' data-ref="29ecf">ecf</a>-&gt;<a class="ref field" href="ngx_event.h.html#(anonymous)::multi_accept" title='(anonymous struct)::multi_accept' data-ref="(anonymous)::multi_accept">multi_accept</a>;</td></tr>
+<tr><th id="366">366</th><td>    }</td></tr>
+<tr><th id="367">367</th><td></td></tr>
+<tr><th id="368">368</th><td>    <a class="local col1 ref" href="#31lc" title='lc' data-ref="31lc">lc</a> = <a class="local col9 ref" href="#19ev" title='ev' data-ref="19ev">ev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::data" title='ngx_event_s::data' data-ref="ngx_event_s::data">data</a>;</td></tr>
+<tr><th id="369">369</th><td>    <a class="local col8 ref" href="#28ls" title='ls' data-ref="28ls">ls</a> = <a class="local col1 ref" href="#31lc" title='lc' data-ref="31lc">lc</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::listening" title='ngx_connection_s::listening' data-ref="ngx_connection_s::listening">listening</a>;</td></tr>
+<tr><th id="370">370</th><td>    <a class="local col9 ref" href="#19ev" title='ev' data-ref="19ev">ev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::ready" title='ngx_event_s::ready' data-ref="ngx_event_s::ready">ready</a> = <var>0</var>;</td></tr>
+<tr><th id="371">371</th><td></td></tr>
+<tr><th id="372">372</th><td>    <a class="macro" href="../core/ngx_log.h.html#217" title="" data-ref="_M/ngx_log_debug2">ngx_log_debug2</a>(NGX_LOG_DEBUG_EVENT, ev-&gt;log, <var>0</var>,</td></tr>
+<tr><th id="373">373</th><td>                   <q>"recvmsg on %V, ready: %d"</q>, &amp;ls-&gt;addr_text, ev-&gt;available);</td></tr>
+<tr><th id="374">374</th><td></td></tr>
+<tr><th id="375">375</th><td>    <b>do</b> {</td></tr>
+<tr><th id="376">376</th><td>        <a class="macro" href="../core/ngx_string.h.html#88" title="(void) memset(&amp;msg, 0, sizeof(struct msghdr))" data-ref="_M/ngx_memzero">ngx_memzero</a>(&amp;<a class="local col6 ref" href="#26msg" title='msg' data-ref="26msg">msg</a>, <b>sizeof</b>(<b>struct</b> <a class="type" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#msghdr" title='msghdr' data-ref="msghdr">msghdr</a>));</td></tr>
+<tr><th id="377">377</th><td></td></tr>
+<tr><th id="378">378</th><td>        <a class="local col5 ref" href="#25iov" title='iov' data-ref="25iov">iov</a>[<var>0</var>].<a class="ref field" href="../../../include/x86_64-linux-gnu/bits/uio.h.html#iovec::iov_base" title='iovec::iov_base' data-ref="iovec::iov_base">iov_base</a> = (<em>void</em> *) <a class="local col2 ref" href="#32buffer" title='buffer' data-ref="32buffer">buffer</a>;</td></tr>
+<tr><th id="379">379</th><td>        <a class="local col5 ref" href="#25iov" title='iov' data-ref="25iov">iov</a>[<var>0</var>].<a class="ref field" href="../../../include/x86_64-linux-gnu/bits/uio.h.html#iovec::iov_len" title='iovec::iov_len' data-ref="iovec::iov_len">iov_len</a> = <b>sizeof</b>(<a class="local col2 ref" href="#32buffer" title='buffer' data-ref="32buffer">buffer</a>);</td></tr>
+<tr><th id="380">380</th><td></td></tr>
+<tr><th id="381">381</th><td>        <a class="local col6 ref" href="#26msg" title='msg' data-ref="26msg">msg</a>.<a class="ref field" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#msghdr::msg_name" title='msghdr::msg_name' data-ref="msghdr::msg_name">msg_name</a> = &amp;<a class="local col7 ref" href="#27sa" title='sa' data-ref="27sa">sa</a>;</td></tr>
+<tr><th id="382">382</th><td>        <a class="local col6 ref" href="#26msg" title='msg' data-ref="26msg">msg</a>.<a class="ref field" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#msghdr::msg_namelen" title='msghdr::msg_namelen' data-ref="msghdr::msg_namelen">msg_namelen</a> = <b>sizeof</b>(<a class="typedef" href="../core/ngx_inet.h.html#ngx_sockaddr_t" title='ngx_sockaddr_t' data-type='union ngx_sockaddr_t' data-ref="ngx_sockaddr_t">ngx_sockaddr_t</a>);</td></tr>
+<tr><th id="383">383</th><td>        <a class="local col6 ref" href="#26msg" title='msg' data-ref="26msg">msg</a>.<a class="ref field" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#msghdr::msg_iov" title='msghdr::msg_iov' data-ref="msghdr::msg_iov">msg_iov</a> = <a class="local col5 ref" href="#25iov" title='iov' data-ref="25iov">iov</a>;</td></tr>
+<tr><th id="384">384</th><td>        <a class="local col6 ref" href="#26msg" title='msg' data-ref="26msg">msg</a>.<a class="ref field" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#msghdr::msg_iovlen" title='msghdr::msg_iovlen' data-ref="msghdr::msg_iovlen">msg_iovlen</a> = <var>1</var>;</td></tr>
+<tr><th id="385">385</th><td></td></tr>
+<tr><th id="386">386</th><td><u>#<span data-ppcond="386">if</span> (<a class="macro" href="../../objs/ngx_auto_config.h.html#312" title="1" data-ref="_M/NGX_HAVE_MSGHDR_MSG_CONTROL">NGX_HAVE_MSGHDR_MSG_CONTROL</a>)</u></td></tr>
+<tr><th id="387">387</th><td></td></tr>
+<tr><th id="388">388</th><td>        <b>if</b> (<a class="local col8 ref" href="#28ls" title='ls' data-ref="28ls">ls</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_listening_s::wildcard" title='ngx_listening_s::wildcard' data-ref="ngx_listening_s::wildcard">wildcard</a>) {</td></tr>
+<tr><th id="389">389</th><td></td></tr>
+<tr><th id="390">390</th><td><u>#<span data-ppcond="390">if</span> (NGX_HAVE_IP_RECVDSTADDR || <a class="macro" href="../../objs/ngx_auto_config.h.html#147" title="1" data-ref="_M/NGX_HAVE_IP_PKTINFO">NGX_HAVE_IP_PKTINFO</a>)</u></td></tr>
+<tr><th id="391">391</th><td>            <b>if</b> (<a class="local col8 ref" href="#28ls" title='ls' data-ref="28ls">ls</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_listening_s::sockaddr" title='ngx_listening_s::sockaddr' data-ref="ngx_listening_s::sockaddr">sockaddr</a>-&gt;<a class="ref field" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#155" title='sockaddr::sa_family' data-ref="sockaddr::sa_family">sa_family</a> == <a class="macro" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#92" title="2" data-ref="_M/AF_INET">AF_INET</a>) {</td></tr>
+<tr><th id="392">392</th><td>                <a class="local col6 ref" href="#26msg" title='msg' data-ref="26msg">msg</a>.<a class="ref field" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#msghdr::msg_control" title='msghdr::msg_control' data-ref="msghdr::msg_control">msg_control</a> = &amp;<a class="local col3 ref" href="#33msg_control" title='msg_control' data-ref="33msg_control">msg_control</a>;</td></tr>
+<tr><th id="393">393</th><td>                <a class="local col6 ref" href="#26msg" title='msg' data-ref="26msg">msg</a>.<a class="ref field" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#msghdr::msg_controllen" title='msghdr::msg_controllen' data-ref="msghdr::msg_controllen">msg_controllen</a> = <b>sizeof</b>(<a class="local col3 ref" href="#33msg_control" title='msg_control' data-ref="33msg_control">msg_control</a>);</td></tr>
+<tr><th id="394">394</th><td>            }</td></tr>
+<tr><th id="395">395</th><td><u>#<span data-ppcond="390">endif</span></u></td></tr>
+<tr><th id="396">396</th><td></td></tr>
+<tr><th id="397">397</th><td><u>#<span data-ppcond="397">if</span> (<a class="macro" href="../../objs/ngx_auto_config.h.html#247" title="1" data-ref="_M/NGX_HAVE_INET6">NGX_HAVE_INET6</a> &amp;&amp; <a class="macro" href="../../objs/ngx_auto_config.h.html#152" title="1" data-ref="_M/NGX_HAVE_IPV6_RECVPKTINFO">NGX_HAVE_IPV6_RECVPKTINFO</a>)</u></td></tr>
+<tr><th id="398">398</th><td>            <b>if</b> (<a class="local col8 ref" href="#28ls" title='ls' data-ref="28ls">ls</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_listening_s::sockaddr" title='ngx_listening_s::sockaddr' data-ref="ngx_listening_s::sockaddr">sockaddr</a>-&gt;<a class="ref field" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#155" title='sockaddr::sa_family' data-ref="sockaddr::sa_family">sa_family</a> == <a class="macro" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#100" title="10" data-ref="_M/AF_INET6">AF_INET6</a>) {</td></tr>
+<tr><th id="399">399</th><td>                <a class="local col6 ref" href="#26msg" title='msg' data-ref="26msg">msg</a>.<a class="ref field" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#msghdr::msg_control" title='msghdr::msg_control' data-ref="msghdr::msg_control">msg_control</a> = &amp;<a class="local col4 ref" href="#34msg_control6" title='msg_control6' data-ref="34msg_control6">msg_control6</a>;</td></tr>
+<tr><th id="400">400</th><td>                <a class="local col6 ref" href="#26msg" title='msg' data-ref="26msg">msg</a>.<a class="ref field" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#msghdr::msg_controllen" title='msghdr::msg_controllen' data-ref="msghdr::msg_controllen">msg_controllen</a> = <b>sizeof</b>(<a class="local col4 ref" href="#34msg_control6" title='msg_control6' data-ref="34msg_control6">msg_control6</a>);</td></tr>
+<tr><th id="401">401</th><td>            }</td></tr>
+<tr><th id="402">402</th><td><u>#<span data-ppcond="397">endif</span></u></td></tr>
+<tr><th id="403">403</th><td>        }</td></tr>
+<tr><th id="404">404</th><td></td></tr>
+<tr><th id="405">405</th><td><u>#<span data-ppcond="386">endif</span></u></td></tr>
+<tr><th id="406">406</th><td></td></tr>
+<tr><th id="407">407</th><td>        <a class="local col0 ref" href="#20n" title='n' data-ref="20n">n</a> = <a class="ref fn" href="../../../include/x86_64-linux-gnu/sys/socket.h.html#recvmsg" title='recvmsg' data-ref="recvmsg">recvmsg</a>(<a class="local col1 ref" href="#31lc" title='lc' data-ref="31lc">lc</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::fd" title='ngx_connection_s::fd' data-ref="ngx_connection_s::fd">fd</a>, &amp;<a class="local col6 ref" href="#26msg" title='msg' data-ref="26msg">msg</a>, <var>0</var>);</td></tr>
+<tr><th id="408">408</th><td></td></tr>
+<tr><th id="409">409</th><td>        <b>if</b> (<a class="local col0 ref" href="#20n" title='n' data-ref="20n">n</a> == -<var>1</var>) {</td></tr>
+<tr><th id="410">410</th><td>            <a class="local col2 ref" href="#22err" title='err' data-ref="22err">err</a> = <a class="macro" href="../os/unix/ngx_errno.h.html#70" title="(*__errno_location ())" data-ref="_M/ngx_socket_errno">ngx_socket_errno</a>;</td></tr>
+<tr><th id="411">411</th><td></td></tr>
+<tr><th id="412">412</th><td>            <b>if</b> (<a class="local col2 ref" href="#22err" title='err' data-ref="22err">err</a> == <a class="macro" href="../os/unix/ngx_errno.h.html#65" title="11" data-ref="_M/NGX_EAGAIN">NGX_EAGAIN</a>) {</td></tr>
+<tr><th id="413">413</th><td>                <a class="macro" href="../core/ngx_log.h.html#215" title="" data-ref="_M/ngx_log_debug0">ngx_log_debug0</a>(NGX_LOG_DEBUG_EVENT, ev-&gt;log, err,</td></tr>
+<tr><th id="414">414</th><td>                               <q>"recvmsg() not ready"</q>);</td></tr>
+<tr><th id="415">415</th><td>                <b>return</b>;</td></tr>
+<tr><th id="416">416</th><td>            }</td></tr>
+<tr><th id="417">417</th><td></td></tr>
+<tr><th id="418">418</th><td>            <a class="macro" href="../core/ngx_log.h.html#85" title="if ((ev-&gt;log)-&gt;log_level &gt;= 2) ngx_log_error_core(2, ev-&gt;log, err, &quot;recvmsg() failed&quot;)" data-ref="_M/ngx_log_error">ngx_log_error</a>(<a class="macro" href="../core/ngx_log.h.html#18" title="2" data-ref="_M/NGX_LOG_ALERT">NGX_LOG_ALERT</a>, <a class="local col9 ref" href="#19ev" title='ev' data-ref="19ev">ev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::log" title='ngx_event_s::log' data-ref="ngx_event_s::log">log</a>, <a class="local col2 ref" href="#22err" title='err' data-ref="22err">err</a>, <q>"recvmsg() failed"</q>);</td></tr>
+<tr><th id="419">419</th><td></td></tr>
+<tr><th id="420">420</th><td>            <b>return</b>;</td></tr>
+<tr><th id="421">421</th><td>        }</td></tr>
+<tr><th id="422">422</th><td></td></tr>
+<tr><th id="423">423</th><td><u>#<span data-ppcond="423">if</span> (NGX_STAT_STUB)</u></td></tr>
+<tr><th id="424">424</th><td>        (<em>void</em>) ngx_atomic_fetch_add(ngx_stat_accepted, <var>1</var>);</td></tr>
+<tr><th id="425">425</th><td><u>#<span data-ppcond="423">endif</span></u></td></tr>
+<tr><th id="426">426</th><td></td></tr>
+<tr><th id="427">427</th><td><u>#<span data-ppcond="427">if</span> (<a class="macro" href="../../objs/ngx_auto_config.h.html#312" title="1" data-ref="_M/NGX_HAVE_MSGHDR_MSG_CONTROL">NGX_HAVE_MSGHDR_MSG_CONTROL</a>)</u></td></tr>
+<tr><th id="428">428</th><td>        <b>if</b> (<a class="local col6 ref" href="#26msg" title='msg' data-ref="26msg">msg</a>.<a class="ref field" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#msghdr::msg_flags" title='msghdr::msg_flags' data-ref="msghdr::msg_flags">msg_flags</a> &amp; (<a class="macro" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#193" title="MSG_TRUNC" data-ref="_M/MSG_TRUNC">MSG_TRUNC</a>|<a class="macro" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#189" title="MSG_CTRUNC" data-ref="_M/MSG_CTRUNC">MSG_CTRUNC</a>)) {</td></tr>
+<tr><th id="429">429</th><td>            <a class="macro" href="../core/ngx_log.h.html#85" title="if ((ev-&gt;log)-&gt;log_level &gt;= 2) ngx_log_error_core(2, ev-&gt;log, 0, &quot;recvmsg() truncated data&quot;)" data-ref="_M/ngx_log_error">ngx_log_error</a>(<a class="macro" href="../core/ngx_log.h.html#18" title="2" data-ref="_M/NGX_LOG_ALERT">NGX_LOG_ALERT</a>, <a class="local col9 ref" href="#19ev" title='ev' data-ref="19ev">ev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::log" title='ngx_event_s::log' data-ref="ngx_event_s::log">log</a>, <var>0</var>,</td></tr>
+<tr><th id="430">430</th><td>                          <q>"recvmsg() truncated data"</q>);</td></tr>
+<tr><th id="431">431</th><td>            <b>continue</b>;</td></tr>
+<tr><th id="432">432</th><td>        }</td></tr>
+<tr><th id="433">433</th><td><u>#<span data-ppcond="427">endif</span></u></td></tr>
+<tr><th id="434">434</th><td></td></tr>
+<tr><th id="435">435</th><td>        <a class="ref" href="ngx_event.h.html#ngx_accept_disabled" title='ngx_accept_disabled' data-ref="ngx_accept_disabled">ngx_accept_disabled</a> = <a class="ref" href="../core/ngx_cycle.h.html#ngx_cycle" title='ngx_cycle' data-ref="ngx_cycle">ngx_cycle</a>-&gt;<a class="ref field" href="../core/ngx_cycle.h.html#ngx_cycle_s::connection_n" title='ngx_cycle_s::connection_n' data-ref="ngx_cycle_s::connection_n">connection_n</a> / <var>8</var></td></tr>
+<tr><th id="436">436</th><td>                              - <a class="ref" href="../core/ngx_cycle.h.html#ngx_cycle" title='ngx_cycle' data-ref="ngx_cycle">ngx_cycle</a>-&gt;<a class="ref field" href="../core/ngx_cycle.h.html#ngx_cycle_s::free_connection_n" title='ngx_cycle_s::free_connection_n' data-ref="ngx_cycle_s::free_connection_n">free_connection_n</a>;</td></tr>
+<tr><th id="437">437</th><td></td></tr>
+<tr><th id="438">438</th><td>        <a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a> = <a class="ref fn" href="../core/ngx_connection.h.html#ngx_get_connection" title='ngx_get_connection' data-ref="ngx_get_connection">ngx_get_connection</a>(<a class="local col1 ref" href="#31lc" title='lc' data-ref="31lc">lc</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::fd" title='ngx_connection_s::fd' data-ref="ngx_connection_s::fd">fd</a>, <a class="local col9 ref" href="#19ev" title='ev' data-ref="19ev">ev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::log" title='ngx_event_s::log' data-ref="ngx_event_s::log">log</a>);</td></tr>
+<tr><th id="439">439</th><td>        <b>if</b> (<a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a> == <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>) {</td></tr>
+<tr><th id="440">440</th><td>            <b>return</b>;</td></tr>
+<tr><th id="441">441</th><td>        }</td></tr>
+<tr><th id="442">442</th><td></td></tr>
+<tr><th id="443">443</th><td>        <a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::shared" title='ngx_connection_s::shared' data-ref="ngx_connection_s::shared">shared</a> = <var>1</var>;</td></tr>
+<tr><th id="444">444</th><td>        <a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::type" title='ngx_connection_s::type' data-ref="ngx_connection_s::type">type</a> = <a class="macro" href="../../../include/x86_64-linux-gnu/bits/socket_type.h.html#31" title="SOCK_DGRAM" data-ref="_M/SOCK_DGRAM">SOCK_DGRAM</a>;</td></tr>
+<tr><th id="445">445</th><td>        <a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::socklen" title='ngx_connection_s::socklen' data-ref="ngx_connection_s::socklen">socklen</a> = <a class="local col6 ref" href="#26msg" title='msg' data-ref="26msg">msg</a>.<a class="ref field" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#msghdr::msg_namelen" title='msghdr::msg_namelen' data-ref="msghdr::msg_namelen">msg_namelen</a>;</td></tr>
+<tr><th id="446">446</th><td></td></tr>
+<tr><th id="447">447</th><td>        <b>if</b> (<a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::socklen" title='ngx_connection_s::socklen' data-ref="ngx_connection_s::socklen">socklen</a> &gt; (<a class="typedef" href="../../../include/unistd.h.html#socklen_t" title='socklen_t' data-type='__socklen_t' data-ref="socklen_t">socklen_t</a>) <b>sizeof</b>(<a class="typedef" href="../core/ngx_inet.h.html#ngx_sockaddr_t" title='ngx_sockaddr_t' data-type='union ngx_sockaddr_t' data-ref="ngx_sockaddr_t">ngx_sockaddr_t</a>)) {</td></tr>
+<tr><th id="448">448</th><td>            <a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::socklen" title='ngx_connection_s::socklen' data-ref="ngx_connection_s::socklen">socklen</a> = <b>sizeof</b>(<a class="typedef" href="../core/ngx_inet.h.html#ngx_sockaddr_t" title='ngx_sockaddr_t' data-type='union ngx_sockaddr_t' data-ref="ngx_sockaddr_t">ngx_sockaddr_t</a>);</td></tr>
+<tr><th id="449">449</th><td>        }</td></tr>
+<tr><th id="450">450</th><td></td></tr>
+<tr><th id="451">451</th><td><u>#<span data-ppcond="451">if</span> (NGX_STAT_STUB)</u></td></tr>
+<tr><th id="452">452</th><td>        (<em>void</em>) ngx_atomic_fetch_add(ngx_stat_active, <var>1</var>);</td></tr>
+<tr><th id="453">453</th><td><u>#<span data-ppcond="451">endif</span></u></td></tr>
+<tr><th id="454">454</th><td></td></tr>
+<tr><th id="455">455</th><td>        <a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::pool" title='ngx_connection_s::pool' data-ref="ngx_connection_s::pool">pool</a> = <a class="ref fn" href="../core/ngx_palloc.h.html#ngx_create_pool" title='ngx_create_pool' data-ref="ngx_create_pool">ngx_create_pool</a>(<a class="local col8 ref" href="#28ls" title='ls' data-ref="28ls">ls</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_listening_s::pool_size" title='ngx_listening_s::pool_size' data-ref="ngx_listening_s::pool_size">pool_size</a>, <a class="local col9 ref" href="#19ev" title='ev' data-ref="19ev">ev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::log" title='ngx_event_s::log' data-ref="ngx_event_s::log">log</a>);</td></tr>
+<tr><th id="456">456</th><td>        <b>if</b> (<a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::pool" title='ngx_connection_s::pool' data-ref="ngx_connection_s::pool">pool</a> == <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>) {</td></tr>
+<tr><th id="457">457</th><td>            <a class="tu ref fn" href="#ngx_close_accepted_connection" title='ngx_close_accepted_connection' data-use='c' data-ref="ngx_close_accepted_connection">ngx_close_accepted_connection</a>(<a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>);</td></tr>
+<tr><th id="458">458</th><td>            <b>return</b>;</td></tr>
+<tr><th id="459">459</th><td>        }</td></tr>
+<tr><th id="460">460</th><td></td></tr>
+<tr><th id="461">461</th><td>        <a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::sockaddr" title='ngx_connection_s::sockaddr' data-ref="ngx_connection_s::sockaddr">sockaddr</a> = <a class="ref fn" href="../core/ngx_palloc.h.html#ngx_palloc" title='ngx_palloc' data-ref="ngx_palloc">ngx_palloc</a>(<a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::pool" title='ngx_connection_s::pool' data-ref="ngx_connection_s::pool">pool</a>, <a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::socklen" title='ngx_connection_s::socklen' data-ref="ngx_connection_s::socklen">socklen</a>);</td></tr>
+<tr><th id="462">462</th><td>        <b>if</b> (<a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::sockaddr" title='ngx_connection_s::sockaddr' data-ref="ngx_connection_s::sockaddr">sockaddr</a> == <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>) {</td></tr>
+<tr><th id="463">463</th><td>            <a class="tu ref fn" href="#ngx_close_accepted_connection" title='ngx_close_accepted_connection' data-use='c' data-ref="ngx_close_accepted_connection">ngx_close_accepted_connection</a>(<a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>);</td></tr>
+<tr><th id="464">464</th><td>            <b>return</b>;</td></tr>
+<tr><th id="465">465</th><td>        }</td></tr>
+<tr><th id="466">466</th><td></td></tr>
+<tr><th id="467">467</th><td>        <a class="macro" href="../core/ngx_string.h.html#104" title="(void) memcpy(c-&gt;sockaddr, msg.msg_name, c-&gt;socklen)" data-ref="_M/ngx_memcpy">ngx_memcpy</a>(<a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::sockaddr" title='ngx_connection_s::sockaddr' data-ref="ngx_connection_s::sockaddr">sockaddr</a>, <a class="local col6 ref" href="#26msg" title='msg' data-ref="26msg">msg</a>.<a class="ref field" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#msghdr::msg_name" title='msghdr::msg_name' data-ref="msghdr::msg_name">msg_name</a>, <a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::socklen" title='ngx_connection_s::socklen' data-ref="ngx_connection_s::socklen">socklen</a>);</td></tr>
+<tr><th id="468">468</th><td></td></tr>
+<tr><th id="469">469</th><td>        <a class="local col1 ref" href="#21log" title='log' data-ref="21log">log</a> = <a class="ref fn" href="../core/ngx_palloc.h.html#ngx_palloc" title='ngx_palloc' data-ref="ngx_palloc">ngx_palloc</a>(<a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::pool" title='ngx_connection_s::pool' data-ref="ngx_connection_s::pool">pool</a>, <b>sizeof</b>(<a class="typedef" href="../core/ngx_core.h.html#ngx_log_t" title='ngx_log_t' data-type='struct ngx_log_s' data-ref="ngx_log_t">ngx_log_t</a>));</td></tr>
+<tr><th id="470">470</th><td>        <b>if</b> (<a class="local col1 ref" href="#21log" title='log' data-ref="21log">log</a> == <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>) {</td></tr>
+<tr><th id="471">471</th><td>            <a class="tu ref fn" href="#ngx_close_accepted_connection" title='ngx_close_accepted_connection' data-use='c' data-ref="ngx_close_accepted_connection">ngx_close_accepted_connection</a>(<a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>);</td></tr>
+<tr><th id="472">472</th><td>            <b>return</b>;</td></tr>
+<tr><th id="473">473</th><td>        }</td></tr>
+<tr><th id="474">474</th><td></td></tr>
+<tr><th id="475">475</th><td>        *<a class="local col1 ref" href="#21log" title='log' data-ref="21log">log</a> = <a class="local col8 ref" href="#28ls" title='ls' data-ref="28ls">ls</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_listening_s::log" title='ngx_listening_s::log' data-ref="ngx_listening_s::log">log</a>;</td></tr>
+<tr><th id="476">476</th><td></td></tr>
+<tr><th id="477">477</th><td>        <a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::send" title='ngx_connection_s::send' data-ref="ngx_connection_s::send">send</a> = <a class="macro" href="ngx_event.h.html#432" title="ngx_io.udp_send" data-ref="_M/ngx_udp_send">ngx_udp_send</a>;</td></tr>
+<tr><th id="478">478</th><td>        <a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::send_chain" title='ngx_connection_s::send_chain' data-ref="ngx_connection_s::send_chain">send_chain</a> = <a class="macro" href="ngx_event.h.html#433" title="ngx_io.udp_send_chain" data-ref="_M/ngx_udp_send_chain">ngx_udp_send_chain</a>;</td></tr>
+<tr><th id="479">479</th><td></td></tr>
+<tr><th id="480">480</th><td>        <a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::log" title='ngx_connection_s::log' data-ref="ngx_connection_s::log">log</a> = <a class="local col1 ref" href="#21log" title='log' data-ref="21log">log</a>;</td></tr>
+<tr><th id="481">481</th><td>        <a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::pool" title='ngx_connection_s::pool' data-ref="ngx_connection_s::pool">pool</a>-&gt;<a class="ref field" href="../core/ngx_palloc.h.html#ngx_pool_s::log" title='ngx_pool_s::log' data-ref="ngx_pool_s::log">log</a> = <a class="local col1 ref" href="#21log" title='log' data-ref="21log">log</a>;</td></tr>
+<tr><th id="482">482</th><td></td></tr>
+<tr><th id="483">483</th><td>        <a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::listening" title='ngx_connection_s::listening' data-ref="ngx_connection_s::listening">listening</a> = <a class="local col8 ref" href="#28ls" title='ls' data-ref="28ls">ls</a>;</td></tr>
+<tr><th id="484">484</th><td>        <a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::local_sockaddr" title='ngx_connection_s::local_sockaddr' data-ref="ngx_connection_s::local_sockaddr">local_sockaddr</a> = <a class="local col8 ref" href="#28ls" title='ls' data-ref="28ls">ls</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_listening_s::sockaddr" title='ngx_listening_s::sockaddr' data-ref="ngx_listening_s::sockaddr">sockaddr</a>;</td></tr>
+<tr><th id="485">485</th><td>        <a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::local_socklen" title='ngx_connection_s::local_socklen' data-ref="ngx_connection_s::local_socklen">local_socklen</a> = <a class="local col8 ref" href="#28ls" title='ls' data-ref="28ls">ls</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_listening_s::socklen" title='ngx_listening_s::socklen' data-ref="ngx_listening_s::socklen">socklen</a>;</td></tr>
+<tr><th id="486">486</th><td></td></tr>
+<tr><th id="487">487</th><td><u>#<span data-ppcond="487">if</span> (<a class="macro" href="../../objs/ngx_auto_config.h.html#312" title="1" data-ref="_M/NGX_HAVE_MSGHDR_MSG_CONTROL">NGX_HAVE_MSGHDR_MSG_CONTROL</a>)</u></td></tr>
+<tr><th id="488">488</th><td></td></tr>
+<tr><th id="489">489</th><td>        <b>if</b> (<a class="local col8 ref" href="#28ls" title='ls' data-ref="28ls">ls</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_listening_s::wildcard" title='ngx_listening_s::wildcard' data-ref="ngx_listening_s::wildcard">wildcard</a>) {</td></tr>
+<tr><th id="490">490</th><td>            <b>struct</b> <a class="type" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#cmsghdr" title='cmsghdr' data-ref="cmsghdr">cmsghdr</a>   *<dfn class="local col5 decl" id="35cmsg" title='cmsg' data-type='struct cmsghdr *' data-ref="35cmsg">cmsg</dfn>;</td></tr>
+<tr><th id="491">491</th><td>            <b>struct</b> <a class="type" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#sockaddr" title='sockaddr' data-ref="sockaddr">sockaddr</a>  *<dfn class="local col6 decl" id="36sockaddr" title='sockaddr' data-type='struct sockaddr *' data-ref="36sockaddr">sockaddr</dfn>;</td></tr>
+<tr><th id="492">492</th><td></td></tr>
+<tr><th id="493">493</th><td>            <a class="local col6 ref" href="#36sockaddr" title='sockaddr' data-ref="36sockaddr">sockaddr</a> = <a class="ref fn" href="../core/ngx_palloc.h.html#ngx_palloc" title='ngx_palloc' data-ref="ngx_palloc">ngx_palloc</a>(<a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::pool" title='ngx_connection_s::pool' data-ref="ngx_connection_s::pool">pool</a>, <a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::local_socklen" title='ngx_connection_s::local_socklen' data-ref="ngx_connection_s::local_socklen">local_socklen</a>);</td></tr>
+<tr><th id="494">494</th><td>            <b>if</b> (<a class="local col6 ref" href="#36sockaddr" title='sockaddr' data-ref="36sockaddr">sockaddr</a> == <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>) {</td></tr>
+<tr><th id="495">495</th><td>                <a class="tu ref fn" href="#ngx_close_accepted_connection" title='ngx_close_accepted_connection' data-use='c' data-ref="ngx_close_accepted_connection">ngx_close_accepted_connection</a>(<a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>);</td></tr>
+<tr><th id="496">496</th><td>                <b>return</b>;</td></tr>
+<tr><th id="497">497</th><td>            }</td></tr>
+<tr><th id="498">498</th><td></td></tr>
+<tr><th id="499">499</th><td>            <a class="macro" href="../core/ngx_string.h.html#104" title="(void) memcpy(sockaddr, c-&gt;local_sockaddr, c-&gt;local_socklen)" data-ref="_M/ngx_memcpy">ngx_memcpy</a>(<a class="local col6 ref" href="#36sockaddr" title='sockaddr' data-ref="36sockaddr">sockaddr</a>, <a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::local_sockaddr" title='ngx_connection_s::local_sockaddr' data-ref="ngx_connection_s::local_sockaddr">local_sockaddr</a>, <a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::local_socklen" title='ngx_connection_s::local_socklen' data-ref="ngx_connection_s::local_socklen">local_socklen</a>);</td></tr>
+<tr><th id="500">500</th><td>            <a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::local_sockaddr" title='ngx_connection_s::local_sockaddr' data-ref="ngx_connection_s::local_sockaddr">local_sockaddr</a> = <a class="local col6 ref" href="#36sockaddr" title='sockaddr' data-ref="36sockaddr">sockaddr</a>;</td></tr>
+<tr><th id="501">501</th><td></td></tr>
+<tr><th id="502">502</th><td>            <b>for</b> (<a class="local col5 ref" href="#35cmsg" title='cmsg' data-ref="35cmsg">cmsg</a> = <a class="macro" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#267" title="((size_t) (&amp;msg)-&gt;msg_controllen &gt;= sizeof (struct cmsghdr) ? (struct cmsghdr *) (&amp;msg)-&gt;msg_control : (struct cmsghdr *) 0)" data-ref="_M/CMSG_FIRSTHDR">CMSG_FIRSTHDR</a>(&amp;<a class="local col6 ref" href="#26msg" title='msg' data-ref="26msg">msg</a>);</td></tr>
+<tr><th id="503">503</th><td>                 <a class="local col5 ref" href="#35cmsg" title='cmsg' data-ref="35cmsg">cmsg</a> != <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>;</td></tr>
+<tr><th id="504">504</th><td>                 <a class="local col5 ref" href="#35cmsg" title='cmsg' data-ref="35cmsg">cmsg</a> = <a class="macro" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#266" title="__cmsg_nxthdr (&amp;msg, cmsg)" data-ref="_M/CMSG_NXTHDR">CMSG_NXTHDR</a>(&amp;<a class="local col6 ref" href="#26msg" title='msg' data-ref="26msg">msg</a>, <a class="local col5 ref" href="#35cmsg" title='cmsg' data-ref="35cmsg">cmsg</a>))</td></tr>
+<tr><th id="505">505</th><td>            {</td></tr>
+<tr><th id="506">506</th><td></td></tr>
+<tr><th id="507">507</th><td><u>#<span data-ppcond="507">if</span> (NGX_HAVE_IP_RECVDSTADDR)</u></td></tr>
+<tr><th id="508">508</th><td></td></tr>
+<tr><th id="509">509</th><td>                <b>if</b> (cmsg-&gt;cmsg_level == IPPROTO_IP</td></tr>
+<tr><th id="510">510</th><td>                    &amp;&amp; cmsg-&gt;cmsg_type == IP_RECVDSTADDR</td></tr>
+<tr><th id="511">511</th><td>                    &amp;&amp; sockaddr-&gt;sa_family == AF_INET)</td></tr>
+<tr><th id="512">512</th><td>                {</td></tr>
+<tr><th id="513">513</th><td>                    <b>struct</b> in_addr      *addr;</td></tr>
+<tr><th id="514">514</th><td>                    <b>struct</b> sockaddr_in  *sin;</td></tr>
+<tr><th id="515">515</th><td></td></tr>
+<tr><th id="516">516</th><td>                    addr = (<b>struct</b> in_addr *) CMSG_DATA(cmsg);</td></tr>
+<tr><th id="517">517</th><td>                    sin = (<b>struct</b> sockaddr_in *) sockaddr;</td></tr>
+<tr><th id="518">518</th><td>                    sin-&gt;sin_addr = *addr;</td></tr>
+<tr><th id="519">519</th><td></td></tr>
+<tr><th id="520">520</th><td>                    <b>break</b>;</td></tr>
+<tr><th id="521">521</th><td>                }</td></tr>
+<tr><th id="522">522</th><td></td></tr>
+<tr><th id="523">523</th><td><u>#<span data-ppcond="507">elif</span> (<a class="macro" href="../../objs/ngx_auto_config.h.html#147" title="1" data-ref="_M/NGX_HAVE_IP_PKTINFO">NGX_HAVE_IP_PKTINFO</a>)</u></td></tr>
+<tr><th id="524">524</th><td></td></tr>
+<tr><th id="525">525</th><td>                <b>if</b> (<a class="local col5 ref" href="#35cmsg" title='cmsg' data-ref="35cmsg">cmsg</a>-&gt;<a class="ref field" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#cmsghdr::cmsg_level" title='cmsghdr::cmsg_level' data-ref="cmsghdr::cmsg_level">cmsg_level</a> == <a class="macro" href="../../../include/netinet/in.h.html#43" title="IPPROTO_IP" data-ref="_M/IPPROTO_IP">IPPROTO_IP</a></td></tr>
+<tr><th id="526">526</th><td>                    &amp;&amp; <a class="local col5 ref" href="#35cmsg" title='cmsg' data-ref="35cmsg">cmsg</a>-&gt;<a class="ref field" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#cmsghdr::cmsg_type" title='cmsghdr::cmsg_type' data-ref="cmsghdr::cmsg_type">cmsg_type</a> == <a class="macro" href="../../../include/x86_64-linux-gnu/bits/in.h.html#73" title="8" data-ref="_M/IP_PKTINFO">IP_PKTINFO</a></td></tr>
+<tr><th id="527">527</th><td>                    &amp;&amp; <a class="local col6 ref" href="#36sockaddr" title='sockaddr' data-ref="36sockaddr">sockaddr</a>-&gt;<a class="ref field" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#155" title='sockaddr::sa_family' data-ref="sockaddr::sa_family">sa_family</a> == <a class="macro" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#92" title="2" data-ref="_M/AF_INET">AF_INET</a>)</td></tr>
+<tr><th id="528">528</th><td>                {</td></tr>
+<tr><th id="529">529</th><td>                    <b>struct</b> <a class="type" href="../../../include/x86_64-linux-gnu/bits/in.h.html#in_pktinfo" title='in_pktinfo' data-ref="in_pktinfo">in_pktinfo</a>   *<dfn class="local col7 decl" id="37pkt" title='pkt' data-type='struct in_pktinfo *' data-ref="37pkt">pkt</dfn>;</td></tr>
+<tr><th id="530">530</th><td>                    <b>struct</b> <a class="type" href="../../../include/netinet/in.h.html#sockaddr_in" title='sockaddr_in' data-ref="sockaddr_in">sockaddr_in</a>  *<dfn class="local col8 decl" id="38sin" title='sin' data-type='struct sockaddr_in *' data-ref="38sin">sin</dfn>;</td></tr>
+<tr><th id="531">531</th><td></td></tr>
+<tr><th id="532">532</th><td>                    <a class="local col7 ref" href="#37pkt" title='pkt' data-ref="37pkt">pkt</a> = (<b>struct</b> <a class="type" href="../../../include/x86_64-linux-gnu/bits/in.h.html#in_pktinfo" title='in_pktinfo' data-ref="in_pktinfo">in_pktinfo</a> *) <a class="macro" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#262" title="((cmsg)-&gt;__cmsg_data)" data-ref="_M/CMSG_DATA">CMSG_DATA</a>(<a class="local col5 ref" href="#35cmsg" title='cmsg' data-ref="35cmsg">cmsg</a>);</td></tr>
+<tr><th id="533">533</th><td>                    <a class="local col8 ref" href="#38sin" title='sin' data-ref="38sin">sin</a> = (<b>struct</b> <a class="type" href="../../../include/netinet/in.h.html#sockaddr_in" title='sockaddr_in' data-ref="sockaddr_in">sockaddr_in</a> *) <a class="local col6 ref" href="#36sockaddr" title='sockaddr' data-ref="36sockaddr">sockaddr</a>;</td></tr>
+<tr><th id="534">534</th><td>                    <a class="local col8 ref" href="#38sin" title='sin' data-ref="38sin">sin</a>-&gt;<a class="ref field" href="../../../include/netinet/in.h.html#sockaddr_in::sin_addr" title='sockaddr_in::sin_addr' data-ref="sockaddr_in::sin_addr">sin_addr</a> = <a class="local col7 ref" href="#37pkt" title='pkt' data-ref="37pkt">pkt</a>-&gt;<a class="ref field" href="../../../include/x86_64-linux-gnu/bits/in.h.html#in_pktinfo::ipi_addr" title='in_pktinfo::ipi_addr' data-ref="in_pktinfo::ipi_addr">ipi_addr</a>;</td></tr>
+<tr><th id="535">535</th><td></td></tr>
+<tr><th id="536">536</th><td>                    <b>break</b>;</td></tr>
+<tr><th id="537">537</th><td>                }</td></tr>
+<tr><th id="538">538</th><td></td></tr>
+<tr><th id="539">539</th><td><u>#<span data-ppcond="507">endif</span></u></td></tr>
+<tr><th id="540">540</th><td></td></tr>
+<tr><th id="541">541</th><td><u>#<span data-ppcond="541">if</span> (<a class="macro" href="../../objs/ngx_auto_config.h.html#247" title="1" data-ref="_M/NGX_HAVE_INET6">NGX_HAVE_INET6</a> &amp;&amp; <a class="macro" href="../../objs/ngx_auto_config.h.html#152" title="1" data-ref="_M/NGX_HAVE_IPV6_RECVPKTINFO">NGX_HAVE_IPV6_RECVPKTINFO</a>)</u></td></tr>
+<tr><th id="542">542</th><td></td></tr>
+<tr><th id="543">543</th><td>                <b>if</b> (<a class="local col5 ref" href="#35cmsg" title='cmsg' data-ref="35cmsg">cmsg</a>-&gt;<a class="ref field" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#cmsghdr::cmsg_level" title='cmsghdr::cmsg_level' data-ref="cmsghdr::cmsg_level">cmsg_level</a> == <a class="macro" href="../../../include/netinet/in.h.html#65" title="IPPROTO_IPV6" data-ref="_M/IPPROTO_IPV6">IPPROTO_IPV6</a></td></tr>
+<tr><th id="544">544</th><td>                    &amp;&amp; <a class="local col5 ref" href="#35cmsg" title='cmsg' data-ref="35cmsg">cmsg</a>-&gt;<a class="ref field" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#cmsghdr::cmsg_type" title='cmsghdr::cmsg_type' data-ref="cmsghdr::cmsg_type">cmsg_type</a> == <a class="macro" href="../../../include/x86_64-linux-gnu/bits/in.h.html#190" title="50" data-ref="_M/IPV6_PKTINFO">IPV6_PKTINFO</a></td></tr>
+<tr><th id="545">545</th><td>                    &amp;&amp; <a class="local col6 ref" href="#36sockaddr" title='sockaddr' data-ref="36sockaddr">sockaddr</a>-&gt;<a class="ref field" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#155" title='sockaddr::sa_family' data-ref="sockaddr::sa_family">sa_family</a> == <a class="macro" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#100" title="10" data-ref="_M/AF_INET6">AF_INET6</a>)</td></tr>
+<tr><th id="546">546</th><td>                {</td></tr>
+<tr><th id="547">547</th><td>                    <b>struct</b> <a class="type" href="../../../include/netinet/in.h.html#in6_pktinfo" title='in6_pktinfo' data-ref="in6_pktinfo">in6_pktinfo</a>   *<dfn class="local col9 decl" id="39pkt6" title='pkt6' data-type='struct in6_pktinfo *' data-ref="39pkt6">pkt6</dfn>;</td></tr>
+<tr><th id="548">548</th><td>                    <b>struct</b> <a class="type" href="../../../include/netinet/in.h.html#sockaddr_in6" title='sockaddr_in6' data-ref="sockaddr_in6">sockaddr_in6</a>  *<dfn class="local col0 decl" id="40sin6" title='sin6' data-type='struct sockaddr_in6 *' data-ref="40sin6">sin6</dfn>;</td></tr>
+<tr><th id="549">549</th><td></td></tr>
+<tr><th id="550">550</th><td>                    <a class="local col9 ref" href="#39pkt6" title='pkt6' data-ref="39pkt6">pkt6</a> = (<b>struct</b> <a class="type" href="../../../include/netinet/in.h.html#in6_pktinfo" title='in6_pktinfo' data-ref="in6_pktinfo">in6_pktinfo</a> *) <a class="macro" href="../../../include/x86_64-linux-gnu/bits/socket.h.html#262" title="((cmsg)-&gt;__cmsg_data)" data-ref="_M/CMSG_DATA">CMSG_DATA</a>(<a class="local col5 ref" href="#35cmsg" title='cmsg' data-ref="35cmsg">cmsg</a>);</td></tr>
+<tr><th id="551">551</th><td>                    <a class="local col0 ref" href="#40sin6" title='sin6' data-ref="40sin6">sin6</a> = (<b>struct</b> <a class="type" href="../../../include/netinet/in.h.html#sockaddr_in6" title='sockaddr_in6' data-ref="sockaddr_in6">sockaddr_in6</a> *) <a class="local col6 ref" href="#36sockaddr" title='sockaddr' data-ref="36sockaddr">sockaddr</a>;</td></tr>
+<tr><th id="552">552</th><td>                    <a class="local col0 ref" href="#40sin6" title='sin6' data-ref="40sin6">sin6</a>-&gt;<a class="ref field" href="../../../include/netinet/in.h.html#sockaddr_in6::sin6_addr" title='sockaddr_in6::sin6_addr' data-ref="sockaddr_in6::sin6_addr">sin6_addr</a> = <a class="local col9 ref" href="#39pkt6" title='pkt6' data-ref="39pkt6">pkt6</a>-&gt;<a class="ref field" href="../../../include/netinet/in.h.html#in6_pktinfo::ipi6_addr" title='in6_pktinfo::ipi6_addr' data-ref="in6_pktinfo::ipi6_addr">ipi6_addr</a>;</td></tr>
+<tr><th id="553">553</th><td></td></tr>
+<tr><th id="554">554</th><td>                    <b>break</b>;</td></tr>
+<tr><th id="555">555</th><td>                }</td></tr>
+<tr><th id="556">556</th><td></td></tr>
+<tr><th id="557">557</th><td><u>#<span data-ppcond="541">endif</span></u></td></tr>
+<tr><th id="558">558</th><td></td></tr>
+<tr><th id="559">559</th><td>            }</td></tr>
+<tr><th id="560">560</th><td>        }</td></tr>
+<tr><th id="561">561</th><td></td></tr>
+<tr><th id="562">562</th><td><u>#<span data-ppcond="487">endif</span></u></td></tr>
+<tr><th id="563">563</th><td></td></tr>
+<tr><th id="564">564</th><td>        <a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::buffer" title='ngx_connection_s::buffer' data-ref="ngx_connection_s::buffer">buffer</a> = <a class="ref fn" href="../core/ngx_buf.h.html#ngx_create_temp_buf" title='ngx_create_temp_buf' data-ref="ngx_create_temp_buf">ngx_create_temp_buf</a>(<a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::pool" title='ngx_connection_s::pool' data-ref="ngx_connection_s::pool">pool</a>, <a class="local col0 ref" href="#20n" title='n' data-ref="20n">n</a>);</td></tr>
+<tr><th id="565">565</th><td>        <b>if</b> (<a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::buffer" title='ngx_connection_s::buffer' data-ref="ngx_connection_s::buffer">buffer</a> == <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>) {</td></tr>
+<tr><th id="566">566</th><td>            <a class="tu ref fn" href="#ngx_close_accepted_connection" title='ngx_close_accepted_connection' data-use='c' data-ref="ngx_close_accepted_connection">ngx_close_accepted_connection</a>(<a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>);</td></tr>
+<tr><th id="567">567</th><td>            <b>return</b>;</td></tr>
+<tr><th id="568">568</th><td>        }</td></tr>
+<tr><th id="569">569</th><td></td></tr>
+<tr><th id="570">570</th><td>        <a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::buffer" title='ngx_connection_s::buffer' data-ref="ngx_connection_s::buffer">buffer</a>-&gt;<a class="ref field" href="../core/ngx_buf.h.html#ngx_buf_s::last" title='ngx_buf_s::last' data-ref="ngx_buf_s::last">last</a> = <a class="macro" href="../core/ngx_string.h.html#105" title="(((u_char *) memcpy(c-&gt;buffer-&gt;last, buffer, n)) + (n))" data-ref="_M/ngx_cpymem">ngx_cpymem</a>(<a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::buffer" title='ngx_connection_s::buffer' data-ref="ngx_connection_s::buffer">buffer</a>-&gt;<a class="ref field" href="../core/ngx_buf.h.html#ngx_buf_s::last" title='ngx_buf_s::last' data-ref="ngx_buf_s::last">last</a>, <a class="local col2 ref" href="#32buffer" title='buffer' data-ref="32buffer">buffer</a>, <a class="local col0 ref" href="#20n" title='n' data-ref="20n">n</a>);</td></tr>
+<tr><th id="571">571</th><td></td></tr>
+<tr><th id="572">572</th><td>        <a class="local col3 ref" href="#23rev" title='rev' data-ref="23rev">rev</a> = <a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::read" title='ngx_connection_s::read' data-ref="ngx_connection_s::read">read</a>;</td></tr>
+<tr><th id="573">573</th><td>        <a class="local col4 ref" href="#24wev" title='wev' data-ref="24wev">wev</a> = <a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::write" title='ngx_connection_s::write' data-ref="ngx_connection_s::write">write</a>;</td></tr>
+<tr><th id="574">574</th><td></td></tr>
+<tr><th id="575">575</th><td>        <a class="local col4 ref" href="#24wev" title='wev' data-ref="24wev">wev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::ready" title='ngx_event_s::ready' data-ref="ngx_event_s::ready">ready</a> = <var>1</var>;</td></tr>
+<tr><th id="576">576</th><td></td></tr>
+<tr><th id="577">577</th><td>        <a class="local col3 ref" href="#23rev" title='rev' data-ref="23rev">rev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::log" title='ngx_event_s::log' data-ref="ngx_event_s::log">log</a> = <a class="local col1 ref" href="#21log" title='log' data-ref="21log">log</a>;</td></tr>
+<tr><th id="578">578</th><td>        <a class="local col4 ref" href="#24wev" title='wev' data-ref="24wev">wev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::log" title='ngx_event_s::log' data-ref="ngx_event_s::log">log</a> = <a class="local col1 ref" href="#21log" title='log' data-ref="21log">log</a>;</td></tr>
+<tr><th id="579">579</th><td></td></tr>
+<tr><th id="580">580</th><td>        <i>/*</i></td></tr>
+<tr><th id="581">581</th><td><i>         * TODO: MT: - ngx_atomic_fetch_add()</i></td></tr>
+<tr><th id="582">582</th><td><i>         *             or protection by critical section or light mutex</i></td></tr>
+<tr><th id="583">583</th><td><i>         *</i></td></tr>
+<tr><th id="584">584</th><td><i>         * TODO: MP: - allocated in a shared memory</i></td></tr>
+<tr><th id="585">585</th><td><i>         *           - ngx_atomic_fetch_add()</i></td></tr>
+<tr><th id="586">586</th><td><i>         *             or protection by critical section or light mutex</i></td></tr>
+<tr><th id="587">587</th><td><i>         */</i></td></tr>
+<tr><th id="588">588</th><td></td></tr>
+<tr><th id="589">589</th><td>        <a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::number" title='ngx_connection_s::number' data-ref="ngx_connection_s::number">number</a> = <a class="macro" href="../os/unix/ngx_atomic.h.html#112" title="__sync_fetch_and_add(ngx_connection_counter, 1)" data-ref="_M/ngx_atomic_fetch_add">ngx_atomic_fetch_add</a>(<a class="ref" href="ngx_event.h.html#ngx_connection_counter" title='ngx_connection_counter' data-ref="ngx_connection_counter">ngx_connection_counter</a>, <var>1</var>);</td></tr>
+<tr><th id="590">590</th><td></td></tr>
+<tr><th id="591">591</th><td><u>#<span data-ppcond="591">if</span> (NGX_STAT_STUB)</u></td></tr>
+<tr><th id="592">592</th><td>        (<em>void</em>) ngx_atomic_fetch_add(ngx_stat_handled, <var>1</var>);</td></tr>
+<tr><th id="593">593</th><td><u>#<span data-ppcond="591">endif</span></u></td></tr>
+<tr><th id="594">594</th><td></td></tr>
+<tr><th id="595">595</th><td>        <b>if</b> (<a class="local col8 ref" href="#28ls" title='ls' data-ref="28ls">ls</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_listening_s::addr_ntop" title='ngx_listening_s::addr_ntop' data-ref="ngx_listening_s::addr_ntop">addr_ntop</a>) {</td></tr>
+<tr><th id="596">596</th><td>            <a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::addr_text" title='ngx_connection_s::addr_text' data-ref="ngx_connection_s::addr_text">addr_text</a>.<a class="ref field" href="../core/ngx_string.h.html#(anonymous)::data" title='(anonymous struct)::data' data-ref="(anonymous)::data">data</a> = <a class="ref fn" href="../core/ngx_palloc.h.html#ngx_pnalloc" title='ngx_pnalloc' data-ref="ngx_pnalloc">ngx_pnalloc</a>(<a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::pool" title='ngx_connection_s::pool' data-ref="ngx_connection_s::pool">pool</a>, <a class="local col8 ref" href="#28ls" title='ls' data-ref="28ls">ls</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_listening_s::addr_text_max_len" title='ngx_listening_s::addr_text_max_len' data-ref="ngx_listening_s::addr_text_max_len">addr_text_max_len</a>);</td></tr>
+<tr><th id="597">597</th><td>            <b>if</b> (<a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::addr_text" title='ngx_connection_s::addr_text' data-ref="ngx_connection_s::addr_text">addr_text</a>.<a class="ref field" href="../core/ngx_string.h.html#(anonymous)::data" title='(anonymous struct)::data' data-ref="(anonymous)::data">data</a> == <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>) {</td></tr>
+<tr><th id="598">598</th><td>                <a class="tu ref fn" href="#ngx_close_accepted_connection" title='ngx_close_accepted_connection' data-use='c' data-ref="ngx_close_accepted_connection">ngx_close_accepted_connection</a>(<a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>);</td></tr>
+<tr><th id="599">599</th><td>                <b>return</b>;</td></tr>
+<tr><th id="600">600</th><td>            }</td></tr>
+<tr><th id="601">601</th><td></td></tr>
+<tr><th id="602">602</th><td>            <a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::addr_text" title='ngx_connection_s::addr_text' data-ref="ngx_connection_s::addr_text">addr_text</a>.<a class="ref field" href="../core/ngx_string.h.html#(anonymous)::len" title='(anonymous struct)::len' data-ref="(anonymous)::len">len</a> = <a class="ref fn" href="../core/ngx_inet.h.html#ngx_sock_ntop" title='ngx_sock_ntop' data-ref="ngx_sock_ntop">ngx_sock_ntop</a>(<a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::sockaddr" title='ngx_connection_s::sockaddr' data-ref="ngx_connection_s::sockaddr">sockaddr</a>, <a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::socklen" title='ngx_connection_s::socklen' data-ref="ngx_connection_s::socklen">socklen</a>,</td></tr>
+<tr><th id="603">603</th><td>                                             <a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::addr_text" title='ngx_connection_s::addr_text' data-ref="ngx_connection_s::addr_text">addr_text</a>.<a class="ref field" href="../core/ngx_string.h.html#(anonymous)::data" title='(anonymous struct)::data' data-ref="(anonymous)::data">data</a>,</td></tr>
+<tr><th id="604">604</th><td>                                             <a class="local col8 ref" href="#28ls" title='ls' data-ref="28ls">ls</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_listening_s::addr_text_max_len" title='ngx_listening_s::addr_text_max_len' data-ref="ngx_listening_s::addr_text_max_len">addr_text_max_len</a>, <var>0</var>);</td></tr>
+<tr><th id="605">605</th><td>            <b>if</b> (<a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::addr_text" title='ngx_connection_s::addr_text' data-ref="ngx_connection_s::addr_text">addr_text</a>.<a class="ref field" href="../core/ngx_string.h.html#(anonymous)::len" title='(anonymous struct)::len' data-ref="(anonymous)::len">len</a> == <var>0</var>) {</td></tr>
+<tr><th id="606">606</th><td>                <a class="tu ref fn" href="#ngx_close_accepted_connection" title='ngx_close_accepted_connection' data-use='c' data-ref="ngx_close_accepted_connection">ngx_close_accepted_connection</a>(<a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>);</td></tr>
+<tr><th id="607">607</th><td>                <b>return</b>;</td></tr>
+<tr><th id="608">608</th><td>            }</td></tr>
+<tr><th id="609">609</th><td>        }</td></tr>
+<tr><th id="610">610</th><td></td></tr>
+<tr><th id="611">611</th><td><u>#<span data-ppcond="611">if</span> (NGX_DEBUG)</u></td></tr>
+<tr><th id="612">612</th><td>        {</td></tr>
+<tr><th id="613">613</th><td>        ngx_str_t  addr;</td></tr>
+<tr><th id="614">614</th><td>        u_char     text[NGX_SOCKADDR_STRLEN];</td></tr>
+<tr><th id="615">615</th><td></td></tr>
+<tr><th id="616">616</th><td>        ngx_debug_accepted_connection(ecf, c);</td></tr>
+<tr><th id="617">617</th><td></td></tr>
+<tr><th id="618">618</th><td>        <b>if</b> (log-&gt;log_level &amp; NGX_LOG_DEBUG_EVENT) {</td></tr>
+<tr><th id="619">619</th><td>            addr.data = text;</td></tr>
+<tr><th id="620">620</th><td>            addr.len = ngx_sock_ntop(c-&gt;sockaddr, c-&gt;socklen, text,</td></tr>
+<tr><th id="621">621</th><td>                                     NGX_SOCKADDR_STRLEN, <var>1</var>);</td></tr>
+<tr><th id="622">622</th><td></td></tr>
+<tr><th id="623">623</th><td>            ngx_log_debug4(NGX_LOG_DEBUG_EVENT, log, <var>0</var>,</td></tr>
+<tr><th id="624">624</th><td>                           <q>"*%uA recvmsg: %V fd:%d n:%z"</q>,</td></tr>
+<tr><th id="625">625</th><td>                           c-&gt;number, &amp;addr, c-&gt;fd, n);</td></tr>
+<tr><th id="626">626</th><td>        }</td></tr>
+<tr><th id="627">627</th><td></td></tr>
+<tr><th id="628">628</th><td>        }</td></tr>
+<tr><th id="629">629</th><td><u>#<span data-ppcond="611">endif</span></u></td></tr>
+<tr><th id="630">630</th><td></td></tr>
+<tr><th id="631">631</th><td>        <a class="local col1 ref" href="#21log" title='log' data-ref="21log">log</a>-&gt;<a class="ref field" href="../core/ngx_log.h.html#ngx_log_s::data" title='ngx_log_s::data' data-ref="ngx_log_s::data">data</a> = <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>;</td></tr>
+<tr><th id="632">632</th><td>        <a class="local col1 ref" href="#21log" title='log' data-ref="21log">log</a>-&gt;<a class="ref field" href="../core/ngx_log.h.html#ngx_log_s::handler" title='ngx_log_s::handler' data-ref="ngx_log_s::handler">handler</a> = <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>;</td></tr>
+<tr><th id="633">633</th><td></td></tr>
+<tr><th id="634">634</th><td>        <a class="local col8 ref" href="#28ls" title='ls' data-ref="28ls">ls</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_listening_s::handler" title='ngx_listening_s::handler' data-ref="ngx_listening_s::handler">handler</a>(<a class="local col0 ref" href="#30c" title='c' data-ref="30c">c</a>);</td></tr>
+<tr><th id="635">635</th><td></td></tr>
+<tr><th id="636">636</th><td>        <b>if</b> (<a class="ref" href="ngx_event.h.html#ngx_event_flags" title='ngx_event_flags' data-ref="ngx_event_flags">ngx_event_flags</a> &amp; <a class="macro" href="ngx_event.h.html#225" title="0x00000008" data-ref="_M/NGX_USE_KQUEUE_EVENT">NGX_USE_KQUEUE_EVENT</a>) {</td></tr>
+<tr><th id="637">637</th><td>            <a class="local col9 ref" href="#19ev" title='ev' data-ref="19ev">ev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::available" title='ngx_event_s::available' data-ref="ngx_event_s::available">available</a> -= <a class="local col0 ref" href="#20n" title='n' data-ref="20n">n</a>;</td></tr>
+<tr><th id="638">638</th><td>        }</td></tr>
+<tr><th id="639">639</th><td></td></tr>
+<tr><th id="640">640</th><td>    } <b>while</b> (<a class="local col9 ref" href="#19ev" title='ev' data-ref="19ev">ev</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::available" title='ngx_event_s::available' data-ref="ngx_event_s::available">available</a>);</td></tr>
+<tr><th id="641">641</th><td>}</td></tr>
+<tr><th id="642">642</th><td></td></tr>
+<tr><th id="643">643</th><td><u>#<span data-ppcond="323">endif</span></u></td></tr>
+<tr><th id="644">644</th><td></td></tr>
+<tr><th id="645">645</th><td></td></tr>
+<tr><th id="646">646</th><td><a class="typedef" href="../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a></td></tr>
+<tr><th id="647">647</th><td><dfn class="decl def fn" id="ngx_trylock_accept_mutex" title='ngx_trylock_accept_mutex' data-ref="ngx_trylock_accept_mutex">ngx_trylock_accept_mutex</dfn>(<a class="typedef" href="../core/ngx_core.h.html#ngx_cycle_t" title='ngx_cycle_t' data-type='struct ngx_cycle_s' data-ref="ngx_cycle_t">ngx_cycle_t</a> *<dfn class="local col1 decl" id="41cycle" title='cycle' data-type='ngx_cycle_t *' data-ref="41cycle">cycle</dfn>)</td></tr>
+<tr><th id="648">648</th><td>{</td></tr>
+<tr><th id="649">649</th><td>    <b>if</b> (<a class="ref fn" href="../core/ngx_shmtx.h.html#ngx_shmtx_trylock" title='ngx_shmtx_trylock' data-ref="ngx_shmtx_trylock">ngx_shmtx_trylock</a>(&amp;<a class="ref" href="ngx_event.h.html#ngx_accept_mutex" title='ngx_accept_mutex' data-ref="ngx_accept_mutex">ngx_accept_mutex</a>)) {</td></tr>
+<tr><th id="650">650</th><td></td></tr>
+<tr><th id="651">651</th><td>        <a class="macro" href="../core/ngx_log.h.html#215" title="" data-ref="_M/ngx_log_debug0">ngx_log_debug0</a>(NGX_LOG_DEBUG_EVENT, cycle-&gt;log, <var>0</var>,</td></tr>
+<tr><th id="652">652</th><td>                       <q>"accept mutex locked"</q>);</td></tr>
+<tr><th id="653">653</th><td></td></tr>
+<tr><th id="654">654</th><td>        <b>if</b> (<a class="ref" href="ngx_event.h.html#ngx_accept_mutex_held" title='ngx_accept_mutex_held' data-ref="ngx_accept_mutex_held">ngx_accept_mutex_held</a> &amp;&amp; <a class="ref" href="ngx_event.h.html#ngx_accept_events" title='ngx_accept_events' data-ref="ngx_accept_events">ngx_accept_events</a> == <var>0</var>) {</td></tr>
+<tr><th id="655">655</th><td>            <b>return</b> <a class="macro" href="../core/ngx_core.h.html#35" title="0" data-ref="_M/NGX_OK">NGX_OK</a>;</td></tr>
+<tr><th id="656">656</th><td>        }</td></tr>
+<tr><th id="657">657</th><td></td></tr>
+<tr><th id="658">658</th><td>        <b>if</b> (<a class="tu ref fn" href="#ngx_enable_accept_events" title='ngx_enable_accept_events' data-use='c' data-ref="ngx_enable_accept_events">ngx_enable_accept_events</a>(<a class="local col1 ref" href="#41cycle" title='cycle' data-ref="41cycle">cycle</a>) == <a class="macro" href="../core/ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>) {</td></tr>
+<tr><th id="659">659</th><td>            <a class="ref fn" href="../core/ngx_shmtx.h.html#ngx_shmtx_unlock" title='ngx_shmtx_unlock' data-ref="ngx_shmtx_unlock">ngx_shmtx_unlock</a>(&amp;<a class="ref" href="ngx_event.h.html#ngx_accept_mutex" title='ngx_accept_mutex' data-ref="ngx_accept_mutex">ngx_accept_mutex</a>);</td></tr>
+<tr><th id="660">660</th><td>            <b>return</b> <a class="macro" href="../core/ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>;</td></tr>
+<tr><th id="661">661</th><td>        }</td></tr>
+<tr><th id="662">662</th><td></td></tr>
+<tr><th id="663">663</th><td>        <a class="ref" href="ngx_event.h.html#ngx_accept_events" title='ngx_accept_events' data-ref="ngx_accept_events">ngx_accept_events</a> = <var>0</var>;</td></tr>
+<tr><th id="664">664</th><td>        <a class="ref" href="ngx_event.h.html#ngx_accept_mutex_held" title='ngx_accept_mutex_held' data-ref="ngx_accept_mutex_held">ngx_accept_mutex_held</a> = <var>1</var>;</td></tr>
+<tr><th id="665">665</th><td></td></tr>
+<tr><th id="666">666</th><td>        <b>return</b> <a class="macro" href="../core/ngx_core.h.html#35" title="0" data-ref="_M/NGX_OK">NGX_OK</a>;</td></tr>
+<tr><th id="667">667</th><td>    }</td></tr>
+<tr><th id="668">668</th><td></td></tr>
+<tr><th id="669">669</th><td>    <a class="macro" href="../core/ngx_log.h.html#216" title="" data-ref="_M/ngx_log_debug1">ngx_log_debug1</a>(NGX_LOG_DEBUG_EVENT, cycle-&gt;log, <var>0</var>,</td></tr>
+<tr><th id="670">670</th><td>                   <q>"accept mutex lock failed: %ui"</q>, ngx_accept_mutex_held);</td></tr>
+<tr><th id="671">671</th><td></td></tr>
+<tr><th id="672">672</th><td>    <b>if</b> (<a class="ref" href="ngx_event.h.html#ngx_accept_mutex_held" title='ngx_accept_mutex_held' data-ref="ngx_accept_mutex_held">ngx_accept_mutex_held</a>) {</td></tr>
+<tr><th id="673">673</th><td>        <b>if</b> (<a class="tu ref fn" href="#ngx_disable_accept_events" title='ngx_disable_accept_events' data-use='c' data-ref="ngx_disable_accept_events">ngx_disable_accept_events</a>(<a class="local col1 ref" href="#41cycle" title='cycle' data-ref="41cycle">cycle</a>, <var>0</var>) == <a class="macro" href="../core/ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>) {</td></tr>
+<tr><th id="674">674</th><td>            <b>return</b> <a class="macro" href="../core/ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>;</td></tr>
+<tr><th id="675">675</th><td>        }</td></tr>
+<tr><th id="676">676</th><td></td></tr>
+<tr><th id="677">677</th><td>        <a class="ref" href="ngx_event.h.html#ngx_accept_mutex_held" title='ngx_accept_mutex_held' data-ref="ngx_accept_mutex_held">ngx_accept_mutex_held</a> = <var>0</var>;</td></tr>
+<tr><th id="678">678</th><td>    }</td></tr>
+<tr><th id="679">679</th><td></td></tr>
+<tr><th id="680">680</th><td>    <b>return</b> <a class="macro" href="../core/ngx_core.h.html#35" title="0" data-ref="_M/NGX_OK">NGX_OK</a>;</td></tr>
+<tr><th id="681">681</th><td>}</td></tr>
+<tr><th id="682">682</th><td></td></tr>
+<tr><th id="683">683</th><td></td></tr>
+<tr><th id="684">684</th><td><em>static</em> <a class="typedef" href="../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a></td></tr>
+<tr><th id="685">685</th><td><dfn class="tu decl def fn" id="ngx_enable_accept_events" title='ngx_enable_accept_events' data-type='ngx_int_t ngx_enable_accept_events(ngx_cycle_t * cycle)' data-ref="ngx_enable_accept_events">ngx_enable_accept_events</dfn>(<a class="typedef" href="../core/ngx_core.h.html#ngx_cycle_t" title='ngx_cycle_t' data-type='struct ngx_cycle_s' data-ref="ngx_cycle_t">ngx_cycle_t</a> *<dfn class="local col2 decl" id="42cycle" title='cycle' data-type='ngx_cycle_t *' data-ref="42cycle">cycle</dfn>)</td></tr>
+<tr><th id="686">686</th><td>{</td></tr>
+<tr><th id="687">687</th><td>    <a class="typedef" href="../core/ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>         <dfn class="local col3 decl" id="43i" title='i' data-type='ngx_uint_t' data-ref="43i">i</dfn>;</td></tr>
+<tr><th id="688">688</th><td>    <a class="typedef" href="../core/ngx_connection.h.html#ngx_listening_t" title='ngx_listening_t' data-type='struct ngx_listening_s' data-ref="ngx_listening_t">ngx_listening_t</a>   *<dfn class="local col4 decl" id="44ls" title='ls' data-type='ngx_listening_t *' data-ref="44ls">ls</dfn>;</td></tr>
+<tr><th id="689">689</th><td>    <a class="typedef" href="../core/ngx_core.h.html#ngx_connection_t" title='ngx_connection_t' data-type='struct ngx_connection_s' data-ref="ngx_connection_t">ngx_connection_t</a>  *<dfn class="local col5 decl" id="45c" title='c' data-type='ngx_connection_t *' data-ref="45c">c</dfn>;</td></tr>
+<tr><th id="690">690</th><td></td></tr>
+<tr><th id="691">691</th><td>    <a class="local col4 ref" href="#44ls" title='ls' data-ref="44ls">ls</a> = <a class="local col2 ref" href="#42cycle" title='cycle' data-ref="42cycle">cycle</a>-&gt;<a class="ref field" href="../core/ngx_cycle.h.html#ngx_cycle_s::listening" title='ngx_cycle_s::listening' data-ref="ngx_cycle_s::listening">listening</a>.<a class="ref field" href="../core/ngx_array.h.html#(anonymous)::elts" title='(anonymous struct)::elts' data-ref="(anonymous)::elts">elts</a>;</td></tr>
+<tr><th id="692">692</th><td>    <b>for</b> (<a class="local col3 ref" href="#43i" title='i' data-ref="43i">i</a> = <var>0</var>; <a class="local col3 ref" href="#43i" title='i' data-ref="43i">i</a> &lt; <a class="local col2 ref" href="#42cycle" title='cycle' data-ref="42cycle">cycle</a>-&gt;<a class="ref field" href="../core/ngx_cycle.h.html#ngx_cycle_s::listening" title='ngx_cycle_s::listening' data-ref="ngx_cycle_s::listening">listening</a>.<a class="ref field" href="../core/ngx_array.h.html#(anonymous)::nelts" title='(anonymous struct)::nelts' data-ref="(anonymous)::nelts">nelts</a>; <a class="local col3 ref" href="#43i" title='i' data-ref="43i">i</a>++) {</td></tr>
+<tr><th id="693">693</th><td></td></tr>
+<tr><th id="694">694</th><td>        <a class="local col5 ref" href="#45c" title='c' data-ref="45c">c</a> = <a class="local col4 ref" href="#44ls" title='ls' data-ref="44ls">ls</a>[<a class="local col3 ref" href="#43i" title='i' data-ref="43i">i</a>].<a class="ref field" href="../core/ngx_connection.h.html#ngx_listening_s::connection" title='ngx_listening_s::connection' data-ref="ngx_listening_s::connection">connection</a>;</td></tr>
+<tr><th id="695">695</th><td></td></tr>
+<tr><th id="696">696</th><td>        <b>if</b> (<a class="local col5 ref" href="#45c" title='c' data-ref="45c">c</a> == <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span> || <a class="local col5 ref" href="#45c" title='c' data-ref="45c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::read" title='ngx_connection_s::read' data-ref="ngx_connection_s::read">read</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::active" title='ngx_event_s::active' data-ref="ngx_event_s::active">active</a>) {</td></tr>
+<tr><th id="697">697</th><td>            <b>continue</b>;</td></tr>
+<tr><th id="698">698</th><td>        }</td></tr>
+<tr><th id="699">699</th><td></td></tr>
+<tr><th id="700">700</th><td>        <b>if</b> (<a class="macro" href="ngx_event.h.html#414" title="ngx_event_actions.add" data-ref="_M/ngx_add_event">ngx_add_event</a>(<a class="local col5 ref" href="#45c" title='c' data-ref="45c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::read" title='ngx_connection_s::read' data-ref="ngx_connection_s::read">read</a>, <a class="macro" href="ngx_event.h.html#360" title="(EPOLLIN|EPOLLRDHUP)" data-ref="_M/NGX_READ_EVENT">NGX_READ_EVENT</a>, <var>0</var>) == <a class="macro" href="../core/ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>) {</td></tr>
+<tr><th id="701">701</th><td>            <b>return</b> <a class="macro" href="../core/ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>;</td></tr>
+<tr><th id="702">702</th><td>        }</td></tr>
+<tr><th id="703">703</th><td>    }</td></tr>
+<tr><th id="704">704</th><td></td></tr>
+<tr><th id="705">705</th><td>    <b>return</b> <a class="macro" href="../core/ngx_core.h.html#35" title="0" data-ref="_M/NGX_OK">NGX_OK</a>;</td></tr>
+<tr><th id="706">706</th><td>}</td></tr>
+<tr><th id="707">707</th><td></td></tr>
+<tr><th id="708">708</th><td></td></tr>
+<tr><th id="709">709</th><td><em>static</em> <a class="typedef" href="../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a></td></tr>
+<tr><th id="710">710</th><td><dfn class="tu decl def fn" id="ngx_disable_accept_events" title='ngx_disable_accept_events' data-type='ngx_int_t ngx_disable_accept_events(ngx_cycle_t * cycle, ngx_uint_t all)' data-ref="ngx_disable_accept_events">ngx_disable_accept_events</dfn>(<a class="typedef" href="../core/ngx_core.h.html#ngx_cycle_t" title='ngx_cycle_t' data-type='struct ngx_cycle_s' data-ref="ngx_cycle_t">ngx_cycle_t</a> *<dfn class="local col6 decl" id="46cycle" title='cycle' data-type='ngx_cycle_t *' data-ref="46cycle">cycle</dfn>, <a class="typedef" href="../core/ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a> <dfn class="local col7 decl" id="47all" title='all' data-type='ngx_uint_t' data-ref="47all">all</dfn>)</td></tr>
+<tr><th id="711">711</th><td>{</td></tr>
+<tr><th id="712">712</th><td>    <a class="typedef" href="../core/ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>         <dfn class="local col8 decl" id="48i" title='i' data-type='ngx_uint_t' data-ref="48i">i</dfn>;</td></tr>
+<tr><th id="713">713</th><td>    <a class="typedef" href="../core/ngx_connection.h.html#ngx_listening_t" title='ngx_listening_t' data-type='struct ngx_listening_s' data-ref="ngx_listening_t">ngx_listening_t</a>   *<dfn class="local col9 decl" id="49ls" title='ls' data-type='ngx_listening_t *' data-ref="49ls">ls</dfn>;</td></tr>
+<tr><th id="714">714</th><td>    <a class="typedef" href="../core/ngx_core.h.html#ngx_connection_t" title='ngx_connection_t' data-type='struct ngx_connection_s' data-ref="ngx_connection_t">ngx_connection_t</a>  *<dfn class="local col0 decl" id="50c" title='c' data-type='ngx_connection_t *' data-ref="50c">c</dfn>;</td></tr>
+<tr><th id="715">715</th><td></td></tr>
+<tr><th id="716">716</th><td>    <a class="local col9 ref" href="#49ls" title='ls' data-ref="49ls">ls</a> = <a class="local col6 ref" href="#46cycle" title='cycle' data-ref="46cycle">cycle</a>-&gt;<a class="ref field" href="../core/ngx_cycle.h.html#ngx_cycle_s::listening" title='ngx_cycle_s::listening' data-ref="ngx_cycle_s::listening">listening</a>.<a class="ref field" href="../core/ngx_array.h.html#(anonymous)::elts" title='(anonymous struct)::elts' data-ref="(anonymous)::elts">elts</a>;</td></tr>
+<tr><th id="717">717</th><td>    <b>for</b> (<a class="local col8 ref" href="#48i" title='i' data-ref="48i">i</a> = <var>0</var>; <a class="local col8 ref" href="#48i" title='i' data-ref="48i">i</a> &lt; <a class="local col6 ref" href="#46cycle" title='cycle' data-ref="46cycle">cycle</a>-&gt;<a class="ref field" href="../core/ngx_cycle.h.html#ngx_cycle_s::listening" title='ngx_cycle_s::listening' data-ref="ngx_cycle_s::listening">listening</a>.<a class="ref field" href="../core/ngx_array.h.html#(anonymous)::nelts" title='(anonymous struct)::nelts' data-ref="(anonymous)::nelts">nelts</a>; <a class="local col8 ref" href="#48i" title='i' data-ref="48i">i</a>++) {</td></tr>
+<tr><th id="718">718</th><td></td></tr>
+<tr><th id="719">719</th><td>        <a class="local col0 ref" href="#50c" title='c' data-ref="50c">c</a> = <a class="local col9 ref" href="#49ls" title='ls' data-ref="49ls">ls</a>[<a class="local col8 ref" href="#48i" title='i' data-ref="48i">i</a>].<a class="ref field" href="../core/ngx_connection.h.html#ngx_listening_s::connection" title='ngx_listening_s::connection' data-ref="ngx_listening_s::connection">connection</a>;</td></tr>
+<tr><th id="720">720</th><td></td></tr>
+<tr><th id="721">721</th><td>        <b>if</b> (<a class="local col0 ref" href="#50c" title='c' data-ref="50c">c</a> == <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span> || !<a class="local col0 ref" href="#50c" title='c' data-ref="50c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::read" title='ngx_connection_s::read' data-ref="ngx_connection_s::read">read</a>-&gt;<a class="ref field" href="ngx_event.h.html#ngx_event_s::active" title='ngx_event_s::active' data-ref="ngx_event_s::active">active</a>) {</td></tr>
+<tr><th id="722">722</th><td>            <b>continue</b>;</td></tr>
+<tr><th id="723">723</th><td>        }</td></tr>
+<tr><th id="724">724</th><td></td></tr>
+<tr><th id="725">725</th><td><u>#<span data-ppcond="725">if</span> (<a class="macro" href="../../objs/ngx_auto_config.h.html#132" title="1" data-ref="_M/NGX_HAVE_REUSEPORT">NGX_HAVE_REUSEPORT</a>)</u></td></tr>
+<tr><th id="726">726</th><td></td></tr>
+<tr><th id="727">727</th><td>        <i>/*</i></td></tr>
+<tr><th id="728">728</th><td><i>         * do not disable accept on worker's own sockets</i></td></tr>
+<tr><th id="729">729</th><td><i>         * when disabling accept events due to accept mutex</i></td></tr>
+<tr><th id="730">730</th><td><i>         */</i></td></tr>
+<tr><th id="731">731</th><td></td></tr>
+<tr><th id="732">732</th><td>        <b>if</b> (<a class="local col9 ref" href="#49ls" title='ls' data-ref="49ls">ls</a>[<a class="local col8 ref" href="#48i" title='i' data-ref="48i">i</a>].<a class="ref field" href="../core/ngx_connection.h.html#ngx_listening_s::reuseport" title='ngx_listening_s::reuseport' data-ref="ngx_listening_s::reuseport">reuseport</a> &amp;&amp; !<a class="local col7 ref" href="#47all" title='all' data-ref="47all">all</a>) {</td></tr>
+<tr><th id="733">733</th><td>            <b>continue</b>;</td></tr>
+<tr><th id="734">734</th><td>        }</td></tr>
+<tr><th id="735">735</th><td></td></tr>
+<tr><th id="736">736</th><td><u>#<span data-ppcond="725">endif</span></u></td></tr>
+<tr><th id="737">737</th><td></td></tr>
+<tr><th id="738">738</th><td>        <b>if</b> (<a class="macro" href="ngx_event.h.html#415" title="ngx_event_actions.del" data-ref="_M/ngx_del_event">ngx_del_event</a>(<a class="local col0 ref" href="#50c" title='c' data-ref="50c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::read" title='ngx_connection_s::read' data-ref="ngx_connection_s::read">read</a>, <a class="macro" href="ngx_event.h.html#360" title="(EPOLLIN|EPOLLRDHUP)" data-ref="_M/NGX_READ_EVENT">NGX_READ_EVENT</a>, <a class="macro" href="ngx_event.h.html#298" title="2" data-ref="_M/NGX_DISABLE_EVENT">NGX_DISABLE_EVENT</a>)</td></tr>
+<tr><th id="739">739</th><td>            == <a class="macro" href="../core/ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>)</td></tr>
+<tr><th id="740">740</th><td>        {</td></tr>
+<tr><th id="741">741</th><td>            <b>return</b> <a class="macro" href="../core/ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>;</td></tr>
+<tr><th id="742">742</th><td>        }</td></tr>
+<tr><th id="743">743</th><td>    }</td></tr>
+<tr><th id="744">744</th><td></td></tr>
+<tr><th id="745">745</th><td>    <b>return</b> <a class="macro" href="../core/ngx_core.h.html#35" title="0" data-ref="_M/NGX_OK">NGX_OK</a>;</td></tr>
+<tr><th id="746">746</th><td>}</td></tr>
+<tr><th id="747">747</th><td></td></tr>
+<tr><th id="748">748</th><td></td></tr>
+<tr><th id="749">749</th><td><em>static</em> <em>void</em></td></tr>
+<tr><th id="750">750</th><td><dfn class="tu decl def fn" id="ngx_close_accepted_connection" title='ngx_close_accepted_connection' data-type='void ngx_close_accepted_connection(ngx_connection_t * c)' data-ref="ngx_close_accepted_connection">ngx_close_accepted_connection</dfn>(<a class="typedef" href="../core/ngx_core.h.html#ngx_connection_t" title='ngx_connection_t' data-type='struct ngx_connection_s' data-ref="ngx_connection_t">ngx_connection_t</a> *<dfn class="local col1 decl" id="51c" title='c' data-type='ngx_connection_t *' data-ref="51c">c</dfn>)</td></tr>
+<tr><th id="751">751</th><td>{</td></tr>
+<tr><th id="752">752</th><td>    <a class="typedef" href="../os/unix/ngx_socket.h.html#ngx_socket_t" title='ngx_socket_t' data-type='int' data-ref="ngx_socket_t">ngx_socket_t</a>  <dfn class="local col2 decl" id="52fd" title='fd' data-type='ngx_socket_t' data-ref="52fd">fd</dfn>;</td></tr>
+<tr><th id="753">753</th><td></td></tr>
+<tr><th id="754">754</th><td>    <a class="ref fn" href="../core/ngx_connection.h.html#ngx_free_connection" title='ngx_free_connection' data-ref="ngx_free_connection">ngx_free_connection</a>(<a class="local col1 ref" href="#51c" title='c' data-ref="51c">c</a>);</td></tr>
+<tr><th id="755">755</th><td></td></tr>
+<tr><th id="756">756</th><td>    <a class="local col2 ref" href="#52fd" title='fd' data-ref="52fd">fd</a> = <a class="local col1 ref" href="#51c" title='c' data-ref="51c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::fd" title='ngx_connection_s::fd' data-ref="ngx_connection_s::fd">fd</a>;</td></tr>
+<tr><th id="757">757</th><td>    <a class="local col1 ref" href="#51c" title='c' data-ref="51c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::fd" title='ngx_connection_s::fd' data-ref="ngx_connection_s::fd">fd</a> = (<a class="typedef" href="../os/unix/ngx_socket.h.html#ngx_socket_t" title='ngx_socket_t' data-type='int' data-ref="ngx_socket_t">ngx_socket_t</a>) -<var>1</var>;</td></tr>
+<tr><th id="758">758</th><td></td></tr>
+<tr><th id="759">759</th><td>    <b>if</b> (!<a class="local col1 ref" href="#51c" title='c' data-ref="51c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::shared" title='ngx_connection_s::shared' data-ref="ngx_connection_s::shared">shared</a> &amp;&amp; <a class="macro" href="../os/unix/ngx_socket.h.html#60" title="close" data-ref="_M/ngx_close_socket">ngx_close_socket</a>(<a class="local col2 ref" href="#52fd" title='fd' data-ref="52fd">fd</a>) == -<var>1</var>) {</td></tr>
+<tr><th id="760">760</th><td>        <a class="macro" href="../core/ngx_log.h.html#85" title="if ((c-&gt;log)-&gt;log_level &gt;= 2) ngx_log_error_core(2, c-&gt;log, (*__errno_location ()), &quot;close() socket&quot; &quot; failed&quot;)" data-ref="_M/ngx_log_error">ngx_log_error</a>(<a class="macro" href="../core/ngx_log.h.html#18" title="2" data-ref="_M/NGX_LOG_ALERT">NGX_LOG_ALERT</a>, <a class="local col1 ref" href="#51c" title='c' data-ref="51c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::log" title='ngx_connection_s::log' data-ref="ngx_connection_s::log">log</a>, <a class="macro" href="../os/unix/ngx_errno.h.html#70" title="(*__errno_location ())" data-ref="_M/ngx_socket_errno">ngx_socket_errno</a>,</td></tr>
+<tr><th id="761">761</th><td>                      <a class="macro" href="../os/unix/ngx_socket.h.html#61" title="&quot;close() socket&quot;" data-ref="_M/ngx_close_socket_n">ngx_close_socket_n</a> <q>" failed"</q>);</td></tr>
+<tr><th id="762">762</th><td>    }</td></tr>
+<tr><th id="763">763</th><td></td></tr>
+<tr><th id="764">764</th><td>    <b>if</b> (<a class="local col1 ref" href="#51c" title='c' data-ref="51c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::pool" title='ngx_connection_s::pool' data-ref="ngx_connection_s::pool">pool</a>) {</td></tr>
+<tr><th id="765">765</th><td>        <a class="ref fn" href="../core/ngx_palloc.h.html#ngx_destroy_pool" title='ngx_destroy_pool' data-ref="ngx_destroy_pool">ngx_destroy_pool</a>(<a class="local col1 ref" href="#51c" title='c' data-ref="51c">c</a>-&gt;<a class="ref field" href="../core/ngx_connection.h.html#ngx_connection_s::pool" title='ngx_connection_s::pool' data-ref="ngx_connection_s::pool">pool</a>);</td></tr>
+<tr><th id="766">766</th><td>    }</td></tr>
+<tr><th id="767">767</th><td></td></tr>
+<tr><th id="768">768</th><td><u>#<span data-ppcond="768">if</span> (NGX_STAT_STUB)</u></td></tr>
+<tr><th id="769">769</th><td>    (<em>void</em>) ngx_atomic_fetch_add(ngx_stat_active, -<var>1</var>);</td></tr>
+<tr><th id="770">770</th><td><u>#<span data-ppcond="768">endif</span></u></td></tr>
+<tr><th id="771">771</th><td>}</td></tr>
+<tr><th id="772">772</th><td></td></tr>
+<tr><th id="773">773</th><td></td></tr>
+<tr><th id="774">774</th><td><a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a> *</td></tr>
+<tr><th id="775">775</th><td><dfn class="decl def fn" id="ngx_accept_log_error" title='ngx_accept_log_error' data-ref="ngx_accept_log_error">ngx_accept_log_error</dfn>(<a class="typedef" href="../core/ngx_core.h.html#ngx_log_t" title='ngx_log_t' data-type='struct ngx_log_s' data-ref="ngx_log_t">ngx_log_t</a> *<dfn class="local col3 decl" id="53log" title='log' data-type='ngx_log_t *' data-ref="53log">log</dfn>, <a class="typedef" href="../../../include/x86_64-linux-gnu/sys/types.h.html#u_char" title='u_char' data-type='__u_char' data-ref="u_char">u_char</a> *<dfn class="local col4 decl" id="54buf" title='buf' data-type='u_char *' data-ref="54buf">buf</dfn>, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span> <dfn class="local col5 decl" id="55len" title='len' data-type='size_t' data-ref="55len">len</dfn>)</td></tr>
+<tr><th id="776">776</th><td>{</td></tr>
+<tr><th id="777">777</th><td>    <b>return</b> <a class="ref fn" href="../core/ngx_string.h.html#ngx_snprintf" title='ngx_snprintf' data-ref="ngx_snprintf">ngx_snprintf</a>(<a class="local col4 ref" href="#54buf" title='buf' data-ref="54buf">buf</a>, <a class="local col5 ref" href="#55len" title='len' data-ref="55len">len</a>, <q>" while accepting new connection on %V"</q>,</td></tr>
+<tr><th id="778">778</th><td>                        <a class="local col3 ref" href="#53log" title='log' data-ref="53log">log</a>-&gt;<a class="ref field" href="../core/ngx_log.h.html#ngx_log_s::data" title='ngx_log_s::data' data-ref="ngx_log_s::data">data</a>);</td></tr>
+<tr><th id="779">779</th><td>}</td></tr>
+<tr><th id="780">780</th><td></td></tr>
+<tr><th id="781">781</th><td></td></tr>
+<tr><th id="782">782</th><td><u>#<span data-ppcond="782">if</span> (NGX_DEBUG)</u></td></tr>
+<tr><th id="783">783</th><td></td></tr>
+<tr><th id="784">784</th><td><em>static</em> <em>void</em></td></tr>
+<tr><th id="785">785</th><td>ngx_debug_accepted_connection(ngx_event_conf_t *ecf, ngx_connection_t *c)</td></tr>
+<tr><th id="786">786</th><td>{</td></tr>
+<tr><th id="787">787</th><td>    <b>struct</b> sockaddr_in   *sin;</td></tr>
+<tr><th id="788">788</th><td>    ngx_cidr_t           *cidr;</td></tr>
+<tr><th id="789">789</th><td>    ngx_uint_t            i;</td></tr>
+<tr><th id="790">790</th><td><u>#if (NGX_HAVE_INET6)</u></td></tr>
+<tr><th id="791">791</th><td>    <b>struct</b> sockaddr_in6  *sin6;</td></tr>
+<tr><th id="792">792</th><td>    ngx_uint_t            n;</td></tr>
+<tr><th id="793">793</th><td><u>#endif</u></td></tr>
+<tr><th id="794">794</th><td></td></tr>
+<tr><th id="795">795</th><td>    cidr = ecf-&gt;debug_connection.elts;</td></tr>
+<tr><th id="796">796</th><td>    <b>for</b> (i = <var>0</var>; i &lt; ecf-&gt;debug_connection.nelts; i++) {</td></tr>
+<tr><th id="797">797</th><td>        <b>if</b> (cidr[i].family != (ngx_uint_t) c-&gt;sockaddr-&gt;sa_family) {</td></tr>
+<tr><th id="798">798</th><td>            <b>goto</b> next;</td></tr>
+<tr><th id="799">799</th><td>        }</td></tr>
+<tr><th id="800">800</th><td></td></tr>
+<tr><th id="801">801</th><td>        <b>switch</b> (cidr[i].family) {</td></tr>
+<tr><th id="802">802</th><td></td></tr>
+<tr><th id="803">803</th><td><u>#if (NGX_HAVE_INET6)</u></td></tr>
+<tr><th id="804">804</th><td>        <b>case</b> AF_INET6:</td></tr>
+<tr><th id="805">805</th><td>            sin6 = (<b>struct</b> sockaddr_in6 *) c-&gt;sockaddr;</td></tr>
+<tr><th id="806">806</th><td>            <b>for</b> (n = <var>0</var>; n &lt; <var>16</var>; n++) {</td></tr>
+<tr><th id="807">807</th><td>                <b>if</b> ((sin6-&gt;sin6_addr.s6_addr[n]</td></tr>
+<tr><th id="808">808</th><td>                    &amp; cidr[i].u.in6.mask.s6_addr[n])</td></tr>
+<tr><th id="809">809</th><td>                    != cidr[i].u.in6.addr.s6_addr[n])</td></tr>
+<tr><th id="810">810</th><td>                {</td></tr>
+<tr><th id="811">811</th><td>                    <b>goto</b> next;</td></tr>
+<tr><th id="812">812</th><td>                }</td></tr>
+<tr><th id="813">813</th><td>            }</td></tr>
+<tr><th id="814">814</th><td>            <b>break</b>;</td></tr>
+<tr><th id="815">815</th><td><u>#endif</u></td></tr>
+<tr><th id="816">816</th><td></td></tr>
+<tr><th id="817">817</th><td><u>#if (NGX_HAVE_UNIX_DOMAIN)</u></td></tr>
+<tr><th id="818">818</th><td>        <b>case</b> AF_UNIX:</td></tr>
+<tr><th id="819">819</th><td>            <b>break</b>;</td></tr>
+<tr><th id="820">820</th><td><u>#endif</u></td></tr>
+<tr><th id="821">821</th><td></td></tr>
+<tr><th id="822">822</th><td>        <b>default</b>: <i>/* AF_INET */</i></td></tr>
+<tr><th id="823">823</th><td>            sin = (<b>struct</b> sockaddr_in *) c-&gt;sockaddr;</td></tr>
+<tr><th id="824">824</th><td>            <b>if</b> ((sin-&gt;sin_addr.s_addr &amp; cidr[i].u.in.mask)</td></tr>
+<tr><th id="825">825</th><td>                != cidr[i].u.in.addr)</td></tr>
+<tr><th id="826">826</th><td>            {</td></tr>
+<tr><th id="827">827</th><td>                <b>goto</b> next;</td></tr>
+<tr><th id="828">828</th><td>            }</td></tr>
+<tr><th id="829">829</th><td>            <b>break</b>;</td></tr>
+<tr><th id="830">830</th><td>        }</td></tr>
+<tr><th id="831">831</th><td></td></tr>
+<tr><th id="832">832</th><td>        c-&gt;log-&gt;log_level = NGX_LOG_DEBUG_CONNECTION|NGX_LOG_DEBUG_ALL;</td></tr>
+<tr><th id="833">833</th><td>        <b>break</b>;</td></tr>
+<tr><th id="834">834</th><td></td></tr>
+<tr><th id="835">835</th><td>    next:</td></tr>
+<tr><th id="836">836</th><td>        <b>continue</b>;</td></tr>
+<tr><th id="837">837</th><td>    }</td></tr>
+<tr><th id="838">838</th><td>}</td></tr>
+<tr><th id="839">839</th><td></td></tr>
+<tr><th id="840">840</th><td><u>#<span data-ppcond="782">endif</span></u></td></tr>
+<tr><th id="841">841</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated on <em>2018-Apr-06</em> from project nginx<br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='568'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='377' u='c'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='714' u='c'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='813' u='c'/>

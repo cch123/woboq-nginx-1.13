@@ -1,0 +1,14 @@
+<dec f='nginx/src/os/unix/ngx_time.h' l='56' type='void ngx_timezone_update()'/>
+<use f='nginx/src/core/ngx_cycle.c' l='57' u='c' c='ngx_init_cycle'/>
+<def f='nginx/src/os/unix/ngx_time.c' l='24' ll='53' type='void ngx_timezone_update()'/>
+<doc f='nginx/src/os/unix/ngx_time.c' l='12'>/*
+ * FreeBSD does not test /etc/localtime change, however, we can workaround it
+ * by calling tzset() with TZ and then without TZ to update timezone.
+ * The trick should work since FreeBSD 2.1.0.
+ *
+ * Linux does not test /etc/localtime change in localtime(),
+ * but may stat(&quot;/etc/localtime&quot;) several times in every strftime(),
+ * therefore we use it to update timezone.
+ *
+ * Solaris does not test /etc/TIMEZONE change too and no workaround available.
+ */</doc>

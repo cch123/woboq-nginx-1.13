@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http_cache.h' l='178' type='ngx_msec_t'/>
+<offset>896</offset>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1892' u='r' c='ngx_http_file_cache_expire'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2014' u='r' c='ngx_http_file_cache_manager'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2576' u='w' c='ngx_http_file_cache_set_slot'/>

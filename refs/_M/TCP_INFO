@@ -1,0 +1,2 @@
+<dec f='include/netinet/tcp.h' l='50'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1120' u='c'/>

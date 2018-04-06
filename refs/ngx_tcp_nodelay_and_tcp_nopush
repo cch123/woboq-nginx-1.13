@@ -1,0 +1,3 @@
+<dec f='nginx/src/os/unix/ngx_os.h' l='82' type='ngx_uint_t'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3084' u='r' c='ngx_http_set_keepalive'/>
+<def f='nginx/src/os/unix/ngx_posix_init.c' l='16' type='ngx_uint_t'/>

@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_palloc.h' l='77' type='void ngx_reset_pool(ngx_pool_t * pool)'/>
+<def f='nginx/src/core/ngx_palloc.c' l='99' ll='119' type='void ngx_reset_pool(ngx_pool_t * pool)'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='647' u='c' c='ngx_http_geo'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='653' u='c' c='ngx_http_geo'/>

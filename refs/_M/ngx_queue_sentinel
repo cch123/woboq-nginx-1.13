@@ -1,0 +1,13 @@
+<dec f='nginx/src/core/ngx_queue.h' l='58'/>
+<use f='nginx/src/core/ngx_queue.c' l='62' u='c'/>
+<use f='nginx/src/core/ngx_queue.c' l='76' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1732' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_keepalive_module.c' l='233' u='c'/>
+<use f='nginx/src/http/ngx_http.c' l='640' u='c'/>
+<use f='nginx/src/http/ngx_http.c' l='697' u='c'/>
+<use f='nginx/src/http/ngx_http.c' l='737' u='c'/>
+<use f='nginx/src/http/ngx_http.c' l='751' u='c'/>
+<use f='nginx/src/http/ngx_http.c' l='777' u='c'/>
+<use f='nginx/src/http/ngx_http.c' l='815' u='c'/>
+<use f='nginx/src/http/ngx_http.c' l='1026' u='c'/>
+<use f='nginx/src/http/ngx_http.c' l='1048' u='c'/>

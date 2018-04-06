@@ -1,0 +1,9 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='373' type='ngx_str_t'/>
+<offset>8256</offset>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1085' u='w' c='ngx_http_proxy_create_key'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1091' u='w' c='ngx_http_proxy_create_key'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1134' u='w' c='ngx_http_proxy_create_key'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1323' u='m' c='ngx_http_proxy_create_request'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1352' u='m' c='ngx_http_proxy_create_request'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1352' u='m' c='ngx_http_proxy_create_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3688' u='a' c='ngx_http_log_error_handler'/>

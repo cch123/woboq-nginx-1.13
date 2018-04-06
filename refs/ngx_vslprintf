@@ -1,0 +1,9 @@
+<dec f='nginx/src/core/ngx_string.h' l='155' type='u_char * ngx_vslprintf(u_char * buf, u_char * last, const char * fmt, struct __va_list_tag * args)'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='1000' u='c' c='ngx_conf_log_error'/>
+<use f='nginx/src/core/ngx_log.c' l='135' u='c' c='ngx_log_error_core'/>
+<use f='nginx/src/core/ngx_log.c' l='250' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_log.c' l='270' u='c' c='ngx_log_stderr'/>
+<use f='nginx/src/core/ngx_string.c' l='127' u='c' c='ngx_sprintf'/>
+<use f='nginx/src/core/ngx_string.c' l='141' u='c' c='ngx_snprintf'/>
+<use f='nginx/src/core/ngx_string.c' l='155' u='c' c='ngx_slprintf'/>
+<def f='nginx/src/core/ngx_string.c' l='162' ll='490' type='u_char * ngx_vslprintf(u_char * buf, u_char * last, const char * fmt, struct __va_list_tag * args)'/>

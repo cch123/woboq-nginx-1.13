@@ -1,0 +1,11 @@
+<dec f='nginx/src/http/ngx_http_config.h' l='65'/>
+<use f='nginx/src/http/modules/ngx_http_empty_gif_module.c' l='136' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='3076' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='3498' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_memcached_module.c' l='706' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='3304' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='3578' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='1543' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='1820' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='1798' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='2084' u='c'/>

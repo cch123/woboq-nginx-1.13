@@ -1,0 +1,6 @@
+<dec f='nginx/objs/ngx_auto_config.h' l='372'/>
+<use f='nginx/objs/ngx_auto_config.h' l='376' u='a'/>
+<use f='nginx/src/core/ngx_module.h' l='158' u='c'/>
+<use f='nginx/src/http/ngx_http_request.h' l='213' u='c'/>
+<use f='nginx/src/http/ngx_http_request.c' l='163' u='c'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='178' u='c'/>

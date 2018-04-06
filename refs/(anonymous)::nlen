@@ -1,0 +1,14 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='104' type='u_short'/>
+<offset>640</offset>
+<use f='nginx/src/core/ngx_resolver.c' l='803' u='w' c='ngx_resolve_name_locked'/>
+<use f='nginx/src/core/ngx_resolver.c' l='971' u='r' c='ngx_resolve_addr'/>
+<use f='nginx/src/core/ngx_resolver.c' l='976' u='r' c='ngx_resolve_addr'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1078' u='w' c='ngx_resolve_addr'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1852' u='r' c='ngx_resolver_process_response'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3288' u='r' c='ngx_resolver_process_ptr'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3291' u='r' c='ngx_resolver_process_ptr'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3295' u='w' c='ngx_resolver_process_ptr'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3376' u='r' c='ngx_resolver_lookup_name'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3417' u='r' c='ngx_resolver_lookup_srv'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3531' u='r' c='ngx_resolver_rbtree_insert_value'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3531' u='r' c='ngx_resolver_rbtree_insert_value'/>

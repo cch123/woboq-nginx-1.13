@@ -1,0 +1,11 @@
+<dec f='nginx/src/core/ngx_connection.h' l='72' type='unsigned int'/>
+<offset>1868</offset>
+<use f='nginx/src/core/ngx_connection.c' l='103' u='r' c='ngx_clone_listening'/>
+<use f='nginx/src/core/ngx_connection.c' l='289' u='w' c='ngx_set_inherited_sockets'/>
+<use f='nginx/src/core/ngx_connection.c' l='480' u='r' c='ngx_open_listening_sockets'/>
+<use f='nginx/src/core/ngx_cycle.c' l='567' u='r' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='567' u='r' c='ngx_init_cycle'/>
+<use f='nginx/src/event/ngx_event.c' l='737' u='r' c='ngx_event_process_init'/>
+<use f='nginx/src/event/ngx_event.c' l='826' u='r' c='ngx_event_process_init'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='732' u='r' c='ngx_disable_accept_events'/>
+<use f='nginx/src/http/ngx_http.c' l='1772' u='w' c='ngx_http_add_listening'/>

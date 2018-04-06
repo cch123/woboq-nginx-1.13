@@ -1,0 +1,11 @@
+<dec f='nginx/src/core/ngx_cycle.h' l='119' type='ngx_uint_t'/>
+<offset>1792</offset>
+<doc f='nginx/src/core/ngx_cycle.h' l='119'>/* unsigned  transparent:1; */</doc>
+<dec f='nginx/src/http/ngx_http_upstream.h' l='143' type='ngx_uint_t'/>
+<offset>128</offset>
+<doc f='nginx/src/http/ngx_http_upstream.h' l='143'>/* unsigned  transparent:1; */</doc>
+<use f='nginx/src/http/ngx_http_upstream.c' l='6095' u='w' c='ngx_http_upstream_bind_set_slot'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='6096' u='w' c='ngx_http_upstream_bind_set_slot'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='6127' u='r' c='ngx_http_upstream_set_local'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='843' u='r' c='ngx_worker_process_init'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='861' u='r' c='ngx_worker_process_init'/>

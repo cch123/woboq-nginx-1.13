@@ -1,0 +1,12 @@
+<dec f='nginx/src/event/ngx_event.h' l='38' type='unsigned int'/>
+<use f='nginx/src/core/ngx_connection.c' l='1082' u='r' c='ngx_get_connection'/>
+<use f='nginx/src/core/ngx_connection.c' l='1087' u='w' c='ngx_get_connection'/>
+<use f='nginx/src/core/ngx_connection.c' l='1088' u='w' c='ngx_get_connection'/>
+<offset>66</offset>
+<doc f='nginx/src/event/ngx_event.h' l='37'>/* used to detect the stale events in kqueue and epoll */</doc>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='621' u='r' c='ngx_epoll_add_event'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='676' u='r' c='ngx_epoll_del_event'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='706' u='r' c='ngx_epoll_add_connection'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='844' u='r' c='ngx_epoll_process_events'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='910' u='r' c='ngx_epoll_process_events'/>
+<use f='nginx/src/event/ngx_event.c' l='700' u='w' c='ngx_event_process_init'/>

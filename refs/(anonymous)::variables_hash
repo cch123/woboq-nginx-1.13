@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='160' type='ngx_hash_t'/>
+<offset>640</offset>
+<use f='nginx/src/http/ngx_http_variables.c' l='670' u='a' c='ngx_http_get_variable'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2695' u='a' c='ngx_http_variables_init_vars'/>

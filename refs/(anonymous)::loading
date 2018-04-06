@@ -1,0 +1,8 @@
+<dec f='nginx/src/http/ngx_http_cache.h' l='150' type='ngx_atomic_t'/>
+<offset>704</offset>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='120' u='r' c='ngx_http_file_cache_init'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='150' u='w' c='ngx_http_file_cache_init'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2039' u='r' c='ngx_http_file_cache_loader'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2043' u='a' c='ngx_http_file_cache_loader'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2063' u='w' c='ngx_http_file_cache_loader'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2068' u='w' c='ngx_http_file_cache_loader'/>

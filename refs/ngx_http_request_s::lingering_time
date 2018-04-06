@@ -1,0 +1,9 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='400' type='time_t'/>
+<offset>7168</offset>
+<use f='nginx/src/http/ngx_http_request.c' l='2596' u='r' c='ngx_http_finalize_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2597' u='w' c='ngx_http_finalize_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2909' u='w' c='ngx_http_set_keepalive'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3256' u='w' c='ngx_http_set_lingering_close'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3308' u='r' c='ngx_http_lingering_close_handler'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='603' u='r' c='ngx_http_discarded_request_body_handler'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='604' u='r' c='ngx_http_discarded_request_body_handler'/>

@@ -1,0 +1,5 @@
+<dec f='include/pwd.h' l='53' type='__uid_t'/>
+<offset>128</offset>
+<doc f='include/pwd.h' l='53'>/* User ID.  */</doc>
+<use f='nginx/src/core/nginx.c' l='1115' u='r' c='ngx_core_module_init_conf'/>
+<use f='nginx/src/core/nginx.c' l='1224' u='r' c='ngx_set_user'/>

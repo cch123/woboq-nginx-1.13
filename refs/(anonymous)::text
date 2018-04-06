@@ -1,0 +1,6 @@
+<dec f='nginx/src/http/ngx_http_script.h' l='163' type='ngx_http_complex_value_t'/>
+<offset>128</offset>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='505' u='a' c='ngx_http_rewrite_return'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1365' u='m' c='ngx_http_script_return_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1366' u='m' c='ngx_http_script_return_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1369' u='a' c='ngx_http_script_return_code'/>

@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_string.h' l='210' type='void ngx_unescape_uri(u_char ** dst, u_char ** src, size_t size, ngx_uint_t type)'/>
+<def f='nginx/src/core/ngx_string.c' l='1609' ll='1736' type='void ngx_unescape_uri(u_char ** dst, u_char ** src, size_t size, ngx_uint_t type)'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1889' u='c' c='ngx_http_parse_unsafe_uri'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1086' u='c' c='ngx_http_script_regex_end_code'/>

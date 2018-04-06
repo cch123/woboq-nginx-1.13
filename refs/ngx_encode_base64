@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_string.h' l='187' type='void ngx_encode_base64(ngx_str_t * dst, ngx_str_t * src)'/>
+<use f='nginx/src/core/ngx_crypt.c' l='232' u='c' c='ngx_crypt_ssha'/>
+<use f='nginx/src/core/ngx_crypt.c' l='264' u='c' c='ngx_crypt_sha'/>
+<def f='nginx/src/core/ngx_string.c' l='1137' ll='1144' type='void ngx_encode_base64(ngx_str_t * dst, ngx_str_t * src)'/>
+<use f='nginx/src/http/modules/ngx_http_userid_filter_module.c' l='399' u='c' c='ngx_http_userid_set_uid'/>

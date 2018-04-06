@@ -1,0 +1,4 @@
+<dec f='include/libio.h' l='366' type='__io_read_fn *'/>
+<dec f='nginx/src/core/ngx_open_file_cache.h' l='114' type='ngx_event_t *'/>
+<offset>64</offset>
+<doc f='include/libio.h' l='366'>/* Read bytes.  */</doc>

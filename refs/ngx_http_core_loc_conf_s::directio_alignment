@@ -1,0 +1,10 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='345' type='off_t'/>
+<offset>1536</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='345'>/* directio_alignment */</doc>
+<use f='nginx/src/http/ngx_http_copy_filter_module.c' l='118' u='r' c='ngx_http_copy_filter'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3385' u='w' c='ngx_http_core_create_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3612' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3612' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3612' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3612' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='632' u='r' c='ngx_http_upstream_init_request'/>

@@ -1,0 +1,16 @@
+<dec f='nginx/src/event/ngx_event_pipe.h' l='35' type='ngx_chain_t *'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='539' u='r' c='ngx_event_pipe_write_to_downstream'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='543' u='r' c='ngx_event_pipe_write_to_downstream'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='547' u='r' c='ngx_event_pipe_write_to_downstream'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='554' u='w' c='ngx_event_pipe_write_to_downstream'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='627' u='r' c='ngx_event_pipe_write_to_downstream'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='628' u='r' c='ngx_event_pipe_write_to_downstream'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='635' u='w' c='ngx_event_pipe_write_to_downstream'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='635' u='r' c='ngx_event_pipe_write_to_downstream'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='867' u='r' c='ngx_event_pipe_write_chain_to_temp_file'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='868' u='r' c='ngx_event_pipe_write_chain_to_temp_file'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='881' u='a' c='ngx_event_pipe_write_chain_to_temp_file'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='1082' u='r' c='ngx_event_pipe_drain_chains'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='1083' u='r' c='ngx_event_pipe_drain_chains'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='1084' u='w' c='ngx_event_pipe_drain_chains'/>
+<offset>384</offset>

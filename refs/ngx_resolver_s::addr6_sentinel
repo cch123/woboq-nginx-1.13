@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_resolver.h' l='181' type='ngx_rbtree_node_t'/>
+<offset>3200</offset>
+<use f='nginx/src/core/ngx_resolver.c' l='183' u='a' c='ngx_resolver_create'/>
+<use f='nginx/src/core/ngx_resolver.c' l='183' u='a' c='ngx_resolver_create'/>
+<use f='nginx/src/core/ngx_resolver.c' l='183' u='a' c='ngx_resolver_create'/>

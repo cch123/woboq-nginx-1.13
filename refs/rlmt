@@ -1,0 +1,5 @@
+<def f='nginx/src/os/unix/ngx_posix_init.c' l='19' type='struct rlimit'/>
+<use f='nginx/src/os/unix/ngx_posix_init.c' l='77' u='a' c='ngx_os_init'/>
+<use f='nginx/src/os/unix/ngx_posix_init.c' l='83' u='m' c='ngx_os_init'/>
+<use f='nginx/src/os/unix/ngx_posix_init.c' l='113' u='m' c='ngx_os_status'/>
+<use f='nginx/src/os/unix/ngx_posix_init.c' l='113' u='m' c='ngx_os_status'/>

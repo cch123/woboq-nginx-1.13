@@ -1,0 +1,5 @@
+<dec f='nginx/objs/ngx_modules.c' l='38' type='ngx_module_t'/>
+<use f='nginx/objs/ngx_modules.c' l='90' u='a'/>
+<use f='nginx/objs/ngx_modules.c' l='90' u='a'/>
+<def f='nginx/src/http/modules/ngx_http_browser_module.c' l='124' ll='137' type='ngx_module_t'/>
+<use f='nginx/src/http/modules/ngx_http_browser_module.c' l='236' u='m' c='ngx_http_browser_variable'/>

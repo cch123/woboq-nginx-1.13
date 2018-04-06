@@ -1,0 +1,13 @@
+<dec f='nginx/src/core/ngx_cycle.h' l='66' type='ngx_list_t'/>
+<offset>2944</offset>
+<use f='nginx/src/core/ngx_conf_file.c' l='915' u='m' c='ngx_conf_open_file'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='939' u='a' c='ngx_conf_open_file'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='969' u='m' c='ngx_conf_flush_files'/>
+<use f='nginx/src/core/ngx_cycle.c' l='138' u='m' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='139' u='m' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='140' u='m' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='148' u='a' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='356' u='m' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='732' u='m' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='821' u='m' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1098' u='m' c='ngx_reopen_files'/>

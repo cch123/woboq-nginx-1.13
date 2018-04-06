@@ -1,0 +1,8 @@
+<def f='nginx/src/http/ngx_http_variables.h' l='37' ll='44'/>
+<size>56</size>
+<mbr r='ngx_http_variable_s::name' o='0' t='ngx_str_t'/>
+<mbr r='ngx_http_variable_s::set_handler' o='128' t='ngx_http_set_variable_pt'/>
+<mbr r='ngx_http_variable_s::get_handler' o='192' t='ngx_http_get_variable_pt'/>
+<mbr r='ngx_http_variable_s::data' o='256' t='uintptr_t'/>
+<mbr r='ngx_http_variable_s::flags' o='320' t='ngx_uint_t'/>
+<mbr r='ngx_http_variable_s::index' o='384' t='ngx_uint_t'/>

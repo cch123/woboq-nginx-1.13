@@ -1,0 +1,8 @@
+<dec f='include/stdlib.h' l='466' type='void * malloc(size_t __size)'/>
+<dec f='include/malloc.h' l='38' type='void * malloc(size_t __size)'/>
+<doc f='include/stdlib.h' l='465'>/* Allocate SIZE bytes of memory.  */</doc>
+<doc f='include/malloc.h' l='37'>/* Allocate SIZE bytes of memory.  */</doc>
+<use f='nginx/src/core/ngx_log.c' l='361' u='c' c='ngx_log_init'/>
+<use f='nginx/src/os/unix/ngx_alloc.c' l='22' u='c' c='ngx_alloc'/>
+<use f='nginx/src/os/unix/ngx_errno.c' l='60' u='c' c='ngx_strerror_init'/>
+<use f='nginx/src/os/unix/ngx_errno.c' l='69' u='c' c='ngx_strerror_init'/>

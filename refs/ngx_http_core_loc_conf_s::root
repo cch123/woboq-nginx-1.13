@@ -1,0 +1,29 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='333' type='ngx_str_t'/>
+<offset>704</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='333'>/* root, alias */</doc>
+<use f='nginx/src/http/modules/ngx_http_static_module.c' l='161' u='m' c='ngx_http_static_handler'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1802' u='m' c='ngx_http_map_uri_to_path'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1804' u='m' c='ngx_http_map_uri_to_path'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1811' u='m' c='ngx_http_map_uri_to_path'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1811' u='m' c='ngx_http_map_uri_to_path'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1811' u='m' c='ngx_http_map_uri_to_path'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3464' u='m' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3467' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3467' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3471' u='m' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3472' u='a' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3472' u='a' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3474' u='a' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4218' u='m' c='ngx_http_core_root'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4265' u='w' c='ngx_http_core_root'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4267' u='m' c='ngx_http_core_root'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4268' u='m' c='ngx_http_core_root'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4268' u='m' c='ngx_http_core_root'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4270' u='m' c='ngx_http_core_root'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4273' u='m' c='ngx_http_core_root'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4274' u='a' c='ngx_http_core_root'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4279' u='a' c='ngx_http_core_root'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4293' u='a' c='ngx_http_core_root'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1510' u='m' c='ngx_http_variable_document_root'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1514' u='m' c='ngx_http_variable_document_root'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1556' u='r' c='ngx_http_variable_realpath_root'/>

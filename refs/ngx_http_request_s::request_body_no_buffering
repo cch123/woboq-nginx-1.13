@@ -1,0 +1,25 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='486' type='unsigned int'/>
+<offset>9850</offset>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='738' u='w' c='ngx_http_fastcgi_handler'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='1174' u='r' c='ngx_http_fastcgi_create_request'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='1293' u='r' c='ngx_http_fastcgi_create_request'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='927' u='w' c='ngx_http_proxy_handler'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1471' u='r' c='ngx_http_proxy_create_request'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='534' u='w' c='ngx_http_scgi_handler'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='897' u='r' c='ngx_http_scgi_create_request'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='703' u='w' c='ngx_http_uwsgi_handler'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='1101' u='r' c='ngx_http_uwsgi_create_request'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='44' u='w' c='ngx_http_read_client_request_body'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='76' u='w' c='ngx_http_read_client_request_body'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='146' u='w' c='ngx_http_read_client_request_body'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='189' u='r' c='ngx_http_read_client_request_body'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='193' u='w' c='ngx_http_read_client_request_body'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='310' u='r' c='ngx_http_do_read_client_request_body'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='389' u='r' c='ngx_http_do_read_client_request_body'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='419' u='r' c='ngx_http_do_read_client_request_body'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='902' u='r' c='ngx_http_request_body_length_filter'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='1010' u='r' c='ngx_http_request_body_chunked_filter'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='1126' u='r' c='ngx_http_request_body_save_filter'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2065' u='r' c='ngx_http_upstream_send_request_body'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2417' u='r' c='ngx_http_upstream_test_next'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4165' u='r' c='ngx_http_upstream_next'/>

@@ -1,0 +1,11 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='470' type='unsigned int'/>
+<offset>9832</offset>
+<doc f='nginx/src/http/ngx_http_request.h' l='469'>/* URI with &quot; &quot; */</doc>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1098' u='r' c='ngx_http_proxy_create_key'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1211' u='r' c='ngx_http_proxy_create_request'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='618' u='w' c='ngx_http_parse_request_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='672' u='w' c='ngx_http_parse_request_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1147' u='w' c='ngx_http_parse_uri'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1208' u='w' c='ngx_http_parse_uri'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1243' u='w' c='ngx_http_parse_uri'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1136' u='r' c='ngx_http_process_request_uri'/>

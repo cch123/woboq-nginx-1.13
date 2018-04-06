@@ -1,0 +1,9 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='123'/>
+<doc f='nginx/src/http/ngx_http_request.h' l='119'>/*
+ * We use the special code for the plain HTTP requests that are sent to
+ * HTTPS port to distinguish it from 4XX in an error page redirection
+ */</doc>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4667' u='c'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='433' u='c'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='445' u='c'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='511' u='c'/>

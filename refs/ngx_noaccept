@@ -1,0 +1,5 @@
+<dec f='nginx/src/os/unix/ngx_process_cycle.h' l='55' type='sig_atomic_t'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='359' u='w' c='ngx_signal_handler'/>
+<def f='nginx/src/os/unix/ngx_process_cycle.c' l='51' type='sig_atomic_t'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='278' u='r' c='ngx_master_process_cycle'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='279' u='w' c='ngx_master_process_cycle'/>

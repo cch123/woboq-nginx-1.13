@@ -1,0 +1,6 @@
+<dec f='include/netdb.h' l='576' type='struct addrinfo *'/>
+<offset>320</offset>
+<doc f='include/netdb.h' l='576'>/* Pointer to next in list.  */</doc>
+<use f='nginx/src/core/ngx_inet.c' l='1139' u='r' c='ngx_inet_resolve_host'/>
+<use f='nginx/src/core/ngx_inet.c' l='1172' u='r' c='ngx_inet_resolve_host'/>
+<use f='nginx/src/core/ngx_inet.c' l='1205' u='r' c='ngx_inet_resolve_host'/>

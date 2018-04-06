@@ -1,0 +1,4 @@
+<dec f='include/x86_64-linux-gnu/bits/socket.h' l='180'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_keepalive_module.c' l='400' u='c'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2845' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1436' u='c'/>

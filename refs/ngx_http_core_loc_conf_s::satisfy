@@ -1,0 +1,10 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='370' type='ngx_uint_t'/>
+<use f='nginx/src/http/modules/ngx_http_access_module.c' l='283' u='r' c='ngx_http_access_found'/>
+<offset>2752</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='370'>/* satisfy */</doc>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1096' u='r' c='ngx_http_core_access_phase'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3368' u='w' c='ngx_http_core_create_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3584' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3584' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3584' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3584' u='r' c='ngx_http_core_merge_loc_conf'/>

@@ -1,0 +1,6 @@
+<dec f='nginx/src/core/ngx_log.h' l='221'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1711' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='812' u='c'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1745' u='c'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1847' u='c'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='441' u='c'/>

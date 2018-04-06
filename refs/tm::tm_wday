@@ -1,0 +1,6 @@
+<dec f='include/time.h' l='141' type='int'/>
+<offset>192</offset>
+<use f='nginx/src/core/ngx_times.c' l='126' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_times.c' l='290' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_times.c' l='316' macro='1' u='r'/>
+<use f='nginx/src/core/ngx_times.c' l='428' macro='1' u='w'/>

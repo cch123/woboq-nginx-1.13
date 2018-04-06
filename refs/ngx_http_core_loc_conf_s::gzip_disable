@@ -1,0 +1,14 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='404' type='ngx_array_t *'/>
+<offset>4480</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='404'>/* gzip_disable */</doc>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2070' u='r' c='ngx_http_gzip_ok'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2072' u='r' c='ngx_http_gzip_ok'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3425' u='w' c='ngx_http_core_create_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3708' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3708' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3708' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3708' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4854' u='r' c='ngx_http_gzip_disable'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4855' u='w' c='ngx_http_gzip_disable'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4857' u='r' c='ngx_http_gzip_disable'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4886' u='r' c='ngx_http_gzip_disable'/>

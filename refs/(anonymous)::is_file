@@ -1,0 +1,11 @@
+<dec f='nginx/src/core/ngx_open_file_cache.h' l='47' type='unsigned int'/>
+<offset>776</offset>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='174' u='w' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='248' u='w' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='414' u='r' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='940' u='w' c='ngx_open_and_stat_file'/>
+<use f='nginx/src/http/modules/ngx_http_static_module.c' l='196' u='r' c='ngx_http_static_handler'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1550' u='r' c='ngx_http_script_file_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1556' u='r' c='ngx_http_script_file_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1574' u='r' c='ngx_http_script_file_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1580' u='r' c='ngx_http_script_file_code'/>

@@ -1,0 +1,9 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='310' type='ngx_http_addr_conf_t *'/>
+<offset>0</offset>
+<use f='nginx/src/http/ngx_http_request.c' l='261' u='w' c='ngx_http_init_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='279' u='w' c='ngx_http_init_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='291' u='w' c='ngx_http_init_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='297' u='w' c='ngx_http_init_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='303' u='r' c='ngx_http_init_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='357' u='r' c='ngx_http_init_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2086' u='r' c='ngx_http_set_virtual_server'/>

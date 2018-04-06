@@ -1,0 +1,6 @@
+<dec f='nginx/src/core/ngx_cycle.h' l='73' type='ngx_event_t *'/>
+<offset>4032</offset>
+<use f='nginx/src/event/ngx_event.c' l='691' u='w' c='ngx_event_process_init'/>
+<use f='nginx/src/event/ngx_event.c' l='693' u='r' c='ngx_event_process_init'/>
+<use f='nginx/src/event/ngx_event.c' l='697' u='r' c='ngx_event_process_init'/>
+<use f='nginx/src/event/ngx_event.c' l='721' u='r' c='ngx_event_process_init'/>

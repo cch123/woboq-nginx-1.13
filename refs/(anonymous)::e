@@ -1,0 +1,9 @@
+<dec f='nginx/src/core/ngx_sha1.h' l='18' type='uint32_t'/>
+<offset>192</offset>
+<use f='nginx/src/core/ngx_sha1.c' l='26' u='w' c='ngx_sha1_init'/>
+<use f='nginx/src/core/ngx_sha1.c' l='111' u='r' c='ngx_sha1_final'/>
+<use f='nginx/src/core/ngx_sha1.c' l='112' u='r' c='ngx_sha1_final'/>
+<use f='nginx/src/core/ngx_sha1.c' l='113' u='r' c='ngx_sha1_final'/>
+<use f='nginx/src/core/ngx_sha1.c' l='114' u='r' c='ngx_sha1_final'/>
+<use f='nginx/src/core/ngx_sha1.c' l='171' u='r' c='ngx_sha1_body'/>
+<use f='nginx/src/core/ngx_sha1.c' l='291' u='w' c='ngx_sha1_body'/>

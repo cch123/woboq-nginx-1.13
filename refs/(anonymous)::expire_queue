@@ -1,0 +1,18 @@
+<dec f='nginx/src/core/ngx_open_file_cache.h' l='94' type='ngx_queue_t'/>
+<offset>512</offset>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='70' u='a' c='ngx_open_file_cache_init'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='70' u='a' c='ngx_open_file_cache_init'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='70' u='a' c='ngx_open_file_cache_init'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='70' u='a' c='ngx_open_file_cache_init'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='101' u='a' c='ngx_open_file_cache_cleanup'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='101' u='a' c='ngx_open_file_cache_cleanup'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='105' u='a' c='ngx_open_file_cache_cleanup'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='430' u='a' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='430' u='a' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='430' u='a' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1045' u='a' c='ngx_close_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1045' u='a' c='ngx_close_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1045' u='a' c='ngx_close_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1112' u='a' c='ngx_expire_old_cached_files'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1112' u='a' c='ngx_expire_old_cached_files'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1116' u='a' c='ngx_expire_old_cached_files'/>

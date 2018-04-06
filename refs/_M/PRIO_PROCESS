@@ -1,0 +1,2 @@
+<dec f='include/x86_64-linux-gnu/bits/resource.h' l='295'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='800' u='c'/>

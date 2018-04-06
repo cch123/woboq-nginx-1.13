@@ -1,0 +1,8 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='207' type='ngx_flag_t'/>
+<offset>2816</offset>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='2864' u='w' c='ngx_http_proxy_create_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='3168' u='r' c='ngx_http_proxy_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='3168' u='w' c='ngx_http_proxy_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='3169' u='r' c='ngx_http_proxy_merge_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='3169' u='r' c='ngx_http_proxy_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='828' u='r' c='ngx_http_upstream_cache'/>

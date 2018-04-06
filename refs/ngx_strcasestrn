@@ -1,0 +1,8 @@
+<dec f='nginx/src/core/ngx_string.h' l='165' type='u_char * ngx_strcasestrn(u_char * s1, char * s2, size_t n)'/>
+<def f='nginx/src/core/ngx_string.c' l='704' ll='727' type='u_char * ngx_strcasestrn(u_char * s1, char * s2, size_t n)'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='2548' u='c' c='ngx_http_proxy_rewrite_cookie'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='2564' u='c' c='ngx_http_proxy_rewrite_cookie'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2105' u='c' c='ngx_http_gzip_accept_encoding'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1693' u='c' c='ngx_http_process_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1696' u='c' c='ngx_http_process_connection'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5061' u='c' c='ngx_http_upstream_rewrite_refresh'/>

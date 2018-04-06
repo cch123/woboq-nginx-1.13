@@ -1,0 +1,6 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='321' type='ngx_int_t'/>
+<offset>192</offset>
+<use f='nginx/src/http/ngx_http_request.c' l='1505' u='r' c='ngx_http_alloc_large_header_buffer'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1530' u='w' c='ngx_http_alloc_large_header_buffer'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2960' u='w' c='ngx_http_set_keepalive'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3056' u='w' c='ngx_http_set_keepalive'/>

@@ -1,0 +1,3 @@
+<dec f='nginx/src/http/ngx_http.h' l='104' type='ngx_int_t ngx_http_parse_set_cookie_lines(ngx_array_t * headers, ngx_str_t * name, ngx_str_t * value)'/>
+<def f='nginx/src/http/ngx_http_parse.c' l='2012' ll='2060' type='ngx_int_t ngx_http_parse_set_cookie_lines(ngx_array_t * headers, ngx_str_t * name, ngx_str_t * value)'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5531' u='c' c='ngx_http_upstream_cookie_variable'/>

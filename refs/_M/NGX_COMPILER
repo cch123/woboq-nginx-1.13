@@ -1,0 +1,5 @@
+<dec f='nginx/objs/ngx_auto_config.h' l='4'/>
+<use f='nginx/src/core/nginx.c' l='426' u='a'/>
+<use f='nginx/src/core/nginx.c' l='427' u='c'/>
+<use f='nginx/src/os/unix/ngx_posix_init.c' l='103' u='a'/>
+<use f='nginx/src/os/unix/ngx_posix_init.c' l='104' u='c'/>

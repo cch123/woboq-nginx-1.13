@@ -1,0 +1,1 @@
+<dec f='include/pcre.h' l='604' type='int pcre32_get_named_substring(const pcre32 * , const unsigned int * , int * , int , const unsigned int * , const unsigned int ** )'/>

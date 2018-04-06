@@ -1,0 +1,19 @@
+<dec f='include/string.h' l='65' type='int memcmp(const void * __s1, const void * __s2, size_t __n)'/>
+<doc f='include/string.h' l='64'>/* Compare N bytes of S1 and S2.  */</doc>
+<use f='nginx/src/core/ngx_inet.c' l='1391' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_inet.c' l='1415' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_proxy_protocol.c' l='60' u='c' c='ngx_proxy_protocol_read'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3492' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3574' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_string.c' l='836' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_string.c' l='1921' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_string.c' l='1964' macro='1' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1487' macro='1' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1961' macro='1' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2582' macro='1' u='c'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='568' macro='1' u='c'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='595' macro='1' u='c'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='996' macro='1' u='c'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1034' macro='1' u='c'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1316' macro='1' u='c'/>
+<use f='nginx/src/http/ngx_http_request.c' l='256' macro='1' u='c'/>

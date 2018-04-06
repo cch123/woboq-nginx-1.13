@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_log.h' l='238' type='char * ngx_log_set_log(ngx_conf_t * cf, ngx_log_t ** head)'/>
+<use f='nginx/src/core/ngx_log.c' l='551' u='c' c='ngx_error_log'/>
+<def f='nginx/src/core/ngx_log.c' l='555' ll='676' type='char * ngx_log_set_log(ngx_conf_t * cf, ngx_log_t ** head)'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4765' u='c' c='ngx_http_core_error_log'/>

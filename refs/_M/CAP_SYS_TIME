@@ -1,0 +1,2 @@
+<dec f='include/linux/capability.h' l='294'/>
+<doc f='include/linux/capability.h' l='292'>/* Allow setting the real-time clock */</doc>

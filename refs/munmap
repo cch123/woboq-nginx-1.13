@@ -1,0 +1,5 @@
+<dec f='include/x86_64-linux-gnu/sys/mman.h' l='76' type='int munmap(void * __addr, size_t __len)'/>
+<doc f='include/x86_64-linux-gnu/sys/mman.h' l='74'>/* Deallocate any mapping for the region starting at ADDR and extending LEN
+   bytes.  Returns 0 if successful, -1 for errors (and sets errno).  */</doc>
+<use f='nginx/src/os/unix/ngx_files.c' l='659' u='c' c='ngx_close_file_mapping'/>
+<use f='nginx/src/os/unix/ngx_shmem.c' l='34' u='c' c='ngx_shm_free'/>

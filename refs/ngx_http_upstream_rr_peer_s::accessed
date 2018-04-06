@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_upstream_round_robin.h' l='33' type='time_t'/>
+<offset>768</offset>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='619' u='w' c='ngx_http_upstream_free_round_robin_peer'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='643' u='r' c='ngx_http_upstream_free_round_robin_peer'/>

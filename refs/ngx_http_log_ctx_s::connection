@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http.h' l='53' type='ngx_connection_t *'/>
+<offset>0</offset>
+<use f='nginx/src/http/ngx_http_request.c' l='311' u='w' c='ngx_http_init_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3619' u='r' c='ngx_http_log_error'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3629' u='r' c='ngx_http_log_error'/>

@@ -1,0 +1,4 @@
+<dec f='include/pcre.h' l='431' type='int'/>
+<offset>448</offset>
+<doc f='include/pcre.h' l='430'>/* ------------------- Added for Version 1 -------------------------- */</doc>
+<doc f='include/pcre.h' l='431'>/* Offset to next item in the pattern */</doc>

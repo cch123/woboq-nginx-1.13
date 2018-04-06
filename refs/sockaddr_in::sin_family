@@ -1,0 +1,9 @@
+<dec f='include/netinet/in.h' l='241' macro='1' type='sa_family_t'/>
+<offset>0</offset>
+<use f='nginx/src/core/ngx_inet.c' l='793' u='w' c='ngx_parse_inet_url'/>
+<use f='nginx/src/core/ngx_proxy_protocol.c' l='281' u='w' c='ngx_proxy_protocol_v2_read'/>
+<use f='nginx/src/core/ngx_resolver.c' l='391' u='w' c='ngx_resolve_start'/>
+<use f='nginx/src/core/ngx_resolver.c' l='666' u='w' c='ngx_resolve_name_locked'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2398' u='w' c='ngx_resolver_process_a'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4184' u='w' c='ngx_resolver_export'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2798' u='w' c='ngx_http_core_server'/>

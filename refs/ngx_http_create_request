@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http.h' l='114' type='ngx_http_request_t * ngx_http_create_request(ngx_connection_t * c)'/>
+<use f='nginx/src/http/ngx_http_request.c' l='503' u='c' c='ngx_http_wait_request_handler'/>
+<def f='nginx/src/http/ngx_http_request.c' l='514' ll='630' type='ngx_http_request_t * ngx_http_create_request(ngx_connection_t * c)'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2985' u='c' c='ngx_http_set_keepalive'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3226' u='c' c='ngx_http_keepalive_handler'/>

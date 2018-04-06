@@ -1,0 +1,10 @@
+<dec f='nginx/src/event/ngx_event.h' l='225'/>
+<doc f='nginx/src/event/ngx_event.h' l='221'>/*
+ * The event filter has kqueue features: the eof flag, errno,
+ * available data, etc.
+ */</doc>
+<use f='nginx/src/event/ngx_event_accept.c' l='49' u='c'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='105' u='c'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='315' u='c'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='364' u='c'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='636' u='c'/>

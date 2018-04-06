@@ -1,0 +1,10 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='279' type='u_char *'/>
+<offset>2240</offset>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='283' u='w' c='ngx_http_autoindex_handler'/>
+<use f='nginx/src/http/modules/ngx_http_range_filter_module.c' l='536' u='w' c='ngx_http_range_multipart_header'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1476' u='r' c='ngx_http_test_content_type'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1483' u='w' c='ngx_http_test_content_type'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1497' u='r' c='ngx_http_test_content_type'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='701' u='w' c='ngx_http_send_special_response'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='799' u='w' c='ngx_http_send_refresh'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4935' u='w' c='ngx_http_upstream_copy_content_type'/>

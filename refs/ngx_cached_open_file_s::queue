@@ -1,0 +1,24 @@
+<dec f='nginx/src/core/ngx_open_file_cache.h' l='58' type='ngx_queue_t'/>
+<offset>320</offset>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='215' u='a' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='215' u='a' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='215' u='a' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='215' u='a' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='430' u='a' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='430' u='a' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='430' u='a' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='430' u='a' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='430' u='a' c='ngx_open_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1043' u='a' c='ngx_close_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1043' u='a' c='ngx_close_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1043' u='a' c='ngx_close_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1043' u='a' c='ngx_close_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1045' u='a' c='ngx_close_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1045' u='a' c='ngx_close_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1045' u='a' c='ngx_close_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1045' u='a' c='ngx_close_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1045' u='a' c='ngx_close_cached_file'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1235' u='a' c='ngx_open_file_cache_remove'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1235' u='a' c='ngx_open_file_cache_remove'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1235' u='a' c='ngx_open_file_cache_remove'/>
+<use f='nginx/src/core/ngx_open_file_cache.c' l='1235' u='a' c='ngx_open_file_cache_remove'/>

@@ -1,0 +1,18 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='532' type='ngx_uint_t'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='558' u='r' c='ngx_http_rewrite_if'/>
+<def f='nginx/src/http/ngx_http.c' l='69' type='ngx_uint_t'/>
+<use f='nginx/src/http/ngx_http.c' l='147' u='w' c='ngx_http_block'/>
+<use f='nginx/src/http/ngx_http.c' l='153' u='r' c='ngx_http_block'/>
+<use f='nginx/src/http/ngx_http.c' l='164' u='r' c='ngx_http_block'/>
+<use f='nginx/src/http/ngx_http.c' l='175' u='r' c='ngx_http_block'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2263' u='r' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2428' u='r' c='ngx_http_internal_redirect'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2502' u='r' c='ngx_http_named_location'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2728' u='r' c='ngx_http_core_server'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2735' u='r' c='ngx_http_core_server'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2853' u='r' c='ngx_http_core_location'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4380' u='r' c='ngx_http_core_limit_except'/>
+<use f='nginx/src/http/ngx_http_request.c' l='577' u='r' c='ngx_http_create_request'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='543' u='r' c='ngx_http_filter_finalize_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5671' u='r' c='ngx_http_upstream'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5683' u='r' c='ngx_http_upstream'/>

@@ -1,0 +1,6 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='63' type='ngx_msec_t'/>
+<offset>192</offset>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1518' u='w' c='ngx_http_upstream_connect'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2368' u='w' c='ngx_http_upstream_process_header'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5375' u='r' c='ngx_http_upstream_response_time_variable'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5376' u='r' c='ngx_http_upstream_response_time_variable'/>

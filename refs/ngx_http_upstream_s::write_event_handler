@@ -1,0 +1,7 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='319' type='ngx_http_upstream_handler_pt'/>
+<offset>64</offset>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1277' u='r' c='ngx_http_upstream_handler'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1553' u='w' c='ngx_http_upstream_connect'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2035' u='w' c='ngx_http_upstream_send_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2199' u='w' c='ngx_http_upstream_send_request_handler'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3213' u='w' c='ngx_http_upstream_upgrade'/>

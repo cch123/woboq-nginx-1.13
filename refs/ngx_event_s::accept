@@ -1,0 +1,6 @@
+<dec f='nginx/src/event/ngx_event.h' l='35' type='unsigned int'/>
+<offset>65</offset>
+<use f='nginx/src/core/ngx_cycle.c' l='1377' u='r' c='ngx_shutdown_timer_handler'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='896' u='r' c='ngx_epoll_process_events'/>
+<use f='nginx/src/event/ngx_event.c' l='757' u='w' c='ngx_event_process_init'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='994' u='r' c='ngx_worker_process_exit'/>

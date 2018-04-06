@@ -1,0 +1,117 @@
+<dec f='nginx/src/os/unix/ngx_process.h' l='24' type='int'/>
+<offset>32</offset>
+<dec f='nginx/src/http/ngx_http_request.h' l='258' type='ngx_uint_t'/>
+<dec f='nginx/src/http/ngx_http_script.h' l='34' type='ngx_int_t'/>
+<dec f='nginx/src/http/ngx_http_script.h' l='121' type='uintptr_t'/>
+<dec f='nginx/src/http/ngx_http_script.h' l='162' type='uintptr_t'/>
+<dec f='nginx/src/http/ngx_http_upstream.h' l='60' type='ngx_uint_t'/>
+<dec f='nginx/src/http/ngx_http_upstream.h' l='261' type='ngx_table_elt_t *'/>
+<dec f='nginx/src/http/ngx_http_upstream.h' l='401' type='ngx_uint_t'/>
+<dec f='nginx/src/http/ngx_http_core_module.h' l='291' type='ngx_int_t'/>
+<dec f='nginx/src/http/ngx_http_cache.h' l='34' type='ngx_uint_t'/>
+<offset>0</offset>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='260' u='w' c='ngx_http_autoindex_handler'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='497' u='r' c='ngx_http_set_charset'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='498' u='r' c='ngx_http_set_charset'/>
+<use f='nginx/src/http/modules/ngx_http_chunked_filter_module.c' l='65' u='r' c='ngx_http_chunked_header_filter'/>
+<use f='nginx/src/http/modules/ngx_http_chunked_filter_module.c' l='66' u='r' c='ngx_http_chunked_header_filter'/>
+<use f='nginx/src/http/modules/ngx_http_chunked_filter_module.c' l='67' u='r' c='ngx_http_chunked_header_filter'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='1980' u='r' c='ngx_http_fastcgi_process_header'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='1981' u='r' c='ngx_http_fastcgi_process_header'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2005' u='r' c='ngx_http_fastcgi_process_header'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2006' u='w' c='ngx_http_fastcgi_process_header'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='250' u='r' c='ngx_http_gzip_header_filter'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='251' u='r' c='ngx_http_gzip_header_filter'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='252' u='r' c='ngx_http_gzip_header_filter'/>
+<use f='nginx/src/http/modules/ngx_http_headers_filter_module.c' l='186' u='r' c='ngx_http_headers_filter'/>
+<use f='nginx/src/http/modules/ngx_http_headers_filter_module.c' l='277' u='r' c='ngx_http_trailers_filter'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='862' u='r' c='ngx_http_log_status'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='863' u='r' c='ngx_http_log_status'/>
+<use f='nginx/src/http/modules/ngx_http_memcached_module.c' l='417' u='w' c='ngx_http_memcached_process_header'/>
+<use f='nginx/src/http/modules/ngx_http_memcached_module.c' l='429' u='w' c='ngx_http_memcached_process_header'/>
+<use f='nginx/src/http/modules/ngx_http_not_modified_filter_module.c' l='57' u='r' c='ngx_http_not_modified_header_filter'/>
+<use f='nginx/src/http/modules/ngx_http_not_modified_filter_module.c' l='94' u='w' c='ngx_http_not_modified_header_filter'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1751' u='w' c='ngx_http_proxy_process_status_line'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1757' u='r' c='ngx_http_proxy_process_status_line'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1758' u='w' c='ngx_http_proxy_process_status_line'/>
+<use f='nginx/src/http/modules/ngx_http_range_filter_module.c' l='156' u='r' c='ngx_http_range_header_filter'/>
+<use f='nginx/src/http/modules/ngx_http_range_filter_module.c' l='234' u='w' c='ngx_http_range_header_filter'/>
+<use f='nginx/src/http/modules/ngx_http_range_filter_module.c' l='592' u='w' c='ngx_http_range_not_satisfiable'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='176' u='w' c='ngx_http_rewrite_handler'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='183' u='r' c='ngx_http_rewrite_handler'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='184' u='r' c='ngx_http_rewrite_handler'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='188' u='r' c='ngx_http_rewrite_handler'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='361' u='w' c='ngx_http_rewrite'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='375' u='w' c='ngx_http_rewrite'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='380' u='w' c='ngx_http_rewrite'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='468' u='w' c='ngx_http_rewrite_return'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='470' u='r' c='ngx_http_rewrite_return'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='477' u='w' c='ngx_http_rewrite_return'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='488' u='r' c='ngx_http_rewrite_return'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='983' u='r' c='ngx_http_scgi_process_status_line'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='984' u='w' c='ngx_http_scgi_process_status_line'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='1088' u='r' c='ngx_http_scgi_process_header'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='1089' u='r' c='ngx_http_scgi_process_header'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='1112' u='r' c='ngx_http_scgi_process_header'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='1113' u='w' c='ngx_http_scgi_process_header'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2234' u='r' c='ngx_http_ssi_set_variable'/>
+<use f='nginx/src/http/modules/ngx_http_static_module.c' l='217' u='w' c='ngx_http_static_handler'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='1187' u='r' c='ngx_http_uwsgi_process_status_line'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='1188' u='w' c='ngx_http_uwsgi_process_status_line'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='1292' u='r' c='ngx_http_uwsgi_process_header'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='1293' u='r' c='ngx_http_uwsgi_process_header'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='1316' u='r' c='ngx_http_uwsgi_process_header'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='1317' u='w' c='ngx_http_uwsgi_process_header'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1671' u='w' c='ngx_http_send_response'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1751' u='w' c='ngx_http_send_header'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4648' u='w' c='ngx_http_core_error_page'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4650' u='r' c='ngx_http_core_error_page'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4650' u='r' c='ngx_http_core_error_page'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4656' u='r' c='ngx_http_core_error_page'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4656' u='r' c='ngx_http_core_error_page'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4666' u='r' c='ngx_http_core_error_page'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2289' u='r' c='ngx_http_file_cache_valid'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2293' u='r' c='ngx_http_file_cache_valid'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2655' u='w' c='ngx_http_file_cache_valid_set_slot'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2683' u='w' c='ngx_http_file_cache_valid_set_slot'/>
+<use f='nginx/src/http/ngx_http_header_filter_module.c' l='191' u='r' c='ngx_http_header_filter'/>
+<use f='nginx/src/http/ngx_http_header_filter_module.c' l='192' u='r' c='ngx_http_header_filter'/>
+<use f='nginx/src/http/ngx_http_header_filter_module.c' l='193' u='r' c='ngx_http_header_filter'/>
+<use f='nginx/src/http/ngx_http_header_filter_module.c' l='215' u='r' c='ngx_http_header_filter'/>
+<use f='nginx/src/http/ngx_http_header_filter_module.c' l='274' u='r' c='ngx_http_header_filter'/>
+<use f='nginx/src/http/ngx_http_header_filter_module.c' l='378' u='r' c='ngx_http_header_filter'/>
+<use f='nginx/src/http/ngx_http_header_filter_module.c' l='554' u='r' c='ngx_http_header_filter'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2526' u='r' c='ngx_http_terminate_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2527' u='w' c='ngx_http_terminate_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3507' u='r' c='ngx_http_free_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3508' u='w' c='ngx_http_free_request'/>
+<use f='nginx/src/http/ngx_http_script.c' l='967' u='w' c='ngx_http_script_regex_start_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='992' u='r' c='ngx_http_script_regex_start_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='993' u='w' c='ngx_http_script_regex_start_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='993' u='r' c='ngx_http_script_regex_start_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1053' u='w' c='ngx_http_script_regex_start_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1112' u='w' c='ngx_http_script_regex_end_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1158' u='w' c='ngx_http_script_regex_end_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1344' u='w' c='ngx_http_script_full_name_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1364' u='r' c='ngx_http_script_return_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1368' u='w' c='ngx_http_script_return_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1368' u='r' c='ngx_http_script_return_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1371' u='w' c='ngx_http_script_return_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1371' u='r' c='ngx_http_script_return_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1509' u='w' c='ngx_http_script_file_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1518' u='w' c='ngx_http_script_file_code'/>
+<use f='nginx/src/http/ngx_http_script.c' l='1643' u='w' c='ngx_http_script_complex_value_code'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='465' u='r' c='ngx_http_special_response_handler'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='570' u='a' c='ngx_http_clean_header'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2398' u='r' c='ngx_http_upstream_test_next'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2400' u='r' c='ngx_http_upstream_test_next'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2556' u='r' c='ngx_http_upstream_intercept_errors'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2779' u='w' c='ngx_http_upstream_process_headers'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4153' u='w' c='ngx_http_upstream_next'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5307' u='r' c='ngx_http_upstream_status_variable'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5308' u='r' c='ngx_http_upstream_status_variable'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5373' u='r' c='ngx_http_upstream_response_time_variable'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1778' u='r' c='ngx_http_variable_status'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1779' u='r' c='ngx_http_variable_status'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1921' u='r' c='ngx_http_variable_sent_connection'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='526' u='w' c='ngx_process_get_status'/>

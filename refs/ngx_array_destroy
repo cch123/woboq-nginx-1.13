@@ -1,0 +1,2 @@
+<dec f='nginx/src/core/ngx_array.h' l='26' type='void ngx_array_destroy(ngx_array_t * a)'/>
+<def f='nginx/src/core/ngx_array.c' l='30' ll='44' type='void ngx_array_destroy(ngx_array_t * a)'/>

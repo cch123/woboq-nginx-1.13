@@ -1,0 +1,6 @@
+<dec f='include/dlfcn.h' l='64' type='void * dlsym(void *restrict __handle, const char *restrict __name)'/>
+<doc f='include/dlfcn.h' l='62'>/* Find the run-time address in the shared object HANDLE refers to
+   of the symbol called NAME.  */</doc>
+<use f='nginx/src/core/nginx.c' l='1534' macro='1' u='c'/>
+<use f='nginx/src/core/nginx.c' l='1542' macro='1' u='c'/>
+<use f='nginx/src/core/nginx.c' l='1550' macro='1' u='c'/>

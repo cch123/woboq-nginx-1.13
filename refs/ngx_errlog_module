@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_log.h' l='264' type='ngx_module_t'/>
+<dec f='nginx/objs/ngx_modules.c' l='8' type='ngx_module_t'/>
+<use f='nginx/objs/ngx_modules.c' l='60' u='a'/>
+<use f='nginx/objs/ngx_modules.c' l='60' u='a'/>
+<def f='nginx/src/core/ngx_log.c' l='54' ll='67' type='ngx_module_t'/>

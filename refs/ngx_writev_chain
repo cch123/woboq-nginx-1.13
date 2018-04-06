@@ -1,0 +1,4 @@
+<dec f='nginx/src/os/unix/ngx_os.h' l='50' type='ngx_chain_t * ngx_writev_chain(ngx_connection_t * c, ngx_chain_t * in, off_t limit)'/>
+<use f='nginx/src/os/unix/ngx_posix_init.c' l='29' u='r'/>
+<use f='nginx/src/os/unix/ngx_posix_init.c' l='29' u='r'/>
+<def f='nginx/src/os/unix/ngx_writev_chain.c' l='13' ll='104' type='ngx_chain_t * ngx_writev_chain(ngx_connection_t * c, ngx_chain_t * in, off_t limit)'/>

@@ -1,0 +1,19 @@
+<dec f='nginx/src/core/ngx_radix_tree.h' l='22' type='ngx_radix_node_t *'/>
+<offset>64</offset>
+<use f='nginx/src/core/ngx_radix_tree.c' l='37' u='w' c='ngx_radix_tree_create'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='125' u='r' c='ngx_radix32tree_insert'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='152' u='w' c='ngx_radix32tree_insert'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='160' u='w' c='ngx_radix32tree_insert'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='187' u='r' c='ngx_radix32tree_delete'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='197' u='r' c='ngx_radix32tree_delete'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='211' u='w' c='ngx_radix32tree_delete'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='219' u='r' c='ngx_radix32tree_delete'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='256' u='r' c='ngx_radix32tree_find'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='287' u='r' c='ngx_radix128tree_insert'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='322' u='w' c='ngx_radix128tree_insert'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='330' u='w' c='ngx_radix128tree_insert'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='367' u='r' c='ngx_radix128tree_delete'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='385' u='r' c='ngx_radix128tree_delete'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='399' u='w' c='ngx_radix128tree_delete'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='407' u='r' c='ngx_radix128tree_delete'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='446' u='r' c='ngx_radix128tree_find'/>

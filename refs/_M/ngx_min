@@ -1,0 +1,16 @@
+<dec f='nginx/src/core/ngx_core.h' l='101'/>
+<use f='nginx/src/core/nginx.c' l='1351' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='1241' u='c'/>
+<use f='nginx/src/core/ngx_output_chain.c' l='513' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1445' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1452' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1461' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2142' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2684' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='2994' u='c'/>
+<use f='nginx/src/core/ngx_string.c' l='253' u='c'/>
+<use f='nginx/src/core/ngx_string.c' l='262' u='c'/>
+<use f='nginx/src/core/ngx_string.c' l='277' u='c'/>
+<use f='nginx/src/http/ngx_http.c' l='951' u='c'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='681' u='c'/>
+<use f='nginx/src/os/unix/ngx_errno.c' l='39' u='c'/>

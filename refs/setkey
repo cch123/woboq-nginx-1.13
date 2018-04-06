@@ -1,0 +1,4 @@
+<dec f='include/stdlib.h' l='907' type='void setkey(const char * __key)'/>
+<dec f='include/crypt.h' l='36' type='void setkey(const char * __key)'/>
+<doc f='include/stdlib.h' l='906'>/* Setup DES tables according KEY.  */</doc>
+<doc f='include/crypt.h' l='35'>/* Setup DES tables according KEY.  */</doc>

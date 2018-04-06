@@ -1,0 +1,17 @@
+<dec f='nginx/src/os/unix/ngx_process_cycle.h' l='54' type='sig_atomic_t'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_keepalive_module.c' l='309' u='r' c='ngx_http_upstream_free_keepalive_peer'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1826' u='r' c='ngx_http_file_cache_expire'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2001' u='r' c='ngx_http_file_cache_manager'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2113' u='r' c='ngx_http_file_cache_manage_file'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2613' u='r' c='ngx_http_finalize_connection'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='353' u='w' c='ngx_signal_handler'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='425' u='w' c='ngx_signal_handler'/>
+<def f='nginx/src/os/unix/ngx_process_cycle.c' l='39' type='sig_atomic_t'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='178' u='r' c='ngx_master_process_cycle'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='182' u='r' c='ngx_master_process_cycle'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='312' u='r' c='ngx_single_process_cycle'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='619' u='r' c='ngx_reap_children'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='752' u='r' c='ngx_worker_process_cycle'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='1090' u='w' c='ngx_channel_handler'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='1161' u='r' c='ngx_cache_manager_process_cycle'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='1218' u='r' c='ngx_cache_loader_process_handler'/>

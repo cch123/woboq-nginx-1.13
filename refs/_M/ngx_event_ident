@@ -1,0 +1,2 @@
+<dec f='nginx/src/event/ngx_event.h' l='530'/>
+<doc f='nginx/src/event/ngx_event.h' l='529'>/* used in ngx_log_debugX() */</doc>

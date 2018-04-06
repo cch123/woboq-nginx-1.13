@@ -1,0 +1,25 @@
+<def f='nginx/src/core/ngx_resolver.h' l='195' ll='226'/>
+<size>224</size>
+<mbr r='ngx_resolver_ctx_s::next' o='0' t='ngx_resolver_ctx_t *'/>
+<mbr r='ngx_resolver_ctx_s::resolver' o='64' t='ngx_resolver_t *'/>
+<mbr r='ngx_resolver_ctx_s::node' o='128' t='ngx_resolver_node_t *'/>
+<mbr r='ngx_resolver_ctx_s::ident' o='192' t='ngx_int_t'/>
+<mbr r='ngx_resolver_ctx_s::state' o='256' t='ngx_int_t'/>
+<mbr r='ngx_resolver_ctx_s::name' o='320' t='ngx_str_t'/>
+<mbr r='ngx_resolver_ctx_s::service' o='448' t='ngx_str_t'/>
+<mbr r='ngx_resolver_ctx_s::valid' o='576' t='time_t'/>
+<mbr r='ngx_resolver_ctx_s::naddrs' o='640' t='ngx_uint_t'/>
+<mbr r='ngx_resolver_ctx_s::addrs' o='704' t='ngx_resolver_addr_t *'/>
+<mbr r='ngx_resolver_ctx_s::addr' o='768' t='ngx_resolver_addr_t'/>
+<mbr r='ngx_resolver_ctx_s::sin' o='1088' t='struct sockaddr_in'/>
+<mbr r='ngx_resolver_ctx_s::count' o='1216' t='ngx_uint_t'/>
+<mbr r='ngx_resolver_ctx_s::nsrvs' o='1280' t='ngx_uint_t'/>
+<mbr r='ngx_resolver_ctx_s::srvs' o='1344' t='ngx_resolver_srv_name_t *'/>
+<mbr r='ngx_resolver_ctx_s::handler' o='1408' t='ngx_resolver_handler_pt'/>
+<mbr r='ngx_resolver_ctx_s::data' o='1472' t='void *'/>
+<mbr r='ngx_resolver_ctx_s::timeout' o='1536' t='ngx_msec_t'/>
+<mbr r='ngx_resolver_ctx_s::quick' o='1600' t='unsigned int'/>
+<mbr r='ngx_resolver_ctx_s::async' o='1601' t='unsigned int'/>
+<mbr r='ngx_resolver_ctx_s::cancelable' o='1602' t='unsigned int'/>
+<mbr r='ngx_resolver_ctx_s::recursion' o='1664' t='ngx_uint_t'/>
+<mbr r='ngx_resolver_ctx_s::event' o='1728' t='ngx_event_t *'/>

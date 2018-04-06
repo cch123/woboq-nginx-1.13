@@ -1,0 +1,7 @@
+<dec f='nginx/src/event/ngx_event_pipe.h' l='57' type='unsigned int'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='44' u='w' c='ngx_event_pipe'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='53' u='r' c='ngx_event_pipe'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='161' u='w' c='ngx_event_pipe_read_upstream'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='327' u='w' c='ngx_event_pipe_read_upstream'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='459' u='w' c='ngx_event_pipe_read_upstream'/>
+<offset>832</offset>

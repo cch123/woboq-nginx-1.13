@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='67'/>
+<use f='nginx/src/http/modules/ngx_http_mirror_module.c' l='163' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2316' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1110' u='c'/>

@@ -1,0 +1,12 @@
+<dec f='nginx/src/core/ngx_palloc.h' l='62' type='ngx_pool_large_t *'/>
+<offset>448</offset>
+<use f='nginx/src/core/ngx_palloc.c' l='38' u='w' c='ngx_create_pool'/>
+<use f='nginx/src/core/ngx_palloc.c' l='83' u='r' c='ngx_destroy_pool'/>
+<use f='nginx/src/core/ngx_palloc.c' l='105' u='r' c='ngx_reset_pool'/>
+<use f='nginx/src/core/ngx_palloc.c' l='118' u='w' c='ngx_reset_pool'/>
+<use f='nginx/src/core/ngx_palloc.c' l='227' u='r' c='ngx_palloc_large'/>
+<use f='nginx/src/core/ngx_palloc.c' l='245' u='r' c='ngx_palloc_large'/>
+<use f='nginx/src/core/ngx_palloc.c' l='246' u='w' c='ngx_palloc_large'/>
+<use f='nginx/src/core/ngx_palloc.c' l='270' u='r' c='ngx_pmemalign'/>
+<use f='nginx/src/core/ngx_palloc.c' l='271' u='w' c='ngx_pmemalign'/>
+<use f='nginx/src/core/ngx_palloc.c' l='282' u='r' c='ngx_pfree'/>

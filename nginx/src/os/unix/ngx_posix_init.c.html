@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ngx_posix_init.c source code [nginx/src/os/unix/ngx_posix_init.c] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../../../../data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../../../data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../../../data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../../data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'nginx/src/os/unix/ngx_posix_init.c'; var root_path = '../../../..'; var data_path = '../../../../../data';</script>
+<script src='../../../../../data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../../..'>nginx</a>/<a href='../..'>src</a>/<a href='..'>os</a>/<a href='./'>unix</a>/<a href='ngx_posix_init.c.html'>ngx_posix_init.c</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td></td></tr>
+<tr><th id="2">2</th><td><i>/*</i></td></tr>
+<tr><th id="3">3</th><td><i> * Copyright (C) Igor Sysoev</i></td></tr>
+<tr><th id="4">4</th><td><i> * Copyright (C) Nginx, Inc.</i></td></tr>
+<tr><th id="5">5</th><td><i> */</i></td></tr>
+<tr><th id="6">6</th><td></td></tr>
+<tr><th id="7">7</th><td></td></tr>
+<tr><th id="8">8</th><td><u>#include <a href="../../core/ngx_config.h.html">&lt;ngx_config.h&gt;</a></u></td></tr>
+<tr><th id="9">9</th><td><u>#include <a href="../../core/ngx_core.h.html">&lt;ngx_core.h&gt;</a></u></td></tr>
+<tr><th id="10">10</th><td><u>#include <a href="../../core/nginx.h.html">&lt;nginx.h&gt;</a></u></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td></td></tr>
+<tr><th id="13">13</th><td><a class="typedef" href="../../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a>   <dfn class="decl def" id="ngx_ncpu" title='ngx_ncpu' data-ref="ngx_ncpu">ngx_ncpu</dfn>;</td></tr>
+<tr><th id="14">14</th><td><a class="typedef" href="../../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a>   <dfn class="decl def" id="ngx_max_sockets" title='ngx_max_sockets' data-ref="ngx_max_sockets">ngx_max_sockets</dfn>;</td></tr>
+<tr><th id="15">15</th><td><a class="typedef" href="../../core/ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>  <dfn class="decl def" id="ngx_inherited_nonblocking" title='ngx_inherited_nonblocking' data-ref="ngx_inherited_nonblocking">ngx_inherited_nonblocking</dfn>;</td></tr>
+<tr><th id="16">16</th><td><a class="typedef" href="../../core/ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>  <dfn class="decl def" id="ngx_tcp_nodelay_and_tcp_nopush" title='ngx_tcp_nodelay_and_tcp_nopush' data-ref="ngx_tcp_nodelay_and_tcp_nopush">ngx_tcp_nodelay_and_tcp_nopush</dfn>;</td></tr>
+<tr><th id="17">17</th><td></td></tr>
+<tr><th id="18">18</th><td></td></tr>
+<tr><th id="19">19</th><td><b>struct</b> <a class="type" href="../../../../include/x86_64-linux-gnu/bits/resource.h.html#rlimit" title='rlimit' data-ref="rlimit">rlimit</a>  <dfn class="decl def" id="rlmt" title='rlmt' data-ref="rlmt">rlmt</dfn>;</td></tr>
+<tr><th id="20">20</th><td></td></tr>
+<tr><th id="21">21</th><td></td></tr>
+<tr><th id="22">22</th><td><a class="typedef" href="ngx_os.h.html#ngx_os_io_t" title='ngx_os_io_t' data-type='struct ngx_os_io_t' data-ref="ngx_os_io_t">ngx_os_io_t</a> <dfn class="decl def" id="ngx_os_io" title='ngx_os_io' data-ref="ngx_os_io">ngx_os_io</dfn> = {</td></tr>
+<tr><th id="23">23</th><td>    <a class="ref fn" href="ngx_os.h.html#ngx_unix_recv" title='ngx_unix_recv' data-ref="ngx_unix_recv">ngx_unix_recv</a>,</td></tr>
+<tr><th id="24">24</th><td>    <a class="ref fn" href="ngx_os.h.html#ngx_readv_chain" title='ngx_readv_chain' data-ref="ngx_readv_chain">ngx_readv_chain</a>,</td></tr>
+<tr><th id="25">25</th><td>    <a class="ref fn" href="ngx_os.h.html#ngx_udp_unix_recv" title='ngx_udp_unix_recv' data-ref="ngx_udp_unix_recv">ngx_udp_unix_recv</a>,</td></tr>
+<tr><th id="26">26</th><td>    <a class="ref fn" href="ngx_os.h.html#ngx_unix_send" title='ngx_unix_send' data-ref="ngx_unix_send">ngx_unix_send</a>,</td></tr>
+<tr><th id="27">27</th><td>    <a class="ref fn" href="ngx_os.h.html#ngx_udp_unix_send" title='ngx_udp_unix_send' data-ref="ngx_udp_unix_send">ngx_udp_unix_send</a>,</td></tr>
+<tr><th id="28">28</th><td>    <a class="ref fn" href="ngx_os.h.html#ngx_udp_unix_sendmsg_chain" title='ngx_udp_unix_sendmsg_chain' data-ref="ngx_udp_unix_sendmsg_chain">ngx_udp_unix_sendmsg_chain</a>,</td></tr>
+<tr><th id="29">29</th><td>    <a class="ref fn" href="ngx_os.h.html#ngx_writev_chain" title='ngx_writev_chain' data-ref="ngx_writev_chain">ngx_writev_chain</a>,</td></tr>
+<tr><th id="30">30</th><td>    <var>0</var></td></tr>
+<tr><th id="31">31</th><td>};</td></tr>
+<tr><th id="32">32</th><td></td></tr>
+<tr><th id="33">33</th><td></td></tr>
+<tr><th id="34">34</th><td><a class="typedef" href="../../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a></td></tr>
+<tr><th id="35">35</th><td><dfn class="decl def fn" id="ngx_os_init" title='ngx_os_init' data-ref="ngx_os_init">ngx_os_init</dfn>(<a class="typedef" href="../../core/ngx_core.h.html#ngx_log_t" title='ngx_log_t' data-type='struct ngx_log_s' data-ref="ngx_log_t">ngx_log_t</a> *<dfn class="local col1 decl" id="1log" title='log' data-type='ngx_log_t *' data-ref="1log">log</dfn>)</td></tr>
+<tr><th id="36">36</th><td>{</td></tr>
+<tr><th id="37">37</th><td>    <a class="typedef" href="../../core/ngx_times.h.html#ngx_time_t" title='ngx_time_t' data-type='struct ngx_time_t' data-ref="ngx_time_t">ngx_time_t</a>  *<dfn class="local col2 decl" id="2tp" title='tp' data-type='ngx_time_t *' data-ref="2tp">tp</dfn>;</td></tr>
+<tr><th id="38">38</th><td>    <a class="typedef" href="../../core/ngx_config.h.html#ngx_uint_t" title='ngx_uint_t' data-type='uintptr_t' data-ref="ngx_uint_t">ngx_uint_t</a>   <dfn class="local col3 decl" id="3n" title='n' data-type='ngx_uint_t' data-ref="3n">n</dfn>;</td></tr>
+<tr><th id="39">39</th><td><u>#<span data-ppcond="39">if</span> (<a class="macro" href="../../../objs/ngx_auto_config.h.html#337" title="1" data-ref="_M/NGX_HAVE_LEVEL1_DCACHE_LINESIZE">NGX_HAVE_LEVEL1_DCACHE_LINESIZE</a>)</u></td></tr>
+<tr><th id="40">40</th><td>    <em>long</em>         <dfn class="local col4 decl" id="4size" title='size' data-type='long' data-ref="4size">size</dfn>;</td></tr>
+<tr><th id="41">41</th><td><u>#<span data-ppcond="39">endif</span></u></td></tr>
+<tr><th id="42">42</th><td></td></tr>
+<tr><th id="43">43</th><td><u>#<span data-ppcond="43">if</span> (<a class="macro" href="ngx_linux_config.h.html#121" title="1" data-ref="_M/NGX_HAVE_OS_SPECIFIC_INIT">NGX_HAVE_OS_SPECIFIC_INIT</a>)</u></td></tr>
+<tr><th id="44">44</th><td>    <b>if</b> (<a class="ref fn" href="ngx_os.h.html#ngx_os_specific_init" title='ngx_os_specific_init' data-ref="ngx_os_specific_init">ngx_os_specific_init</a>(<a class="local col1 ref" href="#1log" title='log' data-ref="1log">log</a>) != <a class="macro" href="../../core/ngx_core.h.html#35" title="0" data-ref="_M/NGX_OK">NGX_OK</a>) {</td></tr>
+<tr><th id="45">45</th><td>        <b>return</b> <a class="macro" href="../../core/ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>;</td></tr>
+<tr><th id="46">46</th><td>    }</td></tr>
+<tr><th id="47">47</th><td><u>#<span data-ppcond="43">endif</span></u></td></tr>
+<tr><th id="48">48</th><td></td></tr>
+<tr><th id="49">49</th><td>    <b>if</b> (<a class="ref fn" href="ngx_setproctitle.h.html#ngx_init_setproctitle" title='ngx_init_setproctitle' data-ref="ngx_init_setproctitle">ngx_init_setproctitle</a>(<a class="local col1 ref" href="#1log" title='log' data-ref="1log">log</a>) != <a class="macro" href="../../core/ngx_core.h.html#35" title="0" data-ref="_M/NGX_OK">NGX_OK</a>) {</td></tr>
+<tr><th id="50">50</th><td>        <b>return</b> <a class="macro" href="../../core/ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>;</td></tr>
+<tr><th id="51">51</th><td>    }</td></tr>
+<tr><th id="52">52</th><td></td></tr>
+<tr><th id="53">53</th><td>    <a class="ref" href="ngx_alloc.h.html#ngx_pagesize" title='ngx_pagesize' data-ref="ngx_pagesize">ngx_pagesize</a> = <a class="ref fn" href="../../../../include/unistd.h.html#getpagesize" title='getpagesize' data-ref="getpagesize">getpagesize</a>();</td></tr>
+<tr><th id="54">54</th><td>    <a class="ref" href="ngx_alloc.h.html#ngx_cacheline_size" title='ngx_cacheline_size' data-ref="ngx_cacheline_size">ngx_cacheline_size</a> = <a class="macro" href="../../../objs/ngx_auto_config.h.html#84" title="64" data-ref="_M/NGX_CPU_CACHE_LINE">NGX_CPU_CACHE_LINE</a>;</td></tr>
+<tr><th id="55">55</th><td></td></tr>
+<tr><th id="56">56</th><td>    <b>for</b> (<a class="local col3 ref" href="#3n" title='n' data-ref="3n">n</a> = <a class="ref" href="ngx_alloc.h.html#ngx_pagesize" title='ngx_pagesize' data-ref="ngx_pagesize">ngx_pagesize</a>; <a class="local col3 ref" href="#3n" title='n' data-ref="3n">n</a> &gt;&gt;= <var>1</var>; <a class="ref" href="ngx_alloc.h.html#ngx_pagesize_shift" title='ngx_pagesize_shift' data-ref="ngx_pagesize_shift">ngx_pagesize_shift</a>++) { <i>/* void */</i> }</td></tr>
+<tr><th id="57">57</th><td></td></tr>
+<tr><th id="58">58</th><td><u>#<span data-ppcond="58">if</span> (<a class="macro" href="../../../objs/ngx_auto_config.h.html#332" title="1" data-ref="_M/NGX_HAVE_SC_NPROCESSORS_ONLN">NGX_HAVE_SC_NPROCESSORS_ONLN</a>)</u></td></tr>
+<tr><th id="59">59</th><td>    <b>if</b> (<a class="ref" href="ngx_os.h.html#ngx_ncpu" title='ngx_ncpu' data-ref="ngx_ncpu">ngx_ncpu</a> == <var>0</var>) {</td></tr>
+<tr><th id="60">60</th><td>        <a class="ref" href="ngx_os.h.html#ngx_ncpu" title='ngx_ncpu' data-ref="ngx_ncpu">ngx_ncpu</a> = <a class="ref fn" href="../../../../include/unistd.h.html#sysconf" title='sysconf' data-ref="sysconf">sysconf</a>(<a class="macro" href="../../../../include/x86_64-linux-gnu/bits/confname.h.html#253" title="_SC_NPROCESSORS_ONLN" data-ref="_M/_SC_NPROCESSORS_ONLN">_SC_NPROCESSORS_ONLN</a>);</td></tr>
+<tr><th id="61">61</th><td>    }</td></tr>
+<tr><th id="62">62</th><td><u>#<span data-ppcond="58">endif</span></u></td></tr>
+<tr><th id="63">63</th><td></td></tr>
+<tr><th id="64">64</th><td>    <b>if</b> (<a class="ref" href="ngx_os.h.html#ngx_ncpu" title='ngx_ncpu' data-ref="ngx_ncpu">ngx_ncpu</a> &lt; <var>1</var>) {</td></tr>
+<tr><th id="65">65</th><td>        <a class="ref" href="ngx_os.h.html#ngx_ncpu" title='ngx_ncpu' data-ref="ngx_ncpu">ngx_ncpu</a> = <var>1</var>;</td></tr>
+<tr><th id="66">66</th><td>    }</td></tr>
+<tr><th id="67">67</th><td></td></tr>
+<tr><th id="68">68</th><td><u>#<span data-ppcond="68">if</span> (<a class="macro" href="../../../objs/ngx_auto_config.h.html#337" title="1" data-ref="_M/NGX_HAVE_LEVEL1_DCACHE_LINESIZE">NGX_HAVE_LEVEL1_DCACHE_LINESIZE</a>)</u></td></tr>
+<tr><th id="69">69</th><td>    <a class="local col4 ref" href="#4size" title='size' data-ref="4size">size</a> = <a class="ref fn" href="../../../../include/unistd.h.html#sysconf" title='sysconf' data-ref="sysconf">sysconf</a>(<a class="macro" href="../../../../include/x86_64-linux-gnu/bits/confname.h.html#476" title="_SC_LEVEL1_DCACHE_LINESIZE" data-ref="_M/_SC_LEVEL1_DCACHE_LINESIZE">_SC_LEVEL1_DCACHE_LINESIZE</a>);</td></tr>
+<tr><th id="70">70</th><td>    <b>if</b> (<a class="local col4 ref" href="#4size" title='size' data-ref="4size">size</a> &gt; <var>0</var>) {</td></tr>
+<tr><th id="71">71</th><td>        <a class="ref" href="ngx_alloc.h.html#ngx_cacheline_size" title='ngx_cacheline_size' data-ref="ngx_cacheline_size">ngx_cacheline_size</a> = <a class="local col4 ref" href="#4size" title='size' data-ref="4size">size</a>;</td></tr>
+<tr><th id="72">72</th><td>    }</td></tr>
+<tr><th id="73">73</th><td><u>#<span data-ppcond="68">endif</span></u></td></tr>
+<tr><th id="74">74</th><td></td></tr>
+<tr><th id="75">75</th><td>    <a class="ref fn" href="../../core/ngx_core.h.html#ngx_cpuinfo" title='ngx_cpuinfo' data-ref="ngx_cpuinfo">ngx_cpuinfo</a>();</td></tr>
+<tr><th id="76">76</th><td></td></tr>
+<tr><th id="77">77</th><td>    <b>if</b> (<a class="ref fn" href="../../../../include/x86_64-linux-gnu/sys/resource.h.html#54" title='getrlimit' data-ref="getrlimit64">getrlimit</a>(<a class="macro" href="../../../../include/x86_64-linux-gnu/bits/resource.h.html#63" title="RLIMIT_NOFILE" data-ref="_M/RLIMIT_NOFILE">RLIMIT_NOFILE</a>, &amp;<a class="ref" href="#rlmt" title='rlmt' data-ref="rlmt">rlmt</a>) == -<var>1</var>) {</td></tr>
+<tr><th id="78">78</th><td>        <a class="macro" href="../../core/ngx_log.h.html#85" title="if ((log)-&gt;log_level &gt;= 2) ngx_log_error_core(2, log, (*__errno_location ()), &quot;getrlimit(RLIMIT_NOFILE) failed&quot;)" data-ref="_M/ngx_log_error">ngx_log_error</a>(<a class="macro" href="../../core/ngx_log.h.html#18" title="2" data-ref="_M/NGX_LOG_ALERT">NGX_LOG_ALERT</a>, <a class="local col1 ref" href="#1log" title='log' data-ref="1log">log</a>, <a class="macro" href="../../../../include/x86_64-linux-gnu/bits/errno.h.html#54" title="(*__errno_location ())" data-ref="_M/errno">errno</a>,</td></tr>
+<tr><th id="79">79</th><td>                      <q>"getrlimit(RLIMIT_NOFILE) failed"</q>);</td></tr>
+<tr><th id="80">80</th><td>        <b>return</b> <a class="macro" href="../../core/ngx_core.h.html#36" title="-1" data-ref="_M/NGX_ERROR">NGX_ERROR</a>;</td></tr>
+<tr><th id="81">81</th><td>    }</td></tr>
+<tr><th id="82">82</th><td></td></tr>
+<tr><th id="83">83</th><td>    <a class="ref" href="ngx_os.h.html#ngx_max_sockets" title='ngx_max_sockets' data-ref="ngx_max_sockets">ngx_max_sockets</a> = (<a class="typedef" href="../../core/ngx_config.h.html#ngx_int_t" title='ngx_int_t' data-type='intptr_t' data-ref="ngx_int_t">ngx_int_t</a>) <a class="ref" href="#rlmt" title='rlmt' data-ref="rlmt">rlmt</a>.<a class="ref field" href="../../../../include/x86_64-linux-gnu/bits/resource.h.html#rlimit::rlim_cur" title='rlimit::rlim_cur' data-ref="rlimit::rlim_cur">rlim_cur</a>;</td></tr>
+<tr><th id="84">84</th><td></td></tr>
+<tr><th id="85">85</th><td><u>#<span data-ppcond="85">if</span> (<a class="macro" href="ngx_linux_config.h.html#117" title="0" data-ref="_M/NGX_HAVE_INHERITED_NONBLOCK">NGX_HAVE_INHERITED_NONBLOCK</a> || <a class="macro" href="../../../objs/ngx_auto_config.h.html#177" title="1" data-ref="_M/NGX_HAVE_ACCEPT4">NGX_HAVE_ACCEPT4</a>)</u></td></tr>
+<tr><th id="86">86</th><td>    <a class="ref" href="ngx_os.h.html#ngx_inherited_nonblocking" title='ngx_inherited_nonblocking' data-ref="ngx_inherited_nonblocking">ngx_inherited_nonblocking</a> = <var>1</var>;</td></tr>
+<tr><th id="87">87</th><td><u>#<span data-ppcond="85">else</span></u></td></tr>
+<tr><th id="88">88</th><td>    ngx_inherited_nonblocking = <var>0</var>;</td></tr>
+<tr><th id="89">89</th><td><u>#<span data-ppcond="85">endif</span></u></td></tr>
+<tr><th id="90">90</th><td></td></tr>
+<tr><th id="91">91</th><td>    <a class="local col2 ref" href="#2tp" title='tp' data-ref="2tp">tp</a> = <a class="macro" href="../../core/ngx_times.h.html#37" title="(ngx_time_t *) ngx_cached_time" data-ref="_M/ngx_timeofday">ngx_timeofday</a>();</td></tr>
+<tr><th id="92">92</th><td>    <a class="ref fn" href="../../../../include/stdlib.h.html#srandom" title='srandom' data-ref="srandom">srandom</a>(((<em>unsigned</em>) <a class="ref" href="ngx_process.h.html#ngx_pid" title='ngx_pid' data-ref="ngx_pid">ngx_pid</a> &lt;&lt; <var>16</var>) ^ <a class="local col2 ref" href="#2tp" title='tp' data-ref="2tp">tp</a>-&gt;<a class="ref field" href="../../core/ngx_times.h.html#(anonymous)::sec" title='(anonymous struct)::sec' data-ref="(anonymous)::sec">sec</a> ^ <a class="local col2 ref" href="#2tp" title='tp' data-ref="2tp">tp</a>-&gt;<a class="ref field" href="../../core/ngx_times.h.html#(anonymous)::msec" title='(anonymous struct)::msec' data-ref="(anonymous)::msec">msec</a>);</td></tr>
+<tr><th id="93">93</th><td></td></tr>
+<tr><th id="94">94</th><td>    <b>return</b> <a class="macro" href="../../core/ngx_core.h.html#35" title="0" data-ref="_M/NGX_OK">NGX_OK</a>;</td></tr>
+<tr><th id="95">95</th><td>}</td></tr>
+<tr><th id="96">96</th><td></td></tr>
+<tr><th id="97">97</th><td></td></tr>
+<tr><th id="98">98</th><td><em>void</em></td></tr>
+<tr><th id="99">99</th><td><dfn class="decl def fn" id="ngx_os_status" title='ngx_os_status' data-ref="ngx_os_status">ngx_os_status</dfn>(<a class="typedef" href="../../core/ngx_core.h.html#ngx_log_t" title='ngx_log_t' data-type='struct ngx_log_s' data-ref="ngx_log_t">ngx_log_t</a> *<dfn class="local col5 decl" id="5log" title='log' data-type='ngx_log_t *' data-ref="5log">log</dfn>)</td></tr>
+<tr><th id="100">100</th><td>{</td></tr>
+<tr><th id="101">101</th><td>    <a class="macro" href="../../core/ngx_log.h.html#85" title="if ((log)-&gt;log_level &gt;= 6) ngx_log_error_core(6, log, 0, &quot;nginx/&quot; &quot;1.13.11&quot;)" data-ref="_M/ngx_log_error">ngx_log_error</a>(<a class="macro" href="../../core/ngx_log.h.html#22" title="6" data-ref="_M/NGX_LOG_NOTICE">NGX_LOG_NOTICE</a>, <a class="local col5 ref" href="#5log" title='log' data-ref="5log">log</a>, <var>0</var>, <a class="macro" href="../../core/nginx.h.html#19" title="&quot;nginx/&quot; &quot;1.13.11&quot;" data-ref="_M/NGINX_VER_BUILD">NGINX_VER_BUILD</a>);</td></tr>
+<tr><th id="102">102</th><td></td></tr>
+<tr><th id="103">103</th><td><u>#<span data-ppcond="103">ifdef</span> <a class="macro" href="../../../objs/ngx_auto_config.h.html#4" data-ref="_M/NGX_COMPILER">NGX_COMPILER</a></u></td></tr>
+<tr><th id="104">104</th><td>    <a class="macro" href="../../core/ngx_log.h.html#85" title="if ((log)-&gt;log_level &gt;= 6) ngx_log_error_core(6, log, 0, &quot;built by &quot; &quot;clang 3.8.0-2ubuntu4 (tags/RELEASE_380/final)&quot;)" data-ref="_M/ngx_log_error">ngx_log_error</a>(<a class="macro" href="../../core/ngx_log.h.html#22" title="6" data-ref="_M/NGX_LOG_NOTICE">NGX_LOG_NOTICE</a>, <a class="local col5 ref" href="#5log" title='log' data-ref="5log">log</a>, <var>0</var>, <q>"built by "</q> <a class="macro" href="../../../objs/ngx_auto_config.h.html#4" title="&quot;clang 3.8.0-2ubuntu4 (tags/RELEASE_380/final)&quot;" data-ref="_M/NGX_COMPILER">NGX_COMPILER</a>);</td></tr>
+<tr><th id="105">105</th><td><u>#<span data-ppcond="103">endif</span></u></td></tr>
+<tr><th id="106">106</th><td></td></tr>
+<tr><th id="107">107</th><td><u>#<span data-ppcond="107">if</span> (<a class="macro" href="ngx_linux_config.h.html#121" title="1" data-ref="_M/NGX_HAVE_OS_SPECIFIC_INIT">NGX_HAVE_OS_SPECIFIC_INIT</a>)</u></td></tr>
+<tr><th id="108">108</th><td>    <a class="ref fn" href="ngx_os.h.html#ngx_os_specific_status" title='ngx_os_specific_status' data-ref="ngx_os_specific_status">ngx_os_specific_status</a>(<a class="local col5 ref" href="#5log" title='log' data-ref="5log">log</a>);</td></tr>
+<tr><th id="109">109</th><td><u>#<span data-ppcond="107">endif</span></u></td></tr>
+<tr><th id="110">110</th><td></td></tr>
+<tr><th id="111">111</th><td>    <a class="macro" href="../../core/ngx_log.h.html#85" title="if ((log)-&gt;log_level &gt;= 6) ngx_log_error_core(6, log, 0, &quot;getrlimit(RLIMIT_NOFILE): %r:%r&quot;, rlmt.rlim_cur, rlmt.rlim_max)" data-ref="_M/ngx_log_error">ngx_log_error</a>(<a class="macro" href="../../core/ngx_log.h.html#22" title="6" data-ref="_M/NGX_LOG_NOTICE">NGX_LOG_NOTICE</a>, <a class="local col5 ref" href="#5log" title='log' data-ref="5log">log</a>, <var>0</var>,</td></tr>
+<tr><th id="112">112</th><td>                  <q>"getrlimit(RLIMIT_NOFILE): %r:%r"</q>,</td></tr>
+<tr><th id="113">113</th><td>                  <a class="ref" href="#rlmt" title='rlmt' data-ref="rlmt">rlmt</a>.<a class="ref field" href="../../../../include/x86_64-linux-gnu/bits/resource.h.html#rlimit::rlim_cur" title='rlimit::rlim_cur' data-ref="rlimit::rlim_cur">rlim_cur</a>, <a class="ref" href="#rlmt" title='rlmt' data-ref="rlmt">rlmt</a>.<a class="ref field" href="../../../../include/x86_64-linux-gnu/bits/resource.h.html#rlimit::rlim_max" title='rlimit::rlim_max' data-ref="rlimit::rlim_max">rlim_max</a>);</td></tr>
+<tr><th id="114">114</th><td>}</td></tr>
+<tr><th id="115">115</th><td></td></tr>
+<tr><th id="116">116</th><td></td></tr>
+<tr><th id="117">117</th><td><u>#<span data-ppcond="117">if</span> 0</u></td></tr>
+<tr><th id="118">118</th><td></td></tr>
+<tr><th id="119">119</th><td>ngx_int_t</td></tr>
+<tr><th id="120">120</th><td>ngx_posix_post_conf_init(ngx_log_t *log)</td></tr>
+<tr><th id="121">121</th><td>{</td></tr>
+<tr><th id="122">122</th><td>    ngx_fd_t  pp[<var>2</var>];</td></tr>
+<tr><th id="123">123</th><td></td></tr>
+<tr><th id="124">124</th><td>    <b>if</b> (pipe(pp) == -<var>1</var>) {</td></tr>
+<tr><th id="125">125</th><td>        ngx_log_error(NGX_LOG_EMERG, log, ngx_errno, <q>"pipe() failed"</q>);</td></tr>
+<tr><th id="126">126</th><td>        <b>return</b> NGX_ERROR;</td></tr>
+<tr><th id="127">127</th><td>    }</td></tr>
+<tr><th id="128">128</th><td></td></tr>
+<tr><th id="129">129</th><td>    <b>if</b> (dup2(pp[<var>1</var>], STDERR_FILENO) == -<var>1</var>) {</td></tr>
+<tr><th id="130">130</th><td>        ngx_log_error(NGX_LOG_EMERG, log, errno, <q>"dup2(STDERR) failed"</q>);</td></tr>
+<tr><th id="131">131</th><td>        <b>return</b> NGX_ERROR;</td></tr>
+<tr><th id="132">132</th><td>    }</td></tr>
+<tr><th id="133">133</th><td></td></tr>
+<tr><th id="134">134</th><td>    <b>if</b> (pp[<var>1</var>] &gt; STDERR_FILENO) {</td></tr>
+<tr><th id="135">135</th><td>        <b>if</b> (close(pp[<var>1</var>]) == -<var>1</var>) {</td></tr>
+<tr><th id="136">136</th><td>            ngx_log_error(NGX_LOG_EMERG, log, errno, <q>"close() failed"</q>);</td></tr>
+<tr><th id="137">137</th><td>            <b>return</b> NGX_ERROR;</td></tr>
+<tr><th id="138">138</th><td>        }</td></tr>
+<tr><th id="139">139</th><td>    }</td></tr>
+<tr><th id="140">140</th><td></td></tr>
+<tr><th id="141">141</th><td>    <b>return</b> NGX_OK;</td></tr>
+<tr><th id="142">142</th><td>}</td></tr>
+<tr><th id="143">143</th><td></td></tr>
+<tr><th id="144">144</th><td><u>#<span data-ppcond="117">endif</span></u></td></tr>
+<tr><th id="145">145</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated on <em>2018-Apr-06</em> from project nginx<br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

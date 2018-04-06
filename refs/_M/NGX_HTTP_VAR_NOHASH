@@ -1,0 +1,12 @@
+<dec f='nginx/src/http/ngx_http_variables.h' l='32'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='628' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='632' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='1097' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='812' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='815' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='818' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='826' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='830' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='419' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='423' u='c'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2689' u='c'/>

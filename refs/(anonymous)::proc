@@ -1,0 +1,4 @@
+<dec f='nginx/src/os/unix/ngx_process.h' l='27' type='ngx_spawn_proc_pt'/>
+<offset>128</offset>
+<use f='nginx/src/os/unix/ngx_process.c' l='215' u='w' c='ngx_spawn_process'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='622' u='r' c='ngx_reap_children'/>

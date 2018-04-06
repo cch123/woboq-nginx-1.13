@@ -1,0 +1,14 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='72' type='unsigned int'/>
+<dec f='nginx/src/http/ngx_http_core_module.h' l='285' type='ngx_http_core_srv_conf_t *'/>
+<offset>2496</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='284'>/* the default server configuration for this address:port */</doc>
+<use f='nginx/src/http/ngx_http.c' l='1227' u='r' c='ngx_http_add_addresses'/>
+<use f='nginx/src/http/ngx_http.c' l='1251' u='r' c='ngx_http_add_addresses'/>
+<use f='nginx/src/http/ngx_http.c' l='1260' u='w' c='ngx_http_add_addresses'/>
+<use f='nginx/src/http/ngx_http.c' l='1263' u='w' c='ngx_http_add_addresses'/>
+<use f='nginx/src/http/ngx_http.c' l='1328' u='w' c='ngx_http_add_address'/>
+<use f='nginx/src/http/ngx_http.c' l='1402' u='r' c='ngx_http_optimize_servers'/>
+<use f='nginx/src/http/ngx_http.c' l='1717' u='r' c='ngx_http_add_listening'/>
+<use f='nginx/src/http/ngx_http.c' l='1800' u='r' c='ngx_http_add_addrs'/>
+<use f='nginx/src/http/ngx_http.c' l='1865' u='r' c='ngx_http_add_addrs6'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3795' u='w' c='ngx_http_core_listen'/>

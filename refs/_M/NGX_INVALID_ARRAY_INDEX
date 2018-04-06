@@ -1,0 +1,2 @@
+<dec f='nginx/src/core/ngx_config.h' l='109'/>
+<doc f='nginx/src/core/ngx_config.h' l='108'>/* TODO: platform specific: array[NGX_INVALID_ARRAY_INDEX] must cause SIGSEGV */</doc>

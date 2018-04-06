@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_connection.h' l='96' type='2'/>
+<use f='nginx/src/core/ngx_connection.c' l='1182' c='ngx_close_connection'/>
+<use f='nginx/src/core/ngx_connection.c' l='1436' c='ngx_connection_error'/>
+<use f='nginx/src/http/ngx_http_request.c' l='320' u='r' c='ngx_http_init_connection'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3179' u='r' c='ngx_http_keepalive_handler'/>

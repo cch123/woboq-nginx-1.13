@@ -1,0 +1,9 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='312' type='unsigned int'/>
+<offset>197</offset>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='3503' u='w' c='ngx_http_fastcgi_pass'/>
+<use f='nginx/src/http/modules/ngx_http_memcached_module.c' l='711' u='w' c='ngx_http_memcached_pass'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='3583' u='w' c='ngx_http_proxy_pass'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='1859' u='w' c='ngx_http_scgi_pass'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='2146' u='w' c='ngx_http_uwsgi_pass'/>
+<use f='nginx/src/http/ngx_http.c' l='1093' u='r' c='ngx_http_create_locations_tree'/>
+<use f='nginx/src/http/ngx_http.c' l='1094' u='r' c='ngx_http_create_locations_tree'/>

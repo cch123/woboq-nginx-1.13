@@ -1,0 +1,9 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='137' type='ngx_uint_t'/>
+<offset>128</offset>
+<use f='nginx/src/http/ngx_http.c' l='517' u='w' c='ngx_http_init_phase_handlers'/>
+<use f='nginx/src/http/ngx_http.c' l='532' u='w' c='ngx_http_init_phase_handlers'/>
+<use f='nginx/src/http/ngx_http.c' l='551' u='w' c='ngx_http_init_phase_handlers'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='883' u='r' c='ngx_http_core_generic_phase'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1060' u='r' c='ngx_http_core_post_rewrite_phase'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1076' u='r' c='ngx_http_core_access_phase'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1111' u='r' c='ngx_http_core_access_phase'/>

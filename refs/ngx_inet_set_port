@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_inet.h' l='127' type='void ngx_inet_set_port(struct sockaddr * sa, in_port_t port)'/>
+<use f='nginx/src/core/ngx_inet.c' l='675' u='c' c='ngx_parse_addr_port'/>
+<def f='nginx/src/core/ngx_inet.c' l='1470' ll='1497' type='void ngx_inet_set_port(struct sockaddr * sa, in_port_t port)'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3016' u='c' c='ngx_resolver_srv_names_handler'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='362' u='c' c='ngx_http_upstream_create_round_robin_peer'/>

@@ -1,0 +1,4 @@
+<def f='nginx/src/os/unix/ngx_linux_init.c' l='12' type='u_char [50]'/>
+<use f='nginx/src/os/unix/ngx_linux_init.c' l='43' u='r' c='ngx_os_specific_init'/>
+<use f='nginx/src/os/unix/ngx_linux_init.c' l='44' u='r' c='ngx_os_specific_init'/>
+<use f='nginx/src/os/unix/ngx_linux_init.c' l='59' c='ngx_os_specific_status'/>

@@ -1,0 +1,18 @@
+<dec f='include/fcntl.h' l='146' type='int fcntl(int __fd, int __cmd)'/>
+<doc f='include/fcntl.h' l='141'>/* Do the file control operation described by CMD on FD.
+   The remaining arguments are interpreted depending on CMD.
+
+   This function is a cancellation point and therefore not marked with
+   __THROW.  */</doc>
+<use f='nginx/src/core/ngx_cycle.c' l='391' u='c' c='ngx_init_cycle'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1186' u='c' c='ngx_reopen_files'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='767' u='c' c='ngx_trylock_fd'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='784' u='c' c='ngx_lock_fd'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='801' u='c' c='ngx_unlock_fd'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='836' u='c' c='ngx_directio_on'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='842' u='c' c='ngx_directio_on'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='851' u='c' c='ngx_directio_off'/>
+<use f='nginx/src/os/unix/ngx_files.c' l='857' u='c' c='ngx_directio_off'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='153' u='c' c='ngx_spawn_process'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='160' u='c' c='ngx_spawn_process'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='168' u='c' c='ngx_spawn_process'/>

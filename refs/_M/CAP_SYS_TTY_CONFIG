@@ -1,0 +1,2 @@
+<dec f='include/linux/capability.h' l='299'/>
+<doc f='include/linux/capability.h' l='297'>/* Allow vhangup() of tty */</doc>

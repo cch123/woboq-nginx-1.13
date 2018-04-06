@@ -1,0 +1,10 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='528' type='unsigned int'/>
+<offset>9873</offset>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1740' u='r' c='ngx_http_send_header'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2488' u='r' c='ngx_http_finalize_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3375' u='r' c='ngx_http_send_special'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3406' u='r' c='ngx_http_post_action'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3417' u='w' c='ngx_http_post_action'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='611' u='r' c='ngx_http_upstream_init_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2163' u='r' c='ngx_http_upstream_send_request_body'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2859' u='r' c='ngx_http_upstream_send_response'/>

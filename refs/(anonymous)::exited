@@ -1,0 +1,7 @@
+<dec f='nginx/src/os/unix/ngx_process.h' l='35' type='unsigned int'/>
+<offset>324</offset>
+<use f='nginx/src/os/unix/ngx_process.c' l='209' u='w' c='ngx_spawn_process'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='527' u='w' c='ngx_process_get_status'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='542' u='w' c='ngx_signal_worker_processes'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='587' u='r' c='ngx_reap_children'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='599' u='r' c='ngx_reap_children'/>

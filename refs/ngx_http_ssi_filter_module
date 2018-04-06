@@ -1,0 +1,19 @@
+<dec f='nginx/objs/ngx_modules.c' l='50' type='ngx_module_t'/>
+<use f='nginx/objs/ngx_modules.c' l='102' u='a'/>
+<use f='nginx/objs/ngx_modules.c' l='102' u='a'/>
+<dec f='nginx/src/http/modules/ngx_http_ssi_filter_module.h' l='111' type='ngx_module_t'/>
+<def f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='193' ll='206' type='ngx_module_t'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='335' u='m' c='ngx_http_ssi_header_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='349' u='m' c='ngx_http_ssi_header_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='405' u='m' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='453' u='m' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='597' u='m' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='632' u='m' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='702' u='m' c='ngx_http_ssi_body_filter'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1564' u='m' c='ngx_http_ssi_get_variable'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='1923' u='m' c='ngx_http_ssi_regex_match'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2071' u='m' c='ngx_http_ssi_include'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2419' u='m' c='ngx_http_ssi_set'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2684' u='m' c='ngx_http_ssi_block'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2740' u='m' c='ngx_http_ssi_date_gmt_local_variable'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2798' u='m' c='ngx_http_ssi_preconfiguration'/>

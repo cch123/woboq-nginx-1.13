@@ -1,0 +1,33 @@
+<dec f='include/netinet/in.h' l='259' type='struct in6_addr'/>
+<offset>64</offset>
+<doc f='include/netinet/in.h' l='259'>/* IPv6 address */</doc>
+<use f='nginx/src/core/ngx_connection.c' l='1303' u='m' c='ngx_connection_local_sockaddr'/>
+<use f='nginx/src/core/ngx_inet.c' l='225' u='m' c='ngx_sock_ntop'/>
+<use f='nginx/src/core/ngx_inet.c' l='501' u='a' c='ngx_cidr_match'/>
+<use f='nginx/src/core/ngx_inet.c' l='605' u='m' c='ngx_parse_addr'/>
+<use f='nginx/src/core/ngx_inet.c' l='954' u='a' c='ngx_parse_inet_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='1054' u='m' c='ngx_parse_inet6_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='1059' u='a' c='ngx_parse_inet6_url'/>
+<use f='nginx/src/core/ngx_inet.c' l='1391' u='a' c='ngx_cmp_sockaddr'/>
+<use f='nginx/src/core/ngx_inet.c' l='1391' u='a' c='ngx_cmp_sockaddr'/>
+<use f='nginx/src/core/ngx_proxy_protocol.c' l='305' u='a' c='ngx_proxy_protocol_v2_read'/>
+<use f='nginx/src/core/ngx_resolver.c' l='933' u='m' c='ngx_resolve_addr'/>
+<use f='nginx/src/core/ngx_resolver.c' l='937' u='a' c='ngx_resolve_addr'/>
+<use f='nginx/src/core/ngx_resolver.c' l='1025' u='r' c='ngx_resolve_addr'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3871' u='m' c='ngx_resolver_create_addr_query'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3872' u='m' c='ngx_resolver_create_addr_query'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4208' u='m' c='ngx_resolver_export'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='552' u='w' c='ngx_event_recvmsg'/>
+<use f='nginx/src/http/modules/ngx_http_access_module.c' l='148' u='m' c='ngx_http_access_handler'/>
+<use f='nginx/src/http/modules/ngx_http_access_module.c' l='150' u='a' c='ngx_http_access_handler'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='198' u='a' c='ngx_http_geo_cidr_variable'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='263' u='a' c='ngx_http_geo_range_variable'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_ip_hash_module.c' l='130' u='m' c='ngx_http_upstream_init_ip_hash_peer'/>
+<use f='nginx/src/http/modules/ngx_http_userid_filter_module.c' l='541' u='m' c='ngx_http_userid_create_uid'/>
+<use f='nginx/src/http/modules/ngx_http_userid_filter_module.c' l='542' u='m' c='ngx_http_userid_create_uid'/>
+<use f='nginx/src/http/modules/ngx_http_userid_filter_module.c' l='543' u='m' c='ngx_http_userid_create_uid'/>
+<use f='nginx/src/http/modules/ngx_http_userid_filter_module.c' l='544' u='m' c='ngx_http_userid_create_uid'/>
+<use f='nginx/src/http/ngx_http.c' l='1864' u='r' c='ngx_http_add_addrs6'/>
+<use f='nginx/src/http/ngx_http_request.c' l='256' u='a' c='ngx_http_init_connection'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1245' u='m' c='ngx_http_variable_binary_remote_addr'/>
+<use f='nginx/src/os/unix/ngx_udp_sendmsg_chain.c' l='298' u='r' c='ngx_sendmsg'/>

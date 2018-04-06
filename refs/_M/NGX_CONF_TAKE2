@@ -1,0 +1,16 @@
+<dec f='nginx/src/core/ngx_conf_file.h' l='24'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='53' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_charset_filter_module.c' l='171' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='346' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='142' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_limit_conn_module.c' l='78' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_limit_conn_module.c' l='85' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_map_module.c' l='52' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='356' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='419' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='79' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='196' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_split_clients_module.c' l='33' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='257' u='c'/>
+<use f='nginx/src/http/ngx_http_copy_filter_module.c' l='42' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='246' u='c'/>

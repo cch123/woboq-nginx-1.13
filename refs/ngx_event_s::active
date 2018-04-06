@@ -1,0 +1,47 @@
+<dec f='nginx/src/event/ngx_event.h' l='44' type='unsigned int'/>
+<use f='nginx/src/core/ngx_connection.c' l='981' u='r' c='ngx_close_listening_sockets'/>
+<use f='nginx/src/core/ngx_connection.c' l='1140' u='r' c='ngx_close_connection'/>
+<use f='nginx/src/core/ngx_connection.c' l='1144' u='r' c='ngx_close_connection'/>
+<offset>67</offset>
+<doc f='nginx/src/event/ngx_event.h' l='40'>/*
+     * the event was passed or would be passed to a kernel;
+     * in aio mode - operation was posted.
+     */</doc>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='406' u='w' c='ngx_epoll_notify_init'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='606' u='r' c='ngx_epoll_add_event'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='633' u='w' c='ngx_epoll_add_event'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='658' u='w' c='ngx_epoll_del_event'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='673' u='r' c='ngx_epoll_del_event'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='694' u='w' c='ngx_epoll_del_event'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='717' u='w' c='ngx_epoll_add_connection'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='718' u='w' c='ngx_epoll_add_connection'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='737' u='w' c='ngx_epoll_del_connection'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='738' u='w' c='ngx_epoll_del_connection'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='755' u='w' c='ngx_epoll_del_connection'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='756' u='w' c='ngx_epoll_del_connection'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='883' u='r' c='ngx_epoll_process_events'/>
+<use f='nginx/src/event/modules/ngx_epoll_module.c' l='908' u='r' c='ngx_epoll_process_events'/>
+<use f='nginx/src/event/ngx_event.c' l='270' u='r' c='ngx_handle_read_event'/>
+<use f='nginx/src/event/ngx_event.c' l='284' u='r' c='ngx_handle_read_event'/>
+<use f='nginx/src/event/ngx_event.c' l='294' u='r' c='ngx_handle_read_event'/>
+<use f='nginx/src/event/ngx_event.c' l='308' u='r' c='ngx_handle_read_event'/>
+<use f='nginx/src/event/ngx_event.c' l='348' u='r' c='ngx_handle_write_event'/>
+<use f='nginx/src/event/ngx_event.c' l='363' u='r' c='ngx_handle_write_event'/>
+<use f='nginx/src/event/ngx_event.c' l='373' u='r' c='ngx_handle_write_event'/>
+<use f='nginx/src/event/ngx_event.c' l='387' u='r' c='ngx_handle_write_event'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='696' u='r' c='ngx_enable_accept_events'/>
+<use f='nginx/src/event/ngx_event_accept.c' l='721' u='r' c='ngx_disable_accept_events'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='70' u='r' c='ngx_event_pipe'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='88' u='r' c='ngx_event_pipe'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2761' u='r' c='ngx_http_block_reading'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2867' u='r' c='ngx_http_test_reading'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3067' u='r' c='ngx_http_set_keepalive'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3267' u='r' c='ngx_http_set_lingering_close'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='530' u='r' c='ngx_http_upstream_init'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1320' u='r' c='ngx_http_upstream_check_broken_connection'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1447' u='r' c='ngx_http_upstream_check_broken_connection'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3415' u='r' c='ngx_http_upstream_process_upgraded'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3427' u='r' c='ngx_http_upstream_process_upgraded'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3446' u='r' c='ngx_http_upstream_process_upgraded'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3609' u='r' c='ngx_http_upstream_process_non_buffered_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3621' u='r' c='ngx_http_upstream_process_non_buffered_request'/>

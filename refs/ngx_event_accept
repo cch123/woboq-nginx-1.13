@@ -1,0 +1,3 @@
+<dec f='nginx/src/event/ngx_event.h' l='506' type='void ngx_event_accept(ngx_event_t * ev)'/>
+<use f='nginx/src/event/ngx_event.c' l='821' u='r' c='ngx_event_process_init'/>
+<def f='nginx/src/event/ngx_event_accept.c' l='22' ll='320' type='void ngx_event_accept(ngx_event_t * ev)'/>

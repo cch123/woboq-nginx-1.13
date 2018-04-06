@@ -1,0 +1,2 @@
+<dec f='include/x86_64-linux-gnu/bits/signum.h' l='24'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='298' u='c'/>

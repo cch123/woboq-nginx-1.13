@@ -1,0 +1,7 @@
+<dec f='nginx/src/core/ngx_connection.h' l='217' type='ngx_int_t ngx_tcp_nodelay(ngx_connection_t * c)'/>
+<def f='nginx/src/core/ngx_connection.c' l='1352' ll='1392' type='ngx_int_t ngx_tcp_nodelay(ngx_connection_t * c)'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3090' u='c' c='ngx_http_set_keepalive'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2102' u='c' c='ngx_http_upstream_send_request_body'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2933' u='c' c='ngx_http_upstream_send_response'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3219' u='c' c='ngx_http_upstream_upgrade'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3224' u='c' c='ngx_http_upstream_upgrade'/>

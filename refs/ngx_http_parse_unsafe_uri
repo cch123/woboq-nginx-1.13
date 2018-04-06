@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http.h' l='98' type='ngx_int_t ngx_http_parse_unsafe_uri(ngx_http_request_t * r, ngx_str_t * uri, ngx_str_t * args, ngx_uint_t * flags)'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2065' u='c' c='ngx_http_ssi_include'/>
+<def f='nginx/src/http/ngx_http_parse.c' l='1817' ll='1936' type='ngx_int_t ngx_http_parse_unsafe_uri(ngx_http_request_t * r, ngx_str_t * uri, ngx_str_t * args, ngx_uint_t * flags)'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2713' u='c' c='ngx_http_upstream_process_headers'/>

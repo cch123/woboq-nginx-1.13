@@ -1,0 +1,4 @@
+<dec f='nginx/src/event/ngx_event_pipe.h' l='102' type='ngx_int_t ngx_event_pipe(ngx_event_pipe_t * p, ngx_int_t do_write)'/>
+<def f='nginx/src/event/ngx_event_pipe.c' l='22' ll='98' type='ngx_int_t ngx_event_pipe(ngx_event_pipe_t * p, ngx_int_t do_write)'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3822' u='c' c='ngx_http_upstream_process_downstream'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3868' u='c' c='ngx_http_upstream_process_upstream'/>

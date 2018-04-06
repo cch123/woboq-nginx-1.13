@@ -1,0 +1,5 @@
+<dec f='nginx/src/http/ngx_http_cache.h' l='129' type='time_t'/>
+<offset>128</offset>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='605' u='r' c='ngx_http_file_cache_read'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1260' u='w' c='ngx_http_file_cache_set_header'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1523' u='w' c='ngx_http_file_cache_update_header'/>

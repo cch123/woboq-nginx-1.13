@@ -1,0 +1,26 @@
+<dec f='nginx/src/core/ngx_file.h' l='73' type='off_t'/>
+<offset>1600</offset>
+<use f='nginx/src/core/ngx_file.c' l='136' u='r' c='ngx_write_chain_to_temp_file'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='265' u='r' c='ngx_event_pipe_read_upstream'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='708' u='r' c='ngx_event_pipe_write_to_downstream'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='709' u='w' c='ngx_event_pipe_write_to_downstream'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='796' u='r' c='ngx_event_pipe_write_chain_to_temp_file'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='858' u='w' c='ngx_event_pipe_write_chain_to_temp_file'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='872' u='r' c='ngx_event_pipe_write_chain_to_temp_file'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='873' u='w' c='ngx_event_pipe_write_chain_to_temp_file'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='874' u='r' c='ngx_event_pipe_write_chain_to_temp_file'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='896' u='r' c='ngx_event_pipe_write_chain_to_temp_file'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='897' u='w' c='ngx_event_pipe_write_chain_to_temp_file'/>
+<use f='nginx/src/event/ngx_event_pipe.c' l='898' u='r' c='ngx_event_pipe_write_chain_to_temp_file'/>
+<dec f='nginx/src/http/ngx_http_request.h' l='170' type='ngx_uint_t'/>
+<dec f='nginx/src/http/ngx_http_request.h' l='177' type='ngx_uint_t'/>
+<dec f='nginx/src/http/ngx_http_upstream.h' l='247' type='ngx_uint_t'/>
+<offset>192</offset>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='1956' u='r' c='ngx_http_fastcgi_process_header'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1842' u='r' c='ngx_http_proxy_process_header'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='1065' u='r' c='ngx_http_scgi_process_header'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='1269' u='r' c='ngx_http_uwsgi_process_header'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1351' u='r' c='ngx_http_process_request_headers'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='491' u='w' c='ngx_http_write_request_body'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3919' u='r' c='ngx_http_upstream_process_request'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3940' u='r' c='ngx_http_upstream_process_request'/>

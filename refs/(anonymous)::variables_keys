@@ -1,0 +1,16 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='172' type='ngx_hash_keys_arrays_t *'/>
+<offset>1728</offset>
+<use f='nginx/src/http/ngx_http_variables.c' l='416' u='r' c='ngx_http_add_variable'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='417' u='r' c='ngx_http_add_variable'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='458' u='r' c='ngx_http_add_variable'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2572' u='w' c='ngx_http_variables_add_core_vars'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2574' u='r' c='ngx_http_variables_add_core_vars'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2578' u='r' c='ngx_http_variables_add_core_vars'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2579' u='r' c='ngx_http_variables_add_core_vars'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2581' u='r' c='ngx_http_variables_add_core_vars'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2623' u='r' c='ngx_http_variables_init_vars'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2627' u='r' c='ngx_http_variables_init_vars'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2686' u='r' c='ngx_http_variables_init_vars'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2703' u='r' c='ngx_http_variables_init_vars'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2704' u='r' c='ngx_http_variables_init_vars'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2710' u='w' c='ngx_http_variables_init_vars'/>

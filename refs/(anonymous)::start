@@ -1,0 +1,33 @@
+<dec f='nginx/src/core/ngx_radix_tree.h' l='32' type='char *'/>
+<dec f='nginx/src/core/ngx_slab.h' l='47' type='u_char *'/>
+<offset>704</offset>
+<use f='nginx/src/core/ngx_radix_tree.c' l='28' u='w' c='ngx_radix_tree_create'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='475' u='w' c='ngx_radix_alloc'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='476' u='r' c='ngx_radix_alloc'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='483' u='r' c='ngx_radix_alloc'/>
+<use f='nginx/src/core/ngx_radix_tree.c' l='484' u='w' c='ngx_radix_alloc'/>
+<use f='nginx/src/core/ngx_slab.c' l='150' u='w' c='ngx_slab_init'/>
+<use f='nginx/src/core/ngx_slab.c' l='153' u='r' c='ngx_slab_init'/>
+<use f='nginx/src/core/ngx_slab.c' l='54' u='r' c='ngx_slab_alloc_locked'/>
+<use f='nginx/src/core/ngx_slab.c' l='54' u='r' c='ngx_slab_alloc_locked'/>
+<use f='nginx/src/core/ngx_slab.c' l='54' u='r' c='ngx_slab_alloc_locked'/>
+<use f='nginx/src/core/ngx_slab.c' l='54' u='r' c='ngx_slab_alloc_locked'/>
+<use f='nginx/src/core/ngx_slab.c' l='54' u='r' c='ngx_slab_alloc_locked'/>
+<use f='nginx/src/core/ngx_slab.c' l='54' u='r' c='ngx_slab_alloc_locked'/>
+<use f='nginx/src/core/ngx_slab.c' l='54' u='r' c='ngx_slab_alloc_locked'/>
+<use f='nginx/src/core/ngx_slab.c' l='54' u='r' c='ngx_slab_alloc_locked'/>
+<use f='nginx/src/core/ngx_slab.c' l='470' u='r' c='ngx_slab_free_locked'/>
+<use f='nginx/src/core/ngx_slab.c' l='475' u='r' c='ngx_slab_free_locked'/>
+<use f='nginx/src/core/ngx_slab.c' l='638' u='r' c='ngx_slab_free_locked'/>
+<dec f='nginx/src/http/ngx_http.h' l='70' type='u_char *'/>
+<offset>192</offset>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1528' u='w' c='ngx_http_proxy_reinit_request'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1763' u='r' c='ngx_http_proxy_process_status_line'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1771' u='r' c='ngx_http_proxy_process_status_line'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='946' u='w' c='ngx_http_scgi_reinit_request'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='989' u='r' c='ngx_http_scgi_process_status_line'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='997' u='r' c='ngx_http_scgi_process_status_line'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='1150' u='w' c='ngx_http_uwsgi_reinit_request'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='1193' u='r' c='ngx_http_uwsgi_process_status_line'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='1201' u='r' c='ngx_http_uwsgi_process_status_line'/>
+<use f='nginx/src/http/ngx_http_parse.c' l='1749' u='w' c='ngx_http_parse_status_line'/>

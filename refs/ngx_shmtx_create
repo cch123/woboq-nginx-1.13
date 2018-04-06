@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_shmtx.h' l='40' type='ngx_int_t ngx_shmtx_create(ngx_shmtx_t * mtx, ngx_shmtx_sh_t * addr, u_char * name)'/>
+<use f='nginx/src/core/ngx_cycle.c' l='933' u='c' c='ngx_init_zone_pool'/>
+<def f='nginx/src/core/ngx_shmtx.c' l='18' ll='43' type='ngx_int_t ngx_shmtx_create(ngx_shmtx_t * mtx, ngx_shmtx_sh_t * addr, u_char * name)'/>
+<use f='nginx/src/event/ngx_event.c' l='515' u='c' c='ngx_event_module_init'/>

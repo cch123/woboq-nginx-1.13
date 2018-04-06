@@ -1,0 +1,14 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='262' type='ngx_table_elt_t *'/>
+<dec f='nginx/src/http/ngx_http_upstream.h' l='262' type='ngx_table_elt_t *'/>
+<dec f='nginx/src/http/ngx_http_cache.h' l='132' type='time_t'/>
+<offset>320</offset>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='1879' u='r' c='ngx_http_proxy_process_header'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2008' u='r' c='ngx_http_gzip_ok'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='608' u='r' c='ngx_http_file_cache_read'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1263' u='w' c='ngx_http_file_cache_set_header'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1526' u='w' c='ngx_http_file_cache_update_header'/>
+<use f='nginx/src/http/ngx_http_header_filter_module.c' l='294' u='r' c='ngx_http_header_filter'/>
+<use f='nginx/src/http/ngx_http_header_filter_module.c' l='468' u='r' c='ngx_http_header_filter'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2775' u='r' c='ngx_http_upstream_process_headers'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2775' u='r' c='ngx_http_upstream_process_headers'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2776' u='r' c='ngx_http_upstream_process_headers'/>

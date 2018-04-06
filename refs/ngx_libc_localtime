@@ -1,0 +1,4 @@
+<dec f='nginx/src/os/unix/ngx_time.h' l='58' type='void ngx_libc_localtime(time_t s, struct tm * tm)'/>
+<use f='nginx/src/core/ngx_times.c' l='440' u='c' c='ngx_next_time'/>
+<use f='nginx/src/http/modules/ngx_http_ssi_filter_module.c' l='2760' u='c' c='ngx_http_ssi_date_gmt_local_variable'/>
+<def f='nginx/src/os/unix/ngx_time.c' l='75' ll='88' type='void ngx_libc_localtime(time_t s, struct tm * tm)'/>

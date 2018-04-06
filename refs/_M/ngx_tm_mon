@@ -1,0 +1,14 @@
+<dec f='nginx/src/os/unix/ngx_time.h' l='25'/>
+<use f='nginx/src/core/ngx_times.c' l='127' u='c'/>
+<use f='nginx/src/core/ngx_times.c' l='153' u='c'/>
+<use f='nginx/src/core/ngx_times.c' l='161' u='c'/>
+<use f='nginx/src/core/ngx_times.c' l='170' u='c'/>
+<use f='nginx/src/core/ngx_times.c' l='179' u='c'/>
+<use f='nginx/src/core/ngx_times.c' l='261' u='c'/>
+<use f='nginx/src/core/ngx_times.c' l='268' u='c'/>
+<use f='nginx/src/core/ngx_times.c' l='292' u='c'/>
+<use f='nginx/src/core/ngx_times.c' l='318' u='c'/>
+<use f='nginx/src/core/ngx_times.c' l='426' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='628' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_autoindex_module.c' l='900' u='c'/>
+<use f='nginx/src/os/unix/ngx_time.c' l='70' u='c'/>

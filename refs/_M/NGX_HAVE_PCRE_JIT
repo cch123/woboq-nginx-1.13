@@ -1,0 +1,6 @@
+<dec f='nginx/objs/ngx_auto_config.h' l='392'/>
+<use f='nginx/src/core/ngx_regex.c' l='19' u='c'/>
+<use f='nginx/src/core/ngx_regex.c' l='251' u='c'/>
+<use f='nginx/src/core/ngx_regex.c' l='297' u='c'/>
+<use f='nginx/src/core/ngx_regex.c' l='349' u='c'/>
+<use f='nginx/src/core/ngx_regex.c' l='415' u='c'/>

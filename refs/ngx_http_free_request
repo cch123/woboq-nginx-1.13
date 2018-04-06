@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http.h' l='124' type='void ngx_http_free_request(ngx_http_request_t * r, ngx_int_t rc)'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2967' u='c' c='ngx_http_set_keepalive'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3460' u='c' c='ngx_http_close_request'/>
+<def f='nginx/src/http/ngx_http_request.c' l='3465' ll='3550' type='void ngx_http_free_request(ngx_http_request_t * r, ngx_int_t rc)'/>

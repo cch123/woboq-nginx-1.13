@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_syslog.h' l='28' type='ssize_t ngx_syslog_send(ngx_syslog_peer_t * peer, u_char * buf, size_t len)'/>
+<use f='nginx/src/core/ngx_syslog.c' l='264' u='c' c='ngx_syslog_writer'/>
+<def f='nginx/src/core/ngx_syslog.c' l='270' ll='307' type='ssize_t ngx_syslog_send(ngx_syslog_peer_t * peer, u_char * buf, size_t len)'/>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='381' u='c' c='ngx_http_log_handler'/>

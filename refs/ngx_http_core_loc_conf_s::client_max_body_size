@@ -1,0 +1,12 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='343' type='off_t'/>
+<offset>1408</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='343'>/* client_max_body_size */</doc>
+<use f='nginx/src/http/ngx_http_core_module.c' l='970' u='r' c='ngx_http_core_find_config_phase'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='971' u='r' c='ngx_http_core_find_config_phase'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3365' u='w' c='ngx_http_core_create_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3572' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3572' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3573' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3573' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='980' u='r' c='ngx_http_request_body_chunked_filter'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='981' u='r' c='ngx_http_request_body_chunked_filter'/>

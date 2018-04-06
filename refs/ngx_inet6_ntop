@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_inet.h' l='111' type='size_t ngx_inet6_ntop(u_char * p, u_char * text, size_t len)'/>
+<use f='nginx/src/core/ngx_inet.c' l='225' u='c' c='ngx_sock_ntop'/>
+<use f='nginx/src/core/ngx_inet.c' l='281' u='c' c='ngx_inet_ntop'/>
+<def f='nginx/src/core/ngx_inet.c' l='293' ll='367' type='size_t ngx_inet6_ntop(u_char * p, u_char * text, size_t len)'/>

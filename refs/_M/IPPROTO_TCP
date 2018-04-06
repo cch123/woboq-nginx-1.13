@@ -1,0 +1,13 @@
+<dec f='include/netinet/in.h' l='51'/>
+<use f='nginx/src/core/ngx_connection.c' l='302' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='357' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='713' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='730' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='741' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='768' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='874' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='1365' u='c'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1120' u='c'/>
+<use f='nginx/src/os/unix/ngx_linux_sendfile_chain.c' l='105' u='c'/>
+<use f='nginx/src/os/unix/ngx_socket.c' l='85' u='c'/>
+<use f='nginx/src/os/unix/ngx_socket.c' l='97' u='c'/>

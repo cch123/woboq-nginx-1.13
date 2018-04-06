@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_upstream_round_robin.h' l='128' type='ngx_uint_t'/>
+<offset>0</offset>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='263' u='w' c='ngx_http_upstream_init_round_robin_peer'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='388' u='w' c='ngx_http_upstream_create_round_robin_peer'/>

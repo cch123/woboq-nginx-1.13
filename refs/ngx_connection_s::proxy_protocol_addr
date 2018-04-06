@@ -1,0 +1,12 @@
+<dec f='nginx/src/core/ngx_connection.h' l='147' type='ngx_str_t'/>
+<offset>1088</offset>
+<use f='nginx/src/core/ngx_proxy_protocol.c' l='109' u='m' c='ngx_proxy_protocol_read'/>
+<use f='nginx/src/core/ngx_proxy_protocol.c' l='111' u='m' c='ngx_proxy_protocol_read'/>
+<use f='nginx/src/core/ngx_proxy_protocol.c' l='115' u='m' c='ngx_proxy_protocol_read'/>
+<use f='nginx/src/core/ngx_proxy_protocol.c' l='116' u='m' c='ngx_proxy_protocol_read'/>
+<use f='nginx/src/core/ngx_proxy_protocol.c' l='324' u='m' c='ngx_proxy_protocol_v2_read'/>
+<use f='nginx/src/core/ngx_proxy_protocol.c' l='325' u='m' c='ngx_proxy_protocol_v2_read'/>
+<use f='nginx/src/core/ngx_proxy_protocol.c' l='329' u='m' c='ngx_proxy_protocol_v2_read'/>
+<use f='nginx/src/core/ngx_proxy_protocol.c' l='330' u='m' c='ngx_proxy_protocol_v2_read'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1322' u='m' c='ngx_http_variable_proxy_protocol_addr'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='1326' u='m' c='ngx_http_variable_proxy_protocol_addr'/>

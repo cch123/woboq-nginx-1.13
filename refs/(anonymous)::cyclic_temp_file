@@ -1,0 +1,8 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='181' type='ngx_flag_t'/>
+<offset>1664</offset>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2761' u='w' c='ngx_http_fastcgi_create_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_memcached_module.c' l='607' u='w' c='ngx_http_memcached_create_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='2882' u='w' c='ngx_http_proxy_create_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_scgi_module.c' l='1240' u='w' c='ngx_http_scgi_create_loc_conf'/>
+<use f='nginx/src/http/modules/ngx_http_uwsgi_module.c' l='1455' u='w' c='ngx_http_uwsgi_create_loc_conf'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='3156' u='r' c='ngx_http_upstream_send_response'/>

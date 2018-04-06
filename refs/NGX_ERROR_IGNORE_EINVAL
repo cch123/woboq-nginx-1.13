@@ -1,0 +1,2 @@
+<dec f='nginx/src/core/ngx_connection.h' l='98' type='4'/>
+<use f='nginx/src/core/ngx_connection.c' l='1434' c='ngx_connection_error'/>

@@ -1,0 +1,6 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='232' type='ngx_http_core_srv_conf_t *'/>
+<offset>0</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='231'>/* the default server configuration for this address:port */</doc>
+<use f='nginx/src/http/ngx_http.c' l='1800' u='w' c='ngx_http_add_addrs'/>
+<use f='nginx/src/http/ngx_http.c' l='1865' u='w' c='ngx_http_add_addrs6'/>
+<use f='nginx/src/http/ngx_http_request.c' l='303' u='r' c='ngx_http_init_connection'/>

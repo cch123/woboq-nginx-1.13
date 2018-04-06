@@ -1,0 +1,7 @@
+<dec f='include/x86_64-linux-gnu/bits/sched.h' l='127' type='__cpu_mask [16]'/>
+<offset>0</offset>
+<use f='nginx/src/core/nginx.c' l='1352' macro='1' u='w'/>
+<use f='nginx/src/core/nginx.c' l='1390' macro='1' u='w'/>
+<use f='nginx/src/core/nginx.c' l='1434' macro='1' u='r'/>
+<use f='nginx/src/core/nginx.c' l='1447' macro='1' u='w'/>
+<use f='nginx/src/os/unix/ngx_setaffinity.c' l='41' macro='1' u='r'/>

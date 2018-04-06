@@ -1,0 +1,9 @@
+<dec f='nginx/src/core/ngx_string.h' l='181' type='u_char * ngx_hex_dump(u_char * dst, u_char * src, size_t len)'/>
+<def f='nginx/src/core/ngx_string.c' l='1123' ll='1134' type='u_char * ngx_hex_dump(u_char * dst, u_char * src, size_t len)'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='955' u='c' c='ngx_http_file_cache_name'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1756' u='c' c='ngx_http_file_cache_forced_expire'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1759' u='c' c='ngx_http_file_cache_forced_expire'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1862' u='c' c='ngx_http_file_cache_expire'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1865' u='c' c='ngx_http_file_cache_expire'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1922' u='c' c='ngx_http_file_cache_delete'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1925' u='c' c='ngx_http_file_cache_delete'/>

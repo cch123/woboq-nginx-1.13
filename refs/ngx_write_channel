@@ -1,0 +1,5 @@
+<dec f='nginx/src/os/unix/ngx_channel.h' l='25' type='ngx_int_t ngx_write_channel(ngx_socket_t s, ngx_channel_t * ch, size_t size, ngx_log_t * log)'/>
+<def f='nginx/src/os/unix/ngx_channel.c' l='13' ll='92' type='ngx_int_t ngx_write_channel(ngx_socket_t s, ngx_channel_t * ch, size_t size, ngx_log_t * log)'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='449' u='c' c='ngx_pass_open_channel'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='521' u='c' c='ngx_signal_worker_processes'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='612' u='c' c='ngx_reap_children'/>

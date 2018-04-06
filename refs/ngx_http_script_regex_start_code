@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_script.h' l='240' type='void ngx_http_script_regex_start_code(ngx_http_script_engine_t * e)'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='342' u='r' c='ngx_http_rewrite'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='776' u='r' c='ngx_http_rewrite_if_condition'/>
+<def f='nginx/src/http/ngx_http_script.c' l='908' ll='1062' type='void ngx_http_script_regex_start_code(ngx_http_script_engine_t * e)'/>

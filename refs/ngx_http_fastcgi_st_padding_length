@@ -1,0 +1,3 @@
+<dec f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='63' type='6'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2593' u='r' c='ngx_http_fastcgi_process_record'/>
+<use f='nginx/src/http/modules/ngx_http_fastcgi_module.c' l='2596' c='ngx_http_fastcgi_process_record'/>

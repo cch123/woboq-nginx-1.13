@@ -1,0 +1,4 @@
+<dec f='nginx/objs/ngx_modules.c' l='37' type='ngx_module_t'/>
+<use f='nginx/objs/ngx_modules.c' l='89' u='a'/>
+<use f='nginx/objs/ngx_modules.c' l='89' u='a'/>
+<def f='nginx/src/http/modules/ngx_http_empty_gif_module.c' l='93' ll='106' type='ngx_module_t'/>

@@ -1,0 +1,2 @@
+<dec f='include/stdlib.h' l='622' type='int mkstemp(char * __template)'/>
+<dec f='include/stdlib.h' l='629' type='int mkstemp64(char * __template)'/>

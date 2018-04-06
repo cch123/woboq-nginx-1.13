@@ -1,0 +1,2 @@
+<dec f='include/linux/limits.h' l='12'/>
+<use f='nginx/src/os/unix/ngx_files.h' l='204' u='a'/>

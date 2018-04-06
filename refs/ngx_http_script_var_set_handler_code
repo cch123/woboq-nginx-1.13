@@ -1,0 +1,3 @@
+<dec f='nginx/src/http/ngx_http_script.h' l='252' type='void ngx_http_script_var_set_handler_code(ngx_http_script_engine_t * e)'/>
+<use f='nginx/src/http/modules/ngx_http_rewrite_module.c' l='947' u='r' c='ngx_http_rewrite_set'/>
+<def f='nginx/src/http/ngx_http_script.c' l='1710' ll='1725' type='void ngx_http_script_var_set_handler_code(ngx_http_script_engine_t * e)'/>

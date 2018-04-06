@@ -1,0 +1,13 @@
+<dec f='nginx/src/os/unix/ngx_files.h' l='113'/>
+<use f='nginx/src/core/ngx_connection.c' l='582' u='c'/>
+<use f='nginx/src/core/ngx_connection.c' l='1018' u='c'/>
+<use f='nginx/src/core/ngx_cycle.c' l='720' u='c'/>
+<use f='nginx/src/core/ngx_cycle.c' l='998' u='c'/>
+<use f='nginx/src/core/ngx_file.c' l='749' u='c'/>
+<use f='nginx/src/core/ngx_file.c' l='763' u='c'/>
+<use f='nginx/src/core/ngx_file.c' l='778' u='c'/>
+<use f='nginx/src/core/ngx_palloc.c' l='388' u='c'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1666' u='c'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='1938' u='c'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2257' u='c'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4322' u='c'/>

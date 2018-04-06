@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_palloc.h' l='24'/>
+<use f='nginx/src/core/ngx_palloc.c' l='23' u='c'/>
+<use f='nginx/src/core/ngx_palloc.c' l='186' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='5076' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='5079' u='c'/>

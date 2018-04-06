@@ -1,0 +1,7 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='191' type='ngx_table_elt_t *'/>
+<offset>896</offset>
+<use f='nginx/src/http/modules/ngx_http_referer_module.c' l='143' u='r' c='ngx_http_referer_variable'/>
+<use f='nginx/src/http/modules/ngx_http_referer_module.c' l='151' u='r' c='ngx_http_referer_variable'/>
+<use f='nginx/src/http/modules/ngx_http_referer_module.c' l='152' u='r' c='ngx_http_referer_variable'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3700' u='r' c='ngx_http_log_error_handler'/>
+<use f='nginx/src/http/ngx_http_request.c' l='3702' u='r' c='ngx_http_log_error_handler'/>

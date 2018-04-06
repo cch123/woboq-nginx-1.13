@@ -1,0 +1,4 @@
+<dec f='include/linux/capability.h' l='102'/>
+<doc f='include/linux/capability.h' l='98'>/* Override all DAC access, including ACL execute access if
+   [_POSIX_ACL] is defined. Excluding DAC access covered by
+   CAP_LINUX_IMMUTABLE. */</doc>

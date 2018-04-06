@@ -1,0 +1,2 @@
+<dec f='nginx/src/core/ngx_inet.h' l='115' type='size_t ngx_inet_ntop(int family, void * addr, u_char * text, size_t len)'/>
+<def f='nginx/src/core/ngx_inet.c' l='263' ll='288' type='size_t ngx_inet_ntop(int family, void * addr, u_char * text, size_t len)'/>

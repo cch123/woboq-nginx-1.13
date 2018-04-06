@@ -1,0 +1,4 @@
+<dec f='nginx/objs/ngx_auto_config.h' l='127'/>
+<use f='nginx/src/os/unix/ngx_setaffinity.h' l='10' u='c'/>
+<use f='nginx/src/os/unix/ngx_setaffinity.h' l='14' u='c'/>
+<use f='nginx/src/os/unix/ngx_setaffinity.c' l='33' u='c'/>

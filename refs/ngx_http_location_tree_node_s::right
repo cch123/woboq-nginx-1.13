@@ -1,0 +1,7 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='454' type='ngx_http_location_tree_node_t *'/>
+<offset>64</offset>
+<use f='nginx/src/http/ngx_http.c' l='1088' u='w' c='ngx_http_create_locations_tree'/>
+<use f='nginx/src/http/ngx_http.c' l='1120' u='w' c='ngx_http_create_locations_tree'/>
+<use f='nginx/src/http/ngx_http.c' l='1121' u='r' c='ngx_http_create_locations_tree'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1407' u='r' c='ngx_http_core_find_static_location'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1428' u='r' c='ngx_http_core_find_static_location'/>

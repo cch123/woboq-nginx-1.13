@@ -1,0 +1,9 @@
+<dec f='nginx/src/core/ngx_file.h' l='60' type='u_char *'/>
+<offset>640</offset>
+<use f='nginx/src/core/ngx_file.c' l='393' u='w' c='ngx_conf_set_path_slot'/>
+<use f='nginx/src/core/ngx_file.c' l='542' u='r' c='ngx_add_path'/>
+<use f='nginx/src/core/ngx_file.c' l='548' u='r' c='ngx_add_path'/>
+<use f='nginx/src/core/ngx_file.c' l='549' u='r' c='ngx_add_path'/>
+<use f='nginx/src/core/ngx_file.c' l='564' u='r' c='ngx_add_path'/>
+<use f='nginx/src/core/ngx_file.c' l='571' u='r' c='ngx_add_path'/>
+<use f='nginx/src/http/ngx_http_file_cache.c' l='2569' u='w' c='ngx_http_file_cache_set_slot'/>

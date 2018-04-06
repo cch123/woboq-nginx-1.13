@@ -1,0 +1,13 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='332' type='size_t'/>
+<offset>640</offset>
+<doc f='nginx/src/http/ngx_http_core_module.h' l='331'>/* location name length for inclusive location with inherited alias */</doc>
+<use f='nginx/src/http/modules/ngx_http_index_module.c' l='264' u='r' c='ngx_http_index_handler'/>
+<use f='nginx/src/http/modules/ngx_http_static_module.c' l='160' u='r' c='ngx_http_static_handler'/>
+<use f='nginx/src/http/modules/ngx_http_try_files_module.c' l='112' u='r' c='ngx_http_try_files_handler'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1791' u='r' c='ngx_http_map_uri_to_path'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3466' u='w' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='3466' u='r' c='ngx_http_core_merge_loc_conf'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4220' u='r' c='ngx_http_core_root'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4227' u='r' c='ngx_http_core_root'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4264' u='w' c='ngx_http_core_root'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='4286' u='w' c='ngx_http_core_root'/>

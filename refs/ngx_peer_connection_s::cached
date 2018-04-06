@@ -1,0 +1,9 @@
+<dec f='nginx/src/event/ngx_event_connect.h' l='63' type='unsigned int'/>
+<offset>832</offset>
+<use f='nginx/src/http/modules/ngx_http_upstream_hash_module.c' l='188' u='w' c='ngx_http_upstream_get_hash_peer'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_hash_module.c' l='511' u='w' c='ngx_http_upstream_get_chash_peer'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_ip_hash_module.c' l='173' u='w' c='ngx_http_upstream_get_ip_hash_peer'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_keepalive_module.c' l='265' u='w' c='ngx_http_upstream_get_keepalive_peer'/>
+<use f='nginx/src/http/modules/ngx_http_upstream_least_conn_module.c' l='118' u='w' c='ngx_http_upstream_get_least_conn_peer'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='4106' u='r' c='ngx_http_upstream_next'/>
+<use f='nginx/src/http/ngx_http_upstream_round_robin.c' l='429' u='w' c='ngx_http_upstream_get_round_robin_peer'/>

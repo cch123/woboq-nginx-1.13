@@ -1,0 +1,10 @@
+<dec f='nginx/src/os/unix/ngx_channel.h' l='31' type='void ngx_close_channel(ngx_fd_t * fd, ngx_log_t * log)'/>
+<def f='nginx/src/os/unix/ngx_channel.c' l='243' ll='253' type='void ngx_close_channel(ngx_fd_t * fd, ngx_log_t * log)'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='133' u='c' c='ngx_spawn_process'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='141' u='c' c='ngx_spawn_process'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='149' u='c' c='ngx_spawn_process'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='156' u='c' c='ngx_spawn_process'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='164' u='c' c='ngx_spawn_process'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='172' u='c' c='ngx_spawn_process'/>
+<use f='nginx/src/os/unix/ngx_process.c' l='193' u='c' c='ngx_spawn_process'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='590' u='c' c='ngx_reap_children'/>

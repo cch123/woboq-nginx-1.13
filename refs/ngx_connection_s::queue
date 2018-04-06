@@ -1,0 +1,11 @@
+<dec f='nginx/src/core/ngx_connection.h' l='159' type='ngx_queue_t'/>
+<offset>1472</offset>
+<use f='nginx/src/core/ngx_connection.c' l='1210' u='a' c='ngx_reusable_connection'/>
+<use f='nginx/src/core/ngx_connection.c' l='1210' u='a' c='ngx_reusable_connection'/>
+<use f='nginx/src/core/ngx_connection.c' l='1210' u='a' c='ngx_reusable_connection'/>
+<use f='nginx/src/core/ngx_connection.c' l='1210' u='a' c='ngx_reusable_connection'/>
+<use f='nginx/src/core/ngx_connection.c' l='1224' u='a' c='ngx_reusable_connection'/>
+<use f='nginx/src/core/ngx_connection.c' l='1224' u='a' c='ngx_reusable_connection'/>
+<use f='nginx/src/core/ngx_connection.c' l='1224' u='a' c='ngx_reusable_connection'/>
+<use f='nginx/src/core/ngx_connection.c' l='1224' u='a' c='ngx_reusable_connection'/>
+<use f='nginx/src/core/ngx_connection.c' l='1224' u='a' c='ngx_reusable_connection'/>

@@ -1,0 +1,6 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='94'/>
+<use f='nginx/src/http/modules/ngx_http_empty_gif_module.c' l='118' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_memcached_module.c' l='177' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_static_module.c' l='63' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_static_module.c' l='206' u='c'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1839' u='c'/>

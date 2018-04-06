@@ -1,0 +1,5 @@
+<dec f='nginx/objs/ngx_modules.c' l='23' type='ngx_module_t'/>
+<use f='nginx/objs/ngx_modules.c' l='75' u='a'/>
+<use f='nginx/objs/ngx_modules.c' l='75' u='a'/>
+<def f='nginx/src/http/modules/ngx_http_auth_basic_module.c' l='74' ll='87' type='ngx_module_t'/>
+<use f='nginx/src/http/modules/ngx_http_auth_basic_module.c' l='109' u='m' c='ngx_http_auth_basic_handler'/>

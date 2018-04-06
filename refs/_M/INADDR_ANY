@@ -1,0 +1,6 @@
+<dec f='include/netinet/in.h' l='190'/>
+<doc f='include/netinet/in.h' l='189'>/* Address to accept any incoming messages.  */</doc>
+<use f='nginx/src/core/ngx_inet.c' l='894' u='c'/>
+<use f='nginx/src/core/ngx_inet.c' l='903' u='c'/>
+<use f='nginx/src/core/ngx_inet.c' l='964' u='c'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2804' u='c'/>

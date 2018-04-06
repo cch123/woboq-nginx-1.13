@@ -1,0 +1,4 @@
+<dec f='include/netdb.h' l='36'/>
+<use f='include/x86_64-linux-gnu/bits/siginfo.h' l='20' u='a'/>
+<use f='include/x86_64-linux-gnu/bits/siginfo.h' l='28' u='a'/>
+<use f='include/x86_64-linux-gnu/bits/siginfo.h' l='302' u='a'/>

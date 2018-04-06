@@ -1,0 +1,2 @@
+<dec f='nginx/src/event/ngx_event_connect.h' l='75' type='ngx_int_t ngx_event_get_peer(ngx_peer_connection_t * pc, void * data)'/>
+<def f='nginx/src/event/ngx_event_connect.c' l='415' ll='419' type='ngx_int_t ngx_event_get_peer(ngx_peer_connection_t * pc, void * data)'/>

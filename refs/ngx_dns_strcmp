@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_string.h' l='171' type='ngx_int_t ngx_dns_strcmp(u_char * s1, u_char * s2)'/>
+<def f='nginx/src/core/ngx_string.c' l='846' ll='874' type='ngx_int_t ngx_dns_strcmp(u_char * s1, u_char * s2)'/>
+<use f='nginx/src/http/modules/ngx_http_map_module.c' l='376' u='c' c='ngx_http_map_cmp_dns_wildcards'/>
+<use f='nginx/src/http/modules/ngx_http_referer_module.c' l='681' u='c' c='ngx_http_cmp_referer_wildcards'/>
+<use f='nginx/src/http/ngx_http.c' l='1619' u='c' c='ngx_http_cmp_dns_wildcards'/>

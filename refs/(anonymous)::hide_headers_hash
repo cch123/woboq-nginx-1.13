@@ -1,0 +1,11 @@
+<dec f='nginx/src/http/ngx_http_upstream.h' l='186' type='ngx_hash_t'/>
+<offset>1856</offset>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2745' u='a' c='ngx_http_upstream_process_headers'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='2830' u='a' c='ngx_http_upstream_process_trailers'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='6226' u='w' c='ngx_http_upstream_hide_headers_hash'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='6226' u='r' c='ngx_http_upstream_hide_headers_hash'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='6228' u='m' c='ngx_http_upstream_hide_headers_hash'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='6308' u='a' c='ngx_http_upstream_hide_headers_hash'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='6322' u='m' c='ngx_http_upstream_hide_headers_hash'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='6326' u='w' c='ngx_http_upstream_hide_headers_hash'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='6326' u='r' c='ngx_http_upstream_hide_headers_hash'/>

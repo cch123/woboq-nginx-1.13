@@ -1,0 +1,1 @@
+<dec f='include/pcre.h' l='613' type='int pcre32_get_stringtable_entries(const pcre32 * , const unsigned int * , unsigned int ** , unsigned int ** )'/>

@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_core.h' l='103' type='void ngx_cpuinfo()'/>
+<def f='nginx/src/core/ngx_cpuinfo.c' l='72' ll='128' type='void ngx_cpuinfo()'/>
+<doc f='nginx/src/core/ngx_cpuinfo.c' l='70'>/* auto detect the L2 cache line size of modern and widespread CPUs */</doc>
+<use f='nginx/src/os/unix/ngx_posix_init.c' l='75' u='c' c='ngx_os_init'/>

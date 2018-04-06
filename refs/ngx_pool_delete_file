@@ -1,0 +1,3 @@
+<dec f='nginx/src/core/ngx_palloc.h' l='89' type='void ngx_pool_delete_file(void * data)'/>
+<use f='nginx/src/core/ngx_file.c' l='209' u='r' c='ngx_create_temp_file'/>
+<def f='nginx/src/core/ngx_palloc.c' l='378' ll='401' type='void ngx_pool_delete_file(void * data)'/>

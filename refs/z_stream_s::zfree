@@ -1,0 +1,5 @@
+<dec f='include/zlib.h' l='98' type='free_func'/>
+<use f='nginx/src/http/modules/ngx_http_gzip_filter_module.c' l='642' u='w' c='ngx_http_gzip_filter_deflate_start'/>
+<offset>576</offset>
+<doc f='include/zlib.h' l='98'>/* used to free the internal state */</doc>
+<use f='nginx/src/http/modules/ngx_http_log_module.c' l='624' u='w' c='ngx_http_log_gzip'/>

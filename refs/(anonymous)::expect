@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='201' type='ngx_table_elt_t *'/>
+<offset>1408</offset>
+<use f='nginx/src/http/ngx_http_request_body.c' l='807' u='r' c='ngx_http_test_expect'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='819' u='r' c='ngx_http_test_expect'/>

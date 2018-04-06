@@ -1,0 +1,20 @@
+<dec f='nginx/src/core/ngx_log.h' l='72' type='ngx_log_t *'/>
+<offset>576</offset>
+<use f='nginx/src/core/ngx_log.c' l='195' u='r' c='ngx_log_error_core'/>
+<use f='nginx/src/core/ngx_log.c' l='471' u='r' c='ngx_log_get_file_log'/>
+<use f='nginx/src/core/ngx_log.c' l='695' u='w' c='ngx_log_insert'/>
+<use f='nginx/src/core/ngx_log.c' l='699' u='r' c='ngx_log_insert'/>
+<use f='nginx/src/core/ngx_log.c' l='700' u='r' c='ngx_log_insert'/>
+<use f='nginx/src/core/ngx_log.c' l='701' u='w' c='ngx_log_insert'/>
+<use f='nginx/src/core/ngx_log.c' l='701' u='r' c='ngx_log_insert'/>
+<use f='nginx/src/core/ngx_log.c' l='702' u='w' c='ngx_log_insert'/>
+<use f='nginx/src/core/ngx_log.c' l='706' u='r' c='ngx_log_insert'/>
+<use f='nginx/src/core/ngx_log.c' l='709' u='w' c='ngx_log_insert'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1225' macro='1' u='w'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='1225' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_request.c' l='557' macro='1' u='w'/>
+<use f='nginx/src/http/ngx_http_request.c' l='557' macro='1' u='r'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2126' macro='1' u='w'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2126' macro='1' u='r'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='713' u='w' c='ngx_master_process_exit'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='1022' u='w' c='ngx_worker_process_exit'/>

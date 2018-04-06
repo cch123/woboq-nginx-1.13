@@ -1,0 +1,14 @@
+<dec f='include/stdlib.h' l='321' type='long random()'/>
+<doc f='include/stdlib.h' l='320'>/* Return a random long integer between 0 and RAND_MAX inclusive.  */</doc>
+<use f='nginx/src/core/ngx_resolver.c' l='3629' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3700' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3743' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='3847' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4175' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4178' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4201' macro='1' u='c'/>
+<use f='nginx/src/core/ngx_resolver.c' l='4286' macro='1' u='c'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2181' macro='1' u='c'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2181' macro='1' u='c'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2182' macro='1' u='c'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2182' macro='1' u='c'/>

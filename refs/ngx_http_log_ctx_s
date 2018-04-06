@@ -1,0 +1,5 @@
+<def f='nginx/src/http/ngx_http.h' l='52' ll='56'/>
+<size>24</size>
+<mbr r='ngx_http_log_ctx_s::connection' o='0' t='ngx_connection_t *'/>
+<mbr r='ngx_http_log_ctx_s::request' o='64' t='ngx_http_request_t *'/>
+<mbr r='ngx_http_log_ctx_s::current_request' o='128' t='ngx_http_request_t *'/>

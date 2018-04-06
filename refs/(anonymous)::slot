@@ -1,0 +1,11 @@
+<dec f='nginx/src/os/unix/ngx_channel.h' l='20' type='ngx_int_t'/>
+<offset>128</offset>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='363' u='w' c='ngx_start_worker_processes'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='405' u='w' c='ngx_start_cache_manager_processes'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='420' u='w' c='ngx_start_cache_manager_processes'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='596' u='w' c='ngx_reap_children'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='636' u='w' c='ngx_reap_children'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='1103' u='r' c='ngx_channel_handler'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='1104' u='r' c='ngx_channel_handler'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='1114' u='r' c='ngx_channel_handler'/>
+<use f='nginx/src/os/unix/ngx_process_cycle.c' l='1119' u='r' c='ngx_channel_handler'/>

@@ -1,0 +1,4 @@
+<dec f='nginx/src/core/ngx_queue.h' l='108' type='void ngx_queue_sort(ngx_queue_t * queue, ngx_int_t (*)(const ngx_queue_t *, const ngx_queue_t *) cmp)'/>
+<def f='nginx/src/core/ngx_queue.c' l='50' ll='80' type='void ngx_queue_sort(ngx_queue_t * queue, ngx_int_t (*)(const ngx_queue_t *, const ngx_queue_t *) cmp)'/>
+<doc f='nginx/src/core/ngx_queue.c' l='48'>/* the stable insertion sort */</doc>
+<use f='nginx/src/http/ngx_http.c' l='687' u='c' c='ngx_http_init_locations'/>

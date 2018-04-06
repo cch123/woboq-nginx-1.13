@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_variables.h' l='67' type='ngx_uint_t'/>
+<offset>0</offset>
+<use f='nginx/src/http/ngx_http_variables.c' l='2470' u='w' c='ngx_http_regex_compile'/>
+<use f='nginx/src/http/ngx_http_variables.c' l='2533' u='r' c='ngx_http_regex_exec'/>

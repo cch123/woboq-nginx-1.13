@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='266' type='ngx_table_elt_t *'/>
+<offset>1408</offset>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5075' u='w' c='ngx_http_upstream_rewrite_refresh'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='5084' u='w' c='ngx_http_upstream_rewrite_refresh'/>

@@ -1,0 +1,3 @@
+<dec f='nginx/src/http/ngx_http_script.h' l='206' type='void ngx_http_script_flush_complex_value(ngx_http_request_t * r, ngx_http_complex_value_t * val)'/>
+<def f='nginx/src/http/ngx_http_script.c' l='35' ll='54' type='void ngx_http_script_flush_complex_value(ngx_http_request_t * r, ngx_http_complex_value_t * val)'/>
+<use f='nginx/src/http/ngx_http_script.c' l='71' u='c' c='ngx_http_complex_value'/>

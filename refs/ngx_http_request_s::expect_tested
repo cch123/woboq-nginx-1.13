@@ -1,0 +1,8 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='532' type='unsigned int'/>
+<offset>9877</offset>
+<use f='nginx/src/http/ngx_http_core_module.c' l='977' u='w' c='ngx_http_core_find_config_phase'/>
+<use f='nginx/src/http/ngx_http_core_module.c' l='2364' u='w' c='ngx_http_subrequest'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='806' u='r' c='ngx_http_test_expect'/>
+<use f='nginx/src/http/ngx_http_request_body.c' l='817' u='w' c='ngx_http_test_expect'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='471' u='w' c='ngx_http_special_response_handler'/>
+<use f='nginx/src/http/ngx_http_special_response.c' l='594' u='w' c='ngx_http_send_error_page'/>

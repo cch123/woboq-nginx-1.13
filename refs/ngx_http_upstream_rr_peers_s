@@ -1,0 +1,12 @@
+<def f='nginx/src/http/ngx_http_upstream_round_robin.h' l='61' ll='80'/>
+<size>72</size>
+<mbr r='ngx_http_upstream_rr_peers_s::number' o='0' t='ngx_uint_t'/>
+<mbr r='ngx_http_upstream_rr_peers_s::shpool' o='64' t='ngx_slab_pool_t *'/>
+<mbr r='ngx_http_upstream_rr_peers_s::rwlock' o='128' t='ngx_atomic_t'/>
+<mbr r='ngx_http_upstream_rr_peers_s::zone_next' o='192' t='ngx_http_upstream_rr_peers_t *'/>
+<mbr r='ngx_http_upstream_rr_peers_s::total_weight' o='256' t='ngx_uint_t'/>
+<mbr r='ngx_http_upstream_rr_peers_s::single' o='320' t='unsigned int'/>
+<mbr r='ngx_http_upstream_rr_peers_s::weighted' o='321' t='unsigned int'/>
+<mbr r='ngx_http_upstream_rr_peers_s::name' o='384' t='ngx_str_t *'/>
+<mbr r='ngx_http_upstream_rr_peers_s::next' o='448' t='ngx_http_upstream_rr_peers_t *'/>
+<mbr r='ngx_http_upstream_rr_peers_s::peer' o='512' t='ngx_http_upstream_rr_peer_t *'/>

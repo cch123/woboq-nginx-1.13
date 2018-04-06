@@ -1,0 +1,9 @@
+<dec f='include/x86_64-linux-gnu/sys/stat.h' l='172'/>
+<dec f='include/fcntl.h' l='105'/>
+<use f='nginx/src/core/ngx_connection.c' l='574' u='c'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1167' u='c'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1167' u='c'/>
+<use f='nginx/src/core/ngx_cycle.c' l='1169' u='c'/>
+<use f='nginx/src/core/ngx_file.c' l='640' u='c'/>
+<use f='nginx/src/core/ngx_file.c' l='641' u='c'/>
+<use f='nginx/src/core/ngx_file.c' l='643' u='c'/>

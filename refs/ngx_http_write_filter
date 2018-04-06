@@ -1,0 +1,4 @@
+<dec f='nginx/src/http/ngx_http_core_module.h' l='517' type='ngx_int_t ngx_http_write_filter(ngx_http_request_t * r, ngx_chain_t * chain)'/>
+<use f='nginx/src/http/ngx_http_header_filter_module.c' l='620' u='c' c='ngx_http_header_filter'/>
+<def f='nginx/src/http/ngx_http_write_filter_module.c' l='47' ll='318' type='ngx_int_t ngx_http_write_filter(ngx_http_request_t * r, ngx_chain_t * in)'/>
+<use f='nginx/src/http/ngx_http_write_filter_module.c' l='324' u='r' c='ngx_http_write_filter_init'/>

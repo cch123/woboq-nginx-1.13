@@ -1,0 +1,2 @@
+<dec f='include/stdio.h' l='898' type='int obstack_printf(struct obstack *restrict __obstack, const char *restrict __format)'/>
+<doc f='include/stdio.h' l='897'>/* Write formatted output to an obstack.  */</doc>

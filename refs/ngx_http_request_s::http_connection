@@ -1,0 +1,6 @@
+<dec f='nginx/src/http/ngx_http_request.h' l='445' type='ngx_http_connection_t *'/>
+<offset>9536</offset>
+<use f='nginx/src/http/ngx_http_request.c' l='545' u='w' c='ngx_http_create_request'/>
+<use f='nginx/src/http/ngx_http_request.c' l='1493' u='r' c='ngx_http_alloc_large_header_buffer'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2061' u='r' c='ngx_http_set_virtual_server'/>
+<use f='nginx/src/http/ngx_http_request.c' l='2916' u='r' c='ngx_http_set_keepalive'/>

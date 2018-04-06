@@ -1,0 +1,12 @@
+<dec f='nginx/src/core/ngx_string.h' l='141'/>
+<use f='nginx/src/core/ngx_conf_file.c' l='580' u='c'/>
+<use f='nginx/src/core/ngx_module.c' l='246' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_auth_basic_module.c' l='244' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='830' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='869' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='897' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='921' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='954' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_geo_module.c' l='1013' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_proxy_module.c' l='2727' u='c'/>
+<use f='nginx/src/http/modules/ngx_http_try_files_module.c' l='181' u='c'/>

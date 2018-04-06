@@ -1,0 +1,5 @@
+<dec f='nginx/src/core/ngx_buf.h' l='82' type='ngx_chain_t *'/>
+<offset>192</offset>
+<use f='nginx/src/core/ngx_output_chain.c' l='52' u='r' c='ngx_output_chain'/>
+<use f='nginx/src/core/ngx_output_chain.c' l='220' u='a' c='ngx_output_chain'/>
+<use f='nginx/src/http/ngx_http_upstream.c' l='1942' u='w' c='ngx_http_upstream_reinit'/>

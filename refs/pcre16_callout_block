@@ -1,0 +1,16 @@
+<def f='include/pcre.h' l='440' ll='458'/>
+<size>72</size>
+<doc f='include/pcre.h' l='438'>/* Same structure as above, but with 16 bit char pointers. */</doc>
+<mbr r='pcre16_callout_block::version' o='0' t='int'/>
+<mbr r='pcre16_callout_block::callout_number' o='32' t='int'/>
+<mbr r='pcre16_callout_block::offset_vector' o='64' t='int *'/>
+<mbr r='pcre16_callout_block::subject' o='128' t='const unsigned short *'/>
+<mbr r='pcre16_callout_block::subject_length' o='192' t='int'/>
+<mbr r='pcre16_callout_block::start_match' o='224' t='int'/>
+<mbr r='pcre16_callout_block::current_position' o='256' t='int'/>
+<mbr r='pcre16_callout_block::capture_top' o='288' t='int'/>
+<mbr r='pcre16_callout_block::capture_last' o='320' t='int'/>
+<mbr r='pcre16_callout_block::callout_data' o='384' t='void *'/>
+<mbr r='pcre16_callout_block::pattern_position' o='448' t='int'/>
+<mbr r='pcre16_callout_block::next_item_length' o='480' t='int'/>
+<mbr r='pcre16_callout_block::mark' o='512' t='const unsigned short *'/>
